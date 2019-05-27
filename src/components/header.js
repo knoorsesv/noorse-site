@@ -1,34 +1,34 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from 'prop-types'
+import React from 'react'
+
+
+const siteMap = {
+  items:
+    [
+      { name: 'Home', href: '/' },
+      {
+        name: 'Info',
+        subItems: [
+          { name: 'Bestuur', href: '/bestuur' },
+          { name: 'Clubfiche', href: '/clubfiche' },
+          { name: 'Geschiedenis', href: '/geschiedenis' },
+          { name: 'Fair Play', href: '/fairplay' },
+          { name: 'Lidmaatschap', href: '/lidmaatschap' },
+          { name: 'Sponsoring', href: '/sponsoring' },
+          { name: 'Documenten', href: '/documenten' },
+        ],
+      },
+      { name: 'Senioren', href: '/senioren' },
+      { name: 'Jeugd', href: '/jeugd' },
+      { name: 'Dames', href: '/dames' },
+      { name: 'Meisjes', href: '/meisjes' },
+      { name: 'G-Voetbal', href: '/gvoetbal' },
+      { name: 'Contact', href: '/contact' },
+    ],
+}
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <noorse-header navigation={JSON.stringify(siteMap)}></noorse-header>
 )
 
 Header.propTypes = {
