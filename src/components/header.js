@@ -6,25 +6,25 @@ import { navigate } from 'gatsby'
 const siteMap = {
   items:
     [
-      { name: 'Home', href: '/' },
+      { name: 'Home' },
       {
         name: 'Info',
         subItems: [
-          { name: 'Bestuur', href: '/bestuur' },
-          { name: 'Clubfiche', href: '/clubfiche' },
-          { name: 'Geschiedenis', href: '/geschiedenis' },
-          { name: 'Fair Play', href: '/fairplay' },
-          { name: 'Lidmaatschap', href: '/lidmaatschap' },
-          { name: 'Sponsoring', href: '/sponsoring' },
-          { name: 'Documenten', href: '/documenten' },
+          { name: 'Bestuur' },
+          { name: 'Clubfiche' },
+          { name: 'Geschiedenis' },
+          { name: 'Fair Play' },
+          { name: 'Lidmaatschap' },
+          { name: 'Sponsoring' },
+          { name: 'Documenten' },
         ],
       },
-      { name: 'Senioren', href: '/senioren' },
-      { name: 'Jeugd', href: '/jeugd' },
-      { name: 'Dames', href: '/dames' },
-      { name: 'Meisjes', href: '/meisjes' },
-      { name: 'G-Voetbal', href: '/gvoetbal' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'Senioren' },
+      { name: 'Jeugd' },
+      { name: 'Dames' },
+      { name: 'Meisjes' },
+      { name: 'G-Voetbal' },
+      { name: 'Contact' },
     ],
 }
 
@@ -33,7 +33,11 @@ class Header extends React.Component {
 
   componentDidMount() {
     this.headerElement.addEventListener('itemSelected', (event) => {
-      navigate(event.detail.toLowerCase())
+      if (event.detail === 'Home') {
+        navigate('')
+        return
+      }
+      navigate(event.detail.replace(' ', '').replace('-', '').toLowerCase())
     })
   }
 
