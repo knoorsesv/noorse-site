@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { navigate } from 'gatsby'
-
+import { graphql, navigate, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 const siteMap = {
   items:
@@ -44,10 +44,9 @@ class Header extends React.Component {
   render() {
 
     return <section className="hero">
-
-
       <div className="hero-body">
-        <h1>Noorse</h1>
+        <StaticQuery query={`${query}`}
+                     render={data => <Img fixed={data.headerImage.childImageSharp.fixed}/>}/>
       </div>
       <div className="hero-foot">
 
@@ -66,5 +65,18 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+export const query = graphql`
+  query {
+    headerImage: file(relativePath: { eq: "header-logo.png" }) {
+    childImageSharp{
+      fixed {
+                     ...GatsbyImageSharpFixed
+
+      }
+    }
+  }
+  }
+`
 
 export default Header
