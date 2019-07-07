@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { navigate } from 'gatsby'
 
 
 const siteMap = {
@@ -27,9 +28,32 @@ const siteMap = {
     ],
 }
 
-const Header = ({ siteTitle }) => (
-  <noorse-header navigation={JSON.stringify(siteMap)}></noorse-header>
-)
+class Header extends React.Component {
+
+
+  componentDidMount() {
+    this.headerElement.addEventListener('itemSelected', (event) => {
+      navigate(event.detail.toLowerCase())
+    })
+  }
+
+  render() {
+
+    return <section className="hero">
+
+
+      <div className="hero-body">
+        <h1>Noorse</h1>
+      </div>
+      <div className="hero-foot">
+
+        <noorse-navbar ref={elem => this.headerElement = elem} navigation={JSON.stringify(siteMap)}></noorse-navbar>
+      </div>
+    </section>
+  }
+
+}
+
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

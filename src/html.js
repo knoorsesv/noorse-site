@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function HTML(props) {
   return (
@@ -11,7 +11,8 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="http://localhost:3333/build/noorse.js"></script>
+        {/*<script src="http://localhost:3333/build/noorse.js"></script>*/}
+        <script src="https://unpkg.com/noorse-theme-components/dist/noorse.js"></script>
 
         {props.headComponents}
       </head>
