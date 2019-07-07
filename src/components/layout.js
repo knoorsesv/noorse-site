@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
         <div className="container is-fluid">
           <main>{children}</main>
         </div>
-       <Footer/>
+        <Footer/>
       </div>
     )}
   />

@@ -18,6 +18,7 @@ const IndexPage = () => (
         <Link to="senioren">Senioren</Link>
       </div>
     </div>
+    <div style={{ height: '500px' }}>padding</div>
   </Layout>
 )
 

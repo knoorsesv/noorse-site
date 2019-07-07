@@ -6,14 +6,14 @@ $neurse-groen: #008000;
 $neurse-geel: #ffcc00;
 $header-font: 'Francois One', arial, serif;
 
+$footer-height: 10vh;
+$hero-height: 25vh;
 
 $primary: #007800;
 $navbar-breakpoint: 200px;
-//$footer-padding: 0;
+$footer-padding: $footer-height / 3;
 
 @import '../../node_modules/bulma/bulma';
-
-
 
 html {
   height: 100%;

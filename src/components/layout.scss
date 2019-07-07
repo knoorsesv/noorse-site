@@ -3,28 +3,11 @@
 .wrapper {
   background-image: url(http://www.noorse.be/wp-content/themes/natural/images/bg/bg77.png);
   background-repeat: repeat;
-  height: -webkit-fill-available;
 }
 
 .container {
-  height: -webkit-fill-available;
+  min-height: 100vh - $footer-height - $hero-height;
   margin: 0 10px;
   padding: 20px;
   background-color: white;
-  //height: fit-content;
 }
-
-.hero-foot {
-  display: flex;
-  justify-content: center;
-  background-color: $neurse-groen;
-}
-
-.navbar {
-  .navbar-item {
-
-    @include white-text();
-  }
-  width: fit-content;
-}
-

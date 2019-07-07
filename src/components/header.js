@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { graphql, navigate, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import './header.scss'
+
 
 const siteMap = {
   items:
@@ -43,12 +45,12 @@ class Header extends React.Component {
 
   render() {
 
-    return <section className="hero">
-      <div className="hero-body">
+    return <section className="header">
+      <div className="header-body">
         <StaticQuery query={`${query}`}
                      render={data => <Img fixed={data.headerImage.childImageSharp.fixed}/>}/>
       </div>
-      <div className="hero-foot">
+      <div className="header-foot">
 
         <noorse-navbar ref={elem => this.headerElement = elem} navigation={JSON.stringify(siteMap)}></noorse-navbar>
       </div>

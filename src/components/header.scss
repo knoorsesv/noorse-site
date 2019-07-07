@@ -1,0 +1,16 @@
+@import "../styles/global";
+
+.header {
+  height: $hero-height;
+
+  .header-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+  }
+
+  .header-foot {
+    height: 30%;
+  }
+}
