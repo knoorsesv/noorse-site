@@ -1,19 +1,7 @@
-
-// todo: import from stylezz
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 
-$neurse-groen: #008000;
-$neurse-geel: #ffcc00;
-$header-font: 'Francois One', arial, serif;
-
 $footer-height: 10vh;
-$hero-height: 25vh;
-
-$primary: #007800;
-$navbar-breakpoint: 200px;
-$footer-padding: $footer-height / 3;
-
-@import '../../node_modules/bulma/bulma';
+$header-height: 25vh;
 
 html {
   height: 100%;
@@ -24,10 +12,4 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-
-@mixin white-text() {
-  color: #ffffff;
-  text-transform: uppercase;
 }

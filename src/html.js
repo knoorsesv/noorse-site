@@ -11,8 +11,15 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {/*<script src="http://localhost:3333/build/noorse.js"></script>*/}
-        <script src="https://unpkg.com/noorse-theme-components/dist/noorse.js"></script>
+
+        {/*<script type="module" src="http://localhost:3333/build/noorse.esm.js"></script>*/}
+        {/*<script noModule src="http://localhost:3333/build/noorse.js"></script>*/}
+
+        {/*<script type="module" src="https://unpkg.com/noorse-theme-components/dist/noorse/noorse.esm.js"></script>*/}
+        {/*<script noModule src="https://unpkg.com/noorse-theme-components/dist/noorse/noorse.js"></script>*/}
+
+
+        <script src="https://unpkg.com/noorse-theme-components/dist/noorse/noorse.js"></script>
 
         {props.headComponents}
       </head>
