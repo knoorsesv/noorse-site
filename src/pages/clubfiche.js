@@ -5,7 +5,7 @@ const ClubfichePage = () => (
   <Layout>
 
     <noorse-box>
-      Clib Fice
+      Do we need this?
     </noorse-box>
 
   </Layout>

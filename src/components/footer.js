@@ -4,11 +4,11 @@ import './footer.scss'
 const Footer = () => (
 
 
-  <footer className="footer">
+  <noorse-footer>
     © {new Date().getFullYear()}, Built with
     {` `}
     <a href="https://www.gatsbyjs.org">Gatsby</a>
-  </footer>
+  </noorse-footer>
 
 )
 
