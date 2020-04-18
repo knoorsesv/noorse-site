@@ -2,7 +2,7 @@
   "name": "gatsby-site-noorse",
   "private": true,
   "description": "Noors wesbsite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "gvdp",
   "dependencies": {
     "bulma": "^0.7.5",
@@ -23,7 +23,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.17.1"
+    "prettier": "^1.17.1",
+    "standard-version": "^7.1.0"
   },
   "keywords": [
     "gatsby"
@@ -32,6 +33,9 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "release": "standard-version",
+    "prerelease": "yarn test",
+    "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master",
     "format": "prettier --write src/**/*.{js,jsx}",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
