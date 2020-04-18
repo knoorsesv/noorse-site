@@ -24,12 +24,12 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="wrapper">
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="container is-fluid">
+      <div>
+        <Header siteTitle={data.site.siteMetadata.title}/>
+        <div>
           <main>{children}</main>
         </div>
-        <Footer />
+        <Footer/>
       </div>
     )}
   />

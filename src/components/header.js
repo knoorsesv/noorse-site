@@ -1,68 +1,67 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { graphql, navigate, StaticQuery } from 'gatsby'
+import { graphql, Link, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-const siteMap = {
-  items: [
-    { name: 'Home' },
-    {
-      name: 'Info',
-      subItems: [
-        { name: 'Bestuur' },
-        { name: 'Clubfiche' },
-        { name: 'Geschiedenis' },
-        { name: 'Fair Play' },
-        { name: 'Lidmaatschap' },
-        { name: 'Sponsoring' },
-        { name: 'Documenten' },
-      ],
-    },
-    { name: 'Senioren' },
-    { name: 'Jeugd' },
-    { name: 'Dames' },
-    { name: 'Meisjes' },
-    { name: 'G-Voetbal' },
-    { name: 'Contact' },
-  ],
-}
 
 class Header extends React.Component {
-  componentDidMount() {
-    this.headerElement.addEventListener('itemSelected', event => {
-      if (event.detail === 'Home') {
-        navigate('')
-        return
-      }
-      navigate(
-        event.detail
-          .replace(' ', '')
-          .replace('-', '')
-          .toLowerCase()
-      )
-    })
+
+  siteMap = {
+    items: [
+      { name: 'Home', link: '/' },
+      { name: 'Nieuws', link: '/nieuws' },
+      {
+        name: 'Info',
+        subItems: [
+          { name: 'Bestuur', link: '/bestuur' },
+          { name: 'Clubfiche', link: '/clubfiche' },
+          { name: 'Geschiedenis', link: '/geschiedenis' },
+          { name: 'Fair Play', link: 'fairplay' },
+          { name: 'Lidmaatschap', link: '/lidmaatschap' },
+          { name: 'Sponsoring', link: '/sponsoring' },
+          { name: 'Documenten', link: '/documenten' },
+        ],
+      },
+      { name: 'Senioren', link: '/senioren' },
+      { name: 'Jeugd', link: '/jeugd' },
+      { name: 'Dames', link: '/dames' },
+      { name: 'Meisjes', link: '/meisjes' },
+      { name: 'G-Voetbal', link: '/gvoetbal' },
+      { name: 'Contact', link: '/contact' },
+    ],
   }
 
   render() {
     return (
-      <section className="header">
-        <div className="header-body">
+      <section>
+        <div>
           <StaticQuery
             query={`${query}`}
             render={data => (
-              <Img fixed={data.headerImage.childImageSharp.fixed} />
+              <Img fixed={data.headerImage.childImageSharp.fixed}/>
             )}
           />
         </div>
-        <div className="header-foot">
-          <div
-            ref={elem => (this.headerElement = elem)}
-            navigation={JSON.stringify(siteMap)}
-          ></div>
+        <div>
+          <div>
+            {this.siteMap.items.map(this.menuItem())}
+          </div>
         </div>
       </section>
     )
   }
+
+  menuItem() {
+    return (item) => (
+      <div>
+        <Link to={item.link}>{item.name}</Link>
+        {item.subItems &&
+        <div>{item.subItems.map(this.menuItem())}</div>
+        }
+      </div>
+    )
+  }
+
 }
 
 Header.propTypes = {
