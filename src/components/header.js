@@ -12,6 +12,7 @@ class Header extends React.Component {
       { name: 'Nieuws', link: '/nieuws' },
       {
         name: 'Info',
+        link: '/info',
         subItems: [
           { name: 'Bestuur', link: '/bestuur' },
           { name: 'Clubfiche', link: '/clubfiche' },
@@ -53,7 +54,7 @@ class Header extends React.Component {
 
   menuItem() {
     return (item) => (
-      <div>
+      <div className="bg-black">
         <Link to={item.link}>{item.name}</Link>
         {item.subItems &&
         <div>{item.subItems.map(this.menuItem())}</div>
