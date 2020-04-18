@@ -6,7 +6,6 @@ import Logo from '../images/Logo_highres.png'
 import HeaderLogo from '../images/header-logo.png'
 
 class Header extends React.Component {
-
   siteMap = {
     items: [
       { name: 'Home', link: '/' },
@@ -33,7 +32,6 @@ class Header extends React.Component {
     ],
   }
 
-
   constructor(props) {
     super(props)
     this.state = { showMenu: false }
@@ -50,17 +48,21 @@ class Header extends React.Component {
           {/*    <Img fixed={data.headerImage.childImageSharp.fixed}/>*/}
           {/*  )}*/}
           {/*/>*/}
-          <img src={HeaderLogo}/>
-
+          <img src={HeaderLogo} />
         </div>
         <div className="fixed w-full bg-green-800 md:w-4/5 md:relative md:rounded">
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
-            <img className="h-10" src={Logo}/>
+            <img className="h-10" src={Logo} />
             <div>Neurse</div>
-            <button onClick={this.toggleMenu} className="w-10 bg-green-400">H</button>
+            <button onClick={this.toggleMenu} className="w-10 bg-green-400">
+              H
+            </button>
           </div>
           <div
-            className={`${this.state.showMenu ? 'block' : 'hidden'} py-3 flex flex-col md:flex md:flex-row md:justify-around `}>
+            className={`${
+              this.state.showMenu ? 'block' : 'hidden'
+            } py-3 flex flex-col md:flex md:flex-row md:justify-around `}
+          >
             {this.siteMap.items.map(this.menuItem())}
           </div>
         </div>
@@ -73,20 +75,18 @@ class Header extends React.Component {
   }
 
   menuItem() {
-    return (item) => (
+    return item => (
       <div className="px-2 group relative inline-block hover:bg-yellow-200">
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
-          <div
-            className="md:absolute md:hidden md:group-hover:block md:left-0 md:bg-green-700 md:rounded md:shadow md:p-1">
-            {item.subItems.map((subItem) => (
+          <div className="md:absolute md:hidden md:group-hover:block md:left-0 md:bg-green-700 md:rounded md:shadow md:p-1">
+            {item.subItems.map(subItem => (
               <div className="px-2 hover:bg-yellow-200">
                 <Link to={subItem.link}>{subItem.name}</Link>
               </div>
             ))}
           </div>
-        )
-        }
+        )}
       </div>
     )
   }

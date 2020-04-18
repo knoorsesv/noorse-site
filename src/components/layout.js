@@ -25,11 +25,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <div className="">
-        <Header siteTitle={data.site.siteMetadata.title}/>
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     )}
   />

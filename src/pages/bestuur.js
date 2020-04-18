@@ -41,4 +41,3 @@ function createBestuurslidComponent(edge) {
 }
 
 export default BestuurPage
-
