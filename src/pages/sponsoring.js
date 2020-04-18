@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const SponsoringPage = () => (
   <Layout>
-    <noorse-box>Sponsoring</noorse-box>
+    <div>Sponsoring</div>
   </Layout>
 )
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql, StaticQuery } from 'gatsby'
-import './bestuur.scss'
 
 const BestuurPage = () => (
   <Layout>
@@ -31,12 +30,12 @@ const BestuurPage = () => (
 
 function createBestuurslidComponent(edge) {
   return (
-    <noorse-person
+    <div
       naam={edge.node.naam}
       title={edge.node.title}
       email={edge.node.email}
       phone={edge.node.phone}
-    ></noorse-person>
+    ></div>
   )
 }
 

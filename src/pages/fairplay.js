@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const FairPlayPage = () => (
   <Layout>
-    <noorse-box>Fair play</noorse-box>
+    <div>Fair play</div>
   </Layout>
 )
 

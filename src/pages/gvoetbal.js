@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const GVoetbalPage = () => (
   <Layout>
-    <noorse-box>Gvoetbal</noorse-box>
+    <div>Gvoetbal</div>
   </Layout>
 )
 

@@ -1,12 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
-import './contact.scss'
 
 const ContactPage = () => (
   <Layout>
     <div className="tile is-ancestor is-vertical">
       <div className="tile is-parent">
-        <noorse-section class="tile is-child" header="Contact">
+        <div class="tile is-child" header="Contact">
           <p>Algemene E-mail: secretariaat@noorse.be</p>
 
           <h2> Contactpersonen deelbesturen</h2>
@@ -16,8 +15,8 @@ const ContactPage = () => (
           <p> Senioren: Glenn Van De Putte (seniorenbestuurnoorse@gmail.com)</p>
           <p> Dames – Meisjes: Stijn Schrijvers</p>
           <p> G-voetbal: Rita Staes (gvoetbal@noorse.be)</p>
-        </noorse-section>
-        <noorse-section class="tile is-child" header="Kantine">
+        </div>
+        <div class="tile is-child" header="Kantine">
           <h2>Openingsuren</h2>
           <p>
             Woensdag 16u30 – 23u00 <br />
@@ -33,8 +32,8 @@ const ContactPage = () => (
             <br />
             Tel: 03 664 44 12 <br />
           </p>
-        </noorse-section>
-        <noorse-section class="tile is-child" header="Bereikbaarheid">
+        </div>
+        <div class="tile is-child" header="Bereikbaarheid">
           <p> K. Noorse S.V. </p>
           <p> Frans De Peuterstraat 50</p>
           <p> 2950 Kapellen</p>
@@ -51,10 +50,10 @@ const ContactPage = () => (
             straat links (Heizoomlaan) deze geeft uit op{' '}
           </p>
           <p> de terreinen.</p>
-        </noorse-section>
+        </div>
       </div>
       <div className="tile is-parent">
-        <noorse-section class="tile is-child is-12">Google map</noorse-section>
+        <div class="tile is-child is-12">Google map</div>
       </div>
     </div>
   </Layout>

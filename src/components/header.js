@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { graphql, navigate, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import './header.scss'
 
 const siteMap = {
   items: [
@@ -56,10 +55,10 @@ class Header extends React.Component {
           />
         </div>
         <div className="header-foot">
-          <noorse-navbar
+          <div
             ref={elem => (this.headerElement = elem)}
             navigation={JSON.stringify(siteMap)}
-          ></noorse-navbar>
+          ></div>
         </div>
       </section>
     )

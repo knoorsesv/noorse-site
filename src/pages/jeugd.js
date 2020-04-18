@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const JeugdPage = () => (
   <Layout>
-    <noorse-box>Jeugd</noorse-box>
+    <div>Jeugd</div>
   </Layout>
 )
 

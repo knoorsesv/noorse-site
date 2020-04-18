@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const ClubfichePage = () => (
   <Layout>
-    <noorse-box>Do we need this?</noorse-box>
+    <div>Do we need this?</div>
   </Layout>
 )
 

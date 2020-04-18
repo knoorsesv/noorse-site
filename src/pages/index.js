@@ -10,11 +10,11 @@ const IndexPage = () => (
     <div>carrousel</div>
     <div className="columns is-mobile">
       <div className="column">
-        <noorse-box>Whute</noorse-box>
-        <noorse-box header="Trooper"></noorse-box>
+        <div>Whute</div>
+        <div header="Trooper"></div>
       </div>
       <div className="column">
-        <noorse-box header="Nieuws"></noorse-box>
+        <div header="Nieuws"></div>
         <Link to="senioren">Senioren</Link>
       </div>
     </div>

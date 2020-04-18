@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const GeschiedenisPage = () => (
   <Layout>
-    <noorse-box>GeschiedenisPage</noorse-box>
+    <div>GeschiedenisPage</div>
   </Layout>
 )
 

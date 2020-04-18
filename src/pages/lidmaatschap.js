@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const LidMaatschapPage = () => (
   <Layout>
-    <noorse-box>Lid worden</noorse-box>
+    <div>Lid worden</div>
   </Layout>
 )
 
