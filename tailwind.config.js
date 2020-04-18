@@ -1,7 +1,15 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        visibility: 'visible, hidden'
+      }
+    },
   },
-  variants: {},
+  variants: {
+    opacity: ['hover', 'focus', 'group-hover', 'responsive'],
+    visibility: ['hover', 'focus', 'group-hover', 'responsive'],
+    display: ['hover', 'focus', 'group-hover', 'responsive'],
+  },
   plugins: [],
 }
