@@ -20,7 +20,8 @@ const BestuurPage = () => (
         }
       `}
       render={data => (
-        <div className={'bestuur-list'}>
+        <div>
+          Bestuur
           {data.allContentfulBestuurslid.edges.map(createBestuurslidComponent)}
         </div>
       )}
@@ -30,15 +31,14 @@ const BestuurPage = () => (
 
 function createBestuurslidComponent(edge) {
   return (
-    <div
-      naam={edge.node.naam}
-      title={edge.node.title}
-      email={edge.node.email}
-      phone={edge.node.phone}
-    ></div>
+    <div>
+      {edge.node.naam}
+      {edge.node.title}
+      {edge.node.email}
+      {edge.node.phone}
+    </div>
   )
 }
 
 export default BestuurPage
 
-// https://cdn.contentful.com/spaces/u0xs2v9mjzql/environments/master/entries?access_token=36-6JCv3dOwXO2Ka7Ky7WaCfWhGodvwIp28Yhb_2kiQ
