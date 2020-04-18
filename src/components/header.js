@@ -5,6 +5,10 @@ import Img from 'gatsby-image'
 import './header.scss'
 
 const siteMap = {
+  
+  
+  
+  
   items: [
     { name: 'Home' },
     {
