@@ -3,13 +3,8 @@ import Layout from '../components/layout'
 
 const ClubfichePage = () => (
   <Layout>
-
-    <noorse-box>
-      Do we need this?
-    </noorse-box>
-
+    <noorse-box>Do we need this?</noorse-box>
   </Layout>
 )
 
 export default ClubfichePage
-

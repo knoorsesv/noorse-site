@@ -3,13 +3,8 @@ import Layout from '../components/layout'
 
 const DocumentenPage = () => (
   <Layout>
-
-    <noorse-box>
-    Documenten
-    </noorse-box>
-
+    <noorse-box>Documenten</noorse-box>
   </Layout>
 )
 
 export default DocumentenPage
-

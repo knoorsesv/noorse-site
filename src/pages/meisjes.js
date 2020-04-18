@@ -3,13 +3,8 @@ import Layout from '../components/layout'
 
 const MeisjesPage = () => (
   <Layout>
-
-    <noorse-box>
-      Meisjes
-    </noorse-box>
-
+    <noorse-box>Meisjes</noorse-box>
   </Layout>
 )
 
 export default MeisjesPage
-

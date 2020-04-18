@@ -3,13 +3,8 @@ import Layout from '../components/layout'
 
 const GVoetbalPage = () => (
   <Layout>
-
-    <noorse-box>
-      Gvoetbal
-    </noorse-box>
-
+    <noorse-box>Gvoetbal</noorse-box>
   </Layout>
 )
 
 export default GVoetbalPage
-

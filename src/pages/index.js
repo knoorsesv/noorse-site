@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`noorse`]}/>
+    <SEO title="Home" keywords={[`noorse`]} />
     <div>carrousel</div>
     <div className="columns is-mobile">
       <div className="column">

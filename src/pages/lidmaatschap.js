@@ -3,13 +3,8 @@ import Layout from '../components/layout'
 
 const LidMaatschapPage = () => (
   <Layout>
-
-    <noorse-box>
-     Lid worden
-    </noorse-box>
-
+    <noorse-box>Lid worden</noorse-box>
   </Layout>
 )
 
 export default LidMaatschapPage
-

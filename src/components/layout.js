@@ -26,11 +26,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <div className="wrapper">
-        <Header siteTitle={data.site.siteMetadata.title}/>
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div className="container is-fluid">
           <main>{children}</main>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     )}
   />
