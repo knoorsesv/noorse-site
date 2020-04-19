@@ -50,18 +50,19 @@ class Header extends React.Component {
           {/*/>*/}
           <img src={HeaderLogo} alt="Header Noorse"/>
         </div>
-        <div className="w-full bg-green-800 md:w-4/5 md:relative md:rounded">
+        {/*todo: make bar stick on mobile*/}
+        <div className="text-gray-100 shadow-lg w-full bg-green md:w-4/5 md:relative md:rounded">
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
             <img className="h-10" src={Logo} alt="Logo"/>
-            <div>Neurse</div>
-            <button onClick={this.toggleMenu} className="w-10">
+            <div className="font-bold">Neurse</div>
+            <button onClick={this.toggleMenu} className="w-10 focus:outline-none">
               <FontAwesomeIcon icon={faBars} />
             </button>
           </div>
           <div
             className={`${
               this.state.showMenu ? 'block' : 'hidden'
-            } py-3 flex flex-col absolute text-right right-0 bg-green-700 md:flex md:flex-row md:justify-around `}
+            } py-1 flex flex-col absolute text-right right-0 bg-green md:flex md:flex-row md:justify-around `}
           >
             {this.siteMap.items.map(this.menuItem())}
           </div>
@@ -78,14 +79,14 @@ class Header extends React.Component {
     return (item) => (
       <div
         key={item.name}
-        className="px-2 md:group md:relative hover:bg-yellow-200"
+        className="px-2 md:group md:relative hover:bg-yellow"
       >
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
           <div
             className="md:absolute md:hidden md:group-hover:block md:left-0 md:rounded md:shadow md:p-1">
             {item.subItems.map((subItem) => (
-              <div key={subItem.name} className="px-2 hover:bg-yellow-200">
+              <div key={subItem.name} className="px-2 hover:bg-yellow">
                 <Link to={subItem.link}>{subItem.name}</Link>
               </div>
             ))}
