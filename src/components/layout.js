@@ -6,13 +6,13 @@ import Footer from './footer'
 const Layout = ({ children }) => (
   <div className="flex flex-col justify-between min-h-screen">
     <div>
-      <Header/>
+      <Header />
       <div className="pt-3 px-4">
         <main className="container bg-red-400 h-auto">{children}</main>
       </div>
     </div>
     <div>
-      <Footer/>
+      <Footer />
     </div>
   </div>
 )

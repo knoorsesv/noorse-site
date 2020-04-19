@@ -48,14 +48,17 @@ class Header extends React.Component {
           {/*    <Img fixed={data.headerImage.childImageSharp.fixed}/>*/}
           {/*  )}*/}
           {/*/>*/}
-          <img src={HeaderLogo} alt="Header Noorse"/>
+          <img src={HeaderLogo} alt="Header Noorse" />
         </div>
         {/*todo: make bar stick on mobile*/}
         <div className="text-gray-100 shadow-lg w-full bg-green md:w-11/12 md:relative md:rounded">
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
-            <img className="h-10" src={Logo} alt="Logo"/>
+            <img className="h-10" src={Logo} alt="Logo" />
             <div className="font-bold">Neurse</div>
-            <button onClick={this.toggleMenu} className="w-10 focus:outline-none">
+            <button
+              onClick={this.toggleMenu}
+              className="w-10 focus:outline-none"
+            >
               <FontAwesomeIcon icon={faBars} />
             </button>
           </div>
@@ -83,8 +86,7 @@ class Header extends React.Component {
       >
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
-          <div
-            className="md:absolute md:hidden md:group-hover:block md:bg-green md:left-0 md:rounded md:shadow md:p-1">
+          <div className="md:absolute md:hidden md:group-hover:block md:bg-green md:left-0 md:rounded md:shadow md:p-1">
             {item.subItems.map((subItem) => (
               <div key={subItem.name} className="px-2 hover:bg-yellow">
                 <Link to={subItem.link}>{subItem.name}</Link>
