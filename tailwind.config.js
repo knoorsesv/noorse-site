@@ -1,9 +1,21 @@
 module.exports = {
   theme: {
     extend: {
+      colors: {
+        green: {
+          default: '#098800',
+          light: '#51b93c',
+          dark: '#005900',
+        },
+        yellow: {
+          default: '#fffd00',
+          dark: '#c7ca00',
+          light: '#ffff59',
+        },
+      },
       transitionProperty: {
-        visibility: 'visible, hidden'
-      }
+        visibility: 'visible, hidden',
+      },
     },
   },
   variants: {
