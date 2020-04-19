@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
@@ -17,7 +16,7 @@ class Header extends React.Component {
           { name: 'Bestuur', link: '/bestuur' },
           { name: 'Clubfiche', link: '/clubfiche' },
           { name: 'Geschiedenis', link: '/geschiedenis' },
-          { name: 'Fair Play', link: 'fairplay' },
+          { name: 'Fair Play', link: '/fairplay' },
           { name: 'Lidmaatschap', link: '/lidmaatschap' },
           { name: 'Sponsoring', link: '/sponsoring' },
           { name: 'Documenten', link: '/documenten' },
@@ -48,11 +47,11 @@ class Header extends React.Component {
           {/*    <Img fixed={data.headerImage.childImageSharp.fixed}/>*/}
           {/*  )}*/}
           {/*/>*/}
-          <img src={HeaderLogo} />
+          <img src={HeaderLogo}  alt="Header Noorse"/>
         </div>
         <div className="fixed w-full bg-green-800 md:w-4/5 md:relative md:rounded">
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
-            <img className="h-10" src={Logo} />
+            <img className="h-10" src={Logo} alt="Logo"/>
             <div>Neurse</div>
             <button onClick={this.toggleMenu} className="w-10 bg-green-400">
               H
@@ -76,12 +75,12 @@ class Header extends React.Component {
 
   menuItem() {
     return item => (
-      <div className="px-2 group relative inline-block hover:bg-yellow-200">
+      <div key={item.name} className="px-2 group relative inline-block hover:bg-yellow-200">
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
           <div className="md:absolute md:hidden md:group-hover:block md:left-0 md:bg-green-700 md:rounded md:shadow md:p-1">
             {item.subItems.map(subItem => (
-              <div className="px-2 hover:bg-yellow-200">
+              <div key={subItem.name} className="px-2 hover:bg-yellow-200">
                 <Link to={subItem.link}>{subItem.name}</Link>
               </div>
             ))}
@@ -92,13 +91,6 @@ class Header extends React.Component {
   }
 }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export const query = graphql`
   query {
