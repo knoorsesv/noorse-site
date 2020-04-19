@@ -5,7 +5,7 @@
   "version": "0.1.6",
   "author": "gvdp",
   "dependencies": {
-    "gatsby": "^2.4.6",
+    "gatsby": "^2.20.25",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-postcss": "^2.2.3",
     "gatsby-plugin-react-helmet": "^3.0.12",
