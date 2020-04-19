@@ -37,7 +37,6 @@ class Header extends React.Component {
   }
 
   render() {
-    console.log('rendering')
     return (
       <div className="w-full md:flex md:flex-col md:items-center">
         <div className="hidden md:block py-4">
@@ -47,11 +46,11 @@ class Header extends React.Component {
           {/*    <Img fixed={data.headerImage.childImageSharp.fixed}/>*/}
           {/*  )}*/}
           {/*/>*/}
-          <img src={HeaderLogo} alt="Header Noorse" />
+          <img src={HeaderLogo} alt="Header Noorse"/>
         </div>
-        <div className="fixed w-full bg-green-800 md:w-4/5 md:relative md:rounded">
+        <div className="w-full bg-green-800 md:w-4/5 md:relative md:rounded">
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
-            <img className="h-10" src={Logo} alt="Logo" />
+            <img className="h-10" src={Logo} alt="Logo"/>
             <div>Neurse</div>
             <button onClick={this.toggleMenu} className="w-10 bg-green-400">
               H
@@ -81,7 +80,8 @@ class Header extends React.Component {
       >
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
-          <div className="md:absolute md:hidden md:group-hover:block md:left-0 md:bg-green-700 md:rounded md:shadow md:p-1">
+          <div
+            className="md:absolute md:hidden md:group-hover:block md:left-0 md:bg-green-700 md:rounded md:shadow md:p-1">
             {item.subItems.map((subItem) => (
               <div key={subItem.name} className="px-2 hover:bg-yellow-200">
                 <Link to={subItem.link}>{subItem.name}</Link>
