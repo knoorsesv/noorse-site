@@ -19,7 +19,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.17.1",
+    "prettier": "^2.0.4",
     "standard-version": "^7.1.0",
     "tailwindcss": "^1.2.0"
   },
@@ -33,7 +33,7 @@
     "release": "standard-version",
     "prerelease": "yarn format && yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "format": "prettier --write src/**/*.{js,jsx} && git add . && git commit -m \"chore(formatting)\"",
+    "format": "prettier --write src/**/*.js && git add . && git commit -m \"chore(formatting)\"",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

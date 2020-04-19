@@ -19,7 +19,7 @@ const BestuurPage = () => (
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div>
           Bestuur
           {data.allContentfulBestuurslid.edges.map(createBestuurslidComponent)}
