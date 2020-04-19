@@ -13,13 +13,11 @@ module.exports = {
           light: '#ffff59',
         },
       },
-      transitionProperty: {
-        visibility: 'visible, hidden',
-      },
     },
   },
   variants: {
     opacity: ['hover', 'focus', 'group-hover', 'responsive'],
+    backgroundColor: ['hover', 'focus', 'group-hover', 'responsive'],
     visibility: ['hover', 'focus', 'group-hover', 'responsive'],
     display: ['hover', 'focus', 'group-hover', 'responsive'],
   },

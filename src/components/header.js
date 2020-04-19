@@ -40,7 +40,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="w-full md:flex md:flex-col md:items-center">
+      <div className="w-full md:flex md:flex-col md:items-center md:bg-grey-100">
         <div className="hidden md:block py-4">
           {/*<StaticQuery*/}
           {/*  query={`${query}`}*/}
@@ -51,7 +51,7 @@ class Header extends React.Component {
           <img src={HeaderLogo} alt="Header Noorse"/>
         </div>
         {/*todo: make bar stick on mobile*/}
-        <div className="text-gray-100 shadow-lg w-full bg-green md:w-4/5 md:relative md:rounded">
+        <div className="text-gray-100 shadow-lg w-full bg-green md:w-11/12 md:relative md:rounded">
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
             <img className="h-10" src={Logo} alt="Logo"/>
             <div className="font-bold">Neurse</div>
@@ -62,7 +62,7 @@ class Header extends React.Component {
           <div
             className={`${
               this.state.showMenu ? 'block' : 'hidden'
-            } py-1 flex flex-col absolute text-right right-0 bg-green md:flex md:flex-row md:justify-around `}
+            } py-1 md:p-0 flex flex-col absolute md:static text-right right-0 md:inset-auto bg-green md:flex md:flex-row md:justify-around `}
           >
             {this.siteMap.items.map(this.menuItem())}
           </div>
@@ -79,12 +79,12 @@ class Header extends React.Component {
     return (item) => (
       <div
         key={item.name}
-        className="px-2 md:group md:relative hover:bg-yellow"
+        className="px-2 group md:relative md:p-4 hover:bg-yellow hover:text-black"
       >
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
           <div
-            className="md:absolute md:hidden md:group-hover:block md:left-0 md:rounded md:shadow md:p-1">
+            className="md:absolute md:hidden md:group-hover:block md:bg-green md:left-0 md:rounded md:shadow md:p-1">
             {item.subItems.map((subItem) => (
               <div key={subItem.name} className="px-2 hover:bg-yellow">
                 <Link to={subItem.link}>{subItem.name}</Link>
