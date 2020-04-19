@@ -3,8 +3,8 @@ import Layout from '../components/layout'
 
 const ContactPage = () => (
   <Layout>
-    <div className="tile is-ancestor is-vertical">
-      <div className="tile is-parent">
+    <div >
+      <div >
         <div class="tile is-child" header="Contact">
           <p>Algemene E-mail: secretariaat@noorse.be</p>
 
@@ -52,7 +52,7 @@ const ContactPage = () => (
           <p> de terreinen.</p>
         </div>
       </div>
-      <div className="tile is-parent">
+      <div >
         <div class="tile is-child is-12">Google map</div>
       </div>
     </div>

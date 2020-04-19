@@ -4,11 +4,11 @@ import Header from './header'
 import Footer from './footer'
 
 const Layout = ({ children }) => (
-  <div className="flex flex-col justify-between min-h-screen">
+  <div >
     <div>
       <Header />
-      <div className="pt-3 px-4">
-        <main className="container bg-red-400 h-auto">{children}</main>
+      <div >
+        <main >{children}</main>
       </div>
     </div>
     <div>

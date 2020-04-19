@@ -40,8 +40,8 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="w-full md:flex md:flex-col md:items-center md:bg-grey-100">
-        <div className="hidden md:block py-4">
+      <div >
+        <div >
           {/*<StaticQuery*/}
           {/*  query={`${query}`}*/}
           {/*  render={data => (*/}
@@ -51,13 +51,13 @@ class Header extends React.Component {
           <img src={HeaderLogo} alt="Header Noorse" />
         </div>
         {/*todo: make bar stick on mobile*/}
-        <div className="text-gray-100 shadow-lg w-full bg-green md:w-11/12 md:relative md:rounded">
-          <div className="flex items-center justify-between px-3 py-2 md:hidden">
-            <img className="h-10" src={Logo} alt="Logo" />
-            <div className="font-bold">Neurse</div>
+        <div >
+          <div >
+            <img  />
+            <div >Neurse</div>
             <button
               onClick={this.toggleMenu}
-              className="w-10 focus:outline-none"
+
             >
               <FontAwesomeIcon icon={faBars} />
             </button>
@@ -82,13 +82,13 @@ class Header extends React.Component {
     return (item) => (
       <div
         key={item.name}
-        className="px-2 group md:relative md:p-4 hover:bg-yellow hover:text-black"
+
       >
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
-          <div className="md:absolute md:hidden md:group-hover:block md:bg-green md:left-0 md:rounded md:shadow md:p-1">
+          <div >
             {item.subItems.map((subItem) => (
-              <div key={subItem.name} className="px-2 hover:bg-yellow">
+              <div key={subItem.name} >
                 <Link to={subItem.link}>{subItem.name}</Link>
               </div>
             ))}
