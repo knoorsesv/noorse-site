@@ -3,6 +3,8 @@ import { graphql, Link } from 'gatsby'
 
 import Logo from '../images/Logo_highres.png'
 import HeaderLogo from '../images/header-logo.png'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends React.Component {
   siteMap = {
@@ -52,14 +54,14 @@ class Header extends React.Component {
           <div className="flex items-center justify-between px-3 py-2 md:hidden">
             <img className="h-10" src={Logo} alt="Logo"/>
             <div>Neurse</div>
-            <button onClick={this.toggleMenu} className="w-10 bg-green-400">
-              H
+            <button onClick={this.toggleMenu} className="w-10">
+              <FontAwesomeIcon icon={faBars} />
             </button>
           </div>
           <div
             className={`${
               this.state.showMenu ? 'block' : 'hidden'
-            } py-3 flex flex-col md:flex md:flex-row md:justify-around `}
+            } py-3 flex flex-col absolute text-right right-0 bg-green-700 md:flex md:flex-row md:justify-around `}
           >
             {this.siteMap.items.map(this.menuItem())}
           </div>
@@ -76,12 +78,12 @@ class Header extends React.Component {
     return (item) => (
       <div
         key={item.name}
-        className="px-2 group relative inline-block hover:bg-yellow-200"
+        className="px-2 md:group md:relative hover:bg-yellow-200"
       >
         <Link to={item.link}>{item.name}</Link>
         {item.subItems && (
           <div
-            className="md:absolute md:hidden md:group-hover:block md:left-0 md:bg-green-700 md:rounded md:shadow md:p-1">
+            className="md:absolute md:hidden md:group-hover:block md:left-0 md:rounded md:shadow md:p-1">
             {item.subItems.map((subItem) => (
               <div key={subItem.name} className="px-2 hover:bg-yellow-200">
                 <Link to={subItem.link}>{subItem.name}</Link>

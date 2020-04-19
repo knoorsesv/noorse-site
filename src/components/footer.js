@@ -1,22 +1,22 @@
 import React from 'react'
+import { faCopyright } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => (
   <div className="border-t h-12 text-center flex flex-row text-sm justify-between items-center px-2">
     <div>
-      © {new Date().getFullYear()}, K. Noorse S.V.
+      <FontAwesomeIcon icon={faCopyright}/> {new Date().getFullYear()}, K. Noorse S.V.
     </div>
-    <div className="hidden">
+    <div className="hidden md:visible">
       Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
     </div>
     <div>
-
-      <div className="inline-block">
-        {/*Add icon*/}
-        <a href="https://www.gatsbyjs.org">G</a>
+      <div className="inline-block ml-2">
+        <FontAwesomeIcon icon={faFacebook}/>
       </div>
       <div className="inline-block ml-2">
-        {/*Github icon*/}
-        GVDP
+        <FontAwesomeIcon icon={faGithub}/>
       </div>
     </div>
   </div>
