@@ -1,20 +1,29 @@
 import React from 'react'
 
-import Header from './header'
+import NoorseHeader from './noorseHeader'
 import Footer from './footer'
+import { Grommet } from 'grommet'
+
+const theme = {
+  global: {
+    colors: {
+      brand: '#008000',
+    },
+  },
+}
 
 const Layout = ({ children }) => (
-  <div >
+  <Grommet theme={theme}>
     <div>
-      <Header />
-      <div >
-        <main >{children}</main>
+      <NoorseHeader/>
+      <div>
+        <main>{children}</main>
       </div>
     </div>
     <div>
-      <Footer />
+      <Footer/>
     </div>
-  </div>
+  </Grommet>
 )
 
 export default Layout
