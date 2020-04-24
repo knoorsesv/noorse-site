@@ -51,24 +51,25 @@ const menuOpened = (item, hover) => {
 export default () => {
   const [hover, setHover] = useState('')
   return (
-    <Header background="brand" pad="medium" justify="center" gap="small" height="xxsmall">
+    <Header pad="medium" background="brand" justify="center" gap="small" height="xxsmall">
       {siteMap.items.map((item) => (
-        <div>
+        <Box key={item.name}>
           <MenuLink item={item}
-                    key={item.name}
                     setHover={setHover}
           />
           {item.subItems && menuOpened(item, hover) && (
             <Drop target={refsCollection[item.name]}
-                  align={{ top: 'bottom' }}
+                  align={{ top: 'bottom', left: 'left' }}
                   elevation="none"
                   overflow="hidden"
                   margin={{ top: 'medium' }}
             >
               <Box direction="column" round={{ corner: 'bottom' }}
-                   background="brand"
                    animation="slideDown"
-                   pad={{ vertical: 'small' }}
+                   gap={'small'}
+                   background="brand"
+                   pad={{ vertical: 'small', left: 'small', right: 'large' }}
+                   onMouseLeave={() => setHover('')}
               >
                 {item.subItems.map((subItem) => (
                   <MenuLink item={subItem} key={subItem.name} setHover={setHover}/>
@@ -76,7 +77,7 @@ export default () => {
               </Box>
             </Drop>
           )}
-        </div>
+        </Box>
       ))}
     </Header>
   )
@@ -84,18 +85,14 @@ export default () => {
 
 const MenuLink = ({ item, setHover, ...rest }) => {
   return (
-    <Button plain
-            ref={(instance) => {
-              refsCollection[item.name] = instance
-            }}
-            onMouseEnter={() => hoverMenu(item, setHover)}
-            onMouseLeave={() => !item.subItems && setHover('')}
+    <Button
+      ref={(instance) => {
+        refsCollection[item.name] = instance
+      }}
+      onMouseEnter={() => hoverMenu(item, setHover)}
+      onClick={() => goTo(item)}
     >
-      {({ hover }) => (
-        <Box background={hover ? 'accent-1' : undefined}
-             pad={{ vertical: 'xsmall', left: 'small', right: 'large' }}>
-          <Text onClick={() => goTo(item)}>{item.name}</Text>
-        </Box>
-      )}
-    </Button>)
+      <Text>{item.name}</Text>
+    </Button>
+  )
 }
