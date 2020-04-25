@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -26,7 +27,8 @@ module.exports = {
       options: {
         spaceId: `u0xs2v9mjzql`,
 //todo: make this a secret
-        accessToken: `eyvTt4BuTrpGkjybtK46eXZKdiwUtnwvma1nfyKSaGc`,
+        accessToken: `cZoDsy5n81N1MjmN3Xbld2-joHP_Xbo6h8BwaUEDhCE`,
+        host: `preview.contentful.com`
       },
     },
   ],

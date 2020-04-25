@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+$title-color: #ff0000;
+//@import "~normalize.css/normalize.css";
+
+$navbar-background-color: rgba(30, 206, 30, 0.62);
+$navbar-height: 5rem;
+$navbar-padding-horizontal: 3.5rem;
+$navbar-padding-vertical: .5rem;
+
+@import "~bulma/bulma.sass";
+
+// reset weird default from typography.js
+img {
+  margin-bottom: 0;
+}
+
+.navbar-item img {
+  max-height: $navbar-height;
+}

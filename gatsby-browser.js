@@ -12,4 +12,4 @@
 //   return <Layout {...props}>{element}</Layout>
 // }
 
-import "./src/styles/global.css"
+import "./src/styles/global.scss"

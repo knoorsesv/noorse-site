@@ -1,60 +1,58 @@
 import React from 'react'
-import { Anchor, Box, Text } from 'grommet'
-import { Facebook, Github } from 'grommet-icons'
 
 const NoorseFooter = () => (
-  <Box>
-    <Box background={'dark-1'}
+  <div>
+    <div background={'dark-1'}
          pad={'large'}
          justify={'between'}
          direction={'row'}>
-      <Box direction={'row'}
+      <div direction={'row'}
            gap={'medium'} border={'between'}>
-        <Box>
+        <div>
           Logo
-        </Box>
-        <Box>
+        </div>
+        <div>
           Sponsors
-        </Box>
-      </Box>
-      <Box direction={'row'} gap={'medium'} border={'between'}>
-        <Box>
+        </div>
+      </div>
+      <div direction={'row'} gap={'medium'} border={'between'}>
+        <div>
           Sitemap?
-        </Box>
-        <Box gap={'medium'}>
-          <Text weight={'bold'} size={'medium'} alignSelf={'end'}>
+        </div>
+        <div gap={'medium'}>
+          <span weight={'bold'} size={'medium'} alignSelf={'end'}>
             Contact
-          </Text>
-          <Box align={'end'}>
+          </span>
+          <div align={'end'}>
 
-            <Text size={'small'}>
+            <span size={'small'}>
               Frans de Peuterstraat
-            </Text>
-            <Text size={'small'}>
+            </span>
+            <span size={'small'}>
               03/543.xx.xx
-            </Text>
-          </Box>
-        </Box>
-      </Box>
-    </Box>
-    <Box justify={'between'}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div justify={'between'}
          direction={'row'}
          background={'dark-2'}
          pad={{ vertical: 'medium', horizontal: 'large' }}>
-      <Box direction={'column'} gap={'small'}>
-        <Text size={'small'}>
+      <div direction={'column'} gap={'small'}>
+        <span size={'small'}>
           © {new Date().getFullYear()}, K. Noorse S.V.
-        </Text>
-        <Text size={'small'}>
-          Built with <Anchor href="https://www.gatsbyjs.org">Gatsby</Anchor>
-        </Text>
-      </Box>
-      <Box direction={'row'} gap={'medium'} align={'center'}>
-        <Facebook size={'medium'}/>
-        <Github size={'medium'}/>
-      </Box>
-    </Box>
-  </Box>
+        </span>
+        <span size={'small'}>
+          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </span>
+      </div>
+      <div direction={'row'} gap={'medium'} align={'center'}>
+        <i size={'medium'}/>
+        <i size={'medium'}/>
+      </div>
+    </div>
+  </div>
 )
 
 export default NoorseFooter
