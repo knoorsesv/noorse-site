@@ -1,1 +1,6 @@
 @import "~normalize.css/normalize.css";
+
+/*style added by typography js  https://github.com/KyleAMathews/typography.js/issues/80 */
+img {
+    margin-bottom: 0;
+}

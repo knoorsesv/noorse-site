@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { navigate } from 'gatsby'
-import { Box, Button, Drop, Header, Text } from 'grommet'
+import { Box, Button, Drop, Header, Image, Text } from 'grommet'
+import logo from '../images/Logo_highres.png'
+
 
 const siteMap = {
   items: [
@@ -45,40 +47,57 @@ const menuOpened = (item, hover) => {
     let subItemsForItem = siteMap.items.find(definedItem => definedItem.name === item.name)
     return subItemsForItem && subItemsForItem.subItems && subItemsForItem.subItems.map(item => item.name)
   }
+
   return item.name === hover.name || getSubItemsFotItem().includes(hover.name)
 }
 
+
+const backGroundColor = { color: 'brand', opacity: 'strong' }
 export default () => {
   const [hover, setHover] = useState('')
+  console.log(logo)
   return (
-    <Header pad="medium" background="brand" justify="center" gap="small" height="xxsmall">
-      {siteMap.items.map((item) => (
-        <Box key={item.name}>
-          <MenuLink item={item}
-                    setHover={setHover}
-          />
-          {item.subItems && menuOpened(item, hover) && (
-            <Drop target={refsCollection[item.name]}
-                  align={{ top: 'bottom', left: 'left' }}
-                  elevation="none"
-                  overflow="hidden"
-                  margin={{ top: 'medium' }}
-            >
-              <Box direction="column" round={{ corner: 'bottom' }}
-                   animation="slideDown"
-                   gap={'small'}
-                   background="brand"
-                   pad={{ vertical: 'small', left: 'small', right: 'large' }}
-                   onMouseLeave={() => setHover('')}
+    <Header
+            background={backGroundColor}
+            justify="between"
+            height="xsmall">
+      <Box width={'xsmall'}
+           height={'xsmall'}
+           margin={{left: 'small'}}
+           pad={'small'}>
+        <Image src={logo}
+               fit={'contain'}
+               alignSelf={'center'}/>
+      </Box>
+      <Box direction={'row'} gap={'medium'} margin={{right: 'medium'}}>
+        {siteMap.items.map((item) => (
+          <Box key={item.name}>
+            <MenuLink item={item}
+                      setHover={setHover}
+            />
+            {item.subItems && menuOpened(item, hover) && (
+              <Drop target={refsCollection[item.name]}
+                    align={{ top: 'bottom', left: 'left' }}
+                    elevation="none"
+                    overflow="hidden"
+                    margin={{ top: 'medium' }}
               >
-                {item.subItems.map((subItem) => (
-                  <MenuLink item={subItem} key={subItem.name} setHover={setHover}/>
-                ))}
-              </Box>
-            </Drop>
-          )}
-        </Box>
-      ))}
+                <Box direction="column" round={{ corner: 'bottom' }}
+                     animation="slideDown"
+                     gap={'small'}
+                     background={backGroundColor}
+                     pad={{ vertical: 'small', left: 'small', right: 'large' }}
+                     onMouseLeave={() => setHover('')}
+                >
+                  {item.subItems.map((subItem) => (
+                    <MenuLink item={subItem} key={subItem.name} setHover={setHover}/>
+                  ))}
+                </Box>
+              </Drop>
+            )}
+          </Box>
+        ))}
+      </Box>
     </Header>
   )
 }

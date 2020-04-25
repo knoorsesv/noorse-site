@@ -1,28 +1,22 @@
 import React from 'react'
 
 import NoorseHeader from './noorseHeader'
-import Footer from './footer'
-import { Grommet } from 'grommet'
+import NoorseFooter from './noorseFooter'
+import { Grommet, Main } from 'grommet'
 
 const theme = {
   global: {
     colors: {
-      brand: '#008000',
+        brand: '#008000',
     },
   },
 }
 
 const Layout = ({ children }) => (
-  <Grommet theme={theme}>
-    <div>
-      <NoorseHeader/>
-      <div>
-        <main>{children}</main>
-      </div>
-    </div>
-    <div>
-      <Footer/>
-    </div>
+  <Grommet theme={theme} full>
+    <NoorseHeader/>
+    <Main>{children}</Main>
+    <NoorseFooter/>
   </Grommet>
 )
 
