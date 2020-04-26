@@ -34,7 +34,7 @@ export default () => {
     <nav className={'navbar is-spaced'}>
       <div className={'navbar-brand'}>
         <div className={'navbar-item' }>
-          <img src={logo} height="80"/>
+          <img src={logo} height="80" alt={'Noorse Logo'}/>
         </div>
       </div>
       <div className={'navbar-menu'}>

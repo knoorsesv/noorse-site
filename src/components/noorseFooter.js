@@ -1,58 +1,47 @@
 import React from 'react'
 
 const NoorseFooter = () => (
-  <div>
-    <div background={'dark-1'}
-         pad={'large'}
-         justify={'between'}
-         direction={'row'}>
-      <div direction={'row'}
-           gap={'medium'} border={'between'}>
-        <div>
-          Logo
-        </div>
+  <footer className={'footer'}>
+    <div className={'grid grid-cols-5'}>
+      <div className={'col-start-1 col-end-1 flex flex-column'}>
         <div>
           Sponsors
         </div>
+        <div>
+          Logo?
+        </div>
       </div>
-      <div direction={'row'} gap={'medium'} border={'between'}>
+      <div className={'col-start-3 col-end-6 flex items-start justify-between'}>
         <div>
           Sitemap?
         </div>
-        <div gap={'medium'}>
-          <span weight={'bold'} size={'medium'} alignSelf={'end'}>
+        <div className="is-divider-vertical"></div>
+        <div className={'flex content-end flex-col content-end'}>
+          <h1 className={'self-end'}>
             Contact
-          </span>
-          <div align={'end'}>
-
-            <span size={'small'}>
+          </h1>
+          <span className={'self-end'}>
               Frans de Peuterstraat
             </span>
-            <span size={'small'}>
+          <span className={'self-end'}>
               03/543.xx.xx
             </span>
-          </div>
         </div>
       </div>
     </div>
-    <div justify={'between'}
-         direction={'row'}
-         background={'dark-2'}
-         pad={{ vertical: 'medium', horizontal: 'large' }}>
-      <div direction={'column'} gap={'small'}>
+    <div className={''}>
         <span size={'small'}>
           © {new Date().getFullYear()}, K. Noorse S.V.
         </span>
-        <span size={'small'}>
+      <span size={'small'}>
           Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </span>
-      </div>
-      <div direction={'row'} gap={'medium'} align={'center'}>
+      <div>
         <i size={'medium'}/>
         <i size={'medium'}/>
       </div>
     </div>
-  </div>
+  </footer>
 )
 
 export default NoorseFooter
