@@ -1,9 +1,10 @@
 module.exports = {
+  important: true,
   theme: {
     extend: {
       colors: {
         black: {
-          default: '#000000'
+          default: '#000000',
         },
         green: {
           default: '#098800',
@@ -16,6 +17,9 @@ module.exports = {
           light: '#ffff59',
         },
       },
+    },
+    maxWidth: {
+      '1/3': '33%',
     },
   },
   variants: {

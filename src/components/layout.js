@@ -7,7 +7,7 @@ import NoorseFooter from './noorseFooter'
 const Layout = ({ children }) => (
   <div className={'flex min-h-screen flex-col'}>
     <NoorseHeader/>
-    <div className={'flex-1 mx-6 shadow-lg p-5'}>{children}</div>
+    <div className={'flex-1 mx-6 p-5'}>{children}</div>
     <NoorseFooter/>
   </div>
 )
