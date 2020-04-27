@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (<div className={'card p-3 max-w-1/3'}>
@@ -30,8 +31,7 @@ const NoorseFooter = () => {
           }
         }
       `)
-  console.log(sponsors)
-  return (<footer className={'footer'}>
+  return (<footer className={'footer pb-2 pt-12'}>
       <div className={'grid grid-cols-5 mb-24'}>
         <div className={'col-start-1 col-end-3 flex flex-col'}>
           <h1 className={'title'}>
@@ -47,7 +47,7 @@ const NoorseFooter = () => {
           </div>
           <div className="is-divider-vertical"></div>
           <div className={'flex content-end flex-col content-end'}>
-            <h1 className={'self-end'}>
+            <h1 className={'title self-end'}>
               Contact
             </h1>
             <span className={'self-end'}>
@@ -59,16 +59,23 @@ const NoorseFooter = () => {
           </div>
         </div>
       </div>
-      <div className={''}>
-        <span size={'small'}>
-          © {new Date().getFullYear()}, K. Noorse S.V.
-        </span>
-        <span size={'small'}>
-          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </span>
+      <div className={'flex flex-row justify-between'}>
         <div>
-          <i size={'medium'}/>
-          <i size={'medium'}/>
+
+          <div size={'small'}>
+            © {new Date().getFullYear()}, K. Noorse S.V.
+          </div>
+          <div size={'small'}>
+            Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </div>
+        </div>
+        <div>
+          <span className={'icon'}>
+          <FontAwesomeIcon icon={faFacebook}/>
+          </span>
+          <span className={'icon'}>
+          <FontAwesomeIcon icon={faGithub}/>
+          </span>
         </div>
       </div>
     </footer>
