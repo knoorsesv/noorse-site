@@ -1,9 +1,21 @@
 @charset "utf-8";
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
 
-$navbar-background-color: rgba(30, 206, 30, 0.62);
+$green: #008000;
+$primary: bulmaRgba($green, 0.8);
+
 $navbar-height: 5rem;
 $navbar-padding-horizontal: 3.5rem;
 $navbar-padding-vertical: .5rem;
+$navbar-item-hover-background-color: bulmaRgba($grey-lighter, 0.3);
+$navbar-item-color:  findColorInvert($primary);
+$navbar-item-hover-color: findColorInvert($navbar-item-hover-background-color);
+
+$navbar-dropdown-background-color: $primary;
+$navbar-dropdown-item-hover-background-color: bulmaRgba($grey-lighter, 0.3);
+
+
 $footer-padding: 2rem;
 
 @import "~bulma/bulma.sass";

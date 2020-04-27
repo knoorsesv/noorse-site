@@ -31,7 +31,7 @@ const siteMap = {
 
 export default () => {
   return (
-    <nav className={'navbar is-spaced'}>
+    <nav className={'navbar is-primary is-spaced'}>
       <div className={'navbar-brand'}>
         <div className={'navbar-item' }>
           <img src={logo} height="80" alt={'Noorse Logo'}/>
@@ -52,7 +52,7 @@ export default () => {
 const MenuLink = ({ item }) => {
   return (
     <div className={`navbar-item ${item.subItems ? 'has-dropdown is-hoverable' : ''}`}>
-      <Link className={`${item.subItems ? 'navbar-link' : 'navbar-item is-tab'}`} to={item.link}>{item.name}</Link>
+      <Link className={`${item.subItems ? 'navbar-link' : 'navbar-item'}`} to={item.link}>{item.name}</Link>
       {item.subItems && (
         <div className={'navbar-dropdown'}>
           {item.subItems.map((subItem) => (
