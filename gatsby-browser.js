@@ -12,5 +12,6 @@
 //   return <Layout {...props}>{element}</Layout>
 // }
 
-import "./src/styles/main.css"
+import "./src/styles/tailwind-import.css"
+import "./src/styles/masonry.css"
 import "./src/styles/global.scss"

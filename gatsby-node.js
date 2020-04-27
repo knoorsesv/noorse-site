@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allContentfulNews.nodes.forEach((newPageNode) => {
     console.log(newPageNode.title)
     createPage({
-      path: `/${newPageNode.title}`,
+      path: `/nieuws/${newPageNode.title}`,
       component: require.resolve(`./src/templates/news-template.js`),
       context: { newPageNode },
     })
