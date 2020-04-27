@@ -29,7 +29,7 @@ export default () => {
                 {newsNode.title.includes('spelers') && (
                   <div className={'card-image'}>
                     <figure className={'image'}>
-                      <img src={contract}/>
+                      <img src={contract} alt={'News header '}/>
                     </figure>
                   </div>
                 )}
@@ -49,9 +49,9 @@ export default () => {
           <div className={'box'}>
             <h1>Next game</h1>
             <div className={'flex justify-around items-center mt-6'} >
-              <img src={logo} className={'max-w-1/3'}/>
+              <img src={logo} className={'max-w-1/3'} alt={'Logo Home Team'}/>
               <span>VS</span>
-              <img src={logo} className={'max-w-1/3'}/>
+              <img src={logo} className={'max-w-1/3'} alt={'Logo Away Team'}/>
             </div>
           </div>
           <div className={'box'}>
