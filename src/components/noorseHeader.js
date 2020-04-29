@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'gatsby'
 import logo from '../images/Logo_highres.png'
+import noorseCover from '../images/noorse_cover.jpg'
 
 
 const siteMap = {
@@ -30,22 +31,44 @@ const siteMap = {
 }
 
 export default () => {
+  const [isSticky, setSticky] = useState(false)
+  const ref = useRef(null)
+  const handleScroll = () => {
+      console.log('top', ref.current.getBoundingClientRect().top)
+    if (ref.current) {
+      setSticky(ref.current.getBoundingClientRect().top < 0)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll)
+    }
+  }, [])
+
   return (
-    <nav className={'navbar is-primary is-spaced'}>
-      <div className={'navbar-brand'}>
-        <div className={'navbar-item' }>
-          <img src={logo} height="80" alt={'Noorse Logo'}/>
+    <section ref={ref}>
+      <nav className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} is-spaced fixed transition-all duration-200 ease-in w-full`} >
+        <div className={'navbar-brand'}>
+          <div className={'navbar-item'}>
+            <img src={logo} alt={'Noorse Logo'} className={`relative transition-all duration-1000 ease-in  ${isSticky ? 'top-0 h-160' : 'top-80 h-160'}`}/>
+          </div>
         </div>
-      </div>
-      <div className={'navbar-menu'}>
-        <div className={'navbar-start'}/>
-        <div className={'navbar-end'}>
-          {siteMap.items.map((item) => (
-            <MenuLink item={item}/>
-          ))}
+        <div className={'navbar-menu'}>
+          <div className={'navbar-start'}/>
+          <div className={'navbar-end'}>
+            {siteMap.items.map((item) => (
+              <MenuLink item={item}/>
+            ))}
+          </div>
         </div>
+      </nav>
+      <div className={'hero h-3/4 overflow-hidden object-center'} >
+        <img className={'object-cover '} src={noorseCover}/>
       </div>
-    </nav>
+    </section>
   )
 }
 

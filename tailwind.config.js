@@ -21,9 +21,19 @@ module.exports = {
           light: '#ffff59',
         },
       },
+      height: {
+        'half': '50vh',
+        '3/4': '75vh',
+        '80': '80px',
+        '160': '160px',
+      },
     },
     maxWidth: {
       '1/3': '33%',
+    },
+
+    inset: {
+      '80': '80px',
     },
   },
   variants: {
