@@ -31,8 +31,8 @@ const NoorseFooter = () => {
           }
         }
       `)
-  return (<footer className={'footer pb-2 pt-12'}>
-      <div className={'grid grid-cols-5 mb-24'}>
+  return (<footer className={''}>
+      <div className={'grid grid-cols-5 pb-12 pt-12 px-6 bg-gray shadow-lg shadow-inner'}>
         <div className={'col-start-1 col-end-3 flex flex-col'}>
           <h1 className={'title'}>
             Sponsors
@@ -59,9 +59,8 @@ const NoorseFooter = () => {
           </div>
         </div>
       </div>
-      <div className={'flex flex-row justify-between'}>
-        <div>
-
+      <div className={'flex flex-row justify-between bg-gray-darker p-2'}>
+        <div className={'flex flex-col justify-start items-start ml-4'}>
           <div size={'small'}>
             © {new Date().getFullYear()}, K. Noorse S.V.
           </div>
@@ -69,7 +68,7 @@ const NoorseFooter = () => {
             Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
           </div>
         </div>
-        <div>
+        <div className={'flex flex-row justify-end items-center mr-4'}>
           <span className={'icon'}>
           <FontAwesomeIcon icon={faFacebook}/>
           </span>
