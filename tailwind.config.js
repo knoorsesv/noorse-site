@@ -8,7 +8,9 @@ module.exports = {
         },
         gray: {
           default: '#ada8a869',
+          dark: '#000000b3',
           darker: '#0000006b',
+          lighter: '#dbdbdb4d'
         },
         green: {
           default: '#098800',
@@ -24,17 +26,17 @@ module.exports = {
       height: {
         'half': '50vh',
         '3/4': '75vh',
-        '80': '80px',
+        '75': '75px',
         '160': '160px',
+      },
+      inset: {
+        '80': '80px',
       },
     },
     maxWidth: {
       '1/3': '33%',
     },
 
-    inset: {
-      '80': '80px',
-    },
   },
   variants: {
     opacity: ['hover', 'focus', 'group-hover', 'responsive'],

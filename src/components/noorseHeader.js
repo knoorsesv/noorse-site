@@ -34,7 +34,7 @@ export default () => {
   const [isSticky, setSticky] = useState(false)
   const ref = useRef(null)
   const handleScroll = () => {
-      console.log('top', ref.current.getBoundingClientRect().top)
+    console.log('top', ref.current.getBoundingClientRect().top)
     if (ref.current) {
       setSticky(ref.current.getBoundingClientRect().top < 0)
     }
@@ -50,36 +50,40 @@ export default () => {
 
   return (
     <section ref={ref}>
-      <nav className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} is-spaced fixed transition-all duration-200 ease-in w-full`} >
+      <nav className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} 
+      p-3 fixed transition-all duration-200 ease-in w-full`}>
         <div className={'navbar-brand'}>
           <div className={'navbar-item'}>
-            <img src={logo} alt={'Noorse Logo'} className={`relative transition-all duration-1000 ease-in  ${isSticky ? 'top-0 h-160' : 'top-80 h-160'}`}/>
+            <img src={logo} alt={'Noorse Logo'}
+                 className={`relative transition-all duration-200 ease-in ${isSticky ? 'top-0 h-75' : 'top-80 h-160'}`}/>
           </div>
         </div>
         <div className={'navbar-menu'}>
           <div className={'navbar-start'}/>
           <div className={'navbar-end'}>
             {siteMap.items.map((item) => (
-              <MenuLink item={item}/>
+              <MenuLink item={item} sticky={isSticky}/>
             ))}
           </div>
         </div>
       </nav>
-      <div className={'hero h-3/4 overflow-hidden object-center'} >
+      <div className={'hero h-3/4 overflow-hidden object-center'}>
         <img className={'object-cover '} src={noorseCover}/>
       </div>
     </section>
   )
 }
 
-const MenuLink = ({ item }) => {
+const MenuLink = ({ item, sticky }) => {
   return (
-    <div className={`navbar-item ${item.subItems ? 'has-dropdown is-hoverable' : ''}`}>
-      <Link className={`${item.subItems ? 'navbar-link' : 'navbar-item'}`} to={item.link}>{item.name}</Link>
+    <div className={`${sticky ? '' : 'p-3'} navbar-item ${item.subItems ? 'is-hoverable' : ''}`}>
+      <Link className={`${item.subItems ? 'navbar-item' : 'navbar-item'} 
+      ${sticky ? '' : 'bg-gray-lighter text-gray-dark'}`} to={item.link}>{item.name}</Link>
       {item.subItems && (
-        <div className={'navbar-dropdown'}>
+        <div className={`navbar-dropdown ${sticky ? '' : 'bg-gray-lighter'}`}>
           {item.subItems.map((subItem) => (
-            <Link className={'navbar-item'} to={subItem.link} key={subItem.name}>{subItem.name}</Link>
+            <Link className={`navbar-item ${sticky ? '' : 'text-gray-dark'}`} to={subItem.link}
+                  key={subItem.name}>{subItem.name}</Link>
           ))}
         </div>
       )}
