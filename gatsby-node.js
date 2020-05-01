@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
   categories.data.allContentfulCategorie.nodes.forEach((categoryNode) => {
     console.log('creating page for', categoryNode.naam)
     createPage({
-      path: categoryNode.naam,
+      path: categoryNode.naam.toLowerCase(),
       component: require.resolve(`./src/templates/category-template.js`),
       context: { categoryNode },
     })
