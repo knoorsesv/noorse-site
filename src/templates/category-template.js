@@ -8,7 +8,7 @@ export default ({ pageContext: { categoryNode } }) => {
       <div className={'grid grid-cols-3'}>
         <div className={'col-span-1'}>
           <h2 className={'subtitle'}>Nieuws</h2>
-          {categoryNode.news.map((news) => news.title)}
+          {categoryNode.news && categoryNode.news.map((news) => news.title)}
         </div>
         <div className={'col-span-2'}>
           <h2 className={'subtitle'}>Ploegen</h2>
