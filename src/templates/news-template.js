@@ -11,7 +11,11 @@ const nodeToHtml = (nodeWithType) => {
     return <span>{nodeWithType.value}</span>
   }
   if (nodeWithType.nodeType === 'unordered-list') {
-    return <ul className={'list-disc list-inside'}>{nodeWithType.content.map(nodeToHtml)}</ul>
+    return (
+      <ul className={'list-disc list-inside'}>
+        {nodeWithType.content.map(nodeToHtml)}
+      </ul>
+    )
   }
 
   if (nodeWithType.nodeType === 'list-item') {
@@ -22,14 +26,17 @@ const nodeToHtml = (nodeWithType) => {
   return <span>{nodeWithType.nodeType}</span>
 }
 
-
 export default ({ pageContext: { newsNode } }) => (
   <Layout>
     <div className={'px-12 my-5'}>
       <nav className={'breadcrumb'}>
         <ul>
-          <li><Link to={'nieuws'}>News</Link></li>
-          <li><Link to={'nieuws'}>Senioren (shoudl be dynamis)</Link></li>
+          <li>
+            <Link to={'nieuws'}>News</Link>
+          </li>
+          <li>
+            <Link to={'nieuws'}>Senioren (shoudl be dynamis)</Link>
+          </li>
         </ul>
       </nav>
       <h1 className={'uppercase title'}>{newsNode.title}</h1>
