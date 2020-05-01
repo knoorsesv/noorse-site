@@ -51,7 +51,7 @@
     "release": "standard-version",
     "prerelease": "yarn format && yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "format": "prettier --write src/**/*.js && git add . && git commit -m \"chore(formatting)\"",
+    "format": "prettier --write src/**/*.js && git add . && git commit -m \"chore(formatting)\" --allow-empty",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
