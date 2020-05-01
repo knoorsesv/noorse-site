@@ -1,7 +1,10 @@
+
+
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const result = await graphql(`
+  const news = await graphql(`
     query {
       allContentfulNews {
         nodes {
@@ -14,14 +17,37 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log(JSON.stringify(result, null, 4))
 
-  result.data.allContentfulNews.nodes.forEach((newPageNode) => {
-    console.log(newPageNode.title)
+  const categories = await graphql(`
+    query {
+      allContentfulCategorie {
+        nodes {
+          naam
+          news {
+            title
+            blurb
+          }
+        }
+      }
+    }
+  `)
+
+  news.data.allContentfulNews.nodes.forEach((newsNode) => {
+    console.log('creating page for ', newsNode.title)
     createPage({
-      path: `/nieuws/${newPageNode.title}`,
+      path: `/nieuws/${newsNode.title}`,
       component: require.resolve(`./src/templates/news-template.js`),
-      context: { newPageNode },
+      context: { newsNode },
+    })
+  })
+
+
+  categories.data.allContentfulCategorie.nodes.forEach((categoryNode) => {
+    console.log('creating page for', categoryNode.naam)
+    createPage({
+      path: categoryNode.naam,
+      component: require.resolve(`./src/templates/category-template.js`),
+      context: { categoryNode },
     })
   })
 }

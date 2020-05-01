@@ -34,7 +34,6 @@ export default () => {
   const [isSticky, setSticky] = useState(false)
   const ref = useRef(null)
   const handleScroll = () => {
-    console.log('top', ref.current.getBoundingClientRect().top)
     if (ref.current) {
       setSticky(ref.current.getBoundingClientRect().top < 0)
     }
@@ -68,7 +67,7 @@ export default () => {
         </div>
       </nav>
       <div className={'hero h-3/4 overflow-hidden object-center'}>
-        <img className={'object-cover '} src={noorseCover}/>
+        <img className={'object-cover '} src={noorseCover} alt={'cover'}/>
       </div>
     </section>
   )

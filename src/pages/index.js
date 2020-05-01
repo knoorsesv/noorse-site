@@ -3,33 +3,10 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql, useStaticQuery } from 'gatsby'
-import contract from '../images/contract.jpg'
 import logo from '../images/Logo_highres.png'
 import Masonry from 'react-masonry-css'
-import { navigate } from 'gatsby-link'
+import { NewsCard } from '../components/newsCard'
 
-const NewsCard = (newsNode) => {
-  const goToNews = () => {
-    navigate(`/nieuws/${newsNode.title}`)
-  }
-  return <div className={'card mx-2 my-2 max-w-full'} onClick={goToNews}>
-    {newsNode.title.includes('spelers') && (
-      <div className={'card-image'}>
-        <figure className={'image'}>
-          <img src={contract} alt={'News header '}/>
-        </figure>
-      </div>
-    )}
-    <header className={'card-header'}>
-      <p className={'card-header-title'} to={newsNode.title}>{newsNode.title}</p>
-    </header>
-    {newsNode.blurb && (
-      <div className={'card-content'}>
-        {newsNode.blurb}
-      </div>
-    )}
-  </div>
-}
 
 export default () => {
   const newsItems = useStaticQuery(graphql`

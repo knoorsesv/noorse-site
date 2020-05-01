@@ -23,18 +23,18 @@ const nodeToHtml = (nodeWithType) => {
 }
 
 
-export default ({ pageContext: { newPageNode } }) => (
+export default ({ pageContext: { newsNode } }) => (
   <Layout>
     <div className={'px-12 my-5'}>
       <nav className={'breadcrumb'}>
         <ul>
           <li><Link to={'nieuws'}>News</Link></li>
-          <li><Link to={'nieuws'}>Senioren</Link></li>
+          <li><Link to={'nieuws'}>Senioren (shoudl be dynamis)</Link></li>
         </ul>
       </nav>
-      <h1 className={'uppercase title'}>{newPageNode.title}</h1>
-      <h3 className={'subtitle'}>{newPageNode.updatedAt}</h3>
-      {newPageNode.body.json.content.map(nodeToHtml)}
+      <h1 className={'uppercase title'}>{newsNode.title}</h1>
+      <h3 className={'subtitle'}>{newsNode.updatedAt}</h3>
+      {newsNode.body.json.content.map(nodeToHtml)}
     </div>
   </Layout>
 )

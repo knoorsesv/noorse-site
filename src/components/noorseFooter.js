@@ -7,7 +7,7 @@ const SponsorWithLogo = (sponsorNode) => {
   return (<div className={'card p-3 max-w-1/3'}>
     <div className={'card-image'}>
       <figure className={'image'}>
-        <img src={sponsorNode.logo.localFile.publicURL}/>
+        <img src={sponsorNode.logo.localFile.publicURL} alt={'logo'}/>
       </figure>
     </div>
     <div className={'card-content text-center'}>
