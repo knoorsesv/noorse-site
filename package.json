@@ -2,7 +2,7 @@
   "name": "gatsby-site-noorse",
   "private": true,
   "description": "Noors wesbsite",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "gvdp",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
