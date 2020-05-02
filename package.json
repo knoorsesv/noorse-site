@@ -55,7 +55,8 @@
     "release": "standard-version",
     "prerelease": "yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "test": "backstop test",
+    "test": "backstop test --docker",
+    "test:approve": "backstop approve",
     "test:ci": "set WAIT_ON_TIMEOUT=60000 && start-server-and-test develop http://localhost:8000 test"
   },
   "repository": {
