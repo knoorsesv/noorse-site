@@ -2,6 +2,5 @@
 
 set -e
 
-sh -c "pwd"
-sh -c "ls"
 sh -c "yarn"
+sh -c "yarn test:ci"
