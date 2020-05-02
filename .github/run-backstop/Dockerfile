@@ -1,4 +1,4 @@
-FROM backstopjs/backstopjs
+FROM node:lts-alpine
 
 RUN pwd
 RUN yarn --version
