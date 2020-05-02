@@ -12,7 +12,7 @@
   "scenarios": [
     {
       "label": "Homepage",
-      "url": "http://localhost:8000/",
+      "url": "http://host.docker.internal:8000/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
