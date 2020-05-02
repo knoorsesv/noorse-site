@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "husky": "^4.2.5",
+    "backstopjs": "^5.0.1",
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1",
     "standard-version": "^7.1.0"
@@ -53,7 +54,7 @@
     "release": "standard-version",
     "prerelease": "yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "backstop test"
   },
   "repository": {
     "type": "git",
