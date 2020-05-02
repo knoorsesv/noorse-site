@@ -41,7 +41,7 @@
     "testReportFileName": "myproject",
     "testSuiteName": "backstopJS"
   },
-  "report": ["CI"],
+  "report": [],
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"]
