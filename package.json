@@ -38,7 +38,9 @@
     "yarn": "^1.22.4"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
     "prettier": "^2.0.4",
+    "pretty-quick": "^2.0.1",
     "standard-version": "^7.1.0"
   },
   "keywords": [
@@ -49,9 +51,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "release": "standard-version",
-    "prerelease": "yarn format && yarn test",
+    "prerelease": "yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "format": "prettier --write src/**/*.js && git add . && git commit -m \"chore(formatting)\" --allow-empty",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
@@ -60,5 +61,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
