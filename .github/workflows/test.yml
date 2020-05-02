@@ -32,10 +32,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - uses: ./.github/run-backstop
-#      with:
-#        cmd: install
-#      name: 'Install'
-#    - uses: borales/actions-yarn@v2.0.0
-#      with:
-#        cmd: test:ci # will run `yarn test` command
-#      name: 'Run test'
+      - uses: actions/upload-artifact@v2
+        with:
+          name: backstop-test
+          path: backstop_data/html_report/
