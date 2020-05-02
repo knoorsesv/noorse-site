@@ -32,4 +32,4 @@ jobs:
         if: failure()
         with:
           name: backstop-test
-          path: backstop_data/html_report/
+          path: backstop_data/
