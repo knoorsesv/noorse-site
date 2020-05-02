@@ -55,7 +55,7 @@
     "release": "standard-version",
     "prerelease": "yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "test": "backstop test",
+    "test": "backstop test --config backstop_data/backstop.json",
     "test:build-docker": "docker build -t backstop-local ./backstop_data",
     "test:docker": "docker run -v $(pwd)/backstop_data:/backstop -w /backstop --rm backstop-local:latest backstop test",
     "test:approve": "docker run -v $(pwd)/backstop_data:/backstop -w /backstop --rm backstop-local:latest backstop approve",
