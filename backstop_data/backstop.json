@@ -36,11 +36,6 @@
     "html_report": "backstop_data/html_report",
     "ci_report": "backstop_data/ci_report"
   },
-  "ci": {
-    "format": "html",
-    "testReportFileName": "myproject",
-    "testSuiteName": "backstopJS"
-  },
   "report": [],
   "engine": "puppeteer",
   "engineOptions": {
