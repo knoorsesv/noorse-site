@@ -1,7 +1,7 @@
 {
   "name": "gatsby-site-noorse",
   "private": true,
-  "description": "Noors wesbsite",
+  "description": "Noorse website",
   "version": "0.1.9",
   "author": "gvdp",
   "dependencies": {
@@ -31,6 +31,7 @@
     "react-helmet": "^5.2.1",
     "react-masonry-css": "^1.0.14",
     "react-typography": "^0.16.19",
+    "start-server-and-test": "^1.11.0",
     "styled-components": "^5.1.0",
     "tailwindcss": "^1.3.5",
     "typography": "^0.16.19",
@@ -38,6 +39,7 @@
     "yarn": "^1.22.4"
   },
   "devDependencies": {
+    "backstopjs": "^5.0.1",
     "husky": "^4.2.5",
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1",
@@ -53,7 +55,11 @@
     "release": "standard-version",
     "prerelease": "yarn test",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "backstop test --config backstop_data/backstop.json",
+    "test:build-docker": "docker build -t backstop-local ./backstop_data",
+    "test:docker": "docker run -v $(pwd)/:/backstop -w /backstop -p 8000:8000 --rm backstop-local:latest backstop test --config backstop_data/backstop.json",
+    "test:approve": "docker run -v $(pwd)/:/backstop -w /backstop --rm backstop-local:latest backstop approve",
+    "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test develop http://localhost:8000 test"
   },
   "repository": {
     "type": "git",
