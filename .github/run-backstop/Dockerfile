@@ -1,6 +1,6 @@
 FROM buildkite/puppeteer
 
-RUN sudo apt-get update && sudo apt-get -y install procps
+RUN apt-get update && apt-get -y install procps
 
 RUN yarn --version
 
