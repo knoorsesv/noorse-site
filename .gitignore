@@ -73,3 +73,4 @@ yarn-error.log
 !/yarn.lock
 /backstop_data/bitmaps_test/
 /backstop_data/html_report
+/backstop_data/ci_report/
