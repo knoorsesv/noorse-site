@@ -1,4 +1,6 @@
 FROM backstopjs/backstopjs
 
 RUN pwd
-RUN ls
+RUN yarn --version
+RUN yarn
+RUN yarn test:ci
