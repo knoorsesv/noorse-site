@@ -5,7 +5,7 @@ import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <div className={'card p-3 max-w-1/3'}>
+    <div className={'card p-3 max-w-1/3'} key={sponsorNode.naam}>
       <div className={'card-image'}>
         <figure className={'image'}>
           <img src={sponsorNode.logo.localFile.publicURL} alt={'logo'} />
