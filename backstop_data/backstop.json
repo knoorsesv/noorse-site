@@ -36,7 +36,8 @@
       "label": "Open Dropdown Menu On Hover",
       "url": "http://host.docker.internal:8000/",
       "delay": 500,
-      "hoverSelector": ".is-hoverable",
+      "selectors": ["viewport"],
+      "hoverSelector": ".group",
       "viewports": [
         {
           "label": "desktop",
@@ -49,7 +50,8 @@
       "label": "Open Dropdown Menu On Click",
       "url": "http://host.docker.internal:8000/",
       "delay": 500,
-      "clickSelector": ".is-hoverable",
+      "clickSelector": ".group",
+      "selectors": ["viewport"],
       "viewports": [
         {
           "label": "tablet-landscape",
