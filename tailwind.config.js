@@ -29,10 +29,10 @@ module.exports = {
         navbar: '75px',
         'navbar-cover': '50vh',
         'navbar-logo': '50px',
-        '160': '160px',
+        logo: '22vh',
       },
       inset: {
-        '80': '80px',
+        logo: '8vh',
       },
     },
     maxWidth: {

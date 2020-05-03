@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'gatsby'
 import logo from '../images/Logo_highres.png'
 import noorseCover from '../images/noorse_cover.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const siteMap = {
   items: [
@@ -59,18 +61,33 @@ export default (props) => {
     >
       <nav
         className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} 
-      p-3 fixed transition-all duration-200 ease-in w-full ${stickyNavbarHeight}`}
+      p-3 fixed transition-all duration-200 ease-in w-full ${stickyNavbarHeight}
+      grid 
+      ${isSticky ? 'grid-cols-2' : 'grid-cols-3'}
+      md:flex
+      
+      `}
       >
-        <div className={'navbar-brand'}>
+        <div
+          className={`navbar-brand flex ${
+            isSticky ? 'justify-start' : 'justify-center'
+          }
+               ${isSticky ? '' : 'col-start-2'}
+
+         `}
+        >
           <div className={'navbar-item'}>
             <img
               src={logo}
               alt={'Noorse Logo'}
               className={`relative transition-all duration-200 ease-in ${
-                isSticky ? 'top-0 h-navbar-logo' : 'top-80 h-160'
+                isSticky ? 'top-0 h-navbar-logo' : 'top-logo h-logo'
               }`}
             />
           </div>
+        </div>
+        <div className={'flex flex-row justify-end p-3 md:hidden'}>
+          <FontAwesomeIcon className={'h-6 w-6'} icon={faBars} />
         </div>
         <div className={'navbar-menu'}>
           <div className={'navbar-start'} />
