@@ -43,6 +43,7 @@
     "husky": "^4.2.5",
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1",
+    "serve": "^11.3.0",
     "standard-version": "^7.1.0"
   },
   "keywords": [
@@ -51,6 +52,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "serve": "serve public",
+    "build-serve": "yarn build && yarn serve",
     "develop": "gatsby develop",
     "release": "standard-version",
     "prerelease": "yarn test:docker",
@@ -59,7 +62,7 @@
     "test:approve": "backstop approve --config backstop_data/backstop.json",
     "test:build-docker": "docker build -t backstop-local ./backstop_data",
     "test:docker": "docker run -v $(pwd)/:/backstop -w /backstop -p 8000:8000 --rm backstop-local:latest backstop test --config backstop_data/backstop.json",
-    "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test develop http://localhost:8000 test"
+    "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test build-serve http://localhost:5000 test"
   },
   "repository": {
     "type": "git",
