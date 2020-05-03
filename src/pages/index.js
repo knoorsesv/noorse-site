@@ -30,8 +30,11 @@ export default () => {
     <Layout coverPhoto={true}>
       <SEO title="Home" keywords={[`noorse`]} />
 
-      <div className={'grid gap-5 grid-cols-3'}>
-        <div className={'col-span-2'}>
+      <div
+        className={'flex flex-col md:grid gap-5 grid-cols-3'}
+        id="homepage-content"
+      >
+        <div className={'col-span-2'} id="news-list">
           <h1 className={'title'}>Nieuws</h1>
           <Masonry
             breakpointCols={breakpointColumnsObj}

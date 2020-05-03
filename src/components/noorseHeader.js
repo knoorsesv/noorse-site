@@ -50,12 +50,13 @@ export default (props) => {
   }
 
   const stickyNavbarHeight = 'h-navbar'
-  const coverNavbarHeight = 'h-navbar-cover'
   return (
     <section
       ref={ref}
       className={`w-full ${
-        props.coverPhoto ? coverNavbarHeight : stickyNavbarHeight
+        props.coverPhoto
+          ? 'h-navbar-cover-mobile md:h-navbar-cover'
+          : stickyNavbarHeight
       }`}
     >
       <nav
@@ -99,7 +100,7 @@ export default (props) => {
       {props.coverPhoto && (
         <div
           className={
-            'hero h-navbar-cover w-screen overflow-hidden object-center relative'
+            'hero h-navbar-cover-mobile md:h-navbar-cover w-screen overflow-hidden object-center relative'
           }
         >
           <img className={'object-cover'} src={noorseCover} alt={'cover'} />

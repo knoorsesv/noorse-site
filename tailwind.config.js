@@ -28,6 +28,7 @@ module.exports = {
         '3/4': '75vh',
         navbar: '75px',
         'navbar-cover': '70vh',
+        'navbar-cover-mobile': '40vh',
         'navbar-logo': '50px',
         logo: '22vh',
       },

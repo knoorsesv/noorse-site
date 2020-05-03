@@ -29,7 +29,7 @@
       "label": "Homepage",
       "url": "http://host.docker.internal:8000/",
       "delay": 500,
-      "selectors": ["viewport"],
+      "selectors": ["viewport", "#homepage-content"],
       "misMatchThreshold": 0.1
     },
     {
