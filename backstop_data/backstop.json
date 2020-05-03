@@ -28,20 +28,35 @@
     {
       "label": "Homepage",
       "url": "http://host.docker.internal:8000/",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
       "delay": 500,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
       "selectors": ["viewport"],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold": 0.1,
-      "requireSameDimensions": true
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Open Dropdown Menu On Hover",
+      "url": "http://host.docker.internal:8000/",
+      "delay": 500,
+      "hoverSelector": ".is-hoverable",
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "label": "Open Dropdown Menu On Click",
+      "url": "http://host.docker.internal:8000/",
+      "delay": 500,
+      "clickSelector": ".is-hoverable",
+      "viewports": [
+        {
+          "label": "tablet-landscape",
+          "width": 1024,
+          "height": 768
+        }
+      ]
     }
   ],
   "paths": {
