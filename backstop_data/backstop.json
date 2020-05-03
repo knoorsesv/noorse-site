@@ -28,9 +28,9 @@
     {
       "label": "Homepage",
       "url": "http://host.docker.internal:8000/",
-      "delay": 500,
+      "delay": 1000,
       "selectors": ["viewport", "#homepage-content"],
-      "misMatchThreshold": 0.1
+      "misMatchThreshold": 1
     },
     {
       "label": "Open Dropdown Menu On Hover",
