@@ -12,12 +12,7 @@
       "height": 800
     },
     {
-      "label": "ipad",
-      "width": 768,
-      "height": 1024
-    },
-    {
-      "label": "ipad-landscape",
+      "label": "tablet-landscape",
       "width": 1024,
       "height": 768
     },
