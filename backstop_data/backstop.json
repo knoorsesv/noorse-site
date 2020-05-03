@@ -5,6 +5,26 @@
       "label": "desktop",
       "width": 1920,
       "height": 1080
+    },
+    {
+      "label": "tablet",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "label": "ipad",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "label": "ipad-landscape",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "smartphone",
+      "width": 360,
+      "height": 640
     }
   ],
   "onBeforeScript": "puppet/onBefore.js",
