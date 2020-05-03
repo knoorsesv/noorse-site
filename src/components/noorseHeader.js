@@ -89,7 +89,7 @@ export default (props) => {
         <div className={'flex flex-row justify-end p-3 md:hidden'}>
           <FontAwesomeIcon className={'h-6 w-6'} icon={faBars} />
         </div>
-        <div className={'navbar-menu'}>
+        <div className={'navbar-menu md:pt-10 md:pr-4'}>
           <div className={'navbar-start'} />
           <div className={'navbar-end'}>
             {siteMap.items.map((item) => (
