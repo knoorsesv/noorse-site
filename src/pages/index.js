@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import logo from '../images/Logo_highres.png'
 import Masonry from 'react-masonry-css'
 import { NewsCard } from '../components/newsCard'
+import noorseCover from '../images/noorse_cover.jpg'
 
 export default () => {
   const newsItems = useStaticQuery(graphql`
@@ -26,8 +27,9 @@ export default () => {
   }
 
   return (
-    <Layout>
+    <Layout coverPhoto={true}>
       <SEO title="Home" keywords={[`noorse`]} />
+
       <div className={'grid gap-5 grid-cols-3'}>
         <div className={'col-span-2'}>
           <h1 className={'title'}>Nieuws</h1>

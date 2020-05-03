@@ -29,8 +29,8 @@ const siteMap = {
   ],
 }
 
-export default () => {
-  const [isSticky, setSticky] = useState(false)
+export default (props) => {
+  const [isSticky, setSticky] = useState(!props.coverPhoto)
   const ref = useRef(null)
   const handleScroll = () => {
     if (ref.current) {
@@ -38,19 +38,28 @@ export default () => {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+  if (props.coverPhoto) {
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', () => handleScroll)
-    }
-  }, [])
+      return () => {
+        window.removeEventListener('scroll', () => handleScroll)
+      }
+    }, [])
+  }
 
+  const stickyNavbarHeight = 'h-navbar'
+  const coverNavbarHeight = 'h-navbar-cover'
   return (
-    <section ref={ref}>
+    <section
+      ref={ref}
+      className={`w-full ${
+        props.coverPhoto ? coverNavbarHeight : stickyNavbarHeight
+      }`}
+    >
       <nav
         className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} 
-      p-3 fixed transition-all duration-200 ease-in w-full`}
+      p-3 fixed transition-all duration-200 ease-in w-full ${stickyNavbarHeight}`}
       >
         <div className={'navbar-brand'}>
           <div className={'navbar-item'}>
@@ -58,7 +67,7 @@ export default () => {
               src={logo}
               alt={'Noorse Logo'}
               className={`relative transition-all duration-200 ease-in ${
-                isSticky ? 'top-0 h-75' : 'top-80 h-160'
+                isSticky ? 'top-0 h-navbar-logo' : 'top-80 h-160'
               }`}
             />
           </div>
@@ -72,9 +81,15 @@ export default () => {
           </div>
         </div>
       </nav>
-      <div className={'hero h-3/4 overflow-hidden object-center'}>
-        <img className={'object-cover '} src={noorseCover} alt={'cover'} />
-      </div>
+      {props.coverPhoto && (
+        <div
+          className={
+            'hero h-navbar-cover w-screen overflow-hidden object-center relative'
+          }
+        >
+          <img className={'object-cover'} src={noorseCover} alt={'cover'} />
+        </div>
+      )}
     </section>
   )
 }

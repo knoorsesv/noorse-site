@@ -10,7 +10,7 @@ module.exports = {
           default: '#ada8a869',
           dark: '#000000b3',
           darker: '#0000006b',
-          lighter: '#dbdbdb4d'
+          lighter: '#dbdbdb4d',
         },
         green: {
           default: '#098800',
@@ -24,9 +24,11 @@ module.exports = {
         },
       },
       height: {
-        'half': '50vh',
+        half: '50vh',
         '3/4': '75vh',
-        '75': '75px',
+        navbar: '75px',
+        'navbar-cover': '50vh',
+        'navbar-logo': '50px',
         '160': '160px',
       },
       inset: {
@@ -36,7 +38,6 @@ module.exports = {
     maxWidth: {
       '1/3': '33%',
     },
-
   },
   variants: {
     opacity: ['hover', 'focus', 'group-hover', 'responsive'],
