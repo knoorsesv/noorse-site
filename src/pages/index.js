@@ -36,6 +36,7 @@ export default () => {
           <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
+            columnClassName="masonry-column"
           >
             {newsItems.allContentfulNews.nodes.map(NewsCard)}
           </Masonry>
