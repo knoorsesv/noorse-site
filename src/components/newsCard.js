@@ -7,7 +7,11 @@ export const NewsCard = (newsNode) => {
     navigate(`/nieuws/${newsNode.title}`)
   }
   return (
-    <div className={'card mx-2 my-2 max-w-full'} onClick={goToNews}>
+    <div
+      className={'card mx-2 my-2 max-w-full'}
+      onClick={goToNews}
+      key={newsNode.title}
+    >
       {newsNode.title.includes('spelers') && (
         <div className={'card-image'}>
           <figure className={'image'}>
