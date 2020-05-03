@@ -29,7 +29,15 @@
       "label": "Homepage",
       "url": "http://host.docker.internal:8000/",
       "delay": 1000,
-      "selectors": ["viewport", "#homepage-content"],
+      "selectors": ["viewport"],
+      "misMatchThreshold": 1
+    },
+    {
+      "label": "Content without nav",
+      "url": "http://host.docker.internal:8000/",
+      "delay": 1000,
+      "selectors": ["#homepage-content"],
+      "removeSelectors": ["#header"],
       "misMatchThreshold": 1
     },
     {

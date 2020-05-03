@@ -53,6 +53,7 @@ export default (props) => {
   return (
     <section
       ref={ref}
+      id="header"
       className={`w-full ${
         props.coverPhoto
           ? 'h-navbar-cover-mobile md:h-navbar-cover'
