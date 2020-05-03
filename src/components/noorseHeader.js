@@ -11,7 +11,6 @@ const siteMap = {
     { name: 'Nieuws', link: '/nieuws' },
     {
       name: 'Info',
-      link: '/info',
       subItems: [
         { name: 'Bestuur', link: '/bestuur' },
         { name: 'Clubfiche', link: '/clubfiche' },
@@ -69,9 +68,8 @@ export default (props) => {
       `}
       >
         <div
-          className={`navbar-brand flex ${
-            isSticky ? 'justify-start' : 'justify-center'
-          }
+          className={`navbar-brand flex 
+          ${isSticky ? 'justify-start' : 'justify-center'}
                ${isSticky ? '' : 'col-start-2'}
 
          `}
@@ -93,7 +91,7 @@ export default (props) => {
           <div className={'navbar-start'} />
           <div className={'navbar-end'}>
             {siteMap.items.map((item) => (
-              <MenuLink item={item} sticky={isSticky} />
+              <MenuLink item={item} isSticky={isSticky} />
             ))}
           </div>
         </div>
@@ -111,25 +109,31 @@ export default (props) => {
   )
 }
 
-const MenuLink = ({ item, sticky }) => {
+const MenuLink = ({ item, isSticky }) => {
   return (
     <div
-      className={`${sticky ? '' : 'p-3'} navbar-item ${
-        item.subItems ? 'is-hoverable' : ''
-      }`}
+      className={`
+      ${isSticky ? '' : 'p-3'} 
+      navbar-item 
+      ${item.subItems ? 'group' : ''}`}
     >
       <Link
-        className={`${item.subItems ? 'navbar-item' : 'navbar-item'} 
-      ${sticky ? '' : 'bg-gray-lighter text-gray-dark'}`}
+        className={`
+        navbar-item
+        ${isSticky ? '' : 'bg-gray-lighter text-gray-dark'}`}
         to={item.link}
       >
         {item.name}
       </Link>
       {item.subItems && (
-        <div className={`navbar-dropdown ${sticky ? '' : 'bg-gray-lighter'}`}>
+        <div
+          className={`navbar-dropdown
+        hidden group-hover:block group-focus:block
+        ${isSticky ? '' : 'bg-gray-lighter'}`}
+        >
           {item.subItems.map((subItem) => (
             <Link
-              className={`navbar-item ${sticky ? '' : 'text-gray-dark'}`}
+              className={`navbar-item ${isSticky ? '' : 'text-gray-dark'}`}
               to={subItem.link}
               key={subItem.name}
             >
