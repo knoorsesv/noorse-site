@@ -93,7 +93,7 @@ export default (props) => {
           <div className={'navbar-start'} />
           <div className={'navbar-end'}>
             {siteMap.items.map((item) => (
-              <MenuLink item={item} isSticky={isSticky} />
+              <MenuLink item={item} isSticky={isSticky} key={item.name} />
             ))}
           </div>
         </div>
