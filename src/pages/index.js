@@ -6,7 +6,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import logo from '../images/Logo_highres.png'
 import Masonry from 'react-masonry-css'
 import { NewsCard } from '../components/newsCard'
-import noorseCover from '../images/noorse_cover.jpg'
 
 export default () => {
   const newsItems = useStaticQuery(graphql`
