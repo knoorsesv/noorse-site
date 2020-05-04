@@ -119,14 +119,26 @@ const MenuLink = ({ item, isSticky }) => {
       navbar-item 
       ${item.subItems ? 'group' : ''}`}
     >
-      <Link
-        className={`
+      {item.link ? (
+        <Link
+          className={`
         navbar-item
         ${isSticky ? '' : 'bg-gray-lighter text-gray-dark'}`}
-        to={item.link}
-      >
-        {item.name}
-      </Link>
+          to={item.link}
+        >
+          {item.name}
+        </Link>
+      ) : (
+        <div
+          className={`navbar-item ${
+            isSticky ? '' : 'bg-gray-lighter text-gray-dark'
+          }`}
+        >
+          {' '}
+          {item.name}
+        </div>
+      )}
+
       {item.subItems && (
         <div
           className={`navbar-dropdown
