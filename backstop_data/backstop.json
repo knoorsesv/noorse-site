@@ -86,6 +86,12 @@
           "height": 640
         }
       ]
+    },
+    {
+      "label": "Change header on scroll",
+      "url": "http://host.docker.internal:8000/",
+      "selectors": ["viewport"],
+      "onReadyScript": "puppet/scrollDown.js"
     }
   ],
   "paths": {

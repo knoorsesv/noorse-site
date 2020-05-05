@@ -52,14 +52,12 @@ export default (props) => {
   if (props.coverPhoto) {
     useEffect(() => {
       window.addEventListener('scroll', handleScroll)
-
       return () => {
         window.removeEventListener('scroll', () => handleScroll)
       }
     }, [])
   }
 
-  const stickyNavbarHeight = 'h-navbar'
   return (
     <section
       ref={ref}
@@ -67,66 +65,21 @@ export default (props) => {
       className={`w-full ${
         props.coverPhoto
           ? 'h-navbar-cover-mobile md:h-navbar-cover'
-          : stickyNavbarHeight
+          : 'h-navbar'
       }`}
     >
       <nav
         className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} 
-      p-3 fixed transition-all duration-200 ease-in w-full ${stickyNavbarHeight}
-      grid 
-      ${isSticky ? 'grid-cols-2' : 'grid-cols-3'}
-      md:flex
-      `}
+      p-3 fixed transition-all duration-200 ease-in w-full h-navbar lg:h-navbar-over-cover
+      grid ${isSticky ? 'grid-cols-2' : 'grid-cols-3'} md:flex`}
       >
-        <div
-          className={`navbar-brand flex 
-          ${isSticky ? 'justify-start' : 'justify-center'}
-          ${isSticky ? '' : 'col-start-2'}
-         `}
-        >
-          <div className={'navbar-item'}>
-            <img
-              src={logo}
-              alt={'Noorse Logo'}
-              className={`relative transition-all duration-200 ease-in ${
-                isSticky ? 'top-0 h-navbar-logo' : 'top-logo h-logo'
-              }`}
-            />
-          </div>
-        </div>
-        <div className={'flex flex-row justify-end p-3 md:hidden'}>
-          <FontAwesomeIcon
-            className={'h-6 w-6'}
-            icon={faBars}
-            onClick={clickBurger}
-            id="menu-hamburger"
-          />
-        </div>
-        <div
-          className={`
-        md:pt-10 md:pr-4
-        ${menuShown || screenIsAtLeast('md') ? 'block' : 'hidden'}
-        absolute md:flex
-        right-0
-        w-2/5 md:w-4/5
-        h-3/4 md:h-auto
-        top-mobile-navbar md:top-0
-        bg-green md:bg-transparent
-        `}
-        >
-          <div
-            className={
-              'navbar-end ' +
-              'py-4 pl-3 h-full md:h-auto ' +
-              'flex flex-col justify-between ' +
-              'md:flex-row md:items-center'
-            }
-          >
-            {siteMap.items.map((item) => (
-              <MenuLink item={item} isSticky={isSticky} key={item.name} />
-            ))}
-          </div>
-        </div>
+        <Logo isSticky={isSticky} />
+        <MenuToggle clickBurger={clickBurger} />
+        <MenuItems
+          menuShown={menuShown}
+          screenIsAtLeast={screenIsAtLeast}
+          isSticky={isSticky}
+        />
       </nav>
       {props.coverPhoto && (
         <div
@@ -141,12 +94,12 @@ export default (props) => {
   )
 }
 
-function DropDown(isSticky, item) {
+const DropDown = ({ isSticky, item }) => {
   return (
     <div
-      className={`
-        hidden group-hover:absolute group-focus:absolute group-hover:block lg:top-dropdown
-        ${isSticky ? '' : 'bg-gray-lighter'}`}
+      className={`hidden group-hover:absolute group-focus:absolute group-hover:block lg:pt-4 ${
+        isSticky ? 'bg-green' : 'bg-gray-lighter'
+      }`}
     >
       {item.subItems.map((subItem) => (
         <Link
@@ -164,18 +117,15 @@ function DropDown(isSticky, item) {
 const MenuLink = ({ item, isSticky }) => {
   return (
     <div
-      className={`
-      relative
+      className={`relative
       ${isSticky ? '' : 'p-1 md:p-1 xl:p-3'} 
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
-          className={`
-          text-white
-        ${isSticky ? '' : 'md:bg-gray-lighter md:text-gray-dark md:p-3'}
-        
-        `}
+          className={`text-white ${
+            isSticky ? '' : 'md:bg-gray-lighter md:text-gray-dark md:p-3'
+          }`}
           to={item.link}
         >
           {item.name}
@@ -189,8 +139,70 @@ const MenuLink = ({ item, isSticky }) => {
           {item.name}
         </span>
       )}
+      {item.subItems && <DropDown isSticky={isSticky} item={item} />}
+    </div>
+  )
+}
 
-      {item.subItems && DropDown(isSticky, item)}
+const Logo = ({ isSticky }) => {
+  return (
+    <div
+      className={`navbar-brand flex 
+          ${isSticky ? 'justify-start' : 'justify-center'}
+          ${isSticky ? '' : 'col-start-2'}
+         `}
+    >
+      <div className={'navbar-item'}>
+        <img
+          src={logo}
+          alt={'Noorse Logo'}
+          className={`relative transition-all duration-200 ease-in ${
+            isSticky ? 'top-0 h-navbar-logo' : 'top-logo h-logo'
+          }`}
+        />
+      </div>
+    </div>
+  )
+}
+
+const MenuToggle = ({ clickBurger }) => {
+  return (
+    <div className={'flex flex-row justify-end p-3 md:hidden'}>
+      <FontAwesomeIcon
+        className={'h-6 w-6'}
+        icon={faBars}
+        onClick={clickBurger}
+        id="menu-hamburger"
+      />
+    </div>
+  )
+}
+
+const MenuItems = ({ menuShown, screenIsAtLeast, isSticky }) => {
+  return (
+    <div
+      className={`
+        md:pr-10
+        ${menuShown || screenIsAtLeast('md') ? 'block' : 'hidden'}
+        absolute md:flex md:items-center md:justify-end
+        right-0
+        w-2/5 md:w-4/5
+        h-3/4 md:h-full
+        top-mobile-navbar md:top-0
+        bg-green md:bg-transparent
+        `}
+    >
+      <div
+        className={` 
+    py-4 pl-3 
+    h-full md:h-auto md:w-4/5
+    flex flex-col justify-between 
+    md:flex-row md:items-center`}
+      >
+        {siteMap.items.map((item) => (
+          <MenuLink item={item} isSticky={isSticky} key={item.name} />
+        ))}
+      </div>
     </div>
   )
 }
