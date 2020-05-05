@@ -96,6 +96,7 @@
     {
       "label": "News Page",
       "url": "http://host.docker.internal:8000/nieuws/Nieuwe%20spelers%202020-2021",
+      "delay": 500,
       "selectors": ["viewport", "document"]
     }
   ],
