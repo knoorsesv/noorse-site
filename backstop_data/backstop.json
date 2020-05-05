@@ -8,8 +8,8 @@
     },
     {
       "label": "tablet",
-      "width": 600,
-      "height": 800
+      "width": 640,
+      "height": 860
     },
     {
       "label": "tablet-landscape",
@@ -65,6 +65,25 @@
           "label": "tablet-landscape",
           "width": 1024,
           "height": 768
+        }
+      ]
+    },
+    {
+      "label": "Open Menu on hamburger click",
+      "url": "http://host.docker.internal:8000/",
+      "delay": 500,
+      "clickSelector": "#menu-hamburger",
+      "selectors": ["viewport"],
+      "viewports": [
+        {
+          "label": "tablet",
+          "width": 640,
+          "height": 800
+        },
+        {
+          "label": "smartphone",
+          "width": 360,
+          "height": 640
         }
       ]
     }

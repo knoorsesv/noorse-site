@@ -4,6 +4,7 @@ import logo from '../images/Logo_highres.png'
 import noorseCover from '../images/noorse_cover.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useResponsive } from 'react-hooks-responsive'
 
 const siteMap = {
   items: [
@@ -30,13 +31,22 @@ const siteMap = {
   ],
 }
 
+const breakpoints = { xs: 0, sm: 640, md: 768, lg: 1024 }
+
 export default (props) => {
+  const { screenIsAtLeast } = useResponsive(breakpoints)
   const [isSticky, setSticky] = useState(!props.coverPhoto)
+  const [menuShown, setMenuShown] = useState(false)
+
   const ref = useRef(null)
   const handleScroll = () => {
     if (ref.current) {
       setSticky(ref.current.getBoundingClientRect().top < 0)
     }
+  }
+
+  const clickBurger = () => {
+    setMenuShown(!menuShown)
   }
 
   if (props.coverPhoto) {
@@ -66,14 +76,12 @@ export default (props) => {
       grid 
       ${isSticky ? 'grid-cols-2' : 'grid-cols-3'}
       md:flex
-      
       `}
       >
         <div
           className={`navbar-brand flex 
           ${isSticky ? 'justify-start' : 'justify-center'}
-               ${isSticky ? '' : 'col-start-2'}
-
+          ${isSticky ? '' : 'col-start-2'}
          `}
         >
           <div className={'navbar-item'}>
@@ -87,11 +95,33 @@ export default (props) => {
           </div>
         </div>
         <div className={'flex flex-row justify-end p-3 md:hidden'}>
-          <FontAwesomeIcon className={'h-6 w-6'} icon={faBars} />
+          <FontAwesomeIcon
+            className={'h-6 w-6'}
+            icon={faBars}
+            onClick={clickBurger}
+            id="menu-hamburger"
+          />
         </div>
-        <div className={'navbar-menu md:pt-10 md:pr-4'}>
-          <div className={'navbar-start'} />
-          <div className={'navbar-end'}>
+        <div
+          className={`
+        md:pt-10 md:pr-4
+        ${menuShown || screenIsAtLeast('md') ? 'block' : 'hidden'}
+        absolute md:flex
+        right-0
+        w-2/5 md:w-4/5
+        h-3/4 md:h-auto
+        top-mobile-navbar md:top-0
+        bg-green md:bg-transparent
+        `}
+        >
+          <div
+            className={
+              'navbar-end ' +
+              'py-4 pl-3 h-full md:h-auto ' +
+              'flex flex-col justify-between ' +
+              'md:flex-row md:items-center'
+            }
+          >
             {siteMap.items.map((item) => (
               <MenuLink item={item} isSticky={isSticky} key={item.name} />
             ))}
@@ -111,51 +141,56 @@ export default (props) => {
   )
 }
 
+function DropDown(isSticky, item) {
+  return (
+    <div
+      className={`
+        hidden group-hover:absolute group-focus:absolute group-hover:block lg:top-dropdown
+        ${isSticky ? '' : 'bg-gray-lighter'}`}
+    >
+      {item.subItems.map((subItem) => (
+        <Link
+          className={`navbar-item ${isSticky ? '' : 'lg:text-gray-dark'}`}
+          to={subItem.link}
+          key={subItem.name}
+        >
+          {subItem.name}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
 const MenuLink = ({ item, isSticky }) => {
   return (
     <div
       className={`
-      ${isSticky ? '' : 'p-3'} 
-      navbar-item 
+      relative
+      ${isSticky ? '' : 'p-1 md:p-1 xl:p-3'} 
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
           className={`
-        navbar-item
-        ${isSticky ? '' : 'bg-gray-lighter text-gray-dark'}`}
+          text-white
+        ${isSticky ? '' : 'md:bg-gray-lighter md:text-gray-dark md:p-3'}
+        
+        `}
           to={item.link}
         >
           {item.name}
         </Link>
       ) : (
-        <div
-          className={`navbar-item ${
-            isSticky ? '' : 'bg-gray-lighter text-gray-dark'
+        <span
+          className={`${
+            isSticky ? '' : 'bg-gray-lighter md:text-gray-dark md:p-3 md:h-auto'
           }`}
         >
-          {' '}
           {item.name}
-        </div>
+        </span>
       )}
 
-      {item.subItems && (
-        <div
-          className={`navbar-dropdown
-        hidden group-hover:block group-focus:block
-        ${isSticky ? '' : 'bg-gray-lighter'}`}
-        >
-          {item.subItems.map((subItem) => (
-            <Link
-              className={`navbar-item ${isSticky ? '' : 'text-gray-dark'}`}
-              to={subItem.link}
-              key={subItem.name}
-            >
-              {subItem.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      {item.subItems && DropDown(isSticky, item)}
     </div>
   )
 }

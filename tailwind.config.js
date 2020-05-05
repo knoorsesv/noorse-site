@@ -34,6 +34,8 @@ module.exports = {
       },
       inset: {
         logo: '8vh',
+        dropdown: '3rem',
+        'mobile-navbar': '8vh',
       },
     },
     maxWidth: {
@@ -44,6 +46,7 @@ module.exports = {
     opacity: ['hover', 'focus', 'group-hover', 'responsive'],
     backgroundColor: ['hover', 'focus', 'group-hover', 'responsive'],
     visibility: ['hover', 'focus', 'group-hover', 'responsive'],
+    position: ['hover', 'focus', 'group-hover', 'responsive'],
     display: ['hover', 'focus', 'group-hover', 'responsive'],
   },
   plugins: [],
