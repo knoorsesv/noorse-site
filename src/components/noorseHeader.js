@@ -4,7 +4,6 @@ import logo from '../images/Logo_highres.png'
 import noorseCover from '../images/noorse_cover.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useResponsive } from 'react-hooks-responsive'
 
 const siteMap = {
   items: [
@@ -31,10 +30,7 @@ const siteMap = {
   ],
 }
 
-const breakpoints = { xs: 0, sm: 640, md: 768, lg: 1024 }
-
 export default (props) => {
-  const { screenIsAtLeast } = useResponsive(breakpoints)
   const [isSticky, setSticky] = useState(!props.coverPhoto)
   const [menuShown, setMenuShown] = useState(false)
 
@@ -77,11 +73,7 @@ export default (props) => {
       >
         <Logo isSticky={isSticky} />
         <MenuToggle clickBurger={clickBurger} />
-        <MenuItems
-          menuShown={menuShown}
-          screenIsAtLeast={screenIsAtLeast}
-          isSticky={isSticky}
-        />
+        <MenuItems menuShown={menuShown} isSticky={isSticky} />
       </nav>
       {props.coverPhoto && (
         <div
@@ -185,7 +177,7 @@ const MenuItems = ({ menuShown, screenIsAtLeast, isSticky }) => {
     <div
       className={`
         md:pr-10
-        ${menuShown || screenIsAtLeast('md') ? 'block' : 'hidden'}
+        ${menuShown ? 'block' : 'hidden'}
         absolute md:flex md:items-center md:justify-end
         right-0
         w-2/5 md:w-4/5
