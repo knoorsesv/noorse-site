@@ -70,7 +70,9 @@ export default (props) => {
     >
       <nav
         className={`navbar ${isSticky ? 'is-primary' : 'bg-transparent'} 
-      p-3 fixed transition-all duration-200 ease-in w-full h-navbar lg:h-navbar-over-cover
+      p-3 fixed transition-all duration-200 ease-in w-full h-navbar ${
+        isSticky ? '' : 'lg:h-navbar-over-cover'
+      }
       grid ${isSticky ? 'grid-cols-2' : 'grid-cols-3'} md:flex`}
       >
         <Logo isSticky={isSticky} />
