@@ -38,9 +38,10 @@ module.exports = {
         dropdown: '3rem',
         'mobile-navbar': '8vh',
       },
-    },
-    maxWidth: {
-      '1/3': '33%',
+      maxWidth: {
+        '1/3': '33%',
+        logo: '30%',
+      },
     },
   },
   variants: {

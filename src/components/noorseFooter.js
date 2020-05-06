@@ -5,14 +5,12 @@ import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <div className={'card p-3 max-w-1/3'} key={sponsorNode.naam}>
-      <div className={'card-image'}>
-        <figure className={'image'}>
-          <img src={sponsorNode.logo.localFile.publicURL} alt={'logo'} />
-        </figure>
-      </div>
-      <div className={'card-content text-center'}>{sponsorNode.naam}</div>
-    </div>
+    <img
+      src={sponsorNode.logo.localFile.publicURL}
+      key={sponsorNode.logo.localFile.publicURL}
+      alt={'logo'}
+      className={'object-scale-down max-w-logo p-2'}
+    />
   )
 }
 
@@ -32,42 +30,39 @@ const NoorseFooter = () => {
     }
   `)
   return (
-    <footer className={''}>
+    <footer id="footer">
       <div
         className={
-          'grid grid-cols-5 pb-12 pt-12 px-6 bg-gray shadow-lg shadow-inner'
+          'flex flex-col items-center py-12 lg:px-40 bg-gray md:flex md:flex-row md:items-start md:justify-between md:px-6 shadow-inner'
         }
       >
-        <div className={'col-start-1 col-end-3 flex flex-col'}>
-          <h1 className={'title'}>Sponsors</h1>
-          <div>{sponsors.allContentfulSponsor.nodes.map(SponsorWithLogo)}</div>
+        <div className={'flex flex-col items-center mb-12 md:w-2/3 lg:w-1/2'}>
+          <h1 className={'title text-center'}>Sponsors</h1>
+          <div
+            className={'flex flex-row flex-wrap content-between justify-center'}
+          >
+            {sponsors.allContentfulSponsor.nodes.map(SponsorWithLogo)}
+          </div>
         </div>
-        <div
-          className={'col-start-3 col-end-6 flex items-start justify-between'}
-        >
-          <div>Sitemap?</div>
-          <div className="is-divider-vertical"></div>
-          <div className={'flex content-end flex-col content-end'}>
-            <h1 className={'title self-end'}>Contact</h1>
-            <span className={'self-end'}>Frans de Peuterstraat</span>
-            <span className={'self-end'}>03/543.xx.xx</span>
+        <div className={'flex flex-col items-center md:items-end'}>
+          <h1 className={'title'}>Contact</h1>
+          <span>Frans de Peuterstraat</span>
+          <span>03/543.xx.xx</span>
+          <span>info@noorse.be</span>
+          <div className={'flex flex-row items-center mt-6 space-x-3'}>
+            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faGithub} />
           </div>
         </div>
       </div>
-      <div className={'flex flex-row justify-between bg-gray-darker p-2'}>
-        <div className={'flex flex-col justify-start items-start ml-4'}>
-          <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
-          <div size={'small'}>
-            Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </div>
-        </div>
-        <div className={'flex flex-row justify-end items-center mr-4'}>
-          <span className={'icon'}>
-            <FontAwesomeIcon icon={faFacebook} />
-          </span>
-          <span className={'icon'}>
-            <FontAwesomeIcon icon={faGithub} />
-          </span>
+      <div
+        className={
+          'flex flex-col justify-start items-center bg-gray-darker py-3'
+        }
+      >
+        <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
+        <div size={'small'}>
+          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </div>
       </div>
     </footer>

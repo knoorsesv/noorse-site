@@ -56,11 +56,12 @@
     "build-serve": "yarn build && yarn serve",
     "develop": "gatsby develop",
     "release": "standard-version",
-    "prerelease": "yarn test:docker",
+    "prerelease": "yarn test:built",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
     "test": "backstop test --config backstop_data/backstop.json",
     "test:approve": "backstop approve --config backstop_data/backstop.json",
     "test:build-docker": "docker build -t backstop-local ./backstop_data",
+    "test:built": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test build-serve http://localhost:8000 test:docker",
     "test:docker": "docker run -v $(pwd)/:/backstop -w /backstop -p 8000:8000 --rm backstop-local:latest backstop test --config backstop_data/backstop.json",
     "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test build-serve http://localhost:8000 test"
   },
