@@ -114,6 +114,13 @@
       "delay": 500,
       "selectors": ["#content"],
       "removeSelectors": ["#header"]
+    },
+    {
+      "label": "Contact",
+      "url": "http://host.docker.internal:8000/contact",
+      "delay": 500,
+      "selectors": ["#content"],
+      "removeSelectors": ["#header"]
     }
   ],
   "paths": {

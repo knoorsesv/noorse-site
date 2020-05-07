@@ -1,60 +1,82 @@
 import React from 'react'
 import Layout from '../components/layout'
+import { Header } from '../components/pageheader'
+
+function infoList(items) {
+  return items.map((item) => {
+    return (
+      <div className={'flex flex-row justify-between w-full'} key={item.label}>
+        <span className={'text-left font-bold'}>{item.label}</span>
+        <span className={'text-right'}>{item.value}</span>
+      </div>
+    )
+  })
+}
+
+const Block = ({ children }) => {
+  return (
+    <div
+      className={
+        'my-3 w-full flex flex-col items-center sm:w-1/2 md:w-2/5 lg:w-1/3 lg:mb-6'
+      }
+    >
+      {children}
+    </div>
+  )
+}
 
 const ContactPage = () => (
   <Layout>
-    <div>
-      <div>
-        <div class="tile is-child" header="Contact">
-          <p>Algemene E-mail: secretariaat@noorse.be</p>
-
-          <h2> Contactpersonen deelbesturen</h2>
-          <p> Voorzitter: Gert Mertens </p>
-          <p> Secretaris: Vicky De Greef (vicky.de.greef@telenet.be)</p>
-          <p> Jeugd: Nicky Symons (nickysymons@yahoo.com)</p>
-          <p> Senioren: Glenn Van De Putte (seniorenbestuurnoorse@gmail.com)</p>
-          <p> Dames – Meisjes: Stijn Schrijvers</p>
-          <p> G-voetbal: Rita Staes (gvoetbal@noorse.be)</p>
+    <div
+      className={
+        'mb-3 lg:w-4/5 lg:m-auto flex flex-col items-center md:flex-row md:flex-wrap md:justify-between md:items-stretch lg:justify-around'
+      }
+    >
+      <Block>
+        <Header text={'Koninklijke Noorse SV'} />
+        {infoList([
+          { label: 'Opgericht', value: 1914 },
+          { label: 'Stamnummer', value: 61017 },
+          { label: 'Kleuren', value: 'Geel-Groen' },
+        ])}
+      </Block>
+      <Block>
+        <Header text={'Adres'} />
+        <div className={'text-center'}>Frans De Peuterstraat 50</div>
+        <div className={'text-center'}>2950 Kapellen</div>
+      </Block>
+      <Block>
+        <Header text={'Contact'} />
+        {infoList([
+          { label: 'Algemeen', value: 'secretariaat@noorse.be' },
+          { label: 'Jeugd', value: 'jeugd@noorse.be' },
+          { label: 'Senioren', value: 'senioren@noorse.be' },
+          { label: 'Dames / Meisjes', value: 'meisjesendames@noorse.be' },
+          { label: 'G-voetbal', value: 'gvoetbal@noorse.be' },
+          { label: 'Tel', value: '03 664 44 12' },
+        ])}
+      </Block>
+      <Block>
+        <Header text={'Bereikbaarheid'} />
+        <div className={'text-center'}>
+          Frans De Peuterstraat, Kapellen. A12 Haven – Bergen op Zoom blijven
+          volgen tot afrit Hoevenen / Kapellen. 2e straat rechts aan Texaco
+          Station (Klein Heiken) inslaan daarna 5e straat links (Heizoomlaan)
+          deze geeft uit op de terreinen.
         </div>
-        <div class="tile is-child" header="Kantine">
-          <h2>Openingsuren</h2>
-          <p>
-            Woensdag 16u30 – 23u00 <br />
-            Donderdag 18u00 – 23u00 <br />
-            Vrijdag 18u00 – 23u00
-            <br />
-            Zaterdag en zondag wordt de kantine geopend een uur voor aanvang van
-            de eerste wedstrijd. Dit zal meestal om 8u00 s ochtends zijn en
-            sluit 2,5 na afloop van de laatste wedstrijd.
-            <br />
-            Wil je checken of kantine open is? Check even via socceronline of
-            bel naar onze kantine.
-            <br />
-            Tel: 03 664 44 12 <br />
-          </p>
+      </Block>
+      <Block>
+        <Header text={'Kantine'} />
+        {infoList([
+          { label: 'Woensdag', value: '16u30 – 23u00' },
+          { label: 'Donderdag', value: '18u00 – 23u00' },
+          { label: 'Vrijdag', value: '18u00 – 23u00' },
+        ])}
+        <div className={'text-center mt-3'}>
+          Wil je checken of kantine open is? Check even via socceronline of bel
+          naar onze kantine.
         </div>
-        <div class="tile is-child" header="Bereikbaarheid">
-          <p> K. Noorse S.V. </p>
-          <p> Frans De Peuterstraat 50</p>
-          <p> 2950 Kapellen</p>
-          <p> België</p>
-
-          <p>
-            {' '}
-            Frans De Peuterstraat, Kapellen. A12 Haven – Bergen op Zoom blijven
-            volgen tot afrit Hoevenen / Kapellen. 2e{' '}
-          </p>
-          <p>
-            {' '}
-            straat rechts aan Texaco Station (Klein Heiken) inslaan daarna 5e
-            straat links (Heizoomlaan) deze geeft uit op{' '}
-          </p>
-          <p> de terreinen.</p>
-        </div>
-      </div>
-      <div>
-        <div class="tile is-child is-12">Google map</div>
-      </div>
+      </Block>
     </div>
   </Layout>
 )
