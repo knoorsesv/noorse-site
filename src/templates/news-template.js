@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
+import { Container } from '../components/centeredContainer'
 
 const nodeToHtml = (nodeWithType, index) => {
   if (nodeWithType.nodeType === 'paragraph') {
@@ -34,22 +35,20 @@ const nodeToHtml = (nodeWithType, index) => {
 
 export default ({ pageContext: { newsNode } }) => (
   <Layout>
-    <div className={'flex flex-col items-center'}>
-      <div className={'md:px-12 md:my-5 lg:w-3/5'}>
-        <nav className={'breadcrumb'}>
-          <ul>
-            <li>
-              <Link to={'/nieuws'}>News</Link>
-            </li>
-            <li>
-              <Link to={'/nieuws'}>Senioren (shoudl be dynamis)</Link>
-            </li>
-          </ul>
-        </nav>
-        <h1 className={'uppercase title'}>{newsNode.title}</h1>
-        <h3 className={'subtitle'}>{newsNode.updatedAt}</h3>
-        {newsNode.body.json.content.map(nodeToHtml)}
-      </div>
-    </div>
+    <Container>
+      <nav className={'breadcrumb'}>
+        <ul>
+          <li>
+            <Link to={'/nieuws'}>News</Link>
+          </li>
+          <li>
+            <Link to={'/nieuws'}>Senioren (shoudl be dynamis)</Link>
+          </li>
+        </ul>
+      </nav>
+      <h1 className={'uppercase title'}>{newsNode.title}</h1>
+      <h3 className={'subtitle'}>{newsNode.updatedAt}</h3>
+      {newsNode.body.json.content.map(nodeToHtml)}
+    </Container>
   </Layout>
 )

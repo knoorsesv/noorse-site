@@ -4,6 +4,6 @@ module.exports = async (page, scenario, vp) => {
   })
 
   await new Promise((resolve) => {
-    setTimeout(resolve, 1000)
+    setTimeout(resolve, 2000)
   })
 }
