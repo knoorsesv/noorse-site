@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Header } from '../components/pageheader'
+import { Header } from '../components/headers'
 
 function infoList(items) {
   return items.map((item) => {
@@ -33,7 +33,7 @@ const ContactPage = () => (
       }
     >
       <Block>
-        <Header text={'Koninklijke Noorse SV'} />
+        <Header>Koninklijke Noorse SV</Header>
         {infoList([
           { label: 'Opgericht', value: 1914 },
           { label: 'Stamnummer', value: 61017 },
@@ -41,12 +41,12 @@ const ContactPage = () => (
         ])}
       </Block>
       <Block>
-        <Header text={'Adres'} />
+        <Header>Adres</Header>
         <div className={'text-center'}>Frans De Peuterstraat 50</div>
         <div className={'text-center'}>2950 Kapellen</div>
       </Block>
       <Block>
-        <Header text={'Contact'} />
+        <Header>Contact</Header>
         {infoList([
           { label: 'Algemeen', value: 'secretariaat@noorse.be' },
           { label: 'Jeugd', value: 'jeugd@noorse.be' },
@@ -57,7 +57,7 @@ const ContactPage = () => (
         ])}
       </Block>
       <Block>
-        <Header text={'Bereikbaarheid'} />
+        <Header>Bereikbaarheid</Header>
         <div className={'text-center'}>
           Frans De Peuterstraat, Kapellen. A12 Haven – Bergen op Zoom blijven
           volgen tot afrit Hoevenen / Kapellen. 2e straat rechts aan Texaco
@@ -66,7 +66,7 @@ const ContactPage = () => (
         </div>
       </Block>
       <Block>
-        <Header text={'Kantine'} />
+        <Header>Kantine</Header>
         {infoList([
           { label: 'Woensdag', value: '16u30 – 23u00' },
           { label: 'Donderdag', value: '18u00 – 23u00' },

@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Header } from '../components/pageheader'
+import { Header } from '../components/headers'
 
 export default ({ pageContext: { ploegNode } }) => {
   return (
     <Layout>
-      <Header text={ploegNode.naam} />
+      <Header>{ploegNode.naam}</Header>
       <div className={'grid grid-cols-3'}>
         <div className={'col-span-1 flex flex-col'}>
           <h2 className={'subtitle'}>Info</h2>

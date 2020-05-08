@@ -13,7 +13,6 @@ const siteMap = {
       name: 'Info',
       subItems: [
         { name: 'Bestuur', link: '/bestuur' },
-        { name: 'Geschiedenis', link: '/geschiedenis' },
         { name: 'Fair Play', link: '/fairplay' },
         { name: 'Lidmaatschap', link: '/lidmaatschap' },
         { name: 'Sponsoring', link: '/sponsoring' },
