@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -11,6 +11,43 @@ const SponsorWithLogo = (sponsorNode) => {
       alt={'logo'}
       className={'object-scale-down max-w-logo p-2'}
     />
+  )
+}
+
+const FlyingIn = ({ children }) => {
+  const ref = useRef(null)
+  const [isInView, setInView] = useState(determineIfComponentIsInView())
+
+  function determineIfComponentIsInView() {
+    return (
+      ref &&
+      ref.current.getBoundingClientRect().top + 20 <
+        (window.innerHeight || document.documentElement.clientHeight)
+    )
+  }
+
+  const handleScroll = () => {
+    if (ref.current) {
+      setInView(determineIfComponentIsInView())
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll)
+    }
+  }, [])
+
+  return (
+    <div
+      className={`${
+        isInView ? '' : '-translate-x-64'
+      } transform transition duration-1000`}
+      ref={ref}
+    >
+      {children}
+    </div>
   )
 }
 
@@ -33,11 +70,13 @@ const NoorseFooter = () => {
     <footer id="footer">
       <div
         className={
-          'flex flex-col items-center py-12 lg:px-40 bg-gray md:flex md:flex-row md:items-start md:justify-between md:px-6 shadow-inner'
+          'flex flex-col items-center pb-12 pt-48 lg:px-40 bg-gradient-b-gray-darker md:flex md:flex-row md:items-start md:justify-between md:px-6'
         }
       >
         <div className={'flex flex-col items-center mb-12 md:w-2/3 lg:w-1/2'}>
-          <h1 className={'title text-center'}>Sponsors</h1>
+          <FlyingIn>
+            <h1 className={'title text-center'}>Sponsors</h1>
+          </FlyingIn>
           <div
             className={'flex flex-row flex-wrap content-between justify-center'}
           >

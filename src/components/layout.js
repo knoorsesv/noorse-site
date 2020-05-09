@@ -8,7 +8,7 @@ const Layout = ({ children, coverPhoto }) => (
     <NoorseHeader coverPhoto={coverPhoto} />
     <div
       id="content"
-      className={'flex-1 mt-3 md:mx-3 lg:mx-6 p-3 pl-4 md:px-4 lg:px-10 mb-24'}
+      className={'flex-1 mt-3 md:mx-3 lg:mx-6 p-3 pl-4 md:px-4 lg:px-10 mb-12'}
     >
       {children}
     </div>

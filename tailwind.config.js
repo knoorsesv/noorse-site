@@ -43,6 +43,7 @@ module.exports = {
         logo: '30%',
       },
     },
+    linearGradientColors: (theme) => theme('colors'),
   },
   variants: {
     opacity: ['hover', 'focus', 'group-hover', 'responsive'],
@@ -51,5 +52,5 @@ module.exports = {
     position: ['hover', 'focus', 'group-hover', 'responsive'],
     display: ['hover', 'focus', 'group-hover', 'responsive'],
   },
-  plugins: [],
+  plugins: [require('tailwindcss-gradients')],
 }
