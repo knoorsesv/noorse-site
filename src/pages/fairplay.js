@@ -1,28 +1,28 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Container } from '../components/centeredContainer'
-import { Header, SubHeader } from '../components/headers'
+import { Title, SubTitle } from '../components/titles'
 import { List, TextBlock } from '../components/text'
 
 const FairPlayPage = () => (
   <Layout>
     <Container>
-      <Header>Intern fairplayreglement</Header>
-      <SubHeader>Doelstellingen van de club</SubHeader>
+      <Title>Intern fairplayreglement</Title>
+      <SubTitle>Doelstellingen van de club</SubTitle>
       <TextBlock>
         Noorse is een club waar sportiviteit en vriendschap centraal staan. Elke
         speler of speelster telt. Alle aangesloten leden wordt de gelegenheid
         geboden om zoveel mogelijk deel te nemen aan trainingen, wedstrijden en
         allerlei andere clubactiviteiten.
       </TextBlock>
-      <SubHeader>Deontologie van de club</SubHeader>
+      <SubTitle>Deontologie van de club</SubTitle>
       <TextBlock>
         Noorse is een club die voetbal aanbiedt als liefhebberij. Bij Noorse
         zijn vrijwilligers voor de vele activiteiten van levensbelang. Geen
         enkel speler of speelster ontvangt een vergoeding voor geleverde
         prestaties.
       </TextBlock>
-      <SubHeader> Inschrijving</SubHeader>
+      <SubTitle> Inschrijving</SubTitle>
       <TextBlock>
         Noorse heeft het ethisch charter van het KVV ondertekend en houdt zich
         hier strikt aan. Dit intern fairplayreglement wordt aan alle leden
@@ -31,12 +31,12 @@ const FairPlayPage = () => (
         door hun ondertekende reglement. Bij leden onder de 18 jaar wordt
         gevraagd om een wettelijke vertegenwoordiger te laten meetekenen.
       </TextBlock>
-      <SubHeader>Omgang-gedrag op en naast het veld</SubHeader>
+      <SubTitle>Omgang-gedrag op en naast het veld</SubTitle>
       <TextBlock>
         Leden van Noorse vertegenwoordigen in de uitvoering van hun voetbalsport
         de club en dienen zich dan ook naar de waarden van de club te gedragen.
       </TextBlock>
-      <SubHeader>Algemeen</SubHeader>
+      <SubTitle>Algemeen</SubTitle>
       <TextBlock>
         <List>
           <li>
@@ -57,7 +57,7 @@ const FairPlayPage = () => (
           <li> Wees er bewust van dat voetbal een teamsport is.</li>
         </List>
       </TextBlock>
-      <SubHeader> Spelers</SubHeader>
+      <SubTitle> Spelers</SubTitle>
       <TextBlock>
         <List>
           <li> Groet uw tegenstander voor en na de match.</li>
@@ -107,7 +107,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader>Trainers</SubHeader>
+      <SubTitle>Trainers</SubTitle>
       <TextBlock>
         <List>
           <li> Voetballers hebben een trainer nodig die zij respecteren.</li>
@@ -129,7 +129,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Bestuurders</SubHeader>
+      <SubTitle> Bestuurders</SubTitle>
       <TextBlock>
         <List>
           <li>
@@ -164,7 +164,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader>Scheidsrechters en assistent-scheidsrechters</SubHeader>
+      <SubTitle>Scheidsrechters en assistent-scheidsrechters</SubTitle>
       <TextBlock>
         <List>
           <li> Pas de spelregels correct, eerlijk en consequent toe.</li>
@@ -182,7 +182,7 @@ const FairPlayPage = () => (
           <li> Wees steeds collegiaal en bekritiseer uw collega’s niet.</li>
         </List>
       </TextBlock>
-      <SubHeader> Toeschouwers</SubHeader>
+      <SubTitle> Toeschouwers</SubTitle>
       <TextBlock>
         <List>
           <li> Laat iedereen plezier beleven aan het voetbalspel.</li>
@@ -193,10 +193,10 @@ const FairPlayPage = () => (
           <li> Wees steeds positief.</li>
         </List>
       </TextBlock>
-      <SubHeader>
+      <SubTitle>
         {' '}
         Verwachtingen ten opzichte van de ouders van de jeugdspelers
-      </SubHeader>
+      </SubTitle>
       <TextBlock>
         <List>
           <li> Laat het spelplezier primeren op de prestaties.</li>
@@ -228,7 +228,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Sancties</SubHeader>
+      <SubTitle> Sancties</SubTitle>
       <TextBlock>
         Bij gedragsvormen die niet overeenkomen met de hierboven gestelde
         waarden van de club dient er ingegrepen te worden.
@@ -257,7 +257,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Afspraken bij trainingen</SubHeader>
+      <SubTitle> Afspraken bij trainingen</SubTitle>
       <TextBlock>
         <List>
           <li>
@@ -311,7 +311,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Afspraken bij wedstrijden</SubHeader>
+      <SubTitle> Afspraken bij wedstrijden</SubTitle>
       <TextBlock>
         <List>
           <li>
@@ -364,7 +364,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Kleedkamers en materiaal</SubHeader>
+      <SubTitle> Kleedkamers en materiaal</SubTitle>
       <TextBlock>
         <List>
           <li> Maak voetbalschoenen buiten proper, niet in de kleedkamer.</li>
@@ -388,7 +388,7 @@ const FairPlayPage = () => (
           <li> Rook niet in kantine en kleedkamers.</li>
         </List>
       </TextBlock>
-      <SubHeader> Taalgebruik</SubHeader>
+      <SubTitle> Taalgebruik</SubTitle>
       <TextBlock>
         <List>
           <li>
@@ -403,7 +403,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Communicatie</SubHeader>
+      <SubTitle> Communicatie</SubTitle>
       <TextBlock>
         <List>
           <li>
@@ -418,7 +418,7 @@ const FairPlayPage = () => (
           </li>
         </List>
       </TextBlock>
-      <SubHeader> Help mijn kind sport!</SubHeader>
+      <SubTitle> Help mijn kind sport!</SubTitle>
       <TextBlock>
         Als ouder speel je een fundamentele rol in de sportervaring van je kind.
         Misschien sta je er niet bij stil, maar jij hebt echt een belangrijke

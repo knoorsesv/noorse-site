@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Container } from '../components/centeredContainer'
-import { Header, SubHeader } from '../components/headers'
+import { Title, SubTitle } from '../components/titles'
 import { SpacedInfo, TextBlock } from '../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -22,8 +22,8 @@ const LidMaatschapPage = () => {
   return (
     <Layout>
       <Container>
-        <Header>Lid Worden</Header>
-        <SubHeader>Bestaande leden</SubHeader>
+        <Title>Lid Worden</Title>
+        <SubTitle>Bestaande leden</SubTitle>
         <TextBlock>
           Inschrijvingsgeld bedraagt 130€, te storten op de specifieke rekening
           van jouw categorie:
@@ -83,7 +83,7 @@ const LidMaatschapPage = () => {
           meer automatisch lid te zijn maar op de wachtlijst terecht te komen.
         </TextBlock>
 
-        <SubHeader>Nieuwe leden</SubHeader>
+        <SubTitle>Nieuwe leden</SubTitle>
         <TextBlock>
           Wil je lid worden van één van onze jeugdploegen of onze
           meisjesploegen, kom dan gerust eens een kijkje nemen naar onze
@@ -119,7 +119,7 @@ const LidMaatschapPage = () => {
           wij het graag!
         </TextBlock>
 
-        <SubHeader>Extra Info Jeugd</SubHeader>
+        <SubTitle>Extra Info Jeugd</SubTitle>
         <TextBlock>
           <a href={data.allFile.edges[0].node.publicURL} download>
             Inschrijvingsbrief K. Noorse SV – 2020-2021
@@ -137,7 +137,7 @@ const LidMaatschapPage = () => {
           opnieuw aanmelden.
         </TextBlock>
 
-        <SubHeader>Meer info</SubHeader>
+        <SubTitle>Meer info</SubTitle>
         <TextBlock>
           <SpacedInfo
             items={[

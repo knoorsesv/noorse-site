@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Header } from '../components/headers'
+import { Title } from '../components/titles'
 import { SpacedInfo } from '../components/text'
 
 const Block = ({ children }) => {
@@ -23,7 +23,7 @@ const ContactPage = () => (
       }
     >
       <Block>
-        <Header>Koninklijke Noorse SV</Header>
+        <Title>Koninklijke Noorse SV</Title>
         <SpacedInfo
           items={[
             { label: 'Opgericht', value: 1914 },
@@ -33,12 +33,12 @@ const ContactPage = () => (
         />
       </Block>
       <Block>
-        <Header>Adres</Header>
+        <Title>Adres</Title>
         <div className={'text-center'}>Frans De Peuterstraat 50</div>
         <div className={'text-center'}>2950 Kapellen</div>
       </Block>
       <Block>
-        <Header>Contact</Header>
+        <Title>Contact</Title>
         <SpacedInfo
           items={[
             { label: 'Algemeen', value: 'secretariaat@noorse.be' },
@@ -51,7 +51,7 @@ const ContactPage = () => (
         />
       </Block>
       <Block>
-        <Header>Bereikbaarheid</Header>
+        <Title>Bereikbaarheid</Title>
         <div className={'text-center'}>
           Frans De Peuterstraat, Kapellen. A12 Haven – Bergen op Zoom blijven
           volgen tot afrit Hoevenen / Kapellen. 2e straat rechts aan Texaco
@@ -60,7 +60,7 @@ const ContactPage = () => (
         </div>
       </Block>
       <Block>
-        <Header>Kantine</Header>
+        <Title>Kantine</Title>
         <SpacedInfo
           items={[
             { label: 'Woensdag', value: '16u30 – 23u00' },
