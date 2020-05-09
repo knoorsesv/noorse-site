@@ -103,7 +103,11 @@ const LidMaatschapPage = () => {
           ronden.
           <br />
           Aan geïnteresseerden voor jeugd jongens vragen we volgend{' '}
-          <a href="https://forms.gle/4UufKtgb7tN7rxAd9" target="_blank">
+          <a
+            href="https://forms.gle/4UufKtgb7tN7rxAd9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             formulier{' '}
           </a>
           in te vullen.
@@ -122,7 +126,11 @@ const LidMaatschapPage = () => {
           </a>
           <br />
           Bestaande leden van jeugd jongens kunnen zich
-          <a href="https://forms.gle/SWG2tV2q9wP5WiX16" target="_blank">
+          <a
+            href="https://forms.gle/SWG2tV2q9wP5WiX16"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {' '}
             hier
           </a>{' '}
