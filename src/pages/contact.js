@@ -1,17 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Header } from '../components/headers'
-
-function infoList(items) {
-  return items.map((item) => {
-    return (
-      <div className={'flex flex-row justify-between w-full'} key={item.label}>
-        <span className={'text-left font-bold'}>{item.label}</span>
-        <span className={'text-right'}>{item.value}</span>
-      </div>
-    )
-  })
-}
+import { SpacedInfo } from '../components/text'
 
 const Block = ({ children }) => {
   return (
@@ -34,11 +24,13 @@ const ContactPage = () => (
     >
       <Block>
         <Header>Koninklijke Noorse SV</Header>
-        {infoList([
-          { label: 'Opgericht', value: 1914 },
-          { label: 'Stamnummer', value: 61017 },
-          { label: 'Kleuren', value: 'Geel-Groen' },
-        ])}
+        <SpacedInfo
+          items={[
+            { label: 'Opgericht', value: 1914 },
+            { label: 'Stamnummer', value: 61017 },
+            { label: 'Kleuren', value: 'Geel-Groen' },
+          ]}
+        />
       </Block>
       <Block>
         <Header>Adres</Header>
@@ -47,14 +39,16 @@ const ContactPage = () => (
       </Block>
       <Block>
         <Header>Contact</Header>
-        {infoList([
-          { label: 'Algemeen', value: 'secretariaat@noorse.be' },
-          { label: 'Jeugd', value: 'jeugd@noorse.be' },
-          { label: 'Senioren', value: 'senioren@noorse.be' },
-          { label: 'Dames / Meisjes', value: 'meisjesendames@noorse.be' },
-          { label: 'G-voetbal', value: 'gvoetbal@noorse.be' },
-          { label: 'Tel', value: '03 664 44 12' },
-        ])}
+        <SpacedInfo
+          items={[
+            { label: 'Algemeen', value: 'secretariaat@noorse.be' },
+            { label: 'Jeugd', value: 'jeugd@noorse.be' },
+            { label: 'Senioren', value: 'senioren@noorse.be' },
+            { label: 'Dames / Meisjes', value: 'meisjesendames@noorse.be' },
+            { label: 'G-voetbal', value: 'gvoetbal@noorse.be' },
+            { label: 'Tel', value: '03 664 44 12' },
+          ]}
+        />
       </Block>
       <Block>
         <Header>Bereikbaarheid</Header>
@@ -67,11 +61,13 @@ const ContactPage = () => (
       </Block>
       <Block>
         <Header>Kantine</Header>
-        {infoList([
-          { label: 'Woensdag', value: '16u30 – 23u00' },
-          { label: 'Donderdag', value: '18u00 – 23u00' },
-          { label: 'Vrijdag', value: '18u00 – 23u00' },
-        ])}
+        <SpacedInfo
+          items={[
+            { label: 'Woensdag', value: '16u30 – 23u00' },
+            { label: 'Donderdag', value: '18u00 – 23u00' },
+            { label: 'Vrijdag', value: '18u00 – 23u00' },
+          ]}
+        />
         <div className={'text-center mt-3'}>
           Wil je checken of kantine open is? Check even via socceronline of bel
           naar onze kantine.

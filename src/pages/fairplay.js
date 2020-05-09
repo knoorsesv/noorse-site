@@ -2,16 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Container } from '../components/centeredContainer'
 import { Header, SubHeader } from '../components/headers'
-
-const TextBlock = ({ children }) => {
-  return (
-    <div className={'mt-2 mb-4 sm:mb-8 font-light sm:px-6'}>{children}</div>
-  )
-}
-
-const List = ({ children }) => {
-  return <ul className={'list-disc list-inside mb-6'}>{children}</ul>
-}
+import { List, TextBlock } from '../components/text'
 
 const FairPlayPage = () => (
   <Layout>

@@ -13,6 +13,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -27,10 +34,10 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u0xs2v9mjzql`,
-//todo: make this a secret
+        //todo: make this a secret
         accessToken: `cZoDsy5n81N1MjmN3Xbld2-joHP_Xbo6h8BwaUEDhCE`,
         host: `preview.contentful.com`,
-        downloadLocal: true
+        downloadLocal: true,
       },
     },
   ],
