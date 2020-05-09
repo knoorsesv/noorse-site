@@ -108,7 +108,7 @@ const LidMaatschapPage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            formulier{' '}
+            formulier
           </a>
           in te vullen.
           <br />
@@ -132,8 +132,8 @@ const LidMaatschapPage = () => {
             rel="noopener noreferrer"
           >
             {' '}
-            hier
-          </a>{' '}
+            hier{' '}
+          </a>
           opnieuw aanmelden.
         </TextBlock>
 

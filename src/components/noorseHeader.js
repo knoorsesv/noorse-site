@@ -8,7 +8,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 const siteMap = {
   items: [
     { name: 'Home', link: '/' },
-    { name: 'Nieuws', link: '/nieuws' },
     {
       name: 'Info',
       subItems: [
