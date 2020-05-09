@@ -16,13 +16,12 @@ const SponsorWithLogo = (sponsorNode) => {
 
 const FlyingIn = ({ children }) => {
   const ref = useRef(null)
-  const [isInView, setInView] = useState(determineIfComponentIsInView())
+  const [isInView, setInView] = useState(false)
 
   function determineIfComponentIsInView() {
     return (
-      ref &&
       ref.current.getBoundingClientRect().top + 20 <
-        (window.innerHeight || document.documentElement.clientHeight)
+      (window.innerHeight || document.documentElement.clientHeight)
     )
   }
 
