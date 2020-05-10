@@ -1,8 +1,24 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Title } from '../components/titles'
+import { SubTitle, Title } from '../components/titles'
+import { graphql, useStaticQuery } from 'gatsby'
 
 export default ({ pageContext: { ploegNode } }) => {
+  const kalender = useStaticQuery(graphql`
+    query {
+      vv {
+        teamCalendar(teamId: 162533, language: nl) {
+          id
+          homeTeam {
+            name
+          }
+          awayTeam {
+            name
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <Title>{ploegNode.naam}</Title>
@@ -19,7 +35,14 @@ export default ({ pageContext: { ploegNode } }) => {
           </div>
         </div>
         <div className={'col-span-2 flex flex-col'}>
-          <h2 className={'subtitle'}>Kalender</h2>
+          <SubTitle>Kalender</SubTitle>
+          {kalender.vv.teamCalendar.map((game) => {
+            return (
+              <div key={game.id}>
+                {game.homeTeam.name} -- {game.awayTeam.name}
+              </div>
+            )
+          })}
         </div>
       </div>
     </Layout>

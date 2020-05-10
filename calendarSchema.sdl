@@ -1,0 +1,17 @@
+type Query {
+   teamCalendar(teamId: Int, language: Lang): [MatchDetail]
+}
+
+type MatchDetail {
+  id: String
+  homeTeam: Team
+  awayTeam: Team
+}
+
+type Team {
+  name: String
+}
+
+enum Lang {
+  nl
+}

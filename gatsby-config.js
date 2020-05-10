@@ -1,3 +1,5 @@
+const { buildSchema } = require('graphql')
+const fs = require('fs')
 module.exports = {
   siteMetadata: {
     title: `K. Noorse S.V.`,
@@ -38,6 +40,23 @@ module.exports = {
         accessToken: `cZoDsy5n81N1MjmN3Xbld2-joHP_Xbo6h8BwaUEDhCE`,
         host: `preview.contentful.com`,
         downloadLocal: true,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // This type will contain remote schema Query type
+        typeName: 'VV',
+        // This is the field under which it's accessible
+        fieldName: 'vv',
+        // URL to query from
+        url: 'https://datalake-prod2018.rbfa.be/graphql',
+        createSchema: async () => {
+          const sdl = fs
+            .readFileSync(`${__dirname}/calendarSchema.sdl`)
+            .toString()
+          return buildSchema(sdl)
+        },
       },
     },
   ],
