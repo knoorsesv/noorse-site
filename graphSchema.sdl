@@ -1,5 +1,6 @@
 type Query {
-   teamCalendar(teamId: Int, language: Lang): [MatchDetail]
+   teamCalendar(teamId: ID!, language: Lang): [MatchDetail]
+   clubTeams(clubId: Int, language: Lang): [Team]
 }
 
 type MatchDetail {
@@ -10,6 +11,7 @@ type MatchDetail {
 
 type Team {
   name: String
+  id: String
 }
 
 enum Lang {

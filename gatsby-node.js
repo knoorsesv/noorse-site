@@ -32,13 +32,24 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const ploegen = await graphql(`
+  const noorsePloegInfo = await graphql(`
     query {
       allContentfulPloeg {
         nodes {
           naam
           training
           coach
+        }
+      }
+    }
+  `)
+
+  const vvTeams = await graphql(`
+    query {
+      vv {
+        clubTeams(clubId: 8179, language: nl) {
+          name
+          id
         }
       }
     }
@@ -62,12 +73,21 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  ploegen.data.allContentfulPloeg.nodes.forEach((ploegNode) => {
-    console.log('creating page for', ploegNode.naam)
-    createPage({
-      path: `/team/${ploegNode.naam.toLowerCase()}`,
-      component: require.resolve(`./src/templates/ploeg-template.js`),
-      context: { ploegNode },
-    })
+  vvTeams.data.vv.clubTeams.forEach((team) => {
+    const noorseInfo = noorsePloegInfo.data.allContentfulPloeg.nodes.find(
+      (ploeg) => ploeg.naam === noorseVVMapping[team.name]
+    )
+    if (noorseInfo) {
+      console.log('creating page for', team.name, team.id)
+      createPage({
+        path: `/team/${team.name.toLowerCase()}`,
+        component: require.resolve(`./src/templates/ploeg-template.js`),
+        context: { team, teamId: team.id, noorseInfo },
+      })
+    }
   })
+}
+//todo: move mapping to contentful?
+const noorseVVMapping = {
+  'Eerste Elftallen A': 'Noorse 1',
 }

@@ -52,9 +52,7 @@ module.exports = {
         // URL to query from
         url: 'https://datalake-prod2018.rbfa.be/graphql',
         createSchema: async () => {
-          const sdl = fs
-            .readFileSync(`${__dirname}/calendarSchema.sdl`)
-            .toString()
+          const sdl = fs.readFileSync(`${__dirname}/graphSchema.sdl`).toString()
           return buildSchema(sdl)
         },
       },
