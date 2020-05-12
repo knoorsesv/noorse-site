@@ -10,6 +10,19 @@ export const List = ({ children }) => {
   return <ul className={'list-disc list-inside mb-6'}>{children}</ul>
 }
 
+export const ExternalLink = ({ children, url }) => {
+  return (
+    <a
+      className={'text-gray-dark'}
+      href={url}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      {children}
+    </a>
+  )
+}
+
 export const SpacedInfo = ({ items }) => {
   return items.map((item) => {
     return (

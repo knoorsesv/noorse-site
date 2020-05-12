@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Container } from '../components/centeredContainer'
 import { Title, SubTitle } from '../components/titles'
-import { SpacedInfo, TextBlock } from '../components/text'
+import { ExternalLink, SpacedInfo, TextBlock } from '../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const LidMaatschapPage = () => {
@@ -103,13 +103,9 @@ const LidMaatschapPage = () => {
           ronden.
           <br />
           Aan geïnteresseerden voor jeugd jongens vragen we volgend{' '}
-          <a
-            href="https://forms.gle/4UufKtgb7tN7rxAd9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink url="https://forms.gle/4UufKtgb7tN7rxAd9">
             formulier
-          </a>
+          </ExternalLink>
           in te vullen.
           <br />
           Voor nieuwe leden bedraagt het lidgeld 150€.
@@ -126,14 +122,9 @@ const LidMaatschapPage = () => {
           </a>
           <br />
           Bestaande leden van jeugd jongens kunnen zich
-          <a
-            href="https://forms.gle/SWG2tV2q9wP5WiX16"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            hier{' '}
-          </a>
+          <ExternalLink url="https://forms.gle/SWG2tV2q9wP5WiX16">
+            hier
+          </ExternalLink>
           opnieuw aanmelden.
         </TextBlock>
 

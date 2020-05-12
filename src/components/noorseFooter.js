@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { ExternalLink } from './text'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
@@ -88,8 +89,12 @@ const NoorseFooter = () => {
           <span>03/543.xx.xx</span>
           <span>info@noorse.be</span>
           <div className={'flex flex-row items-center mt-6 space-x-3'}>
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faGithub} />
+            <ExternalLink url="https://www.facebook.com/noorsesv/">
+              <FontAwesomeIcon size="2x" icon={faFacebook} />
+            </ExternalLink>
+            <ExternalLink url="https://github.com/gvdp/noorse-site">
+              <FontAwesomeIcon size="2x" icon={faGithub} />
+            </ExternalLink>
           </div>
         </div>
       </div>
@@ -100,7 +105,8 @@ const NoorseFooter = () => {
       >
         <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
         <div size={'small'}>
-          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          Powered by{' '}
+          <ExternalLink url="https://www.gatsbyjs.org">Gatsby</ExternalLink>
         </div>
       </div>
     </footer>
