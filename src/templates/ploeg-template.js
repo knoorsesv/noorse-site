@@ -65,6 +65,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
               ))}
             <h3 className={'uppercase font-bold'}>Reeks</h3>
             {data.vv &&
+              data.vv.teamSeriesAndRankings &&
               data.vv.teamSeriesAndRankings.series.map((series) => (
                 <ExternalLink
                   key={series.name}
