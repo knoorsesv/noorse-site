@@ -144,13 +144,15 @@ const Logo = ({ isSticky }) => {
          `}
     >
       <div className={'navbar-item'}>
-        <img
-          src={logo}
-          alt={'Noorse Logo'}
-          className={`relative transition-all duration-200 ease-in ${
-            isSticky ? 'top-0 h-navbar-logo' : 'top-logo h-logo'
-          }`}
-        />
+        <Link to={'/'}>
+          <img
+            src={logo}
+            alt={'Noorse Logo'}
+            className={`relative transition-all duration-200 ease-in ${
+              isSticky ? 'top-0 h-navbar-logo' : 'top-logo h-logo'
+            }`}
+          />
+        </Link>
       </div>
     </div>
   )
