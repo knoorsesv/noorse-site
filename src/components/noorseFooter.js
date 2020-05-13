@@ -6,12 +6,15 @@ import { ExternalLink } from './text'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <img
-      src={sponsorNode.logo.localFile.publicURL}
-      key={sponsorNode.logo.localFile.publicURL}
-      alt={'logo'}
-      className={'object-scale-down max-w-logo p-2'}
-    />
+    <div className={'max-w-logo p-2'} key={sponsorNode.naam}>
+      <ExternalLink url={sponsorNode.websiteUrl}>
+        <img
+          src={sponsorNode.logo.localFile.publicURL}
+          alt={'logo'}
+          className={'object-scale-down '}
+        />
+      </ExternalLink>
+    </div>
   )
 }
 
@@ -56,6 +59,7 @@ const NoorseFooter = () => {
       allContentfulSponsor {
         nodes {
           naam
+          websiteUrl
           logo {
             localFile {
               publicURL
