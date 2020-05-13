@@ -6,12 +6,12 @@ import { ExternalLink } from './text'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <div className={'max-w-logo p-2'} key={sponsorNode.naam}>
+    <div className={'max-w-logo p-2 flex items-center'} key={sponsorNode.naam}>
       <ExternalLink url={sponsorNode.websiteUrl}>
         <img
           src={sponsorNode.logo.localFile.publicURL}
           alt={'logo'}
-          className={'object-scale-down '}
+          className={'object-scale-down'}
         />
       </ExternalLink>
     </div>
