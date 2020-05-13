@@ -41,6 +41,12 @@ exports.createPages = async ({ graphql, actions }) => {
           training
           coach
           naamOpVoetbalVlaanderen
+          categorie {
+            naam
+            ploeg {
+              naam
+            }
+          }
         }
       }
     }

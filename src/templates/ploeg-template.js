@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { SubTitle, Title } from '../components/titles'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 export const query = graphql`
   query($teamId: ID!) {
@@ -22,9 +22,20 @@ export const query = graphql`
 export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
   return (
     <Layout>
+      <Link to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}>
+        {contentfulPloeg.categorie.naam}
+      </Link>
+
+      {contentfulPloeg.categorie.ploeg.map((ploeg) => (
+        <Link key={ploeg.naam} to={`/team/${ploeg.naam.toLowerCase()}`}>
+          {ploeg.naam}
+        </Link>
+      ))}
+
       <Title>
         {vvInfo && vvInfo.name} / {contentfulPloeg.naam}
       </Title>
+
       <div className={'grid grid-cols-3'}>
         <div className={'col-span-1 flex flex-col'}>
           <SubTitle>Info</SubTitle>

@@ -11,14 +11,18 @@ export default ({ pageContext: { categoryNode } }) => {
           <h2 className={'subtitle'}>Nieuws</h2>
           {categoryNode.news &&
             categoryNode.news.map((news) => (
-              <Link to={`/nieuws/${news.title}`}>{news.title}</Link>
+              <Link key={news.title} to={`/nieuws/${news.title}`}>
+                {news.title}
+              </Link>
             ))}
         </div>
         <div className={'col-span-2 flex flex-col'}>
           <h2 className={'subtitle'}>Ploegen</h2>
           {categoryNode.ploeg &&
             categoryNode.ploeg.map((ploeg) => (
-              <Link to={`/team/${ploeg.naam.toLowerCase()}`}>{ploeg.naam}</Link>
+              <Link key={ploeg.naam} to={`/team/${ploeg.naam.toLowerCase()}`}>
+                {ploeg.naam}
+              </Link>
             ))}
         </div>
       </div>
