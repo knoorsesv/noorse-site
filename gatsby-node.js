@@ -26,6 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
           ploeg {
             naam
+            naamOpVoetbalVlaanderen
           }
         }
       }
@@ -39,6 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
           naam
           training
           coach
+          naamOpVoetbalVlaanderen
         }
       }
     }
@@ -73,21 +75,15 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  vvTeams.data.vv.clubTeams.forEach((team) => {
-    const noorseInfo = noorsePloegInfo.data.allContentfulPloeg.nodes.find(
-      (ploeg) => ploeg.naam === noorseVVMapping[team.name]
+  noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
+    const vvInfo = vvTeams.data.vv.clubTeams.find(
+      (vvTeam) => contentfulPloeg.naamOpVoetbalVlaanderen === vvTeam.name
     )
-    if (noorseInfo) {
-      console.log('creating page for', team.name, team.id)
-      createPage({
-        path: `/team/${team.name.toLowerCase()}`,
-        component: require.resolve(`./src/templates/ploeg-template.js`),
-        context: { team, teamId: team.id, noorseInfo },
-      })
-    }
+    console.log('creating page for', contentfulPloeg.naam, vvInfo && vvInfo.id)
+    createPage({
+      path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
+      component: require.resolve(`./src/templates/ploeg-template.js`),
+      context: { vvInfo, teamId: vvInfo ? vvInfo.id : 'none', contentfulPloeg },
+    })
   })
-}
-//todo: move mapping to contentful?
-const noorseVVMapping = {
-  'Eerste Elftallen A': 'Noorse 1',
 }
