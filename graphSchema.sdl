@@ -5,6 +5,7 @@ type Query {
 
 type MatchDetail {
   id: String
+  startDate: String
   homeTeam: Team
   awayTeam: Team
 }

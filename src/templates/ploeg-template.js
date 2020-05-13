@@ -8,6 +8,7 @@ export const query = graphql`
     vv {
       teamCalendar(teamId: $teamId, language: nl) {
         id
+        startDate
         homeTeam {
           name
         }
@@ -58,7 +59,8 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
             data.vv.teamCalendar.map((game) => {
               return (
                 <div key={game.id}>
-                  {game.homeTeam.name} -- {game.awayTeam.name}
+                  {game.startDate} / {game.homeTeam.name} --{' '}
+                  {game.awayTeam.name}
                 </div>
               )
             })}
