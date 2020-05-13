@@ -32,11 +32,6 @@ export default (props) => {
   const [menuShown, setMenuShown] = useState(false)
 
   const ref = useRef(null)
-  const handleScroll = () => {
-    if (ref.current) {
-      setSticky(ref.current.getBoundingClientRect().top < 0)
-    }
-  }
 
   const clickBurger = () => {
     setMenuShown(!menuShown)
@@ -44,6 +39,11 @@ export default (props) => {
 
   if (props.coverPhoto) {
     useEffect(() => {
+      const handleScroll = () => {
+        if (ref.current) {
+          setSticky(ref.current.getBoundingClientRect().top < 0)
+        }
+      }
       window.addEventListener('scroll', handleScroll)
       return () => {
         window.removeEventListener('scroll', () => handleScroll)

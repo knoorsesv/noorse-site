@@ -16,7 +16,7 @@ export const ExternalLink = ({ children, url }) => {
       className={'text-gray-dark'}
       href={url}
       target="_blank"
-      rel="noreferrer noopener"
+      rel="noopener noreferrer"
     >
       {children}
     </a>

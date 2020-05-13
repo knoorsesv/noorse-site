@@ -26,16 +26,15 @@ const FlyingIn = ({ children }) => {
     )
   }
 
-  const handleScroll = () => {
-    if (ref.current) {
-      setInView(determineIfComponentIsInView())
-    }
-  }
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (ref.current) {
+        setInView(determineIfComponentIsInView())
+      }
+    }
     window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', () => handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
