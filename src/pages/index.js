@@ -68,6 +68,7 @@ export default () => {
             </TextBlock>
             <div className={'flex justify-center pb-4'}>
               <iframe
+                id={'trooperVideo'}
                 title="Trooper instruction video"
                 className={
                   'object-contain lg:w-video-tablet lg:h-video-tablet xl:w-video-desktop xl:h-video-desktop'

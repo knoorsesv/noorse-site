@@ -30,6 +30,7 @@
       "url": "http://host.docker.internal:8000/",
       "delay": 1000,
       "selectors": ["viewport"],
+      "removeSelectors": ["#trooperVideo"],
       "misMatchThreshold": 1
     },
     {
@@ -37,7 +38,7 @@
       "url": "http://host.docker.internal:8000/",
       "delay": 1000,
       "selectors": ["#homepage-content"],
-      "removeSelectors": ["#header"],
+      "removeSelectors": ["#header", "#trooperVideo"],
       "misMatchThreshold": 1
     },
     {
