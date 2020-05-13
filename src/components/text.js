@@ -13,7 +13,7 @@ export const List = ({ children }) => {
 export const ExternalLink = ({ children, url }) => {
   return (
     <a
-      className={'text-gray-dark'}
+      className={'text-gray-dark underline'}
       href={url}
       target="_blank"
       rel="noopener noreferrer"

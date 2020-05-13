@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import logo from '../images/Logo_highres.png'
 import Masonry from 'react-masonry-css'
 import { NewsCard } from '../components/newsCard'
+import { ExternalLink, TextBlock } from '../components/text'
 
 export default () => {
   const newsItems = useStaticQuery(graphql`
@@ -56,10 +57,24 @@ export default () => {
             <h1>Events</h1>
           </div>
           <div className={'box'}>
-            <h1>Trooper</h1>
-          </div>
-          <div className={'box'}>
-            <h1>Klassement</h1>
+            <TextBlock>
+              <div className={'text-center'}>
+                Steun onze vereniging vanaf nu via{' '}
+                <ExternalLink url="https://www.trooper.be/noorse">
+                  Trooper
+                </ExternalLink>{' '}
+                !
+              </div>
+            </TextBlock>
+            <div className={'flex justify-center pb-4'}>
+              <iframe
+                title="Trooper instruction video"
+                className={
+                  'object-contain lg:w-video-tablet lg:h-video-tablet xl:w-video-desktop xl:h-video-desktop'
+                }
+                src="https://drive.google.com/file/d/1tyQvH4X6YhS0davnGttLbuSnJ71raj1C/preview"
+              />
+            </div>
           </div>
         </div>
       </div>

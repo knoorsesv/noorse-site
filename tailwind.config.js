@@ -32,6 +32,12 @@ module.exports = {
         'navbar-cover-mobile': '40vh',
         'navbar-logo': '50px',
         logo: '22vh',
+        'video-desktop': '300px',
+        'video-tablet': '180px',
+      },
+      width: {
+        'video-desktop': '500px',
+        'video-tablet': '280px',
       },
       inset: {
         logo: '8vh',
