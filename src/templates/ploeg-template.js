@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/layout'
-import { SubTitle, Title } from '../components/titles'
+import { SubTitle } from '../components/titles'
 import { graphql, Link } from 'gatsby'
 import { ExternalLink } from '../components/text'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import * as moment from 'moment'
 
 export const query = graphql`
   query($teamId: ID!) {
@@ -32,38 +35,85 @@ export const query = graphql`
   }
 `
 
+const Label = ({ children }) => {
+  return <h3 className={'uppercase font-bold mb-2'}>{children}</h3>
+}
 export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
+  const [ploegMenuShown, showPloegMenu] = useState(false)
+
+  const dubbelTeams = [...contentfulPloeg.categorie.ploeg]
+
+  const togglePloegMenu = () => {
+    showPloegMenu(!ploegMenuShown)
+  }
+  const keyDownHandler = (event) => {
+    if (event.key === 'Enter') {
+      togglePloegMenu()
+    }
+  }
+
   return (
     <Layout>
-      <Link to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}>
-        {contentfulPloeg.categorie.naam}
-      </Link>
-
-      {contentfulPloeg.categorie.ploeg.map((ploeg) => (
-        <Link key={ploeg.naam} to={`/team/${ploeg.naam.toLowerCase()}`}>
-          {ploeg.naam}
+      <div className={'flex flex-row justify-between mb-4'}>
+        <Link
+          to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}
+          className={'text-gray-dark underline'}
+        >
+          {contentfulPloeg.categorie.naam}
         </Link>
-      ))}
 
-      <Title>
-        {vvInfo && vvInfo.name} / {contentfulPloeg.naam}
-      </Title>
+        <div className={'w-1/2 flex flex-col items-end'}>
+          <div
+            onClick={togglePloegMenu}
+            role="link"
+            tabIndex="0"
+            onKeyDown={keyDownHandler}
+          >
+            <span>{contentfulPloeg.naam}</span>
+            <FontAwesomeIcon icon={faAngleDown} className={'ml-2'} />
+          </div>
 
-      <div className={'grid grid-cols-3'}>
+          <div
+            className={`${
+              ploegMenuShown ? 'flex' : 'hidden'
+            } flex-col items-end my-2 elevation-2 bg-opacity-75 py-2`}
+          >
+            {dubbelTeams.map((ploeg) => (
+              <Link
+                key={ploeg.naam}
+                to={`/team/${ploeg.naam.toLowerCase()}`}
+                activeClassName={'font-bold bg-gray'}
+                className={
+                  'border-opacity-50 text-gray-dark w-full py-1 pl-8 pr-4 bg-opacity-50'
+                }
+              >
+                {ploeg.naam}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className={'flex flex-col'}>
         <div className={'col-span-1 flex flex-col'}>
           <SubTitle>Info</SubTitle>
-          <div className={'flex flex-col'}>
-            <h3 className={'uppercase font-bold'}>Coach</h3>
+          <div className={'flex flex-col items-center'}>
+            <Label>Coach</Label>
+
             {contentfulPloeg.coach &&
               contentfulPloeg.coach.map((coach) => (
                 <span key={coach}>{coach}</span>
               ))}
-            <h3 className={'uppercase font-bold'}>Training</h3>
+            <br className={'mb-4'} />
+            <Label>Training</Label>
+
             {contentfulPloeg.training &&
               contentfulPloeg.training.map((training) => (
                 <span key={training}> {training}</span>
               ))}
-            <h3 className={'uppercase font-bold'}>Reeks</h3>
+            <br className={'mb-4'} />
+
+            <Label>Reeks</Label>
             {data.vv &&
               data.vv.teamSeriesAndRankings &&
               data.vv.teamSeriesAndRankings.series.map((series) => (
@@ -75,23 +125,42 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
                   {series.name}
                 </ExternalLink>
               ))}
+            <br className={'mb-4'} />
           </div>
         </div>
-        <div className={'col-span-2 flex flex-col'}>
-          <SubTitle>Kalender</SubTitle>
-          {data.vv &&
-            data.vv.teamCalendar.map((game) => {
-              return (
-                <div key={game.id}>
-                  {game.startDate} /{game.homeTeam.name} --
-                  {game.awayTeam.name}
-                  {game.outcome.status === 'finished'
-                    ? `  //  ${game.outcome.homeTeamGoals} -   ${game.outcome.awayTeamGoals}`
-                    : '-'}
-                </div>
-              )
-            })}
-        </div>
+        {data.vv && data.vv.teamCalendar && (
+          <div>
+            <SubTitle>Kalender</SubTitle>
+            <table>
+              <tbody>
+                {data.vv.teamCalendar.map((game) => {
+                  game.formattedDate = moment(game.startDate).format(
+                    'DD-MM-YYYY'
+                  )
+                  return (
+                    <tr key={game.id}>
+                      <td className={'text-sm'}>{game.formattedDate}</td>
+                      <td className={'flex flex-col ml-4 w-4/5'}>
+                        <span className={'truncate'}>{game.homeTeam.name}</span>
+                        <span className={'truncate'}>{game.awayTeam.name}</span>
+                      </td>
+                      <td>
+                        {game.outcome.status === 'finished' ? (
+                          <div className={'flex flex-col'}>
+                            <span>{game.outcome.homeTeamGoals}</span>
+                            <span>{game.outcome.awayTeamGoals}</span>
+                          </div>
+                        ) : (
+                          <span className={'align-middle'}>-</span>
+                        )}
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </Layout>
   )
