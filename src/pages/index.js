@@ -3,10 +3,12 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql, useStaticQuery } from 'gatsby'
-import logo from '../images/Logo_highres.png'
 import Masonry from 'react-masonry-css'
 import { NewsCard } from '../components/newsCard'
 import { ExternalLink, TextBlock } from '../components/text'
+import { EventList } from '../components/events'
+import { Card, CardHeader } from '../components/cards'
+import { Title } from '../components/titles'
 
 export default () => {
   const newsItems = useStaticQuery(graphql`
@@ -35,7 +37,7 @@ export default () => {
         id="homepage-content"
       >
         <div className={'col-span-2'} id="news-list">
-          <h1 className={'title'}>Nieuws</h1>
+          <Title>Nieuws</Title>
           <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
@@ -45,20 +47,17 @@ export default () => {
           </Masonry>
         </div>
         <div className={'flex flex-col'}>
-          <div className={'box'}>
-            <h1>Next game</h1>
-            <div className={'flex justify-around items-center mt-6'}>
-              <img src={logo} className={'max-w-1/3'} alt={'Logo Home Team'} />
-              <span>VS</span>
-              <img src={logo} className={'max-w-1/3'} alt={'Logo Away Team'} />
+          <Card>
+            <CardHeader>
+              <h1 className={'text-center w-full'}>Evenementen</h1>
+            </CardHeader>
+            <div className={'py-2 px-3'}>
+              <EventList />
             </div>
-          </div>
-          <div className={'box'}>
-            <h1>Events</h1>
-          </div>
-          <div className={'box'}>
+          </Card>
+          <Card>
             <TextBlock>
-              <div className={'text-center'}>
+              <div className={'text-center px-2'}>
                 Steun onze vereniging vanaf nu via{' '}
                 <ExternalLink url="https://www.trooper.be/noorse">
                   Trooper
@@ -76,7 +75,7 @@ export default () => {
                 src="https://drive.google.com/file/d/1tyQvH4X6YhS0davnGttLbuSnJ71raj1C/preview"
               />
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </Layout>

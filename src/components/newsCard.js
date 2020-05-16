@@ -1,6 +1,7 @@
 import { navigate } from 'gatsby-link'
 import contract from '../images/contract.jpg'
 import React from 'react'
+import { Card, CardHeader } from './cards'
 
 export const NewsCard = (newsNode) => {
   const goToNews = () => {
@@ -13,8 +14,7 @@ export const NewsCard = (newsNode) => {
     }
   }
   return (
-    <div
-      className={'card mx-2 my-2 max-w-full'}
+    <Card
       onClick={goToNews}
       onKeyDown={keyDownHandler}
       role="link"
@@ -28,12 +28,8 @@ export const NewsCard = (newsNode) => {
           </figure>
         </div>
       )}
-      <header className={'card-header'}>
-        <p className={'card-header-title'} to={newsNode.title}>
-          {newsNode.title}
-        </p>
-      </header>
+      <CardHeader>{newsNode.title}</CardHeader>
       {newsNode.blurb && <div className={'card-content'}>{newsNode.blurb}</div>}
-    </div>
+    </Card>
   )
 }
