@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.22](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.21...v0.1.22) (2020-05-16)
+
+### Features
+
+- add eventlist to frontpage ([75acd4d](https://github.com/gatsbyjs/gatsby-starter-default/commit/75acd4d5337a612003485d066b2aaaf73dae828e))
+
+### Bug Fixes
+
+- don't put h1 inside p tag ([879f34d](https://github.com/gatsbyjs/gatsby-starter-default/commit/879f34da6aeabc70036100b7ab2f567a9c6accc9))
+- style external links true by default ([4c136dd](https://github.com/gatsbyjs/gatsby-starter-default/commit/4c136ddf2eef67532f7ea2dbf998c03c3ca5381d))
+
 ### [0.1.21](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.20...v0.1.21) (2020-05-16)
 
 ### [0.1.20](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.19...v0.1.20) (2020-05-13)
