@@ -138,6 +138,13 @@
       "removeSelectors": ["#header"]
     },
     {
+      "label": "Ploeg",
+      "url": "http://host.docker.internal:8000/team/noorse%201",
+      "delay": 500,
+      "selectors": ["#content"],
+      "removeSelectors": ["#header"]
+    },
+    {
       "label": "Contact",
       "url": "http://host.docker.internal:8000/contact",
       "delay": 500,

@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const TextBlock = ({ children }) => {
   return (
@@ -10,15 +12,22 @@ export const List = ({ children }) => {
   return <ul className={'list-disc list-inside mb-6'}>{children}</ul>
 }
 
-export const ExternalLink = ({ children, url }) => {
+export const ExternalLink = ({ children, url, styled }) => {
   return (
     <a
-      className={'text-gray-dark underline'}
+      className={`text-gray-dark ${styled && 'border-b'} align-middle`}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
     >
       {children}
+      {styled && (
+        <FontAwesomeIcon
+          icon={faExternalLinkAlt}
+          size={'sm'}
+          className={'pl-1'}
+        ></FontAwesomeIcon>
+      )}
     </a>
   )
 }

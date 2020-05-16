@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
-import { SubTitle } from '../components/titles'
+import { SubTitle, Title } from '../components/titles'
 import { graphql, Link } from 'gatsby'
 import { ExternalLink } from '../components/text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -35,9 +35,6 @@ export const query = graphql`
   }
 `
 
-const Label = ({ children }) => {
-  return <h3 className={'uppercase font-bold mb-2'}>{children}</h3>
-}
 export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
   const [ploegMenuShown, showPloegMenu] = useState(false)
 
@@ -54,19 +51,28 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
 
   return (
     <Layout>
-      <div className={'flex flex-row justify-between mb-4'}>
+      <div
+        className={
+          'flex flex-row xl:flex-col justify-between lg:items-center mb-4 lg:text-2xl'
+        }
+      >
         <Link
           to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}
-          className={'text-gray-dark underline'}
+          className={'text-gray-dark underline xl:text-3xl'}
         >
           {contentfulPloeg.categorie.naam}
         </Link>
 
-        <div className={'w-1/2 flex flex-col items-end'}>
+        <div
+          className={
+            'w-1/2 lg:w-4/5 xl:w-full flex flex-col items-end xl:items-center'
+          }
+        >
           <div
             onClick={togglePloegMenu}
             role="link"
             tabIndex="0"
+            className={'lg:hidden'}
             onKeyDown={keyDownHandler}
           >
             <span>{contentfulPloeg.naam}</span>
@@ -75,8 +81,8 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
 
           <div
             className={`${
-              ploegMenuShown ? 'flex' : 'hidden'
-            } flex-col items-end my-2 elevation-2 bg-opacity-75 py-2`}
+              ploegMenuShown ? 'flex' : 'hidden lg:flex'
+            } flex-col lg:flex-row lg:flex-wrap items-end lg:justify-end xl:justify-around my-2 py-2 lg:w-full xl:w-3/5 elevation-2 lg:elevation-0 bg-opacity-75 `}
           >
             {dubbelTeams.map((ploeg) => (
               <Link
@@ -84,7 +90,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
                 to={`/team/${ploeg.naam.toLowerCase()}`}
                 activeClassName={'font-bold bg-gray'}
                 className={
-                  'border-opacity-50 text-gray-dark w-full py-1 pl-8 pr-4 bg-opacity-50'
+                  'lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
                 }
               >
                 {ploeg.naam}
@@ -94,18 +100,18 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
         </div>
       </div>
 
-      <div className={'flex flex-col'}>
-        <div className={'col-span-1 flex flex-col'}>
-          <SubTitle>Info</SubTitle>
+      <div className={'flex flex-col lg:grid lg:grid-cols-3 xl:px-32'}>
+        <div className={'flex flex-col lg:grid-col-1'}>
+          <Title>Info</Title>
           <div className={'flex flex-col items-center'}>
-            <Label>Coach</Label>
+            <SubTitle>Coach</SubTitle>
 
             {contentfulPloeg.coach &&
               contentfulPloeg.coach.map((coach) => (
                 <span key={coach}>{coach}</span>
               ))}
             <br className={'mb-4'} />
-            <Label>Training</Label>
+            <SubTitle>Training</SubTitle>
 
             {contentfulPloeg.training &&
               contentfulPloeg.training.map((training) => (
@@ -113,7 +119,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
               ))}
             <br className={'mb-4'} />
 
-            <Label>Reeks</Label>
+            <SubTitle>Reeks</SubTitle>
             {data.vv &&
               data.vv.teamSeriesAndRankings &&
               data.vv.teamSeriesAndRankings.series.map((series) => (
@@ -129,8 +135,8 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
           </div>
         </div>
         {data.vv && data.vv.teamCalendar && (
-          <div>
-            <SubTitle>Kalender</SubTitle>
+          <div className={'lg:col-span-2'}>
+            <Title>Kalender</Title>
             <table>
               <tbody>
                 {data.vv.teamCalendar.map((game) => {
