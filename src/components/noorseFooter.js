@@ -92,10 +92,16 @@ const NoorseFooter = () => {
           <span>03/543.xx.xx</span>
           <span>info@noorse.be</span>
           <div className={'flex flex-row items-center mt-6 space-x-3'}>
-            <ExternalLink url="https://www.facebook.com/noorsesv/">
+            <ExternalLink
+              url="https://www.facebook.com/noorsesv/"
+              styled={false}
+            >
               <FontAwesomeIcon size="2x" icon={faFacebook} />
             </ExternalLink>
-            <ExternalLink url="https://github.com/gvdp/noorse-site">
+            <ExternalLink
+              url="https://github.com/gvdp/noorse-site"
+              styled={false}
+            >
               <FontAwesomeIcon size="2x" icon={faGithub} />
             </ExternalLink>
           </div>

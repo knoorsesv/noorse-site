@@ -12,7 +12,7 @@ export const List = ({ children }) => {
   return <ul className={'list-disc list-inside mb-6'}>{children}</ul>
 }
 
-export const ExternalLink = ({ children, url, styled }) => {
+export const ExternalLink = ({ children, url, styled = true }) => {
   return (
     <a
       className={`text-gray-dark ${styled && 'border-b'} align-middle`}
