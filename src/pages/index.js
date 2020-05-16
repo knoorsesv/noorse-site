@@ -49,7 +49,7 @@ export default () => {
         <div className={'flex flex-col'}>
           <Card>
             <CardHeader>
-              <h1 className={'text-center w-full'}>Evenementen</h1>
+              <span className={'text-center w-full'}>Evenementen</span>
             </CardHeader>
             <div className={'py-2 px-3'}>
               <EventList />
