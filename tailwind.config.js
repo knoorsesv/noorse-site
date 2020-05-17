@@ -56,6 +56,7 @@ module.exports = {
     backgroundColor: ['hover', 'focus', 'group-hover', 'responsive'],
     visibility: ['hover', 'focus', 'group-hover', 'responsive'],
     position: ['hover', 'focus', 'group-hover', 'responsive'],
+    width: ['hover', 'focus', 'group-hover', 'responsive'],
     display: ['hover', 'focus', 'group-hover', 'responsive'],
   },
   plugins: [

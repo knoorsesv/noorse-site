@@ -80,7 +80,7 @@
     {
       "label": "Open Menu on hamburger click",
       "url": "http://host.docker.internal:8000/",
-      "delay": 500,
+      "postInteractionWait": 1000,
       "clickSelector": "#menu-hamburger",
       "selectors": ["viewport"],
       "viewports": [
@@ -99,6 +99,7 @@
     {
       "label": "Change header on scroll",
       "url": "http://host.docker.internal:8000/",
+      "postInteractionWait": 1000,
       "selectors": ["viewport"],
       "onReadyScript": "puppet/scrollDown.js"
     },
