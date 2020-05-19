@@ -187,7 +187,7 @@ const SideBarItem = ({ item }) => {
       {item.subItems && (
         <div className={'flex flex-col mr-3 mt-2 space-y-1'}>
           {item.subItems.map((subItem) => (
-            <LinkInSideBar item={subItem} />
+            <LinkInSideBar key={subItem.name} item={subItem} />
           ))}
         </div>
       )}
