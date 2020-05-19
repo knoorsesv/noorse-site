@@ -168,8 +168,7 @@ const LinkInSideBar = ({ item }) => {
       activeClassName={'border-r-2 pr-2'}
       to={item.link}
     >
-      {' '}
-      {item.name}{' '}
+      {item.name}
     </Link>
   )
 }
@@ -219,34 +218,20 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
 }
 
 const TopMenu = ({ fixedToTop }) => {
-  const [menuShown, setMenuShown] = useState(false)
-  const toggleMenuShown = () => {
-    setMenuShown(!menuShown)
-  }
-
   return (
     <div
       id="menu"
       className={`${transition}
      h-screen lg:h-navbar
-     ${menuShown ? 'w-1/2' : 'w-0'}
+     
      md:w-4/5 md:w-4/5
      fixed right-0 top-0
      p-4
      ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
-     ${menuShown ? 'bg-green' : ''}
    `}
     >
       <div
-        className={`md:hidden flex flex-row justify-end mb-3 mt-2 ${
-          (menuShown || fixedToTop) && 'text-white'
-        }`}
-      >
-        <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
-      </div>
-      <div
         className={`
-            ${menuShown ? 'block' : 'hidden'}
             text-end
             md:flex md:items-center md:justify-end
             md:flex-row md:items-center
@@ -285,7 +270,7 @@ const SideBarMenu = ({ fixedToTop }) => {
     >
       <div
         className={`md:hidden flex flex-row justify-end mb-3 mt-2 ${
-          menuShown && 'text-white'
+          (menuShown || fixedToTop) && 'text-white'
         }`}
       >
         <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
