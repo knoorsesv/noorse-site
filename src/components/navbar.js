@@ -191,13 +191,14 @@ const Menu = ({ fixedToTop }) => {
      h-screen lg:h-navbar
      ${menuShown ? 'w-1/2' : 'w-0'}
      md:w-4/5 md:w-4/5
-     fixed right-0 lg:top
+     fixed right-0 top-0
      p-4
+     ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
      ${menuShown ? 'bg-green' : ''}
    `}
     >
       <div
-        className={`md:hidden flex flex-row justify-end mb-3 ${
+        className={`md:hidden flex flex-row justify-end mb-3 mt-2 ${
           (menuShown || fixedToTop) && 'text-white'
         }`}
       >
