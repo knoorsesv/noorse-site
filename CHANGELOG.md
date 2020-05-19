@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.23](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.22...v0.1.23) (2020-05-19)
+
+### Features
+
+- style mobile navbar ([6db3099](https://github.com/gatsbyjs/gatsby-starter-default/commit/6db3099b5ae3ca18abedfcc2e17b774a070096e8))
+
+### Bug Fixes
+
+- correct height and width values used in navigation ([38650f9](https://github.com/gatsbyjs/gatsby-starter-default/commit/38650f9c30f603c3183386303e871c7b7eb29e54))
+- improve logo dimensions ([737a654](https://github.com/gatsbyjs/gatsby-starter-default/commit/737a65473f602702978aad718fa4890fada03e1c))
+- margin adjustments on navigation component ([8792c2d](https://github.com/gatsbyjs/gatsby-starter-default/commit/8792c2d785bd8ca8a7f66f3705be87179041f76d))
+
 ### [0.1.22](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.21...v0.1.22) (2020-05-16)
 
 ### Features
