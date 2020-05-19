@@ -73,9 +73,15 @@ export const Navbar = (props) => {
           ${fixedToTop ? 'lg:mt-3' : 'lg:mt-3'}
          `}
         >
-          <Logo fixedToTop={fixedToTop} />
+          <Logo />
         </div>
-        <Menu fixedToTop={fixedToTop} />
+
+        <div className={'hidden lg:block'}>
+          <TopMenu fixedToTop={fixedToTop} />
+        </div>
+        <div className={'lg:hidden block'}>
+          <SideBarMenu fixedToTop={fixedToTop} />
+        </div>
       </nav>
       {props.coverPhoto && <CoverPhoto />}
     </section>
@@ -124,7 +130,7 @@ const DropDown = ({ fixedToTop, item }) => {
   )
 }
 
-const MenuLink = ({ item, fixedToTop }) => {
+const TopLink = ({ item, fixedToTop }) => {
   return (
     <span
       className={`relative
@@ -155,6 +161,40 @@ const MenuLink = ({ item, fixedToTop }) => {
   )
 }
 
+const LinkInSideBar = ({ item }) => {
+  return (
+    <Link
+      className={`text-white`}
+      activeClassName={'border-r-2 pr-2'}
+      to={item.link}
+    >
+      {' '}
+      {item.name}{' '}
+    </Link>
+  )
+}
+
+const SideBarItem = ({ item }) => {
+  return (
+    <span
+      className={`relative text-right my-1 ${item.subItems ? 'group' : ''}`}
+    >
+      {item.link ? (
+        <LinkInSideBar item={item} />
+      ) : (
+        <span className={`text-white`}> {item.name} </span>
+      )}
+      {item.subItems && (
+        <div className={'flex flex-col mr-3 mt-2 space-y-1'}>
+          {item.subItems.map((subItem) => (
+            <LinkInSideBar item={subItem} />
+          ))}
+        </div>
+      )}
+    </span>
+  )
+}
+
 const Logo = () => {
   return (
     <Link to={'/'} className={'max-h-full max-w-full text-center'}>
@@ -178,7 +218,7 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
   )
 }
 
-const Menu = ({ fixedToTop }) => {
+const TopMenu = ({ fixedToTop }) => {
   const [menuShown, setMenuShown] = useState(false)
   const toggleMenuShown = () => {
     setMenuShown(!menuShown)
@@ -220,8 +260,43 @@ const Menu = ({ fixedToTop }) => {
             key={item.name}
             className={`text-right my-1 ${fixedToTop ? 'lg:mx-3' : 'lg:mx-1'}`}
           >
-            <MenuLink item={item} fixedToTop={fixedToTop} />
+            <TopLink item={item} fixedToTop={fixedToTop} />
           </span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const SideBarMenu = ({ fixedToTop }) => {
+  const [menuShown, setMenuShown] = useState(false)
+  const toggleMenuShown = () => {
+    setMenuShown(!menuShown)
+  }
+
+  return (
+    <div
+      id="sidebar-menu"
+      className={`${transition}
+     h-screen fixed right-0 top-0 p-4 sm:pr-8 
+     ${menuShown ? 'w-1/2 sm:w-1/3' : 'w-0'}
+     ${menuShown ? 'bg-green' : ''}
+   `}
+    >
+      <div
+        className={`md:hidden flex flex-row justify-end mb-3 mt-2 ${
+          menuShown && 'text-white'
+        }`}
+      >
+        <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
+      </div>
+      <div
+        className={`
+            ${menuShown ? 'block' : 'hidden'}
+            flex flex-col justify-between mt-6 sm:mt-8`}
+      >
+        {siteMap.items.map((item) => (
+          <SideBarItem key={item.name} item={item} fixedToTop={fixedToTop} />
         ))}
       </div>
     </div>
