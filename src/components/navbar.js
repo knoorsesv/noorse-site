@@ -61,11 +61,12 @@ export const Navbar = (props) => {
       `}
       >
         <div
+          id="logo-container"
           className={`${transition}
           ${
             fixedToTop
               ? 'w-1/5 relative'
-              : 'w-full md:w-1/2 lg:w-1/3 md:top-16v flex justify-center absolute px-24 sm:px-32 top-32p sm:top-16p'
+              : 'w-full md:w-1/2 xl:w-1/3 md:top-16v flex justify-center absolute px-24 sm:px-48 md:px-12 lg:px-32 top-32p sm:top-12v'
           }
          `}
         >
@@ -116,36 +117,25 @@ const DropDown = ({ fixedToTop, item }) => {
 
 const TopMenuItem = ({ item, fixedToTop }) => {
   return (
-    <span
-      className={`relative
-      ${fixedToTop ? '' : 'p-3'} 
+    <div
+      className={`relative ${fixedToTop ? '' : 'rounded p-3 bg-gray-lighter '}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
-          className={`${
-            fixedToTop
-              ? 'text-white'
-              : 'rounded bg-gray-lighter text-gray-dark p-3'
-          }`}
+          className={`${fixedToTop ? 'text-white' : 'text-gray-dark'}`}
           activeClassName={'border-b-2'}
           to={item.link}
         >
           {item.name}
         </Link>
       ) : (
-        <span
-          className={`${
-            fixedToTop
-              ? 'text-white'
-              : 'rounded bg-gray-lighter text-gray-dark p-3'
-          }`}
-        >
+        <span className={`${fixedToTop ? 'text-white' : 'text-gray-dark'}`}>
           {item.name}
         </span>
       )}
       {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
-    </span>
+    </div>
   )
 }
 
@@ -157,7 +147,7 @@ const TopMenu = ({ fixedToTop }) => {
       ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
    `}
     >
-      <div className={`flex flex-row justify-end lg:w-1/2 h-full items-center`}>
+      <div className={`flex flex-row justify-end h-full items-center`}>
         {siteMap.items.map((item) => (
           <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
             <TopMenuItem item={item} fixedToTop={fixedToTop} />
