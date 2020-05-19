@@ -82,6 +82,7 @@
       "url": "http://host.docker.internal:8000/",
       "postInteractionWait": 1000,
       "clickSelector": "#menu-hamburger",
+      "misMatchThreshold": 2,
       "selectors": ["viewport"],
       "viewports": [
         {
