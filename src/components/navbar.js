@@ -104,23 +104,15 @@ const DropDown = ({ fixedToTop, item }) => {
   return (
     <div
       className={`
-      hidden 
-      md:group-hover:absolute md:group-focus:absolute 
-      group-hover:flex group-focus:block 
-      w-0
-      group-hover:w-4/5 group-focus:w-4/5 lg:group-hover:w-auto lg:group-focus:w-auto
-      ${transition}
-      lg:pt-4 
-      mr-2
-      ${fixedToTop ? 'lg:bg-green' : 'lg:bg-gray-lighter'}
-      lg:p-6
-      flex-col items-end lg:items-start`}
+      hidden group-hover:absolute group-hover:flex
+      flex-col items-start
+      w-auto p-6 mr-2
+      ${fixedToTop ? 'bg-green' : 'bg-gray-lighter'} bg-opacity-75 `}
     >
       {item.subItems.map((subItem) => (
         <Link
-          className={`text-white ${fixedToTop ? '' : 'lg:text-gray-dark'} my-1`}
+          className={`${fixedToTop ? 'text-white' : 'text-gray-dark'} my-1`}
           to={subItem.link}
-          activeClassName={'border-r-2 pr-1'}
           key={subItem.name}
         >
           {subItem.name}
@@ -130,27 +122,31 @@ const DropDown = ({ fixedToTop, item }) => {
   )
 }
 
-const TopLink = ({ item, fixedToTop }) => {
+const TopMenuItem = ({ item, fixedToTop }) => {
   return (
     <span
       className={`relative
-      ${fixedToTop ? '' : 'md:p-1 xl:p-3'} 
+      ${fixedToTop ? '' : 'p-3'} 
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
-          className={`text-white ${
-            fixedToTop ? '' : 'md:bg-gray-lighter md:text-gray-dark md:p-3'
+          className={`${
+            fixedToTop
+              ? 'text-white'
+              : 'rounded bg-gray-lighter text-gray-dark p-3'
           }`}
-          activeClassName={'border-r-2 pr-2 md:border-b-2 md:border-r-0'}
+          activeClassName={'border-b-2'}
           to={item.link}
         >
           {item.name}
         </Link>
       ) : (
         <span
-          className={`text-white ${
-            fixedToTop ? '' : 'md:bg-gray-lighter md:text-gray-dark md:p-3'
+          className={`${
+            fixedToTop
+              ? 'text-white'
+              : 'rounded bg-gray-lighter text-gray-dark p-3'
           }`}
         >
           {item.name}
@@ -161,36 +157,22 @@ const TopLink = ({ item, fixedToTop }) => {
   )
 }
 
-const LinkInSideBar = ({ item }) => {
+const TopMenu = ({ fixedToTop }) => {
   return (
-    <Link
-      className={`text-white`}
-      activeClassName={'border-r-2 pr-2'}
-      to={item.link}
+    <div
+      id="menu"
+      className={`h-navbar fixed right-0 top-0 p-4
+      ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
+   `}
     >
-      {item.name}
-    </Link>
-  )
-}
-
-const SideBarItem = ({ item }) => {
-  return (
-    <span
-      className={`relative text-right my-1 ${item.subItems ? 'group' : ''}`}
-    >
-      {item.link ? (
-        <LinkInSideBar item={item} />
-      ) : (
-        <span className={`text-white`}> {item.name} </span>
-      )}
-      {item.subItems && (
-        <div className={'flex flex-col mr-3 mt-2 space-y-1'}>
-          {item.subItems.map((subItem) => (
-            <LinkInSideBar key={subItem.name} item={subItem} />
-          ))}
-        </div>
-      )}
-    </span>
+      <div className={`flex flex-row justify-end items-center`}>
+        {siteMap.items.map((item) => (
+          <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
+            <TopMenuItem item={item} fixedToTop={fixedToTop} />
+          </span>
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -217,39 +199,36 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
   )
 }
 
-const TopMenu = ({ fixedToTop }) => {
+const SideBarItem = ({ item }) => {
   return (
-    <div
-      id="menu"
-      className={`${transition}
-     h-screen lg:h-navbar
-     
-     md:w-4/5 md:w-4/5
-     fixed right-0 top-0
-     p-4
-     ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
-   `}
+    <span
+      className={`relative text-right my-1 ${item.subItems ? 'group' : ''}`}
     >
-      <div
-        className={`
-            text-end
-            md:flex md:items-center md:justify-end
-            md:flex-row md:items-center
-            flex flex-col justify-between
-            right-0 top-mobile-navbar md:top-0
-            md:bg-transparent`}
-      >
-        '
-        {siteMap.items.map((item) => (
-          <span
-            key={item.name}
-            className={`text-right my-1 ${fixedToTop ? 'lg:mx-3' : 'lg:mx-1'}`}
-          >
-            <TopLink item={item} fixedToTop={fixedToTop} />
-          </span>
-        ))}
-      </div>
-    </div>
+      {item.link ? (
+        <LinkInSideBar item={item} />
+      ) : (
+        <span className={`text-white`}> {item.name} </span>
+      )}
+      {item.subItems && (
+        <div className={'flex flex-col mr-3 mt-2 space-y-1'}>
+          {item.subItems.map((subItem) => (
+            <LinkInSideBar key={subItem.name} item={subItem} />
+          ))}
+        </div>
+      )}
+    </span>
+  )
+}
+
+const LinkInSideBar = ({ item }) => {
+  return (
+    <Link
+      className={`text-white`}
+      activeClassName={'border-r-2 pr-2'}
+      to={item.link}
+    >
+      {item.name}
+    </Link>
   )
 }
 
