@@ -51,26 +51,22 @@ export const Navbar = (props) => {
     <section
       ref={ref}
       id="header"
-      className={`w-full ${
-        props.coverPhoto
-          ? 'h-navbar-cover-mobile md:h-navbar-cover'
-          : 'h-navbar'
-      }`}
+      className={`w-full ${props.coverPhoto ? 'h-32v sm:h-64v' : ''}`}
     >
       <nav
         className={`
-      z-30 fixed p-3 w-full h-navbar 
-      grid md:flex ${transition}
+      z-30 fixed p-3 w-full flex
+      h-38p sm:h-12v
       ${fixedToTop ? 'bg-green bg-opacity-75' : 'bg-transparent'} 
-      ${fixedToTop ? '' : 'lg:h-navbar-over-cover'}
-      ${fixedToTop ? 'grid-cols-2' : 'grid-cols-3'}`}
+      `}
       >
         <div
-          className={`flex relative ${transition}
-          ${fixedToTop ? 'justify-start' : 'justify-center'}
-          ${fixedToTop ? '' : 'col-start-2'}
-          ${fixedToTop ? 'top-0 h-navbar-logo w-16' : 'top-logo h-logo'}
-          ${fixedToTop ? 'lg:mt-3' : 'lg:mt-3'}
+          className={`${transition}
+          ${
+            fixedToTop
+              ? 'w-1/5 relative'
+              : 'w-full md:w-1/2 lg:w-1/3 md:top-16v flex justify-center absolute px-24 sm:px-32 top-32p sm:top-16p'
+          }
          `}
         >
           <Logo />
@@ -90,11 +86,7 @@ export const Navbar = (props) => {
 
 const CoverPhoto = () => {
   return (
-    <div
-      className={
-        'h-navbar-cover-mobile md:h-navbar-cover w-screen overflow-hidden object-center relative'
-      }
-    >
+    <div className={'w-screen overflow-hidden object-center relative h-64v'}>
       <img className={'object-cover'} src={noorseCover} alt={'cover'} />
     </div>
   )
@@ -161,11 +153,11 @@ const TopMenu = ({ fixedToTop }) => {
   return (
     <div
       id="menu"
-      className={`h-navbar fixed right-0 top-0 p-4
+      className={`h-12v fixed right-0 top-0 p-4 lg:w-screen lg:flex lg:justify-end
       ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
    `}
     >
-      <div className={`flex flex-row justify-end items-center`}>
+      <div className={`flex flex-row justify-end lg:w-1/2 h-full items-center`}>
         {siteMap.items.map((item) => (
           <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
             <TopMenuItem item={item} fixedToTop={fixedToTop} />
@@ -248,7 +240,7 @@ const SideBarMenu = ({ fixedToTop }) => {
    `}
     >
       <div
-        className={`md:hidden flex flex-row justify-end mb-3 mt-2 ${
+        className={`md:hidden flex flex-row justify-end items-center sm:mt-4 ${
           (menuShown || fixedToTop) && 'text-white'
         }`}
       >
