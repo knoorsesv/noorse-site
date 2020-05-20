@@ -27,6 +27,7 @@ const siteMap = {
   ],
 }
 const transition = `transition-all duration-200 ease-in`
+const barHeight = 'h-10v sm:h-12v'
 
 export const Navbar = (props) => {
   const [fixedToTop, setFixedToTop] = useState(!props.coverPhoto)
@@ -47,17 +48,14 @@ export const Navbar = (props) => {
     }
   }, [props.coverPhoto])
 
+  const sectionHeight = props.coverPhoto ? 'h-32v sm:h-64v' : barHeight
   return (
-    <section
-      ref={ref}
-      id="header"
-      className={`w-full ${props.coverPhoto ? 'h-32v sm:h-64v' : ''}`}
-    >
+    <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
       <nav
         className={`
         ${transition}
       z-30 fixed p-3 w-full flex
-      h-10v sm:h-12v
+      ${barHeight}
       ${fixedToTop ? 'bg-green bg-opacity-75' : 'bg-transparent'} 
       `}
       >
@@ -118,29 +116,24 @@ const DropDown = ({ fixedToTop, item }) => {
 }
 
 const TopMenuItem = ({ item, fixedToTop }) => {
+  const itemTextStyle = `xl:text-xl ${
+    fixedToTop ? 'text-white' : 'text-gray-dark'
+  }`
   return (
     <div
-      className={`relative ${fixedToTop ? '' : 'rounded p-3 bg-gray-lighter  '}
+      className={`relative ${fixedToTop ? '' : 'rounded p-2 bg-gray-lighter  '}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
-          className={`xl:text-2xl ${
-            fixedToTop ? 'text-white' : 'text-gray-dark'
-          }`}
+          className={itemTextStyle}
           activeClassName={'border-b-2'}
           to={item.link}
         >
           {item.name}
         </Link>
       ) : (
-        <span
-          className={`xl:text-2xl ${
-            fixedToTop ? 'text-white' : 'text-gray-dark'
-          }`}
-        >
-          {item.name}
-        </span>
+        <span className={itemTextStyle}>{item.name}</span>
       )}
       {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
     </div>
@@ -151,7 +144,7 @@ const TopMenu = ({ fixedToTop }) => {
   return (
     <div
       id="menu"
-      className={`h-12v fixed right-0 top-0 p-4 lg:w-screen lg:flex lg:justify-end
+      className={`${barHeight} fixed right-0 top-0 p-4 lg:w-screen lg:flex lg:justify-end
       ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
    `}
     >
