@@ -55,18 +55,20 @@ export const Navbar = (props) => {
     >
       <nav
         className={`
+        ${transition}
       z-30 fixed p-3 w-full flex
-      h-38p sm:h-12v
+      h-10v sm:h-12v
       ${fixedToTop ? 'bg-green bg-opacity-75' : 'bg-transparent'} 
       `}
       >
         <div
           id="logo-container"
           className={`${transition}
+          relative h-full flex justify-center 
           ${
             fixedToTop
-              ? 'w-1/5 relative'
-              : 'w-full md:w-1/2 xl:w-1/3 md:top-16v flex justify-center absolute px-24 sm:px-48 md:px-12 lg:px-32 top-32p sm:top-12v'
+              ? 'w-1/5 md:w-1/10 ml-4 xl:ml-12'
+              : 'w-full md:w-1/2 xl:w-1/3 top-32p sm:top-12v md:top-16v  px-24 sm:px-48 md:px-12 lg:px-32 '
           }
          `}
         >
@@ -118,19 +120,25 @@ const DropDown = ({ fixedToTop, item }) => {
 const TopMenuItem = ({ item, fixedToTop }) => {
   return (
     <div
-      className={`relative ${fixedToTop ? '' : 'rounded p-3 bg-gray-lighter '}
+      className={`relative ${fixedToTop ? '' : 'rounded p-3 bg-gray-lighter  '}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
-          className={`${fixedToTop ? 'text-white' : 'text-gray-dark'}`}
+          className={`xl:text-2xl ${
+            fixedToTop ? 'text-white' : 'text-gray-dark'
+          }`}
           activeClassName={'border-b-2'}
           to={item.link}
         >
           {item.name}
         </Link>
       ) : (
-        <span className={`${fixedToTop ? 'text-white' : 'text-gray-dark'}`}>
+        <span
+          className={`xl:text-2xl ${
+            fixedToTop ? 'text-white' : 'text-gray-dark'
+          }`}
+        >
           {item.name}
         </span>
       )}
@@ -147,7 +155,9 @@ const TopMenu = ({ fixedToTop }) => {
       ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
    `}
     >
-      <div className={`flex flex-row justify-end h-full items-center`}>
+      <div
+        className={`flex flex-row justify-end xl:justify-between  xl:w-1/2 xl:mr-10 h-full items-center`}
+      >
         {siteMap.items.map((item) => (
           <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
             <TopMenuItem item={item} fixedToTop={fixedToTop} />
@@ -160,11 +170,11 @@ const TopMenu = ({ fixedToTop }) => {
 
 const Logo = () => {
   return (
-    <Link to={'/'} className={'max-h-full max-w-full text-center'}>
+    <Link to={'/'} className={'max-w-full text-center'}>
       <img
         src={logo}
         alt={'Noorse Logo'}
-        className={`relative max-h-full max-w-full`}
+        className={`${transition} relative max-w-full`}
       />
     </Link>
   )
@@ -230,7 +240,7 @@ const SideBarMenu = ({ fixedToTop }) => {
    `}
     >
       <div
-        className={`md:hidden flex flex-row justify-end items-center sm:mt-4 ${
+        className={`md:hidden flex flex-row justify-end items-center mt-2 sm:mt-4 ${
           (menuShown || fixedToTop) && 'text-white'
         }`}
       >

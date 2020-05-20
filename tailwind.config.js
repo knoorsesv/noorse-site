@@ -39,6 +39,7 @@ module.exports = {
         '2v': '2vh',
         '4v': '4vh',
         '8v': '8vh',
+        '10v': '10vh',
         '12v': '12vh',
         '16v': '16vh',
         '32v': '32vh',
@@ -48,6 +49,7 @@ module.exports = {
         'video-tablet': '180px',
       },
       width: {
+        '1/10': '10%',
         'video-desktop': '500px',
         'video-tablet': '280px',
       },
