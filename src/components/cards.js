@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const Card = ({ children }) => {
-  return <div className={'card mx-2 my-2 max-w-full'}>{children}</div>
+export const Card = (props) => {
+  return (
+    <div className={'card mx-2 my-2 max-w-full'} {...props}>
+      {props.children}
+    </div>
+  )
 }
 
 export const CardHeader = ({ children }) => {
