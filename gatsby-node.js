@@ -8,8 +8,11 @@ exports.createPages = async ({ graphql, actions }) => {
           body {
             json
           }
+          category {
+            naam
+          }
           title
-          updatedAt(formatString: "DD MMMM YYYY")
+          updatedAt(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
         }
       }
     }

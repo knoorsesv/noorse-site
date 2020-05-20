@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Link } from 'gatsby'
 import { Container } from '../components/centeredContainer'
 
 const nodeToHtml = (nodeWithType, index) => {
@@ -39,15 +38,15 @@ export default ({ pageContext: { newsNode } }) => (
       <nav className={'breadcrumb'}>
         <ul>
           <li>
-            <Link to={'/nieuws'}>News</Link>
+            <span className={'font-bold mr-2'}>Nieuws</span>
           </li>
           <li>
-            <Link to={'/nieuws'}>Senioren (shoudl be dynamis)</Link>
+            <span className={'font-bold mx-2'}>{newsNode.category.naam}</span>
           </li>
         </ul>
       </nav>
       <h1 className={'uppercase title'}>{newsNode.title}</h1>
-      <h3 className={'subtitle'}>{newsNode.updatedAt}</h3>
+      <h3 className={'subtitle capitalize'}>{newsNode.updatedAt}</h3>
       {newsNode.body.json.content.map(nodeToHtml)}
     </Container>
   </Layout>
