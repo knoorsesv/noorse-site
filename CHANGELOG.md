@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.27](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.26...v0.1.27) (2020-05-21)
+
+### Bug Fixes
+
+- give content a white background so it overlays the cover image ([e819c06](https://github.com/gatsbyjs/gatsby-starter-default/commit/e819c06ee28db34cdbade4c3c4a0e06a02c0931d))
+- give content a white background so it overlays the cover image ([4ff6406](https://github.com/gatsbyjs/gatsby-starter-default/commit/4ff6406979563ad1de379fe942cc1447d9a10e5e))
+
 ### [0.1.26](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.25...v0.1.26) (2020-05-21)
 
 ### Features

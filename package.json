@@ -2,7 +2,7 @@
   "name": "gatsby-site-noorse",
   "private": true,
   "description": "Noorse website",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "author": "gvdp",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -62,6 +62,7 @@
     "build-serve": "yarn build && yarn serve",
     "develop": "gatsby develop",
     "release": "standard-version",
+    "bump-minor": "standard-version --minor",
     "prerelease": "yarn test:built",
     "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
     "test": "backstop test --config backstop_data/backstop.json ",
