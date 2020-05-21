@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.29](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.28...v0.1.29) (2020-05-21)
+
+
+### Features
+
+* fetch new card image from contentful ([bc55985](https://github.com/gatsbyjs/gatsby-starter-default/commit/bc55985e2969be714ad123c0aa1edd572ab44cfe))
+
 ### [0.1.28](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.27...v0.1.28) (2020-05-21)
 
 ### [0.1.27](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.26...v0.1.27) (2020-05-21)
