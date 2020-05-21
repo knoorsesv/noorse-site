@@ -40,9 +40,11 @@ export default ({ pageContext: { newsNode } }) => (
           <li>
             <span className={'font-bold mr-2'}>Nieuws</span>
           </li>
-          <li>
-            <span className={'font-bold mx-2'}>{newsNode.category.naam}</span>
-          </li>
+          {newsNode.category && (
+            <li>
+              <span className={'font-bold mx-2'}>{newsNode.category.naam}</span>
+            </li>
+          )}
         </ul>
       </nav>
       <h1 className={'uppercase title'}>{newsNode.title}</h1>
