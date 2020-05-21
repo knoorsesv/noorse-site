@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { ExternalLink } from './text'
 
 const SponsorWithLogo = (sponsorNode) => {
