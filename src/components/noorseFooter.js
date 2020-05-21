@@ -98,12 +98,12 @@ const NoorseFooter = () => {
             >
               <FontAwesomeIcon size="2x" icon={faFacebook} />
             </ExternalLink>
-            <ExternalLink
-              url="https://github.com/gvdp/noorse-site"
-              styled={false}
-            >
-              <FontAwesomeIcon size="2x" icon={faGithub} />
-            </ExternalLink>
+            {/*<ExternalLink*/}
+            {/*  url="https://github.com/gvdp/noorse-site"*/}
+            {/*  styled={false}*/}
+            {/*>*/}
+            {/*  <FontAwesomeIcon size="2x" icon={faGithub} />*/}
+            {/*</ExternalLink>*/}
           </div>
         </div>
       </div>
