@@ -17,6 +17,11 @@ export default () => {
         nodes {
           blurb
           title
+          image {
+            localFile {
+              publicURL
+            }
+          }
         }
       }
     }

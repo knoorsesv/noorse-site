@@ -48,7 +48,7 @@ export default ({ pageContext: { newsNode } }) => (
         </ul>
       </nav>
       <h1 className={'uppercase title'}>{newsNode.title}</h1>
-      <h3 className={'subtitle capitalize'}>{newsNode.updatedAt}</h3>
+      <h3 className={'subtitle capitalize'}>{newsNode.createdAt}</h3>
       {newsNode.body.json.content.map(nodeToHtml)}
     </Container>
   </Layout>

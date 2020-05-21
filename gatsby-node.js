@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
             naam
           }
           title
-          updatedAt(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
+          createdAt(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
         }
       }
     }

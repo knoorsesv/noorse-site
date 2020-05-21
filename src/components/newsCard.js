@@ -1,5 +1,4 @@
 import { navigate } from 'gatsby-link'
-import contract from '../images/contract.jpg'
 import React from 'react'
 import { Card, CardHeader } from './cards'
 
@@ -21,10 +20,13 @@ export const NewsCard = (newsNode) => {
       tabIndex="0"
       key={newsNode.title}
     >
-      {newsNode.title.includes('spelers') && (
+      {newsNode.image && (
         <div className={'card-image'}>
           <figure className={'image'}>
-            <img src={contract} alt={'News header '} />
+            <img
+              src={newsNode.image.localFile.publicURL}
+              alt={'News header '}
+            />
           </figure>
         </div>
       )}
