@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.26](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.25...v0.1.26) (2020-05-21)
+
+### Features
+
+- hide github icon from footer ([6b8c718](https://github.com/gatsbyjs/gatsby-starter-default/commit/6b8c718f77d6c8a5d0a1049afc9ff6e971b21d9e))
+- show correct category and date format on news page ([1bfdf3c](https://github.com/gatsbyjs/gatsby-starter-default/commit/1bfdf3c377eaaac400a1298e57727ddb941705b5))
+
+### Bug Fixes
+
+- extract height property values for navbar ([6e639fb](https://github.com/gatsbyjs/gatsby-starter-default/commit/6e639fbae6286fe62da718bdf113fac7b50978ec))
+- more logo size improvements ([25bd049](https://github.com/gatsbyjs/gatsby-starter-default/commit/25bd049b3fea0f02c8a80d9378b56a80dd506f49))
+- nullcheck for when news item has no category ([2c3fd29](https://github.com/gatsbyjs/gatsby-starter-default/commit/2c3fd29e5cb29cf3142d9adaef78410d9c4e29a5))
+- pass props down to card so click handler works ([11cfafa](https://github.com/gatsbyjs/gatsby-starter-default/commit/11cfafa75b46a4651cc76b3d165636fb87102575))
+- remove unused import ([528aca0](https://github.com/gatsbyjs/gatsby-starter-default/commit/528aca09f6f51b13983b491874e0f7ea55a14636))
+
 ### [0.1.25](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.24...v0.1.25) (2020-05-19)
 
 ### [0.1.24](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.23...v0.1.24) (2020-05-19)
