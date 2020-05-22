@@ -1,7 +1,16 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./public"
+      "staticDistDir": "./public",
+      "settings": {
+        "numberOfRuns": 2
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "assert": {
+      "preset": "lighthouse:no-pwa"
     }
   }
 }
