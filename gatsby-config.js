@@ -1,5 +1,10 @@
 const { buildSchema } = require('graphql')
 const fs = require('fs')
+
+require('dotenv').config()
+
+const contentfulStagingData = process.env.CI || process.env.PROD === 'false'
+
 module.exports = {
   siteMetadata: {
     title: `K. Noorse S.V.`,
@@ -36,9 +41,13 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u0xs2v9mjzql`,
-        //todo: make this a secret
-        accessToken: `cZoDsy5n81N1MjmN3Xbld2-joHP_Xbo6h8BwaUEDhCE`,
-        host: `preview.contentful.com`,
+        accessToken: contentfulStagingData
+          ? process.env.CONTENTFUL_TOKEN_PREVIEW
+          : process.env.CONTENTFUL_TOKEN,
+        host: contentfulStagingData
+          ? `preview.contentful.com`
+          : 'cdn.contentful.com',
+        environment: contentfulStagingData ? `staging` : 'master',
         downloadLocal: true,
       },
     },
