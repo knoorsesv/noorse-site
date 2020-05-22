@@ -80,6 +80,7 @@ module.exports = {
     linearGradientColors: (theme) => theme('colors'),
   },
   variants: {
+    backgroundOpacity: ['hover', 'focus', 'group-hover', 'responsive'],
     opacity: ['hover', 'focus', 'group-hover', 'responsive'],
     backgroundColor: ['hover', 'focus', 'group-hover', 'responsive'],
     visibility: ['hover', 'focus', 'group-hover', 'responsive'],
