@@ -19,6 +19,7 @@ jobs:
           path: public
 
   lighthouse-check:
+    needs: build
     runs-on: ubuntu-latest
     name: Lighthouse Check
     steps:
