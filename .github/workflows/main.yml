@@ -5,18 +5,29 @@ on:
     branches: [master]
 
 jobs:
-  build-test:
+  build:
     runs-on: ubuntu-latest
     name: Build and test
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
       - run: npm run build
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v2
+      - name: Upload built folder
+        uses: actions/upload-artifact@v1
         with:
-          configPath: './lighthouserc.json'
-          uploadArtifacts: true # save results as an action artifacts
+          name: public
+          path: public
+
+  lighthouse-check:
+    - name: Download built folder
+      uses: actions/download-artifact@v1
+      with:
+        name: public
+    - name: Audit URLs using Lighthouse
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        configPath: './lighthouserc.json'
+        uploadArtifacts: true # save results as an action artifacts
 #      - uses: ./.github/run-backstop
 #      - uses: actions/upload-artifact@v2
 #        if: failure()
