@@ -13,10 +13,15 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - run: yarn build
       - name: Upload built folder
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: public
           path: public
+      - name: Upload lighthouse config
+        uses: actions/upload-artifact@v2
+        with:
+          name: lighthouserc
+          path: lighthouserc.json
 
   lighthouse-check:
     needs: build
@@ -24,9 +29,13 @@ jobs:
     name: Lighthouse Check
     steps:
       - name: Download built folder
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: public
+      - name: Download lightouhse config
+        uses: actions/download-artifact@v2
+        with:
+          name: lighthouserc
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
