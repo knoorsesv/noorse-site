@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery } from 'gatsby'
 import logo from '../images/Logo_highres.png'
-import noorseCover from '../images/noorse_cover.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import Img from 'gatsby-image'
 
 const siteMap = {
   items: [
@@ -86,9 +86,23 @@ export const Navbar = (props) => {
 }
 
 const CoverPhoto = () => {
+  const coverPhotoQuery = useStaticQuery(graphql`
+    query {
+      file(name: { eq: "noorse_cover" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <div className={'w-screen overflow-hidden object-center relative h-64v'}>
-      <img className={'object-cover'} src={noorseCover} alt={'cover'} />
+      <Img
+        fluid={coverPhotoQuery.file.childImageSharp.fluid}
+        alt="Cover photo"
+      />
     </div>
   )
 }
