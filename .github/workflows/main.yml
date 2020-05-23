@@ -41,7 +41,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           configPath: './lighthouserc.json'
-#          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true
 #      - uses: ./.github/run-backstop
 #      - uses: actions/upload-artifact@v2
 #        if: failure()
