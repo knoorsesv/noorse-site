@@ -43,6 +43,8 @@ jobs:
         with:
           configPath: './lighthouserc.json'
           temporaryPublicStorage: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
 #      - uses: ./.github/run-backstop
 #      - uses: actions/upload-artifact@v2
 #        if: failure()
