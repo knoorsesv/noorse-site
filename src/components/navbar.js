@@ -48,6 +48,25 @@ export const Navbar = (props) => {
     }
   }, [props.coverPhoto])
 
+  const images = useStaticQuery(graphql`
+    query {
+      cover: file(name: { eq: "noorse_cover" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logo: file(name: { eq: "Logo_highres" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed_tracedSVG
+          }
+        }
+      }
+    }
+  `)
+
   const sectionHeight = props.coverPhoto ? 'h-32v sm:h-64v' : barHeight
   return (
     <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
@@ -80,29 +99,15 @@ export const Navbar = (props) => {
           <SideBarMenu fixedToTop={fixedToTop} />
         </div>
       </nav>
-      {props.coverPhoto && <CoverPhoto />}
+      {props.coverPhoto && <CoverPhoto image={images.cover} />}
     </section>
   )
 }
 
-const CoverPhoto = () => {
-  const coverPhotoQuery = useStaticQuery(graphql`
-    query {
-      file(name: { eq: "noorse_cover" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const CoverPhoto = ({ image }) => {
   return (
     <div className={'w-screen overflow-hidden object-center relative h-64v'}>
-      <Img
-        fluid={coverPhotoQuery.file.childImageSharp.fluid}
-        alt="Cover photo"
-      />
+      <Img fluid={image.childImageSharp.fluid} alt="Cover photo" />
     </div>
   )
 }
