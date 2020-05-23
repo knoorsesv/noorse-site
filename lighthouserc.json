@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./public",
+      "staticDistDir": "public",
       "settings": {
         "numberOfRuns": 2
       }
