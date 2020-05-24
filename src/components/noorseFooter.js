@@ -3,15 +3,16 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { ExternalLink } from './text'
+import Img from 'gatsby-image'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <div className={'max-w-logo p-2 flex items-center'} key={sponsorNode.naam}>
+    <div className={'max-w-logo max-w-logo w-1/2 p-2'} key={sponsorNode.naam}>
       <ExternalLink url={sponsorNode.websiteUrl} styled={false}>
-        <img
-          src={sponsorNode.logo.localFile.publicURL}
+        <Img
+          fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
           alt={'logo'}
-          className={'object-scale-down'}
+          imgStyle={{ objectFit: 'scale-down' }}
         />
       </ExternalLink>
     </div>
@@ -62,7 +63,11 @@ const NoorseFooter = () => {
           websiteUrl
           logo {
             localFile {
-              publicURL
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
@@ -76,12 +81,18 @@ const NoorseFooter = () => {
           'flex flex-col items-center pb-12 pt-48 lg:px-40 bg-gradient-b-gray-darker md:flex md:flex-row md:items-start md:justify-between md:px-6'
         }
       >
-        <div className={'flex flex-col items-center mb-12 md:w-2/3 lg:w-1/2'}>
+        <div
+          className={
+            'flex flex-col items-center mb-12 w-screen md:w-2/3 lg:w-1/2'
+          }
+        >
           <FlyingIn>
             <h1 className={'title text-center'}>Sponsors</h1>
           </FlyingIn>
           <div
-            className={'flex flex-row flex-wrap content-between justify-center'}
+            className={
+              'flex flex-row flex-wrap content-between justify-center items-center w-full'
+            }
           >
             {sponsors.allContentfulSponsor.nodes.map(SponsorWithLogo)}
           </div>
