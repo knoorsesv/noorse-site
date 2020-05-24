@@ -67,7 +67,7 @@ export const Navbar = (props) => {
       ${
         fixedToTop
           ? 'fixed bg-green bg-opacity-75 lg:flex-row-reverse lg:justify-between lg:items-center'
-          : 'bg-transparent lg:flex-col '
+          : 'bg-transparent sm:items-center md:items-start lg:flex-col'
       } 
       `}
         >
@@ -81,8 +81,12 @@ export const Navbar = (props) => {
           <div
             id="logo-container"
             className={`${transition}
-          relative h-full lg:h-80 flex justify-center 
-          ${fixedToTop ? 'justify-start w-1/6' : 'w-full lg:w-1/2 lg:p-8'}
+          relative flex justify-center 
+          ${
+            fixedToTop
+              ? 'justify-start w-1/6 h-150 top-8p sm:top-4p md:top-32p left-16p'
+              : 'w-full h-full lg:w-1/2 sm:h-70 lg:h-80 lg:p-8'
+          }
          `}
           >
             <Logo image={images.logo} />
@@ -117,6 +121,7 @@ const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
         <BackgroundImage
           fluid={image.childImageSharp.fluid}
           className={'h-full z-50'}
+          style={{ backgroundPosition: 'top' }}
         >
           {children}
         </BackgroundImage>
