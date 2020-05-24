@@ -59,8 +59,8 @@ export const Navbar = (props) => {
       }
       logo: file(name: { eq: "Logo_highres" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed_tracedSVG
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -82,6 +82,8 @@ export const Navbar = (props) => {
           id="logo-container"
           className={`${transition}
           relative h-full flex justify-center 
+          bg-black
+          
           ${
             fixedToTop
               ? 'w-1/5 md:w-1/10 ml-4 xl:ml-12'
@@ -89,7 +91,7 @@ export const Navbar = (props) => {
           }
          `}
         >
-          <Logo />
+          <Logo image={images.logo} />
         </div>
 
         <div className={'hidden lg:block'}>
@@ -180,13 +182,14 @@ const TopMenu = ({ fixedToTop }) => {
   )
 }
 
-const Logo = () => {
+const Logo = ({ image }) => {
   return (
-    <Link to={'/'} className={'max-w-full text-center'}>
-      <img
-        src={logo}
+    <Link to={'/'} className={'h-full w-full max-w-full max-h-full'}>
+      <Img
+        fluid={image.childImageSharp.fluid}
         alt={'Noorse Logo'}
-        className={`${transition} relative max-w-full`}
+        imgStyle={{ 'object-fit': 'contain' }}
+        className={`${transition} w-auto h-full max-h-full max-w-full`}
       />
     </Link>
   )
