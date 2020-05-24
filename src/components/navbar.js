@@ -64,24 +64,28 @@ export const Navbar = (props) => {
         ${transition}
       z-50 p-3 w-full flex
       ${fixedToTop ? menuBarHeight : 'h-full'} 
-      ${fixedToTop ? 'fixed bg-green bg-opacity-75' : 'bg-transparent'} 
+      ${
+        fixedToTop
+          ? 'fixed bg-green bg-opacity-75 lg:flex-row-reverse lg:justify-between lg:items-center'
+          : 'bg-transparent lg:flex-col '
+      } 
       `}
         >
           <div
+            className={`hidden md:block ${menuBarHeight} ${
+              fixedToTop ? '' : 'lg:h-20 lg:self-end'
+            } xl:w-1/2 `}
+          >
+            <TopMenu fixedToTop={fixedToTop} />
+          </div>
+          <div
             id="logo-container"
             className={`${transition}
-          relative h-full flex justify-center 
-          bg-black
-          ${fixedToTop ? 'justify-start w-1/6' : 'w-full'}
+          relative h-full lg:h-80 flex justify-center 
+          ${fixedToTop ? 'justify-start w-1/6' : 'w-full lg:w-1/2 lg:p-8'}
          `}
           >
             <Logo image={images.logo} />
-          </div>
-
-          <div
-            className={`hidden md:block ${menuBarHeight} fixed right-0 top-0 `}
-          >
-            <TopMenu fixedToTop={fixedToTop} />
           </div>
         </nav>
       </NavContainer>
@@ -174,9 +178,7 @@ const TopMenu = ({ fixedToTop }) => {
   return (
     <div
       id="menu"
-      className={`h-full flex flex-row justify-end xl:justify-between items-center xl:mr-10 p-4 ${
-        fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'
-      }  `}
+      className={`h-full flex flex-row justify-between items-center p-4 lg:p-6`}
     >
       {siteMap.items.map((item) => (
         <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>

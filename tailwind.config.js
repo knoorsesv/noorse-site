@@ -45,6 +45,8 @@ module.exports = {
         '32v': '32vh',
         '64v': '64vh',
         '128v': '128vh',
+        '80': '80%',
+        '20': '20%',
         'video-desktop': '300px',
         'video-tablet': '180px',
       },
