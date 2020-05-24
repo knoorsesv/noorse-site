@@ -31,7 +31,7 @@ const FlyingIn = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (ref.current) {
+      if (ref.current && !isInView) {
         setInView(determineIfComponentIsInView())
       }
     }
@@ -39,7 +39,7 @@ const FlyingIn = ({ children }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isInView])
 
   return (
     <div
