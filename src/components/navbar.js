@@ -62,9 +62,9 @@ export const Navbar = (props) => {
         <nav
           className={`
         ${transition}
-      z-30 fixed p-3 w-full flex
-      ${menuBarHeight}
-      ${fixedToTop ? 'bg-green bg-opacity-75' : 'bg-transparent'} 
+      z-50 p-3 w-full flex
+      ${fixedToTop ? menuBarHeight : 'h-full'} 
+      ${fixedToTop ? 'fixed bg-green bg-opacity-75' : 'bg-transparent'} 
       `}
         >
           <div
@@ -72,12 +72,7 @@ export const Navbar = (props) => {
             className={`${transition}
           relative h-full flex justify-center 
           bg-black
-          
-          ${
-            fixedToTop
-              ? 'w-1/5 md:w-1/10 ml-4 xl:ml-12'
-              : 'w-full md:w-1/2 xl:w-1/3 top-32p sm:top-12v md:top-16v  px-24 sm:px-48 md:px-12 lg:px-32 '
-          }
+          ${fixedToTop ? 'justify-start w-1/6' : 'w-full'}
          `}
           >
             <Logo image={images.logo} />
@@ -117,7 +112,7 @@ const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
       {coverPhoto ? (
         <BackgroundImage
           fluid={image.childImageSharp.fluid}
-          className={'h-full'}
+          className={'h-full z-50'}
         >
           {children}
         </BackgroundImage>
