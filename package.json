@@ -33,7 +33,6 @@
     "react-helmet": "6.0.0",
     "react-masonry-css": "1.0.14",
     "react-typography": "0.16.19",
-    "start-server-and-test": "1.11.0",
     "styled-components": "5.1.0",
     "tailwindcss": "1.4.6",
     "tailwindcss-elevation": "0.3.4",
@@ -50,6 +49,7 @@
     "prettier": "2.0.4",
     "pretty-quick": "2.0.1",
     "serve": "11.3.0",
+    "start-server-and-test": "1.11.0",
     "standard-version": "7.1.0"
   },
   "keywords": [
@@ -70,7 +70,7 @@
     "test:build-docker": "docker build -t backstop-local ./backstop_data",
     "test:built": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test build-serve http://localhost:8000 test:docker",
     "test:docker": "docker run -v $(pwd)/:/backstop -w /backstop --rm backstop-local:latest backstop test --config backstop_data/backstop.json",
-    "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test build-serve http://localhost:8000 test"
+    "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test serve http://localhost:8000 test"
   },
   "repository": {
     "type": "git",
