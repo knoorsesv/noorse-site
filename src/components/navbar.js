@@ -83,7 +83,9 @@ export const Navbar = (props) => {
             <Logo image={images.logo} />
           </div>
 
-          <div className={'hidden md:block'}>
+          <div
+            className={`hidden md:block ${menuBarHeight} fixed right-0 top-0 `}
+          >
             <TopMenu fixedToTop={fixedToTop} />
           </div>
         </nav>
@@ -177,19 +179,15 @@ const TopMenu = ({ fixedToTop }) => {
   return (
     <div
       id="menu"
-      className={`${menuBarHeight} fixed right-0 top-0 p-4 lg:w-screen lg:flex lg:justify-end
-      ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
-   `}
+      className={`h-full flex flex-row justify-end xl:justify-between items-center xl:mr-10 p-4 ${
+        fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'
+      }  `}
     >
-      <div
-        className={`flex flex-row justify-end xl:justify-between  xl:w-1/2 xl:mr-10 h-full items-center`}
-      >
-        {siteMap.items.map((item) => (
-          <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
-            <TopMenuItem item={item} fixedToTop={fixedToTop} />
-          </span>
-        ))}
-      </div>
+      {siteMap.items.map((item) => (
+        <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
+          <TopMenuItem item={item} fixedToTop={fixedToTop} />
+        </span>
+      ))}
     </div>
   )
 }
