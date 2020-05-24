@@ -17,11 +17,6 @@ jobs:
         with:
           name: public
           path: public
-      - name: Upload lighthouse config
-        uses: actions/upload-artifact@v2
-        with:
-          name: lighthouserc
-          path: lighthouserc.json
 
   lighthouse-check:
     needs: build
@@ -34,10 +29,6 @@ jobs:
         with:
           name: public
           path: public
-      - name: Download lighthouse config
-        uses: actions/download-artifact@v2
-        with:
-          name: lighthouserc
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
@@ -45,10 +36,21 @@ jobs:
           temporaryPublicStorage: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
-#      - uses: ./.github/run-backstop
-#      - uses: actions/upload-artifact@v2
-#        if: failure()
-#        with:
-#          name: backstop-test
-#          path: backstop_data/
-#
+
+    backstop-test:
+      needs: build
+      runs-on: ubuntu-latest
+      name: Backstop Test
+      steps:
+        - uses: actions/checkout@v1
+        - name: Download built folder
+          uses: actions/download-artifact@v2
+          with:
+            name: public
+            path: public
+        - uses: ./.github/run-backstop
+        - uses: actions/upload-artifact@v2
+          if: failure()
+          with:
+            name: backstop-test
+            path: backstop_data/
