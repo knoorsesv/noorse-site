@@ -27,26 +27,11 @@ const siteMap = {
   ],
 }
 const transition = `transition-all duration-200 ease-in`
-const barHeight = 'h-10v sm:h-12v'
+const menuBarHeight = 'h-10v sm:h-12v'
+const coverSectionHeight = 'h-32v sm:h-64v'
 
 export const Navbar = (props) => {
   const [fixedToTop, setFixedToTop] = useState(!props.coverPhoto)
-
-  const ref = useRef(null)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        setFixedToTop(
-          !props.coverPhoto || ref.current.getBoundingClientRect().top < 0
-        )
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', () => handleScroll)
-    }
-  }, [props.coverPhoto])
 
   const images = useStaticQuery(graphql`
     query {
@@ -68,18 +53,23 @@ export const Navbar = (props) => {
   `)
 
   return (
-    <NavContainer ref={ref} coverPhoto={props.coverPhoto} image={images.cover}>
-      <nav
-        className={`
+    <React.Fragment>
+      <NavContainer
+        coverPhoto={props.coverPhoto}
+        image={images.cover}
+        setFixedToTop={setFixedToTop}
+      >
+        <nav
+          className={`
         ${transition}
       z-30 fixed p-3 w-full flex
-      ${barHeight}
+      ${menuBarHeight}
       ${fixedToTop ? 'bg-green bg-opacity-75' : 'bg-transparent'} 
       `}
-      >
-        <div
-          id="logo-container"
-          className={`${transition}
+        >
+          <div
+            id="logo-container"
+            className={`${transition}
           relative h-full flex justify-center 
           bg-black
           
@@ -89,23 +79,37 @@ export const Navbar = (props) => {
               : 'w-full md:w-1/2 xl:w-1/3 top-32p sm:top-12v md:top-16v  px-24 sm:px-48 md:px-12 lg:px-32 '
           }
          `}
-        >
-          <Logo image={images.logo} />
-        </div>
+          >
+            <Logo image={images.logo} />
+          </div>
 
-        <div className={'hidden lg:block'}>
-          <TopMenu fixedToTop={fixedToTop} />
-        </div>
-        <div className={'lg:hidden block'}>
-          <SideBarMenu fixedToTop={fixedToTop} />
-        </div>
-      </nav>
-    </NavContainer>
+          <div className={'hidden md:block'}>
+            <TopMenu fixedToTop={fixedToTop} />
+          </div>
+        </nav>
+      </NavContainer>
+      <SideBarMenu fixedToTop={fixedToTop} />
+    </React.Fragment>
   )
 }
 
-const NavContainer = ({ coverPhoto, children, image, ref }) => {
-  const sectionHeight = coverPhoto ? 'h-32v sm:h-64v' : barHeight
+const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (ref.current) {
+        setFixedToTop(
+          !coverPhoto || ref.current.getBoundingClientRect().top < 0
+        )
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll)
+    }
+  }, [coverPhoto, setFixedToTop])
+  const sectionHeight = coverPhoto ? coverSectionHeight : menuBarHeight
   return (
     <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
       {coverPhoto ? (
@@ -173,7 +177,7 @@ const TopMenu = ({ fixedToTop }) => {
   return (
     <div
       id="menu"
-      className={`${barHeight} fixed right-0 top-0 p-4 lg:w-screen lg:flex lg:justify-end
+      className={`${menuBarHeight} fixed right-0 top-0 p-4 lg:w-screen lg:flex lg:justify-end
       ${fixedToTop ? 'lg:p-6 lg:mr-4' : 'lg:mt-8 lg:mr-4'}
    `}
     >
@@ -196,7 +200,7 @@ const Logo = ({ image }) => {
       <Img
         fluid={image.childImageSharp.fluid}
         alt={'Noorse Logo'}
-        imgStyle={{ 'object-fit': 'contain' }}
+        imgStyle={{ objectFit: 'contain' }}
         className={`${transition} w-auto h-full max-h-full max-w-full`}
       />
     </Link>
@@ -257,6 +261,8 @@ const SideBarMenu = ({ fixedToTop }) => {
     <div
       id="sidebar-menu"
       className={`${transition}
+      lg:hidden block
+      z-50
      h-screen fixed right-0 top-0 p-4 sm:pr-8 
      ${menuShown ? 'w-1/2 sm:w-1/3' : 'w-0'}
      ${menuShown ? 'bg-green' : ''}
