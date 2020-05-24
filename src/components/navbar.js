@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useStaticQuery } from 'gatsby'
-import logo from '../images/Logo_highres.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
 
 const siteMap = {
   items: [
@@ -67,9 +67,8 @@ export const Navbar = (props) => {
     }
   `)
 
-  const sectionHeight = props.coverPhoto ? 'h-32v sm:h-64v' : barHeight
   return (
-    <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
+    <NavContainer ref={ref} coverPhoto={props.coverPhoto} image={images.cover}>
       <nav
         className={`
         ${transition}
@@ -101,16 +100,25 @@ export const Navbar = (props) => {
           <SideBarMenu fixedToTop={fixedToTop} />
         </div>
       </nav>
-      {props.coverPhoto && <CoverPhoto image={images.cover} />}
-    </section>
+    </NavContainer>
   )
 }
 
-const CoverPhoto = ({ image }) => {
+const NavContainer = ({ coverPhoto, children, image, ref }) => {
+  const sectionHeight = coverPhoto ? 'h-32v sm:h-64v' : barHeight
   return (
-    <div className={'w-screen overflow-hidden object-center relative h-64v'}>
-      <Img fluid={image.childImageSharp.fluid} alt="Cover photo" />
-    </div>
+    <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
+      {coverPhoto ? (
+        <BackgroundImage
+          fluid={image.childImageSharp.fluid}
+          className={'h-full'}
+        >
+          {children}
+        </BackgroundImage>
+      ) : (
+        children
+      )}
+    </section>
   )
 }
 
