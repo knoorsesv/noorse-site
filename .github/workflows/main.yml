@@ -37,20 +37,20 @@ jobs:
         env:
           LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
 
-    backstop-test:
-      needs: build
-      runs-on: ubuntu-latest
-      name: Backstop Test
-      steps:
-        - uses: actions/checkout@v1
-        - name: Download built folder
-          uses: actions/download-artifact@v2
-          with:
-            name: public
-            path: public
-        - uses: ./.github/run-backstop
-        - uses: actions/upload-artifact@v2
-          if: failure()
-          with:
-            name: backstop-test
-            path: backstop_data/
+  backstop-test:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Backstop Test
+    steps:
+      - uses: actions/checkout@v1
+      - name: Download built folder
+        uses: actions/download-artifact@v2
+        with:
+          name: public
+          path: public
+      - uses: ./.github/run-backstop
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: backstop-test
+          path: backstop_data/
