@@ -13,7 +13,7 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - run: yarn build
         env:
-          - CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
+          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
       - name: Upload built folder
         uses: actions/upload-artifact@v2
         with:
