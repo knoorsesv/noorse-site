@@ -9,6 +9,7 @@ import { ExternalLink, TextBlock } from '../components/text'
 import { EventList } from '../components/events'
 import { Card, CardHeader } from '../components/cards'
 import { Title } from '../components/titles'
+import { ResponsiveVideo } from '../components/video'
 
 export default () => {
   const newsItems = useStaticQuery(graphql`
@@ -70,14 +71,9 @@ export default () => {
                 !
               </div>
             </TextBlock>
-            <div className={'flex justify-center pb-4'}>
-              <iframe
-                id={'trooperVideo'}
-                title="Trooper instruction video"
-                className={
-                  'object-contain lg:w-video-tablet lg:h-video-tablet xl:w-video-desktop xl:h-video-desktop'
-                }
-                src="https://drive.google.com/file/d/1tyQvH4X6YhS0davnGttLbuSnJ71raj1C/preview"
+            <div className={'flex justify-center p-4'}>
+              <ResponsiveVideo
+                src={'https://www.youtube.com/embed/jGgVgioUMq0'}
               />
             </div>
           </Card>
