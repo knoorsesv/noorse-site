@@ -67,7 +67,7 @@ export const Navbar = (props) => {
       ${
         fixedToTop
           ? 'fixed bg-green bg-opacity-75 lg:flex-row-reverse lg:justify-between lg:items-center'
-          : 'bg-transparent sm:items-center md:items-start lg:flex-col'
+          : 'bg-transparent sm:items-center md:items-start md:flex-col'
       } 
       `}
         >
