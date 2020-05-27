@@ -1,4 +1,5 @@
 import React from 'react'
+import LazyLoad from 'react-lazyload'
 
 const containerStyle = {
   position: 'relative',
@@ -19,14 +20,16 @@ const iframeStyle = {
 
 export const ResponsiveVideo = ({ src }) => {
   return (
-    <div style={containerStyle}>
-      <iframe
-        src={src}
-        frameBorder="0"
-        title="How to trooper video"
-        allowFullScreen
-        style={iframeStyle}
-      ></iframe>
-    </div>
+    <LazyLoad once={true}>
+      <div style={containerStyle}>
+        <iframe
+          src={src}
+          frameBorder="0"
+          title="How to trooper video"
+          allowFullScreen
+          style={iframeStyle}
+        ></iframe>
+      </div>
+    </LazyLoad>
   )
 }

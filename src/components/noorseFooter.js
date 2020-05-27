@@ -4,18 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { ExternalLink } from './text'
 import Img from 'gatsby-image'
+import LazyLoad from 'react-lazyload'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <div className={'max-w-logo max-w-logo w-1/2 p-2'} key={sponsorNode.naam}>
-      <ExternalLink url={sponsorNode.websiteUrl} styled={false}>
-        <Img
-          fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
-          alt={'logo'}
-          imgStyle={{ objectFit: 'scale-down' }}
-        />
-      </ExternalLink>
-    </div>
+    <LazyLoad once={true}>
+      <div className={'max-w-logo max-w-logo w-1/2 p-2'} key={sponsorNode.naam}>
+        <ExternalLink url={sponsorNode.websiteUrl} styled={false}>
+          <Img
+            fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
+            alt={'logo'}
+            imgStyle={{ objectFit: 'scale-down' }}
+          />
+        </ExternalLink>
+      </div>
+    </LazyLoad>
   )
 }
 
