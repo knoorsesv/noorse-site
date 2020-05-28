@@ -46,6 +46,7 @@
       "url": "http://host.docker.internal:8000/",
       "delay": 3000,
       "selectors": ["#footer"],
+      "scrollToSelector": "#footer",
       "removeSelectors": ["#header"],
       "misMatchThreshold": 1
     },
