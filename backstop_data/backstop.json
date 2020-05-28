@@ -28,7 +28,7 @@
     {
       "label": "Homepage",
       "url": "http://host.docker.internal:8000/",
-      "delay": 1000,
+      "delay": 2000,
       "selectors": ["viewport"],
       "removeSelectors": ["#trooperVideo"],
       "misMatchThreshold": 1
@@ -36,7 +36,7 @@
     {
       "label": "Content without nav",
       "url": "http://host.docker.internal:8000/",
-      "delay": 1000,
+      "delay": 2000,
       "selectors": ["#homepage-content"],
       "removeSelectors": ["#header", "#trooperVideo"],
       "misMatchThreshold": 1
@@ -52,7 +52,7 @@
     {
       "label": "Open Dropdown Menu On Hover",
       "url": "http://host.docker.internal:8000/",
-      "delay": 500,
+      "delay": 2000,
       "selectors": ["viewport"],
       "hoverSelector": ".group",
       "viewports": [
@@ -66,7 +66,7 @@
     {
       "label": "Open Dropdown Menu On Click",
       "url": "http://host.docker.internal:8000/",
-      "delay": 500,
+      "delay": 2000,
       "clickSelector": ".group",
       "selectors": ["viewport"],
       "viewports": [
@@ -80,7 +80,7 @@
     {
       "label": "Open Menu on hamburger click",
       "url": "http://host.docker.internal:8000/",
-      "postInteractionWait": 1000,
+      "postInteractionWait": 2000,
       "clickSelector": "#menu-hamburger",
       "misMatchThreshold": 2,
       "selectors": ["viewport"],
