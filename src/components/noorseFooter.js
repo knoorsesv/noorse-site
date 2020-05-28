@@ -8,8 +8,8 @@ import LazyLoad from 'react-lazyload'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
-    <LazyLoad once={true}>
-      <div className={'max-w-logo max-w-logo w-1/2 p-2'} key={sponsorNode.naam}>
+    <LazyLoad once={true} key={sponsorNode.naam}>
+      <div className={'max-w-logo max-w-logo w-1/2 p-2'}>
         <ExternalLink url={sponsorNode.websiteUrl} styled={false}>
           <Img
             fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
