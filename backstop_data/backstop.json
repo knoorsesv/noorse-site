@@ -30,7 +30,6 @@
       "url": "http://host.docker.internal:8000/",
       "delay": 2000,
       "selectors": ["viewport"],
-      "removeSelectors": ["#trooperVideo"],
       "misMatchThreshold": 1
     },
     {
@@ -38,15 +37,6 @@
       "url": "http://host.docker.internal:8000/",
       "delay": 2000,
       "selectors": ["#homepage-content"],
-      "removeSelectors": ["#header", "#trooperVideo"],
-      "misMatchThreshold": 1
-    },
-    {
-      "label": "Footer",
-      "url": "http://host.docker.internal:8000/",
-      "delay": 3000,
-      "selectors": ["#footer"],
-      "scrollToSelector": "#footer",
       "removeSelectors": ["#header"],
       "misMatchThreshold": 1
     },
