@@ -3,14 +3,45 @@ describe('Home Page', () => {
     cy.visit('/')
   })
 
+  const screenSizes = [
+    {
+      device: 'smartphone',
+      width: 361,
+      height: 640,
+    },
+    {
+      device: 'tablet-landscape',
+      width: 1024,
+      height: 768,
+    },
+    {
+      device: 'tablet',
+      width: 640,
+      height: 860,
+    },
+    {
+      device: 'desktop',
+      width: 1920,
+      height: 1080,
+    },
+  ]
+
+  screenSizes.forEach((screenSize) => {
+    it(`Should match snapshot for ${screenSize.device}`, () => {
+      cy.viewport(screenSize.width, screenSize.height)
+      cy.root().toMatchImageSnapshot()
+    })
+  })
+
   it('Should show news items', () => {
     cy.get('.title').contains('Nieuws')
-    cy.get('#news-list').contains(
-      'Noorse gaat door met het trainersduo Davy Vercauteren en Jurgen Noels'
-    )
-    cy.get('#news-list').contains("Da't plezant was")
-
-    cy.get('#news-list .card').should('have.lengthOf', 6)
+    cy.get('#news-list').within(() => {
+      cy.contains("Da't plezant was")
+      cy.contains(
+        'Noorse gaat door met het trainersduo Davy Vercauteren en Jurgen Noels'
+      )
+      cy.get('.card').should('have.lengthOf', 6)
+    })
   })
 
   it('should show event list', () => {
