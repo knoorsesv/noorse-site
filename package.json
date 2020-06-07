@@ -11,7 +11,7 @@
     "@fortawesome/react-fontawesome": "0.1.11",
     "add": "2.0.6",
     "gatsby": "2.22.9",
-    "gatsby-background-image": "^1.1.1",
+    "@gvdp/gatsby-background-image": "1.1.1",
     "gatsby-image": "2.2.4",
     "gatsby-plugin-postcss": "2.2.4",
     "gatsby-plugin-react-helmet": "3.3.2",
