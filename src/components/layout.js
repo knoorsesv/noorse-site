@@ -3,7 +3,7 @@ import React from 'react'
 import NoorseFooter from './noorseFooter'
 import { Navbar } from './navbar'
 import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from '@gvdp/gatsby-background-image'
 
 const Layout = ({ children, coverPhoto }) => {
   const image = useStaticQuery(graphql`
