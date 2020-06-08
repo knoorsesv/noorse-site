@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Img from 'gatsby-image'
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from '@gvdp/gatsby-background-image'
 
 const siteMap = {
   items: [
