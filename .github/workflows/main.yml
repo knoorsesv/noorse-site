@@ -16,6 +16,7 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - run: yarn build
         env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           PROD: true
       - name: deploy
@@ -39,6 +40,7 @@ jobs:
       - run: yarn build
         env:
           PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           PROD: false
       - name: Upload built folder
