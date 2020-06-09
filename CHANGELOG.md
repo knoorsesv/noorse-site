@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.31](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.30...v0.1.31) (2020-06-09)
+
+
+### Features
+
+* **contentful-envs:** add netlify deploy step ([e3a6ede](https://github.com/gatsbyjs/gatsby-starter-default/commit/e3a6ede5c390b920aa29f84ddcf12c3d1d167992))
+* **contentful-envs:** add step to deploy prod build to netlify ([ed2afb6](https://github.com/gatsbyjs/gatsby-starter-default/commit/ed2afb664de6e875e30443c3b13957b998cee677))
+* **contentful-envs:** build prod and staging ([5c6e070](https://github.com/gatsbyjs/gatsby-starter-default/commit/5c6e07008d6955bf27a9e788ff9d82ed67a60997))
+* **contentful-envs:** disable pre and postrelease scripts ([bdd719d](https://github.com/gatsbyjs/gatsby-starter-default/commit/bdd719d00babc62291be9462fde2b2e03481dc70))
+
 ### [0.1.30](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.29...v0.1.30) (2020-05-25)
 
 ### [0.1.29](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.28...v0.1.29) (2020-05-21)
