@@ -63,8 +63,6 @@
     "develop": "gatsby develop",
     "release": "standard-version",
     "bump-minor": "standard-version --release-as minor",
-    "prerelease": "yarn test:built",
-    "postrelease": "git checkout release && git merge master --ff-only && git push --follow-tags origin release && git checkout master && git push",
     "test": "backstop test --config backstop_data/backstop.json ",
     "test:approve": "backstop approve --config backstop_data/backstop.json",
     "test:build-docker": "docker build -t backstop-local ./backstop_data",
