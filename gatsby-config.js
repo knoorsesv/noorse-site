@@ -3,7 +3,7 @@ const fs = require('fs')
 
 require('dotenv').config()
 
-const contentfulStagingData = process.env.CI || process.env.PROD === 'false'
+const contentfulStagingData = process.env.PROD === 'false'
 
 module.exports = {
   siteMetadata: {

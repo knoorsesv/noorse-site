@@ -8,18 +8,30 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build
+    name: Build PROD
+    steps:
+      - uses: actions/checkout@v1
+      - uses: bahmutov/npm-install@v1
+      - run: yarn build
+        env:
+          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          PROD: true
+      - name: Upload built folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: public
+          path: public
+
+  build-dev:
+    runs-on: ubuntu-latest
+    name: Build DEV
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
       - run: yarn build
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
-      - name: Upload built folder
-        uses: actions/upload-artifact@v2
-        with:
-          name: public
-          path: public
+          PROD: false
 
   #  lighthouse-check:
   #    needs: build
@@ -72,4 +84,5 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+          NETLIFY_DEPLOY_MESSAGE: 'Github deploy for ${{ github.ref }}'
           build_directory: 'public'
