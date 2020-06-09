@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.32](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.30...v0.1.32) (2020-06-09)
+
+
+### Features
+
+* **contentful-envs:** add netlify deploy step ([26c2467](https://github.com/gatsbyjs/gatsby-starter-default/commit/26c2467dc9c97415712c2965d1319aa23fec6236))
+* **contentful-envs:** add step to deploy prod build to netlify ([04a5cde](https://github.com/gatsbyjs/gatsby-starter-default/commit/04a5cdecee489f10fcd7f934dd70bf89a50f900b))
+* **contentful-envs:** build prod and staging ([ef74bcf](https://github.com/gatsbyjs/gatsby-starter-default/commit/ef74bcf6a4ed52a3f704e117266261c4be58093c))
+* **contentful-envs:** disable pre and postrelease scripts ([000fe10](https://github.com/gatsbyjs/gatsby-starter-default/commit/000fe10115a895f759b7119460ce4f3004c6ec73))
+* **contentful-envs:** only deploy preview on pr ([963fb64](https://github.com/gatsbyjs/gatsby-starter-default/commit/963fb645285c954083ae2498ea7e3597faa3bb0a))
+* **contentful-envs:** re enable tests in gh actions ([e162581](https://github.com/gatsbyjs/gatsby-starter-default/commit/e162581645b6fe62472c5b5f232e5a1647042479))
+* **contentful-envs:** trigger build on adding release tag ([6af587b](https://github.com/gatsbyjs/gatsby-starter-default/commit/6af587b55202e9364922bb965b9d1ddf4930e8e0))
+
 ### [0.1.31](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.30...v0.1.31) (2020-06-09)
 
 
