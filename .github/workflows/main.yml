@@ -34,6 +34,7 @@ jobs:
           build_directory: 'public'
 
   build-dev:
+    if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
     name: Build DEV
     steps:
@@ -44,7 +45,6 @@ jobs:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           PROD: false
       - name: deploy-preview
-        if: contains(github.event_name, 'pull_request')
         uses: jsmrcaga/action-netlify-deploy@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
