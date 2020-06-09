@@ -51,39 +51,40 @@ jobs:
           NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
           NETLIFY_DEPLOY_MESSAGE: 'Github deploy for ${{ github.ref }}'
           build_directory: 'public'
-  #  lighthouse-check:
-  #    needs: build
-  #    runs-on: ubuntu-latest
-  #    name: Lighthouse Check
-  #    steps:
-  #      - uses: actions/checkout@v1
-  #      - name: Download built folder
-  #        uses: actions/download-artifact@v2
-  #        with:
-  #          name: public
-  #          path: public
-  #      - name: Audit URLs using Lighthouse
-  #        uses: treosh/lighthouse-ci-action@v2
-  #        with:
-  #          configPath: './lighthouserc.json'
-  #          temporaryPublicStorage: true
-  #        env:
-  #          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
-  #
-  #  backstop-test:
-  #    needs: build
-  #    runs-on: ubuntu-latest
-  #    name: Backstop Test
-  #    steps:
-  #      - uses: actions/checkout@v1
-  #      - name: Download built folder
-  #        uses: actions/download-artifact@v2
-  #        with:
-  #          name: public
-  #          path: public
-  #      - uses: ./.github/run-backstop
-  #      - uses: actions/upload-artifact@v2
-  #        if: failure()
-  #        with:
-  #          name: backstop-test
-  #          path: backstop_data/
+
+    lighthouse-check:
+      needs: build
+      runs-on: ubuntu-latest
+      name: Lighthouse Check
+      steps:
+        - uses: actions/checkout@v1
+        - name: Download built folder
+          uses: actions/download-artifact@v2
+          with:
+            name: public
+            path: public
+        - name: Audit URLs using Lighthouse
+          uses: treosh/lighthouse-ci-action@v2
+          with:
+            configPath: './lighthouserc.json'
+            temporaryPublicStorage: true
+          env:
+            LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+
+    backstop-test:
+      needs: build
+      runs-on: ubuntu-latest
+      name: Backstop Test
+      steps:
+        - uses: actions/checkout@v1
+        - name: Download built folder
+          uses: actions/download-artifact@v2
+          with:
+            name: public
+            path: public
+        - uses: ./.github/run-backstop
+        - uses: actions/upload-artifact@v2
+          if: failure()
+          with:
+            name: backstop-test
+            path: backstop_data/
