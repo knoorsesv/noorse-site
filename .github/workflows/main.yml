@@ -56,6 +56,7 @@ jobs:
     needs: build-dev
     runs-on: ubuntu-latest
     name: Lighthouse Check
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v1
       - name: Download built folder
@@ -75,6 +76,7 @@ jobs:
     needs: build-dev
     runs-on: ubuntu-latest
     name: Backstop Test
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v1
       - name: Download built folder
@@ -88,3 +90,10 @@ jobs:
         with:
           name: backstop-test
           path: backstop_data/
+
+  cleanup-dev:
+    needs: ['backstop-test', 'lighthouse-check']
+    steps:
+      - uses: geekyeggo/delete-artifact@v1
+        with:
+          name: public
