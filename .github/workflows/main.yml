@@ -92,7 +92,9 @@ jobs:
           path: backstop_data/
 
   cleanup-dev:
-    needs: ['backstop-test', 'lighthouse-check']
+    runs-on: ubuntu-latest
+    name: Delete artifact
+    needs: [backstop-test, lighthouse-check]
     steps:
       - uses: geekyeggo/delete-artifact@v1
         with:
