@@ -50,6 +50,7 @@ jobs:
         with:
           publish-dir: './public'
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          enable-commit-comment: false
           deploy-message: 'PR ${{ github.event.pull_request.title }}'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
