@@ -48,6 +48,8 @@ jobs:
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: './public'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'PR ${{ github.event.pull_request.title }}'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
