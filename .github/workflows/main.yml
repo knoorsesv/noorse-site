@@ -31,7 +31,7 @@ jobs:
         uses: gvdp/actions-netlify@74c6d0d6b9aac54eb05586f6ef282544ec14ce48
         with:
           publish-dir: './src/images'
-          production-deploy: ${{ true }}
+          production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy ${{ github.ref }}'
         env:
