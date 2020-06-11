@@ -18,7 +18,8 @@ jobs:
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           PROD: true
-      - name: deploy-preview
+      - name: deploy
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: './public'
