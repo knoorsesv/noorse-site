@@ -1,9 +1,11 @@
 import { navigate } from 'gatsby-link'
 import React from 'react'
-import { Card, CardHeader } from './cards'
+import { Card } from './cards'
 
-export const NewsCard = (newsNode) => {
+export const NewsCard = ({ newsNode }) => {
+  // console.log(newsNode)
   const goToNews = () => {
+    console.log('clicked')
     navigate(`/nieuws/${newsNode.title}`)
   }
 
@@ -14,24 +16,18 @@ export const NewsCard = (newsNode) => {
   }
   return (
     <Card
+      header={newsNode.title}
       onClick={goToNews}
       onKeyDown={keyDownHandler}
       role="link"
       tabIndex="0"
-      key={newsNode.title}
     >
       {newsNode.image && (
-        <div className={'card-image'}>
-          <figure className={'image'}>
-            <img
-              src={newsNode.image.localFile.publicURL}
-              alt={'News header '}
-            />
-          </figure>
-        </div>
+        <figure className={'image mb-4'}>
+          <img src={newsNode.image.localFile.publicURL} alt={'News header '} />
+        </figure>
       )}
-      <CardHeader>{newsNode.title}</CardHeader>
-      {newsNode.blurb && <div className={'card-content'}>{newsNode.blurb}</div>}
+      {newsNode.blurb && <div className={''}>{newsNode.blurb}</div>}
     </Card>
   )
 }

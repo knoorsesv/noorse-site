@@ -2,16 +2,14 @@ import React from 'react'
 
 export const Card = (props) => {
   return (
-    <div className={'card mx-2 my-2 max-w-full'} {...props}>
-      {props.children}
+    <div
+      {...props}
+      className={`${props.className} border rounded-md border-opacity-50 shadow-sm divide-y border-gray p-4`}
+    >
+      {props.header && (
+        <div className={'font-semibold text-center mb-2'}>{props.header}</div>
+      )}
+      <div className={'w-full pt-2'}>{props.children}</div>
     </div>
-  )
-}
-
-export const CardHeader = ({ children }) => {
-  return (
-    <header className={'card-header'}>
-      <p className={'card-header-title'}>{children}</p>
-    </header>
   )
 }

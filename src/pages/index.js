@@ -7,7 +7,7 @@ import Masonry from 'react-masonry-css'
 import { NewsCard } from '../components/newsCard'
 import { ExternalLink, TextBlock } from '../components/text'
 import { EventList } from '../components/events'
-import { Card, CardHeader } from '../components/cards'
+import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 
@@ -49,14 +49,15 @@ export default () => {
             className="my-masonry-grid"
             columnClassName="masonry-column"
           >
-            {newsItems.allContentfulNews.nodes.map(NewsCard)}
+            {newsItems.allContentfulNews.nodes.map((node) => (
+              <div key={node.title} className={'py-2'}>
+                <NewsCard newsNode={node}></NewsCard>
+              </div>
+            ))}
           </Masonry>
         </div>
         <div className={'flex flex-col'}>
-          <Card>
-            <CardHeader>
-              <span className={'text-center w-full'}>Evenementen</span>
-            </CardHeader>
+          <Card header="Evenementen" className={'mb-4'}>
             <div className={'py-2 px-3'}>
               <EventList />
             </div>
