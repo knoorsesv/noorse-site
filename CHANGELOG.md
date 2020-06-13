@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.41](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.40...v0.1.41) (2020-06-13)
+
+
+### Bug Fixes
+
+* responsive selector to place logo ([91bfe31](https://github.com/gatsbyjs/gatsby-starter-default/commit/91bfe3152dda1b7cc6e2b1ae8ce91ecb1dc3b104))
+
 ### [0.1.40](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.39...v0.1.40) (2020-06-13)
 
 ### [0.1.39](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.38...v0.1.39) (2020-06-13)
