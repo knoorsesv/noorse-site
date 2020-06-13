@@ -27,7 +27,7 @@ const siteMap = {
   ],
 }
 const transition = `transition-all duration-200 ease-in`
-const menuBarHeight = 'h-10v sm:h-12v'
+const menuBarHeight = 'h-64p sm:h-96p'
 const coverSectionHeight = 'h-32v sm:h-64v'
 
 export const Navbar = (props) => {
@@ -63,7 +63,7 @@ export const Navbar = (props) => {
           className={`
         ${transition}
       z-50 p-3 w-full flex
-      ${fixedToTop ? menuBarHeight : 'h-full'} 
+      ${fixedToTop ? menuBarHeight : coverSectionHeight} 
       ${
         fixedToTop
           ? 'fixed bg-green bg-opacity-75 lg:flex-row-reverse lg:justify-between lg:items-center'
@@ -72,8 +72,9 @@ export const Navbar = (props) => {
       `}
         >
           <div
-            className={`hidden md:block ${menuBarHeight} ${
-              fixedToTop ? '' : 'lg:h-20 lg:self-end'
+            id="menu-container"
+            className={`hidden md:block ${menuBarHeight} ${transition} ${
+              !fixedToTop && 'md:self-end'
             } xl:w-1/2 `}
           >
             <TopMenu fixedToTop={fixedToTop} />
@@ -139,11 +140,14 @@ const DropDown = ({ fixedToTop, item }) => {
       hidden group-hover:absolute group-hover:flex
       flex-col items-start
       w-auto p-6 mr-2
+      ${transition}
       ${fixedToTop ? 'bg-green' : 'bg-gray-lighter'} bg-opacity-75 `}
     >
       {item.subItems.map((subItem) => (
         <Link
-          className={`${fixedToTop ? 'text-white' : 'text-gray-dark'} my-1`}
+          className={`${
+            fixedToTop ? 'text-white' : 'text-gray-dark'
+          } ${transition} my-1`}
           to={subItem.link}
           key={subItem.name}
         >
@@ -155,12 +159,14 @@ const DropDown = ({ fixedToTop, item }) => {
 }
 
 const TopMenuItem = ({ item, fixedToTop }) => {
-  const itemTextStyle = `xl:text-xl ${
+  const itemTextStyle = `${
     fixedToTop ? 'text-white' : 'text-gray-dark'
-  }`
+  } ${transition}`
   return (
     <div
-      className={`relative ${fixedToTop ? '' : 'rounded p-2 bg-gray-lighter  '}
+      className={`relative ${
+        !fixedToTop && 'rounded p-2 bg-gray-lighter'
+      } ${transition}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
@@ -186,7 +192,10 @@ const TopMenu = ({ fixedToTop }) => {
       className={`h-full flex flex-row justify-between items-center p-4 lg:p-6`}
     >
       {siteMap.items.map((item) => (
-        <span key={item.name} className={`${fixedToTop ? 'mx-3' : 'mx-1'}`}>
+        <span
+          key={item.name}
+          className={`${fixedToTop ? 'mx-3' : 'mx-1'} ${transition}`}
+        >
           <TopMenuItem item={item} fixedToTop={fixedToTop} />
         </span>
       ))}
@@ -220,9 +229,7 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
 
 const SideBarItem = ({ item }) => {
   return (
-    <span
-      className={`relative text-right my-1 ${item.subItems ? 'group' : ''}`}
-    >
+    <span className={`relative text-right my-1 ${item.subItems && 'group'}`}>
       {item.link ? (
         <LinkInSideBar item={item} />
       ) : (
@@ -265,13 +272,13 @@ const SideBarMenu = ({ fixedToTop }) => {
       z-50
      h-screen fixed right-0 top-0 p-4 sm:pr-8 
      ${menuShown ? 'w-1/2 sm:w-1/3' : 'w-0'}
-     ${menuShown ? 'bg-green' : ''}
+     ${menuShown && 'bg-green'}
    `}
     >
       <div
-        className={`md:hidden flex flex-row justify-end items-center mt-2 sm:mt-4 ${
-          (menuShown || fixedToTop) && 'text-white'
-        }`}
+        className={`md:hidden flex flex-row justify-end items-center 
+        mt-2 sm:mt-4 
+        ${(menuShown || fixedToTop) && 'text-white'} ${transition}`}
       >
         <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
       </div>
