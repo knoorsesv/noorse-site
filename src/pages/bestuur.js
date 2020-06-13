@@ -4,6 +4,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import { Container } from '../components/centeredContainer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { Card } from '../components/cards'
 
 const Content = (data) => {
   return (
@@ -19,15 +20,8 @@ const Content = (data) => {
             className={'p-2 w-4/5 md:w-1/3 sm:w-1/2'}
             key={bestuursLid.node.naam}
           >
-            <div
-              className={
-                'border rounded-md border-opacity-50 shadow-sm divide-y h-full border-gray p-4'
-              }
-            >
-              <div className={'font-semibold text-center mb-2'}>
-                {bestuursLid.node.naam}
-              </div>
-              <div className={'text-xs pt-2'}>
+            <Card header={bestuursLid.node.naam} className={'h-full'}>
+              <div className={'text-xs'}>
                 <div className={'mb-1'}>{bestuursLid.node.title}</div>
                 {bestuursLid.node.email && (
                   <div className={'font-thin'}>
@@ -49,7 +43,7 @@ const Content = (data) => {
                   </div>
                 )}
               </div>
-            </div>
+            </Card>
           </div>
         ))}
       </div>
