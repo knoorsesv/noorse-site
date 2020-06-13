@@ -2,8 +2,8 @@ name: Noorse site CI
 
 on:
   push:
-  #    tags:
-  #      - 'v*.*.*'
+    tags:
+      - 'v*.*.*'
   pull_request:
     branches: [master]
 
@@ -21,13 +21,13 @@ jobs:
           JOB_CONTEXT: ${{ toJson(job) }}
         run: echo "$JOB_CONTEXT"
       - uses: actions/checkout@v1
-      #      - uses: bahmutov/npm-install@v1
-      #      - run: yarn build
-      #        env:
-      #          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
-      #          PROD: true
+      - uses: bahmutov/npm-install@v1
+      - run: yarn build
+        env:
+          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          PROD: true
       - name: deploy
-        #        if: startsWith(github.ref, 'refs/tags/v')
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: gvdp/actions-netlify@production-deploy
         with:
           publish-dir: './src/images'
