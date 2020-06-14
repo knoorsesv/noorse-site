@@ -10,6 +10,7 @@ import { EventList } from '../components/events'
 import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
+import { NextGame } from '../components/nextGame'
 
 export default () => {
   const newsItems = useStaticQuery(graphql`
@@ -57,6 +58,8 @@ export default () => {
           </Masonry>
         </div>
         <div className={'flex flex-col'}>
+          <NextGame className={'mb-4'}></NextGame>
+
           <Card header="Evenementen" className={'mb-4'}>
             <div className={'py-2 px-3'}>
               <EventList />

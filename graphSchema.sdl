@@ -29,6 +29,7 @@ type Outcome {
 
 type Team {
   name: String
+  logo: String
   id: String
 }
 
