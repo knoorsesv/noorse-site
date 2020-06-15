@@ -25,7 +25,11 @@ const DocumentenPage = () => {
       <div>
         {documents.allContentfulDocument.nodes.map((documentNode) => {
           return (
-            <a href={documentNode.document.localFile.publicURL} download>
+            <a
+              href={documentNode.document.localFile.publicURL}
+              download
+              className={'underline'}
+            >
               {documentNode.naam}
             </a>
           )

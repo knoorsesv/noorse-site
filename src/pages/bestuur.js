@@ -5,11 +5,12 @@ import { Container } from '../components/centeredContainer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card } from '../components/cards'
+import { Title } from '../components/titles'
 
 const Content = (data) => {
   return (
     <Container>
-      <h1 className={'uppercase title'}>Bestuur</h1>
+      <Title>Bestuur</Title>
       <div
         className={
           'flex sm:flex-row flex-col sm:space-around items-center sm:items-stretch sm:flex-wrap'

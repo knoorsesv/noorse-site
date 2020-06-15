@@ -5,6 +5,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { ExternalLink } from './text'
 import Img from 'gatsby-image'
 import LazyLoad from 'react-lazyload'
+import { Title } from './titles'
 
 const SponsorWithLogo = (sponsorNode) => {
   return (
@@ -90,7 +91,7 @@ const NoorseFooter = () => {
           }
         >
           <FlyingIn>
-            <h1 className={'title text-center'}>Sponsors</h1>
+            <Title>Sponsors</Title>
           </FlyingIn>
           <div
             className={
@@ -101,7 +102,7 @@ const NoorseFooter = () => {
           </div>
         </div>
         <div className={'flex flex-col items-center md:items-end'}>
-          <h1 className={'title'}>Contact</h1>
+          <Title>Contact</Title>
           <span>Frans de Peuterstraat</span>
           <span>03/543.xx.xx</span>
           <span>info@noorse.be</span>

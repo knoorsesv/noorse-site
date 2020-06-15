@@ -1,37 +1,9 @@
 @charset "utf-8";
-@import '~bulma/sass/utilities/initial-variables';
-@import '~bulma/sass/utilities/functions';
 
-$green: #008000;
-$primary: bulmaRgba($green, 0.8);
-
-$navbar-height: 5rem;
-$navbar-padding-horizontal: 3.5rem;
-$navbar-padding-vertical: 0.5rem;
-$navbar-item-hover-background-color: bulmaRgba($grey-lighter, 0.3);
-$navbar-item-color: findColorInvert($primary);
-$navbar-item-hover-color: findColorInvert($navbar-item-hover-background-color);
-
-$navbar-dropdown-background-color: $primary;
-$navbar-dropdown-item-hover-background-color: bulmaRgba($grey-lighter, 0.3);
-
-$footer-padding: 2rem;
-
-@import '~bulma/bulma.sass';
-@import '~bulma-extensions/bulma-divider/dist/css/bulma-divider';
-// reset weird default from typography.js
 img {
   margin-bottom: 0;
 }
 
-.navbar-item img {
-  max-height: none;
-}
-
-.container {
-  min-height: $navbar-height + 3rem;
-}
-
-.navbar-brand {
-  min-height: unset;
+body {
+  font-family: Verdana, Geneva, sans-serif;
 }

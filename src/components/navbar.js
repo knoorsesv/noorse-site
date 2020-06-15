@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Img from 'gatsby-image'
@@ -164,15 +164,15 @@ const TopMenuItem = ({ item, fixedToTop }) => {
   } ${transition}`
   return (
     <div
-      className={`relative ${
-        !fixedToTop && 'rounded p-2 bg-gray-lighter'
-      } ${transition}
+      className={`relative 
+      font-sans
+      ${!fixedToTop && 'rounded p-2 bg-gray-lighter'} ${transition}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
           className={itemTextStyle}
-          activeClassName={'border-b-2'}
+          activeClassName={`${fixedToTop && 'border-b-2'}`}
           to={item.link}
         >
           {item.name}
