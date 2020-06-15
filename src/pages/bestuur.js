@@ -56,7 +56,7 @@ const BestuurPage = () => (
     <StaticQuery
       query={graphql`
         query {
-          allContentfulBestuurslid {
+          allContentfulBestuurslid(sort: { fields: naam }) {
             edges {
               node {
                 naam

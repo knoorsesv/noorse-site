@@ -14,7 +14,7 @@ import { ResponsiveVideo } from '../components/video'
 export default () => {
   const newsItems = useStaticQuery(graphql`
     query {
-      allContentfulNews {
+      allContentfulNews(sort: { fields: createdAt, order: DESC }) {
         nodes {
           blurb
           title
