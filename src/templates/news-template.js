@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Container } from '../components/centeredContainer'
+import { Title } from '../components/titles'
 
 const nodeToHtml = (nodeWithType, index) => {
   if (nodeWithType.nodeType === 'paragraph') {
@@ -35,20 +36,14 @@ const nodeToHtml = (nodeWithType, index) => {
 export default ({ pageContext: { newsNode } }) => (
   <Layout>
     <Container>
-      <nav className={'breadcrumb'}>
-        <ul>
-          <li>
-            <span className={'font-bold mr-2'}>Nieuws</span>
-          </li>
-          {newsNode.category && (
-            <li>
-              <span className={'font-bold mx-2'}>{newsNode.category.naam}</span>
-            </li>
-          )}
-        </ul>
-      </nav>
-      <h1 className={'uppercase title'}>{newsNode.title}</h1>
-      <h3 className={'subtitle capitalize'}>{newsNode.createdAt}</h3>
+      {/*<nav className={'flex flex-row'}>*/}
+      {/*  <span className={' mr-1'}>Nieuws</span>*/}
+      {/*  {newsNode.category && (*/}
+      {/*    <span className={'mx-2'}>/ {newsNode.category.naam}</span>*/}
+      {/*  )}*/}
+      {/*</nav>*/}
+      <Title>{newsNode.title}</Title>
+      <h3 className={'italic text-sm mb-6 capitalize'}>{newsNode.createdAt}</h3>
       {newsNode.body.json.content.map(nodeToHtml)}
     </Container>
   </Layout>

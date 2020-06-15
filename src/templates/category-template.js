@@ -1,26 +1,36 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
+import { SubTitle, Title } from '../components/titles'
 
 export default ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
-      <h1 className={'title'}>{categoryNode.naam}</h1>
+      <Title>{categoryNode.naam}</Title>
       <div className={'grid grid-cols-3'}>
         <div className={'col-span-1 flex flex-col'}>
-          <h2 className={'subtitle'}>Nieuws</h2>
-          {categoryNode.news &&
-            categoryNode.news.map((news) => (
-              <Link key={news.title} to={`/nieuws/${news.title}`}>
-                {news.title}
-              </Link>
-            ))}
+          <SubTitle>Nieuws</SubTitle>
+          {categoryNode.news && (
+            <ul className={'list-disc'}>
+              {categoryNode.news.map((news) => (
+                <li key={news.title}>
+                  <Link to={`/nieuws/${news.title}`} className={'underline'}>
+                    {news.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className={'col-span-2 flex flex-col'}>
-          <h2 className={'subtitle'}>Ploegen</h2>
+          <SubTitle>Ploegen</SubTitle>
           {categoryNode.ploeg &&
             categoryNode.ploeg.map((ploeg) => (
-              <Link key={ploeg.naam} to={`/team/${ploeg.naam.toLowerCase()}`}>
+              <Link
+                key={ploeg.naam}
+                to={`/team/${ploeg.naam.toLowerCase()}`}
+                className={'underline'}
+              >
                 {ploeg.naam}
               </Link>
             ))}

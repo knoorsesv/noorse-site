@@ -56,12 +56,11 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
           'flex flex-row xl:flex-col justify-between lg:items-center mb-4 lg:text-2xl'
         }
       >
-        <Link
-          to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}
-          className={'text-gray-dark underline xl:text-3xl'}
-        >
-          {contentfulPloeg.categorie.naam}
-        </Link>
+        <Title>
+          <Link to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}>
+            {contentfulPloeg.categorie.naam}
+          </Link>
+        </Title>
 
         <div
           className={
@@ -75,7 +74,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
             className={'lg:hidden'}
             onKeyDown={keyDownHandler}
           >
-            <span>{contentfulPloeg.naam}</span>
+            <span className={'font-sans'}>{contentfulPloeg.naam}</span>
             <FontAwesomeIcon icon={faAngleDown} className={'ml-2'} />
           </div>
 
@@ -90,7 +89,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
                 to={`/team/${ploeg.naam.toLowerCase()}`}
                 activeClassName={'font-bold bg-gray'}
                 className={
-                  'lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
+                  'font-sans lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
                 }
               >
                 {ploeg.naam}
@@ -137,7 +136,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
         {data.vv && data.vv.teamCalendar && (
           <div className={'lg:col-span-2'}>
             <Title>Kalender</Title>
-            <table>
+            <table className={'w-full'}>
               <tbody>
                 {data.vv.teamCalendar.map((game) => {
                   game.formattedDate = moment(game.startDate).format(

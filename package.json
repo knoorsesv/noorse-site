@@ -36,8 +36,6 @@
     "tailwindcss": "1.4.6",
     "tailwindcss-elevation": "0.3.4",
     "tailwindcss-gradients": "3.0.0",
-    "typography": "0.16.19",
-    "typography-theme-parnassus": "0.16.19",
     "yarn": "1.22.4"
   },
   "devDependencies": {
