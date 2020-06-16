@@ -30,7 +30,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    { ...(devBuild && `gatsby-plugin-percy`) },
+    ...(devBuild ? [`gatsby-plugin-percy`] : []),
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-typography`,
