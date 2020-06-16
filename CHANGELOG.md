@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.43](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.42...v0.1.43) (2020-06-16)
+
+
+### Bug Fixes
+
+* **data:** add sort parameters to queries ([357701d](https://github.com/gatsbyjs/gatsby-starter-default/commit/357701d84aa85fb9722d5722696c18d3db476e5e))
+* **layout:** add elevation to cars ([cbe5618](https://github.com/gatsbyjs/gatsby-starter-default/commit/cbe5618b2a74a679b2256541848d7ff65f7a1745))
+* **layout:** improve header responsiveness ([b811030](https://github.com/gatsbyjs/gatsby-starter-default/commit/b811030672480330710afb2344fb30b3127c0a75))
+* **layout:** use same card style everywhere ([9a1da0c](https://github.com/gatsbyjs/gatsby-starter-default/commit/9a1da0c891b4273394d00450313b2f949f13f688))
+
 ### [0.1.42](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.41...v0.1.42) (2020-06-13)
 
 ### [0.1.41](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.40...v0.1.41) (2020-06-13)
