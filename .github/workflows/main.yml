@@ -107,7 +107,7 @@ jobs:
   cleanup-dev:
     runs-on: ubuntu-latest
     name: Delete artifact
-    needs: [backstop-test, lighthouse-check]
+    needs: [lighthouse-check]
     steps:
       - uses: geekyeggo/delete-artifact@v1
         with:
