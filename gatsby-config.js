@@ -3,7 +3,7 @@ const fs = require('fs')
 
 require('dotenv').config()
 
-const contentfulStagingData = process.env.PROD === 'false'
+const devBuild = process.env.PROD !== 'true'
 
 module.exports = {
   siteMetadata: {
@@ -30,6 +30,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    { ...(devBuild && `gatsby-plugin-percy`) },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -41,13 +42,11 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u0xs2v9mjzql`,
-        accessToken: contentfulStagingData
+        accessToken: devBuild
           ? process.env.CONTENTFUL_TOKEN_PREVIEW
           : process.env.CONTENTFUL_TOKEN,
-        host: contentfulStagingData
-          ? `preview.contentful.com`
-          : 'cdn.contentful.com',
-        environment: contentfulStagingData ? `staging` : 'master',
+        host: devBuild ? `preview.contentful.com` : 'cdn.contentful.com',
+        environment: devBuild ? `staging` : 'master',
         downloadLocal: true,
       },
     },
