@@ -4,14 +4,19 @@ export const Card = (props) => {
   return (
     <div
       {...props}
-      className={`${props.className} elevation-4 border rounded-md border-opacity-50 shadow-sm divide-y border-gray p-4`}
+      className={`${props.className} elevation-2 border rounded-sm border-opacity-50 border-gray`}
     >
       {props.header && (
-        <div className={'font-semibold font-sans text-center mb-2'}>
-          {props.header}
+        <div className={`${props.children && 'border-b border-gray'}`}>
+          {props.image && (
+            <figure className={'image m-0'}>
+              <img src={props.image.localFile.publicURL} alt={'News header '} />
+            </figure>
+          )}
+          <h3 className={'text-center p-3 m-0'}>{props.header}</h3>
         </div>
       )}
-      <div className={'w-full pt-2'}>{props.children}</div>
+      {props.children && <div className={'w-full p-4'}>{props.children}</div>}
     </div>
   )
 }

@@ -17,16 +17,12 @@ export const NewsCard = ({ newsNode }) => {
   return (
     <Card
       header={newsNode.title}
+      image={newsNode.image}
       onClick={goToNews}
       onKeyDown={keyDownHandler}
       role="link"
       tabIndex="0"
     >
-      {newsNode.image && (
-        <figure className={'image mb-4'}>
-          <img src={newsNode.image.localFile.publicURL} alt={'News header '} />
-        </figure>
-      )}
       {newsNode.blurb && <div className={''}>{newsNode.blurb}</div>}
     </Card>
   )

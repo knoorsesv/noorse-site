@@ -43,7 +43,7 @@ export default ({ pageContext: { newsNode } }) => (
       {/*  )}*/}
       {/*</nav>*/}
       <Title>{newsNode.title}</Title>
-      <h3 className={'italic text-sm mb-6 capitalize'}>{newsNode.createdAt}</h3>
+      <h3 className={'italic mb-6 capitalize'}>{newsNode.createdAt}</h3>
       {newsNode.body.json.content.map(nodeToHtml)}
     </Container>
   </Layout>

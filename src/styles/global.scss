@@ -4,6 +4,26 @@ img {
   margin-bottom: 0;
 }
 
-body {
-  font-family: Verdana, Geneva, sans-serif;
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: white;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+ul {
+  margin-left: 0;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+a:visited {
+  color: inherit;
 }

@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    preflight: false,
+  },
   important: true,
   purge: {
     content: ['./src/**/*.js'],

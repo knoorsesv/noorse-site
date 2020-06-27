@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Container } from '../components/centeredContainer'
-import { Title, SubTitle } from '../components/titles'
+import { SubTitle, Title } from '../components/titles'
 import { ExternalLink, SpacedInfo, TextBlock } from '../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -104,8 +104,9 @@ const LidMaatschapPage = () => {
           <br />
           Aan geïnteresseerden voor jeugd jongens vragen we volgend{' '}
           <ExternalLink url="https://forms.gle/4UufKtgb7tN7rxAd9">
+            {' '}
             formulier
-          </ExternalLink>
+          </ExternalLink>{' '}
           in te vullen.
           <br />
           Voor nieuwe leden bedraagt het lidgeld 150€.
@@ -121,10 +122,10 @@ const LidMaatschapPage = () => {
             Inschrijvingsbrief K. Noorse SV – 2020-2021
           </a>
           <br />
-          Bestaande leden van jeugd jongens kunnen zich
+          Bestaande leden van jeugd jongens kunnen zich{' '}
           <ExternalLink url="https://forms.gle/SWG2tV2q9wP5WiX16">
             hier
-          </ExternalLink>
+          </ExternalLink>{' '}
           opnieuw aanmelden.
         </TextBlock>
 
