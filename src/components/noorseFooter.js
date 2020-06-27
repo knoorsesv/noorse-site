@@ -82,7 +82,7 @@ const NoorseFooter = () => {
     <footer id="footer">
       <div
         className={
-          'flex flex-col items-center pb-12 pt-48 lg:px-40 bg-gradient-b-gray-darker md:flex md:flex-row md:items-start md:justify-between md:px-6'
+          'flex flex-col items-center bg-gray-light py-12 lg:px-40 md:flex md:flex-row md:items-start md:justify-between md:px-6'
         }
       >
         <div
