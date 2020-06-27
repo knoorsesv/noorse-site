@@ -33,6 +33,12 @@ module.exports = {
     ...(devBuild ? [`gatsby-plugin-percy`] : []),
     `gatsby-plugin-postcss`,
     {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u0xs2v9mjzql`,

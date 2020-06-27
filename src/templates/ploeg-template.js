@@ -53,7 +53,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
     <Layout>
       <div
         className={
-          'flex flex-row xl:flex-col justify-between lg:items-center mb-4 lg:text-2xl'
+          'flex flex-row xl:flex-col justify-between lg:items-center mb-4'
         }
       >
         <Title>
@@ -74,7 +74,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
             className={'lg:hidden'}
             onKeyDown={keyDownHandler}
           >
-            <span className={'font-sans'}>{contentfulPloeg.naam}</span>
+            <span>{contentfulPloeg.naam}</span>
             <FontAwesomeIcon icon={faAngleDown} className={'ml-2'} />
           </div>
 
@@ -89,7 +89,7 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
                 to={`/team/${ploeg.naam.toLowerCase()}`}
                 activeClassName={'font-bold bg-gray'}
                 className={
-                  'font-sans lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
+                  'lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
                 }
               >
                 {ploeg.naam}

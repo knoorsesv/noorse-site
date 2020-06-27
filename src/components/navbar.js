@@ -165,7 +165,8 @@ const TopMenuItem = ({ item, fixedToTop }) => {
   return (
     <div
       className={`relative 
-      font-sans whitespace-no-wrap
+      whitespace-no-wrap
+      font-medium
       ${!fixedToTop && 'rounded p-2 bg-gray-lighter'} ${transition}
       ${item.subItems ? 'group' : ''}`}
     >
