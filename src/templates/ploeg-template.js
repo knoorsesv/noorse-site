@@ -139,9 +139,9 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
             <table className={'w-full'}>
               <tbody>
                 {data.vv.teamCalendar.map((game) => {
-                  game.formattedDate = moment(game.startDate).format(
-                    'DD-MM-YYYY'
-                  )
+                  game.formattedDate = moment(game.startDate)
+                    .local()
+                    .format('DD-MM-YYYY')
                   return (
                     <tr key={game.id}>
                       <td className={'text-sm'}>{game.formattedDate}</td>

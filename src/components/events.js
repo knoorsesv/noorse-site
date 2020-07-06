@@ -10,7 +10,7 @@ const datumToMoment = (event) => {
 const eventIsInfuture = (event) => event.datum.isSameOrAfter(moment())
 const earliestFirst = (a, b) => (a.datum.isAfter(b.datum) ? 1 : -1)
 const formatDate = (event) => {
-  event.datum = event.datum.format('DD-MM-YYYY')
+  event.datum = event.datum.local().format('DD-MM-YYYY')
   return event
 }
 
