@@ -65,7 +65,7 @@
     "build-serve": "yarn build && yarn serve",
     "develop": "gatsby develop",
     "release": "standard-version && git push --follow-tags",
-    "cypress:open": "DEBUG=cypress:server:screenshot* cypress open",
+    "cypress:open": "DEBUG=cypress:server:screenshot* cypress open -P e2e",
     "cypress:run": "cypress run",
     "bump-minor": "standard-version --release-as minor",
     "test": "backstop test --config backstop_data/backstop.json ",
