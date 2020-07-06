@@ -4,6 +4,7 @@ export const Card = (props) => {
   return (
     <div
       {...props}
+      data-cy="card"
       className={`${props.className} elevation-4 border rounded-md border-opacity-50 shadow-sm divide-y border-gray p-4`}
     >
       {props.header && (

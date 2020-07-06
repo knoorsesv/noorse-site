@@ -1,5 +1,0 @@
-{
-  "baseUrl": "http://localhost:8000",
-  "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"],
-  "projectId": "iw2qbq"
-}

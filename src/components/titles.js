@@ -1,7 +1,11 @@
 import React from 'react'
 
 export const Title = ({ children }) => {
-  return <h1 className={'text-3xl mb-8 text-center'}>{children}</h1>
+  return (
+    <h1 data-cy="title" className={'text-3xl mb-8 text-center'}>
+      {children}
+    </h1>
+  )
 }
 
 export const SubTitle = ({ children }) => {
