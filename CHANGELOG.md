@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.44](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.43...v0.1.44) (2020-07-08)
+
+
+### Features
+
+* **fonts:** change header weight and card border radius ([8ed6df6](https://github.com/gatsbyjs/gatsby-starter-default/commit/8ed6df602df4ada72190c7fe757a338463cc065a))
+* **fonts:** use Lato in header fonts ([8da0a97](https://github.com/gatsbyjs/gatsby-starter-default/commit/8da0a974ebd8feb9c89502e4920072f34e2a789b))
+* add typography config and styling ([392079f](https://github.com/gatsbyjs/gatsby-starter-default/commit/392079fba7662fd516ca5272b7da0dc2ffdefd8e))
+* remove all bulma and typography references ([e8958ac](https://github.com/gatsbyjs/gatsby-starter-default/commit/e8958ac24bf27f2d71c76ab27c7ff7198d613d48))
+* remove bulma dependency ([b8ee331](https://github.com/gatsbyjs/gatsby-starter-default/commit/b8ee3316bb27bb6a5107637b07888e9be4cd89a3))
+
+
+### Bug Fixes
+
+* dont let gvoetbal tag wrap in menu ([760bb0b](https://github.com/gatsbyjs/gatsby-starter-default/commit/760bb0b3cb5a73e020ab4df447a522eddcfb9e6b))
+
 ### [0.1.43](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.42...v0.1.43) (2020-06-16)
 
 
