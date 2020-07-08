@@ -19,7 +19,7 @@ const typography = new Typography({
     },
   ],
   headerFontFamily: ['Lato', 'Rubik', 'Helvetica Neue', 'Arial', 'sans-serif'],
-  headerWeight: '500',
+  headerWeight: '700',
   bodyFontFamily: ['Montserrat', 'Arial', 'sans-serif'],
 })
 
