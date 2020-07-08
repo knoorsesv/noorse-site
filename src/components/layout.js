@@ -2,41 +2,32 @@ import React from 'react'
 
 import NoorseFooter from './noorseFooter'
 import { Navbar } from './navbar'
-import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from '@gvdp/gatsby-background-image'
 
 const Layout = ({ children, coverPhoto }) => {
-  const image = useStaticQuery(graphql`
-    query {
-      bg: file(name: { eq: "bg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <div className={'flex min-h-screen flex-col'}>
-      <BackgroundImage
-        fluid={image.bg.childImageSharp.fluid}
-        className={'bg-fixed'}
-        opacity={0.05}
+      <Navbar coverPhoto={coverPhoto}/>
+      <div
+        id="content"
+        className={
+          'mt-3 mb-12'
+        }
       >
-        <Navbar coverPhoto={coverPhoto} />
-        <div
-          id="content"
-          className={
-            'relative flex-1 mt-3 md:mx-3 lg:mx-6 p-3 pl-4 md:px-4 lg:px-10 mb-12'
-          }
-        >
-          {children}
-        </div>
-        <NoorseFooter />
-      </BackgroundImage>
+        {children}
+      </div>
+      <NoorseFooter/>
     </div>
   )
 }
 
 export default Layout
+
+export const Container = ({ children }) => {
+  return (
+    <div className={'flex flex-col items-center'}>
+      <div className={'px-6 lg:px-12 md:my-5 w-full md:w-5/6 xl:w-3/5'}>
+        {children}
+      </div>
+    </div>
+  )
+}

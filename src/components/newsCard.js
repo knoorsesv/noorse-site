@@ -3,9 +3,15 @@ import React from 'react'
 import { Card } from './cards'
 
 export const NewsCard = ({ newsNode }) => {
-  // console.log(newsNode)
+  let snippet
+  if (!newsNode.blurb) {
+    const firstParagraph = newsNode.body.json.content[0].content[0].value
+    const endOfSecondSentence = firstParagraph.indexOf('.', firstParagraph.indexOf('.') +1)
+    snippet = `${firstParagraph.substr(0, endOfSecondSentence)} ...`
+  }
+
+
   const goToNews = () => {
-    console.log('clicked')
     navigate(`/nieuws/${newsNode.title}`)
   }
 
@@ -14,16 +20,18 @@ export const NewsCard = ({ newsNode }) => {
       goToNews()
     }
   }
+  // todo: maybe max height on card corresponding to 2x small card?
   return (
     <Card
       header={newsNode.title}
       image={newsNode.image}
       onClick={goToNews}
       onKeyDown={keyDownHandler}
+      className={'min-h-128p'}
       role="link"
       tabIndex="0"
     >
-      {newsNode.blurb && <div className={''}>{newsNode.blurb}</div>}
+      <div className={'text-center'}>{newsNode.blurb || snippet}</div>
     </Card>
   )
 }

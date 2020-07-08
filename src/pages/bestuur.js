@@ -1,7 +1,6 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout, { Container } from '../components/layout'
 import { graphql, StaticQuery } from 'gatsby'
-import { Container } from '../components/centeredContainer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card } from '../components/cards'

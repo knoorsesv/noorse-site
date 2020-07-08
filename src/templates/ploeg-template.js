@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Layout from '../components/layout'
+import Layout, { Container } from '../components/layout'
 import { SubTitle, Title } from '../components/titles'
 import { graphql, Link } from 'gatsby'
 import { ExternalLink } from '../components/text'
@@ -51,75 +51,76 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
 
   return (
     <Layout>
-      <div
-        className={
-          'flex flex-row xl:flex-col justify-between lg:items-center mb-4'
-        }
-      >
-        <Title>
-          <Link to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}>
-            {contentfulPloeg.categorie.naam}
-          </Link>
-        </Title>
-
+      <Container>
         <div
           className={
-            'w-1/2 lg:w-4/5 xl:w-full flex flex-col items-end xl:items-center'
+            'flex flex-row xl:flex-col justify-between lg:items-center mb-4'
           }
         >
-          <div
-            onClick={togglePloegMenu}
-            role="link"
-            tabIndex="0"
-            className={'lg:hidden'}
-            onKeyDown={keyDownHandler}
-          >
-            <span>{contentfulPloeg.naam}</span>
-            <FontAwesomeIcon icon={faAngleDown} className={'ml-2'} />
-          </div>
+          <Title>
+            <Link to={`${contentfulPloeg.categorie.naam.toLowerCase()}`}>
+              {contentfulPloeg.categorie.naam}
+            </Link>
+          </Title>
 
           <div
-            className={`${
-              ploegMenuShown ? 'flex' : 'hidden lg:flex'
-            } flex-col lg:flex-row lg:flex-wrap items-end lg:justify-end xl:justify-around my-2 py-2 lg:w-full xl:w-3/5 elevation-2 lg:elevation-0 bg-opacity-75 `}
+            className={
+              'w-1/2 lg:w-4/5 xl:w-full flex flex-col items-end xl:items-center'
+            }
           >
-            {dubbelTeams.map((ploeg) => (
-              <Link
-                key={ploeg.naam}
-                to={`/team/${ploeg.naam.toLowerCase()}`}
-                activeClassName={'font-bold bg-gray'}
-                className={
-                  'lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
-                }
-              >
-                {ploeg.naam}
-              </Link>
-            ))}
+            <div
+              onClick={togglePloegMenu}
+              role="link"
+              tabIndex="0"
+              className={'lg:hidden'}
+              onKeyDown={keyDownHandler}
+            >
+              <span>{contentfulPloeg.naam}</span>
+              <FontAwesomeIcon icon={faAngleDown} className={'ml-2'}/>
+            </div>
+
+            <div
+              className={`${
+                ploegMenuShown ? 'flex' : 'hidden lg:flex'
+              } flex-col lg:flex-row lg:flex-wrap items-end lg:justify-end xl:justify-around my-2 py-2 lg:w-full xl:w-3/5 elevation-2 lg:elevation-0 bg-opacity-75 `}
+            >
+              {dubbelTeams.map((ploeg) => (
+                <Link
+                  key={ploeg.naam}
+                  to={`/team/${ploeg.naam.toLowerCase()}`}
+                  activeClassName={'font-bold bg-gray'}
+                  className={
+                    'lg:self-end text-gray-dark w-full lg:w-auto py-1 pl-8 pr-4 lg:px-4 lg:py-2 lg:mx-4 border-opacity-50 bg-opacity-50'
+                  }
+                >
+                  {ploeg.naam}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={'flex flex-col lg:grid lg:grid-cols-3 xl:px-32'}>
-        <div className={'flex flex-col lg:grid-col-1'}>
-          <Title>Info</Title>
-          <div className={'flex flex-col items-center'}>
-            <SubTitle>Coach</SubTitle>
+        <div className={'flex flex-col lg:grid lg:grid-cols-3 xl:px-32'}>
+          <div className={'flex flex-col lg:grid-col-1'}>
+            <Title>Info</Title>
+            <div className={'flex flex-col items-center'}>
+              <SubTitle>Coach</SubTitle>
 
-            {contentfulPloeg.coach &&
+              {contentfulPloeg.coach &&
               contentfulPloeg.coach.map((coach) => (
                 <span key={coach}>{coach}</span>
               ))}
-            <br className={'mb-4'} />
-            <SubTitle>Training</SubTitle>
+              <br className={'mb-4'}/>
+              <SubTitle>Training</SubTitle>
 
-            {contentfulPloeg.training &&
+              {contentfulPloeg.training &&
               contentfulPloeg.training.map((training) => (
                 <span key={training}> {training}</span>
               ))}
-            <br className={'mb-4'} />
+              <br className={'mb-4'}/>
 
-            <SubTitle>Reeks</SubTitle>
-            {data.vv &&
+              <SubTitle>Reeks</SubTitle>
+              {data.vv &&
               data.vv.teamSeriesAndRankings &&
               data.vv.teamSeriesAndRankings.series.map((series) => (
                 <ExternalLink
@@ -130,17 +131,17 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
                   {series.name}
                 </ExternalLink>
               ))}
-            <br className={'mb-4'} />
+              <br className={'mb-4'}/>
+            </div>
           </div>
-        </div>
-        {data.vv && data.vv.teamCalendar && (
-          <div className={'lg:col-span-2'}>
-            <Title>Kalender</Title>
-            <table className={'w-full'}>
-              <tbody>
+          {data.vv && data.vv.teamCalendar && (
+            <div className={'lg:col-span-2'}>
+              <Title>Kalender</Title>
+              <table className={'w-full'}>
+                <tbody>
                 {data.vv.teamCalendar.map((game) => {
                   game.formattedDate = moment(game.startDate).format(
-                    'DD-MM-YYYY'
+                    'DD-MM-YYYY',
                   )
                   return (
                     <tr key={game.id}>
@@ -162,11 +163,12 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
                     </tr>
                   )
                 })}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      </Container>
     </Layout>
   )
 }
