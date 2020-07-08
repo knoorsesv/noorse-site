@@ -1,6 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { Container } from '../components/centeredContainer'
+import Layout, { Container } from '../components/layout'
 import { Title, SubTitle } from '../components/titles'
 import { List, TextBlock } from '../components/text'
 

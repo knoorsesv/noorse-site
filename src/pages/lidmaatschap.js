@@ -1,6 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { Container } from '../components/centeredContainer'
+import Layout, { Container } from '../components/layout'
 import { SubTitle, Title } from '../components/titles'
 import { ExternalLink, SpacedInfo, TextBlock } from '../components/text'
 import { graphql, useStaticQuery } from 'gatsby'

@@ -7,7 +7,7 @@ export const Card = (props) => {
       className={`${props.className} bg-white elevation-2 border rounded-md border-opacity-50 border-gray`}
     >
       {props.header && (
-        <div className={`${props.children && 'border-b border-gray'}`}>
+        <div className={``}>
           {props.image && (
             <figure className={'image m-0'}>
               <img src={props.image.localFile.publicURL} alt={'News header '} />
