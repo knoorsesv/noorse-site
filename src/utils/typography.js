@@ -6,6 +6,10 @@ const typography = new Typography({
   baseFontSize: '16px',
   googleFonts: [
     {
+      name: 'Lato',
+      styles: ['400', '500', '700'],
+    },
+    {
       name: 'Montserrat',
       styles: ['400', '500', '700'],
     },
@@ -14,7 +18,7 @@ const typography = new Typography({
       styles: ['400', '500', '700'],
     },
   ],
-  headerFontFamily: ['Rubik', 'Helvetica Neue', 'Arial', 'sans-serif'],
+  headerFontFamily: ['Lato', 'Rubik', 'Helvetica Neue', 'Arial', 'sans-serif'],
   headerWeight: '500',
   bodyFontFamily: ['Montserrat', 'Arial', 'sans-serif'],
 })
