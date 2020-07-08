@@ -36,7 +36,7 @@ export const EventList = () => {
     <div className={'flex flex-col'}>
       {formattedEvents.map((event) => (
         <div key={event.naam} className={'flex flex-row justify-between'}>
-          <span>{event.datum}</span>
+          <span className={'lg:mr-2'}>{event.datum}</span>
           <span className={'text-end'}> {event.naam}</span>
         </div>
       ))}

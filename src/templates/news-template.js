@@ -1,6 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { Container } from '../components/centeredContainer'
+import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 
 const nodeToHtml = (nodeWithType, index) => {
