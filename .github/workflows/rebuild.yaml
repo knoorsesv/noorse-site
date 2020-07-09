@@ -25,13 +25,13 @@ jobs:
       - run: yarn build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
-          CONTENTFUL_PREVIEW: ${{ toJson(github).event.inputs.preview }}
+          CONTENTFUL_PREVIEW: ${{ github.event.inputs.preview }}
           PROD: true
       - name: deploy
         uses: nwtgck/actions-netlify@v1.1.4
         with:
           publish-dir: './public'
-          production-deploy: ${{ toJson(github).event.inputs.preview === 'false'}}
+          production-deploy: ${{ github.event.inputs.preview == 'false' }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy ${{ github.ref }}'
         env:
