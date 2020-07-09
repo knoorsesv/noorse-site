@@ -3,7 +3,8 @@ const fs = require('fs')
 
 require('dotenv').config()
 
-const devBuild = process.env.PROD !== 'true'
+const contentfulEnv = process.env.PROD === 'true' ? 'master' : 'staging'
+const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 
 module.exports = {
   siteMetadata: {
@@ -42,11 +43,13 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `u0xs2v9mjzql`,
-        accessToken: devBuild
+        accessToken: contentfulPreview
           ? process.env.CONTENTFUL_TOKEN_PREVIEW
           : process.env.CONTENTFUL_TOKEN,
-        host: devBuild ? `preview.contentful.com` : 'cdn.contentful.com',
-        environment: devBuild ? `staging` : 'master',
+        host: contentfulPreview
+          ? `preview.contentful.com`
+          : 'cdn.contentful.com',
+        environment: contentfulEnv ? `staging` : 'master',
         downloadLocal: true,
       },
     },
