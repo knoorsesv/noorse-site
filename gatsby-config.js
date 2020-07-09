@@ -7,6 +7,14 @@ const runPercyTest = process.env.PERCY === 'true'
 const contentfulEnv = process.env.PROD === 'true' ? 'master' : 'staging'
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 
+console.log('Gatsby config:')
+console.log('PROD:', process.env.PROD)
+console.log('Build settings:', {
+  runPercyTest,
+  contentfulEnv,
+  contentfulPreview,
+})
+
 module.exports = {
   siteMetadata: {
     title: `K. Noorse S.V.`,
