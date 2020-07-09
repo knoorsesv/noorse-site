@@ -31,3 +31,9 @@ export const Container = ({ children }) => {
     </div>
   )
 }
+
+export const Section = ({ children, className }) => {
+  return <section className={`${className} bg-gray-light md:bg-transparent px-6 pt-4 pb-6 md:pb-2 mb-4 md:mb-2`}>
+    {children}
+  </section>
+}

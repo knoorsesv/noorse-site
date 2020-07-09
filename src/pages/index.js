@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import Layout, { Section } from '../components/layout'
 import SEO from '../components/seo'
 import { graphql, useStaticQuery } from 'gatsby'
 import Masonry from 'react-masonry-css'
@@ -102,8 +102,3 @@ export default () => {
   )
 }
 
-const Section = ({ children, className }) => {
-  return <section className={`${className} bg-gray-light md:bg-transparent px-6 pt-4 pb-6 md:pb-2 mb-4 md:mb-2`}>
-    {children}
-  </section>
-}
