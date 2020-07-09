@@ -3,6 +3,7 @@ const fs = require('fs')
 
 require('dotenv').config()
 
+const runPercyTest = process.env.PERCY === 'true'
 const contentfulEnv = process.env.PROD === 'true' ? 'master' : 'staging'
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 
@@ -31,7 +32,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    ...(devBuild ? [`gatsby-plugin-percy`] : []),
+    ...(runPercyTest ? [`gatsby-plugin-percy`] : []),
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-typography`,
