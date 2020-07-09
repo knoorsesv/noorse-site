@@ -28,12 +28,12 @@ jobs:
           CONTENTFUL_PREVIEW: ${{ toJson(github).event.inputs.preview }}
           PROD: true
       - name: deploy
-          uses: nwtgck/actions-netlify@v1.1.4
-          with:
-            publish-dir: './public'
-            production-deploy: ${{ toJson(github).event.inputs.preview === 'false'}}
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            deploy-message: 'Deploy ${{ github.ref }}'
-          env:
-            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-            NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+        uses: nwtgck/actions-netlify@v1.1.4
+        with:
+          publish-dir: './public'
+          production-deploy: ${{ toJson(github).event.inputs.preview === 'false'}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deploy ${{ github.ref }}'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
