@@ -58,7 +58,7 @@ module.exports = {
         host: contentfulPreview
           ? `preview.contentful.com`
           : 'cdn.contentful.com',
-        environment: contentfulEnv ? `staging` : 'master',
+        environment: contentfulEnv,
         downloadLocal: true,
       },
     },
