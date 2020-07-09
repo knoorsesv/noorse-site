@@ -1,6 +1,11 @@
 name: Redeploy site
 on:
   workflow_dispatch:
+    inputs:
+      preview:
+        description: 'Use staged content'
+        required: false
+        default: 'false'
 
 jobs:
   build:
