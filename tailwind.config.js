@@ -17,11 +17,12 @@ module.exports = {
           dark: '#000000b3',
           darker: '#9E9E9E',
           lighter: '#dbdbdb4d',
-          light: '#f5f5f5'
+          light: '#f5f5f5',
         },
         green: {
           default: '#098800',
           light: '#51b93c',
+          matte: '#4caf50b8',
           dark: '#005900',
         },
         yellow: {

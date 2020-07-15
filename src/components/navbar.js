@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Img from 'gatsby-image'
 import BackgroundImage from '@gvdp/gatsby-background-image'
+import { Logo } from './images'
 
 const siteMap = {
   items: [
@@ -39,13 +40,6 @@ export const Navbar = (props) => {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      logo: file(name: { eq: "Logo_highres" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -90,7 +84,9 @@ export const Navbar = (props) => {
           }
          `}
           >
-            <Logo image={images.logo} />
+            <Logo
+              className={`${transition} w-full h-full max-h-full max-w-full`}
+            />
           </div>
         </nav>
       </NavContainer>
@@ -201,19 +197,6 @@ const TopMenu = ({ fixedToTop }) => {
         </span>
       ))}
     </div>
-  )
-}
-
-const Logo = ({ image }) => {
-  return (
-    <Link to={'/'} className={'h-full w-full max-w-full max-h-full'}>
-      <Img
-        fluid={image.childImageSharp.fluid}
-        alt={'Noorse Logo'}
-        imgStyle={{ objectFit: 'contain' }}
-        className={`${transition} w-auto h-full max-h-full max-w-full`}
-      />
-    </Link>
   )
 }
 
