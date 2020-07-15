@@ -17,7 +17,7 @@ const Content = (data) => {
       >
         {data.allContentfulBestuurslid.edges.map((bestuursLid) => (
           <div
-            className={'p-2 w-4/5 md:w-1/3 sm:w-1/2'}
+            className={'py-2 w-full md:w-1/3 sm:w-1/2'}
             key={bestuursLid.node.naam}
           >
             <Card header={bestuursLid.node.naam} className={'h-full'}>

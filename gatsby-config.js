@@ -4,7 +4,10 @@ const fs = require('fs')
 require('dotenv').config()
 
 const runPercyTest = process.env.PERCY === 'true'
-const contentfulEnv = process.env.PROD === 'true' ? 'master' : 'staging'
+const contentfulEnv =
+  process.env.CONTENTFUL_ENV || process.env.PROD === 'true'
+    ? 'master'
+    : 'staging'
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 
 console.log('Gatsby config:')

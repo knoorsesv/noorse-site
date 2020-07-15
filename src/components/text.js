@@ -37,7 +37,7 @@ export const SpacedInfo = ({ items }) => {
     return (
       <div className={'flex flex-row justify-between w-full'} key={item.label}>
         <span className={'text-left font-bold'}>{item.label}</span>
-        <span className={'text-right'}>{item.value}</span>
+        <span className={'text-right overflow-hidden'}>{item.value}</span>
       </div>
     )
   })

@@ -5,17 +5,12 @@ import { Navbar } from './navbar'
 
 const Layout = ({ children, coverPhoto }) => {
   return (
-    <div className={'flex min-h-screen flex-col'}>
-      <Navbar coverPhoto={coverPhoto}/>
-      <div
-        id="content"
-        className={
-          'mt-3 mb-12'
-        }
-      >
+    <div id="page-wrapper" className={'flex flex-col'}>
+      <Navbar coverPhoto={coverPhoto} />
+      <div id="content" className={'min-h-3/4 relative'}>
         {children}
       </div>
-      <NoorseFooter/>
+      <NoorseFooter />
     </div>
   )
 }
@@ -24,8 +19,16 @@ export default Layout
 
 export const Container = ({ children }) => {
   return (
-    <div className={'flex flex-col items-center'}>
-      <div className={'px-6 lg:px-12 md:my-5 w-full md:w-5/6 xl:w-3/5'}>
+    <div
+      id="content-wrapper"
+      className={
+        'flex flex-col items-center ' +
+        'pt-6 sm:pt-8 md:mx-8 pb-12 ' +
+        'bg-gray-light ' +
+        'min-h-full h-auto w-auto relative '
+      }
+    >
+      <div className={'px-4 md:px-2 sm:w-5/6 xl:w-3/5 lg:pr-40 max-w-full'}>
         {children}
       </div>
     </div>
