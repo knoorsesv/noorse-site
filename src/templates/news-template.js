@@ -34,7 +34,7 @@ const nodeToHtml = (nodeWithType, index) => {
 
 export default ({ pageContext: { newsNode } }) => (
   <Layout>
-    <Container>
+    <Container centered={false}>
       {/*<nav className={'flex flex-row'}>*/}
       {/*  <span className={' mr-1'}>Nieuws</span>*/}
       {/*  {newsNode.category && (*/}
