@@ -80,7 +80,7 @@ export default () => {
 
   const breakpointColumnsObj = {
     default: 3,
-    900: 2,
+    1024: 2,
     500: 1,
   }
 
@@ -91,9 +91,10 @@ export default () => {
       <SEO title="Home" keywords={[`noorse`]} />
 
       <div
-        className={`flex flex-col lg:grid gap-5 grid-cols-3 md:px-12
-        lg:bg-gray-light lg:mx-8
-        
+        className={`flex flex-col lg:grid 
+        gap-2 grid-cols-3
+         md:px-12 lg:px-6 lg:mx-8
+        lg:bg-gray-light
         `}
         id="homepage-content"
       >

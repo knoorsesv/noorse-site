@@ -16,17 +16,12 @@ export const Logo = ({ className }) => {
   `)
 
   return (
-    <Link
-      to={'/'}
-      className={
-        'h-full w-full max-w-full max-h-full flex flex-col items-center'
-      }
-    >
+    <Link to={'/'} className={`${className} flex flex-col items-center`}>
       <Img
         fluid={images.logo.childImageSharp.fluid}
         alt={'Noorse Logo'}
         imgStyle={{ objectFit: 'contain' }}
-        className={`${className}`}
+        className={`h-full w-full max-w-full max-h-full`}
       />
     </Link>
   )

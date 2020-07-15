@@ -8,10 +8,10 @@ import LazyLoad from 'react-lazyload'
 import { Title } from './titles'
 import { Logo } from './images'
 
-const SponsorWithLogo = (sponsorNode) => {
+const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
     <LazyLoad once={true} key={sponsorNode.naam}>
-      <div className={'max-w-logo max-w-logo w-1/2 p-2'}>
+      <div className={`max-w-logo p-2 ${logoWidth}`}>
         <ExternalLink url={sponsorNode.websiteUrl} styled={false}>
           <Img
             fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
@@ -24,7 +24,7 @@ const SponsorWithLogo = (sponsorNode) => {
   )
 }
 
-export const SponsorList = () => {
+export const SponsorList = ({ logoWidth }) => {
   const sponsors = useStaticQuery(graphql`
     query {
       allContentfulSponsor {
@@ -51,7 +51,9 @@ export const SponsorList = () => {
         'flex flex-row flex-wrap content-between justify-center items-center w-full'
       }
     >
-      {sponsors.allContentfulSponsor.nodes.map(SponsorWithLogo)}
+      {sponsors.allContentfulSponsor.nodes.map((sponsor) =>
+        SponsorWithLogo(sponsor, logoWidth)
+      )}
     </div>
   )
 }
@@ -59,29 +61,44 @@ export const SponsorList = () => {
 const NoorseFooter = () => {
   return (
     <footer id="footer">
+      <ContactAndSponsorFooter />
+      <CopyRightFooter />
+    </footer>
+  )
+}
+
+export const ContactAndSponsorFooter = () => {
+  return (
+    <React.Fragment>
       <div
         className={
           'flex flex-col items-center ' +
-          'md:flex md:flex-row md:items-start md:justify-between ' +
-          'pt-12 pb-6 lg:px-40 md:px-6 ' +
+          'md:flex md:flex-row md:align-center md:justify-between ' +
+          'pt-12 pb-6 md:px-6 lg:px-20 xl:px-64 ' +
           'bg-green bg-opacity-75 '
         }
       >
         <Title>K. Noorse S.V.</Title>
-        <Logo className={`w-1/4 pb-12`} />
+        <Logo className={`w-1/4 pb-12 lg:p-6 lg:w-64`} />
         <div
-          className={
-            'flex flex-col bg-gray-light items-center w-screen md:w-2/3 lg:w-1/2'
-          }
+          className={`flex flex-col items-center md:hidden
+         bg-gray-light
+         w-screen py-4 md:w-2/3 lg:w-1/2`}
         >
           <SponsorList />
         </div>
-        <div className={'flex flex-col items-center pt-8'}>
+        <div
+          className={
+            'flex flex-col items-center text-center pt-8 md:p-0 md:ml-4'
+          }
+        >
           <ContactBlock />
         </div>
       </div>
-      <CopyRightFooter />
-    </footer>
+      <div className={'hidden md:block bg-gray-light w-full'}>
+        <SponsorList logoWidth={'md:w-32 lg:w-48'} />
+      </div>
+    </React.Fragment>
   )
 }
 

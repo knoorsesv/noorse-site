@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { SubTitle, Title } from '../components/titles'
 import { graphql, Link } from 'gatsby'
@@ -72,23 +72,15 @@ function CalendarTable({ calendar }) {
   )
 }
 
-export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
-  const [ploegMenuShown, showPloegMenu] = useState(false)
-
-  // const dubbelTeams = [...contentfulPloeg.categorie.ploeg]
-
-  const togglePloegMenu = () => {
-    showPloegMenu(!ploegMenuShown)
-  }
-  const keyDownHandler = (event) => {
-    if (event.key === 'Enter') {
-      togglePloegMenu()
-    }
-  }
-
+export default ({ pageContext: { contentfulPloeg }, data }) => {
   return (
     <Layout>
       <Container>
+        <CategoryTeamNavigation
+          className={'hidden md:block md:mb-8'}
+          category={contentfulPloeg.categorie}
+        />
+
         <Title>{contentfulPloeg.naam}</Title>
 
         <div className={'flex flex-col lg:grid lg:grid-cols-3 xl:px-32'}>
@@ -138,15 +130,18 @@ export default ({ pageContext: { vvInfo, contentfulPloeg }, data }) => {
           )}
         </div>
 
-        <CategoryTeamNavigation teamsInCategory={contentfulPloeg.categorie} />
+        <CategoryTeamNavigation
+          className={'md:hidden'}
+          category={contentfulPloeg.categorie}
+        />
       </Container>
     </Layout>
   )
 }
 
-const CategoryTeamNavigation = ({ teamsInCategory: category }) => {
+const CategoryTeamNavigation = ({ category, className }) => {
   return (
-    <div className={`bg-green-light bg-opacity-25 p-4`}>
+    <div className={`${className} bg-green-light bg-opacity-25 p-4`}>
       <h3 className={'w-full pb-2 border-b-2 border-black text-center'}>
         {category.naam}
       </h3>

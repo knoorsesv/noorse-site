@@ -17,7 +17,7 @@ const Layout = ({ children, coverPhoto }) => {
 
 export default Layout
 
-export const Container = ({ children }) => {
+export const Container = ({ children, centered = true }) => {
   return (
     <div
       id="content-wrapper"
@@ -25,10 +25,14 @@ export const Container = ({ children }) => {
         'flex flex-col items-center ' +
         'pt-6 sm:pt-8 md:mx-8 pb-12 ' +
         'bg-gray-light ' +
-        'min-h-full h-auto w-auto relative '
+        'min-h-3/4 h-auto w-auto relative '
       }
     >
-      <div className={'px-4 md:px-2 sm:w-5/6 xl:w-3/5 lg:pr-40 max-w-full'}>
+      <div
+        className={`px-4 md:px-2 sm:w-5/6 xl:w-3/5 ${
+          !centered && 'lg:pr-40'
+        } max-w-full`}
+      >
         {children}
       </div>
     </div>

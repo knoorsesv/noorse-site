@@ -9,9 +9,9 @@
     "@fortawesome/free-brands-svg-icons": "5.13.0",
     "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/react-fontawesome": "0.1.11",
+    "@gvdp/gatsby-background-image": "1.1.1",
     "add": "2.0.6",
     "gatsby": "2.22.9",
-    "@gvdp/gatsby-background-image": "1.1.1",
     "gatsby-image": "2.2.4",
     "gatsby-plugin-postcss": "2.2.4",
     "gatsby-plugin-react-helmet": "3.3.2",
@@ -36,9 +36,8 @@
     "tailwindcss-elevation": "0.3.4",
     "tailwindcss-gradients": "3.0.0",
     "typography": "0.16.19",
-    "yarn": "1.22.4",
-    "typography": "0.16.19",
-    "typography-theme-parnassus": "0.16.19"
+    "typography-theme-parnassus": "0.16.19",
+    "yarn": "1.22.4"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
