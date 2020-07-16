@@ -68,7 +68,7 @@ export const Navbar = (props) => {
             id="menu-container"
             className={`hidden md:block ${menuBarHeight} ${transition} ${
               !fixedToTop && 'md:self-end'
-            } xl:w-1/2 `}
+            } xl:w-60 `}
           >
             <TopMenu fixedToTop={fixedToTop} />
           </div>

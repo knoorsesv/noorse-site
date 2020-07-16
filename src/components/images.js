@@ -18,6 +18,7 @@ export const Logo = ({ className }) => {
   return (
     <Link to={'/'} className={`${className} flex flex-col items-center`}>
       <Img
+        id="logo"
         fluid={images.logo.childImageSharp.fluid}
         alt={'Noorse Logo'}
         imgStyle={{ objectFit: 'contain' }}
