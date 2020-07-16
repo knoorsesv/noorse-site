@@ -29,7 +29,7 @@ export const Container = ({ children, centered = true }) => {
       }
     >
       <div
-        className={`px-4 md:px-2 sm:w-5/6 xl:w-3/5 ${
+        className={`px-4 md:px-2 sm:w-5/6 xl:w-4/5 ${
           !centered && 'lg:pr-40'
         } max-w-full`}
       >
