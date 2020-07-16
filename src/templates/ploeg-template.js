@@ -76,14 +76,9 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
   return (
     <Layout>
       <Container>
-        <CategoryTeamNavigation
-          className={'hidden md:block md:mb-8'}
-          category={contentfulPloeg.categorie}
-        />
-
         <Title>{contentfulPloeg.naam}</Title>
 
-        <div className={'flex flex-col lg:grid lg:grid-cols-3 xl:px-32'}>
+        <div className={'flex flex-col lg:grid lg:grid-cols-3 gap-20'}>
           <div className={'flex flex-col lg:grid-col-1'}>
             <div className={'flex flex-col items-center'}>
               {contentfulPloeg.coach && (
@@ -130,10 +125,7 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
           )}
         </div>
 
-        <CategoryTeamNavigation
-          className={'md:hidden'}
-          category={contentfulPloeg.categorie}
-        />
+        <CategoryTeamNavigation category={contentfulPloeg.categorie} />
       </Container>
     </Layout>
   )
