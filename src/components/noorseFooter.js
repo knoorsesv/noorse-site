@@ -79,7 +79,7 @@ export const ContactAndSponsorFooter = () => {
         }
       >
         <Title>K. Noorse S.V.</Title>
-        <Logo className={`w-1/4 pb-12 lg:p-6 lg:w-64`} />
+        <Logo className={`w-1/4 pb-12 lg:p-6 lg:w-48`} />
         <div
           className={`flex flex-col items-center md:hidden
          bg-gray-light
@@ -96,7 +96,7 @@ export const ContactAndSponsorFooter = () => {
         </div>
       </div>
       <div className={'hidden md:block bg-gray-light w-full'}>
-        <SponsorList logoWidth={'md:w-32 lg:w-48'} />
+        <SponsorList logoWidth={'md:w-32 lg:w-40'} />
       </div>
     </React.Fragment>
   )
