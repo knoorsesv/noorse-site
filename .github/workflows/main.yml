@@ -46,6 +46,7 @@ jobs:
           PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
+          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           PROD: false
       - name: Upload built folder
         if: contains(github.event_name, 'pull_request')
