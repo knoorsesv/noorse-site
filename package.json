@@ -2,7 +2,7 @@
   "name": "gatsby-site-noorse",
   "private": true,
   "description": "Noorse website",
-  "version": "0.1.50",
+  "version": "0.1.51",
   "author": "gvdp",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.28",
