@@ -49,7 +49,6 @@ jobs:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           PROD: false
       - name: Upload built folder
-        #        if: contains(github.event_name, 'pull_request')
         uses: actions/upload-artifact@v2
         with:
           name: public
@@ -67,6 +66,7 @@ jobs:
 
   lighthouse-check:
     needs: build-dev
+    if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
     name: Lighthouse Check
     continue-on-error: true
