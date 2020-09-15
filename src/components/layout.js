@@ -3,19 +3,38 @@ import React from 'react'
 import NoorseFooter from './noorseFooter'
 import { Navbar } from './navbar'
 
-const Layout = ({ children, coverPhoto }) => (
-  <div className={'flex min-h-screen flex-col'}>
-    <Navbar coverPhoto={coverPhoto} />
-    <div
-      id="content"
-      className={
-        'bg-white relative flex-1 mt-3 md:mx-3 lg:mx-6 p-3 pl-4 md:px-4 lg:px-10 mb-12'
-      }
-    >
-      {children}
+const Layout = ({ children, coverPhoto }) => {
+  return (
+    <div id="page-wrapper" className={'flex flex-col'}>
+      <Navbar coverPhoto={coverPhoto} />
+      <div id="content" className={'min-h-3/4 relative'}>
+        {children}
+      </div>
+      <NoorseFooter />
     </div>
-    <NoorseFooter />
-  </div>
-)
+  )
+}
 
 export default Layout
+
+export const Container = ({ children, centered = true }) => {
+  return (
+    <div
+      id="content-wrapper"
+      className={
+        'flex flex-col items-center ' +
+        'pt-6 sm:pt-8 md:mx-8 pb-12 ' +
+        'bg-gray-light ' +
+        'min-h-3/4 h-auto w-auto relative '
+      }
+    >
+      <div
+        className={`px-4 md:px-2 sm:w-5/6 xl:w-4/5 ${
+          !centered && 'lg:pr-40'
+        } max-w-full`}
+      >
+        {children}
+      </div>
+    </div>
+  )
+}

@@ -1,6 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { Container } from '../components/centeredContainer'
+import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 
 const nodeToHtml = (nodeWithType, index) => {
@@ -35,7 +34,7 @@ const nodeToHtml = (nodeWithType, index) => {
 
 export default ({ pageContext: { newsNode } }) => (
   <Layout>
-    <Container>
+    <Container centered={false}>
       {/*<nav className={'flex flex-row'}>*/}
       {/*  <span className={' mr-1'}>Nieuws</span>*/}
       {/*  {newsNode.category && (*/}

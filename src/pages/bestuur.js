@@ -1,11 +1,36 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout, { Container } from '../components/layout'
 import { graphql, StaticQuery } from 'gatsby'
-import { Container } from '../components/centeredContainer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card } from '../components/cards'
 import { Title } from '../components/titles'
+
+function getCard(bestuursLid) {
+  return (
+    <Card header={bestuursLid.node.naam} className={'h-full sm:mx-2'}>
+      <div className={'text-xs'}>
+        <div className={'mb-1'}>{bestuursLid.node.title}</div>
+        {bestuursLid.node.email && (
+          <div className={'font-thin truncate'}>
+            <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
+            {bestuursLid.node.email}
+          </div>
+        )}
+        {bestuursLid.node.phone && (
+          <div className={'font-thin'}>
+            <FontAwesomeIcon
+              icon={faPhoneAlt}
+              className={'mr-1'}
+            ></FontAwesomeIcon>
+
+            {bestuursLid.node.phone}
+          </div>
+        )}
+      </div>
+    </Card>
+  )
+}
 
 const Content = (data) => {
   return (
@@ -18,33 +43,10 @@ const Content = (data) => {
       >
         {data.allContentfulBestuurslid.edges.map((bestuursLid) => (
           <div
-            className={'p-2 w-4/5 md:w-1/3 sm:w-1/2'}
+            className={'py-2 w-full md:w-1/3 sm:w-1/2'}
             key={bestuursLid.node.naam}
           >
-            <Card header={bestuursLid.node.naam} className={'h-full'}>
-              <div className={'text-xs'}>
-                <div className={'mb-1'}>{bestuursLid.node.title}</div>
-                {bestuursLid.node.email && (
-                  <div className={'font-thin'}>
-                    <FontAwesomeIcon
-                      icon={faAt}
-                      className={'mr-1'}
-                    ></FontAwesomeIcon>
-                    {bestuursLid.node.email}
-                  </div>
-                )}
-                {bestuursLid.node.phone && (
-                  <div className={'font-thin'}>
-                    <FontAwesomeIcon
-                      icon={faPhoneAlt}
-                      className={'mr-1'}
-                    ></FontAwesomeIcon>
-
-                    {bestuursLid.node.phone}
-                  </div>
-                )}
-              </div>
-            </Card>
+            {getCard(bestuursLid)}
           </div>
         ))}
       </div>

@@ -1,17 +1,34 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout, { Container } from '../components/layout'
 import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
+import { Section } from '../pages'
 
 export default ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
-      <Title>{categoryNode.naam}</Title>
-      <div className={'grid grid-cols-3'}>
-        <div className={'col-span-1 flex flex-col'}>
+      <Container>
+        <Title>{categoryNode.naam}</Title>
+        <Section className={'flex flex-col items-center'}>
+          <SubTitle>Ploegen</SubTitle>
+          {categoryNode.ploeg && (
+            <div className={'flex flex-wrap justify-around'}>
+              {categoryNode.ploeg.map((ploeg) => (
+                <Link
+                  key={ploeg.naam}
+                  to={`/team/${ploeg.naam.toLowerCase()}`}
+                  className={'underline mx-3'}
+                >
+                  {ploeg.naam}
+                </Link>
+              ))}
+            </div>
+          )}
+        </Section>
+        <Section className={'flex flex-col items-center'}>
           <SubTitle>Nieuws</SubTitle>
           {categoryNode.news && (
-            <ul className={'list-disc'}>
+            <ul className={'list-disc list-inside'}>
               {categoryNode.news.map((news) => (
                 <li key={news.title}>
                   <Link to={`/nieuws/${news.title}`} className={'underline'}>
@@ -21,21 +38,8 @@ export default ({ pageContext: { categoryNode } }) => {
               ))}
             </ul>
           )}
-        </div>
-        <div className={'col-span-2 flex flex-col'}>
-          <SubTitle>Ploegen</SubTitle>
-          {categoryNode.ploeg &&
-            categoryNode.ploeg.map((ploeg) => (
-              <Link
-                key={ploeg.naam}
-                to={`/team/${ploeg.naam.toLowerCase()}`}
-                className={'underline'}
-              >
-                {ploeg.naam}
-              </Link>
-            ))}
-        </div>
-      </div>
+        </Section>
+      </Container>
     </Layout>
   )
 }
