@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.47](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.45...v0.1.47) (2020-09-15)
+
+
+### Features
+
+* container spacing on desktop ([6cfaf0d](https://github.com/gatsbyjs/gatsby-starter-default/commit/6cfaf0daeeed74989b9c0d52cb8a1622560f516a))
+* desktop footer sizes ([92d1160](https://github.com/gatsbyjs/gatsby-starter-default/commit/92d11604d5d5784ba75f6e07c8f4ce4b40aeeb74))
+* more responsive layout for new footer ([30097ed](https://github.com/gatsbyjs/gatsby-starter-default/commit/30097edd99396ce07a7121b594cc062718bd8532))
+* restructure layout and footer components ([b810f0f](https://github.com/gatsbyjs/gatsby-starter-default/commit/b810f0f48896eb0e344864e5beccf44adae480bd))
+* spacing on team page ([54b8faf](https://github.com/gatsbyjs/gatsby-starter-default/commit/54b8fafbabcbe0628faa75ce9b0340f7abc29b9c))
+* **background:** add actual image ([42bcb90](https://github.com/gatsbyjs/gatsby-starter-default/commit/42bcb907e45b601f91a6e464f73f4c15e41c21f3))
+* **background:** add component from gvdp library ([1e0e999](https://github.com/gatsbyjs/gatsby-starter-default/commit/1e0e999d47ba11570c61e9bf0daf3f4bac9abfb0))
+* **background:** env variable in .npmrc ([00ea5e5](https://github.com/gatsbyjs/gatsby-starter-default/commit/00ea5e526df556a35c261674944b3a3c3b5568e6))
+* **background:** fetch token from github secret during build ([11477b3](https://github.com/gatsbyjs/gatsby-starter-default/commit/11477b3402dc7fe406077ed759e2210f8c44d680))
+* **background:** make card background not transparent ([329906f](https://github.com/gatsbyjs/gatsby-starter-default/commit/329906f8d546b4f3dfc7a343542d16a3b20111c3))
+* **background:** make card background not transparent ([567d865](https://github.com/gatsbyjs/gatsby-starter-default/commit/567d8652d0b5e8573a5dbd203e66f2f827775887))
+* **background:** set env in correct step ([54c97c9](https://github.com/gatsbyjs/gatsby-starter-default/commit/54c97c9bc16b34db842c1bf75145972882735217))
+* **background:** set env variables in npmrc ([b966710](https://github.com/gatsbyjs/gatsby-starter-default/commit/b966710d6f14cfb46ed73b145a39853e5e4aae07))
+* **background:** set registry in .npmrc for download repo ([65548a5](https://github.com/gatsbyjs/gatsby-starter-default/commit/65548a50407f2f5270eddcd2d1c630a2f530d5e3))
+* **background:** set yarn to always auth ([ba51fec](https://github.com/gatsbyjs/gatsby-starter-default/commit/ba51fec1f713bb9ce3e2ad69031625814639d864))
+* **background:** syntax of env variable in .npmrc ([40ad7e0](https://github.com/gatsbyjs/gatsby-starter-default/commit/40ad7e0f0db3a45e36c3b44ac8e7a61057aad3d3))
+* **background:** use plain gray background ([61b5da5](https://github.com/gatsbyjs/gatsby-starter-default/commit/61b5da5e344080694289e34c4924ddfb832a0a00))
+* add background image ([bd39554](https://github.com/gatsbyjs/gatsby-starter-default/commit/bd3955424c776de29d84f80e29987d40447008f8))
+
+
+### Bug Fixes
+
+* add npm token to prod build flow ([d8071bd](https://github.com/gatsbyjs/gatsby-starter-default/commit/d8071bdf9c408d026e8687dc4801dd281ff4d04e))
+* syntax in package json ([0d963cf](https://github.com/gatsbyjs/gatsby-starter-default/commit/0d963cf70a942681787b11cd376081a222a696f3))
+
+### [0.1.46](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.45...v0.1.46) (2020-09-15)
+
+
+### Features
+
+* container spacing on desktop ([6cfaf0d](https://github.com/gatsbyjs/gatsby-starter-default/commit/6cfaf0daeeed74989b9c0d52cb8a1622560f516a))
+* desktop footer sizes ([92d1160](https://github.com/gatsbyjs/gatsby-starter-default/commit/92d11604d5d5784ba75f6e07c8f4ce4b40aeeb74))
+* more responsive layout for new footer ([30097ed](https://github.com/gatsbyjs/gatsby-starter-default/commit/30097edd99396ce07a7121b594cc062718bd8532))
+* restructure layout and footer components ([b810f0f](https://github.com/gatsbyjs/gatsby-starter-default/commit/b810f0f48896eb0e344864e5beccf44adae480bd))
+* spacing on team page ([54b8faf](https://github.com/gatsbyjs/gatsby-starter-default/commit/54b8fafbabcbe0628faa75ce9b0340f7abc29b9c))
+* **background:** add actual image ([42bcb90](https://github.com/gatsbyjs/gatsby-starter-default/commit/42bcb907e45b601f91a6e464f73f4c15e41c21f3))
+* **background:** add component from gvdp library ([1e0e999](https://github.com/gatsbyjs/gatsby-starter-default/commit/1e0e999d47ba11570c61e9bf0daf3f4bac9abfb0))
+* **background:** env variable in .npmrc ([00ea5e5](https://github.com/gatsbyjs/gatsby-starter-default/commit/00ea5e526df556a35c261674944b3a3c3b5568e6))
+* **background:** fetch token from github secret during build ([11477b3](https://github.com/gatsbyjs/gatsby-starter-default/commit/11477b3402dc7fe406077ed759e2210f8c44d680))
+* **background:** make card background not transparent ([329906f](https://github.com/gatsbyjs/gatsby-starter-default/commit/329906f8d546b4f3dfc7a343542d16a3b20111c3))
+* **background:** make card background not transparent ([567d865](https://github.com/gatsbyjs/gatsby-starter-default/commit/567d8652d0b5e8573a5dbd203e66f2f827775887))
+* **background:** set env in correct step ([54c97c9](https://github.com/gatsbyjs/gatsby-starter-default/commit/54c97c9bc16b34db842c1bf75145972882735217))
+* **background:** set env variables in npmrc ([b966710](https://github.com/gatsbyjs/gatsby-starter-default/commit/b966710d6f14cfb46ed73b145a39853e5e4aae07))
+* **background:** set registry in .npmrc for download repo ([65548a5](https://github.com/gatsbyjs/gatsby-starter-default/commit/65548a50407f2f5270eddcd2d1c630a2f530d5e3))
+* **background:** set yarn to always auth ([ba51fec](https://github.com/gatsbyjs/gatsby-starter-default/commit/ba51fec1f713bb9ce3e2ad69031625814639d864))
+* **background:** syntax of env variable in .npmrc ([40ad7e0](https://github.com/gatsbyjs/gatsby-starter-default/commit/40ad7e0f0db3a45e36c3b44ac8e7a61057aad3d3))
+* **background:** use plain gray background ([61b5da5](https://github.com/gatsbyjs/gatsby-starter-default/commit/61b5da5e344080694289e34c4924ddfb832a0a00))
+* add background image ([bd39554](https://github.com/gatsbyjs/gatsby-starter-default/commit/bd3955424c776de29d84f80e29987d40447008f8))
+
+
+### Bug Fixes
+
+* add npm token to prod build flow ([d8071bd](https://github.com/gatsbyjs/gatsby-starter-default/commit/d8071bdf9c408d026e8687dc4801dd281ff4d04e))
+* syntax in package json ([0d963cf](https://github.com/gatsbyjs/gatsby-starter-default/commit/0d963cf70a942681787b11cd376081a222a696f3))
+
 ### [0.1.45](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.44...v0.1.45) (2020-07-09)
 
 ### [0.1.44](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.43...v0.1.44) (2020-07-08)
