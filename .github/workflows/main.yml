@@ -78,7 +78,7 @@ jobs:
           name: public
           path: public
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v2
+        uses: treosh/lighthouse-ci-action@v3.1.0
         with:
           configPath: './lighthouserc.json'
           temporaryPublicStorage: true
