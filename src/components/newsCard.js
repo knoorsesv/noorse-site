@@ -27,9 +27,9 @@ export const NewsCard = ({ newsNode }) => {
     <Card
       header={newsNode.title}
       image={newsNode.image}
+      className={'min-h-128p'}
       onClick={goToNews}
       onKeyDown={keyDownHandler}
-      className={'min-h-128p'}
       role="link"
       tabIndex="0"
     >

@@ -14,6 +14,7 @@ import {
   CopyRightFooter,
   SponsorList,
 } from '../components/noorseFooter'
+import { DisclaimerPopup } from '../components/disclaimer'
 
 const EventsSection = ({ className }) => {
   return (
@@ -86,6 +87,8 @@ export default () => {
 
   return (
     <div>
+      <DisclaimerPopup />
+
       <Navbar coverPhoto={true} />
 
       <SEO title="Home" keywords={[`noorse`]} />

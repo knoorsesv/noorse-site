@@ -7,6 +7,7 @@ import Img from 'gatsby-image'
 import LazyLoad from 'react-lazyload'
 import { Title } from './titles'
 import { Logo } from './images'
+import { DisclaimerPopup } from './disclaimer'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -130,6 +131,7 @@ export const CopyRightFooter = () => {
         'flex flex-col justify-start items-center bg-green-dark bg-opacity-75 py-3'
       }
     >
+      <DisclaimerPopup showOnPageLoad={false} fixed={false} />
       <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
       <div size={'small'}>
         Powered by{' '}

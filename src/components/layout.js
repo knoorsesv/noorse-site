@@ -2,10 +2,13 @@ import React from 'react'
 
 import NoorseFooter from './noorseFooter'
 import { Navbar } from './navbar'
+import { DisclaimerPopup } from './disclaimer'
 
 const Layout = ({ children, coverPhoto }) => {
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
+      <DisclaimerPopup />
+
       <Navbar coverPhoto={coverPhoto} />
       <div id="content" className={'min-h-3/4 relative'}>
         {children}

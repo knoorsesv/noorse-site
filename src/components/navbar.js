@@ -28,7 +28,7 @@ const siteMap = {
 }
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-96p'
-const coverSectionHeight = 'h-32v sm:h-64v'
+const coverSectionHeight = 'h-32vh sm:h-64v'
 
 export const Navbar = (props) => {
   const [fixedToTop, setFixedToTop] = useState(!props.coverPhoto)
