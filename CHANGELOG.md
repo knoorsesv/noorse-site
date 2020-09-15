@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.52](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.51...v0.1.52) (2020-09-15)
+
+
+### Features
+
+* add disclaimer popup ([399f7b4](https://github.com/gatsbyjs/gatsby-starter-default/commit/399f7b4d875907a2860b510dfc8f08941198bec3))
+
 ### [0.1.51](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.50...v0.1.51) (2020-09-15)
 
 ### [0.1.50](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.49...v0.1.50) (2020-09-15)
