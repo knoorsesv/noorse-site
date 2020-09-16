@@ -67,7 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   news.data.allContentfulNews.nodes.forEach((newsNode) => {
-    console.log('creating page for ', newsNode.title)
+    console.log('creating news page for ', newsNode.title)
     createPage({
       path: `/nieuws/${newsNode.title}`,
       component: require.resolve(`./src/templates/news-template.js`),
@@ -76,7 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   categories.data.allContentfulCategorie.nodes.forEach((categoryNode) => {
-    console.log('creating page for', categoryNode.naam)
+    console.log('creating category page for', categoryNode.naam)
     createPage({
       path: categoryNode.naam.toLowerCase(),
       component: require.resolve(`./src/templates/category-template.js`),
@@ -84,11 +84,18 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  console.log('teams op vv', vvTeams.data.vv.clubTeams)
+
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
     const vvInfo = vvTeams.data.vv.clubTeams.find(
       (vvTeam) => contentfulPloeg.naamOpVoetbalVlaanderen === vvTeam.name
     )
-    console.log('creating page for', contentfulPloeg.naam, vvInfo && vvInfo.id)
+    console.log(
+      'creating team page for',
+      contentfulPloeg.naam,
+      contentfulPloeg.naamOpVoetbalVlaanderen,
+      vvInfo && vvInfo.id
+    )
     createPage({
       path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
       component: require.resolve(`./src/templates/ploeg-template.js`),

@@ -60,7 +60,7 @@
     "build": "gatsby build",
     "serve": "serve -l 8000 public",
     "build-serve": "yarn build && yarn serve",
-    "develop": "gatsby develop",
+    "develop": "yarn preinstall && gatsby develop",
     "preinstall": "export $(xargs < .env)",
     "release": "standard-version && git push --follow-tags",
     "bump-minor": "standard-version --release-as minor",

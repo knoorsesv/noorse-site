@@ -11,7 +11,6 @@ const contentfulEnv =
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 
 console.log('Gatsby config:')
-console.log('PROD:', process.env.PROD)
 console.log('Build settings:', {
   runPercyTest,
   contentfulEnv,
