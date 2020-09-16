@@ -22,6 +22,8 @@ jobs:
         run: echo "$JOB_CONTEXT"
       - uses: actions/checkout@v2
       - uses: bahmutov/npm-install@v1
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: yarn build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
