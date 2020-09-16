@@ -3,28 +3,15 @@ import Layout, { Container } from '../components/layout'
 import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
 import { Section } from '../pages'
+import { CategoryTeamNavigation } from '../components/teamNavigation'
 
 export default ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
       <Container>
         <Title>{categoryNode.naam}</Title>
-        <Section className={'flex flex-col items-center'}>
-          <SubTitle>Ploegen</SubTitle>
-          {categoryNode.ploeg && (
-            <div className={'flex flex-wrap justify-around'}>
-              {categoryNode.ploeg.map((ploeg) => (
-                <Link
-                  key={ploeg.naam}
-                  to={`/team/${ploeg.naam.toLowerCase()}`}
-                  className={'underline mx-3'}
-                >
-                  {ploeg.naam}
-                </Link>
-              ))}
-            </div>
-          )}
-        </Section>
+
+        <CategoryTeamNavigation category={categoryNode} header={'Ploegen'} />
         <Section className={'flex flex-col items-center'}>
           <SubTitle>Nieuws</SubTitle>
           {categoryNode.news && (

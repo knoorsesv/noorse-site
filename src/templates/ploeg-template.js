@@ -4,6 +4,7 @@ import { SubTitle, Title } from '../components/titles'
 import { graphql, Link } from 'gatsby'
 import { ExternalLink } from '../components/text'
 import * as moment from 'moment'
+import { CategoryTeamNavigation } from '../components/teamNavigation'
 
 export const query = graphql`
   query($teamId: ID!) {
@@ -128,27 +129,5 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
         <CategoryTeamNavigation category={contentfulPloeg.categorie} />
       </Container>
     </Layout>
-  )
-}
-
-const CategoryTeamNavigation = ({ category, className }) => {
-  return (
-    <div className={`${className} bg-green-light bg-opacity-25 p-4`}>
-      <h3 className={'w-full pb-2 border-b-2 border-black text-center'}>
-        {category.naam}
-      </h3>
-      <div className={'flex flex-wrap justify-around'}>
-        {category.ploeg.map((ploeg) => (
-          <Link
-            key={ploeg.naam}
-            to={`/team/${ploeg.naam.toLowerCase()}`}
-            activeClassName={'font-bold'}
-            className={'text-gray-dark underline'}
-          >
-            {ploeg.naam}
-          </Link>
-        ))}
-      </div>
-    </div>
   )
 }
