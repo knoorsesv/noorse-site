@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.55](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.54...v0.1.55) (2020-09-16)
+
+
+### Features
+
+* reuse team navigation component on category page ([fd3ab22](https://github.com/gatsbyjs/gatsby-starter-default/commit/fd3ab2234f7119e0f444cadb807f68dea31105d1))
+
 ### [0.1.54](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.53...v0.1.54) (2020-09-16)
 
 
