@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.56](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.55...v0.1.56) (2020-09-16)
+
+
+### Bug Fixes
+
+* add nullcheck ([3558bb9](https://github.com/gatsbyjs/gatsby-starter-default/commit/3558bb9c854e973d23bec6c4cdedb0ba4172be0d))
+
 ### [0.1.55](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.54...v0.1.55) (2020-09-16)
 
 
