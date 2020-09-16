@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.54](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.53...v0.1.54) (2020-09-16)
+
+
+### Bug Fixes
+
+* correct link for gvoetbal in header ([7e579d5](https://github.com/gatsbyjs/gatsby-starter-default/commit/7e579d5cb4a248fa54f5a8860356b5921d9b296a))
+
 ### [0.1.53](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.52...v0.1.53) (2020-09-16)
 
 ### [0.1.52](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.51...v0.1.52) (2020-09-15)
