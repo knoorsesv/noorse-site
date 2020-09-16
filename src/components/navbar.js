@@ -22,7 +22,7 @@ const siteMap = {
     { name: 'Jeugd', link: '/jeugd' },
     { name: 'Dames', link: '/dames' },
     { name: 'Meisjes', link: '/meisjes' },
-    { name: 'G-Voetbal', link: '/gvoetbal' },
+    { name: 'G-Voetbal', link: '/g-voetbal' },
     { name: 'Contact', link: '/contact' },
   ],
 }
