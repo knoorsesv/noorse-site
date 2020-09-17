@@ -79,6 +79,7 @@ export default ({ pageContext: { newsNode } }) => {
     <Layout>
       <Container centered={false}>
         <Title>{newsNode.title}</Title>
+        {/*todo: created at is not correct for imported news messages*/}
         <h3 className={'italic mb-6 capitalize'}>{newsNode.createdAt}</h3>
         {newsNode.body.json.content.map(nodeToHtml)}
         {!!defaultAttachments.length && (
