@@ -11,6 +11,13 @@ exports.createPages = async ({ graphql, actions }) => {
           category {
             naam
           }
+          attachment {
+            description
+            title
+            file {
+              url
+            }
+          }
           title
           createdAt(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
         }
