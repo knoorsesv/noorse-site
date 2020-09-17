@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.57](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.56...v0.1.57) (2020-09-17)
+
+
+### Features
+
+* add hyperlinks and multiple images to news template ([6946587](https://github.com/gatsbyjs/gatsby-starter-default/commit/6946587bbb4f36bec6303a1b4bde97378b9bbe3d))
+* attachments on news page ([00ab043](https://github.com/gatsbyjs/gatsby-starter-default/commit/00ab043f61c8667bf551f8cbc3633eeb00074dd8))
+
 ### [0.1.56](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.55...v0.1.56) (2020-09-16)
 
 
