@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
+import { ExternalLink } from '../components/text'
 
 const nodeToHtml = (nodeWithType, index) => {
   if (nodeWithType.nodeType === 'paragraph') {
@@ -29,7 +30,19 @@ const nodeToHtml = (nodeWithType, index) => {
     )
   }
 
-  throw new Error(`Unknown node type, ${nodeWithType}`)
+  if (nodeWithType.nodeType === 'hyperlink') {
+    return (
+      <ExternalLink url={nodeWithType.data.uri} icon={false}>
+        {nodeWithType.content[0].value}
+      </ExternalLink>
+    )
+  }
+
+  if (nodeWithType.nodeType === 'heading-2') {
+    return <h2 className={'mt-4'}>{nodeWithType.content[0].value}</h2>
+  }
+
+  throw new Error(`Unknown node type, ${nodeWithType.nodeType}`)
 }
 
 const Attachments = ({ attachments }) => {
@@ -37,28 +50,62 @@ const Attachments = ({ attachments }) => {
   return (
     <React.Fragment>
       <h3 className={'mt-8'}>
-        {attachments.lenght > 1 ? 'Bijlagen' : 'Bijlage'}
+        {attachments.length > 1 ? 'Bijlagen' : 'Bijlage'}
       </h3>
       {attachments.map(AttachmentLink)}
     </React.Fragment>
   )
 }
 
+const Images = ({ images }) => {
+  return (
+    <div className={'mt-10 md:max-w-3/4 lg:max-w-1/2'}>
+      {images.map(NewsImage)}
+    </div>
+  )
+}
+const NewsImage = (image) => {
+  return <img key={image.file.url} src={image.file.url} />
+}
+
 const AttachmentLink = (attachment) => {
-  return <a href={attachment.file.url}>{attachment.title}</a>
+  return <a href={attachment.title}>{attachment.title}</a>
 }
 
 export default ({ pageContext: { newsNode } }) => {
+  const defaultAttachments = getDefaultAttachments(newsNode.attachment)
+  const images = getImageAttachments(newsNode.attachment)
   return (
     <Layout>
       <Container centered={false}>
         <Title>{newsNode.title}</Title>
         <h3 className={'italic mb-6 capitalize'}>{newsNode.createdAt}</h3>
         {newsNode.body.json.content.map(nodeToHtml)}
-        {!!newsNode.attachment && (
-          <Attachments attachments={newsNode.attachment} />
+        {!!defaultAttachments.length && (
+          <Attachments attachments={defaultAttachments} />
         )}
+        {!!images.length && <Images images={images} />}
       </Container>
     </Layout>
   )
 }
+
+const getDefaultAttachments = (attachments) => {
+  return (
+    !!attachments &&
+    attachments.filter(
+      (attachment) => !imageFileTypes.includes(attachment.file.contentType)
+    )
+  )
+}
+
+const getImageAttachments = (attachments) => {
+  return (
+    !!attachments &&
+    attachments.filter((attachment) =>
+      imageFileTypes.includes(attachment.file.contentType)
+    )
+  )
+}
+
+const imageFileTypes = ['image/jpeg', 'image/png']

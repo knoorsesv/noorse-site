@@ -13,7 +13,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
     <LazyLoad once={true} key={sponsorNode.naam}>
       <div className={`max-w-logo p-2 ${logoWidth}`}>
-        <ExternalLink url={sponsorNode.websiteUrl} styled={false}>
+        <ExternalLink url={sponsorNode.websiteUrl} styled={false} icon={false}>
           <Img
             fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
             alt={'logo'}
@@ -110,7 +110,11 @@ export const ContactBlock = () => {
       <span>03/543.xx.xx</span>
       <span>info@noorse.be</span>
       <div className={'flex flex-row items-center mt-6 space-x-3'}>
-        <ExternalLink url="https://www.facebook.com/noorsesv/" styled={false}>
+        <ExternalLink
+          url="https://www.facebook.com/noorsesv/"
+          styled={false}
+          icon={false}
+        >
           <FontAwesomeIcon size="2x" icon={faFacebook} />
         </ExternalLink>
         {/*<ExternalLink*/}
