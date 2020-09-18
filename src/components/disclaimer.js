@@ -51,6 +51,10 @@ export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
     setPopupShown(true)
   }
 
+  if (process.env.DISCLAIMER === 'off') {
+    return <React.Fragment></React.Fragment>
+  }
+
   return popupShown ? (
     <FullTextPopup hideDisclaimer={hideDisclaimer} />
   ) : (

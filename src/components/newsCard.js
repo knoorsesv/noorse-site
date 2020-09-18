@@ -29,6 +29,12 @@ export const NewsCard = ({ newsNode }) => {
       className={'min-h-128p'}
       onClick={goToNews}
     >
+      <div className={'flex justify-between mb-3 text-gray-darker text-sm'}>
+        {newsNode.category && (
+          <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
+        )}
+        <div className={'text-center'}>{newsNode.createdAt}</div>
+      </div>
       <div className={'text-center'}>{newsNode.blurb || snippet}</div>
     </ClickableCard>
   )

@@ -1,8 +1,5 @@
 import React from 'react'
 import SEO from '../components/seo'
-import { graphql, useStaticQuery } from 'gatsby'
-import Masonry from 'react-masonry-css'
-import { NewsCard } from '../components/newsCard'
 import { ExternalLink, TextBlock } from '../components/text'
 import { EventList } from '../components/events'
 import { Card } from '../components/cards'
@@ -15,6 +12,7 @@ import {
   SponsorList,
 } from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
+import { NewsList } from '../components/newsList'
 
 const EventsSection = ({ className }) => {
   return (
@@ -60,26 +58,7 @@ const SponsorSection = ({ className }) => {
 }
 
 export default () => {
-  const newsItems = useStaticQuery(graphql`
-    query {
-      allContentfulNews(sort: { fields: createdAt, order: DESC }) {
-        nodes {
-          blurb
-          title
-          body {
-            json
-          }
-          image {
-            localFile {
-              publicURL
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const breakpointColumnsObj = {
+  const newsListBreakPoints = {
     default: 3,
     1024: 2,
     500: 1,
@@ -104,17 +83,7 @@ export default () => {
         <div className={'lg:col-span-2'}>
           <Section id="news-list">
             <Title>Nieuws</Title>
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
-              columnClassName="masonry-column"
-            >
-              {newsItems.allContentfulNews.nodes.map((node) => (
-                <div key={node.title} className={'py-2'}>
-                  <NewsCard newsNode={node} />
-                </div>
-              ))}
-            </Masonry>
+            {NewsList(newsListBreakPoints)}
           </Section>
           <SponsorSection />
         </div>
