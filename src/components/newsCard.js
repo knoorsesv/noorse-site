@@ -6,12 +6,15 @@ export const NewsCard = ({ newsNode }) => {
   let snippet
   if (!newsNode.blurb) {
     const firstParagraph = newsNode.body.json.content[0].content[0].value
-    console.log(firstParagraph)
     const endOfSecondSentence = firstParagraph.indexOf(
       '.',
       firstParagraph.indexOf('.') + 1
     )
-    snippet = `${firstParagraph.substr(0, endOfSecondSentence)} ...`
+    snippet = `${
+      endOfSecondSentence > 0
+        ? firstParagraph.substr(0, endOfSecondSentence)
+        : firstParagraph
+    }...`
   }
 
   const goToNews = () => {
