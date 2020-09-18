@@ -35,8 +35,18 @@ export const query = graphql`
 `
 
 function CalendarTable({ calendar }) {
-  function noorseOrTeam(team) {
-    return team.name.toLowerCase().includes('noorse') ? 'Noorse' : team.name
+  function titleCase(str) {
+    return str
+      .toLowerCase()
+      .split(' ')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+  }
+
+  function formatTeamName(team) {
+    return team.name.toLowerCase().includes('noorse')
+      ? 'Noorse'
+      : titleCase(team.name)
   }
 
   return (
@@ -49,10 +59,10 @@ function CalendarTable({ calendar }) {
               <td className={'text-sm px-0'}>{game.formattedDate}</td>
               <td className={'flex flex-col'}>
                 <span className={'truncate'}>
-                  {noorseOrTeam(game.homeTeam)}
+                  {formatTeamName(game.homeTeam)}
                 </span>
                 <span className={'truncate'}>
-                  {noorseOrTeam(game.awayTeam)}
+                  {formatTeamName(game.awayTeam)}
                 </span>
               </td>
               <td>
