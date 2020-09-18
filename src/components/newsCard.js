@@ -1,11 +1,12 @@
 import { navigate } from 'gatsby-link'
 import React from 'react'
-import { Card } from './cards'
+import { ClickableCard } from './cards'
 
 export const NewsCard = ({ newsNode }) => {
   let snippet
   if (!newsNode.blurb) {
     const firstParagraph = newsNode.body.json.content[0].content[0].value
+    console.log(firstParagraph)
     const endOfSecondSentence = firstParagraph.indexOf(
       '.',
       firstParagraph.indexOf('.') + 1
@@ -17,23 +18,15 @@ export const NewsCard = ({ newsNode }) => {
     navigate(`/nieuws/${newsNode.title}`)
   }
 
-  const keyDownHandler = (event) => {
-    if (event.key === 'Enter') {
-      goToNews()
-    }
-  }
   // todo: maybe max height on card corresponding to 2x small card?
   return (
-    <Card
+    <ClickableCard
       header={newsNode.title}
       image={newsNode.image}
       className={'min-h-128p'}
       onClick={goToNews}
-      onKeyDown={keyDownHandler}
-      role="link"
-      tabIndex="0"
     >
       <div className={'text-center'}>{newsNode.blurb || snippet}</div>
-    </Card>
+    </ClickableCard>
   )
 }

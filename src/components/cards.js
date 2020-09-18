@@ -1,4 +1,5 @@
 import React from 'react'
+import { Clickable } from './a11y'
 
 export const Card = (props) => {
   return (
@@ -19,4 +20,8 @@ export const Card = (props) => {
       {props.children && <div className={'w-full p-4'}>{props.children}</div>}
     </div>
   )
+}
+
+export const ClickableCard = ({ onClick, ...props }) => {
+  return Clickable(Card, onClick, props)
 }

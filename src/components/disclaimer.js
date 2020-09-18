@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamation } from '@fortawesome/free-solid-svg-icons'
+import { Clickable } from './a11y'
 
 const whiteText = 'text-white text-sm text-center'
 
@@ -26,12 +27,12 @@ const FullTextPopup = ({ hideDisclaimer }) => (
   </div>
 )
 
-const BetaBanner = ({ showDisclaimer, fixed }) => (
+const BetaBanner = ({ showDisclaimer, fixed, ...props }) => (
   <div
+    {...props}
     className={`z-60 bg-green-dark w-full ${
       fixed && 'absolute'
     }  h-12 flex justify-between items-center px-8 mb-4`}
-    onClick={showDisclaimer}
   >
     <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
     <span>BETA versie</span>
@@ -50,13 +51,9 @@ export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
     setPopupShown(true)
   }
 
-  if (process.env.DISCLAIMER === 'off') {
-    return <React.Fragment></React.Fragment>
-  }
-
   return popupShown ? (
     <FullTextPopup hideDisclaimer={hideDisclaimer} />
   ) : (
-    <BetaBanner showDisclaimer={showDisclaimer} fixed={fixed} />
+    Clickable(BetaBanner, showDisclaimer, { fixed })
   )
 }

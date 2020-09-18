@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { SubTitle, Title } from '../components/titles'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { ExternalLink } from '../components/text'
 import * as moment from 'moment'
 import { CategoryTeamNavigation } from '../components/teamNavigation'

@@ -65,7 +65,7 @@ const Images = ({ images }) => {
   )
 }
 const NewsImage = (image) => {
-  return <img key={image.file.url} src={image.file.url} />
+  return <img key={image.file.url} src={image.file.url} alt={image.title} />
 }
 
 const AttachmentLink = (attachment) => {
