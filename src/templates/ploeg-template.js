@@ -49,30 +49,40 @@ function CalendarTable({ calendar }) {
       : titleCase(team.name)
   }
 
+  function notCancelled(game) {
+    return game.outcome.status !== 'postponed'
+  }
+
   return (
-    <table className={'w-full table-auto border-separate text-sm'}>
+    <table className={'w-full table-fixed border-separate text-sm lg:w-4/5'}>
       <tbody>
-        {calendar.map((game) => {
-          game.formattedDate = moment(game.startDate).format('DD-MM-YYYY')
+        {calendar.filter(notCancelled).map((game) => {
+          game.formattedDate = moment(game.startDate).format('DD/MM')
+          game.time = moment(game.startDate).format('HH:mm')
           return (
             <tr key={game.id} className={'pb-1'}>
-              <td className={'text-sm px-0'}>{game.formattedDate}</td>
-              <td className={'flex flex-col'}>
-                <span className={'truncate'}>
-                  {formatTeamName(game.homeTeam)}
-                </span>
-                <span className={'truncate'}>
-                  {formatTeamName(game.awayTeam)}
-                </span>
+              <td className={'text-sm w-2/12'}>
+                <div>{game.formattedDate}</div>
+                <div>{game.time}</div>
               </td>
-              <td>
+              <td className={'w-7/12 px-0'}>
+                <div className={'flex flex-col'}>
+                  <span className={'truncate'}>
+                    {formatTeamName(game.homeTeam)}
+                  </span>
+                  <span className={'truncate'}>
+                    {formatTeamName(game.awayTeam)}
+                  </span>
+                </div>
+              </td>
+              <td className={'w-1/12 px-1 text-center'}>
                 {game.outcome.status === 'finished' ? (
-                  <div className={'flex flex-col'}>
+                  <div className={'flex flex-col items-center'}>
                     <span>{game.outcome.homeTeamGoals}</span>
                     <span>{game.outcome.awayTeamGoals}</span>
                   </div>
                 ) : (
-                  <span className={'align-middle'}>-</span>
+                  <span>-</span>
                 )}
               </td>
             </tr>
