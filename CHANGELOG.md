@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.58](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.57...v0.1.58) (2020-09-18)
+
+
+### Features
+
+* add component to decorate components with a11y attributes ([1c90905](https://github.com/gatsbyjs/gatsby-starter-default/commit/1c909055b995ef44853a256763c912dc4eeb626a))
+* dont show disclaimer in dev mode ([423bf26](https://github.com/gatsbyjs/gatsby-starter-default/commit/423bf26978b6f17c24c80c19846a8ddac0c3a9b2))
+* extract news list component and show category and date ([897cfde](https://github.com/gatsbyjs/gatsby-starter-default/commit/897cfde30b99b052a90d7a243dc0603cc723c7bc))
+
+
+### Bug Fixes
+
+* show paragraph as snippet if there are no 2 sentences ([b41ef0f](https://github.com/gatsbyjs/gatsby-starter-default/commit/b41ef0ff16ce061b888c9cc041d94b928cd3e430))
+
 ### [0.1.57](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.56...v0.1.57) (2020-09-17)
 
 
