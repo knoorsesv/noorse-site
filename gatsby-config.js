@@ -24,11 +24,11 @@ module.exports = {
     author: `@gvdp`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
+        trackingId: process.env.GA_TRACKING_ID,
         trackingId: 'UA-108347831-2',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: true,
@@ -43,6 +43,7 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
