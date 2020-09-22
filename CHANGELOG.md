@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.60](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.59...v0.1.60) (2020-09-22)
+
+
+### Bug Fixes
+
+* ga config ([9dc3534](https://github.com/gatsbyjs/gatsby-starter-default/commit/9dc3534723776d2686b07270cce9eec03f7ea5d6))
+* hide ga tracking id ([46e5af8](https://github.com/gatsbyjs/gatsby-starter-default/commit/46e5af8624d06d5fbdf934013c9b51feaf5681d7))
+
 ### [0.1.59](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.58...v0.1.59) (2020-09-22)
 
 
