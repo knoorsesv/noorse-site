@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.59](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.58...v0.1.59) (2020-09-22)
+
+
+### Features
+
+* add google analytics ([9be9cf3](https://github.com/gatsbyjs/gatsby-starter-default/commit/9be9cf3d1ac1f1504aa5fe9c609da6af866e4b94))
+* improve team calendar formatting ([0ecc623](https://github.com/gatsbyjs/gatsby-starter-default/commit/0ecc623780f6d0f033bc6fda0c5f4bba2013da71))
+* properly case team names in calendar: ([7504a67](https://github.com/gatsbyjs/gatsby-starter-default/commit/7504a673f22dacf13c60d4ebb40409a2ad8f31f7))
+
 ### [0.1.58](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.57...v0.1.58) (2020-09-18)
 
 
