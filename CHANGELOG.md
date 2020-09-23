@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.61](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.60...v0.1.61) (2020-09-23)
+
+
+### Features
+
+* add favicon ([fecd50f](https://github.com/gatsbyjs/gatsby-starter-default/commit/fecd50f9608328bba2aa85b09f46379340336554))
+* correct contact info ([72a8c85](https://github.com/gatsbyjs/gatsby-starter-default/commit/72a8c850e3840300b0ee5460c3bbc9e9cf127961))
+* remove momentjs ([bd1544c](https://github.com/gatsbyjs/gatsby-starter-default/commit/bd1544c1821dc44b7bcb2d6865c1f9f4028834b9))
+
 ### [0.1.60](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.59...v0.1.60) (2020-09-22)
 
 
