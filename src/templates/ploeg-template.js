@@ -3,7 +3,7 @@ import Layout, { Container } from '../components/layout'
 import { SubTitle, Title } from '../components/titles'
 import { graphql } from 'gatsby'
 import { ExternalLink } from '../components/text'
-import * as moment from 'moment'
+import { format, parseISO } from 'date-fns'
 import { CategoryTeamNavigation } from '../components/teamNavigation'
 
 export const query = graphql`
@@ -57,8 +57,9 @@ function CalendarTable({ calendar }) {
     <table className={'w-full table-fixed border-separate text-sm lg:w-4/5'}>
       <tbody>
         {calendar.filter(notCancelled).map((game) => {
-          game.formattedDate = moment(game.startDate).format('DD/MM')
-          game.time = moment(game.startDate).format('HH:mm')
+          const parsedDate = parseISO(game.startDate)
+          game.formattedDate = format(parsedDate, 'dd/MM')
+          game.time = format(parsedDate, 'HH:mm')
           return (
             <tr key={game.id} className={'pb-1'}>
               <td className={'text-sm w-2/12'}>
