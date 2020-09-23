@@ -43,9 +43,6 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "11.0.0",
-    "@percy/agent": "^0.28.2",
-    "backstopjs": "5.0.6",
-    "gatsby-plugin-percy": "0.1.4",
     "husky": "4.2.5",
     "prettier": "2.0.5",
     "pretty-quick": "3.0.2",
