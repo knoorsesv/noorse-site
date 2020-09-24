@@ -61,6 +61,9 @@ jobs:
           production-deploy: ${{ false }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy ${{ github.ref }}'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
 
   cypress-test:
     needs: build-dev
