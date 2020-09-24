@@ -1201,17 +1201,6 @@
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.0.tgz#0eee6373e11418bfe0b5638f654df7a4ca6a3950"
   integrity sha512-wYn6r8zVZyQJ6rQaALBEln5B1pzxb9shV5Ef97kTvn6yVGrqyXVnDqnU24MXnFubR+rZjBY9NWuxX3FB2sTsjg==
 
-"@gvdp/gatsby-background-image@1.1.1":
-  version "1.1.1"
-  resolved "https://npm.pkg.github.com/download/@gvdp/gatsby-background-image/1.1.1/2dc37987d129632089cc97011f6c578d80c4d1bf650fda7efac0c490a9b05760#c25488a631d265458f08e00570cc93ef18572d4b"
-  integrity sha512-L7Hs7n9GTRyxLlyDVgR+DrfbnGxKA5e3dpcew8G5/eE+FJdO1TGUtmZl0M72ovVygK6zn6PIsPAygniufPi34w==
-  dependencies:
-    "@babel/runtime" "^7.9.2"
-    filter-invalid-dom-props "^2.0.0"
-    global "^4.4.0"
-    short-uuid "^3.1.1"
-    sort-media-queries "^0.2.2"
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -6717,6 +6706,17 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
+
+gatsby-background-image@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-1.1.1.tgz#491ae4966fe573d67d34bb04f765b51bbf5f74ed"
+  integrity sha512-W56ETGF6zz35JlXZPmRq0HWuuYQ2wFFDC/DDHyRWuZ/uRSwpg9ZTOHiTW9EQI5Si9FSfD8U5ePnW+do/ToZPtA==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    filter-invalid-dom-props "^2.0.0"
+    global "^4.4.0"
+    short-uuid "^3.1.1"
+    sort-media-queries "^0.2.2"
 
 gatsby-cli@^2.12.34:
   version "2.12.34"

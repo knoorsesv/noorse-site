@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import BackgroundImage from '@gvdp/gatsby-background-image'
+import BackgroundImage from 'gatsby-background-image'
 import { Logo } from './images'
 
 const siteMap = {
