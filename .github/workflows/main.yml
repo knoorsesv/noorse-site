@@ -75,7 +75,7 @@ jobs:
         uses: actions/checkout@v1
       - uses: cypress-io/github-action@v2
         with:
-          config: baseUrl=${{steps.deploy-dev.outputs.deploy-url}}
+          config: baseUrl=https://5f6cf78957410c4131d5dd3a--modest-golick-edc673.netlify.app
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
