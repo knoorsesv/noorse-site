@@ -47,7 +47,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
-          PROD: false
+          CONTENTFUL_ENV: staging
       - name: Upload built folder
         uses: actions/upload-artifact@v2
         with:
