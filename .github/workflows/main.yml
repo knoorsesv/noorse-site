@@ -76,6 +76,8 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           config: baseUrl=${{steps.deploy-dev.outputs.deploy-url}}
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   lighthouse-check:
     needs: build-dev
