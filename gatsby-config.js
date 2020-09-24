@@ -3,16 +3,12 @@ const fs = require('fs')
 
 require('dotenv').config()
 
-const runPercyTest = process.env.PERCY === 'true'
-console.log(process.env.CONTENTFUL_ENV || 'wanuweer')
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||
   (process.env.PROD === 'true' ? 'master' : 'staging')
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 
-console.log('Gatsby config:')
 console.log('Build settings:', {
-  runPercyTest,
   contentfulEnv,
   contentfulPreview,
 })
@@ -57,7 +53,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    ...(runPercyTest ? [`gatsby-plugin-percy`] : []),
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-typography`,

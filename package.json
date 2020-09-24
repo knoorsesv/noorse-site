@@ -41,6 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "11.0.0",
+    "cypress": "^5.2.0",
     "husky": "4.3.0",
     "prettier": "2.0.5",
     "pretty-quick": "3.0.2",
@@ -52,18 +53,13 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "bump-minor": "standard-version --release-as minor",
     "build-serve": "yarn build && yarn serve",
+    "cypress:open": "cypress open",
     "develop": "yarn preinstall && gatsby develop",
     "preinstall": "export $(xargs < .env)",
     "release": "standard-version && git push --follow-tags",
-    "bump-minor": "standard-version --release-as minor",
-    "test": "backstop test --config backstop_data/backstop.json ",
-    "test:approve": "backstop approve --config backstop_data/backstop.json",
-    "test:build-docker": "docker build -t backstop-local ./backstop_data",
-    "test:built": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test build-serve http://localhost:8000 test:docker",
-    "test:docker": "docker run -v $(pwd)/:/backstop -w /backstop --rm backstop-local:latest backstop test --config backstop_data/backstop.json",
-    "test:ci": "set WAIT_ON_TIMEOUT=300000 && start-server-and-test serve http://localhost:8000 test"
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
