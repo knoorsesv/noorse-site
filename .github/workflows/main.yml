@@ -78,7 +78,9 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           config: baseUrl=${{needs.build-dev.outputs.dev-url}}
+          record: true
         env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   lighthouse-check:
