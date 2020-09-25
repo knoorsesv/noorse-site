@@ -1,10 +1,13 @@
 {
   "ci": {
     "collect": {
-      "numberOfRuns": 2,
+      "numberOfRuns": 3,
       "settings": {
         "configPath": "./lighthouse-config.js"
       }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended"
     }
   }
 }
