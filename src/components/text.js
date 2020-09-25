@@ -17,6 +17,7 @@ export const ExternalLink = ({
   url,
   icon = true,
   styled = true,
+  altText = '',
   textColor = '',
 }) => {
   //todo: colors when styled
@@ -24,6 +25,7 @@ export const ExternalLink = ({
     <a
       className={`${styled && 'underline'} ${textColor || 'text-gray-dark'}`}
       href={url}
+      aria-label={`${altText}`}
       target="_blank"
       rel="noopener noreferrer"
     >
