@@ -93,7 +93,6 @@ jobs:
     if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
     name: Lighthouse Check
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v1
       - name: Audit URLs using Lighthouse
