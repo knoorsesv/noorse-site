@@ -9,7 +9,13 @@
     "assert": {
       "preset": "lighthouse:no-pwa",
       "assertions": {
-        "is-crawlable": "off"
+        "is-crawlable": "off",
+        "uses-responsive-images": [
+          "warn",
+          { "maxLength": 0 },
+          "error",
+          { "maxLength": 5 }
+        ]
       }
     }
   }
