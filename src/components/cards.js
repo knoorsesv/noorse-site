@@ -10,8 +10,11 @@ export const Card = (props) => {
       {props.header && (
         <div className={``}>
           {props.image && (
-            <figure className={'image m-0'}>
-              <img src={props.image.localFile.publicURL} alt={'News header '} />
+            <figure className={'image m-0 w-full'}>
+              <img
+                src={props.image.localFile.publicURL}
+                alt={'News Header Image'}
+              />
             </figure>
           )}
           <h2 className={'text-center p-3 m-0'}>{props.header}</h2>
