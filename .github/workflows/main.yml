@@ -89,7 +89,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   lighthouse-check:
-    needs: build-dev
+    needs: build-prod
     if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
     name: Lighthouse Check
