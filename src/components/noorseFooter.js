@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { ExternalLink } from './text'
 import Img from 'gatsby-image'
 import LazyLoad from 'react-lazyload'
 import { Title } from './titles'
 import { Logo } from './images'
 import { DisclaimerPopup } from './disclaimer'
+import { ContactInfo } from './contact'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -93,42 +92,13 @@ export const ContactAndSponsorFooter = () => {
             'flex flex-col items-center text-center pt-8 md:p-0 md:ml-4'
           }
         >
-          <ContactBlock />
+          <ContactInfo />
         </div>
       </div>
       <div className={'hidden md:block bg-gray-light w-full'}>
         <SponsorList logoWidth={'md:w-32 lg:w-40'} />
       </div>
     </React.Fragment>
-  )
-}
-
-export const ContactBlock = () => {
-  return (
-    <div className={`flex flex-col items-center`}>
-      <span>Frans de Peuterstraat 50</span>
-      <span>2950 Kapellen</span>
-      {/*todo: move to contentful*/}
-      <span>03/664.44.11</span>
-      <span>
-        <a href="mailto:info@noorse.be">info@noorse.be </a>
-      </span>
-      <div className={'flex flex-row items-center mt-6 space-x-3'}>
-        <ExternalLink
-          url="https://www.facebook.com/noorsesv/"
-          styled={false}
-          icon={false}
-        >
-          <FontAwesomeIcon size="2x" icon={faFacebook} />
-        </ExternalLink>
-        {/*<ExternalLink*/}
-        {/*  url="https://github.com/gvdp/noorse-site"*/}
-        {/*  styled={false}*/}
-        {/*>*/}
-        {/*  <FontAwesomeIcon size="2x" icon={faGithub} />*/}
-        {/*</ExternalLink>*/}
-      </div>
-    </div>
   )
 }
 
