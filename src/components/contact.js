@@ -16,6 +16,7 @@ export const ContactInfo = () => {
       <div className={'flex flex-row items-center mt-6 space-x-3'}>
         <ExternalLink
           url="https://www.facebook.com/noorsesv/"
+          altText={'Facebook'}
           styled={false}
           icon={false}
         >
