@@ -19,7 +19,11 @@ export const NewsList = (breakpointColumnsObj) => {
           }
           image {
             localFile {
-              publicURL
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Clickable } from './a11y'
+import Img from 'gatsby-image'
 
 export const Card = (props) => {
   return (
@@ -10,12 +11,11 @@ export const Card = (props) => {
       {props.header && (
         <div className={``}>
           {props.image && (
-            <figure className={'image m-0 w-full'}>
-              <img
-                src={props.image.localFile.publicURL}
-                alt={'News Header Image'}
-              />
-            </figure>
+            <Img
+              fluid={props.image.localFile.childImageSharp.fluid}
+              alt={'Card Header Image'}
+              imgStyle={{ objectFit: 'scale-down' }}
+            />
           )}
           <h2 className={'text-center p-3 m-0'}>{props.header}</h2>
         </div>
