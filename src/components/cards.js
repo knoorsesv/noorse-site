@@ -14,7 +14,7 @@ export const Card = (props) => {
               <img src={props.image.localFile.publicURL} alt={'News header '} />
             </figure>
           )}
-          <h3 className={'text-center p-3 m-0'}>{props.header}</h3>
+          <h2 className={'text-center p-3 m-0'}>{props.header}</h2>
         </div>
       )}
       {props.children && <div className={'w-full p-4'}>{props.children}</div>}
