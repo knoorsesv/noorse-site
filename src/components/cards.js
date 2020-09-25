@@ -12,7 +12,7 @@ export const Card = (props) => {
         <div className={``}>
           {props.image && (
             <Img
-              fluid={props.image.localFile.childImageSharp.fluid}
+              fluid={props.image.fluid}
               alt={'Card Header Image'}
               imgStyle={{ objectFit: 'scale-down' }}
             />
