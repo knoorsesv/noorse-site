@@ -106,14 +106,16 @@ export const CopyRightFooter = () => {
   return (
     <div
       className={
-        'flex flex-col justify-start items-center bg-green-dark bg-opacity-75 py-3'
+        'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
       }
     >
       <DisclaimerPopup showOnPageLoad={false} fixed={false} />
       <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
       <div size={'small'}>
         Powered by{' '}
-        <ExternalLink url="https://www.gatsbyjs.org">Gatsby</ExternalLink>
+        <ExternalLink textColor={'text-black'} url="https://www.gatsbyjs.org">
+          Gatsby
+        </ExternalLink>
       </div>
     </div>
   )

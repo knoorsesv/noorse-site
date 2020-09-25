@@ -12,11 +12,17 @@ export const List = ({ children }) => {
   return <ul className={'list-disc list-inside mb-6'}>{children}</ul>
 }
 
-export const ExternalLink = ({ children, url, icon = true, styled = true }) => {
+export const ExternalLink = ({
+  children,
+  url,
+  icon = true,
+  styled = true,
+  textColor = '',
+}) => {
   //todo: colors when styled
   return (
     <a
-      className={`text-gray-dark ${styled && 'underline'}`}
+      className={`${styled && 'underline'} ${textColor || 'text-gray-dark'}`}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
