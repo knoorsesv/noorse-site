@@ -26,7 +26,7 @@ describe('Home Page', function () {
     })
 
     it('should hide disclaimer on clicking hide', () => {
-      cy.contains('Verbergen').click()
+      cy.contains('Verbergen').should('be.enabled').click()
 
       cy.contains(disclaimerText).should('not.be.visible')
       cy.contains('BETA versie').should('be.visible')
