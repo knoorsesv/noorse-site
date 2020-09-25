@@ -6,15 +6,15 @@ const typography = new Typography({
   baseFontSize: '18px',
   googleFonts: [
     {
-      name: 'Lato',
+      name: 'Lato&display=swap',
       styles: ['400', '500', '700'],
     },
     {
-      name: 'Montserrat',
+      name: 'Montserrat&display=swap',
       styles: ['400', '500', '700'],
     },
     {
-      name: 'Rubik',
+      name: 'Rubik&display=swap',
       styles: ['400', '500', '700'],
     },
   ],
