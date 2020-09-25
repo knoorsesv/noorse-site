@@ -35,7 +35,7 @@ const BetaBanner = ({ showDisclaimer, fixed, ...props }) => (
     }  h-12 flex justify-between items-center px-8 mb-4`}
   >
     <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
-    <span>BETA versie</span>
+    <span className={'text-white'}>BETA versie</span>
     <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
   </div>
 )
@@ -51,9 +51,9 @@ export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
     setPopupShown(true)
   }
 
-  if (process.env.DISCLAIMER === 'off') {
-    return <React.Fragment></React.Fragment>
-  }
+  // if (process.env.DISCLAIMER === 'off') {
+  //   return <React.Fragment></React.Fragment>
+  // }
 
   return popupShown ? (
     <FullTextPopup hideDisclaimer={hideDisclaimer} />
