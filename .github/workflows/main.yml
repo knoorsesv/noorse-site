@@ -8,7 +8,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  build-prod:
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
@@ -22,8 +22,9 @@ jobs:
           GA_TRACKING_ID: ${{secrets.GA_TRACKING_ID}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           PROD: true
-      - name: deploy
+      - name: Deploy
         uses: nwtgck/actions-netlify@v1
+        id: deploy-prod
         with:
           publish-dir: './public'
           production-deploy: ${{ startsWith(github.ref, 'refs/tags/v') }}
@@ -32,6 +33,8 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+    outputs:
+      prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
 
   build-dev:
     runs-on: ubuntu-latest
@@ -93,14 +96,11 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v1
-      - name: Download built folder
-        uses: actions/download-artifact@v2
-        with:
-          name: public
-          path: public
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
+          urls: |
+            ${{needs.build-prod.outputs.prod-url}}
           configPath: './lighthouserc.json'
           temporaryPublicStorage: true
         env:
