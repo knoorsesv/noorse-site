@@ -18,12 +18,8 @@ export const NewsList = (breakpointColumnsObj) => {
             naam
           }
           image {
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
         }
