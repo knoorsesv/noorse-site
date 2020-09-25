@@ -6,13 +6,10 @@ import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
-import {
-  ContactBlock,
-  CopyRightFooter,
-  SponsorList,
-} from '../components/noorseFooter'
+import { CopyRightFooter, SponsorList } from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
+import { ContactInfo } from '../components/contact'
 
 const EventsSection = ({ className }) => {
   return (
@@ -26,6 +23,7 @@ const EventsSection = ({ className }) => {
     </Section>
   )
 }
+
 const TrooperSection = ({ className }) => {
   return (
     <Section className={className}>
@@ -57,13 +55,30 @@ const SponsorSection = ({ className }) => {
   )
 }
 
-export default () => {
+const NieuwsSection = ({ className }) => {
   const newsListBreakPoints = {
     default: 3,
     1024: 2,
     500: 1,
   }
+  return (
+    <Section id="news-list" className={className}>
+      <Title>Nieuws</Title>
+      {NewsList(newsListBreakPoints)}
+    </Section>
+  )
+}
 
+const ContactSection = ({ className }) => {
+  return (
+    <Section className={className}>
+      <Title>Contact</Title>
+      <ContactInfo />
+    </Section>
+  )
+}
+
+export default () => {
   return (
     <div>
       <DisclaimerPopup />
@@ -73,33 +88,22 @@ export default () => {
       <SEO title="Home" keywords={[`noorse`]} />
 
       <div
-        className={`flex flex-col lg:grid 
-        gap-2 grid-cols-3
-         md:px-12 lg:px-6 lg:mx-8
+        className={`flex flex-col lg:grid
+        gap-2 grid-cols-3 
+        md:px-12 lg:px-6 lg:mx-8
         lg:bg-gray-light
         `}
         id="homepage-content"
       >
-        <div className={'lg:col-span-2'}>
-          <Section id="news-list">
-            <Title>Nieuws</Title>
-            {NewsList(newsListBreakPoints)}
-          </Section>
-          <SponsorSection />
-        </div>
-        <div className={'hidden lg:flex lg:flex-col'}>
-          <EventsSection />
-          <TrooperSection />
-          <Section>
-            <Title>Contact</Title>
-            <ContactBlock />
-          </Section>
-        </div>
-        <EventsSection className={'lg:hidden'} />
-        <TrooperSection className={'lg:hidden'} />
-        <Section className={'lg:hidden'}>
-          <ContactBlock />
-        </Section>
+        <NieuwsSection
+          className={'lg:col-span-2 lg:row-span-3 xl:row-span-2'}
+        />
+        <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
+        <TrooperSection className={'lg:row-start-2 lg:col-start-3'} />
+        <ContactSection className={'lg:row-start-3 lg:col-start-3'} />
+        <SponsorSection
+          className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}
+        />
       </div>
       <CopyRightFooter />
     </div>

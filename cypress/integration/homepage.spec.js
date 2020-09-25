@@ -3,6 +3,20 @@ describe('Home Page', function () {
     cy.visit('/')
   })
 
+  describe('events', () => {
+    it('Should show predefined events in list', () => {
+      cy.contains('Evenementen')
+        .scrollIntoView()
+        .should('be.visible')
+        .parents('section')
+        .contains('Nieuwjaarsreceptie')
+        .should('be.visible')
+        .parents('section')
+        .contains('15-01-2021')
+        .should('be.visible')
+    })
+  })
+
   describe('disclaimer', function () {
     const disclaimerText = 'Dit is de beta versie van onze nieuwe website.'
 
