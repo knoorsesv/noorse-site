@@ -84,10 +84,9 @@ function SEO({ description, lang, meta, keywords, title }) {
       <link rel="preconnect" href="https://images.ctfassets.net" crossorigin />
       <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
       <link
-        rel="preload"
-        href="https://www.google-analytics.com/analytics.js"
+        rel="preconnect"
+        href="https://www.google-analytics.com"
         crossorigin
-        as="script"
       />
     </Helmet>
   )
