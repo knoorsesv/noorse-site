@@ -32,4 +32,15 @@ describe('Home Page', function () {
       cy.contains('BETA versie').should('be.visible')
     })
   })
+
+  it('should have a webshop section containing link', () => {
+    cy.contains('h1', 'Webshop')
+      .parents('section')
+      .within(() => {
+        cy.get('a')
+          .should('have.attr', 'target', '_blank')
+          .and('have.prop', 'href')
+          .and('equal', 'https://www.qlub.com/qlub?club=k00332')
+      })
+  })
 })

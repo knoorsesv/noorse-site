@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import BackgroundImage from 'gatsby-background-image'
 import { Logo } from './images'
+import { ExternalLink } from './text'
+
+//todo: move to contentful
+export const webshopLink = 'https://www.qlub.com/qlub?club=k00332'
 
 const siteMap = {
   items: [
@@ -16,6 +20,7 @@ const siteMap = {
         { name: 'Lidmaatschap', link: '/lidmaatschap' },
         { name: 'Sponsoring', link: '/sponsoring' },
         { name: 'Documenten', link: '/documenten' },
+        { name: 'Webshop', extLink: webshopLink },
       ],
     },
     { name: 'Senioren', link: '/senioren' },
@@ -131,6 +136,7 @@ const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
 const DropDown = ({ fixedToTop, item }) => {
   return (
     <div
+      id="dropdown"
       className={`
       hidden group-hover:absolute group-hover:flex
       flex-col items-start
@@ -138,17 +144,23 @@ const DropDown = ({ fixedToTop, item }) => {
       ${transition}
       ${fixedToTop ? 'bg-green' : 'bg-gray-lighter'} bg-opacity-75 `}
     >
-      {item.subItems.map((subItem) => (
-        <Link
-          className={`${
-            fixedToTop ? 'text-white' : 'text-gray-dark'
-          } ${transition} my-1`}
-          to={subItem.link}
-          key={subItem.name}
-        >
-          {subItem.name}
-        </Link>
-      ))}
+      {item.subItems.map((subItem) =>
+        subItem.link ? (
+          <Link
+            className={`${
+              fixedToTop ? 'text-white' : 'text-gray-dark'
+            } ${transition} my-1`}
+            to={subItem.link}
+            key={subItem.name}
+          >
+            {subItem.name}
+          </Link>
+        ) : (
+          <ExternalLink url={subItem.extLink} styled={false} icon={false}>
+            {subItem.name}
+          </ExternalLink>
+        )
+      )}
     </div>
   )
 }

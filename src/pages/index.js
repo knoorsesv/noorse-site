@@ -5,7 +5,7 @@ import { EventList } from '../components/events'
 import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
-import { Navbar } from '../components/navbar'
+import { Navbar, webshopLink } from '../components/navbar'
 import { CopyRightFooter, SponsorList } from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
@@ -54,6 +54,17 @@ const SponsorSection = ({ className }) => {
     </Section>
   )
 }
+const WebshopSection = ({ className }) => {
+  return (
+    <Section className={`${className}`}>
+      <Title>Webshop</Title>
+      <Card>
+        Noorse heeft ook een{' '}
+        <ExternalLink url={webshopLink}>webshop</ExternalLink>
+      </Card>
+    </Section>
+  )
+}
 
 const NieuwsSection = ({ className }) => {
   const newsListBreakPoints = {
@@ -96,11 +107,12 @@ export default () => {
         id="homepage-content"
       >
         <NieuwsSection
-          className={'lg:col-span-2 lg:row-span-3 xl:row-span-2'}
+          className={'lg:col-span-2 lg:row-span-4 xl:row-span-3'}
         />
         <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-2 lg:col-start-3'} />
-        <ContactSection className={'lg:row-start-3 lg:col-start-3'} />
+        <WebshopSection className={'lg:row-start-3 lg:col-start-3'} />
+        <ContactSection className={'lg:row-start-4 lg:col-start-3'} />
         <SponsorSection
           className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}
         />
