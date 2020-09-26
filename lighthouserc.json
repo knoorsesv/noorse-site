@@ -10,6 +10,7 @@
       "preset": "lighthouse:no-pwa",
       "assertions": {
         "is-crawlable": "off",
+        "uses-rel-preconnect": ["warn"],
         "uses-responsive-images": [
           "warn",
           { "maxLength": 0 },
