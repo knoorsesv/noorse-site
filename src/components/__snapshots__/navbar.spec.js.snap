@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+Array [
+  <section
+    className="w-full static h-64p sm:h-96p"
+    id="header"
+  >
+    <nav
+      className="
+        transition-all duration-200 ease-in
+      z-50 p-3 w-full flex
+      h-64p sm:h-96p 
+      fixed bg-green lg:flex-row-reverse lg:justify-between lg:items-center 
+      "
+    >
+      <div
+        className="hidden md:block h-64p sm:h-96p transition-all duration-200 ease-in false xl:w-60 "
+        id="menu-container"
+      >
+        <div
+          className="h-full flex flex-row justify-between items-center p-4 lg:p-6"
+          id="menu"
+        >
+          <span
+            className="mx-3 transition-all duration-200 ease-in"
+          >
+            <div
+              className="relative 
+      whitespace-no-wrap
+      font-medium
+      false transition-all duration-200 ease-in
+      "
+            >
+              <a
+                className="text-white transition-all duration-200 ease-in"
+                href="/"
+              >
+                Top Level Link
+              </a>
+            </div>
+          </span>
+          <span
+            className="mx-3 transition-all duration-200 ease-in"
+          >
+            <div
+              className="relative 
+      whitespace-no-wrap
+      font-medium
+      false transition-all duration-200 ease-in
+      "
+            >
+              <span
+                className="text-white transition-all duration-200 ease-in"
+              >
+                Top Level External Link
+              </span>
+            </div>
+          </span>
+          <span
+            className="mx-3 transition-all duration-200 ease-in"
+          >
+            <div
+              className="relative 
+      whitespace-no-wrap
+      font-medium
+      false transition-all duration-200 ease-in
+      group"
+            >
+              <span
+                className="text-white transition-all duration-200 ease-in"
+              >
+                Top Level met Sub Items
+              </span>
+              <div
+                className="
+      hidden group-hover:absolute group-hover:flex
+      flex-col items-start
+      w-auto p-6 mr-2
+      transition-all duration-200 ease-in
+      bg-green bg-opacity-75 "
+                id="dropdown"
+              >
+                <a
+                  className="text-white transition-all duration-200 ease-in my-1"
+                  href="/sub"
+                >
+                  Sub Item Link
+                </a>
+                <a
+                  aria-label=""
+                  className="false text-gray-dark"
+                  href="http://sub-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Sub Item Ext Link
+                </a>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        className="transition-all duration-200 ease-in
+          relative flex justify-center 
+          justify-start w-1/6 h-150 top-8p sm:top-4p md:top-32p left-16p
+         "
+        id="logo-container"
+      >
+        <logo-mock />
+      </div>
+    </nav>
+  </section>,
+  <div
+    className="transition-all duration-200 ease-in
+      lg:hidden block
+      z-50
+     h-screen fixed right-0 top-0 p-4 sm:pr-8 
+     w-0
+     false
+   "
+    id="sidebar-menu"
+  >
+    <div
+      className="md:hidden flex flex-row justify-end items-center 
+        mt-2 sm:mt-4 
+        text-white transition-all duration-200 ease-in"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-bars fa-w-14 h-6 w-6"
+        data-icon="bars"
+        data-prefix="fas"
+        focusable="false"
+        id="menu-hamburger"
+        onClick={[Function]}
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </div>
+    <div
+      className="
+            hidden
+            flex flex-col justify-between mt-6 sm:mt-8"
+    >
+      <span
+        className="relative text-right my-1 undefined"
+      >
+        <a
+          className="text-white"
+          href="/"
+        >
+          Top Level Link
+        </a>
+      </span>
+      <span
+        className="relative text-right my-1 undefined"
+      >
+        <span
+          className="text-white"
+        >
+           
+          Top Level External Link
+           
+        </span>
+      </span>
+      <span
+        className="relative text-right my-1 group"
+      >
+        <span
+          className="text-white"
+        >
+           
+          Top Level met Sub Items
+           
+        </span>
+        <div
+          className="flex flex-col mr-3 mt-2 space-y-1"
+        >
+          <a
+            className="text-white"
+            href="/sub"
+          >
+            Sub Item Link
+          </a>
+          <a
+            className="text-white"
+          >
+            Sub Item Ext Link
+          </a>
+        </div>
+      </span>
+    </div>
+  </div>,
+]
+`;
