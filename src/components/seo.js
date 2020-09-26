@@ -80,6 +80,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         .concat(meta)}
     >
       <link rel="icon" href={favicon} />
+      <link rel="preconnect" href="https://images.ctfassets.net" />
     </Helmet>
   )
 }
