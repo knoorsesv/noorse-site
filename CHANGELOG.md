@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.63](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.62...v0.1.63) (2020-09-26)
+
+
+### Features
+
+* add event tests and properly use grid on front page ([7113420](https://github.com/gatsbyjs/gatsby-starter-default/commit/711342041c158ef5b8fea3cd2381e86a2525a962))
+* add link to webshop ([c910b55](https://github.com/gatsbyjs/gatsby-starter-default/commit/c910b5520c0fd3782887d178f1d77a9976c98bb4))
+
+
+### Bug Fixes
+
+* add alt tag for facebook link ([a350973](https://github.com/gatsbyjs/gatsby-starter-default/commit/a350973ba8a9363f559fe10711b26377fdef619e))
+* add font display swap for faster web fonts load ([604c7af](https://github.com/gatsbyjs/gatsby-starter-default/commit/604c7afc422c5f7673116a80f551e28872fbf036))
+* give card header correct semantic tag ([de4546a](https://github.com/gatsbyjs/gatsby-starter-default/commit/de4546ad4aaae4d942ed73722641d73e4289805f))
+* make category on news card more readable ([5f6b6f9](https://github.com/gatsbyjs/gatsby-starter-default/commit/5f6b6f901f473c9fff134ba1997ca1bd44eaf0ba))
+* more contract in disclaimer ([545c2cb](https://github.com/gatsbyjs/gatsby-starter-default/commit/545c2cb4ab7ab041f0669293965598129c110490))
+* more contract in footer ([81dd781](https://github.com/gatsbyjs/gatsby-starter-default/commit/81dd781416651da8ece1b0cdfbedf2360026b19d))
+* only enable tracking upon env variable ([bc277cd](https://github.com/gatsbyjs/gatsby-starter-default/commit/bc277cd22ca1f321176453a01d11b20d85ccd3bb))
+* only enable tracking upon env variable ([015d33f](https://github.com/gatsbyjs/gatsby-starter-default/commit/015d33f352dd0a15af856b1177762e86cc8b73e0))
+* only enable tracking upon env variable ([70b905d](https://github.com/gatsbyjs/gatsby-starter-default/commit/70b905ddfc74282bd2cf8291d59e09c016e267d1))
+* set fixed width on news card images ([cfa7df2](https://github.com/gatsbyjs/gatsby-starter-default/commit/cfa7df2835ebac83d09811f5957b7e52bbbf1aa3))
+* use contentful image on news card ([1ab77d2](https://github.com/gatsbyjs/gatsby-starter-default/commit/1ab77d2d34c4dffa4a6e3b255afb9f9b09239d3e))
+* use gatsby image to properly size news card images ([1b445db](https://github.com/gatsbyjs/gatsby-starter-default/commit/1b445dbef97d2126cbe6bd5baa480a4e67c045c5))
+
 ### [0.1.62](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.61...v0.1.62) (2020-09-23)
 
 ### [0.1.61](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.60...v0.1.61) (2020-09-23)
