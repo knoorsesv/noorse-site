@@ -87,6 +87,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         rel="preload"
         href="https://www.google-analytics.com/analytics.js"
         crossorigin
+        as="script"
       />
     </Helmet>
   )
