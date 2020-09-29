@@ -94,7 +94,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Audit URLs using Lighthouse
-        uses: gvdp/lighthouse-ci-action@assertion-url
+        uses: treosh/lighthouse-ci-action@v3
         with:
           urls: |
             ${{needs.build-prod.outputs.prod-url}}
