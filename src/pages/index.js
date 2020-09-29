@@ -72,8 +72,8 @@ const WebshopSection = ({ className }) => {
 const NieuwsSection = ({ className }) => {
   const newsListBreakPoints = {
     default: 3,
-    1024: 2,
-    500: 1,
+    1400: 2,
+    600: 1,
   }
   return (
     <Section id="news-list" className={className}>
