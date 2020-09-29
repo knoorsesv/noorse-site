@@ -36,6 +36,7 @@ jobs:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_PREVIEW: ${{ github.event.inputs.preview }}
           PROD: true
+          TRACKING: ${{ github.event.inputs.preview == 'false' }}
       - name: deploy
         uses: nwtgck/actions-netlify@v1
         with:
@@ -44,6 +45,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy ${{ github.ref }}'
         env:
-          TRACKING: ${{ github.event.inputs.preview == 'false' }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
