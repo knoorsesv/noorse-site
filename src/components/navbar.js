@@ -5,13 +5,13 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import BackgroundImage from 'gatsby-background-image'
 import { Logo } from './images'
 import { ExternalLink } from './text'
-import { siteMap } from '../env/constants'
+import { siteMap as defaultSiteMap } from '../env/constants'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-96p'
 const coverSectionHeight = 'h-32vh sm:h-64v'
 
-export const Navbar = ({ coverPhoto, siteMap = siteMap }) => {
+export const Navbar = ({ coverPhoto, siteMap }) => {
   const [fixedToTop, setFixedToTop] = useState(!coverPhoto)
 
   const coverImage = useStaticQuery(graphql`
@@ -25,6 +25,8 @@ export const Navbar = ({ coverPhoto, siteMap = siteMap }) => {
       }
     }
   `)
+
+  siteMap = siteMap || defaultSiteMap
 
   return (
     <React.Fragment>
