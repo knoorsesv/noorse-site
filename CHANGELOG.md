@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.64](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.63...v0.1.64) (2020-09-29)
+
+
+### Bug Fixes
+
+* set tracking env variable in correct build step ([3717304](https://github.com/gatsbyjs/gatsby-starter-default/commit/3717304519b725b70b93d642aeed1a41b282e7c4))
+
 ### [0.1.63](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.62...v0.1.63) (2020-09-26)
 
 
