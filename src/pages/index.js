@@ -6,7 +6,10 @@ import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar, webshopLink } from '../components/navbar'
-import { CopyRightFooter, SponsorList } from '../components/noorseFooter'
+import NoorseFooter, {
+  CopyRightFooter,
+  SponsorList,
+} from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { ContactInfo } from '../components/contact'
@@ -112,12 +115,12 @@ export default () => {
         <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-2 lg:col-start-3'} />
         <WebshopSection className={'lg:row-start-3 lg:col-start-3'} />
-        <ContactSection className={'lg:row-start-4 lg:col-start-3'} />
-        <SponsorSection
-          className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}
-        />
+        {/*<ContactSection className={'lg:row-start-4 lg:col-start-3'} />*/}
+        {/*<SponsorSection*/}
+        {/*  className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}*/}
+        {/*/>*/}
       </div>
-      <CopyRightFooter />
+      <NoorseFooter />
     </div>
   )
 }
