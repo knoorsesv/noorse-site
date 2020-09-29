@@ -38,6 +38,7 @@ jobs:
       prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
 
   build-dev:
+    if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
     runs-on: ubuntu-latest
     name: Build DEV
     steps:
