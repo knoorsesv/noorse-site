@@ -3,7 +3,7 @@ import SEO from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text'
 import { EventList } from '../components/events'
 import { Card } from '../components/cards'
-import { Title } from '../components/titles'
+import { SectionTitle, Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar, webshopLink } from '../components/navbar'
 import { CopyRightFooter, SponsorList } from '../components/noorseFooter'
@@ -14,7 +14,7 @@ import { ContactInfo } from '../components/contact'
 const EventsSection = ({ className }) => {
   return (
     <Section className={className}>
-      <Title>Evenementen</Title>
+      <SectionTitle>Evenementen</SectionTitle>
       <Card className={'mb-4'}>
         <div className={'py-2 px-3'}>
           <EventList />
@@ -27,7 +27,7 @@ const EventsSection = ({ className }) => {
 const TrooperSection = ({ className }) => {
   return (
     <Section className={className}>
-      <Title>Trooper</Title>
+      <SectionTitle>Trooper</SectionTitle>
       <Card>
         <TextBlock>
           <div className={'text-center px-2'}>
@@ -49,15 +49,16 @@ const TrooperSection = ({ className }) => {
 const SponsorSection = ({ className }) => {
   return (
     <Section className={`${className} lg:px-12`}>
-      <Title>Sponsors</Title>
+      <SectionTitle>Sponsors</SectionTitle>
       <SponsorList />
     </Section>
   )
 }
+
 const WebshopSection = ({ className }) => {
   return (
     <Section className={`${className}`}>
-      <Title>Webshop</Title>
+      <SectionTitle>Webshop</SectionTitle>
       <Card>
         Noorse heeft ook een{' '}
         <ExternalLink url={webshopLink}>webshop</ExternalLink>
@@ -74,7 +75,7 @@ const NieuwsSection = ({ className }) => {
   }
   return (
     <Section id="news-list" className={className}>
-      <Title>Nieuws</Title>
+      <SectionTitle>Nieuws</SectionTitle>
       {NewsList(newsListBreakPoints)}
     </Section>
   )
@@ -83,7 +84,7 @@ const NieuwsSection = ({ className }) => {
 const ContactSection = ({ className }) => {
   return (
     <Section className={className}>
-      <Title>Contact</Title>
+      <SectionTitle>Contact</SectionTitle>
       <ContactInfo />
     </Section>
   )
