@@ -8,14 +8,14 @@ export const EventList = () => {
       allContentfulEvenement(sort: { fields: datum }) {
         nodes {
           naam
-          datum(formatString: "DD-MM-YYYY")
+          datum(formatString: "DD/MM/YY")
         }
       }
     }
   `)
 
   const eventIsInfuture = (event) =>
-    isFuture(parse(event.datum, 'dd-MM-yyyy', new Date()))
+    isFuture(parse(event.datum, 'dd/MM/yy', new Date()))
 
   const futureEvents = events.allContentfulEvenement.nodes.filter(
     eventIsInfuture

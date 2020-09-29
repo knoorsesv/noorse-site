@@ -13,7 +13,7 @@ export const NewsList = (breakpointColumnsObj) => {
           body {
             json
           }
-          createdAt(formatString: "DD/MM/yy", locale: "nl-BE")
+          createdAt(formatString: "DD/MM/YY", locale: "nl-BE")
           category {
             naam
           }
