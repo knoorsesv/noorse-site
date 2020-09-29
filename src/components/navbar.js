@@ -134,7 +134,12 @@ const DropDown = ({ fixedToTop, item }) => {
             {subItem.name}
           </Link>
         ) : (
-          <ExternalLink url={subItem.extLink} styled={false} icon={false}>
+          <ExternalLink
+            url={subItem.extLink}
+            styled={false}
+            icon={false}
+            key={subItem.name}
+          >
             {subItem.name}
           </ExternalLink>
         )
