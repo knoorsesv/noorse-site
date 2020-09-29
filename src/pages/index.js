@@ -5,11 +5,12 @@ import { EventList } from '../components/events'
 import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
-import { Navbar, webshopLink } from '../components/navbar'
+import { Navbar } from '../components/navbar'
 import { CopyRightFooter, SponsorList } from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { ContactInfo } from '../components/contact'
+import { webshopLink } from '../env/constants'
 
 const EventsSection = ({ className }) => {
   return (
