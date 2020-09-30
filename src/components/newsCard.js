@@ -1,11 +1,13 @@
 import { navigate } from 'gatsby-link'
 import React from 'react'
 import { ClickableCard } from './cards'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 export const NewsCard = ({ newsNode }) => {
   let snippet
   if (!newsNode.blurb) {
-    const maxChars = 128
+    const maxChars = 100
     const firstParagraph = newsNode.body.json.content[0].content[0].value
     const endOfSecondSentence = firstParagraph.indexOf(
       '.',
@@ -40,8 +42,9 @@ export const NewsCard = ({ newsNode }) => {
         )}
         <div className={'text-center'}>{newsNode.createdAt}</div>
       </div>
-      <div className={'text-center truncate h-64p'}>
-        {newsNode.blurb || snippet}
+      <div className={'text-center h-64p'}>{newsNode.blurb || snippet}</div>
+      <div className={'flex justify-end items-center w-full'}>
+        <FontAwesomeIcon icon={faChevronCircleRight}></FontAwesomeIcon>
       </div>
     </ClickableCard>
   )
