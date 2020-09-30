@@ -11,7 +11,7 @@ const typography = new Typography({
     },
     {
       name: 'Montserrat&display=swap',
-      styles: ['400', '500', '700'],
+      styles: ['400', '500', '600', '700'],
     },
     {
       name: 'Rubik&display=swap',
