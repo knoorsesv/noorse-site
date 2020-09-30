@@ -14,7 +14,7 @@ export const Card = (props) => {
               imgStyle={{ objectFit: 'scale-down' }}
             />
           )}
-          <h2 className={'text-center p-3 m-0'}>{props.header}</h2>
+          <h3 className={'text-center p-3 m-0 uppercase'}>{props.header}</h3>
         </div>
       )}
       {props.children && <div className={'w-full p-4'}>{props.children}</div>}

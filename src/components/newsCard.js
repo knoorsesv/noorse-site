@@ -5,6 +5,7 @@ import { ClickableCard } from './cards'
 export const NewsCard = ({ newsNode }) => {
   let snippet
   if (!newsNode.blurb) {
+    const maxChars = 128
     const firstParagraph = newsNode.body.json.content[0].content[0].value
     const endOfSecondSentence = firstParagraph.indexOf(
       '.',
@@ -12,7 +13,7 @@ export const NewsCard = ({ newsNode }) => {
     )
     snippet = `${
       endOfSecondSentence > 0
-        ? firstParagraph.substr(0, endOfSecondSentence)
+        ? firstParagraph.substr(0, maxChars)
         : firstParagraph
     }...`
   }
@@ -31,7 +32,7 @@ export const NewsCard = ({ newsNode }) => {
     >
       <div
         className={
-          'flex justify-between mb-3 text-gray-darker-readable italic text-sm'
+          'flex justify-between mb-3 text-gray-darker-readable italic text-sm '
         }
       >
         {newsNode.category && (
@@ -39,7 +40,9 @@ export const NewsCard = ({ newsNode }) => {
         )}
         <div className={'text-center'}>{newsNode.createdAt}</div>
       </div>
-      <div className={'text-center'}>{newsNode.blurb || snippet}</div>
+      <div className={'text-center truncate h-64p'}>
+        {newsNode.blurb || snippet}
+      </div>
     </ClickableCard>
   )
 }
