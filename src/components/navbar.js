@@ -5,40 +5,16 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import BackgroundImage from 'gatsby-background-image'
 import { Logo } from './images'
 import { ExternalLink } from './text'
+import { siteMap as defaultSiteMap } from '../env/constants'
 
-//todo: move to contentful
-export const webshopLink = 'https://www.qlub.com/qlub?club=k00332'
-
-const siteMap = {
-  items: [
-    { name: 'Home', link: '/' },
-    {
-      name: 'Info',
-      subItems: [
-        { name: 'Bestuur', link: '/bestuur' },
-        { name: 'Fair Play', link: '/fairplay' },
-        { name: 'Lidmaatschap', link: '/lidmaatschap' },
-        { name: 'Sponsoring', link: '/sponsoring' },
-        { name: 'Documenten', link: '/documenten' },
-        { name: 'Webshop', extLink: webshopLink },
-      ],
-    },
-    { name: 'Senioren', link: '/senioren' },
-    { name: 'Jeugd', link: '/jeugd' },
-    { name: 'Dames', link: '/dames' },
-    { name: 'Meisjes', link: '/meisjes' },
-    { name: 'G-Voetbal', link: '/g-voetbal' },
-    { name: 'Contact', link: '/contact' },
-  ],
-}
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-96p'
 const coverSectionHeight = 'h-32vh sm:h-64v'
 
-export const Navbar = (props) => {
-  const [fixedToTop, setFixedToTop] = useState(!props.coverPhoto)
+export const Navbar = ({ coverPhoto, siteMap }) => {
+  const [fixedToTop, setFixedToTop] = useState(!coverPhoto)
 
-  const images = useStaticQuery(graphql`
+  const coverImage = useStaticQuery(graphql`
     query {
       cover: file(name: { eq: "noorse_cover" }) {
         childImageSharp {
@@ -50,11 +26,13 @@ export const Navbar = (props) => {
     }
   `)
 
+  siteMap = siteMap || defaultSiteMap
+
   return (
     <React.Fragment>
       <NavContainer
-        coverPhoto={props.coverPhoto}
-        image={images.cover}
+        coverPhoto={coverPhoto}
+        image={coverImage.cover}
         setFixedToTop={setFixedToTop}
       >
         <nav
@@ -75,7 +53,7 @@ export const Navbar = (props) => {
               !fixedToTop && 'md:self-end'
             } xl:w-60 `}
           >
-            <TopMenu fixedToTop={fixedToTop} />
+            <TopMenu fixedToTop={fixedToTop} siteMap={siteMap} />
           </div>
           <div
             id="logo-container"
@@ -94,7 +72,7 @@ export const Navbar = (props) => {
           </div>
         </nav>
       </NavContainer>
-      <SideBarMenu fixedToTop={fixedToTop} />
+      <SideBarMenu fixedToTop={fixedToTop} siteMap={siteMap} />
     </React.Fragment>
   )
 }
@@ -156,7 +134,12 @@ const DropDown = ({ fixedToTop, item }) => {
             {subItem.name}
           </Link>
         ) : (
-          <ExternalLink url={subItem.extLink} styled={false} icon={false}>
+          <ExternalLink
+            url={subItem.extLink}
+            styled={false}
+            icon={false}
+            key={subItem.name}
+          >
             {subItem.name}
           </ExternalLink>
         )
@@ -193,7 +176,7 @@ const TopMenuItem = ({ item, fixedToTop }) => {
   )
 }
 
-const TopMenu = ({ fixedToTop }) => {
+const TopMenu = ({ fixedToTop, siteMap }) => {
   return (
     <div
       id="menu"
@@ -253,7 +236,7 @@ const LinkInSideBar = ({ item }) => {
   )
 }
 
-const SideBarMenu = ({ fixedToTop }) => {
+const SideBarMenu = ({ fixedToTop, siteMap }) => {
   const [menuShown, setMenuShown] = useState(false)
   const toggleMenuShown = () => {
     setMenuShown(!menuShown)
