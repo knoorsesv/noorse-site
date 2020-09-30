@@ -12,7 +12,7 @@ describe('Home Page', function () {
         .contains('Nieuwjaarsreceptie')
         .should('be.visible')
         .parents('section')
-        .contains('15-01-2021')
+        .contains('15/01/21')
         .should('be.visible')
     })
   })
