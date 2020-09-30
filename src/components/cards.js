@@ -4,10 +4,7 @@ import Img from 'gatsby-image'
 
 export const Card = (props) => {
   return (
-    <div
-      {...props}
-      className={`${props.className} bg-white elevation-2 border rounded-md border-opacity-50 border-gray`}
-    >
+    <div {...props} className={`${props.className} bg-white elevation-2 `}>
       {props.header && (
         <div className={``}>
           {props.image && (

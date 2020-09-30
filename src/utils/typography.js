@@ -3,7 +3,7 @@ import Typography from 'typography'
 const typography = new Typography({
   title: 'Neurse',
   scaleRatio: 1.8,
-  baseFontSize: '18px',
+  baseFontSize: '14px',
   googleFonts: [
     {
       name: 'Lato&display=swap',
