@@ -40,7 +40,9 @@ export const NewsCard = ({ newsNode }) => {
         {newsNode.category && (
           <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
         )}
-        <div className={'text-center'}>{newsNode.createdAt}</div>
+        <div className={'text-center'}>
+          {newsNode.publishDate || newsNode.createdAt}
+        </div>
       </div>
       <div className={'text-center min-h-64p'}>{snippet}</div>
     </ClickableCard>
