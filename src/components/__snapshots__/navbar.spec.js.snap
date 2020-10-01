@@ -89,7 +89,7 @@ Array [
                 </a>
                 <a
                   aria-label=""
-                  className="false text-gray-dark"
+                  className="false text-white"
                   href="http://sub-link"
                   rel="noopener noreferrer"
                   target="_blank"

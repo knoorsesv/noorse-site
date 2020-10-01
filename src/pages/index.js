@@ -6,14 +6,12 @@ import { Card } from '../components/cards'
 import { Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
-import NoorseFooter, {
-  CopyRightFooter,
-  SponsorList,
-} from '../components/noorseFooter'
+import NoorseFooter, { SponsorList } from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { ContactInfo } from '../components/contact'
 import { webshopLink } from '../env/constants'
+import { Link } from 'gatsby'
 
 const EventsSection = ({ className }) => {
   return (
@@ -73,6 +71,18 @@ const WebshopSection = ({ className }) => {
   )
 }
 
+const CovidSection = ({ className }) => {
+  return (
+    <Section className={`${className}`}>
+      <Title>Covid-19</Title>
+      <Card>
+        De regels die op onze club van kracht zijn vindt u{' '}
+        <Link to={'/covid'}>hier</Link>
+      </Card>
+    </Section>
+  )
+}
+
 const NieuwsSection = ({ className }) => {
   const newsListBreakPoints = {
     default: 3,
@@ -114,12 +124,13 @@ export default () => {
         id="homepage-content"
       >
         <NieuwsSection
-          className={'lg:col-span-2 lg:row-span-4 xl:row-span-3'}
+          className={'lg:col-span-2 lg:row-span-5 xl:row-span-3'}
         />
         <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
-        <WebshopSection className={'lg:row-start-3 lg:col-start-3'} />
-        {/*<TrooperSection className={'lg:row-start-2 lg:col-start-3'} />
-        <ContactSection className={'lg:row-start-4 lg:col-start-3'} />*/}
+        <WebshopSection className={'lg:row-start-2 lg:col-start-3'} />
+        <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
+        <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
+        {/*<ContactSection className={'lg:row-start-5 lg:col-start-3'} />*!/*/}
         {/*<SponsorSection*/}
         {/*  className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}*/}
         {/*/>*/}
