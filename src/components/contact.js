@@ -11,7 +11,9 @@ export const ContactInfo = () => {
       {/*todo: move to contentful*/}
       <span>03/664.44.11</span>
       <span>
-        <a href="mailto:info@noorse.be">info@noorse.be </a>
+        <ExternalLink url="mailto:info@noorse.be" icon={false}>
+          info@noorse.be
+        </ExternalLink>
       </span>
       <div className={'flex flex-row items-center mt-6 space-x-3'}>
         <ExternalLink
