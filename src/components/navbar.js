@@ -226,7 +226,7 @@ const SideBarItem = ({ item }) => {
 }
 
 const LinkInSideBar = ({ item }) => {
-  return (
+  return item.link ? (
     <Link
       className={`text-white`}
       activeClassName={'border-r-2 pr-2'}
@@ -234,6 +234,16 @@ const LinkInSideBar = ({ item }) => {
     >
       {item.name}
     </Link>
+  ) : (
+    <ExternalLink
+      url={item.extLink}
+      styled={false}
+      icon={false}
+      textColor={'text-white'}
+      key={item.name}
+    >
+      {item.name}
+    </ExternalLink>
   )
 }
 

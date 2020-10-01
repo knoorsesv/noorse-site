@@ -2,15 +2,15 @@ import React from 'react'
 import SEO from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text'
 import { EventList } from '../components/events'
-import { Card } from '../components/cards'
-import { SectionTitle, Title } from '../components/titles'
+import { Card, ClickableCard } from '../components/cards'
+import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
 import NoorseFooter from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby-link'
 
 const EventsSection = ({ className }) => {
   return (
@@ -52,24 +52,31 @@ const WebshopSection = ({ className }) => {
     <Section className={`${className}`}>
       <SectionTitle>Webshop</SectionTitle>
       <Card>
-        Ontdek{' '}
-        <ExternalLink icon={false} url={webshopLink}>
-          hier
-        </ExternalLink>{' '}
-        onze officiële webshop!
+        <div className={'text-center'}>
+          Ontdek{' '}
+          <ExternalLink icon={false} url={webshopLink}>
+            hier
+          </ExternalLink>{' '}
+          onze officiële webshop!
+        </div>
       </Card>
     </Section>
   )
 }
 
 const CovidSection = ({ className }) => {
+  const goToCovidPage = () => {
+    navigate(`/covid`)
+  }
   return (
     <Section className={`${className}`}>
       <SectionTitle>Covid-19</SectionTitle>
-      <Card>
-        De regels die op onze club van kracht zijn vindt u{' '}
-        <Link to={'/covid'}>hier</Link>
-      </Card>
+      <ClickableCard onClick={goToCovidPage}>
+        <div className={'text-center'}>
+          De regels die op onze club van kracht zijn vindt u{' '}
+          <span className={'underline'}>hier</span>
+        </div>
+      </ClickableCard>
     </Section>
   )
 }
