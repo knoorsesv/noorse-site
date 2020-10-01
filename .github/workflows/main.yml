@@ -21,6 +21,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GA_TRACKING_ID: ${{secrets.GA_TRACKING_ID}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           PROD: true
           TRACKING: ${{ startsWith(github.ref, 'refs/tags/v') }}
       - name: Deploy
@@ -53,6 +54,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
       - name: Deploy
         uses: nwtgck/actions-netlify@v1
