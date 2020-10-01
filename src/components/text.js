@@ -44,7 +44,10 @@ export const ExternalLink = ({
 export const SpacedInfo = ({ items }) => {
   return items.map((item) => {
     return (
-      <div className={'flex flex-row justify-between w-full'} key={item.label}>
+      <div
+        className={'flex flex-row justify-between w-full flex-wrap'}
+        key={item.label}
+      >
         <span className={'text-left font-bold'}>{item.label}</span>
         <span className={'text-right overflow-hidden'}>{item.value}</span>
       </div>
