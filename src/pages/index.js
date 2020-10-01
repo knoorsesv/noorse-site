@@ -75,7 +75,7 @@ const WebshopSection = ({ className }) => {
 const CovidSection = ({ className }) => {
   return (
     <Section className={`${className}`}>
-      <Title>Covid-19</Title>
+      <SectionTitle>Covid-19</SectionTitle>
       <Card>
         De regels die op onze club van kracht zijn vindt u{' '}
         <Link to={'/covid'}>hier</Link>
@@ -125,16 +125,14 @@ export default () => {
         id="homepage-content"
       >
         <NieuwsSection
-          className={'lg:col-span-2 lg:row-span-5 xl:row-span-3'}
+          className={'lg:col-span-2 lg:row-span-5 xl:row-span-5'}
         />
         <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
-        <WebshopSection className={'lg:row-start-3 lg:col-start-3'} />
+        <WebshopSection className={'lg:row-start-2 lg:col-start-3'} />
         <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
         <ContactSection className={'lg:row-start-5 lg:col-start-3'} />
-        <SponsorSection
-          className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}
-        />
+        <SponsorSection className={'lg:col-span-3 xl:col-span-2'} />
       </div>
       <CopyRightFooter />
     </div>

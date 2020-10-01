@@ -22,8 +22,8 @@ export const SectionTitle = ({ children }) => {
             position: 'relative',
             top: `-15px`,
             opacity: '30%',
-            'border-color': 'transparent transparent green transparent',
-            'border-width': `0 ${borderHeight} ${borderHeight} 0`,
+            borderColor: 'transparent transparent green transparent',
+            borderWidth: `0 ${borderHeight} ${borderHeight} 0`,
             borderStyle: 'solid',
           }}
         />
@@ -33,8 +33,8 @@ export const SectionTitle = ({ children }) => {
             position: 'relative',
             top: `-12px`,
             opacity: '30%',
-            'border-color': 'transparent transparent green transparent',
-            'border-width': `0 ${underheid} ${underheid} 0`,
+            borderColor: 'transparent transparent green transparent',
+            borderWidth: `0 ${underheid} ${underheid} 0`,
             borderStyle: 'solid',
           }}
         />
