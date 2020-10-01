@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.67](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.66...v0.1.67) (2020-10-01)
+
+
+### Features
+
+* dont round cards and decrease font size ([9b25775](https://github.com/gatsbyjs/gatsby-starter-default/commit/9b25775b957b8255f2953edf988249b384e1fea5))
+* move webshop link ([33faedf](https://github.com/gatsbyjs/gatsby-starter-default/commit/33faedf661be46b857971d24136fe9bd3d9c640c))
+
+
+### Bug Fixes
+
+* add babel plugin to fix dev build ([17ace7f](https://github.com/gatsbyjs/gatsby-starter-default/commit/17ace7f261cbd9d71a98916246964b37dc1e29f6))
+
 ### [0.1.66](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.65...v0.1.66) (2020-09-29)
 
 
