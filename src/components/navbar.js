@@ -43,17 +43,31 @@ export const Navbar = ({ coverPhoto, siteMap }) => {
       ${
         fixedToTop
           ? 'fixed bg-green lg:flex-row-reverse lg:justify-between lg:items-center'
-          : 'bg-transparent sm:items-center md:items-start md:flex-col'
+          : 'bg-transparent sm:items-center md:items-start md:flex-col md:pr-0'
       } 
       `}
         >
           <div
             id="menu-container"
-            className={`hidden md:block ${menuBarHeight} ${transition} ${
-              !fixedToTop && 'md:self-end'
-            } xl:w-60 `}
+            className={`hidden md:block ${menuBarHeight} ${transition} 
+            ${!fixedToTop && 'md:self-end'} xl:w-60 
+            ${!fixedToTop ? ` md:mb-10 md:pl-5 md:h-38p` : ''}
+            `}
           >
             <TopMenu fixedToTop={fixedToTop} siteMap={siteMap} />
+            <div
+              style={{
+                position: 'relative',
+                top: '-20px',
+                borderStyle: 'solid',
+                borderWidth: '0 0 25px 15px',
+                left: '-20px',
+                width: '120%',
+                zIndex: '0',
+                opacity: '80%',
+                borderColor: 'transparent transparent green transparent',
+              }}
+            />
           </div>
           <div
             id="logo-container"
@@ -151,14 +165,14 @@ const DropDown = ({ fixedToTop, item }) => {
 
 const TopMenuItem = ({ item, fixedToTop }) => {
   const itemTextStyle = `${
-    fixedToTop ? 'text-white' : 'text-gray-dark'
+    fixedToTop ? 'text-white' : 'text-black font-semibold '
   } ${transition}`
   return (
     <div
       className={`relative 
       whitespace-no-wrap
       font-medium
-      ${!fixedToTop && 'rounded p-2 bg-gray-lighter'} ${transition}
+      ${!fixedToTop && 'uppercase text-white'} ${transition}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
@@ -181,6 +195,7 @@ const TopMenu = ({ fixedToTop, siteMap }) => {
   return (
     <div
       id="menu"
+      style={{ zIndex: '10', position: 'relative' }}
       className={`h-full flex flex-row justify-between items-center p-4 lg:p-6`}
     >
       {siteMap.items.map((item) => (
