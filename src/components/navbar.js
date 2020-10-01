@@ -8,11 +8,11 @@ import { ExternalLink } from './text'
 import { siteMap as defaultSiteMap } from '../env/constants'
 
 const transition = `transition-all duration-200 ease-in`
-const menuBarHeight = 'h-64p sm:h-96p'
+const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32vh sm:h-64v'
 
 export const Navbar = ({ coverPhoto, siteMap }) => {
-  const [fixedToTop, setFixedToTop] = useState(!coverPhoto)
+  const [fullBar, setFixedToTop] = useState(!coverPhoto)
 
   const coverImage = useStaticQuery(graphql`
     query {
@@ -39,9 +39,9 @@ export const Navbar = ({ coverPhoto, siteMap }) => {
           className={`
         ${transition}
       z-50 p-3 w-full flex
-      ${fixedToTop ? menuBarHeight : coverSectionHeight} 
+      ${fullBar ? menuBarHeight : coverSectionHeight} 
       ${
-        fixedToTop
+        fullBar
           ? 'fixed bg-green lg:flex-row-reverse lg:justify-between lg:items-center'
           : 'bg-transparent sm:items-center md:items-start md:flex-col md:pr-0'
       } 
@@ -50,21 +50,22 @@ export const Navbar = ({ coverPhoto, siteMap }) => {
           <div
             id="menu-container"
             className={`hidden md:block ${menuBarHeight} ${transition} 
-            ${!fixedToTop && 'md:self-end'} xl:w-60 
-            ${!fixedToTop ? ` md:mb-10 md:pl-5 md:h-38p` : ''}
+            ${!fullBar && 'md:self-end'} xl:w-60 
+            ${!fullBar ? `md:mb-10 md:pl-5 md:h-38p` : ''}
             `}
           >
-            <TopMenu fixedToTop={fixedToTop} siteMap={siteMap} />
+            <TopMenu fixedToTop={fullBar} siteMap={siteMap} />
             <div
+              className={`${fullBar && 'hidden'} ${transition} shadow-lg`}
               style={{
                 position: 'relative',
-                top: '-20px',
+                top: '-35px',
                 borderStyle: 'solid',
-                borderWidth: '0 0 25px 15px',
-                left: '-20px',
-                width: '120%',
+                borderWidth: '0 0 40px 20px',
+                left: '-25px',
+                width: '130%',
                 zIndex: '0',
-                opacity: '80%',
+                opacity: '70%',
                 borderColor: 'transparent transparent green transparent',
               }}
             />
@@ -74,7 +75,7 @@ export const Navbar = ({ coverPhoto, siteMap }) => {
             className={`${transition}
           relative flex justify-center 
           ${
-            fixedToTop
+            fullBar
               ? 'justify-start w-1/6 h-150 top-8p sm:top-4p md:top-32p left-16p'
               : 'w-full h-full lg:w-1/2 sm:h-70 lg:h-80 lg:p-8'
           }
@@ -86,7 +87,7 @@ export const Navbar = ({ coverPhoto, siteMap }) => {
           </div>
         </nav>
       </NavContainer>
-      <SideBarMenu fixedToTop={fixedToTop} siteMap={siteMap} />
+      <SideBarMenu fixedToTop={fullBar} siteMap={siteMap} />
     </React.Fragment>
   )
 }
@@ -134,13 +135,13 @@ const DropDown = ({ fixedToTop, item }) => {
       flex-col items-start
       w-auto p-6 mr-2
       ${transition}
-      ${fixedToTop ? 'bg-green' : 'bg-gray-lighter'} bg-opacity-75 `}
+      bg-green bg-opacity-75 `}
     >
       {item.subItems.map((subItem) =>
         subItem.link ? (
           <Link
             className={`${
-              fixedToTop ? 'text-white' : 'text-gray-dark'
+              fixedToTop ? 'text-white' : 'text-white'
             } ${transition} my-1`}
             to={subItem.link}
             key={subItem.name}
@@ -163,22 +164,21 @@ const DropDown = ({ fixedToTop, item }) => {
   )
 }
 
-const TopMenuItem = ({ item, fixedToTop }) => {
-  const itemTextStyle = `${
-    fixedToTop ? 'text-white' : 'text-black font-semibold '
-  } ${transition}`
+const TopMenuItem = ({ item, fixedToTop: fullBar }) => {
+  const itemTextStyle = `${fullBar ? 'text-white' : 'text-white'} ${transition}`
   return (
     <div
+      id={'top-menu-item'}
       className={`relative 
       whitespace-no-wrap
       font-medium
-      ${!fixedToTop && 'uppercase text-white'} ${transition}
+      ${transition}
       ${item.subItems ? 'group' : ''}`}
     >
       {item.link ? (
         <Link
           className={itemTextStyle}
-          activeClassName={`${fixedToTop && 'border-b-2'}`}
+          activeClassName={`border-b-2`}
           to={item.link}
         >
           {item.name}
@@ -186,7 +186,7 @@ const TopMenuItem = ({ item, fixedToTop }) => {
       ) : (
         <span className={itemTextStyle}>{item.name}</span>
       )}
-      {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
+      {item.subItems && <DropDown fixedToTop={fullBar} item={item} />}
     </div>
   )
 }
