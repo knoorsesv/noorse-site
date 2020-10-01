@@ -12,7 +12,6 @@ export const Card = ({
 }) => {
   return (
     <div
-      id={'card-container'}
       {...props}
       className={`${className} 
       bg-white elevation-2 
@@ -26,7 +25,7 @@ export const Card = ({
               style={{ height: '202px' }}
               fluid={image.fluid}
               alt={'Card Header Image'}
-              imgStyle={{ objectFit: 'fill' }}
+              imgStyle={{ objectFit: 'cover' }}
             />
           )}
           <h2 className={'text-center p-3 m-0 uppercase min-h-64p'}>
