@@ -2,24 +2,30 @@ import React from 'react'
 import { Clickable } from './a11y'
 import Img from 'gatsby-image'
 
-export const Card = (props) => {
+export const Card = ({ header, image, children, className, ...props }) => {
   return (
-    <div {...props} className={`${props.className} bg-white elevation-2 `}>
-      {props.header && (
+    <div
+      {...props}
+      className={`${className} 
+      bg-white elevation-2 
+      m-auto w-full
+      `}
+    >
+      {header && (
         <div className={``}>
-          {props.image && (
+          {image && (
             <Img
-              fluid={props.image.fluid}
+              fluid={image.fluid}
               alt={'Card Header Image'}
               imgStyle={{ objectFit: 'scale-down' }}
             />
           )}
-          <h3 className={'text-center p-3 m-0 uppercase h-64p'}>
+          <h2 className={'text-center p-3 m-0 uppercase min-h-96p'}>
             {props.header}
-          </h3>
+          </h2>
         </div>
       )}
-      {props.children && <div className={'w-full p-4'}>{props.children}</div>}
+      {children && <div className={'w-full p-4'}>{children}</div>}
     </div>
   )
 }

@@ -6,10 +6,9 @@ import { Card } from '../components/cards'
 import { SectionTitle, Title } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
-import { CopyRightFooter, SponsorList } from '../components/noorseFooter'
+import NoorseFooter from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
-import { ContactInfo } from '../components/contact'
 import { webshopLink } from '../env/constants'
 import { Link } from 'gatsby'
 
@@ -48,15 +47,6 @@ const TrooperSection = ({ className }) => {
   )
 }
 
-const SponsorSection = ({ className }) => {
-  return (
-    <Section className={`${className} lg:px-12`}>
-      <SectionTitle>Sponsors</SectionTitle>
-      <SponsorList />
-    </Section>
-  )
-}
-
 const WebshopSection = ({ className }) => {
   return (
     <Section className={`${className}`}>
@@ -87,22 +77,13 @@ const CovidSection = ({ className }) => {
 const NieuwsSection = ({ className }) => {
   const newsListBreakPoints = {
     default: 3,
-    1024: 2,
-    500: 1,
+    1400: 2,
+    600: 1,
   }
   return (
     <Section id="news-list" className={className}>
       <SectionTitle>Nieuws</SectionTitle>
       {NewsList(newsListBreakPoints)}
-    </Section>
-  )
-}
-
-const ContactSection = ({ className }) => {
-  return (
-    <Section className={className}>
-      <SectionTitle>Contact</SectionTitle>
-      <ContactInfo />
     </Section>
   )
 }
@@ -124,17 +105,13 @@ export default () => {
         `}
         id="homepage-content"
       >
-        <NieuwsSection
-          className={'lg:col-span-2 lg:row-span-5 xl:row-span-5'}
-        />
+        <NieuwsSection className={'lg:col-span-2 lg:row-span-4'} />
         <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
         <WebshopSection className={'lg:row-start-2 lg:col-start-3'} />
         <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
-        <ContactSection className={'lg:row-start-5 lg:col-start-3'} />
-        <SponsorSection className={'lg:col-span-3 xl:col-span-2'} />
       </div>
-      <CopyRightFooter />
+      <NoorseFooter />
     </div>
   )
 }
