@@ -10,7 +10,6 @@ export const Card = ({ header, image, children, className, ...props }) => {
       bg-white elevation-2 
       m-auto w-full
       `}
-      // max-w-400 sm:max-w-300
     >
       {header && (
         <div className={``}>
@@ -18,7 +17,6 @@ export const Card = ({ header, image, children, className, ...props }) => {
             <Img
               fluid={image.fluid}
               alt={'Card Header Image'}
-              // className={'max-h-256p'}
               imgStyle={{ objectFit: 'scale-down' }}
             />
           )}

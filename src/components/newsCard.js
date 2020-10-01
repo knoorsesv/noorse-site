@@ -39,7 +39,7 @@ export const NewsCard = ({ newsNode }) => {
         )}
         <div className={'text-center'}>{newsNode.createdAt}</div>
       </div>
-      {/*<div className={'text-center'}>{newsNode.blurb || snippet}</div>*/}
+      <div className={'text-center'}>{newsNode.blurb || snippet}</div>
     </ClickableCard>
   )
 }
