@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.69](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.68...v0.1.69) (2020-10-01)
+
+
+### Features
+
+* add page with COVID rules ([0344617](https://github.com/gatsbyjs/gatsby-starter-default/commit/034461705b4cbe2f5952df03481fab365a4b939e))
+
 ### [0.1.68](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.67...v0.1.68) (2020-10-01)
 
 
