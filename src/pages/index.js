@@ -61,8 +61,11 @@ const WebshopSection = ({ className }) => {
     <Section className={`${className}`}>
       <SectionTitle>Webshop</SectionTitle>
       <Card>
-        Noorse heeft ook een{' '}
-        <ExternalLink url={webshopLink}>webshop</ExternalLink>
+        Ontdek{' '}
+        <ExternalLink icon={false} url={webshopLink}>
+          hier
+        </ExternalLink>{' '}
+        onze officiële webshop!
       </Card>
     </Section>
   )
@@ -112,8 +115,8 @@ export default () => {
           className={'lg:col-span-2 lg:row-span-4 xl:row-span-3'}
         />
         <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
-        <TrooperSection className={'lg:row-start-2 lg:col-start-3'} />
         <WebshopSection className={'lg:row-start-3 lg:col-start-3'} />
+        <TrooperSection className={'lg:row-start-2 lg:col-start-3'} />
         <ContactSection className={'lg:row-start-4 lg:col-start-3'} />
         <SponsorSection
           className={'lg:col-span-3 xl:col-span-2 xl:col-start-1'}
