@@ -152,6 +152,7 @@ const DropDown = ({ fixedToTop, item }) => {
             url={subItem.extLink}
             styled={false}
             icon={false}
+            textColor={'text-white'}
             key={subItem.name}
           >
             {subItem.name}

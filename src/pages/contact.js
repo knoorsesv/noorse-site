@@ -7,7 +7,7 @@ const Block = ({ children }) => {
   return (
     <div
       className={
-        'my-3 w-full flex flex-col items-center sm:w-1/2 md:w-2/5 lg:w-1/3 lg:mb-6'
+        'my-3 w-full flex flex-col items-center sm:w-1/2 md:w-2/5 lg:mb-6'
       }
     >
       {children}

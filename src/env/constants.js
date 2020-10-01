@@ -13,6 +13,7 @@ export const siteMap = {
         { name: 'Lidmaatschap', link: '/lidmaatschap' },
         { name: 'Sponsoring', link: '/sponsoring' },
         { name: 'Documenten', link: '/documenten' },
+        { name: 'COVID-19', link: '/covid' },
         { name: 'Webshop', extLink: webshopLink },
       ],
     },

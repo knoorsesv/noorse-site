@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.69](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.68...v0.1.69) (2020-10-01)
+
+
+### Features
+
+* add page with COVID rules ([0344617](https://github.com/gatsbyjs/gatsby-starter-default/commit/034461705b4cbe2f5952df03481fab365a4b939e))
+
+### [0.1.68](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.67...v0.1.68) (2020-10-01)
+
+
+### Bug Fixes
+
+* contact page styling ([ec9b5e3](https://github.com/gatsbyjs/gatsby-starter-default/commit/ec9b5e314be86844d22593f40e8d5777c1c084cb))
+* give external link in navbar correct color ([0d4f564](https://github.com/gatsbyjs/gatsby-starter-default/commit/0d4f5648febc0ad93978c5417b9db7e043a1a0c9))
+
 ### [0.1.67](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.66...v0.1.67) (2020-10-01)
 
 

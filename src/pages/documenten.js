@@ -2,6 +2,7 @@ import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 import { graphql, useStaticQuery } from 'gatsby'
+import { DocumentLink } from '../components/documents'
 
 const DocumentenPage = () => {
   const documents = useStaticQuery(graphql`
@@ -23,19 +24,7 @@ const DocumentenPage = () => {
     <Layout>
       <Container>
         <Title>Documenten</Title>
-        <div>
-          {documents.allContentfulDocument.nodes.map((documentNode) => {
-            return (
-              <a
-                href={documentNode.document.localFile.publicURL}
-                download
-                className={'underline'}
-              >
-                {documentNode.naam}
-              </a>
-            )
-          })}
-        </div>
+        <div>{documents.allContentfulDocument.nodes.map(DocumentLink)}</div>
       </Container>
     </Layout>
   )
