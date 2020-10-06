@@ -113,8 +113,8 @@ export default () => {
         id="homepage-content"
       >
         <NieuwsSection className={'lg:col-span-2 lg:row-span-4'} />
-        <EventsSection className={'lg:row-start-1 lg:col-start-3'} />
-        <WebshopSection className={'lg:row-start-2 lg:col-start-3'} />
+        <WebshopSection className={'lg:row-start-1 lg:col-start-3'} />
+        <EventsSection className={'lg:row-start-2 lg:col-start-3'} />
         <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
       </div>
