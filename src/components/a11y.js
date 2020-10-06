@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Clickable = (Component, onClick, props) => {
+export const Clickable = (Component, onClick, { className, ...props }) => {
   const keyDownHandler = (event) => {
     if (event.key === 'Enter') {
       onClick()
@@ -9,6 +9,7 @@ export const Clickable = (Component, onClick, props) => {
   return (
     <Component
       {...props}
+      className={`${className} cursor-pointer`}
       onClick={onClick}
       onKeyDown={keyDownHandler}
       role="link"
