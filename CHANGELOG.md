@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.71](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.70...v0.1.71) (2020-10-06)
+
+
+### Features
+
+* Styling improvement ([#111](https://github.com/gatsbyjs/gatsby-starter-default/issues/111)) ([a1927a7](https://github.com/gatsbyjs/gatsby-starter-default/commit/a1927a7d63fcddf80350dc27552d1bfd6c7fed06))
+
 ### [0.1.70](https://github.com/gatsbyjs/gatsby-starter-default/compare/v0.1.69...v0.1.70) (2020-10-06)
 
 
