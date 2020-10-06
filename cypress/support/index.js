@@ -17,6 +17,7 @@
 // import './commands'
 
 require('cypress-react-unit-test/support')
+require('cypress-image-snapshot/command').addMatchImageSnapshotCommand()
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

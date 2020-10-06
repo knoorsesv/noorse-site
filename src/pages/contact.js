@@ -34,11 +34,6 @@ const ContactPage = () => (
           />
         </Block>
         <Block>
-          <Title>Adres</Title>
-          <div className={'text-center'}>Frans De Peuterstraat 50</div>
-          <div className={'text-center'}>2950 Kapellen</div>
-        </Block>
-        <Block>
           <Title>Contact</Title>
           <SpacedInfo
             items={[
@@ -47,7 +42,6 @@ const ContactPage = () => (
               { label: 'Senioren', value: 'senioren@noorse.be' },
               { label: 'Dames / Meisjes', value: 'meisjesendames@noorse.be' },
               { label: 'G-voetbal', value: 'gvoetbal@noorse.be' },
-              { label: 'Tel', value: '03 664 44 12' },
             ]}
           />
         </Block>

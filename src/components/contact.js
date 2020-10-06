@@ -5,7 +5,7 @@ import React from 'react'
 
 export const ContactInfo = () => {
   return (
-    <div className={`flex flex-col items-center`}>
+    <div id="contact-info" className={`flex flex-col items-center`}>
       <span>Frans de Peuterstraat 50</span>
       <span>2950 Kapellen</span>
       {/*todo: move to contentful*/}
