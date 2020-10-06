@@ -63,7 +63,6 @@
     "bump-minor": "standard-version --release-as minor",
     "build-serve": "yarn build && yarn serve",
     "cypress:open": "cypress open",
-    "cypress:serve-run": " ",
     "cypress:test": "cypress run",
     "develop": "yarn preinstall && gatsby develop",
     "build:css": "tailwindcss build src/styles/tailwind-import.css -o output.css",
