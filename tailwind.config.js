@@ -8,8 +8,8 @@ module.exports = {
   },
   theme: {
     extend: {
-      padding: {
-        '5p': '5px',
+      margin: {
+        '10p': '10px',
       },
       colors: {
         black: {
