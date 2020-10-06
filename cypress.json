@@ -1,7 +1,10 @@
 {
   "baseUrl": "http://localhost:8000/",
   "projectId": "iw2qbq",
+  "testFiles": "**/*cy-spec.js",
   "retries": {
     "runMode": 3
-  }
+  },
+  "experimentalComponentTesting": true,
+  "componentFolder": "src"
 }
