@@ -8,12 +8,12 @@ export const NewsList = (breakpointColumnsObj) => {
     query {
       allContentfulNews(sort: { fields: createdAt, order: DESC }) {
         nodes {
-          blurb
           title
           body {
             json
           }
           createdAt(formatString: "DD/MM/YY", locale: "nl-BE")
+          publishDate(formatString: "DD/MM/YY", locale: "nl-BE")
           category {
             naam
           }
@@ -35,7 +35,7 @@ export const NewsList = (breakpointColumnsObj) => {
       columnClassName="masonry-column"
     >
       {newsItems.allContentfulNews.nodes.map((node) => (
-        <div key={node.title} className={'py-2'}>
+        <div key={node.title} className={'py-5p '}>
           <NewsCard newsNode={node} />
         </div>
       ))}

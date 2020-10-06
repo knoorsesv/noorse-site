@@ -8,6 +8,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      padding: {
+        '5p': '5px',
+      },
       colors: {
         black: {
           default: '#000000',
@@ -43,6 +46,7 @@ module.exports = {
         '32p': '32px',
         '38p': '38px',
         '64p': '64px',
+        '80p': '80px',
         '96p': '96px',
         '128p': '128px',
         '1v': '1vh',

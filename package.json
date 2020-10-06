@@ -62,6 +62,7 @@
     "bump-minor": "standard-version --release-as minor",
     "build-serve": "yarn build && yarn serve",
     "cypress:open": "cypress open",
+    "cypress:test": "cypress run",
     "develop": "yarn preinstall && gatsby develop",
     "preinstall": "export $(xargs < .env)",
     "release": "standard-version && git push --follow-tags",

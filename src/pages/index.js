@@ -2,20 +2,20 @@ import React from 'react'
 import SEO from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text'
 import { EventList } from '../components/events'
-import { Card } from '../components/cards'
-import { Title } from '../components/titles'
+import { Card, ClickableCard } from '../components/cards'
+import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
 import NoorseFooter from '../components/noorseFooter'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby-link'
 
 const EventsSection = ({ className }) => {
   return (
     <Section className={className}>
-      <Title>Evenementen</Title>
+      <SectionTitle>Evenementen</SectionTitle>
       <Card className={'mb-4'}>
         <div className={'py-2 px-3'}>
           <EventList />
@@ -28,7 +28,7 @@ const EventsSection = ({ className }) => {
 const TrooperSection = ({ className }) => {
   return (
     <Section className={className}>
-      <Title>Trooper</Title>
+      <SectionTitle>Trooper</SectionTitle>
       <Card>
         <TextBlock>
           <div className={'text-center px-2'}>
@@ -50,26 +50,33 @@ const TrooperSection = ({ className }) => {
 const WebshopSection = ({ className }) => {
   return (
     <Section className={`${className}`}>
-      <Title>Webshop</Title>
+      <SectionTitle>Webshop</SectionTitle>
       <Card>
-        Ontdek{' '}
-        <ExternalLink icon={false} url={webshopLink}>
-          hier
-        </ExternalLink>{' '}
-        onze officiële webshop!
+        <div className={'text-center'}>
+          Ontdek{' '}
+          <ExternalLink icon={false} url={webshopLink}>
+            hier
+          </ExternalLink>{' '}
+          onze officiële webshop!
+        </div>
       </Card>
     </Section>
   )
 }
 
 const CovidSection = ({ className }) => {
+  const goToCovidPage = () => {
+    navigate(`/covid`)
+  }
   return (
     <Section className={`${className}`}>
-      <Title>Covid-19</Title>
-      <Card>
-        De regels die op onze club van kracht zijn vindt u{' '}
-        <Link to={'/covid'}>hier</Link>
-      </Card>
+      <SectionTitle>Covid-19</SectionTitle>
+      <ClickableCard onClick={goToCovidPage}>
+        <div className={'text-center'}>
+          De regels die op onze club van kracht zijn vindt u{' '}
+          <span className={'underline'}>hier</span>
+        </div>
+      </ClickableCard>
     </Section>
   )
 }
@@ -82,7 +89,7 @@ const NieuwsSection = ({ className }) => {
   }
   return (
     <Section id="news-list" className={className}>
-      <Title>Nieuws</Title>
+      <SectionTitle>Nieuws</SectionTitle>
       {NewsList(newsListBreakPoints)}
     </Section>
   )

@@ -33,7 +33,6 @@ exports.createPages = async ({ graphql, actions }) => {
           naam
           news {
             title
-            blurb
           }
           ploeg {
             naam

@@ -3,24 +3,33 @@
 exports[`Navbar renders correctly 1`] = `
 Array [
   <section
-    className="w-full static h-64p sm:h-96p"
+    className="w-full static h-64p sm:h-80p"
     id="header"
   >
     <nav
       className="
         transition-all duration-200 ease-in
       z-50 p-3 w-full flex
-      h-64p sm:h-96p 
+      h-64p sm:h-80p 
       fixed bg-green lg:flex-row-reverse lg:justify-between lg:items-center 
       "
     >
       <div
-        className="hidden md:block h-64p sm:h-96p transition-all duration-200 ease-in false xl:w-60 "
+        className="hidden md:block h-64p sm:h-80p transition-all duration-200 ease-in 
+            false xl:w-60 
+            
+            "
         id="menu-container"
       >
         <div
           className="h-full flex flex-row justify-between items-center p-4 lg:p-6"
           id="menu"
+          style={
+            Object {
+              "position": "relative",
+              "zIndex": "10",
+            }
+          }
         >
           <span
             className="mx-3 transition-all duration-200 ease-in"
@@ -29,8 +38,9 @@ Array [
               className="relative 
       whitespace-no-wrap
       font-medium
-      false transition-all duration-200 ease-in
+      transition-all duration-200 ease-in
       "
+              id="top-menu-item"
             >
               <a
                 className="text-white transition-all duration-200 ease-in"
@@ -47,8 +57,9 @@ Array [
               className="relative 
       whitespace-no-wrap
       font-medium
-      false transition-all duration-200 ease-in
+      transition-all duration-200 ease-in
       "
+              id="top-menu-item"
             >
               <span
                 className="text-white transition-all duration-200 ease-in"
@@ -64,8 +75,9 @@ Array [
               className="relative 
       whitespace-no-wrap
       font-medium
-      false transition-all duration-200 ease-in
+      transition-all duration-200 ease-in
       group"
+              id="top-menu-item"
             >
               <span
                 className="text-white transition-all duration-200 ease-in"
@@ -100,6 +112,22 @@ Array [
             </div>
           </span>
         </div>
+        <div
+          className="hidden transition-all duration-200 ease-in shadow-lg"
+          style={
+            Object {
+              "borderColor": "transparent transparent green transparent",
+              "borderStyle": "solid",
+              "borderWidth": "0 0 40px 20px",
+              "left": "-25px",
+              "opacity": "70%",
+              "position": "relative",
+              "top": "-35px",
+              "width": "130%",
+              "zIndex": "0",
+            }
+          }
+        />
       </div>
       <div
         className="transition-all duration-200 ease-in
@@ -193,7 +221,11 @@ Array [
             Sub Item Link
           </a>
           <a
-            className="text-white"
+            aria-label=""
+            className="false text-white"
+            href="http://sub-link"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Sub Item Ext Link
           </a>

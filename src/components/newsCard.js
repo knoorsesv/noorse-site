@@ -3,30 +3,33 @@ import React from 'react'
 import { ClickableCard } from './cards'
 
 export const NewsCard = ({ newsNode }) => {
-  let snippet
-  if (!newsNode.blurb) {
-    const firstParagraph = newsNode.body.json.content[0].content[0].value
-    const endOfSecondSentence = firstParagraph.indexOf(
-      '.',
-      firstParagraph.indexOf('.') + 1
-    )
-    snippet = `${
-      endOfSecondSentence > 0
-        ? firstParagraph.substr(0, endOfSecondSentence)
-        : firstParagraph
-    }...`
+  const maxChars = 100
+  let snippet = ''
+  let paragraph = -1
+  const firstContent = newsNode.body.json.content[0].content
+  while (snippet.length < maxChars && paragraph++ < firstContent.length - 1) {
+    const paragraphContent = firstContent[paragraph]
+    let extraText
+    if (paragraphContent.nodeType === 'text') {
+      extraText = paragraphContent.value
+    }
+
+    if (paragraphContent.nodeType === 'hyperlink') {
+      extraText = paragraphContent.content[0].value
+    }
+    snippet = (snippet + ' ' + extraText).substr(0, maxChars)
   }
+  snippet += ' ...'
 
   const goToNews = () => {
     navigate(`/nieuws/${newsNode.title}`)
   }
 
-  // todo: maybe max height on card corresponding to 2x small card?
   return (
     <ClickableCard
       header={newsNode.title}
       image={newsNode.image}
-      className={'min-h-128p'}
+      containerClass={'min-h-128p'}
       onClick={goToNews}
     >
       <div
@@ -37,9 +40,11 @@ export const NewsCard = ({ newsNode }) => {
         {newsNode.category && (
           <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
         )}
-        <div className={'text-center'}>{newsNode.createdAt}</div>
+        <div className={'text-center'}>
+          {newsNode.publishDate || newsNode.createdAt}
+        </div>
       </div>
-      <div className={'text-center'}>{newsNode.blurb || snippet}</div>
+      <div className={'text-center min-h-64p'}>{snippet}</div>
     </ClickableCard>
   )
 }
