@@ -76,3 +76,5 @@ yarn-error.log
 /backstop_data/ci_report/
 /cypress/snapshots/*/__diff_output__/
 /src/output.css
+/cypress/videos/
+/cypress/screenshots/
