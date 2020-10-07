@@ -83,6 +83,7 @@ jobs:
           build: yarn build:css
           config: baseUrl=${{needs.build-dev.outputs.dev-url}}
           record: true
+          env: failOnSnapshotDiff=false
           tag: ${{ github.event_name }}
           browser: chrome
         env:
