@@ -92,7 +92,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: Set commit status 🖼
         run: |
-          node ./scripts/set-gh-check.js
+          node ./.github/scripts/set-gh-check.js
 
 #  lighthouse-check:
 #    needs: build-prod
