@@ -94,37 +94,19 @@ jobs:
         run: |
           node ./scripts/set-gh-check.js
 
-  lighthouse-check:
-    needs: build-prod
-    if: contains(github.event_name, 'pull_request')
-    runs-on: ubuntu-latest
-    name: Lighthouse Check
-    steps:
-      - uses: actions/checkout@v1
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          urls: |
-            ${{needs.build-prod.outputs.prod-url}}
-          configPath: './lighthouserc.json'
-          temporaryPublicStorage: true
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
-  #  backstop-test:
-  #    needs: build-dev
-  #    runs-on: ubuntu-latest
-  #    name: Backstop Test
-  #    continue-on-error: true
-  #    steps:
-  #      - uses: actions/checkout@v1
-  #      - name: Download built folder
-  #        uses: actions/download-artifact@v2
-  #        with:
-  #          name: public
-  #          path: public
-  #      - uses: ./.github/run-backstop
-  #      - uses: actions/upload-artifact@v2
-  #        if: failure()
-  #        with:
-  #          name: backstop-test
-  #          path: backstop_data/
+#  lighthouse-check:
+#    needs: build-prod
+#    if: contains(github.event_name, 'pull_request')
+#    runs-on: ubuntu-latest
+#    name: Lighthouse Check
+#    steps:
+#      - uses: actions/checkout@v1
+#      - name: Audit URLs using Lighthouse
+#        uses: treosh/lighthouse-ci-action@v3
+#        with:
+#          urls: |
+#            ${{needs.build-prod.outputs.prod-url}}
+#          configPath: './lighthouserc.json'
+#          temporaryPublicStorage: true
+#        env:
+#          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
