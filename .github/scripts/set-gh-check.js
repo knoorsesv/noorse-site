@@ -1,6 +1,5 @@
 const globby = require('globby')
 const got = require('got')
-const pluralize = require('pluralize')
 
 function checkEnvVariables(env) {
   if (!env.GITHUB_TOKEN) {
@@ -68,7 +67,7 @@ async function setGitHubCommitStatus(diffsN, envOptions) {
       json: {
         context: 'snapshots',
         state: 'failure',
-        description: `${diffsN} visual ${pluralize('diff', diffsN)}`,
+        description: `${diffsN} visual diffs}`,
       },
     })
   }
@@ -85,11 +84,7 @@ const onError = (e) => {
 
 getVisualDiffs()
   .then((list) => {
-    console.log(
-      'found %d visual %s',
-      list.length,
-      pluralize('diff', list.length)
-    )
+    console.log('found %d visual %s', list.length, 'diffs')
     console.log(list.join('\n'))
 
     return setGitHubCommitStatus(list.length, envOptions)
