@@ -1,4 +1,4 @@
-xdescribe('Home Page', function () {
+describe('Home Page', function () {
   beforeEach(() => {
     cy.visit('/')
   })
