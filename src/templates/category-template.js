@@ -3,7 +3,7 @@ import Layout, { Container } from '../components/layout'
 import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
 import { Section } from '../pages'
-import { CategoryTeamNavigation } from '../components/teamNavigation'
+import { CategoryTeamNavigation } from '../components/team-navigation'
 
 export default ({ pageContext: { categoryNode } }) => {
   return (
