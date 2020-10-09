@@ -56,7 +56,7 @@ describe('CategoryTeamNavigation', () => {
   })
 
   describe('lots of teams given', () => {
-    const sizes = ['iphone-4', 'iphone-6', 'ipad-2', 'macbook-11']
+    const sizes = ['iphone-4', 'iphone-6', 'ipad-2']
 
     before(() => {
       header = ''
