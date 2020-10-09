@@ -9,6 +9,8 @@ describe('Category page', () => {
       .within(() => {
         cy.get('a')
           .should('contain', 'Noorse 1')
+          .should('contain', 'Noorse 3')
+          .should('contain', 'Reserven B')
           .should('contain', 'Reserven A')
       })
   })
