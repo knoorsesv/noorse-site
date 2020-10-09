@@ -16,7 +16,8 @@ export const CoverImage = ({ children }) => {
   `)
   return (
     <BackgroundImage
-      fluid={image.childImageSharp.fluid}
+      title={'background-image'}
+      fluid={image.cover.childImageSharp.fluid}
       className={'h-full z-50'}
       style={{ backgroundPosition: 'top' }}
     >
