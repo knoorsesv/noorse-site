@@ -38,6 +38,7 @@
     "typography-theme-parnassus": "0.16.19"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@commitlint/cli": "8.3.5",
@@ -64,7 +65,7 @@
     "build": "gatsby build",
     "bump-minor": "standard-version --release-as minor",
     "build-serve": "yarn build && yarn serve",
-    "cypress:open": "DEBUG=cypress:* cypress open",
+    "cypress:open": "DEBUG=*webpack*,cypress-react-unit-test cypress open",
     "cypress:test": "yarn build:css && cypress run",
     "cypress:test-update": "yarn build:css && cypress run --env updateSnapshots=true",
     "develop": "yarn preinstall && gatsby develop",
