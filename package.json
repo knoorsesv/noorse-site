@@ -64,7 +64,7 @@
     "build": "gatsby build",
     "bump-minor": "standard-version --release-as minor",
     "build-serve": "yarn build && yarn serve",
-    "cypress:open": "DEBUG=cypress:* cypress open",
+    "cypress:open": "DEBUG=cypress:* cypress open --env updateSnapshots=true",
     "cypress:test": "yarn build:css && cypress run",
     "cypress:test-update": "yarn build:css && cypress run --env updateSnapshots=true",
     "develop": "yarn preinstall && gatsby develop",

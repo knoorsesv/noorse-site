@@ -1,40 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import BackgroundImage from 'gatsby-background-image'
 import { Logo } from './images'
 import { ExternalLink } from './text'
 import { siteMap as defaultSiteMap } from '../env/constants'
+import { CoverImage } from './cover-image'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32vh sm:h-64v'
 
-export const Navbar = ({ coverPhoto, siteMap }) => {
+export const Navbar = ({ coverPhoto, siteMap, initiallyShown }) => {
   const [fullBar, setFixedToTop] = useState(!coverPhoto)
-
-  const coverImage = useStaticQuery(graphql`
-    query {
-      cover: file(name: { eq: "noorse_cover" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   siteMap = siteMap || defaultSiteMap
 
   return (
     <React.Fragment>
-      <NavContainer
-        coverPhoto={coverPhoto}
-        image={coverImage.cover}
-        setFixedToTop={setFixedToTop}
-      >
+      <NavContainer coverPhoto={coverPhoto} setFixedToTop={setFixedToTop}>
         <nav
           className={`
         ${transition}
@@ -87,7 +71,11 @@ export const Navbar = ({ coverPhoto, siteMap }) => {
           </div>
         </nav>
       </NavContainer>
-      <SideBarMenu fixedToTop={fullBar} siteMap={siteMap} />
+      <SideBarMenu
+        fixedToTop={fullBar}
+        siteMap={siteMap}
+        initiallyShown={initiallyShown}
+      />
     </React.Fragment>
   )
 }
@@ -111,17 +99,7 @@ const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
   const sectionHeight = coverPhoto ? coverSectionHeight : menuBarHeight
   return (
     <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
-      {coverPhoto ? (
-        <BackgroundImage
-          fluid={image.childImageSharp.fluid}
-          className={'h-full z-50'}
-          style={{ backgroundPosition: 'top' }}
-        >
-          {children}
-        </BackgroundImage>
-      ) : (
-        children
-      )}
+      {coverPhoto ? <CoverImage>{children}</CoverImage> : children}
     </section>
   )
 }
@@ -224,7 +202,7 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
 const SideBarItem = ({ item }) => {
   return (
     <span className={`relative text-right my-1 ${item.subItems && 'group'}`}>
-      {item.link ? (
+      {item.link || item.extLink ? (
         <LinkInSideBar item={item} />
       ) : (
         <span className={`text-white`}> {item.name} </span>
@@ -262,15 +240,15 @@ const LinkInSideBar = ({ item }) => {
   )
 }
 
-const SideBarMenu = ({ fixedToTop, siteMap }) => {
-  const [menuShown, setMenuShown] = useState(false)
+const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
+  const [menuShown, setMenuShown] = useState(initiallyShown)
   const toggleMenuShown = () => {
     setMenuShown(!menuShown)
   }
 
   return (
     <div
-      id="sidebar-menu"
+      id="sidebar-component"
       className={`${transition}
       lg:hidden block
       z-50
@@ -287,6 +265,7 @@ const SideBarMenu = ({ fixedToTop, siteMap }) => {
         <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
       </div>
       <div
+        id="sidebar-menu"
         className={`
             ${menuShown ? 'block' : 'hidden'}
             flex flex-col justify-between mt-6 sm:mt-8`}
