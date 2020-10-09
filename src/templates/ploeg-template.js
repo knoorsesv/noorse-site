@@ -4,7 +4,7 @@ import { SubTitle, Title } from '../components/titles'
 import { graphql } from 'gatsby'
 import { ExternalLink } from '../components/text'
 import { format, parseISO } from 'date-fns'
-import { CategoryTeamNavigation } from '../components/teamNavigation'
+import { CategoryTeamNavigation } from '../components/team-navigation'
 
 export const query = graphql`
   query($teamId: ID!) {
