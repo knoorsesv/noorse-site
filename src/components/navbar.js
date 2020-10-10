@@ -11,21 +11,27 @@ const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32vh sm:h-64v'
 
-export const Navbar = ({ coverPhoto, siteMap, initiallyShown }) => {
-  const [fullBar, setFixedToTop] = useState(!coverPhoto)
+export const Navbar = ({
+  coverPhoto: showCoverPhoto,
+  siteMap,
+  initiallyShown,
+}) => {
+  const [showFullBar, setShowFullBar] = useState(!showCoverPhoto)
 
   siteMap = siteMap || defaultSiteMap
 
   return (
     <React.Fragment>
-      <NavContainer coverPhoto={coverPhoto} setFixedToTop={setFixedToTop}>
+      <NavContainer
+        showCoverPhoto={showCoverPhoto}
+        setFixedToTop={setShowFullBar}
+      >
         <nav
           className={`
         ${transition}
       z-50 p-3 w-full flex
-      ${fullBar ? menuBarHeight : coverSectionHeight} 
       ${
-        fullBar
+        showFullBar
           ? 'fixed bg-green lg:flex-row-reverse lg:justify-between lg:items-center'
           : 'bg-transparent sm:items-center md:items-start md:flex-col md:pr-0'
       } 
@@ -34,13 +40,13 @@ export const Navbar = ({ coverPhoto, siteMap, initiallyShown }) => {
           <div
             id="menu-container"
             className={`hidden md:block ${menuBarHeight} ${transition} 
-            ${!fullBar && 'md:self-end'} xl:w-60 
-            ${!fullBar ? `md:mb-10 md:pl-5 md:h-38p` : ''}
+            ${!showFullBar && 'md:self-end'} xl:w-60 
+            ${!showFullBar ? `md:mb-10 md:pl-5 md:h-38p` : ''}
             `}
           >
-            <TopMenu fixedToTop={fullBar} siteMap={siteMap} />
+            <TopMenu fixedToTop={showFullBar} siteMap={siteMap} />
             <div
-              className={`${fullBar && 'hidden'} ${transition} shadow-lg`}
+              className={`${showFullBar && 'hidden'} ${transition} shadow-lg`}
               style={{
                 position: 'relative',
                 top: '-35px',
@@ -59,7 +65,7 @@ export const Navbar = ({ coverPhoto, siteMap, initiallyShown }) => {
             className={`${transition}
           relative flex justify-center 
           ${
-            fullBar
+            showFullBar
               ? 'justify-start w-1/6 h-150 top-8p sm:top-4p md:top-32p left-16p'
               : 'w-full h-full lg:w-1/2 sm:h-70 lg:h-80 lg:p-8'
           }
@@ -72,7 +78,7 @@ export const Navbar = ({ coverPhoto, siteMap, initiallyShown }) => {
         </nav>
       </NavContainer>
       <SideBarMenu
-        fixedToTop={fullBar}
+        fixedToTop={showFullBar}
         siteMap={siteMap}
         initiallyShown={initiallyShown}
       />
@@ -80,14 +86,14 @@ export const Navbar = ({ coverPhoto, siteMap, initiallyShown }) => {
   )
 }
 
-const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
+const NavContainer = ({ showCoverPhoto, children, setFixedToTop }) => {
   const ref = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
         setFixedToTop(
-          !coverPhoto || ref.current.getBoundingClientRect().top < 0
+          !showCoverPhoto || ref.current.getBoundingClientRect().top < 0
         )
       }
     }
@@ -95,11 +101,13 @@ const NavContainer = ({ coverPhoto, children, image, setFixedToTop }) => {
     return () => {
       window.removeEventListener('scroll', () => handleScroll)
     }
-  }, [coverPhoto, setFixedToTop])
-  const sectionHeight = coverPhoto ? coverSectionHeight : menuBarHeight
+  }, [showCoverPhoto, setFixedToTop])
+
+  const sectionHeight = showCoverPhoto ? coverSectionHeight : menuBarHeight
+  console.log('showing cover image', showCoverPhoto)
   return (
     <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
-      {coverPhoto ? <CoverImage>{children}</CoverImage> : children}
+      {showCoverPhoto ? <CoverImage>{children}</CoverImage> : children}
     </section>
   )
 }
@@ -115,35 +123,25 @@ const DropDown = ({ fixedToTop, item }) => {
       ${transition}
       bg-green bg-opacity-75 `}
     >
-      {item.subItems.map((subItem) =>
-        subItem.link ? (
-          <Link
+      {item.subItems.map((subItem) => {
+        return (
+          <NavLink
             className={`${
               fixedToTop ? 'text-white' : 'text-white'
             } ${transition} my-1`}
-            to={subItem.link}
+            item={subItem}
             key={subItem.name}
-          >
-            {subItem.name}
-          </Link>
-        ) : (
-          <ExternalLink
-            url={subItem.extLink}
-            styled={false}
-            icon={false}
-            textColor={'text-white'}
-            key={subItem.name}
-          >
-            {subItem.name}
-          </ExternalLink>
+          ></NavLink>
         )
-      )}
+      })}
     </div>
   )
 }
 
-const TopMenuItem = ({ item, fixedToTop: fullBar }) => {
-  const itemTextStyle = `${fullBar ? 'text-white' : 'text-white'} ${transition}`
+const TopMenuItem = ({ item, fixedToTop }) => {
+  const itemTextStyle = `${
+    fixedToTop ? 'text-white' : 'text-white'
+  } ${transition}`
   return (
     <div
       id={'top-menu-item'}
@@ -153,18 +151,16 @@ const TopMenuItem = ({ item, fixedToTop: fullBar }) => {
       ${transition}
       ${item.subItems ? 'group' : ''}`}
     >
-      {item.link ? (
-        <Link
+      {item.link || item.extLink ? (
+        <NavLink
           className={itemTextStyle}
           activeClassName={`border-b-2`}
-          to={item.link}
-        >
-          {item.name}
-        </Link>
+          item={item}
+        ></NavLink>
       ) : (
         <span className={itemTextStyle}>{item.name}</span>
       )}
-      {item.subItems && <DropDown fixedToTop={fullBar} item={item} />}
+      {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
     </div>
   )
 }
@@ -203,14 +199,14 @@ const SideBarItem = ({ item }) => {
   return (
     <span className={`relative text-right my-1 ${item.subItems && 'group'}`}>
       {item.link || item.extLink ? (
-        <LinkInSideBar item={item} />
+        <NavLink item={item} />
       ) : (
         <span className={`text-white`}> {item.name} </span>
       )}
       {item.subItems && (
         <div className={'flex flex-col mr-3 mt-2 space-y-1'}>
           {item.subItems.map((subItem) => (
-            <LinkInSideBar key={subItem.name} item={subItem} />
+            <NavLink key={subItem.name} item={subItem} />
           ))}
         </div>
       )}
@@ -218,11 +214,15 @@ const SideBarItem = ({ item }) => {
   )
 }
 
-const LinkInSideBar = ({ item }) => {
+const NavLink = ({
+  item,
+  className = 'text-white',
+  activeClassName = 'border-r-2 pr-2',
+}) => {
   return item.link ? (
     <Link
-      className={`text-white`}
-      activeClassName={'border-r-2 pr-2'}
+      className={className}
+      activeClassName={activeClassName}
       to={item.link}
     >
       {item.name}

@@ -94,4 +94,30 @@ describe('Navbar', () => {
       })
     })
   })
+
+  describe('on desktop', () => {
+    beforeEach(() => {
+      cy.viewport('macbook-13')
+    })
+
+    it('Shows all links and items', () => {
+      cy.get('#menu').within(() => {
+        cy.get('a').contains('Top Level Link').should('have.attr', 'to', '/top')
+        cy.get('a')
+          .contains('Top Level External Link')
+          .should('have.attr', 'target', '_blank')
+          .should('have.attr', 'href', 'http://top-link')
+
+        //todo: find way to trigger dropdown and check these are visible
+
+        cy.get('a').contains('Sub Item Link').should('have.attr', 'to', '/sub')
+        cy.get('a')
+          .contains('Sub Item Ext Link')
+          .should('have.attr', 'target', '_blank')
+          .should('have.attr', 'href', 'http://sub-link')
+
+        cy.get('span').should('contain', 'Top Level met Sub Items')
+      })
+    })
+  })
 })
