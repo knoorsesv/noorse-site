@@ -47,7 +47,6 @@ jobs:
       - uses: bahmutov/npm-install@v1
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      - run: yarn test
       - run: yarn build
         env:
           PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
