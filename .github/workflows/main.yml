@@ -81,7 +81,7 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           build: yarn build:css
-          config: baseUrl=https://5f7f659e7b37d50132a1a9e7--modest-golick-edc673.netlify.app
+          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
           record: true
           tag: ${{ github.event_name }}
         env:
