@@ -22,15 +22,13 @@ jobs:
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
-          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
-          CONTENTFUL_PREVIEW: ${{ github.event.inputs.preview }}
           PROD: true
-          TRACKING: ${{ github.event.inputs.preview == 'false' }}
+          TRACKING: true
       - name: deploy
         uses: nwtgck/actions-netlify@v1
         with:
           publish-dir: './public'
-          production-deploy: ${{ github.event.inputs.preview == 'false' }}
+          production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy ${{ github.ref }}'
         env:
