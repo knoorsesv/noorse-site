@@ -1,0 +1,8 @@
+{
+  "testFiles": "**/*component-spec.js",
+  "experimentalComponentTesting": true,
+  "componentFolder": "src/components",
+  "env": {
+    "updateSnapshots": true
+  }
+}

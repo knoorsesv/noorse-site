@@ -92,6 +92,10 @@ describe('Navbar', () => {
 
         cy.get('#sidebar-menu').should('not.be.visible')
       })
+
+      it('should match snapshot', () => {
+        cy.get('#sidebar-container').matchImageSnapshot('mobile-navbar')
+      })
     })
   })
 
@@ -118,6 +122,10 @@ describe('Navbar', () => {
 
         cy.get('span').should('contain', 'Top Level met Sub Items')
       })
+    })
+
+    it('should match snapshot', () => {
+      cy.get('#nav-container').matchImageSnapshot('desktop-navbar')
     })
   })
 })

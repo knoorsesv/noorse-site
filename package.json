@@ -68,6 +68,7 @@
     "cypress:open": "DEBUG=*webpack*,cypress-react-unit-test cypress open --env updateSnapshots=true",
     "cypress:test": "yarn build:css && cypress run",
     "cypress:test-update": "yarn build:css && cypress run --env updateSnapshots=true",
+    "cypress:docker": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:5.3.0 --config-file cypress-components.json",
     "develop": "yarn preinstall && gatsby develop",
     "build:css": "tailwindcss build src/styles/tailwind-import.css -o src/output.css",
     "preinstall": "export $(xargs < .env)",

@@ -106,7 +106,11 @@ const NavContainer = ({ showCoverPhoto, children, setFixedToTop }) => {
   const sectionHeight = showCoverPhoto ? coverSectionHeight : menuBarHeight
   console.log('showing cover image', showCoverPhoto)
   return (
-    <section ref={ref} id="header" className={`w-full static ${sectionHeight}`}>
+    <section
+      ref={ref}
+      id="nav-container"
+      className={`w-full static ${sectionHeight}`}
+    >
       {showCoverPhoto ? <CoverImage>{children}</CoverImage> : children}
     </section>
   )
@@ -134,33 +138,6 @@ const DropDown = ({ fixedToTop, item }) => {
           ></NavLink>
         )
       })}
-    </div>
-  )
-}
-
-const TopMenuItem = ({ item, fixedToTop }) => {
-  const itemTextStyle = `${
-    fixedToTop ? 'text-white' : 'text-white'
-  } ${transition}`
-  return (
-    <div
-      id={'top-menu-item'}
-      className={`relative 
-      whitespace-no-wrap
-      font-medium
-      ${transition}
-      ${item.subItems ? 'group' : ''}`}
-    >
-      {item.link || item.extLink ? (
-        <NavLink
-          className={itemTextStyle}
-          activeClassName={`border-b-2`}
-          item={item}
-        ></NavLink>
-      ) : (
-        <span className={itemTextStyle}>{item.name}</span>
-      )}
-      {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
     </div>
   )
 }
@@ -195,6 +172,33 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
   )
 }
 
+const TopMenuItem = ({ item, fixedToTop }) => {
+  const itemTextStyle = `${
+    fixedToTop ? 'text-white' : 'text-white'
+  } ${transition}`
+  return (
+    <div
+      id={'top-menu-item'}
+      className={`relative 
+      whitespace-no-wrap
+      font-medium
+      ${transition}
+      ${item.subItems ? 'group' : ''}`}
+    >
+      {item.link || item.extLink ? (
+        <NavLink
+          className={itemTextStyle}
+          activeClassName={`border-b-2`}
+          item={item}
+        ></NavLink>
+      ) : (
+        <span className={itemTextStyle}>{item.name}</span>
+      )}
+      {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
+    </div>
+  )
+}
+
 const SideBarItem = ({ item }) => {
   return (
     <span className={`relative text-right my-1 ${item.subItems && 'group'}`}>
@@ -214,32 +218,6 @@ const SideBarItem = ({ item }) => {
   )
 }
 
-const NavLink = ({
-  item,
-  className = 'text-white',
-  activeClassName = 'border-r-2 pr-2',
-}) => {
-  return item.link ? (
-    <Link
-      className={className}
-      activeClassName={activeClassName}
-      to={item.link}
-    >
-      {item.name}
-    </Link>
-  ) : (
-    <ExternalLink
-      url={item.extLink}
-      styled={false}
-      icon={false}
-      textColor={'text-white'}
-      key={item.name}
-    >
-      {item.name}
-    </ExternalLink>
-  )
-}
-
 const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
   const [menuShown, setMenuShown] = useState(initiallyShown)
   const toggleMenuShown = () => {
@@ -248,7 +226,7 @@ const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
 
   return (
     <div
-      id="sidebar-component"
+      id="sidebar-container"
       className={`${transition}
       lg:hidden block
       z-50
@@ -275,5 +253,31 @@ const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
         ))}
       </div>
     </div>
+  )
+}
+
+const NavLink = ({
+  item,
+  className = 'text-white',
+  activeClassName = 'border-r-2 pr-2',
+}) => {
+  return item.link ? (
+    <Link
+      className={className}
+      activeClassName={activeClassName}
+      to={item.link}
+    >
+      {item.name}
+    </Link>
+  ) : (
+    <ExternalLink
+      url={item.extLink}
+      styled={false}
+      icon={false}
+      textColor={'text-white'}
+      key={item.name}
+    >
+      {item.name}
+    </ExternalLink>
   )
 }
