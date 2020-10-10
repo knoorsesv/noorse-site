@@ -8,6 +8,8 @@ on:
         default: 'false'
   workflow_run:
     workflows: ['Create Release']
+    types:
+      - completed
 
 jobs:
   build:
