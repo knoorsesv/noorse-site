@@ -47,7 +47,6 @@ jobs:
       - uses: bahmutov/npm-install@v1
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      - run: yarn test
       - run: yarn build
         env:
           PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
@@ -74,6 +73,7 @@ jobs:
     needs: build-dev
     if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
+    container: cypress/browsers:node12.14.1-chrome85-ff81
     name: Cypress Test
     steps:
       - name: Checkout
@@ -81,10 +81,9 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           build: yarn build:css
-          config: baseUrl=https://5f7f659e7b37d50132a1a9e7--modest-golick-edc673.netlify.app
+          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
           record: true
           tag: ${{ github.event_name }}
-          browser: chrome
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}

@@ -3,19 +3,7 @@ import React from 'react'
 import { mount } from 'cypress-react-unit-test'
 import { CategoryTeamNavigation } from './team-navigation'
 import { Link } from 'gatsby'
-
-const FakeLink = ({ children, to, className, activeClassName }) => {
-  return (
-    <a
-      to={to}
-      className={`${className} ${
-        children === 'activeLink' && `${activeClassName}`
-      }`}
-    >
-      {children}
-    </a>
-  )
-}
+import { FakeLink } from './test/fakes'
 
 describe('CategoryTeamNavigation', () => {
   let header
