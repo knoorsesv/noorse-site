@@ -6,32 +6,18 @@ on:
         description: 'Use staged content'
         required: false
         default: 'false'
+  workflow_run:
+    workflows: ['Create Release']
 
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
-      #      - below doesn't work yet
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.5.0
-        with:
-          access_token: ${{ github.token }}
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
       - uses: actions/checkout@v2
       - uses: bahmutov/npm-install@v1
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: yarn build
         env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
