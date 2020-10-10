@@ -9,76 +9,64 @@ import { CoverImage } from './cover-image'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
-const coverSectionHeight = 'h-32vh sm:h-64v'
+const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
 
 export const Navbar = ({
   coverPhoto: showCoverPhoto,
   siteMap,
   initiallyShown,
 }) => {
-  const [showFullBar, setShowFullBar] = useState(!showCoverPhoto)
+  const [showNavbar, setShowNavBar] = useState(!showCoverPhoto)
 
   siteMap = siteMap || defaultSiteMap
 
+  console.log('show nav', showNavbar)
   return (
     <React.Fragment>
       <NavContainer
         showCoverPhoto={showCoverPhoto}
-        setFixedToTop={setShowFullBar}
+        setShowNavBar={setShowNavBar}
       >
         <nav
           className={`
         ${transition}
-      z-50 p-3 w-full flex
+      z-50 w-full flex
+      lg:flex-row-reverse lg:justify-between lg:items-center
       ${
-        showFullBar
-          ? 'fixed bg-green lg:flex-row-reverse lg:justify-between lg:items-center'
-          : 'bg-transparent sm:items-center md:items-start md:flex-col md:pr-0'
+        showNavbar
+          ? `${menuBarHeight} fixed bg-green`
+          : `${coverSectionHeight} bg-transparent lg:pr-0`
       } 
       `}
         >
           <div
             id="menu-container"
-            className={`hidden md:block ${menuBarHeight} ${transition} 
-            ${!showFullBar && 'md:self-end'} xl:w-60 
-            ${!showFullBar ? `md:mb-10 md:pl-5 md:h-38p` : ''}
+            className={`hidden lg:block 
+            ${transition} 
+            xl:w-60 
+            ${!showNavbar && 'lg:self-start'}
+            ${!showNavbar && `lg:mb-10 lg:pl-5 lg:h-38p`}
             `}
           >
-            <TopMenu fixedToTop={showFullBar} siteMap={siteMap} />
-            <div
-              className={`${showFullBar && 'hidden'} ${transition} shadow-lg`}
-              style={{
-                position: 'relative',
-                top: '-35px',
-                borderStyle: 'solid',
-                borderWidth: '0 0 40px 20px',
-                left: '-25px',
-                width: '130%',
-                zIndex: '0',
-                opacity: '70%',
-                borderColor: 'transparent transparent green transparent',
-              }}
-            />
+            <TopMenu showNavbar={showNavbar} siteMap={siteMap} />
           </div>
           <div
             id="logo-container"
             className={`${transition}
-          relative flex justify-center 
+          relative flex justify-center
           ${
-            showFullBar
-              ? 'justify-start w-1/6 h-150 top-8p sm:top-4p md:top-32p left-16p'
-              : 'w-full h-full lg:w-1/2 sm:h-70 lg:h-80 lg:p-8'
+            showNavbar
+              ? 'justify-start w-1/6 h-full top-8p sm:top-32p left-16p'
+              : `w-full h-full lg:w-1/2 p-2 sm:p-6 lg:p-8`
           }
          `}
           >
-            <Logo
-              className={`${transition} w-full h-full max-h-full max-w-full`}
-            />
+            <Logo className={`${transition}`} />
           </div>
         </nav>
       </NavContainer>
       <SideBarMenu
-        fixedToTop={showFullBar}
+        fixedToTop={showNavbar}
         siteMap={siteMap}
         initiallyShown={initiallyShown}
       />
@@ -86,13 +74,13 @@ export const Navbar = ({
   )
 }
 
-const NavContainer = ({ showCoverPhoto, children, setFixedToTop }) => {
+const NavContainer = ({ showCoverPhoto, children, setShowNavBar }) => {
   const ref = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
-        setFixedToTop(
+        setShowNavBar(
           !showCoverPhoto || ref.current.getBoundingClientRect().top < 0
         )
       }
@@ -101,15 +89,15 @@ const NavContainer = ({ showCoverPhoto, children, setFixedToTop }) => {
     return () => {
       window.removeEventListener('scroll', () => handleScroll)
     }
-  }, [showCoverPhoto, setFixedToTop])
+  }, [showCoverPhoto, setShowNavBar])
 
-  const sectionHeight = showCoverPhoto ? coverSectionHeight : menuBarHeight
-  console.log('showing cover image', showCoverPhoto)
   return (
     <section
       ref={ref}
       id="nav-container"
-      className={`w-full static ${sectionHeight}`}
+      className={`${
+        showCoverPhoto ? coverSectionHeight : menuBarHeight
+      } w-full static`}
     >
       {showCoverPhoto ? <CoverImage>{children}</CoverImage> : children}
     </section>
@@ -142,8 +130,8 @@ const DropDown = ({ fixedToTop, item }) => {
   )
 }
 
-const TopMenu = ({ fixedToTop, siteMap }) => {
-  return (
+const TopMenu = ({ showNavbar, siteMap }) => {
+  return [
     <div
       id="menu"
       style={{ zIndex: '10', position: 'relative' }}
@@ -152,13 +140,27 @@ const TopMenu = ({ fixedToTop, siteMap }) => {
       {siteMap.items.map((item) => (
         <span
           key={item.name}
-          className={`${fixedToTop ? 'mx-3' : 'mx-1'} ${transition}`}
+          className={`${showNavbar ? 'mx-3' : 'mx-1'} ${transition}`}
         >
-          <TopMenuItem item={item} fixedToTop={fixedToTop} />
+          <TopMenuItem item={item} fixedToTop={showNavbar} />
         </span>
       ))}
-    </div>
-  )
+    </div>,
+    <div
+      className={`${showNavbar && 'hidden'} ${transition} shadow-lg`}
+      style={{
+        position: 'relative',
+        top: '-35px',
+        borderStyle: 'solid',
+        borderWidth: '0 0 40px 20px',
+        left: '-25px',
+        width: '130%',
+        zIndex: '0',
+        opacity: '70%',
+        borderColor: 'transparent transparent green transparent',
+      }}
+    />,
+  ]
 }
 
 const MenuToggle = ({ clickBurger, menuShown }) => {
@@ -236,7 +238,7 @@ const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
    `}
     >
       <div
-        className={`md:hidden flex flex-row justify-end items-center 
+        className={`lg:hidden flex flex-row justify-end items-center 
         mt-2 sm:mt-4 
         ${(menuShown || fixedToTop) && 'text-white'} ${transition}`}
       >
