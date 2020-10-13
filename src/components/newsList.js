@@ -1,5 +1,5 @@
 import Masonry from 'react-masonry-css'
-import { NewsCard } from './newsCard'
+import { NewsCard } from './news-card'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
