@@ -95,7 +95,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
     const vvInfo = vvTeams.data.vv.clubTeams.find(
-      (vvTeam) => contentfulPloeg.naamOpVoetbalVlaanderen === vvTeam.name
+      (vvTeam) =>
+        (contentfulPloeg.naamOpVoetbalVlaanderen || contentfulPloeg.naam) ===
+        vvTeam.name
     )
     console.log(
       'creating team page for',
