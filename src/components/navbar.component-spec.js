@@ -49,7 +49,7 @@ describe('Navbar', () => {
 
   describe('on mobile', () => {
     beforeEach(() => {
-      cy.viewport('iphone-5')
+      cy.viewport('iphone-6')
     })
 
     it('is hidden by default', () => {
