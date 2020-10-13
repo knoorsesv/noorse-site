@@ -11,16 +11,11 @@ const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
 
-export const Navbar = ({
-  coverPhoto: showCoverPhoto,
-  siteMap,
-  initiallyShown,
-}) => {
+export const Navbar = ({ showCoverPhoto, siteMap, initiallyShown }) => {
   const [showNavbar, setShowNavBar] = useState(!showCoverPhoto)
 
   siteMap = siteMap || defaultSiteMap
 
-  console.log('show nav', showNavbar)
   return (
     <React.Fragment>
       <NavContainer
@@ -43,7 +38,6 @@ export const Navbar = ({
             id="menu-container"
             className={`hidden lg:block 
             ${transition} 
-            xl:w-60 
             ${!showNavbar && 'lg:self-start'}
             ${!showNavbar && `lg:mb-10 lg:pl-5 lg:h-38p`}
             `}
@@ -104,57 +98,27 @@ const NavContainer = ({ showCoverPhoto, children, setShowNavBar }) => {
   )
 }
 
-const DropDown = ({ fixedToTop, item }) => {
-  return (
-    <div
-      id="dropdown"
-      className={`
-      hidden group-hover:absolute group-hover:flex
-      flex-col items-start
-      w-auto p-6 mr-2
-      ${transition}
-      bg-green bg-opacity-75 `}
-    >
-      {item.subItems.map((subItem) => {
-        return (
-          <NavLink
-            className={`${
-              fixedToTop ? 'text-white' : 'text-white'
-            } ${transition} my-1`}
-            item={subItem}
-            key={subItem.name}
-          ></NavLink>
-        )
-      })}
-    </div>
-  )
-}
-
 const TopMenu = ({ showNavbar, siteMap }) => {
   return [
-    <div
+    <ul
       id="menu"
+      key="menu"
       style={{ zIndex: '10', position: 'relative' }}
-      className={`h-full flex flex-row justify-between items-center p-4 lg:p-6`}
+      className={`list-none h-full flex flex-row justify-between items-center p-4 lg:p-6 lg:mb-0`}
     >
       {siteMap.items.map((item) => (
-        <span
-          key={item.name}
-          className={`${showNavbar ? 'mx-3' : 'mx-1'} ${transition}`}
-        >
-          <TopMenuItem item={item} fixedToTop={showNavbar} />
-        </span>
+        <MenuItem key={item.name} item={item} showNavbar={showNavbar} />
       ))}
-    </div>,
+    </ul>,
     <div
+      key="menu-background"
       className={`${showNavbar && 'hidden'} ${transition} shadow-lg`}
       style={{
         position: 'relative',
         top: '-35px',
         borderStyle: 'solid',
         borderWidth: '0 0 40px 20px',
-        left: '-25px',
-        width: '130%',
+        width: '100%',
         zIndex: '0',
         opacity: '70%',
         borderColor: 'transparent transparent green transparent',
@@ -174,53 +138,46 @@ const MenuToggle = ({ clickBurger, menuShown }) => {
   )
 }
 
-const TopMenuItem = ({ item, fixedToTop }) => {
-  const itemTextStyle = `${
-    fixedToTop ? 'text-white' : 'text-white'
-  } ${transition}`
+const MenuItem = ({ item, showNavbar }) => {
   return (
-    <div
+    <li
       id={'top-menu-item'}
-      className={`relative 
+      className={`relative text-right lg:text-center
+      my-2 lg:mx-3
       whitespace-no-wrap
       font-medium
       ${transition}
-      ${item.subItems ? 'group' : ''}`}
+      ${item.subItems && 'group'}`}
     >
       {item.link || item.extLink ? (
-        <NavLink
-          className={itemTextStyle}
-          activeClassName={`border-b-2`}
-          item={item}
-        ></NavLink>
+        <NavLink activeClassName={`border-b-2`} item={item}></NavLink>
       ) : (
-        <span className={itemTextStyle}>{item.name}</span>
+        <span className={'text-white'}>{item.name}</span>
       )}
-      {item.subItems && <DropDown fixedToTop={fixedToTop} item={item} />}
+      {item.subItems && <SubMenuItems fixedToTop={showNavbar} item={item} />}
+    </li>
+  )
+}
+
+const SubMenuItems = ({ item }) => {
+  return (
+    <div
+      id="dropdown"
+      className={`
+      lg:hidden lg:group-hover:absolute lg:group-hover:flex
+      flex flex-col lg:items-start
+      w-auto lg:p-6 mr-4
+      ${transition}
+      bg-green bg-opacity-75`}
+    >
+      {item.subItems.map((subItem) => {
+        return <NavLink item={subItem} key={subItem.name} />
+      })}
     </div>
   )
 }
 
-const SideBarItem = ({ item }) => {
-  return (
-    <span className={`relative text-right my-1 ${item.subItems && 'group'}`}>
-      {item.link || item.extLink ? (
-        <NavLink item={item} />
-      ) : (
-        <span className={`text-white`}> {item.name} </span>
-      )}
-      {item.subItems && (
-        <div className={'flex flex-col mr-3 mt-2 space-y-1'}>
-          {item.subItems.map((subItem) => (
-            <NavLink key={subItem.name} item={subItem} />
-          ))}
-        </div>
-      )}
-    </span>
-  )
-}
-
-const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
+const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown }) => {
   const [menuShown, setMenuShown] = useState(initiallyShown)
   const toggleMenuShown = () => {
     setMenuShown(!menuShown)
@@ -244,23 +201,24 @@ const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown = false }) => {
       >
         <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
       </div>
-      <div
+      <ul
         id="sidebar-menu"
         className={`
+            list-none
             ${menuShown ? 'block' : 'hidden'}
             flex flex-col justify-between mt-6 sm:mt-8`}
       >
         {siteMap.items.map((item) => (
-          <SideBarItem key={item.name} item={item} fixedToTop={fixedToTop} />
+          <MenuItem key={item.name} item={item} showNavbar={fixedToTop} />
         ))}
-      </div>
+      </ul>
     </div>
   )
 }
 
 const NavLink = ({
   item,
-  className = 'text-white',
+  className = 'text-white my-2 text-lg',
   activeClassName = 'border-r-2 pr-2',
 }) => {
   return item.link ? (
@@ -276,6 +234,7 @@ const NavLink = ({
       url={item.extLink}
       styled={false}
       icon={false}
+      className={className}
       textColor={'text-white'}
       key={item.name}
     >
