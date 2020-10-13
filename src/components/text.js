@@ -19,11 +19,14 @@ export const ExternalLink = ({
   styled = true,
   altText = '',
   textColor = '',
+  className,
 }) => {
   //todo: colors when styled
   return (
     <a
-      className={`${styled && 'underline'} ${textColor || 'text-gray-dark'}`}
+      className={`${styled && 'underline'} ${
+        textColor || 'text-gray-dark'
+      } ${className}`}
       href={url}
       aria-label={`${altText}`}
       target="_blank"

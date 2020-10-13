@@ -11,7 +11,7 @@ export const Card = ({
   ...props
 }) => {
   return (
-    <div
+    <article
       {...props}
       className={`${className} 
       bg-white elevation-2 
@@ -36,7 +36,7 @@ export const Card = ({
       {children && (
         <div className={`${containerClass} w-full p-4`}>{children}</div>
       )}
-    </div>
+    </article>
   )
 }
 
