@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.78 (2020-10-13)
+
+
+### Features
+
+* make nav items single component and increase padding ([#122](https://github.com/gatsbyjs/gatsby-starter-default/issues/122)) ([73b51a9](https://github.com/gatsbyjs/gatsby-starter-default/commit/73b51a934508e9d515025189cb2d6a1c48f55239))
+
 ### 0.1.77 (2020-10-10)
 
 ### 0.1.76 (2020-10-10)
