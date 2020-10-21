@@ -1316,7 +1316,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -9414,12 +9414,12 @@ gatsby-plugin-page-creator@^2.3.32:
     graphql "^14.7.0"
     lodash "^4.17.20"
 
-gatsby-plugin-postcss@2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-2.2.4.tgz#f7779529d04dd1d9bf97327c777581f71cdfc8a3"
-  integrity sha512-aZ66adcwehVpezs5wI7z9aR54LfRZ5jFs1FCtiEcyRlqqh6QIFihitVBNjlScrukDQ3r5rMNWynKkkGFwuEMhQ==
+gatsby-plugin-postcss@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-2.3.0.tgz#31139ea4f5bc14c519b98d65b6a52dabe3bbfde1"
+  integrity sha512-1aonRsIrQ85hRBiCe/u2WrJEAVw8VkbsFb0nyxeASGiOIzQeQm6LXELB8P45MLr1qMuFqjFRKFjbsSyDbc9XsQ==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
     postcss-loader "^3.0.0"
 
 gatsby-plugin-react-helmet@3.3.14:
