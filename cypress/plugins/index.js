@@ -29,18 +29,14 @@ module.exports = (on, config) => {
   const jsxRule = opts.webpackOptions.module.rules[0]
   const babelLoader = jsxRule.use[0]
 
-  // jsxRule.test = '/\.(jsx|js)?$/'
   jsxRule.exclude = []
-  // todo: this means a lot of compilation and a slow test
+  // todo: this means a lot of compilation and a slow test (https://github.com/gvdp/noorse-site/issues/113)
   jsxRule.include = [/src/, /gatsby/]
   babelLoader.options.presets.push('@babel/preset-react')
 
-  // We can also push Babel istanbul plugin to instrument the code on the fly
-  // and get code coverage reports from component tests (optional)
   if (!babelLoader.options.plugins) {
     babelLoader.options.plugins = []
   }
-  // babelLoader.options.plugins.push('@babel/plugin-transform-react-jsx')
 
   // in order to mock named imports, need to include a plugin
   babelLoader.options.plugins.push([
@@ -57,7 +53,7 @@ module.exports = (on, config) => {
   })
 
   // add code coverage plugin
-  // require('@cypress/code-coverage/task')(on, config)
+  require('@cypress/code-coverage/task')(on, config)
 
   on('file:preprocessor', webpackPreprocessor(opts))
 
