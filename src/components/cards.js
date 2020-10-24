@@ -14,7 +14,7 @@ export const Card = ({
     <article
       {...props}
       className={`${className} 
-      bg-white elevation-2 
+      bg-white elevation-2  
       m-auto w-full
       `}
     >
