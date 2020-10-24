@@ -184,8 +184,5 @@ module.exports = {
     width: ['hover', 'focus', 'group-hover', 'responsive'],
     display: ['hover', 'focus', 'group-hover', 'responsive'],
   },
-  plugins: [
-    require('tailwindcss-gradients'),
-    require('tailwindcss-elevation')(['responsive']),
-  ],
+  plugins: [require('tailwindcss-elevation')(['responsive'])],
 }
