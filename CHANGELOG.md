@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.1.84 (2020-10-24)
 
+### 0.1.84 (2020-10-24)
+
 ### 0.1.83 (2020-10-21)
 
 ### 0.1.82 (2020-10-20)
