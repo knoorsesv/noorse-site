@@ -173,7 +173,6 @@ module.exports = {
         logo: '30%',
       },
     },
-    linearGradientColors: (theme) => theme('colors'),
   },
   variants: {
     backgroundOpacity: ['hover', 'focus', 'group-hover', 'responsive'],
@@ -184,8 +183,5 @@ module.exports = {
     width: ['hover', 'focus', 'group-hover', 'responsive'],
     display: ['hover', 'focus', 'group-hover', 'responsive'],
   },
-  plugins: [
-    require('tailwindcss-gradients'),
-    require('tailwindcss-elevation')(['responsive']),
-  ],
+  plugins: [require('tailwindcss-elevation')(['responsive'])],
 }
