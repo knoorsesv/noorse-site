@@ -88,6 +88,11 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Archive snapshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-snapshots
+          path: cypress/snapshots
 
   lighthouse-check:
     needs: build-prod
