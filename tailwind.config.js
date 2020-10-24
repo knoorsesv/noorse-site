@@ -173,7 +173,6 @@ module.exports = {
         logo: '30%',
       },
     },
-    linearGradientColors: (theme) => theme('colors'),
   },
   variants: {
     backgroundOpacity: ['hover', 'focus', 'group-hover', 'responsive'],
