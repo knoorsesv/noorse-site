@@ -18,5 +18,7 @@ console.log('Running backstop with config', customConfig)
 
 backstop('test', { config: customConfig, docker: true }).catch((err) => {
   console.error('Backstop test failed with ', err)
-  process.exit(1)
+  if (process.env.CI === 'true') {
+    process.exit(1)
+  }
 })

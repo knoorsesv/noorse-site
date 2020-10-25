@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamation } from '@fortawesome/free-solid-svg-icons'
 import { Clickable } from './a11y'
+import { useQueryParam } from 'use-query-params'
+import { BooleanParam, withDefault } from 'serialize-query-params'
 
 const whiteText = 'text-white text-sm text-center'
 
@@ -41,21 +43,27 @@ const BetaBanner = ({ showDisclaimer, fixed, ...props }) => (
 )
 
 export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
-  const [popupShown, setPopupShown] = useState(showOnPageLoad)
+  const [showPopup, setPopupShown] = useState(showOnPageLoad)
+  const [disclaimerFlag, setDisclaimerFlag] = useQueryParam(
+    'disclaimer',
+    withDefault(BooleanParam, true)
+  )
 
   const hideDisclaimer = () => {
     setPopupShown(false)
+    setDisclaimerFlag(false)
   }
 
   const showDisclaimer = () => {
     setPopupShown(true)
+    setDisclaimerFlag(true)
   }
 
   if (process.env.DISCLAIMER === 'off') {
     return <React.Fragment></React.Fragment>
   }
 
-  return popupShown ? (
+  return showPopup && disclaimerFlag ? (
     <FullTextPopup hideDisclaimer={hideDisclaimer} />
   ) : (
     Clickable(BetaBanner, showDisclaimer, { fixed })

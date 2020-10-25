@@ -55,6 +55,7 @@
     "gatsby-plugin-sass": "2.3.2",
     "gatsby-plugin-sharp": "2.6.18",
     "gatsby-plugin-typography": "2.5.13",
+    "gatsby-plugin-use-query-params": "^1.0.1",
     "gatsby-source-contentful": "2.3.8",
     "gatsby-source-filesystem": "2.3.8",
     "gatsby-source-graphql": "2.7.4",
@@ -74,6 +75,7 @@
     "standard-version": "9.0.0",
     "tailwindcss": "1.4.6",
     "tailwindcss-elevation": "0.3.4",
-    "typography": "0.16.19"
+    "typography": "0.16.19",
+    "use-query-params": "^1.1.8"
   }
 }

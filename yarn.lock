@@ -8283,6 +8283,11 @@ gatsby-plugin-typography@2.5.13:
   dependencies:
     "@babel/runtime" "^7.11.2"
 
+gatsby-plugin-use-query-params@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-use-query-params/-/gatsby-plugin-use-query-params-1.0.1.tgz#5e4982580d2e9bad15d243186cff379afef8a207"
+  integrity sha512-k3xaKuf8VhLq6/arocYRZqiQMTQ84ZRY0JklsO4tuKsRqi64b94zGf6B8SZn6yo0fvtJ/zw684DpH77y/iKdbA==
+
 gatsby-plugin-utils@^0.2.30:
   version "0.2.39"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.2.39.tgz#aa0c5e9469977b476884d53fe97b28fd771f2a78"
@@ -15568,6 +15573,11 @@ serialize-javascript@^4.0.0:
   dependencies:
     randombytes "^2.1.0"
 
+serialize-query-params@^1.2.3:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/serialize-query-params/-/serialize-query-params-1.2.4.tgz#effd0c11e1a844205311a3cfee9a1dc07e7b2b39"
+  integrity sha512-m4hGkOY5y+ksPDSEkw12cNxt3HRUJv5G6oF9/4yq+GCw4LznudxC73qnz++VTHqXa0j1x1/iaBIpoiMBxr6w2w==
+
 serve-index@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/serve-index/-/serve-index-1.9.1.tgz#d3768d69b1e7d82e5ce050fff5b453bea12a9239"
@@ -17652,6 +17662,13 @@ use-callback-ref@^1.2.1, use-callback-ref@^1.2.3:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/use-callback-ref/-/use-callback-ref-1.2.4.tgz#d86d1577bfd0b955b6e04aaf5971025f406bea3c"
   integrity sha512-rXpsyvOnqdScyied4Uglsp14qzag1JIemLeTWGKbwpotWht57hbP78aNT+Q4wdFKQfQibbUX4fb6Qb4y11aVOQ==
+
+use-query-params@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/use-query-params/-/use-query-params-1.1.8.tgz#61d5e2ad903da9ed807383e509b4b52343c886ad"
+  integrity sha512-tB9V4IEE1AbHHtbqxpIjajrDOJsnxS2+PrEfiI/zYatOgns3hkRqj+hrn7F0z5Vxf7z8k4ZV9CGanuk+tt8dEg==
+  dependencies:
+    serialize-query-params "^1.2.3"
 
 use-sidecar@^1.0.1:
   version "1.0.3"
