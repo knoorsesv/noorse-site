@@ -14,6 +14,7 @@
   "author": "gvdp",
   "scripts": {
     "backstop:approve": "backstop approve",
+    "backstop:docker": "node backstop_data/run.js",
     "backstop:test": "backstop test",
     "build": "gatsby build",
     "build:css": "tailwindcss build src/styles/tailwind-import.css -o src/output.css",
