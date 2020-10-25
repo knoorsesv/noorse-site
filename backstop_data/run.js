@@ -8,4 +8,8 @@ customConfig.scenarios.forEach((scenario) => {
   scenario.url = scenario.url.replace('http://localhost:8000', baseUrl)
 })
 
+if (process.env.CI === 'true') {
+  customConfig.report = ['ci']
+}
+
 backstop('test', { config: customConfig, docker: true })
