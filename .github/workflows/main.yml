@@ -94,6 +94,19 @@ jobs:
           name: cypress-snapshots
           path: cypress/snapshots
 
+  visual-test:
+    needs: build-dev
+    if: contains(github.event_name, 'pull_request')
+    runs-on: ubuntu-latest
+    name: Backstop Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - uses: bahmutov/npm-install@v1
+      - run: yarn backstop:docker
+        env:
+          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+
   lighthouse-check:
     needs: build-prod
     if: contains(github.event_name, 'pull_request')

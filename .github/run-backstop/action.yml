@@ -1,5 +1,0 @@
-name: 'Run backstop test'
-description: 'test'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
