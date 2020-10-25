@@ -106,6 +106,10 @@ jobs:
       - run: yarn backstop:docker
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+      - name: Archive results
+        uses: actions/upload-artifact@v2
+        with:
+          path: backstop_data
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1.3
         if: always()
