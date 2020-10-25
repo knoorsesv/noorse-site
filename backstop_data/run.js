@@ -10,8 +10,10 @@ customConfig.scenarios.forEach((scenario) => {
 
 if (process.env.CI === 'true') {
   customConfig.report = ['ci']
-  customConfig.dockerCommandTemplate =
-    'docker run --rm -i --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}'
+  customConfig.dockerCommandTemplate = customConfig.dockerCommandTemplate.replace(
+    '-it',
+    '-i'
+  )
 }
 
 backstop('test', { config: customConfig, docker: true }).catch((err) => {
