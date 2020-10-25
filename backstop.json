@@ -1,0 +1,63 @@
+{
+  "id": "backstop_noorse",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 640
+    },
+    {
+      "label": "sm",
+      "width": 480,
+      "height": 906
+    },
+    {
+      "label": "md",
+      "width": 768,
+      "height": 1152
+    },
+    {
+      "label": "lg",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "xl",
+      "width": 1400,
+      "height": 960
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Homepage",
+      "url": "http://localhost:8000",
+      "delay": 1000,
+      "selectors": ["viewport"]
+    },
+    {
+      "label": "Homepage Content",
+      "url": "http://localhost:8000",
+      "delay": 1000,
+      "removeSelectors": ["section#nav-container"],
+      "selectors": ["#___gatsby"]
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
