@@ -10,6 +10,11 @@ customConfig.scenarios.forEach((scenario) => {
 
 if (process.env.CI === 'true') {
   customConfig.report = ['ci']
+  customConfig.dockerCommandTemplate =
+    'docker run --rm -i --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}'
 }
 
-backstop('test', { config: customConfig, docker: true })
+backstop('test', { config: customConfig, docker: true }).catch((err) => {
+  console.error('Backstop test failed with ', err)
+  throw new Error('Backstop failed')
+})
