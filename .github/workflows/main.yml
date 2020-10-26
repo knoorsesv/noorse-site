@@ -47,7 +47,7 @@ jobs:
       - uses: bahmutov/npm-install@v1
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      - run: yarn build
+      - run: npm run build
         env:
           PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -103,7 +103,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-      - run: yarn backstop:docker
+      - run: npm run backstop:docker
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - name: Archive results
