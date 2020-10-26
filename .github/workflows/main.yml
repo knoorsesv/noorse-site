@@ -111,14 +111,6 @@ jobs:
         if: always()
         with:
           path: backstop_data
-      - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1.3
-        if: always()
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          check_name: Backstop Test Results
-          files: backstop_data/ci_report/**/*.xml
-          report_individual_runs: true
 #  lighthouse-check:
 #    needs: build-prod
 #    if: contains(github.event_name, 'pull_request')

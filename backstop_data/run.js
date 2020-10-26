@@ -9,7 +9,6 @@ customConfig.scenarios.forEach((scenario) => {
 })
 
 if (process.env.CI === 'true') {
-  customConfig.report = ['CI', 'browser']
   customConfig.dockerCommandTemplate =
     'docker run --rm -i --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}'
 }
