@@ -43,27 +43,30 @@ const BetaBanner = ({ showDisclaimer, fixed, ...props }) => (
 )
 
 export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
-  const [showPopup, setPopupShown] = useState(showOnPageLoad)
-  const [disclaimerFlag, setDisclaimerFlag] = useQueryParam(
+  const [disclaimerQueryParam, setDisclaimerQueryParam] = useQueryParam(
     'disclaimer',
     withDefault(BooleanParam, true)
+  )
+  const [showPopup, setPopupShown] = useState(
+    showOnPageLoad && disclaimerQueryParam
   )
 
   const hideDisclaimer = () => {
     setPopupShown(false)
-    setDisclaimerFlag(false)
+    setDisclaimerQueryParam(false)
   }
 
   const showDisclaimer = () => {
     setPopupShown(true)
-    setDisclaimerFlag(true)
+    setDisclaimerQueryParam(true)
   }
 
   if (process.env.DISCLAIMER === 'off') {
     return <React.Fragment></React.Fragment>
   }
 
-  return showPopup && disclaimerFlag ? (
+  console.log({ showPopup, disclaimerFlag: disclaimerQueryParam })
+  return showPopup ? (
     <FullTextPopup hideDisclaimer={hideDisclaimer} />
   ) : (
     Clickable(BetaBanner, showDisclaimer, { fixed })
