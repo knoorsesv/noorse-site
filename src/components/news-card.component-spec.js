@@ -31,10 +31,6 @@ describe('News Card', () => {
       cy.contains('Nieuwscategorie')
       cy.contains('13/02/20')
     })
-
-    it('matches snapshot', () => {
-      cy.get('body').parentsUntil('article').matchImageSnapshot('news-card')
-    })
   })
 
   describe('news item without publishdate', () => {

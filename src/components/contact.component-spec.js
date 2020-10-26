@@ -15,6 +15,5 @@ describe('ContactInfo', () => {
   it('shows all contact info', () => {
     mount(<ContactInContainer />)
     cy.contains('Frans de Peuterstraat 50')
-    cy.get('#contact-info').matchImageSnapshot('contact-info')
   })
 })

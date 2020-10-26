@@ -20,11 +20,6 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 
-  require('cypress-image-snapshot/plugin').addMatchImageSnapshotPlugin(
-    on,
-    config
-  )
-
   const opts = webpackPreprocessor.defaultOptions
   const jsxRule = opts.webpackOptions.module.rules[0]
   const babelLoader = jsxRule.use[0]
