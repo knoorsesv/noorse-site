@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamation } from '@fortawesome/free-solid-svg-icons'
-import { Clickable } from './a11y'
 import { useQueryParam } from 'use-query-params'
 import { BooleanParam, withDefault } from 'serialize-query-params'
+import { Clickable } from './a11y'
 
 const whiteText = 'text-white text-sm text-center'
 
@@ -29,24 +29,30 @@ const FullTextPopup = ({ hideDisclaimer }) => (
   </div>
 )
 
-const BetaBanner = ({ showDisclaimer, fixed, ...props }) => (
-  <div
-    {...props}
-    className={`z-60 bg-green-dark w-full ${
-      fixed && 'absolute'
-    }  h-12 flex justify-between items-center px-8 mb-4`}
-  >
-    <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
-    <span className={'text-white'}>BETA versie</span>
-    <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
-  </div>
-)
+export const BetaBanner = ({ fixed, className, ...props }) => {
+  if (process.env.DISCLAIMER === 'off') {
+    return <React.Fragment></React.Fragment>
+  }
+  return (
+    <div
+      {...props}
+      className={`${className} z-60 bg-green-dark w-full ${
+        fixed && 'absolute'
+      }  h-12 flex justify-between items-center px-8 mb-4 top-8v`}
+    >
+      <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
+      <span className={'text-white'}>BETA versie</span>
+      <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
+    </div>
+  )
+}
 
-export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
+export const DisclaimerPopup = ({ showOnPageLoad = true }) => {
   const [disclaimerQueryParam, setDisclaimerQueryParam] = useQueryParam(
     'disclaimer',
     withDefault(BooleanParam, true)
   )
+
   const [showPopup, setPopupShown] = useState(
     showOnPageLoad && disclaimerQueryParam
   )
@@ -65,10 +71,10 @@ export const DisclaimerPopup = ({ showOnPageLoad = true, fixed = true }) => {
     return <React.Fragment></React.Fragment>
   }
 
-  console.log({ showPopup, disclaimerFlag: disclaimerQueryParam })
-  return showPopup ? (
-    <FullTextPopup hideDisclaimer={hideDisclaimer} />
-  ) : (
-    Clickable(BetaBanner, showDisclaimer, { fixed })
+  return (
+    <>
+      {Clickable(BetaBanner, showDisclaimer, { fixed: true })}
+      {showPopup ? <FullTextPopup hideDisclaimer={hideDisclaimer} /> : <></>}
+    </>
   )
 }
