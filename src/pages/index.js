@@ -6,7 +6,7 @@ import { Card, ClickableCard } from '../components/cards'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
-import NoorseFooter from '../components/noorseFooter'
+import { Footer } from '../components/footer'
 import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
@@ -118,7 +118,7 @@ export default () => {
         <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
       </div>
-      <NoorseFooter />
+      <Footer />
     </div>
   )
 }

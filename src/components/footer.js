@@ -58,7 +58,7 @@ export const SponsorList = ({ logoWidth }) => {
   )
 }
 
-const NoorseFooter = () => {
+export const Footer = () => {
   return (
     <footer id="footer">
       <ContactAndSponsorFooter />
@@ -79,7 +79,9 @@ export const ContactAndSponsorFooter = () => {
         }
       >
         <Title>K. Noorse S.V.</Title>
-        <Logo className={`w-1/4 pb-12 lg:p-6 lg:w-48`} />
+        <div className={`w-1/4 pb-12 lg:p-6 lg:w-48`}>
+          <Logo />
+        </div>
         <div
           className={`flex flex-col items-center md:hidden
          bg-gray-light
@@ -120,5 +122,3 @@ export const CopyRightFooter = () => {
     </div>
   )
 }
-
-export default NoorseFooter
