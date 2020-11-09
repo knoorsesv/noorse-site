@@ -31,24 +31,25 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Homepage",
+      "label": "Homepage with disclaimer",
       "url": "http://localhost:8000",
       "delay": 1000,
       "readyEvent": "backstopjs_ready",
       "selectors": ["viewport"]
     },
     {
-      "label": "Homepage",
+      "label": "Homepage without disclaimer",
       "url": "http://localhost:8000?disclaimer=0",
       "delay": 1000,
       "readyEvent": "backstopjs_ready",
       "selectors": ["viewport"]
     },
     {
-      "label": "Homepage Content",
+      "label": "Homepage Content without nav",
       "url": "http://localhost:8000",
       "delay": 1000,
       "removeSelectors": ["section#nav-container"],
+      "misMatchThreshold": "1",
       "selectors": ["#___gatsby"]
     }
   ],

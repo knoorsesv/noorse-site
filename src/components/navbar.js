@@ -93,7 +93,8 @@ const NavContainer = ({ showCoverPhoto, children, setShowNavBar }) => {
         showCoverPhoto ? coverSectionHeight : menuBarHeight
       } w-full static`}
     >
-      {showCoverPhoto ? <CoverImage>{children}</CoverImage> : children}
+      {showCoverPhoto ? <CoverImage className={coverSectionHeight} /> : <></>}
+      {children}
     </section>
   )
 }

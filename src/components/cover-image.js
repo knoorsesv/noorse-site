@@ -1,34 +1,35 @@
-import BackgroundImage from 'gatsby-background-image'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-export const CoverImage = ({ children }) => {
+export const CoverImage = ({ children, className }) => {
   const image = useStaticQuery(graphql`
     query {
       cover: file(name: { eq: "noorse_cover" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
     }
   `)
 
-  const callLoaded = () => {
+  function callLoaded() {
     //todo: only call this in dev mode
     console.log('backstopjs_ready')
   }
 
   return (
-    <BackgroundImage
-      title={'background-image'}
+    <Img
+      id={'background-image'}
+      alt={'background image'}
       fluid={image.cover.childImageSharp.fluid}
-      className={'h-full z-50'}
-      style={{ backgroundPosition: 'top' }}
+      className={`${className} absolute w-full`}
+      imgStyle={{ objectFit: 'cover', objectPosition: 'top' }}
       onLoad={callLoaded}
     >
       {children}
-    </BackgroundImage>
+    </Img>
   )
 }
