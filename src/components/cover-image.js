@@ -14,12 +14,19 @@ export const CoverImage = ({ children }) => {
       }
     }
   `)
+
+  const callLoaded = () => {
+    //todo: only call this in dev mode
+    console.log('backstopjs_ready')
+  }
+
   return (
     <BackgroundImage
       title={'background-image'}
       fluid={image.cover.childImageSharp.fluid}
       className={'h-full z-50'}
       style={{ backgroundPosition: 'top' }}
+      onLoad={callLoaded}
     >
       {children}
     </BackgroundImage>

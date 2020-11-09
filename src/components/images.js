@@ -15,11 +15,6 @@ export const Logo = ({ className }) => {
     }
   `)
 
-  const callLoaded = () => {
-    //todo: only call this in dev mode
-    console.log('backstopjs_ready')
-  }
-
   return (
     <Link
       to={'/'}
