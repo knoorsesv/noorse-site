@@ -26,6 +26,7 @@ export const CoverImage = ({ children, className }) => {
       alt={'background image'}
       fluid={image.cover.childImageSharp.fluid}
       className={`${className} absolute w-full`}
+      fadeIn={process.env.PROD === 'true'}
       imgStyle={{ objectFit: 'cover', objectPosition: 'top' }}
       onLoad={callLoaded}
     >
