@@ -103,7 +103,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-      - run: yarn backstop:docker
+      - run: yarn backstop:test
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - name: Archive results

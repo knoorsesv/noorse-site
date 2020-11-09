@@ -15,6 +15,10 @@ export const Logo = ({ className }) => {
     }
   `)
 
+  const callLoaded = () => {
+    console.log('backstopjs_ready')
+  }
+
   return (
     <Link
       to={'/'}
@@ -26,6 +30,7 @@ export const Logo = ({ className }) => {
         alt={'Noorse Logo'}
         imgStyle={{ objectFit: 'contain' }}
         className={`h-full w-full max-w-full max-h-full`}
+        onLoad={callLoaded}
       />
     </Link>
   )

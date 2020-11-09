@@ -14,8 +14,7 @@
   "author": "gvdp",
   "scripts": {
     "backstop:approve": "backstop approve",
-    "backstop:docker": "node backstop_data/run.js",
-    "backstop:test": "backstop test",
+    "backstop:test": "node backstop_data/run.js",
     "build": "gatsby build",
     "build:css": "tailwindcss build src/styles/tailwind-import.css -o src/output.css",
     "cypress:docker": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:5.3.0 --config-file cypress-components.json",

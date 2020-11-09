@@ -34,12 +34,14 @@
       "label": "Homepage",
       "url": "http://localhost:8000",
       "delay": 1000,
+      "readyEvent": "backstopjs_ready",
       "selectors": ["viewport"]
     },
     {
       "label": "Homepage",
       "url": "http://localhost:8000?disclaimer=0",
       "delay": 1000,
+      "readyEvent": "backstopjs_ready",
       "selectors": ["viewport"]
     },
     {
