@@ -1,6 +1,7 @@
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
+import BackgroundImage from 'gatsby-background-image'
 
 export const Logo = ({ className }) => {
   const images = useStaticQuery(graphql`
@@ -15,15 +16,10 @@ export const Logo = ({ className }) => {
     }
   `)
 
-  const callLoaded = () => {
-    //todo: only call this in dev mode
-    console.log('backstopjs_ready')
-  }
-
   return (
     <Link
       to={'/'}
-      className={`${className} h-full w-full max-w-full max-h-full flex flex-col items-center`}
+      className={`h-full w-full max-w-full max-h-full flex flex-col items-center ${className}`}
     >
       <Img
         id="logo"
@@ -31,8 +27,38 @@ export const Logo = ({ className }) => {
         alt={'Noorse Logo'}
         imgStyle={{ objectFit: 'contain' }}
         className={`h-full w-full max-w-full max-h-full`}
-        onLoad={callLoaded}
       />
     </Link>
+  )
+}
+
+export const CoverImage = ({ children }) => {
+  const image = useStaticQuery(graphql`
+    query {
+      cover: file(name: { eq: "noorse_cover" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  const callLoaded = () => {
+    //todo: only call this in dev mode
+    console.log('backstopjs_ready')
+  }
+
+  return (
+    <BackgroundImage
+      title={'background-image'}
+      fluid={image.cover.childImageSharp.fluid}
+      className={'h-full z-50'}
+      style={{ backgroundPosition: 'top' }}
+      onLoad={callLoaded}
+    >
+      {children}
+    </BackgroundImage>
   )
 }

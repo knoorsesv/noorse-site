@@ -2,10 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { Logo } from './images'
+import { CoverImage, Logo } from './images'
 import { ExternalLink } from './text'
 import { siteMap as defaultSiteMap } from '../env/constants'
-import { CoverImage } from './cover-image'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
