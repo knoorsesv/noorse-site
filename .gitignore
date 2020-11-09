@@ -78,3 +78,4 @@ yarn-error.log
 /src/output.css
 /cypress/videos/
 /cypress/screenshots/
+/.env.development
