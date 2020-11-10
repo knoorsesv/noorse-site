@@ -70,7 +70,7 @@
     "react-masonry-css": "1.0.14",
     "react-typography": "0.16.19",
     "standard-version": "9.0.0",
-    "tailwindcss": "1.4.6",
+    "tailwindcss": "1.9.6",
     "tailwindcss-elevation": "0.3.4",
     "typography": "0.16.19",
     "use-query-params": "^1.1.8"
