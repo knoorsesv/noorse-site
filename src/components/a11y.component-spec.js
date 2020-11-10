@@ -41,9 +41,7 @@ describe('Clickable Component', () => {
   })
 
   it('should pass down props', () => {
-    cy.get('@getComponent')
-      .should('have.attr', 'prop', 'testProp')
-      .should('have.class', 'extra-class')
+    cy.get('@getComponent').should('have.attr', 'prop', 'testProp')
   })
 
   it('should have accessibility attributes', () => {
