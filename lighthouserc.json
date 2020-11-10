@@ -11,6 +11,12 @@
       "assertions": {
         "is-crawlable": "off",
         "uses-rel-preconnect": ["warn"],
+        "tap-targets": [
+          "warn",
+          { "minScore": "0.9" },
+          "error",
+          { "minScore": "0.5" }
+        ],
         "uses-responsive-images": [
           "warn",
           { "maxLength": 0 },
