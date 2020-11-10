@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NoorseFooter from './noorseFooter'
+import { Footer } from './footer'
 import { Navbar } from './navbar'
 import { DisclaimerPopup } from './disclaimer'
 
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
       <div id="content" className={'min-h-3/4 relative'}>
         {children}
       </div>
-      <NoorseFooter />
+      <Footer />
     </div>
   )
 }

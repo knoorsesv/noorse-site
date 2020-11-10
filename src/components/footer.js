@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import LazyLoad from 'react-lazyload'
 import { Title } from './titles'
 import { Logo } from './images'
-import { DisclaimerPopup } from './disclaimer'
+import { BetaBanner } from './disclaimer'
 import { ContactInfo } from './contact'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
@@ -58,7 +58,7 @@ export const SponsorList = ({ logoWidth }) => {
   )
 }
 
-const NoorseFooter = () => {
+export const Footer = () => {
   return (
     <footer id="footer">
       <ContactAndSponsorFooter />
@@ -79,7 +79,9 @@ export const ContactAndSponsorFooter = () => {
         }
       >
         <Title>K. Noorse S.V.</Title>
-        <Logo className={`w-1/4 pb-12 lg:p-6 lg:w-48`} />
+        <div className={`w-1/4 pb-12 lg:p-6 lg:w-48`}>
+          <Logo />
+        </div>
         <div
           className={`flex flex-col items-center md:hidden
          bg-gray-light
@@ -109,7 +111,7 @@ export const CopyRightFooter = () => {
         'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
       }
     >
-      <DisclaimerPopup showOnPageLoad={false} fixed={false} />
+      <BetaBanner fixed={false} />
       <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
       <div size={'small'}>
         Powered by{' '}
@@ -120,5 +122,3 @@ export const CopyRightFooter = () => {
     </div>
   )
 }
-
-export default NoorseFooter

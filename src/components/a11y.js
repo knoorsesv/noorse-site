@@ -9,7 +9,7 @@ export const Clickable = (Component, onClick, { className, ...props }) => {
   return (
     <Component
       {...props}
-      className={`${className} cursor-pointer`}
+      className={`cursor-pointer`}
       onClick={onClick}
       onKeyDown={keyDownHandler}
       role="link"
