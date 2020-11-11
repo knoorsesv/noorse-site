@@ -30,8 +30,7 @@ const FullTextPopup = ({ hideDisclaimer }) => (
 )
 
 export const BetaBanner = ({ fixed, className, ...props }) => {
-  console.log('disclaimer', process.env.DISCLAIMER)
-  if (process.env.DISCLAIMER === 'off') {
+  if ((process.env.DISCLAIMER || __DISCLAIMER__) === 'off') {
     return <React.Fragment></React.Fragment>
   }
   return (

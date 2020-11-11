@@ -11,6 +11,9 @@ const contentfulEnv =
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
 const disclaimer = process.env.DISCLAIMER
+const accessToken = contentfulPreview
+  ? process.env.CONTENTFUL_TOKEN_PREVIEW
+  : process.env.CONTENTFUL_TOKEN
 
 console.log('Build settings:', {
   contentfulEnv,
@@ -75,9 +78,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID || `u0xs2v9mjzql`,
-        accessToken: contentfulPreview
-          ? process.env.CONTENTFUL_TOKEN_PREVIEW
-          : process.env.CONTENTFUL_TOKEN,
+        accessToken,
         host: contentfulPreview
           ? `preview.contentful.com`
           : 'cdn.contentful.com',
