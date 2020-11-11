@@ -10,11 +10,13 @@ const contentfulEnv =
   (process.env.PROD === 'true' ? 'master' : 'staging')
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
+const disclaimer = process.env.DISCLAIMER
 
 console.log('Build settings:', {
   contentfulEnv,
   contentfulPreview,
   tracking,
+  disclaimer,
 })
 
 module.exports = {
