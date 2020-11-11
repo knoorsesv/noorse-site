@@ -10,12 +10,16 @@ const contentfulEnv =
   (process.env.PROD === 'true' ? 'master' : 'staging')
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
-const disclaimer = process.env.DISCLAIMER
+const disclaimer = process.env.GATSBY_DISCLAIMER
 const accessToken = contentfulPreview
   ? process.env.CONTENTFUL_TOKEN_PREVIEW
   : process.env.CONTENTFUL_TOKEN
 
+const env = process.env.NODE_ENV
+const spaceId = process.env.CONTENTFUL_SPACE_ID
 console.log('Build settings:', {
+  env,
+  spaceId,
   contentfulEnv,
   contentfulPreview,
   tracking,
@@ -77,7 +81,7 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID || `u0xs2v9mjzql`,
+        spaceId,
         accessToken,
         host: contentfulPreview
           ? `preview.contentful.com`

@@ -112,13 +112,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-
-exports.onCreateWebpackConfig = ({ plugins, actions }) => {
-  actions.setWebpackConfig({
-    plugins: [
-      plugins.define({
-        __DISCLAIMER__: process.env.DISCLAIMER,
-      }),
-    ],
-  })
-}

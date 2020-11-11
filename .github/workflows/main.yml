@@ -48,7 +48,7 @@ jobs:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
-          DISCLAIMER: off
+          GATSBY_DISCLAIMER: off
       - name: Deploy
         uses: nwtgck/actions-netlify@v1
         id: deploy-dev
