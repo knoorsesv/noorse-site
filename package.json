@@ -14,6 +14,7 @@
   "author": "gvdp",
   "scripts": {
     "backstop:approve": "backstop approve",
+    "backstop:serve": "NODE_ENV=backstop yarn develop",
     "backstop:test": "node backstop_data/run.js",
     "build": "gatsby build",
     "build:css": "tailwindcss build src/styles/tailwind-import.css -o src/output.css",

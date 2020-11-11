@@ -55,6 +55,7 @@ jobs:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
+          DISCLAIMER: off
       - name: Deploy
         uses: nwtgck/actions-netlify@v1
         id: deploy-dev
@@ -110,6 +111,7 @@ jobs:
         if: always()
         with:
           path: backstop_data
+
   lighthouse-check:
     needs: build-prod
     if: contains(github.event_name, 'pull_request')

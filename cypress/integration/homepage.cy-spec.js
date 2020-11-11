@@ -17,7 +17,7 @@ describe('Home Page', function () {
     })
   })
 
-  describe('disclaimer', function () {
+  describe.skip('disclaimer', function () {
     const disclaimerText = 'Dit is de beta versie van onze nieuwe website.'
 
     it('should show disclaimer', () => {
