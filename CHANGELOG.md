@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.88 (2020-11-11)
+
+
+### Features
+
+* add pure css background image ([#143](https://github.com/gvdp/noorse-site/issues/143)) ([f9602ab](https://github.com/gvdp/noorse-site/commit/f9602ab29b0baa17ffc522ae3fcf64690ae27ed8))
+
 ### 0.1.87 (2020-11-10)
 
 ### 0.1.86 (2020-11-10)
