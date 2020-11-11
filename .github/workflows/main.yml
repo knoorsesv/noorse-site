@@ -14,11 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: yarn build
         env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GA_TRACKING_ID: ${{secrets.GA_TRACKING_ID}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
@@ -45,12 +42,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: yarn build
         env:
-          PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
