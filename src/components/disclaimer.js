@@ -30,7 +30,7 @@ const FullTextPopup = ({ hideDisclaimer }) => (
 )
 
 export const BetaBanner = ({ fixed, className, ...props }) => {
-  if (process.env.DISCLAIMER === 'off') {
+  if (process.env.GATSBY_DISCLAIMER === 'off') {
     return <React.Fragment></React.Fragment>
   }
   return (
@@ -67,7 +67,7 @@ export const DisclaimerPopup = ({ showOnPageLoad = true }) => {
     setDisclaimerQueryParam(true)
   }
 
-  if (process.env.DISCLAIMER === 'off') {
+  if (process.env.GATSBY_DISCLAIMER === 'off') {
     return <React.Fragment></React.Fragment>
   }
 

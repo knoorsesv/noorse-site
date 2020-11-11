@@ -31,7 +31,7 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Homepage with disclaimer",
+      "label": "Homepage viewport",
       "url": "http://localhost:8000",
       "delay": 1000,
       "readyEvent": "backstopjs_ready",
@@ -39,20 +39,18 @@
       "selectors": ["viewport"]
     },
     {
-      "label": "Homepage without disclaimer",
-      "url": "http://localhost:8000?disclaimer=0",
-      "delay": 1000,
-      "readyEvent": "backstopjs_ready",
-      "misMatchThreshold": "1",
-      "selectors": ["viewport"]
-    },
-    {
-      "label": "Homepage Content without nav",
+      "label": "Homepage full Content without nav",
       "url": "http://localhost:8000",
       "delay": 1000,
       "removeSelectors": ["section#nav-container"],
       "misMatchThreshold": "1",
       "selectors": ["#___gatsby"]
+    },
+    {
+      "label": "News Page",
+      "delay": 1000,
+      "url": "http://localhost:8000/nieuws/Anita%20Brand%20nieuwe%20T1%20%20Noorse%20Dames?disclaimer=0",
+      "selectors": ["document"]
     }
   ],
   "paths": {

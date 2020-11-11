@@ -24,6 +24,7 @@ export const Logo = ({ className }) => {
         id="logo"
         fluid={images.logo.childImageSharp.fluid}
         alt={'Noorse Logo'}
+        fadeIn={process.env.PROD === 'true'}
         imgStyle={{ objectFit: 'contain' }}
         className={`h-full w-full max-w-full max-h-full`}
       />

@@ -1,18 +1,29 @@
 const { buildSchema } = require('graphql')
 const fs = require('fs')
 
-require('dotenv').config()
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||
   (process.env.PROD === 'true' ? 'master' : 'staging')
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
+const disclaimer = process.env.GATSBY_DISCLAIMER
+const accessToken = contentfulPreview
+  ? process.env.CONTENTFUL_TOKEN_PREVIEW
+  : process.env.CONTENTFUL_TOKEN
 
+const env = process.env.NODE_ENV
+const spaceId = process.env.CONTENTFUL_SPACE_ID
 console.log('Build settings:', {
+  env,
+  spaceId,
   contentfulEnv,
   contentfulPreview,
   tracking,
+  disclaimer,
 })
 
 module.exports = {
@@ -70,10 +81,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID || `u0xs2v9mjzql`,
-        accessToken: contentfulPreview
-          ? process.env.CONTENTFUL_TOKEN_PREVIEW
-          : process.env.CONTENTFUL_TOKEN,
+        spaceId,
+        accessToken,
         host: contentfulPreview
           ? `preview.contentful.com`
           : 'cdn.contentful.com',

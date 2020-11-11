@@ -77,7 +77,7 @@ export default ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
   return (
     <Layout>
-      <Container centered={false}>
+      <Container>
         <Title>{newsNode.title}</Title>
         {/*todo: created at is not correct for imported news messages*/}
         <h3 className={'italic mb-6 capitalize'}>{newsNode.createdAt}</h3>
