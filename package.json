@@ -74,6 +74,6 @@
     "tailwindcss": "1.9.6",
     "tailwindcss-elevation": "0.3.4",
     "typography": "0.16.19",
-    "use-query-params": "^1.1.8"
+    "use-query-params": "^1.1.9"
   }
 }
