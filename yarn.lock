@@ -16348,10 +16348,10 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss-elevation@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/tailwindcss-elevation/-/tailwindcss-elevation-0.3.4.tgz#686fb50451a68c0f9c2dcbe70ffcb3895addcba8"
-  integrity sha512-xGlQN7ZLF9QEvQsom0/RH7SUm8F6gsDmwgzyKtlQKpj8Ymr0IwjcAMJy0LsPdY9fjAgkaLsa7sLv5pinjX9Y1Q==
+tailwindcss-elevation@0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/tailwindcss-elevation/-/tailwindcss-elevation-0.3.5.tgz#5fe4d44146e23a5623fec4df17aa680bfb9ad18c"
+  integrity sha512-zYKfH2/tJu1HfhPcq80MqV0+UaOrUMBPScJ6d6idjS7Nf9WnbvymRST0GlFaPFgC/EmVevG+BhqOT2yFH+tj0A==
   dependencies:
     hex-rgb "^4.1.0"
 
