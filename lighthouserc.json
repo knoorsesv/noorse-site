@@ -9,6 +9,7 @@
     "assert": {
       "preset": "lighthouse:no-pwa",
       "assertions": {
+        "font-display": "off",
         "is-crawlable": "off",
         "uses-rel-preconnect": ["warn"],
         "tap-targets": [
