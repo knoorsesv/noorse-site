@@ -101,9 +101,9 @@ jobs:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - name: Archive results
         uses: actions/upload-artifact@v2
-        if: always()
+        if: ${{ failure() }}
         with:
-          path: backstop_data
+          path: backstop_data/html_report
 
   lighthouse-check:
     needs: build-prod
