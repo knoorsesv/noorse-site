@@ -95,7 +95,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - run: yarn global add backstop
+      - run: yarn global add backstop dotenv
       - run: yarn backstop:test
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
