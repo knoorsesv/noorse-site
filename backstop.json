@@ -51,6 +51,36 @@
       "delay": 1000,
       "url": "http://localhost:8000/nieuws/Anita%20Brand%20nieuwe%20T1%20%20Noorse%20Dames?disclaimer=0",
       "selectors": ["document"]
+    },
+    {
+      "label": "Ploeg Page",
+      "delay": 500,
+      "url": "http://localhost:8000/team/noorse%201?disclaimer=0",
+      "selectors": ["document"]
+    },
+    {
+      "label": "Category Page",
+      "delay": 500,
+      "url": "http://localhost:8000/senioren?disclaimer=0",
+      "selectors": ["document"]
+    },
+    {
+      "label": "Contact Page",
+      "delay": 500,
+      "url": "http://localhost:8000/contact",
+      "selectors": ["document"]
+    },
+    {
+      "label": "Bestuur Page",
+      "delay": 500,
+      "url": "http://localhost:8000/bestuur",
+      "selectors": ["document"]
+    },
+    {
+      "label": "Lidmaatschap Page",
+      "delay": 500,
+      "url": "http://localhost:8000/lidmaatschap",
+      "selectors": ["document"]
     }
   ],
   "paths": {
