@@ -11,7 +11,6 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-const webpackPreprocessor = require('@cypress/webpack-preprocessor')
 
 /**
  * @type {Cypress.PluginConfig}
@@ -19,38 +18,6 @@ const webpackPreprocessor = require('@cypress/webpack-preprocessor')
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-
-  const opts = webpackPreprocessor.defaultOptions
-  const jsxRule = opts.webpackOptions.module.rules[0]
-  const babelLoader = jsxRule.use[0]
-
-  jsxRule.exclude = []
-  // todo: this means a lot of compilation and a slow test (https://github.com/gvdp/noorse-site/issues/113)
-  jsxRule.include = [/src/, /gatsby/]
-  babelLoader.options.presets.push('@babel/preset-react')
-
-  if (!babelLoader.options.plugins) {
-    babelLoader.options.plugins = []
-  }
-
-  // in order to mock named imports, need to include a plugin
-  babelLoader.options.plugins.push([
-    require.resolve('@babel/plugin-transform-modules-commonjs'),
-    {
-      loose: true,
-    },
-  ])
-
-  opts.webpackOptions.module.rules.push({
-    test: /\.css$/,
-    exclude: [/node_modules/, /\.modules\.css$/i],
-    use: ['style-loader', 'css-loader'],
-  })
-
-  // add code coverage plugin
-  require('@cypress/code-coverage/task')(on, config)
-
-  on('file:preprocessor', webpackPreprocessor(opts))
 
   return config
 }
