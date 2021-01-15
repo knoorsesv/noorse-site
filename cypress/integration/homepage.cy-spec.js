@@ -3,37 +3,6 @@ describe('Home Page', function () {
     cy.visit('/')
   })
 
-  describe('events', () => {
-    it('Should show predefined events in list', () => {
-      cy.contains('Evenementen')
-        .scrollIntoView()
-        .should('be.visible')
-        .parents('section')
-        .contains('Nieuwjaarsreceptie')
-        .should('be.visible')
-        .parents('section')
-        .contains('15/01/21')
-        .should('be.visible')
-    })
-  })
-
-  describe.skip('disclaimer', function () {
-    const disclaimerText = 'Dit is de beta versie van onze nieuwe website.'
-
-    it('should show disclaimer', () => {
-      cy.contains(disclaimerText).should('be.visible')
-      cy.contains('BETA versie').should('be.visible')
-    })
-
-    // todo: flaky, cypress test retries doesn't solve it
-    // it('should hide disclaimer on clicking hide', () => {
-    //   cy.contains('Verbergen').should('be.visible').should('be.enabled').click()
-    //
-    //   cy.contains(disclaimerText).should('not.be.visible')
-    //   cy.contains('BETA versie').should('be.visible')
-    // })
-  })
-
   it('should have a webshop section containing link', () => {
     cy.contains('h1', 'Webshop')
       .parents('section')
@@ -44,4 +13,9 @@ describe('Home Page', function () {
           .and('equal', 'https://www.qlub.com/qlub?club=k00332')
       })
   })
+
+  it('should have a trooper section which links to Noorse trooper page')
+
+  it('should go to news item when clicking card')
+  it('should go to news item when selecting card and pressing key down')
 })
