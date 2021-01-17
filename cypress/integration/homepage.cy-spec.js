@@ -60,7 +60,7 @@ describe('Home Page', function () {
       })
   })
 
-  it.only('should list sponsors in footer', () => {
+  it('should list sponsors in footer', () => {
     cy.get('footer [title="List of Sponsors"]')
       .last()
       .scrollIntoView()
