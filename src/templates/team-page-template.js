@@ -104,26 +104,26 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
           <div className={'flex flex-col lg:grid-col-1'}>
             <div className={'flex flex-col items-center'}>
               {contentfulPloeg.coach && (
-                <div className={'flex flex-col items-center'}>
+                <section className={'flex flex-col items-center'}>
                   <SubTitle>Coach</SubTitle>
                   {contentfulPloeg.coach.map((coach) => (
                     <span key={coach}>{coach}</span>
                   ))}
-                </div>
+                </section>
               )}
               <br className={'mb-4'} />
               {contentfulPloeg.training && (
-                <div className={'flex flex-col items-center'}>
+                <section className={'flex flex-col items-center'}>
                   <SubTitle>Training</SubTitle>
                   {contentfulPloeg.training.map((training) => (
                     <span key={training}> {training}</span>
                   ))}
-                </div>
+                </section>
               )}
               <br className={'mb-4'} />
 
               {data.vv && data.vv.teamSeriesAndRankings && (
-                <div className={'flex flex-col items-center'}>
+                <section className={'flex flex-col items-center'}>
                   <SubTitle>Reeks</SubTitle>
                   {data.vv.teamSeriesAndRankings.series.map((series) => (
                     <ExternalLink
@@ -134,16 +134,16 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
                       {series.name}
                     </ExternalLink>
                   ))}
-                </div>
+                </section>
               )}
               <br className={'mb-4'} />
             </div>
           </div>
           {data.vv && data.vv.teamCalendar && (
-            <div className={'lg:col-span-2'}>
+            <section className={'lg:col-span-2'}>
               <SubTitle>Kalender</SubTitle>
               <CalendarTable calendar={data.vv.teamCalendar} />
-            </div>
+            </section>
           )}
         </div>
 

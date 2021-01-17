@@ -3,7 +3,10 @@ import React from 'react'
 
 export const CategoryTeamNavigation = ({ category, header }) => {
   return (
-    <div id="team-navigation" className={`bg-green-light bg-opacity-25 p-4`}>
+    <section
+      id="team-navigation"
+      className={`bg-green-light bg-opacity-25 p-4`}
+    >
       <h3 className={'w-full pb-2 border-b-2 border-black text-center'}>
         {header || category.naam}
       </h3>
@@ -21,6 +24,6 @@ export const CategoryTeamNavigation = ({ category, header }) => {
             </Link>
           ))}
       </div>
-    </div>
+    </section>
   )
 }

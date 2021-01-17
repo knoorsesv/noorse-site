@@ -107,7 +107,7 @@ exports.createPages = async ({ graphql, actions }) => {
     )
     createPage({
       path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
-      component: require.resolve(`./src/templates/ploeg-template.js`),
+      component: require.resolve(`./src/templates/team-page-template.js`),
       context: { vvInfo, teamId: vvInfo ? vvInfo.id : 'none', contentfulPloeg },
     })
   })
