@@ -40,11 +40,20 @@ describe('Home Page', function () {
   it('should go to news item when clicking card', () => {
     cy.contains('Nieuwe spelers 2020-2021')
       .parents('article')
+      .as('newsCard')
       .should('have.attr', 'role', 'link')
+    const click = ($el) => $el.click()
+    //todo: do this with pipe instead of wait https://www.cypress.io/blog/2019/01/22/when-can-the-test-click/#header
+    cy.get('@newsCard')
+      .wait(500)
       .click()
       .then(() => {
         cy.url().should('contain', '/nieuws/Nieuwe%20spelers%202020-2021')
       })
+
+    // .should(() => {
+    //   expect(cy.url()).to.include('/nieuws/Nieuwe%20spelers%202020-2021')
+    // })
   })
 
   it('should go to news item when selecting card and pressing key down', () => {
