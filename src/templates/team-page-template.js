@@ -58,7 +58,15 @@ function CalendarTable({ calendar }) {
       <tbody>
         {calendar
           .filter(notCancelled)
-          .sort()
+          .sort((a, b) =>
+            a.startDate > b.startDate
+              ? 1
+              : a.startDate === b.startDate
+              ? a.id > b.id
+                ? 1
+                : -1
+              : -1
+          )
           .map((game) => {
             const parsedDate = parseISO(game.startDate)
             game.formattedDate = format(parsedDate, 'dd/MM')
