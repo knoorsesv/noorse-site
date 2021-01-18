@@ -53,20 +53,24 @@ function CalendarTable({ calendar }) {
     return game.outcome.status !== 'postponed'
   }
 
+  function gameSort(a, b) {
+    if (a.startDate > b.startDate) {
+      return 1
+    }
+    if (a.startDate === b.startDate) {
+      if (a.id > b.id) {
+        return 1
+      }
+    }
+    return -1
+  }
+
   return (
     <table className={'w-full table-fixed border-separate text-sm lg:w-4/5'}>
       <tbody>
         {calendar
           .filter(notCancelled)
-          .sort((a, b) =>
-            a.startDate > b.startDate
-              ? 1
-              : a.startDate === b.startDate
-              ? a.id > b.id
-                ? 1
-                : -1
-              : -1
-          )
+          .sort(gameSort)
           .map((game) => {
             const parsedDate = parseISO(game.startDate)
             game.formattedDate = format(parsedDate, 'dd/MM')
