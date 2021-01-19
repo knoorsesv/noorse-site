@@ -42,6 +42,7 @@
       "label": "Homepage full Content without nav",
       "url": "http://localhost:8000",
       "delay": 1000,
+      "readyEvent": "backstopjs_ready",
       "removeSelectors": ["section#nav-container"],
       "misMatchThreshold": "1",
       "selectors": ["#___gatsby"]
