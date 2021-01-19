@@ -4,19 +4,32 @@ module.exports = {
   },
   important: true,
   purge: {
+    enabled: true,
     content: ['./src/**/*.js'],
   },
   theme: {
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+    },
     extend: {
       margin: {
         '10p': '10px',
       },
       colors: {
         black: {
-          default: '#000000',
+          DEFAULT: '#000000',
         },
         gray: {
-          default: '#ada8a869',
+          DEFAULT: '#ada8a869',
           dark: '#000000b3',
           darker: '#9E9E9E',
           'darker-readable': '#696969',
@@ -24,13 +37,13 @@ module.exports = {
           light: '#f5f5f5',
         },
         green: {
-          default: '#098800',
+          DEFAULT: '#098800',
           light: '#51b93c',
           matte: '#4caf50b8',
           dark: '#005900',
         },
         yellow: {
-          default: '#fffd00',
+          DEFAULT: '#fffd00',
           dark: '#c7ca00',
           light: '#ffff59',
         },

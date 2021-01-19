@@ -145,7 +145,7 @@ const MenuItem = ({ item, showNavbar }) => {
       id={'top-menu-item'}
       className={`relative text-right lg:text-center
       my-2 lg:mx-3
-      whitespace-no-wrap
+      whitespace-nowrap
       font-medium
       ${transition}
       ${item.subItems && 'group'}`}
