@@ -1,9 +1,7 @@
 const { buildSchema } = require('graphql')
 const fs = require('fs')
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require('dotenv').config()
 
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||

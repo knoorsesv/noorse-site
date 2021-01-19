@@ -8,7 +8,6 @@ export const ContactInfo = () => {
     <div id="contact-info" className={`flex flex-col items-center`}>
       <span>Frans de Peuterstraat 50</span>
       <span>2950 Kapellen</span>
-      {/*todo: move to contentful*/}
       <span>03/664.44.11</span>
       <span>
         <ExternalLink url="mailto:info@noorse.be" icon={false}>

@@ -73,7 +73,6 @@ jobs:
         uses: actions/checkout@v1
       - uses: cypress-io/github-action@v2
         with:
-          build: yarn build:css
           config: baseUrl=${{needs.build-dev.outputs.dev-url}}
           record: true
           tag: ${{ github.event_name }}
@@ -101,8 +100,9 @@ jobs:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - name: Archive results
         uses: actions/upload-artifact@v2
-        if: always()
+        if: ${{ failure() }}
         with:
+          name: backstop report
           path: backstop_data
 
   lighthouse-check:

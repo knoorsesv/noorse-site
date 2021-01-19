@@ -2,6 +2,6 @@
   "baseUrl": "http://localhost:8000/",
   "projectId": "iw2qbq",
   "testFiles": "**/*spec.js",
-  "experimentalComponentTesting": true,
-  "componentFolder": "src/components"
+  "viewportHeight": 800,
+  "viewportWidth": 1280
 }

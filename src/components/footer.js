@@ -50,6 +50,7 @@ export const SponsorList = ({ logoWidth }) => {
       className={
         'flex flex-row flex-wrap content-between justify-center items-center w-full'
       }
+      title={'List of Sponsors'}
     >
       {sponsors.allContentfulSponsor.nodes.map((sponsor) =>
         SponsorWithLogo(sponsor, logoWidth)
@@ -87,6 +88,7 @@ export const ContactAndSponsorFooter = () => {
          bg-gray-light
          w-screen py-4 md:w-2/3 lg:w-1/2`}
         >
+          {/*todo: do styling correctly, impossible to test with 2 identical components being hidden on different screens*/}
           <SponsorList />
         </div>
         <div
