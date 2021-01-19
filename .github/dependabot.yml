@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 3
-    default_assignees:
+    assignees:
       - 'gvdp'
     ignore:
       - dependency-name: '@fortawesome/free-brands-svg-icons'
