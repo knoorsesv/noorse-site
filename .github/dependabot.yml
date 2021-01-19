@@ -1,23 +1,25 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: weekly
-  open-pull-requests-limit: 3
-  ignore:
-  - dependency-name: "@fortawesome/free-brands-svg-icons"
-    versions:
-    - ">= 5.15.a"
-    - "< 5.16"
-  - dependency-name: gatsby-plugin-postcss
-    versions:
-    - "> 2.3.0"
-    - "< 2.4"
-  - dependency-name: node-sass
-    versions:
-    - "> 4.14.1"
-    - "< 4.15"
-  commit-message:
-    prefix: chore
-    include: scope
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    default_assignees:
+      - 'gvdp'
+    ignore:
+      - dependency-name: '@fortawesome/free-brands-svg-icons'
+        versions:
+          - '>= 5.15.a'
+          - '< 5.16'
+      - dependency-name: gatsby-plugin-postcss
+        versions:
+          - '> 2.3.0'
+          - '< 2.4'
+      - dependency-name: node-sass
+        versions:
+          - '> 4.14.1'
+          - '< 4.15'
+    commit-message:
+      prefix: chore
+      include: scope
