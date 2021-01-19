@@ -73,7 +73,6 @@ jobs:
         uses: actions/checkout@v1
       - uses: cypress-io/github-action@v2
         with:
-          build: yarn build:css
           config: baseUrl=${{needs.build-dev.outputs.dev-url}}
           record: true
           tag: ${{ github.event_name }}
