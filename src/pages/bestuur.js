@@ -12,13 +12,13 @@ function getCard(bestuursLid) {
       <div className={'text-xs'}>
         <div className={'mb-1'}>{bestuursLid.node.title}</div>
         {bestuursLid.node.email && (
-          <div className={'font-thin truncate'}>
+          <div className={'font-extralight truncate'}>
             <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
             {bestuursLid.node.email}
           </div>
         )}
         {bestuursLid.node.phone && (
-          <div className={'font-thin'}>
+          <div className={'font-extralight'}>
             <FontAwesomeIcon
               icon={faPhoneAlt}
               className={'mr-1'}
