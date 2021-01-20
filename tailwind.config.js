@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   corePlugins: {
     preflight: false,
@@ -36,6 +38,7 @@ module.exports = {
           lighter: '#dbdbdb4d',
           light: '#f5f5f5',
         },
+        grey: colors.trueGray,
         green: {
           DEFAULT: '#098800',
           light: '#51b93c',

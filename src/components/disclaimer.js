@@ -18,7 +18,9 @@ const FullTextPopup = ({ hideDisclaimer }) => (
     </div>
     <div className={whiteText}>
       Alle ideeën en verbeteringen zijn welkom op{' '}
-      <a href="mailto:website@noorse.be">website@noorse.be</a>
+      <a className={'text-grey-200'} href="mailto:website@noorse.be">
+        website@noorse.be
+      </a>
     </div>
     <button
       type="button"
