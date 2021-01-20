@@ -11,7 +11,7 @@ const FullTextPopup = ({ hideDisclaimer }) => (
   <div
     className={`z-60 bg-green-dark w-full fixed top-32vh h-auto px-8 py-8 flex flex-col`}
   >
-    <h1 className={whiteText}>Disclaimer</h1>
+    <h1 className={whiteText}>BETA</h1>
     <div className={whiteText}>
       Dit is de beta versie van onze nieuwe website. Het is zeer waarschijnlijk
       dat niet alle informatie correct is.
@@ -41,7 +41,7 @@ export const BetaBanner = ({ fixed, className, ...props }) => {
       }  h-12 flex justify-between items-center px-8 mb-4 top-8v`}
     >
       <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
-      <span className={'text-white'}>BETA versie</span>
+      <span className={'text-white'}>BETA</span>
       <FontAwesomeIcon color={'white'} size="1x" icon={faExclamation} />
     </div>
   )
