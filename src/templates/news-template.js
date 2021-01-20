@@ -2,6 +2,42 @@ import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 import { ExternalLink } from '../components/text'
+import Img from 'gatsby-image'
+
+export default ({ pageContext: { newsNode } }) => {
+  const defaultAttachments = getDefaultAttachments(newsNode.attachment)
+  const images = getImageAttachments(newsNode.attachment)
+
+  function callLoaded() {
+    //todo: only call this in dev mode
+    console.log('backstopjs_ready')
+  }
+
+  return (
+    <Layout>
+      <Container>
+        <Title>{newsNode.title}</Title>
+        {newsNode.showImageOnPage && (
+          <Img
+            fluid={newsNode.image.fluid}
+            alt={'News Image'}
+            style={{ maxHeight: '300px' }}
+            imgStyle={{ objectFit: 'contain' }}
+            onLoad={callLoaded}
+          />
+        )}
+        <h3 className={'italic mb-6 mt-6 capitalize'}>
+          {newsNode.publishDate || newsNode.createdAt}
+        </h3>
+        {newsNode.body.json.content.map(nodeToHtml)}
+        {!!defaultAttachments.length && (
+          <Attachments attachments={defaultAttachments} />
+        )}
+        {!!images.length && <Images images={images} />}
+      </Container>
+    </Layout>
+  )
+}
 
 const nodeToHtml = (nodeWithType, index) => {
   if (nodeWithType.nodeType === 'paragraph') {
@@ -70,25 +106,6 @@ const NewsImage = (image) => {
 
 const AttachmentLink = (attachment) => {
   return <a href={attachment.title}>{attachment.title}</a>
-}
-
-export default ({ pageContext: { newsNode } }) => {
-  const defaultAttachments = getDefaultAttachments(newsNode.attachment)
-  const images = getImageAttachments(newsNode.attachment)
-  return (
-    <Layout>
-      <Container>
-        <Title>{newsNode.title}</Title>
-        {/*todo: created at is not correct for imported news messages*/}
-        <h3 className={'italic mb-6 capitalize'}>{newsNode.createdAt}</h3>
-        {newsNode.body.json.content.map(nodeToHtml)}
-        {!!defaultAttachments.length && (
-          <Attachments attachments={defaultAttachments} />
-        )}
-        {!!images.length && <Images images={images} />}
-      </Container>
-    </Layout>
-  )
 }
 
 const getDefaultAttachments = (attachments) => {
