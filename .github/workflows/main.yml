@@ -1,9 +1,6 @@
 name: Noorse site CI
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
   pull_request:
     branches: [main]
 
