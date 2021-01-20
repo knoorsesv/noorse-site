@@ -49,8 +49,9 @@
     },
     {
       "label": "News Page",
-      "delay": 1000,
-      "url": "http://localhost:8000/nieuws/Anita%20Brand%20nieuwe%20T1%20%20Noorse%20Dames?disclaimer=0",
+      "delay": 500,
+      "readyEvent": "backstopjs_ready",
+      "url": "http://localhost:8000/nieuws/Nieuwe%20spelers%202020-2021/",
       "selectors": ["document"]
     },
     {

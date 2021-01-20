@@ -19,7 +19,18 @@ exports.createPages = async ({ graphql, actions }) => {
               contentType
             }
           }
+          image {
+            fluid {
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
+            }
+          }
           title
+          publishDate(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
+          showImageOnPage
           createdAt(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
         }
       }
