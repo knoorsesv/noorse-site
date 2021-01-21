@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.103 (2021-01-21)
+
+
+### Features
+
+* use different cover image ([1324714](https://github.com/gvdp/noorse-site/commit/1324714e149d3b67b5d55732f9ca8f853fa1afc9))
+
 ### 0.1.102 (2021-01-21)
 
 
