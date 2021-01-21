@@ -1,6 +1,6 @@
 {
   "name": "gatsby-site-noorse",
-  "version": "0.1.104",
+  "version": "0.1.105",
   "private": true,
   "description": "Noorse Website",
   "bugs": {
@@ -36,7 +36,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.30",
     "@fortawesome/free-brands-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
-    "@fortawesome/react-fontawesome": "0.1.12",
+    "@fortawesome/react-fontawesome": "0.1.13",
     "autoprefixer": "^10.2.3",
     "backstopjs": "^5.0.8",
     "cypress": "6.2.1",
