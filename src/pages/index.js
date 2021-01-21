@@ -1,7 +1,6 @@
 import React from 'react'
 import SEO from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text'
-import { EventList } from '../components/events'
 import { Card, ClickableCard } from '../components/cards'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
@@ -12,19 +11,7 @@ import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
 import { navigate } from 'gatsby-link'
 import { Section } from '../components/layout/section'
-
-const EventsSection = ({ className }) => {
-  return (
-    <Section className={className}>
-      <SectionTitle>Evenementen</SectionTitle>
-      <Card className={'mb-4'}>
-        <div className={'py-2 px-3'}>
-          <EventList />
-        </div>
-      </Card>
-    </Section>
-  )
-}
+import { EventsSection } from '../components/events'
 
 const TrooperSection = ({ className }) => {
   return (
