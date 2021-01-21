@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.102 (2021-01-21)
+
+
+### Features
+
+* fallback for empty events list ([746376b](https://github.com/gvdp/noorse-site/commit/746376b3bc8c7e7e77a96895e4429b64fc565caa))
+
 ### 0.1.101 (2021-01-21)
 
 
