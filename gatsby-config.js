@@ -29,6 +29,7 @@ module.exports = {
     title: `K. Noorse S.V.`,
     description: `Al het laatste nieuws over voetbalvereniging Noorse uit Kapellen.`,
     author: `@gvdp`,
+    version: process.env.PROD ? process.env.npm_package_version : '0.dev',
   },
   plugins: [
     ...(tracking

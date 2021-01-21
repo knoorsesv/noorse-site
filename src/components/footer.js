@@ -7,6 +7,7 @@ import { Title } from './titles'
 import { Logo } from './images'
 import { BetaBanner } from './disclaimer'
 import { ContactInfo } from './contact'
+import { Version } from './version'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -114,11 +115,17 @@ export const CopyRightFooter = () => {
       }
     >
       <BetaBanner fixed={false} />
-      <div size={'small'}>© {new Date().getFullYear()}, K. Noorse S.V.</div>
+      <div size={'small'}>
+        <Version /> © {new Date().getFullYear()}, K. Noorse S.V.
+      </div>
       <div size={'small'}>
         Powered by{' '}
         <ExternalLink textColor={'text-black'} url="https://www.gatsbyjs.org">
           Gatsby
+        </ExternalLink>{' '}
+        and{' '}
+        <ExternalLink textColor={'text-black'} url="https://tailwindcss.com/">
+          Tailwind
         </ExternalLink>
       </div>
     </div>
