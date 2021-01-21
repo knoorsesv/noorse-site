@@ -11,6 +11,7 @@ import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
 import { navigate } from 'gatsby-link'
+import { Section } from '../components/layout/section'
 
 const EventsSection = ({ className }) => {
   return (
@@ -107,7 +108,7 @@ export default () => {
       <div
         className={`flex flex-col lg:grid
         gap-2 grid-cols-3 
-        md:px-12 lg:px-6 lg:mx-8
+        md:px-12 lg:px-6 lg:mx-8 xl:mx-64        
         lg:bg-gray-light
         `}
         id="homepage-content"
@@ -120,18 +121,5 @@ export default () => {
       </div>
       <Footer />
     </div>
-  )
-}
-
-export const Section = ({ children, className }) => {
-  return (
-    <section
-      className={`${className} 
-  bg-gray-light
-  px-6 pt-4 pb-6 md:pb-2 mb-4 md:mb-2
-  `}
-    >
-      {children}
-    </section>
   )
 }

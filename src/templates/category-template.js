@@ -2,8 +2,8 @@ import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
-import { Section } from '../pages'
 import { CategoryTeamNavigation } from '../components/team-navigation'
+import { Section } from '../components/layout/section'
 
 export default ({ pageContext: { categoryNode } }) => {
   return (

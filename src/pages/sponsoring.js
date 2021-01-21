@@ -22,8 +22,8 @@ const SponsoringPage = () => {
     <Layout>
       <Container>
         <Title>Sponsoring</Title>
-        <SubTitle>Huidige Partners</SubTitle>
-        <TextBlock>Nog nodig aangezien ze in de footer staan?</TextBlock>
+        {/*<SubTitle>Huidige Partners</SubTitle>*/}
+        {/*<TextBlock>Nog nodig aangezien ze in de footer staan?</TextBlock>*/}
         <SubTitle> Waarom Sponsoren?</SubTitle>
         <TextBlock>
           Deze club is in enkele jaren aanzienlijk gegroeid tot een vereniging
