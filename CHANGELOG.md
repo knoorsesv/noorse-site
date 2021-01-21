@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.101 (2021-01-21)
+
+
+### Features
+
+* large screen home page padding ([ac5923e](https://github.com/gvdp/noorse-site/commit/ac5923e97b9ef60c129e6e6a2e99c9adc474a38e))
+
 ### 0.1.100 (2021-01-20)
 
 
