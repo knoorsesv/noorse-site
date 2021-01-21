@@ -5,10 +5,10 @@ import Img from 'gatsby-image'
 export const CoverImage = ({ children, className }) => {
   const image = useStaticQuery(graphql`
     query {
-      cover: file(name: { eq: "noorse_cover" }) {
-        childImageSharp {
+      lucht: allContentfulAsset(filter: { title: { eq: "Noorse luchtfoto" } }) {
+        nodes {
           fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyContentfulFluid
           }
         }
       }
@@ -16,18 +16,18 @@ export const CoverImage = ({ children, className }) => {
   `)
 
   function callLoaded() {
-    //todo: only call this in dev mode
-    console.log('backstopjs_ready')
+    if (process.env.PROD !== 'true') {
+      console.log('backstopjs_ready')
+    }
   }
-
   return (
     <Img
       id={'background-image'}
       alt={'background image'}
-      fluid={image.cover.childImageSharp.fluid}
+      fluid={image.lucht.nodes[0].fluid}
       className={`${className} absolute w-full`}
       fadeIn={process.env.PROD === 'true'}
-      imgStyle={{ objectFit: 'cover', objectPosition: 'top' }}
+      imgStyle={{ objectFit: 'cover', objectPosition: 'center' }}
       onLoad={callLoaded}
     >
       {children}
