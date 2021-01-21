@@ -16,9 +16,9 @@ export const CoverImage = ({ children, className }) => {
   `)
 
   function callLoaded() {
-    if (process.env.PROD !== 'true') {
-      console.log('backstopjs_ready')
-    }
+    // if (process.env.PROD !== 'true') { //todo: dont work on github
+    console.log('backstopjs_ready')
+    // }
   }
   return (
     <Img
