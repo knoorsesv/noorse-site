@@ -120,6 +120,7 @@ export const CopyRightFooter = () => {
         <a
           href={'mailto:website@noorse.be'}
           target={'_blank'}
+          rel={'noreferrer'}
           className={'underline text-black'}
         >
           website@noorse.be

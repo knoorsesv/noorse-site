@@ -12,6 +12,7 @@ import { webshopLink } from '../env/constants'
 import { navigate } from 'gatsby-link'
 import { Section } from '../components/layout/section'
 import { EventsSection } from '../components/events'
+import { SportVlaanderen } from '../components/sport-vlaanderen-logo'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -105,6 +106,11 @@ export default () => {
         <EventsSection className={'lg:row-start-2 lg:col-start-3'} />
         <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
         <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
+        <Section className={'lg:row-start-5 lg:col-start-3'}>
+          <Card>
+            <SportVlaanderen />
+          </Card>
+        </Section>
       </div>
       <Footer />
     </div>
