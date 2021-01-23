@@ -9,8 +9,9 @@ export default ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
 
   function callLoaded() {
-    //todo: only call this in dev mode
-    console.log('backstopjs_ready')
+    if (process.env.GATSBY_BACKSTOP_READY === 'on') {
+      console.log('backstopjs_ready')
+    }
   }
 
   return (
