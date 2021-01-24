@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
+        env:
+          NODE_ENV: production
       - run: yarn build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
@@ -38,6 +40,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
+        env:
+          NODE_ENV: production
       - run: yarn build
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
@@ -87,6 +91,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
+        env:
+          NODE_ENV: production
       - run: yarn backstop:test
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
