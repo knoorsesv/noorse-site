@@ -92,11 +92,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-        working-directory: './backstop_data'
+        working-directory: backstop_data
         env:
           NODE_ENV: production
       - run: yarn backstop:test
-        working-directory: './backstop_data'
+        working-directory: backstop_data
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - name: Archive results
