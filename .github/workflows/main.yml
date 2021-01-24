@@ -64,45 +64,47 @@ jobs:
     outputs:
       dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
 
-  cypress-test:
+  #  cypress-test:
+  #    needs: build-dev
+  #    if: contains(github.event_name, 'pull_request')
+  #    runs-on: ubuntu-latest
+  #    name: Cypress Test
+  #    steps:
+  #      - name: Checkout
+  #        uses: actions/checkout@v1
+  #      - uses: cypress-io/github-action@v2
+  #        with:
+  #          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
+  #          record: true
+  #          tag: ${{ github.event_name }}
+  #          working-directory: cypress
+  #          config-file: cypress.json
+  #        env:
+  #          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  #          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
+  #          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+  visual-test:
     needs: build-dev
     if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
-    name: Cypress Test
+    name: Backstop Test
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - uses: cypress-io/github-action@v2
-        with:
-          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
-          record: true
-          tag: ${{ github.event_name }}
-          working-directory: cypress
-          config-file: cypress.json
+      - uses: bahmutov/npm-install@v1
+        working-directory: './backstop_data'
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-#  visual-test:
-#    needs: build-dev
-#    if: contains(github.event_name, 'pull_request')
-#    runs-on: ubuntu-latest
-#    name: Backstop Test
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v1
-#      - uses: bahmutov/npm-install@v1
-#        env:
-#          NODE_ENV: production
-#      - run: yarn backstop:test
-#        env:
-#          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-#      - name: Archive results
-#        uses: actions/upload-artifact@v2
-#        if: ${{ failure() }}
-#        with:
-#          name: backstop report
-#          path: backstop_data
+          NODE_ENV: production
+      - run: yarn backstop:test
+        working-directory: './backstop_data'
+        env:
+          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+      - name: Archive results
+        uses: actions/upload-artifact@v2
+        if: ${{ failure() }}
+        with:
+          name: backstop report
+          path: backstop_data
 #
 #  lighthouse-check:
 #    needs: build-prod
