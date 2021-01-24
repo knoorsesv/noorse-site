@@ -16,8 +16,7 @@ export const CategoryTeamNavigation = ({ category, header }) => {
           category.ploeg.map((ploeg) => (
             <Link
               key={ploeg.naam}
-              to={`/team/${ploeg.naam.toLowerCase()}/`}
-              partiallyActive={true}
+              to={`/team/${ploeg.naam.toLowerCase()}`}
               activeClassName={'font-bold'}
               className={'text-gray-dark underline mx-3'}
             >
