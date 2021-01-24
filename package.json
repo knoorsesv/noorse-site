@@ -37,8 +37,6 @@
     "@fortawesome/react-fontawesome": "0.1.12",
     "autoprefixer": "^10.2.3",
     "backstopjs": "5.0.8",
-    "cypress": "6.2.1",
-    "cypress-pipe": "^2.0.0",
     "date-fns": "2.16.1",
     "gatsby": "2.31.0",
     "gatsby-image": "2.4.21",
@@ -71,6 +69,7 @@
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
+    "cypress": "^6.3.0",
     "prettier": "2.0.5",
     "prettier-plugin-packagejson": "^2.2.9",
     "pretty-quick": "3.1.0",
