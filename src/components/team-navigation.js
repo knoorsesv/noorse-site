@@ -11,13 +11,12 @@ export const CategoryTeamNavigation = ({ category, header }) => {
         {header || category.naam}
       </h3>
       <div className={'flex flex-wrap justify-around mx-1'}>
-        {/*/!*todo: is this null check necessary or is it good that an error here would break the build?*!/*/}
+        {/*todo: active class name doesnt work on page load so breaks backstop tests: https://github.com/gatsbyjs/gatsby/issues/10586*/}
         {category.ploeg &&
           category.ploeg.map((ploeg) => (
             <Link
               key={ploeg.naam}
               to={`/team/${ploeg.naam.toLowerCase()}`}
-              activeClassName={'font-bold'}
               className={'text-gray-dark underline mx-3'}
             >
               {ploeg.naam}
