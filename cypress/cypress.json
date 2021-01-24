@@ -1,7 +1,7 @@
 {
   "baseUrl": "http://localhost:8000/",
   "projectId": "iw2qbq",
-  "fixturesFolder": "fixtures",
+  "fixturesFolder": "tests",
   "testFiles": "**/*spec.js",
   "viewportHeight": 800,
   "viewportWidth": 1280
