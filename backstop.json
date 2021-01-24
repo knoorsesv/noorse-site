@@ -57,13 +57,13 @@
     {
       "label": "Ploeg Page",
       "delay": 500,
-      "url": "http://localhost:8000/team/noorse%201?disclaimer=0",
+      "url": "http://localhost:8000/team/noorse%201",
       "selectors": ["document"]
     },
     {
       "label": "Category Page",
       "delay": 500,
-      "url": "http://localhost:8000/senioren?disclaimer=0",
+      "url": "http://localhost:8000/senioren",
       "selectors": ["document"]
     },
     {

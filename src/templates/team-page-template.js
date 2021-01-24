@@ -64,7 +64,6 @@ function CalendarTable({ calendar }) {
     }
     return -1
   }
-
   return (
     <table className={'w-full table-fixed border-separate text-sm lg:w-4/5'}>
       <tbody>
