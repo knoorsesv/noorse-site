@@ -115,7 +115,7 @@ export const CopyRightFooter = () => {
       }
     >
       <BetaBanner fixed={false} />
-      <div size={'small'}>
+      <div className={'small text-center px-4'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
         <a
           href={'mailto:website@noorse.be'}
@@ -126,10 +126,10 @@ export const CopyRightFooter = () => {
           website@noorse.be
         </a>
       </div>
-      <div size={'small'}>
+      <div className={'small'}>
         <Version /> © {new Date().getFullYear()}, K. Noorse S.V.
       </div>
-      <div size={'small'}>
+      <div className={'small'}>
         Powered by{' '}
         <ExternalLink textColor={'text-black'} url="https://www.gatsbyjs.org">
           Gatsby
