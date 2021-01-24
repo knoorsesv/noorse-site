@@ -1,4 +1,4 @@
-name: Noorse site CI
+name: Build and Test Website
 
 on:
   pull_request:
