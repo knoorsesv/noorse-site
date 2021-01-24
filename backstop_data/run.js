@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const backstop = require('backstopjs')
-const customConfig = require('../backstop.json')
+const customConfig = require('./backstop.json')
 const baseUrl = process.env.BASE_URL || 'http://host.docker.internal:8000'
 
 customConfig.scenarios.forEach((scenario) => {
