@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.108 (2021-01-24)
+
+
+### Bug Fixes
+
+* dont use active class name for team links because it doesnt work in production build ([4c676f3](https://github.com/gvdp/noorse-site/commit/4c676f344b08ddc335a171a623cfefebb24de9b9))
+
 ### 0.1.107 (2021-01-21)
 
 ### 0.1.106 (2021-01-21)
