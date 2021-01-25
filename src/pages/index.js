@@ -95,7 +95,7 @@ export default () => {
 
       <div
         className={`flex flex-col lg:grid
-        gap-2 grid-cols-3 
+        lg:gap-2 grid-cols-3 
         md:px-12 lg:px-6 lg:mx-8 xl:mx-64        
         lg:bg-gray-light
         `}
