@@ -114,7 +114,7 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
       <Container>
         <Title>{contentfulPloeg.naam}</Title>
 
-        <div className={'flex flex-col lg:grid lg:grid-cols-3 gap-20'}>
+        <div className={'flex flex-col lg:grid lg:grid-cols-3'}>
           <div className={'flex flex-col lg:grid-col-1'}>
             <div className={'flex flex-col items-center'}>
               {contentfulPloeg.coach && (
@@ -154,7 +154,7 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
             </div>
           </div>
           {data.vv && data.vv.teamCalendar && (
-            <section className={'lg:col-span-2'}>
+            <section className={'mt-6 lg:mt-0 lg:col-span-2'}>
               <SubTitle>Kalender</SubTitle>
               <CalendarTable calendar={data.vv.teamCalendar} />
             </section>
