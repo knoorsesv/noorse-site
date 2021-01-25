@@ -1,6 +1,6 @@
 import { navigate } from 'gatsby-link'
 import React from 'react'
-import { ClickableCard } from './cards'
+import { ClickableCard, SubHeader } from './cards'
 
 export const NewsCard = ({ newsNode }) => {
   const maxChars = 100
@@ -32,18 +32,12 @@ export const NewsCard = ({ newsNode }) => {
       containerClass={'min-h-128p'}
       onClick={goToNews}
     >
-      <div
-        className={
-          'flex justify-between mb-3 text-gray-darker-readable italic text-sm'
-        }
-      >
-        {newsNode.category && (
-          <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
-        )}
+      <SubHeader>
+        <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
         <div className={'text-center'}>
           {newsNode.publishDate || newsNode.createdAt}
         </div>
-      </div>
+      </SubHeader>
       <div className={'text-center min-h-64p'}>{snippet}</div>
     </ClickableCard>
   )

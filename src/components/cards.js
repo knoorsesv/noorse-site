@@ -40,6 +40,17 @@ export const Card = ({
   )
 }
 
+export const SubHeader = ({ children }) => {
+  return (
+    <div
+      className={
+        'flex justify-between mb-3 text-gray-darker-readable italic text-sm'
+      }
+    >
+      {children}
+    </div>
+  )
+}
 export const ClickableCard = ({ onClick, ...props }) => {
   return Clickable(Card, onClick, props)
 }
