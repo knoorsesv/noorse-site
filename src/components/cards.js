@@ -8,6 +8,7 @@ export const Card = ({
   children,
   className,
   containerClass,
+  headerHeight,
   ...props
 }) => {
   return (
@@ -28,7 +29,11 @@ export const Card = ({
               imgStyle={{ objectFit: 'cover' }}
             />
           )}
-          <h2 className={'text-center p-3 m-0 uppercase min-h-64p'}>
+          <h2
+            className={`text-center p-3 m-0 uppercase ${
+              headerHeight ? headerHeight : 'min-h-64p'
+            }`}
+          >
             {header}
           </h2>
         </div>

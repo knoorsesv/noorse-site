@@ -26,11 +26,10 @@ const query = graphql`
 `
 
 const BestuursCard = ({ bestuursLid }) => {
-  console.log(bestuursLid)
   return (
     <Card
       header={bestuursLid.node.naam}
-      key={bestuursLid.node.naam}
+      headerHeight={'min-h-32p'}
       className={'h-48 sm:w-2/5 lg:w-1/4 lg:mx-2 my-2'}
     >
       <div className={'text-xs'}>
@@ -47,6 +46,7 @@ const BestuursCard = ({ bestuursLid }) => {
         {bestuursLid.node.email && (
           <div className={'font-extralight truncate'}>
             <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
+            {/*todo: make this mailto: link*/}
             {bestuursLid.node.email}
           </div>
         )}
@@ -76,7 +76,12 @@ export default () => {
           className={`flex flex-col sm:flex-row sm:flex-wrap sm:justify-between lg:justify-center `}
         >
           {data.allContentfulBestuurslid.edges.map((bestuursLid) => {
-            return <BestuursCard bestuursLid={bestuursLid} />
+            return (
+              <BestuursCard
+                bestuursLid={bestuursLid}
+                key={bestuursLid.node.naam}
+              />
+            )
           })}
         </div>
       </Container>

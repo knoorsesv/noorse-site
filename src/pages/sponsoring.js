@@ -15,15 +15,34 @@ const SponsoringPage = () => {
           }
         }
       }
+
+      allContentfulBestuurslid(
+        filter: { sponsorVerantwoordelijke: { eq: true } }
+      ) {
+        nodes {
+          naam
+          email
+          category {
+            naam
+          }
+        }
+      }
     }
   `)
+
+  const sponsorVerantwoordelijken = data.allContentfulBestuurslid.nodes.map(
+    (lid) => {
+      return {
+        label: lid.category.naam,
+        value: `${lid.naam} ${lid.email ? ` - ${lid.email}` : ''}`,
+      }
+    }
+  )
 
   return (
     <Layout>
       <Container>
         <Title>Sponsoring</Title>
-        {/*<SubTitle>Huidige Partners</SubTitle>*/}
-        {/*<TextBlock>Nog nodig aangezien ze in de footer staan?</TextBlock>*/}
         <SubTitle> Waarom Sponsoren?</SubTitle>
         <TextBlock>
           Deze club is in enkele jaren aanzienlijk gegroeid tot een vereniging
@@ -94,19 +113,7 @@ const SponsoringPage = () => {
         </TextBlock>
         <SubTitle>Sponsorverantwoordelijken</SubTitle>
         <TextBlock>
-          <SpacedInfo
-            items={[
-              {
-                label: 'Senioren',
-                value: 'Ben De Block – seniorenbestuurnoorse@gmail.com',
-              },
-              {
-                label: 'Jeugd Jongens',
-                value: 'Peter Scheltjens – jeugd@noorse.be',
-              },
-              { label: 'G-voetbal', value: 'Willy Cools' },
-            ]}
-          ></SpacedInfo>
+          <SpacedInfo items={sponsorVerantwoordelijken} />
         </TextBlock>
       </Container>
     </Layout>
