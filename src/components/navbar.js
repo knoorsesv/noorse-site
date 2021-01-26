@@ -7,75 +7,23 @@ import { ExternalLink } from './text'
 import { siteMap as defaultSiteMap } from '../env/constants'
 import { CoverImage } from './cover-image'
 
-const transition = `transition-all duration-200 ease-in`
+const transition = `transition-all duration-1000 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
 
-export const Navbar = ({ showCoverPhoto, siteMap, initiallyShown }) => {
-  const [showNavbar, setShowNavBar] = useState(!showCoverPhoto)
-
-  siteMap = siteMap || defaultSiteMap
-
-  return (
-    <React.Fragment>
-      <NavContainer
-        showCoverPhoto={showCoverPhoto}
-        setShowNavBar={setShowNavBar}
-      >
-        <nav
-          className={`
-        ${transition}
-      z-50 w-full flex
-      lg:flex-row-reverse lg:justify-between lg:items-center
-      ${
-        showNavbar
-          ? `${menuBarHeight} fixed bg-green`
-          : `${coverSectionHeight} bg-transparent lg:pr-0`
-      } 
-      `}
-        >
-          <div
-            id="menu-container"
-            className={`hidden lg:block 
-            ${transition} 
-            ${!showNavbar && 'lg:self-start'}
-            ${!showNavbar && `lg:mb-10 lg:pl-5 lg:h-38p`}
-            `}
-          >
-            <TopMenu showNavbar={showNavbar} siteMap={siteMap} />
-          </div>
-          <div
-            id="logo-container"
-            className={`${transition}
-          relative flex justify-center
-          ${
-            showNavbar
-              ? 'justify-start w-1/6 h-full top-8p sm:top-32p left-16p'
-              : `w-full h-full lg:w-1/2 p-2 sm:p-6 lg:p-8`
-          }
-         `}
-          >
-            <Logo className={`${transition}`} />
-          </div>
-        </nav>
-      </NavContainer>
-      <SideBarMenu
-        fixedToTop={showNavbar}
-        siteMap={siteMap}
-        initiallyShown={initiallyShown}
-      />
-    </React.Fragment>
-  )
-}
-
-const NavContainer = ({ showCoverPhoto, children, setShowNavBar }) => {
+const NavSection = ({
+  pageHasCoverPhoto,
+  children,
+  setTopMenuBarShown,
+  topMenuBarShown,
+}) => {
   const ref = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
-        setShowNavBar(
-          !showCoverPhoto || ref.current.getBoundingClientRect().top < 0
+        setTopMenuBarShown(
+          !pageHasCoverPhoto || ref.current.getBoundingClientRect().top < 0
         )
       }
     }
@@ -83,37 +31,195 @@ const NavContainer = ({ showCoverPhoto, children, setShowNavBar }) => {
     return () => {
       window.removeEventListener('scroll', () => handleScroll)
     }
-  }, [showCoverPhoto, setShowNavBar])
+  }, [pageHasCoverPhoto, setTopMenuBarShown])
 
   return (
     <section
       ref={ref}
       id="nav-container"
-      className={`${
-        showCoverPhoto ? coverSectionHeight : menuBarHeight
-      } w-full static`}
+      className={`
+      ${pageHasCoverPhoto ? coverSectionHeight : menuBarHeight} 
+      ${topMenuBarShown ? 'bg-green' : ''}
+      w-full static`}
     >
-      {showCoverPhoto ? <CoverImage className={coverSectionHeight} /> : <></>}
+      {pageHasCoverPhoto ? (
+        <CoverImage className={coverSectionHeight} />
+      ) : (
+        <></>
+      )}
       {children}
     </section>
   )
 }
 
-const TopMenu = ({ showNavbar, siteMap }) => {
+const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   return [
     <ul
-      id="menu"
-      key="menu"
-      style={{ zIndex: '10', position: 'relative' }}
-      className={`list-none h-full flex flex-row justify-between items-center p-4 lg:p-6 lg:mb-0`}
+      id="menu-list"
+      className={`
+      fixed top-0 pt-16 pr-4
+      w-1/2 sm:w-2/5
+      list-none h-full flex flex-col space-y-1 sm:space-y-2 ${transition}
+      ${
+        !sideBarMenuShown
+          ? 'opacity-0 -right-1/2'
+          : 'bg-green opacity-100 right-0'
+      }
+      `}
     >
       {siteMap.items.map((item) => (
-        <MenuItem key={item.name} item={item} showNavbar={showNavbar} />
+        <li
+          id={'menu-item'}
+          key={item.name}
+          className={`text-right lg:text-center
+      lg:my-2 lg:mx-3
+      ${transition}
+      ${item.subItems && 'group'}`}
+        >
+          <NavLink item={item} />
+          {item.subItems && (
+            <SubMenuItems fixedToTop={topMenuBarShown} item={item} />
+          )}
+        </li>
       ))}
     </ul>,
+  ]
+}
+
+const SubMenuItems = ({ item }) => {
+  return (
+    <ul
+      id="dropdown"
+      className={`
+      lg:hidden lg:group-hover:absolute lg:group-hover:flex
+      flex flex-col space-y-2 lg:items-start
+      w-auto lg:p-6 mr-4
+      ${transition}`}
+    >
+      {item.subItems.map((subItem) => {
+        return <NavLink item={subItem} key={subItem.name} />
+      })}
+    </ul>
+  )
+}
+
+// const SideBarMenu = ({ topMenuBarShown, siteMap, initiallyShown }) => {
+//
+//
+//   return (
+//     <div
+//       id="sidebar-container"
+//       className={`${transition}
+//       lg:hidden block
+//       z-50
+//      h-screen fixed right-0 top-0 p-4 sm:pr-8
+//      ${menuShown ? 'w-1/2 sm:w-1/3' : 'w-0'}
+//      ${menuShown && 'bg-green'}
+//    `}
+//     >
+//
+//
+//       <MenuItemList topMenuBarShown={topMenuBarShown} siteMap={siteMap}/>
+//       {/*<ul*/}
+//       {/*  id="sidebar-menu"*/}
+//       {/*  className={`*/}
+//       {/*      list-none*/}
+//       {/*      ${menuShown ? 'block' : 'hidden'}*/}
+//       {/*      flex flex-col justify-between mt-6 sm:mt-8`}*/}
+//       {/*>*/}
+//       {/*  {siteMap.items.map((item) => (*/}
+//       {/*    <MenuItem key={item.name} item={item} topMenuBarShown={fixedToTop} />*/}
+//       {/*  ))}*/}
+//       {/*</ul>*/}
+//     </div>
+//   )
+// }
+
+const NavLink = ({ item }) => {
+  const className = 'text-white text-lg'
+
+  if (item.link) {
+    return (
+      <Link
+        className={className}
+        activeClassName={'border-b-2 border-white'}
+        to={item.link}
+      >
+        {item.name}
+      </Link>
+    )
+  }
+
+  if (item.extLink) {
+    return (
+      <ExternalLink
+        url={item.extLink}
+        styled={false}
+        icon={false}
+        className={className}
+        textColor={'text-white'}
+        key={item.name}
+      >
+        {item.name}
+      </ExternalLink>
+    )
+  }
+  return <span className={className}>{item.name}</span>
+}
+
+export const Navbar = ({
+  pageHasCoverPhoto = false,
+  siteMap,
+  initiallyShown,
+}) => {
+  const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
+  const [sideBarMenuShown, setMenuShown] = useState(initiallyShown)
+
+  const toggleMenuShown = () => {
+    setMenuShown(!sideBarMenuShown)
+  }
+
+  siteMap = siteMap || defaultSiteMap
+
+  return (
+    <React.Fragment>
+      <NavSection
+        topMenuBarShown={topMenuBarShown}
+        pageHasCoverPhoto={pageHasCoverPhoto}
+        setTopMenuBarShown={setTopMenuBarShown}
+      >
+        <MenuLogo topMenuBarShown={topMenuBarShown} />
+
+        <nav
+          className={`
+          ${transition}
+          fixed w-full
+          pr-4
+          ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'h-0 p-0'}
+          `}
+        >
+          <MenuItemList
+            topMenuBarShown={topMenuBarShown}
+            sideBarMenuShown={sideBarMenuShown}
+            siteMap={siteMap}
+          />
+          {/*<MenuBackground topMenuBarShown={topMenuBarShown}/>*/}
+        </nav>
+        <MenuToggle
+          clickBurger={toggleMenuShown}
+          sideBarMenuShown={sideBarMenuShown}
+          topMenuBarShown={topMenuBarShown}
+        />
+      </NavSection>
+    </React.Fragment>
+  )
+}
+
+const MenuBackground = ({ topMenuBarShown }) => {
+  return (
     <div
       key="menu-background"
-      className={`${showNavbar && 'hidden'} ${transition} shadow-lg`}
+      className={`${topMenuBarShown && 'hidden'} ${transition} shadow-lg`}
       style={{
         position: 'relative',
         top: '-35px',
@@ -124,122 +230,43 @@ const TopMenu = ({ showNavbar, siteMap }) => {
         opacity: '70%',
         borderColor: 'transparent transparent green transparent',
       }}
-    />,
-  ]
-}
-
-const MenuToggle = ({ clickBurger, menuShown }) => {
-  return (
-    <FontAwesomeIcon
-      className={'h-6 w-6'}
-      icon={menuShown ? faTimes : faBars}
-      onClick={clickBurger}
-      id="menu-hamburger"
     />
   )
 }
 
-const MenuItem = ({ item, showNavbar }) => {
-  return (
-    <li
-      id={'top-menu-item'}
-      className={`relative text-right lg:text-center
-      my-2 lg:mx-3
-      whitespace-nowrap
-      font-medium
-      ${transition}
-      ${item.subItems && 'group'}`}
-    >
-      {item.link || item.extLink ? (
-        <NavLink activeClassName={`border-b-2`} item={item}></NavLink>
-      ) : (
-        <span className={'text-white'}>{item.name}</span>
-      )}
-      {item.subItems && <SubMenuItems fixedToTop={showNavbar} item={item} />}
-    </li>
-  )
-}
-
-const SubMenuItems = ({ item }) => {
+const MenuLogo = ({ topMenuBarShown }) => {
   return (
     <div
-      id="dropdown"
-      className={`
-      lg:hidden lg:group-hover:absolute lg:group-hover:flex
-      flex flex-col lg:items-start
-      w-auto lg:p-6 mr-4
-      ${transition}
-      bg-green bg-opacity-75`}
-    >
-      {item.subItems.map((subItem) => {
-        return <NavLink item={subItem} key={subItem.name} />
-      })}
-    </div>
-  )
-}
-
-const SideBarMenu = ({ fixedToTop, siteMap, initiallyShown }) => {
-  const [menuShown, setMenuShown] = useState(initiallyShown)
-  const toggleMenuShown = () => {
-    setMenuShown(!menuShown)
-  }
-
-  return (
-    <div
-      id="sidebar-container"
+      id="logo-container"
       className={`${transition}
-      lg:hidden block
-      z-50
-     h-screen fixed right-0 top-0 p-4 sm:pr-8 
-     ${menuShown ? 'w-1/2 sm:w-1/3' : 'w-0'}
-     ${menuShown && 'bg-green'}
-   `}
+           flex fixed z-20
+          ${
+            topMenuBarShown
+              ? `justify-start w-1/6 top-8 sm:top-32p left-16p ${menuBarHeight}`
+              : `justify-center w-full top-0 lg:w-1/2 p-2 sm:p-6 lg:p-8 ${coverSectionHeight}`
+          }
+         `}
     >
-      <div
-        className={`lg:hidden flex flex-row justify-end items-center 
-        mt-2 sm:mt-4 
-        ${(menuShown || fixedToTop) && 'text-white'} ${transition}`}
-      >
-        <MenuToggle clickBurger={toggleMenuShown} menuShown={menuShown} />
-      </div>
-      <ul
-        id="sidebar-menu"
-        className={`
-            list-none
-            ${menuShown ? 'block' : 'hidden'}
-            flex flex-col justify-between mt-6 sm:mt-8`}
-      >
-        {siteMap.items.map((item) => (
-          <MenuItem key={item.name} item={item} showNavbar={fixedToTop} />
-        ))}
-      </ul>
+      <Logo className={`${transition}`} />
     </div>
   )
 }
 
-const NavLink = ({
-  item,
-  className = 'text-white my-2 text-lg',
-  activeClassName = 'border-r-2 pr-2',
-}) => {
-  return item.link ? (
-    <Link
-      className={className}
-      activeClassName={activeClassName}
-      to={item.link}
+const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
+  return (
+    <div
+      className={`fixed right-0 
+        lg:hidden
+        mt-4 mr-3 sm:mt-4 
+        p-2 z-50 text-white
+        ${sideBarMenuShown || topMenuBarShown ? '' : 'bg-green'} ${transition}`}
     >
-      {item.name}
-    </Link>
-  ) : (
-    <ExternalLink
-      url={item.extLink}
-      styled={false}
-      icon={false}
-      className={className}
-      textColor={'text-white'}
-      key={item.name}
-    >
-      {item.name}
-    </ExternalLink>
+      <FontAwesomeIcon
+        className={'h-6 w-6'}
+        icon={sideBarMenuShown ? faTimes : faBars}
+        onClick={clickBurger}
+        id="menu-hamburger"
+      />
+    </div>
   )
 }

@@ -89,7 +89,7 @@ export default () => {
     <div>
       <DisclaimerPopup />
 
-      <Navbar showCoverPhoto={true} />
+      <Navbar pageHasCoverPhoto={true} />
 
       <SEO title="Home" keywords={[`noorse`]} />
 
