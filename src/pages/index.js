@@ -28,7 +28,7 @@ const TrooperSection = ({ className }) => {
             !
           </div>
         </TextBlock>
-        <div className={'flex justify-center p-4'}>
+        <div className={'flex justify-center p-4'} title={'trooper-video'}>
           <ResponsiveVideo src={'https://www.youtube.com/embed/jGgVgioUMq0'} />
         </div>
       </Card>
