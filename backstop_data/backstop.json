@@ -48,6 +48,42 @@
       "selectors": ["#___gatsby"]
     },
     {
+      "label": "Homepage viewport after scroll",
+      "url": "http://localhost:8000",
+      "delay": 1000,
+      "scrollToSelector": "#homepage-content",
+      "readyEvent": "backstopjs_ready",
+      "postInteractionWait": "500ms",
+      "misMatchThreshold": "1",
+      "selectors": ["viewport"]
+    },
+    {
+      "label": "Homepage nav sidebar open",
+      "url": "http://localhost:8000",
+      "delay": 1000,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 640
+        },
+        {
+          "label": "sm",
+          "width": 480,
+          "height": 906
+        },
+        {
+          "label": "md",
+          "width": 768,
+          "height": 1152
+        }
+      ],
+      "postInteractionWait": "500ms",
+      "clickSelector": "#menu-hamburger",
+      "misMatchThreshold": "1",
+      "selectors": ["viewport"]
+    },
+    {
       "label": "News Page",
       "delay": 500,
       "readyEvent": "backstopjs_ready",
