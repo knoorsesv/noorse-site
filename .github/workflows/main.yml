@@ -49,6 +49,7 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
           GATSBY_DISCLAIMER: off
+          GATSBY_VV_TEST_DATA: on
           GATSBY_BACKSTOP_READY: on
       - name: Deploy
         uses: nwtgck/actions-netlify@v1

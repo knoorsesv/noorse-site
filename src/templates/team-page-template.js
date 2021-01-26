@@ -58,12 +58,11 @@ function CalendarTable({ calendar }) {
       return 1
     }
     if (a.startDate === b.startDate) {
-      if (a.id > b.id) {
-        return 1
-      }
+      return 0
     }
     return -1
   }
+
   return (
     <table className={'w-full table-fixed border-separate text-sm lg:w-4/5'}>
       <tbody>
@@ -109,6 +108,41 @@ function CalendarTable({ calendar }) {
 }
 
 export default ({ pageContext: { contentfulPloeg }, data }) => {
+  if (process.env.GATSBY_VV_TEST_DATA === 'on') {
+    // setting some dummy data here because this info will naturally change and break tests, and this is easier than mocking the graphql api
+    data.vv.teamCalendar = [
+      {
+        id: 3,
+        awayTeam: { name: 'S.V. NOORSE' },
+        homeTeam: { name: 'KSK EKEREN DONK' },
+        outcome: { status: 'finished', homeTeamGoals: 2, awayTeamGoals: 2 },
+        startDate: '2020-08-09T16:00',
+      },
+      {
+        id: 2,
+        homeTeam: { name: 'S.V. NOORSE' },
+        awayTeam: { name: 'KSK EKEREN DONK' },
+        outcome: {
+          status: 'planned',
+          homeTeamGoals: null,
+          awayTeamGoals: null,
+        },
+        startDate: '2020-08-08T16:00',
+      },
+      {
+        id: 1,
+        homeTeam: { name: 'S.V. NOORSE' },
+        awayTeam: { name: 'KSK EKEREN DONK' },
+        outcome: {
+          status: 'postponed',
+          homeTeamGoals: null,
+          awayTeamGoals: null,
+        },
+        startDate: '2020-08-08T16:00',
+      },
+    ]
+  }
+
   return (
     <Layout>
       <Container>
