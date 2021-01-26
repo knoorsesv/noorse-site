@@ -14,8 +14,6 @@
   "author": "gvdp",
   "scripts": {
     "build": "gatsby build",
-    "cypress:open": "cypress open --config-file cypress/cypress.json",
-    "cypress:test": "cypress run --config-file cypress/cypress.json",
     "develop": "gatsby develop",
     "release": "standard-version && git push --follow-tags",
     "serve": "gatsby serve"
