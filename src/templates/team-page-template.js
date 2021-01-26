@@ -115,19 +115,19 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
         id: 3,
         awayTeam: { name: 'S.V. NOORSE' },
         homeTeam: { name: 'KSK EKEREN DONK' },
-        outcome: { status: 'finished', homeTeamGoals: 2, awayTeamGoals: 2 },
-        startDate: '2020-08-09T16:00',
-      },
-      {
-        id: 2,
-        homeTeam: { name: 'S.V. NOORSE' },
-        awayTeam: { name: 'KSK EKEREN DONK' },
         outcome: {
           status: 'planned',
           homeTeamGoals: null,
           awayTeamGoals: null,
         },
-        startDate: '2020-08-08T16:00',
+        startDate: '2020-08-10T16:00',
+      },
+      {
+        id: 2,
+        homeTeam: { name: 'S.V. NOORSE' },
+        awayTeam: { name: 'KSK EKEREN DONK' },
+        outcome: { status: 'finished', homeTeamGoals: 2, awayTeamGoals: 1 },
+        startDate: '2020-08-09T16:00',
       },
       {
         id: 1,
