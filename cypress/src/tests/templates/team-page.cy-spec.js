@@ -20,19 +20,18 @@ describe('team page', () => {
   })
 
   it('should show results fetched from kbvb graphql site', () => {
-    //todo: stub backend calls because this will fail is games get added
     cy.contains('#content h2', 'Kalender')
       .parents('section')
       .get('table tr')
       .as('gameRows')
-      .should('have.length', 21)
+      .should('have.length', 2)
 
-    cy.get('@gameRows').first().contains('Exc. Fc Essen')
+    cy.get('@gameRows').first().contains('Ksk Ekeren Donk')
     cy.get('@gameRows').first().contains('Noorse')
-    cy.get('@gameRows').first().contains('4')
-    cy.get('@gameRows').first().contains('3')
-    cy.get('@gameRows').first().contains('20/08')
-    cy.get('@gameRows').first().contains('19:30')
+    cy.get('@gameRows').first().contains('2')
+    cy.get('@gameRows').first().contains('1')
+    cy.get('@gameRows').first().contains('09/08')
+    cy.get('@gameRows').first().contains('16:00')
   })
 
   it('should show team info fetched from contentful', () => {
