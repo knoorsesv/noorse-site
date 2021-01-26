@@ -54,6 +54,7 @@
       "scrollToSelector": "#homepage-content",
       "readyEvent": "backstopjs_ready",
       "postInteractionWait": "500ms",
+      "removeSelectors": ["[title=trooper-video]"],
       "misMatchThreshold": "1",
       "selectors": ["viewport"]
     },
