@@ -52,6 +52,51 @@ const NavSection = ({
   )
 }
 
+export const Navbar = ({
+  pageHasCoverPhoto = false,
+  siteMap,
+  initiallyShown,
+}) => {
+  const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
+  const [sideBarMenuShown, setMenuShown] = useState(initiallyShown)
+
+  const toggleMenuShown = () => {
+    setMenuShown(!sideBarMenuShown)
+  }
+
+  siteMap = siteMap || defaultSiteMap
+
+  return (
+    <React.Fragment>
+      <NavSection
+        topMenuBarShown={topMenuBarShown}
+        pageHasCoverPhoto={pageHasCoverPhoto}
+        setTopMenuBarShown={setTopMenuBarShown}
+      >
+        <nav
+          className={`
+          ${transition}
+          fixed w-full
+          pr-4
+          ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
+          `}
+        >
+          <MenuItemList
+            topMenuBarShown={topMenuBarShown}
+            sideBarMenuShown={sideBarMenuShown}
+            siteMap={siteMap}
+          />
+        </nav>
+        <MenuLogo topMenuBarShown={topMenuBarShown} />
+        <MenuToggle
+          clickBurger={toggleMenuShown}
+          sideBarMenuShown={sideBarMenuShown}
+          topMenuBarShown={topMenuBarShown}
+        />
+      </NavSection>
+    </React.Fragment>
+  )
+}
 const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   return (
     <ul
@@ -59,7 +104,7 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
       className={`
       fixed top-0 
       flex flex-col lg:flex-row lg:justify-end lg:items-center
-      space-y-1 sm:space-y-2 lg:space-y-0
+      space-y-3 lg:space-y-0
       pt-16 pr-4 lg:pr-6
       w-1/2 sm:w-2/5 
       list-none z-50
@@ -83,7 +128,7 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
         >
           <NavLink item={item} />
           {item.subItems && (
-            <SubMenuItems fixedToTop={topMenuBarShown} item={item} />
+            <SubMenuItemList fixedToTop={topMenuBarShown} item={item} />
           )}
         </li>
       ))}
@@ -91,13 +136,13 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   )
 }
 
-const SubMenuItems = ({ item }) => {
+const SubMenuItemList = ({ item }) => {
   return (
     <ul
       id="dropdown"
       className={`
       lg:hidden lg:group-hover:absolute lg:group-hover:flex
-      flex flex-col space-y-2 lg:items-start lg:-ml-1
+      flex flex-col space-y-3 lg:items-start lg:-ml-1
       w-auto lg:p-6 mr-4 lg:bg-green lg:opacity-90
       ${transition}`}
     >
@@ -138,53 +183,6 @@ const NavLink = ({ item }) => {
     )
   }
   return <span className={className}>{item.name}</span>
-}
-
-export const Navbar = ({
-  pageHasCoverPhoto = false,
-  siteMap,
-  initiallyShown,
-}) => {
-  const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
-  const [sideBarMenuShown, setMenuShown] = useState(initiallyShown)
-
-  const toggleMenuShown = () => {
-    setMenuShown(!sideBarMenuShown)
-  }
-
-  siteMap = siteMap || defaultSiteMap
-
-  return (
-    <React.Fragment>
-      <NavSection
-        topMenuBarShown={topMenuBarShown}
-        pageHasCoverPhoto={pageHasCoverPhoto}
-        setTopMenuBarShown={setTopMenuBarShown}
-      >
-        <nav
-          className={`
-          ${transition}
-          fixed w-full
-          pr-4
-          ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
-          `}
-        >
-          <MenuItemList
-            topMenuBarShown={topMenuBarShown}
-            sideBarMenuShown={sideBarMenuShown}
-            siteMap={siteMap}
-          />
-          {/*<MenuBackground topMenuBarShown={topMenuBarShown}/>*/}
-        </nav>
-        <MenuLogo topMenuBarShown={topMenuBarShown} />
-        <MenuToggle
-          clickBurger={toggleMenuShown}
-          sideBarMenuShown={sideBarMenuShown}
-          topMenuBarShown={topMenuBarShown}
-        />
-      </NavSection>
-    </React.Fragment>
-  )
 }
 
 const MenuLogo = ({ topMenuBarShown }) => {
