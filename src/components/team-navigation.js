@@ -13,15 +13,17 @@ export const CategoryTeamNavigation = ({ category, header }) => {
       <div className={'flex flex-wrap justify-around mx-1'}>
         {/*todo: active class name doesnt work on page load so breaks backstop tests: https://github.com/gatsbyjs/gatsby/issues/10586*/}
         {category.ploeg &&
-          category.ploeg.map((ploeg) => (
-            <Link
-              key={ploeg.naam}
-              to={`/team/${ploeg.naam.toLowerCase()}`}
-              className={'text-gray-dark underline mx-3'}
-            >
-              {ploeg.naam}
-            </Link>
-          ))}
+          category.ploeg
+            .sort((ploeg1, ploeg2) => (ploeg1.naam > ploeg2.naam ? '1' : '-1'))
+            .map((ploeg) => (
+              <Link
+                key={ploeg.naam}
+                to={`/team/${ploeg.naam.toLowerCase()}`}
+                className={'text-gray-dark underline mx-3'}
+              >
+                {ploeg.naam}
+              </Link>
+            ))}
       </div>
     </section>
   )

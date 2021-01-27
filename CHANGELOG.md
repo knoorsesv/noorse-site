@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.117 (2021-01-27)
+
+
+### Features
+
+* add afgevaardigde info ([aeadf80](https://github.com/gvdp/noorse-site/commit/aeadf801bd8058a1f7927c3210de82680b192dd8))
+
 ### 0.1.116 (2021-01-26)
 
 ### 0.1.115 (2021-01-26)
