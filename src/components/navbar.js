@@ -138,7 +138,7 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
 
 const SubMenuItemList = ({ item }) => {
   return (
-    <li
+    <ul
       id="dropdown"
       className={`
       lg:hidden lg:group-hover:absolute lg:group-hover:flex
@@ -147,9 +147,13 @@ const SubMenuItemList = ({ item }) => {
       ${transition}`}
     >
       {item.subItems.map((subItem) => {
-        return <NavLink item={subItem} key={subItem.name} />
+        return (
+          <li key={subItem.name}>
+            <NavLink item={subItem} />
+          </li>
+        )
       })}
-    </li>
+    </ul>
   )
 }
 
