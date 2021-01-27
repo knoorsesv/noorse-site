@@ -153,9 +153,23 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
             <div className={'flex flex-col items-center'}>
               {contentfulPloeg.coach && (
                 <section className={'flex flex-col items-center'}>
-                  <SubTitle>Coach</SubTitle>
+                  <SubTitle>
+                    Coach{contentfulPloeg.coach.length > 1 ? 'es' : ''}
+                  </SubTitle>
                   {contentfulPloeg.coach.map((coach) => (
                     <span key={coach}>{coach}</span>
+                  ))}
+                </section>
+              )}
+              <br className={'mb-4'} />
+              {contentfulPloeg.afgevaardigde && (
+                <section className={'flex flex-col items-center'}>
+                  <SubTitle>
+                    Afgevaardigde
+                    {contentfulPloeg.afgevaardigde.length > 1 ? 'n' : ''}
+                  </SubTitle>
+                  {contentfulPloeg.afgevaardigde.map((afgevaardigde) => (
+                    <span key={afgevaardigde}>{afgevaardigde}</span>
                   ))}
                 </section>
               )}
