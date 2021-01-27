@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <div id="page-wrapper" className={'flex flex-col'}>
       <DisclaimerPopup />
 
-      <Navbar showCoverPhoto={false} />
+      <Navbar />
       <div id="content" className={'min-h-3/4 relative flex justify-center'}>
         {children}
       </div>
