@@ -141,6 +141,7 @@ const SubMenuItemList = ({ item }) => {
     <ul
       id="dropdown"
       className={`
+      list-none
       lg:hidden lg:group-hover:absolute lg:group-hover:flex
       flex flex-col space-y-3 lg:items-start lg:-ml-1
       w-auto lg:p-6 mr-4 lg:bg-green lg:opacity-90
