@@ -35,7 +35,7 @@ describe('team page', () => {
   })
 
   it('should show team info fetched from contentful', () => {
-    cy.contains('h2', 'Coach')
+    cy.contains('h2', 'Coaches')
       .parents('section')
       .within(() => {
         cy.contains('Davy Vercauteren')
@@ -46,6 +46,12 @@ describe('team page', () => {
       .within(() => {
         cy.contains('Dinsdag 20u')
         cy.contains('Donderdag 20u')
+      })
+
+    cy.contains('h2', 'Afgevaardigde')
+      .parents('section')
+      .within(() => {
+        cy.contains('Pascal')
       })
 
     cy.contains('h2', 'Reeks')
