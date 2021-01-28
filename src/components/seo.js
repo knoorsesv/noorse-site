@@ -35,11 +35,8 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  // console.log(logo)
-
   const logoSrc = logo.childImageSharp.resize.src
-  // console.log(window.location.origin + logoSrc)
-  // console.log(window.location.origin + logo.publicURL)
+
   return (
     <Helmet
       htmlAttributes={{
