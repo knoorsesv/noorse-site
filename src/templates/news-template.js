@@ -3,6 +3,8 @@ import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 import { ExternalLink } from '../components/text'
 import Img from 'gatsby-image'
+import { Helmet } from 'react-helmet'
+import { createSnippetFromNewsPost } from '../components/news-card'
 
 export default ({ pageContext: { newsNode } }) => {
   const defaultAttachments = getDefaultAttachments(newsNode.attachment)
@@ -16,6 +18,19 @@ export default ({ pageContext: { newsNode } }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>K. Noorse S.V. | {newsNode.title}</title>
+        <meta property="og:title" content={`${newsNode.title}`} />
+        <meta
+          property="og:description"
+          content={`${createSnippetFromNewsPost(newsNode)}`}
+        />
+        <meta
+          property="og:image"
+          content={`https:${newsNode.image.fluid.src}`}
+        />
+        {/* todo: fallback to noorse logo */}
+      </Helmet>
       <Container>
         <Title>{newsNode.title}</Title>
         {newsNode.showImageOnPage && (
