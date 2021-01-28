@@ -32,7 +32,6 @@ export default ({ pageContext: { newsNode } }) => {
             content={`https:${newsNode.image.fluid.src}`}
           />
         )}
-        {/* todo: fallback to noorse logo */}
       </Helmet>
       <Container>
         <Title>{newsNode.title}</Title>
