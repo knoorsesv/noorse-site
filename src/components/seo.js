@@ -12,7 +12,7 @@ import favicon from '../images/Logo_highres.png'
 import { graphql, useStaticQuery } from 'gatsby'
 
 function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
+  const { site, logo } = useStaticQuery(
     graphql`
       query {
         site {
@@ -22,12 +22,24 @@ function SEO({ description, lang, meta, keywords, title }) {
             author
           }
         }
+        logo: file(name: { eq: "Logo_highres" }) {
+          publicURL
+          childImageSharp {
+            resize(height: 600, width: 1200, fit: CONTAIN) {
+              src
+            }
+          }
+        }
       }
     `
   )
 
   const metaDescription = description || site.siteMetadata.description
+  // console.log(logo)
 
+  const logoSrc = logo.childImageSharp.resize.src
+  // console.log(window.location.origin + logoSrc)
+  // console.log(window.location.origin + logo.publicURL)
   return (
     <Helmet
       htmlAttributes={{
@@ -43,6 +55,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:image`,
+          content: logoSrc,
         },
         {
           property: `og:description`,
@@ -97,6 +113,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: ``,
+  title: 'K. Noorse S.V.',
 }
 
 SEO.propTypes = {
@@ -104,7 +121,6 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO
