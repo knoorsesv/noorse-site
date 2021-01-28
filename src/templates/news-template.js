@@ -25,10 +25,13 @@ export default ({ pageContext: { newsNode } }) => {
           property="og:description"
           content={`${createSnippetFromNewsPost(newsNode)}`}
         />
-        <meta
-          property="og:image"
-          content={`https:${newsNode.image.fluid.src}`}
-        />
+        $
+        {newsNode.image && (
+          <meta
+            property="og:image"
+            content={`https:${newsNode.image.fluid.src}`}
+          />
+        )}
         {/* todo: fallback to noorse logo */}
       </Helmet>
       <Container>
