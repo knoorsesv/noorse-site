@@ -3,10 +3,13 @@ import React from 'react'
 import { Footer } from './footer'
 import { Navbar } from './navbar'
 import { DisclaimerPopup } from './disclaimer'
+import SEO from './seo'
 
 const Layout = ({ children }) => {
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
+      <SEO keywords={[`noorse`]} />
+
       <DisclaimerPopup />
 
       <Navbar />
