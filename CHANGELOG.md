@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.120 (2021-01-28)
+
+
+### Features
+
+* fb-tags: remove comment code ([cdca0b9](https://github.com/gvdp/noorse-site/commit/cdca0b9d2018f2ac67127595787367a628c1e40e))
+
 ### 0.1.119 (2021-01-28)
 
 ### 0.1.118 (2021-01-27)
