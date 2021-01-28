@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.119 (2021-01-28)
+
+
+### Features
+
+* add tags to better share on fb ([b079239](https://github.com/gvdp/noorse-site/commit/b0792396048d362a4fa63ba62044bdf5ccbd5aad))
+
 ### 0.1.118 (2021-01-27)
 
 ### 0.1.117 (2021-01-27)
