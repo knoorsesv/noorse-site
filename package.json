@@ -14,6 +14,7 @@
   "author": "gvdp",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "netlify deploy --dir public",
     "develop": "gatsby develop",
     "release": "standard-version && git push --follow-tags",
     "serve": "gatsby serve"
