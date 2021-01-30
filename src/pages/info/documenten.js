@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout, { Container } from '../components/layout'
-import { Title } from '../components/titles'
+import Layout, { Container } from '../../components/layout'
+import { Title } from '../../components/titles'
 import { graphql, useStaticQuery } from 'gatsby'
-import { DocumentLink } from '../components/documents'
+import { DocumentLink } from '../../components/attachment-list'
 
 const DocumentenPage = () => {
   const documents = useStaticQuery(graphql`
@@ -11,8 +11,9 @@ const DocumentenPage = () => {
         nodes {
           naam
           document {
-            localFile {
-              publicURL
+            title
+            file {
+              url
             }
           }
         }
@@ -24,7 +25,13 @@ const DocumentenPage = () => {
     <Layout>
       <Container>
         <Title>Documenten</Title>
-        <div>{documents.allContentfulDocument.nodes.map(DocumentLink)}</div>
+        <ul>
+          {documents.allContentfulDocument.nodes.map((node) => (
+            <li key={node.naam}>
+              {node.naam} - {DocumentLink(node.document)}
+            </li>
+          ))}
+        </ul>
       </Container>
     </Layout>
   )

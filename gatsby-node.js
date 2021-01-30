@@ -85,12 +85,41 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  const infoPages = await graphql(`
+    query {
+      allContentfulPage {
+        nodes {
+          title
+          content {
+            json
+          }
+          attachment {
+            description
+            title
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+  `)
+
   news.data.allContentfulNews.nodes.forEach((newsNode) => {
     console.log('creating news page for ', newsNode.title)
     createPage({
       path: `/nieuws/${newsNode.title}`,
       component: require.resolve(`./src/templates/news-template.js`),
       context: { newsNode },
+    })
+  })
+
+  infoPages.data.allContentfulPage.nodes.forEach((infoPage) => {
+    console.log('creating info page for ', infoPage.title)
+    createPage({
+      path: `/info/${infoPage.title}`,
+      component: require.resolve(`./src/templates/info-page-template.js`),
+      context: { infoPage },
     })
   })
 

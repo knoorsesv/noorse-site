@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout, { Container } from '../components/layout'
-import { SubTitle, Title } from '../components/titles'
-import { List, SpacedInfo, TextBlock } from '../components/text'
+import Layout, { Container } from '../../components/layout'
+import { SubTitle, Title } from '../../components/titles'
+import { List, SpacedInfo, TextBlock } from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const SponsoringPage = () => {

@@ -55,7 +55,8 @@ const WebshopSection = ({ className }) => {
 
 const CovidSection = ({ className }) => {
   const goToCovidPage = () => {
-    navigate(`/covid`)
+    // this is flaky because page title comes from contentful, but hey it'll all be over soon right?
+    navigate(`/info/Covid Regels`)
   }
   return (
     <Section className={`${className}`}>
