@@ -1,11 +1,12 @@
 it('should have a list with documents which open on click', () => {
-  cy.visit('/documenten')
+  cy.visit('/info/documenten')
   cy.contains('h1', 'Documenten')
     .parentsUntil('#content-wrapper')
     .within(() => {
+      cy.contains('li', 'Test Document 1')
       cy.get('a')
-        .should('contain', 'Test Document 1')
+        .should('contain', 'structuur')
         .and('have.attr', 'href')
-        .and('match', /static.*Structuur-2018-2019\.pdf/)
+        .and('match', /assets.*Structuur-2018-2019\.pdf/)
     })
 })

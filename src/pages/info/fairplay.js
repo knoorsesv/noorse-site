@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout, { Container } from '../components/layout'
-import { Title, SubTitle } from '../components/titles'
-import { List, TextBlock } from '../components/text'
+import Layout, { Container } from '../../components/layout'
+import { Title, SubTitle } from '../../components/titles'
+import { List, TextBlock } from '../../components/text'
 
 const FairPlayPage = () => (
   <Layout>

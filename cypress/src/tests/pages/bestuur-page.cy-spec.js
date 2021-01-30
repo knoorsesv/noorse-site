@@ -1,5 +1,5 @@
 it('should have a list with documents which open on click', () => {
-  cy.visit('/bestuur')
+  cy.visit('/info/bestuur')
   cy.contains('h1', 'Bestuur')
     .parentsUntil('#content-wrapper')
     .within(() => {

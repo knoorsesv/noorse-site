@@ -16,14 +16,28 @@ describe('Navigation', function () {
       .and('equal', 'https://www.qlub.com/qlub?club=k00332')
   })
 
-  it('should be possible to go to info pages', () => {
+  it('should be possible to go to static info pages', () => {
     cy.contains('Info').get('#dropdown').invoke('show')
-    //todo: could this be done automatically to check if all generated pages have a link?
-    cy.contains('Bestuur').should('have.attr', 'href', '/bestuur')
-    cy.contains('Fair Play').should('have.attr', 'href', '/fairplay')
-    cy.contains('Lidmaatschap').should('have.attr', 'href', '/lidmaatschap')
-    cy.contains('Sponsoring').should('have.attr', 'href', '/sponsoring')
-    cy.contains('Documenten').should('have.attr', 'href', '/documenten')
+    cy.contains('bestuur').should('have.attr', 'href', '/info/bestuur/')
+
+    cy.contains('fairplay').should('have.attr', 'href', '/info/fairplay/')
+    cy.contains('lidmaatschap').should(
+      'have.attr',
+      'href',
+      '/info/lidmaatschap/'
+    )
+    cy.contains('sponsoring').should('have.attr', 'href', '/info/sponsoring/')
+    cy.contains('documenten').should('have.attr', 'href', '/info/documenten/')
+  })
+
+  it('should be possible to go to generated info page', () => {
+    cy.contains('Info').get('#dropdown').invoke('show')
+
+    cy.contains('Covid Regels').should(
+      'have.attr',
+      'href',
+      '/info/Covid Regels'
+    )
   })
 
   it('should be possible to go to all category pages', () => {

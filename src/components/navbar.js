@@ -1,15 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Logo } from './images'
 import { ExternalLink } from './text'
-import { siteMap as defaultSiteMap } from '../env/constants'
+import { siteMap as defaultSiteMap, webshopLink } from '../env/constants'
 import { CoverImage } from './cover-image'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
+
+const pagesQuery = graphql`
+  query {
+    allSitePage {
+      nodes {
+        path
+      }
+    }
+  }
+`
 
 const NavSection = ({
   pageHasCoverPhoto,
@@ -64,7 +74,24 @@ export const Navbar = ({
     setMenuShown(!sideBarMenuShown)
   }
 
+  const allPages = useStaticQuery(pagesQuery)
+
   siteMap = siteMap || defaultSiteMap
+
+  // it should be possible to do this cleaner + query could happen outside of navbar component to keep it cleaner / dumber
+  const infoPageSiteMaps = allPages.allSitePage.nodes
+    .filter((node) => node.path.includes('info'))
+    .map((node) => ({
+      name: node.path.replace('/info/', '').replace('/', ''),
+      link: node.path,
+    }))
+  siteMap.items.find((item) => item.name === 'Info').subItems = [
+    ...infoPageSiteMaps,
+    {
+      name: 'Webshop',
+      extLink: webshopLink,
+    },
+  ].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
 
   return (
     <React.Fragment>
@@ -159,7 +186,7 @@ const SubMenuItemList = ({ item }) => {
 }
 
 const NavLink = ({ item }) => {
-  const className = 'text-white text-lg'
+  const className = 'text-white text-lg capitalize'
 
   if (item.link) {
     return (
