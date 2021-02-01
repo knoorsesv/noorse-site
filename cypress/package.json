@@ -7,7 +7,7 @@
     "cypress:test": "cypress run"
   },
   "dependencies": {
-    "cypress": "^6.3.0",
+    "cypress": "^6.4.0",
     "cypress-pipe": "^2.0.0"
   }
 }
