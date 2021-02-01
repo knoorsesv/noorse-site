@@ -62,13 +62,9 @@ const NavSection = ({
   )
 }
 
-export const Navbar = ({
-  pageHasCoverPhoto = false,
-  siteMap,
-  initiallyShown,
-}) => {
+export const Navbar = ({ pageHasCoverPhoto = false, siteMap }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
-  const [sideBarMenuShown, setMenuShown] = useState(initiallyShown)
+  const [sideBarMenuShown, setMenuShown] = useState(false)
 
   const toggleMenuShown = () => {
     setMenuShown(!sideBarMenuShown)

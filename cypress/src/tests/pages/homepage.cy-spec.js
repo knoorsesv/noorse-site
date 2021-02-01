@@ -1,4 +1,9 @@
 describe('Home Page', function () {
+  //
+  // before(() => {
+  //   cy.viewport(1800, 1800)
+  // })
+
   beforeEach(() => {
     cy.visit('/')
     //  todo: intercept background image call so it doesn't need to load every time
@@ -34,31 +39,23 @@ describe('Home Page', function () {
         cy.contains('Nieuwe spelers 2020-2021')
         cy.contains('Anita Brand nieuwe T1 Noorse Dames')
         cy.contains('Samenwerking Corpus Fit')
-        //  ...
       })
   })
 
   it('should go to news item when clicking card', () => {
-    cy.contains('Nieuwe spelers 2020-2021')
+    cy.contains('Noorse gaat door met trainersduo')
       .parents('article')
-      .as('newsCard')
-      .should('have.attr', 'role', 'link')
-    const click = ($el) => $el.click()
-    //todo: do this with pipe instead of wait https://www.cypress.io/blog/2019/01/22/when-can-the-test-click/#header
-    cy.get('@newsCard')
-      .wait(500)
-      .click()
-      .then(() => {
-        cy.url().should('contain', '/nieuws/Nieuwe%20spelers%202020-2021')
-      })
+      .as('card')
 
-    // .should(() => {
-    //   expect(cy.url()).to.include('/nieuws/Nieuwe%20spelers%202020-2021')
-    // })
-  })
+    //todo: get rid of wait
+    cy.wait(500)
 
-  it('should go to news item when selecting card and pressing key down', () => {
-    // todo: should this be tested here or is the react a11y linting enough?
+    cy.get('@card').click()
+
+    cy.url().should(
+      'contain',
+      '/nieuws/Noorse%20gaat%20door%20met%20trainersduo'
+    )
   })
 
   it('should list events', () => {
@@ -77,10 +74,8 @@ describe('Home Page', function () {
     cy.get('footer [title="List of Sponsors"]')
       .last()
       .scrollIntoView()
-      // .should('be.visible')
       .within(() => {
         cy.get('.lazyload-placeholder').should('have.length', 5)
-        // .scrollIntoView()scrollIntoViewß
       })
   })
 })

@@ -1,8 +1,9 @@
 {
-  "baseUrl": "http://localhost:8000/",
+  "baseUrl": "http://localhost:9000/",
   "projectId": "iw2qbq",
   "integrationFolder": "src/tests",
   "testFiles": "**/*spec.js",
+  "supportFile": "./src/support/index.js",
   "viewportHeight": 800,
-  "viewportWidth": 1280
+  "viewportWidth": 1500
 }
