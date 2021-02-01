@@ -26,6 +26,7 @@ export const Logo = ({ className }) => {
         alt={'Noorse Logo'}
         fadeIn={process.env.PROD === 'true'}
         imgStyle={{ objectFit: 'contain' }}
+        style={{ height: '0px' }} // set initial value like this so the logo doesn't flash fullheight over the page before css is loaded
         className={`h-full w-full max-w-full max-h-full`}
       />
     </Link>

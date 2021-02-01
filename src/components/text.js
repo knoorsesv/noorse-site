@@ -37,7 +37,7 @@ export const ExternalLink = ({
         <FontAwesomeIcon
           icon={faExternalLinkAlt}
           size={'sm'}
-          className={'pl-1'}
+          className={'pl-1 max-w-sm'}
         ></FontAwesomeIcon>
       )}
     </a>
