@@ -1,6 +1,7 @@
 describe('Home Page', function () {
   beforeEach(() => {
     cy.visit('/')
+    //  todo: intercept background image call so it doesn't need to load every time
   })
 
   it('should have a webshop section containing link', () => {
@@ -66,6 +67,9 @@ describe('Home Page', function () {
       .within(() => {
         cy.contains('01/05/21')
         cy.contains('6 Tegen 6')
+          .get('a')
+          .should('have.attr', 'href')
+          .and('match', /nieuws\/Beëindiging seizoen 2019-2020/)
       })
   })
 

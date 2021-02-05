@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { isFuture, parse } from 'date-fns'
 import { Section } from './layout/section'
 import { SectionTitle } from './titles'
@@ -12,6 +12,9 @@ export const EventsSection = ({ className }) => {
         nodes {
           naam
           datum(formatString: "DD/MM/YY")
+          aankondiging {
+            title
+          }
         }
       }
     }
@@ -37,25 +40,29 @@ export const EventsSection = ({ className }) => {
 }
 
 export const EventList = ({ events }) => {
-  return (
-    <div className={'flex flex-col'}>
-      {events.length ? (
-        events.map((event) => (
-          <div
-            key={event.naam}
-            className={
-              'flex flex-row lg:flex-col xl:flex-row xl:px-4 justify-between'
-            }
-          >
-            <span className={'lg:mr-2 lg:underline lg:pb-2'}>
-              {event.datum}
-            </span>
-            <span className={'text-end'}> {event.naam}</span>
-          </div>
-        ))
-      ) : (
-        <span className={'text-center'}>Geen evenementen gepland</span>
-      )}
-    </div>
+  return events.length ? (
+    <table>
+      <tbody>
+        {events.map((event) => (
+          <tr key={event.naam}>
+            <td className={'border-0'}>{event.datum}</td>
+            <td className={'border-0'}>
+              {event.aankondiging ? (
+                <Link
+                  className={'underline text-black'}
+                  to={`/nieuws/${event.aankondiging.title}`}
+                >
+                  {event.naam}
+                </Link>
+              ) : (
+                <span className={''}> {event.naam}</span>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  ) : (
+    <span className={'text-center'}>Geen evenementen gepland</span>
   )
 }
