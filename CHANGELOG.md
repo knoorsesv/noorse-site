@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.123 (2021-02-05)
+
+
+### Features
+
+* link event to news item of announcement ([a8bcff5](https://github.com/gvdp/noorse-site/commit/a8bcff55aaca5fd648a21d50005da7db08009c38))
+
 ### 0.1.122 (2021-02-01)
 
 
