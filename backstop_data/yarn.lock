@@ -86,7 +86,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-backstopjs@^5.1.0:
+backstopjs@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-5.1.0.tgz#db14ef6d0c895b80f94ffb567c2947859239db9c"
   integrity sha512-3xM2q54gBqq97xsrxvixVkl8W7LJ4KKRZzUHZeshnRPTpbBv643PV61OQ+OhGrFS2WR9TXsQHTgtHsLufDOuDA==
