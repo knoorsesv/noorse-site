@@ -1,7 +1,12 @@
 import React from 'react'
 import Layout, { Container } from '../../components/layout'
 import { SubTitle, Title } from '../../components/titles'
-import { ExternalLink, SpacedInfo, TextBlock } from '../../components/text'
+import {
+  EmailLink,
+  ExternalLink,
+  SpacedInfo,
+  TextBlock,
+} from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const LidMaatschapPage = () => {
@@ -88,12 +93,13 @@ const LidMaatschapPage = () => {
           meisjesploegen, kom dan gerust eens een kijkje nemen naar onze
           trainingen op woensdagnamiddag en -avond. Voor meer inlichtingen kan u
           terecht bij de mensen van ons jeugdbestuur, die op woensdagnamiddag
-          steeds aanwezig zijn. Of mail gewoon even naar jeugd@noorse.be voor de
-          jongens en voor de meisjes naar stefan.de.beukelaer@telenet.be. Onze
-          senioren trainen op dinsdag- en donderdagavond om 20u00. Voor verdere
-          info kan u terecht bij de seniorentrainer of bij iemand van ons
-          seniorenbestuur. Of mail gewoon even naar
-          seniorenbestuurnoorse@gmail.com.
+          steeds aanwezig zijn. Of mail gewoon even naar{' '}
+          <EmailLink address="jeugd@noorse.be" /> voor de jongens en voor de
+          meisjes naar <EmailLink address="stefan.de.beukelaer@telenet.be" />.
+          Onze senioren trainen op dinsdag- en donderdagavond om 20u00. Voor
+          verdere info kan u terecht bij de seniorentrainer of bij iemand van
+          ons seniorenbestuur. Of mail gewoon even naar{' '}
+          <EmailLink address="seniorenbestuurnoorse@gmail.com" />.
           <br />
           Indien u lid wil worden van de club, vragen we u eerst contact op te
           nemen met de verantwoordelijke van de desbetreffende categorie, via
@@ -101,12 +107,9 @@ const LidMaatschapPage = () => {
           lidgeld kan je dan langskomen op Noorse om de inschrijving af te
           ronden.
           <br />
-          Aan geïnteresseerden voor jeugd jongens vragen we volgend{' '}
-          <ExternalLink url="https://forms.gle/4UufKtgb7tN7rxAd9">
-            {' '}
-            formulier
-          </ExternalLink>{' '}
-          in te vullen.
+          Geïnteresseerden voor jeugd jongens kunnen mailen naar{' '}
+          <EmailLink address="jeugd@noorse.be" /> om meer informatie te
+          verkrijgen.
           <br />
           Voor nieuwe leden bedraagt het lidgeld 150€.
           <br />
@@ -132,10 +135,14 @@ const LidMaatschapPage = () => {
         <TextBlock>
           <SpacedInfo
             items={[
-              { label: 'Algemeen', value: 'info@noorse.be' },
-              { label: 'Jeugd', value: 'jeugd@noorse.be' },
-              { label: 'Senioren', value: 'senioren@noorse.be' },
-              { label: 'Meisjes & Dames', value: 'meisjesendames@noorse.be' },
+              { label: 'Algemeen', value: 'info@noorse.be', email: true },
+              { label: 'Jeugd', value: 'jeugd@noorse.be', email: true },
+              { label: 'Senioren', value: 'senioren@noorse.be', email: true },
+              {
+                label: 'Meisjes & Dames',
+                value: 'meisjesendames@noorse.be',
+                email: true,
+              },
             ]}
           />
         </TextBlock>

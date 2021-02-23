@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card, SubHeader } from '../../components/cards'
 import { Title } from '../../components/titles'
+import { EmailLink } from '../../components/text'
 
 const query = graphql`
   query {
@@ -46,8 +47,7 @@ const BestuursCard = ({ bestuursLid }) => {
         {bestuursLid.node.email && (
           <div className={'font-extralight truncate'}>
             <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
-            {/*todo: make this mailto: link*/}
-            {bestuursLid.node.email}
+            <EmailLink address={bestuursLid.node.email} />
           </div>
         )}
         {bestuursLid.node.phone && (

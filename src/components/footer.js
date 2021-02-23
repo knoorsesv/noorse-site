@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { ExternalLink } from './text'
+import { EmailLink, ExternalLink } from './text'
 import Img from 'gatsby-image'
 import LazyLoad from 'react-lazyload'
 import { Title } from './titles'
@@ -115,14 +115,7 @@ export const CopyRightFooter = () => {
     >
       <div className={'small text-center px-4'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
-        <a
-          href={'mailto:website@noorse.be'}
-          target={'_blank'}
-          rel={'noreferrer'}
-          className={'underline text-black'}
-        >
-          website@noorse.be
-        </a>
+        <EmailLink address={'website@noorse.be'} />
       </div>
       <div className={'small'}>
         <Version /> © {new Date().getFullYear()}, K. Noorse S.V.
