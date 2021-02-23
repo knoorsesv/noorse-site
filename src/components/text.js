@@ -46,7 +46,11 @@ export const ExternalLink = ({
 
 export const EmailLink = ({ address }) => {
   return (
-    <ExternalLink url={`mailto:${address}`} icon={false}>
+    <ExternalLink
+      url={`mailto:${address}`}
+      icon={false}
+      textColor={'text-black'}
+    >
       {address}
     </ExternalLink>
   )
