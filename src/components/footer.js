@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import LazyLoad from 'react-lazyload'
 import { Title } from './titles'
 import { Logo } from './images'
-import { BetaBanner } from './disclaimer'
 import { ContactInfo } from './contact'
 import { Version } from './version'
 
@@ -114,7 +113,6 @@ export const CopyRightFooter = () => {
         'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
       }
     >
-      <BetaBanner fixed={false} />
       <div className={'small text-center px-4'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
         <a

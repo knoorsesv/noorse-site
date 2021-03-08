@@ -6,7 +6,6 @@ import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { DisclaimerPopup } from '../components/disclaimer'
 import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
 import { navigate } from 'gatsby-link'
@@ -88,8 +87,6 @@ const NieuwsSection = ({ className }) => {
 export default () => {
   return (
     <div>
-      <DisclaimerPopup />
-
       <Navbar pageHasCoverPhoto={true} />
 
       <SEO title="Home" keywords={[`noorse`]} />
