@@ -37,11 +37,19 @@ const ContactPage = () => (
           <Title>Contact</Title>
           <SpacedInfo
             items={[
-              { label: 'Algemeen', value: 'secretariaat@noorse.be' },
-              { label: 'Jeugd', value: 'jeugd@noorse.be' },
-              { label: 'Senioren', value: 'senioren@noorse.be' },
-              { label: 'Dames / Meisjes', value: 'meisjesendames@noorse.be' },
-              { label: 'G-voetbal', value: 'gvoetbal@noorse.be' },
+              {
+                label: 'Algemeen',
+                value: 'secretariaat@noorse.be',
+                email: true,
+              },
+              { label: 'Jeugd', value: 'jeugd@noorse.be', email: true },
+              { label: 'Senioren', value: 'senioren@noorse.be', email: true },
+              {
+                label: 'Dames / Meisjes',
+                value: 'meisjesendames@noorse.be',
+                email: true,
+              },
+              { label: 'G-voetbal', value: 'gvoetbal@noorse.be', email: true },
             ]}
           />
         </Block>

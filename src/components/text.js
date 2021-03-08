@@ -44,6 +44,18 @@ export const ExternalLink = ({
   )
 }
 
+export const EmailLink = ({ address }) => {
+  return (
+    <ExternalLink
+      url={`mailto:${address}`}
+      icon={false}
+      textColor={'text-black'}
+    >
+      {address}
+    </ExternalLink>
+  )
+}
+
 export const SpacedInfo = ({ items }) => {
   return items.map((item) => {
     return (
@@ -52,7 +64,9 @@ export const SpacedInfo = ({ items }) => {
         key={item.label}
       >
         <span className={'text-left font-bold'}>{item.label}</span>
-        <span className={'text-right overflow-hidden'}>{item.value}</span>
+        <span className={'text-right overflow-hidden'}>
+          {item.email ? <EmailLink address={item.value} /> : item.value}
+        </span>
       </div>
     )
   })

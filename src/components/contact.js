@@ -1,4 +1,4 @@
-import { ExternalLink } from './text'
+import { EmailLink, ExternalLink } from './text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
@@ -10,9 +10,7 @@ export const ContactInfo = () => {
       <span>2950 Kapellen</span>
       <span>03/664.44.11</span>
       <span>
-        <ExternalLink url="mailto:info@noorse.be" icon={false}>
-          info@noorse.be
-        </ExternalLink>
+        <EmailLink address="info@noorse.be" />
       </span>
       <div className={'flex flex-row items-center mt-6 space-x-3'}>
         <ExternalLink
