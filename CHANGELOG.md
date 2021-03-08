@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.132 (2021-03-08)
+
+
+### Features
+
+* change lidgeld page content and make all email links the same ([#200](https://github.com/gvdp/noorse-site/issues/200)) ([1f32a7a](https://github.com/gvdp/noorse-site/commit/1f32a7a3c3dce06f7c286c7ec8d7013fa2cf8c94))
+
 ### 0.1.131 (2021-03-08)
 
 ### 0.1.130 (2021-03-08)
