@@ -30,7 +30,7 @@ export const Card = ({
             />
           )}
           <h2
-            className={`text-center p-3 m-0 uppercase ${
+            className={`text-center p-3 m-0 uppercase break-normal ${
               headerHeight ? headerHeight : 'min-h-64p'
             }`}
           >
