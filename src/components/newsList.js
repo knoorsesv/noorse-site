@@ -27,7 +27,6 @@ export const NewsList = (breakpointColumnsObj) => {
     }
   `)
 
-  //todo: have a max items property (maybe responsive, might show more on desktop)
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}

@@ -3,6 +3,7 @@ import Layout, { Container } from '../../components/layout'
 import { Title } from '../../components/titles'
 import { graphql, useStaticQuery } from 'gatsby'
 import { DocumentLink } from '../../components/attachment-list'
+import { Helmet } from 'react-helmet'
 
 const DocumentenPage = () => {
   const documents = useStaticQuery(graphql`
@@ -23,6 +24,9 @@ const DocumentenPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Documenten</title>
+      </Helmet>
       <Container>
         <Title>Documenten</Title>
         <ul>

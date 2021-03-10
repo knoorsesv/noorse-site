@@ -1,6 +1,6 @@
 import { EmailLink, ExternalLink } from './text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 
 export const ContactInfo = () => {
@@ -20,6 +20,14 @@ export const ContactInfo = () => {
           icon={false}
         >
           <FontAwesomeIcon size="2x" icon={faFacebook} />
+        </ExternalLink>
+        <ExternalLink
+          url="https://github.com/knoorsesv/noorse-site/"
+          altText={'Gitubh'}
+          styled={false}
+          icon={false}
+        >
+          <FontAwesomeIcon size="2x" icon={faGithub} />
         </ExternalLink>
       </div>
     </div>

@@ -8,6 +8,7 @@ import {
   TextBlock,
 } from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 const LidMaatschapPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,9 @@ const LidMaatschapPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Lid Worden</title>
+      </Helmet>
       <Container>
         <Title>Lid Worden</Title>
         <SubTitle>Bestaande leden</SubTitle>

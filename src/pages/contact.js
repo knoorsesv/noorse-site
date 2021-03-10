@@ -2,6 +2,7 @@ import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 import { SpacedInfo } from '../components/text'
+import { Helmet } from 'react-helmet'
 
 const Block = ({ children }) => {
   return (
@@ -17,6 +18,9 @@ const Block = ({ children }) => {
 
 const ContactPage = () => (
   <Layout>
+    <Helmet>
+      <title>Contact</title>
+    </Helmet>
     <Container>
       <div
         className={

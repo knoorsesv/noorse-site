@@ -88,7 +88,6 @@ export const ContactAndSponsorFooter = () => {
          bg-gray-light
          w-screen py-4 md:w-2/3 lg:w-1/2`}
         >
-          {/*todo: do styling correctly, impossible to test with 2 identical components being hidden on different screens*/}
           <SponsorList />
         </div>
         <div

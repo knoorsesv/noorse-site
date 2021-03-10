@@ -21,7 +21,6 @@ export const ExternalLink = ({
   textColor = '',
   className,
 }) => {
-  //todo: colors when styled
   return (
     <a
       className={`${styled && 'underline'} ${

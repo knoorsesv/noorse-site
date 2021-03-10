@@ -3,6 +3,7 @@ import Layout, { Container } from '../../components/layout'
 import { SubTitle, Title } from '../../components/titles'
 import { List, SpacedInfo, TextBlock } from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 const SponsoringPage = () => {
   const data = useStaticQuery(graphql`
@@ -41,6 +42,9 @@ const SponsoringPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Sponsoring</title>
+      </Helmet>
       <Container>
         <Title>Sponsoring</Title>
         <SubTitle> Waarom Sponsoren?</SubTitle>
