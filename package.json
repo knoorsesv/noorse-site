@@ -4,11 +4,11 @@
   "private": true,
   "description": "Website voor voetbalploeg K. Noorse S.V.",
   "bugs": {
-    "url": "https://github.com/gvdp/noorse-site/issues"
+    "url": "https://github.com/knoorsesv/noorse-site/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gvdp/noorse-site"
+    "url": "https://github.com/knoorsesv/noorse-site"
   },
   "license": "MIT",
   "author": "gvdp",

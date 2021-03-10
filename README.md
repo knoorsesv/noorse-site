@@ -10,20 +10,14 @@
   <a href="https://github.com/gvdp/noorse-site/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/gvdp/website-noorse" />
   </a>
-  <a href="https://twitter.com/vdpglenn" target="_blank">
-    <img alt="Twitter: vdpglenn" src="https://img.shields.io/twitter/follow/vdpglenn.svg?style=social" />
-  </a>
 </p>
 
-![Noorse site CI](https://github.com/gvdp/noorse-site/workflows/Noorse%20site%20CI/badge.svg)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=gvdp/noorse-site&identifier=188905232)](https://dependabot.com)
+![Build Status](https://github.com/knoorsesv/noorse-site/workflows/Noorse%20site%20CI/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cfb311e2-904f-4acb-9937-30e50d59f3ca/deploy-status)](https://app.netlify.com/sites/modest-golick-edc673/deploys)
 
 > Website voor voetbalploeg K. Noorse S.V.
 
 ### 🏠 [Homepage](https://www.noorse.be)
-
-### ✨ [Demo](https://modest-golick-edc673.netlify.app/)
 
 ## Install
 
@@ -41,9 +35,7 @@ yarn develop
 
 👤 **gvdp**
 
-- Twitter: [@vdpglenn](https://twitter.com/vdpglenn)
 - Github: [@gvdp](https://github.com/gvdp)
-- LinkedIn: [glenn-van-de-putte](https://linkedin.com/in/glenn-van-de-putte-7ab29075/)
 
 ## 🤝 Contributing
 
