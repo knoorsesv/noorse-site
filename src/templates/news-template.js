@@ -21,7 +21,7 @@ export default ({ pageContext: { newsNode } }) => {
   return (
     <Layout>
       <Helmet>
-        <title>K. Noorse S.V. | {newsNode.title}</title>
+        <title>{newsNode.title}</title>
         <meta property="og:title" content={`${newsNode.title}`} />
         <meta
           property="og:description"

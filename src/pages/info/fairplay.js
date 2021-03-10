@@ -2,9 +2,13 @@ import React from 'react'
 import Layout, { Container } from '../../components/layout'
 import { Title, SubTitle } from '../../components/titles'
 import { List, TextBlock } from '../../components/text'
+import { Helmet } from 'react-helmet'
 
 const FairPlayPage = () => (
   <Layout>
+    <Helmet>
+      <title>Fair Play</title>
+    </Helmet>
     <Container>
       <Title>Intern fairplayreglement</Title>
       <SubTitle>Doelstellingen van de club</SubTitle>

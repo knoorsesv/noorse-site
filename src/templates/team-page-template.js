@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import { ExternalLink } from '../components/text'
 import { format, parseISO } from 'date-fns'
 import { CategoryTeamNavigation } from '../components/team-navigation'
+import Helmet from 'react-helmet'
 
 export const query = graphql`
   query($teamId: ID!) {
@@ -145,6 +146,9 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{contentfulPloeg.naam}</title>
+      </Helmet>
       <Container>
         <Title>{contentfulPloeg.naam}</Title>
 

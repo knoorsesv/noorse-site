@@ -11,7 +11,7 @@ export default ({ pageContext: { infoPage } }) => {
   return (
     <Layout>
       <Helmet>
-        <title>K. Noorse S.V. | {infoPage.title}</title>
+        <title>{infoPage.title}</title>
         <meta property="og:title" content={`${infoPage.title}`} />
         <meta
           property="og:description"

@@ -6,6 +6,7 @@ import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card, SubHeader } from '../../components/cards'
 import { Title } from '../../components/titles'
 import { EmailLink } from '../../components/text'
+import { Helmet } from 'react-helmet'
 
 const query = graphql`
   query {
@@ -70,6 +71,9 @@ export default () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Bestuur</title>
+      </Helmet>
       <Container>
         <Title>Bestuur</Title>
         <div

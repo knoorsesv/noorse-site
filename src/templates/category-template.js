@@ -4,10 +4,14 @@ import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import { Section } from '../components/layout/section'
+import Helmet from 'react-helmet'
 
 export default ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
+      <Helmet>
+        <title>{categoryNode.naam}</title>
+      </Helmet>
       <Container>
         <Title>{categoryNode.naam}</Title>
 
