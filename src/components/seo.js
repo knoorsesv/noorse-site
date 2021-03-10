@@ -93,7 +93,6 @@ function SEO({ description, lang, meta, keywords, title }) {
         .concat(meta)}
     >
       <link rel="icon" href={favicon} />
-      {/*todo: this is necessary for fetching contentful images, wouldn't be needed if images are served and bundled on netlify*/}
       <link rel="preconnect" href="https://images.ctfassets.net" crossorigin />
       <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
       <link
