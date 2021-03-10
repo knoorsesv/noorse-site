@@ -11,7 +11,6 @@ export const CategoryTeamNavigation = ({ category, header }) => {
         {header || category.naam}
       </h3>
       <div className={'flex flex-wrap justify-around mx-1'}>
-        {/*todo: active class name doesnt work on page load so breaks backstop tests: https://github.com/gatsbyjs/gatsby/issues/10586*/}
         {category.ploeg &&
           category.ploeg
             .sort((ploeg1, ploeg2) => (ploeg1.naam > ploeg2.naam ? '1' : '-1'))

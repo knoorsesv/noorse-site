@@ -1,8 +1,5 @@
-//todo: move to contentful
-
 export const webshopLink = 'https://www.qlub.com/qlub?club=k00332'
 
-//todo: could be entirely generated from allSitePage query
 export const siteMap = {
   items: [
     { name: 'Home', link: '/' },
