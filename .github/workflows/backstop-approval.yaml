@@ -1,0 +1,17 @@
+name: Approve failed backstop test
+
+on:
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Approve backstop test
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+      - name: get artifact
+        if: ${{ github.event_name == 'pull_request' && github.event.action == 'unassigned' }}
+        run: sh ./.github/scripts/release.sh
