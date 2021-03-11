@@ -1,7 +1,8 @@
 name: Approve failed backstop test
 
 on:
-  pull_request:
+  issue_comment:
+    types: [created]
 
 jobs:
   build:
