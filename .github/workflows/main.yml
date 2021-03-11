@@ -5,33 +5,33 @@ on:
     branches: [main]
 
 jobs:
-  build-prod:
-    runs-on: ubuntu-latest
-    name: Build PROD
-    steps:
-      - uses: actions/checkout@v2
-      - uses: bahmutov/npm-install@v1
-        env:
-          NODE_ENV: production
-      - run: yarn build
-        env:
-          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
-          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
-          PROD: true
-          TRACKING: ${{ startsWith(github.ref, 'refs/tags/v') }}
-      - name: Deploy
-        uses: nwtgck/actions-netlify@v1
-        id: deploy-prod
-        with:
-          publish-dir: './public'
-          production-deploy: ${{ startsWith(github.ref, 'refs/tags/v') }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: 'Deployed prod build: ${{ github.ref }}'
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
-    outputs:
-      prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
+  #  build-prod:
+  #    runs-on: ubuntu-latest
+  #    name: Build PROD
+  #    steps:
+  #      - uses: actions/checkout@v2
+  #      - uses: bahmutov/npm-install@v1
+  #        env:
+  #          NODE_ENV: production
+  #      - run: yarn build
+  #        env:
+  #          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+  #          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+  #          PROD: true
+  #          TRACKING: ${{ startsWith(github.ref, 'refs/tags/v') }}
+  #      - name: Deploy
+  #        uses: nwtgck/actions-netlify@v1
+  #        id: deploy-prod
+  #        with:
+  #          publish-dir: './public'
+  #          production-deploy: ${{ startsWith(github.ref, 'refs/tags/v') }}
+  #          github-token: ${{ secrets.GITHUB_TOKEN }}
+  #          deploy-message: 'Deployed prod build: ${{ github.ref }}'
+  #        env:
+  #          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  #          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+  #    outputs:
+  #      prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
 
   build-dev:
     if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
@@ -64,24 +64,24 @@ jobs:
     outputs:
       dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
 
-  cypress-test:
-    needs: build-dev
-    if: contains(github.event_name, 'pull_request')
-    runs-on: ubuntu-latest
-    name: Cypress Test
-    steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
-        with:
-          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
-          record: true
-          tag: ${{ github.event_name }}
-          working-directory: cypress
-          config-file: cypress.json
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+  #  cypress-test:
+  #    needs: build-dev
+  #    if: contains(github.event_name, 'pull_request')
+  #    runs-on: ubuntu-latest
+  #    name: Cypress Test
+  #    steps:
+  #      - uses: actions/checkout@v2
+  #      - uses: cypress-io/github-action@v2
+  #        with:
+  #          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
+  #          record: true
+  #          tag: ${{ github.event_name }}
+  #          working-directory: cypress
+  #          config-file: cypress.json
+  #        env:
+  #          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  #          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
+  #          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   visual-test:
     needs: build-dev
@@ -109,19 +109,19 @@ jobs:
             backstop_data/bitmaps_test/
             backstop_data/bitmaps_reference/
 
-  lighthouse-check:
-    needs: build-prod
-    if: contains(github.event_name, 'pull_request')
-    runs-on: ubuntu-latest
-    name: Lighthouse Check
-    steps:
-      - uses: actions/checkout@v2
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          urls: |
-            ${{needs.build-prod.outputs.prod-url}}
-          configPath: './lighthouserc.json'
-          temporaryPublicStorage: true
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+#  lighthouse-check:
+#    needs: build-prod
+#    if: contains(github.event_name, 'pull_request')
+#    runs-on: ubuntu-latest
+#    name: Lighthouse Check
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Audit URLs using Lighthouse
+#        uses: treosh/lighthouse-ci-action@v3
+#        with:
+#          urls: |
+#            ${{needs.build-prod.outputs.prod-url}}
+#          configPath: './lighthouserc.json'
+#          temporaryPublicStorage: true
+#        env:
+#          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
