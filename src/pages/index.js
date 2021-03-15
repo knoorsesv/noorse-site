@@ -73,7 +73,7 @@ const CovidSection = ({ className }) => {
 const NieuwsSection = ({ className }) => {
   const newsListBreakPoints = {
     default: 3,
-    1400: 2,
+    1600: 2,
     600: 1,
   }
   return (
