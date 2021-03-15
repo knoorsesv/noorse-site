@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.2 (2021-03-15)
+
+
+### Bug Fixes
+
+* change breakpoint for news card list ([0f02db1](https://github.com/knoorsesv/noorse-site/commit/0f02db1f662e500c43e52ef74ecfdbcf3af99a32))
+
 ### 1.0.1 (2021-03-10)
 
 ## [1.0.0](https://github.com/knoorsesv/noorse-site/compare/v0.1.136...v1.0.0) (2021-03-10)
