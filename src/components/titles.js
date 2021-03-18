@@ -10,8 +10,8 @@ export const Title = ({ children }) => {
 }
 
 export const SectionTitle = ({ children }) => {
-  const borderHeight = '16px'
-  const underheid = '3px'
+  const backgroundColorHeight = '16px'
+  const secondBackgroundHeight = '3px'
   return (
     <div className={'flex items-start flex-col mb-2'}>
       <h1 className={'text-left mb-0 uppercase'}>
@@ -21,9 +21,10 @@ export const SectionTitle = ({ children }) => {
             width: '140%',
             position: 'relative',
             top: `-15px`,
-            opacity: '30%',
-            borderColor: 'transparent transparent green transparent',
-            borderWidth: `0 ${borderHeight} ${borderHeight} 0`,
+            visibility: 'visible',
+            borderColor:
+              'transparent transparent rgba(0,120,0, 0.3) transparent',
+            borderWidth: `0 ${backgroundColorHeight} ${backgroundColorHeight} 0`,
             borderStyle: 'solid',
           }}
         />
@@ -32,9 +33,10 @@ export const SectionTitle = ({ children }) => {
             width: '140%',
             position: 'relative',
             top: `-12px`,
-            opacity: '30%',
-            borderColor: 'transparent transparent green transparent',
-            borderWidth: `0 ${underheid} ${underheid} 0`,
+            visibility: 'visible',
+            borderColor:
+              'transparent transparent rgba(0,120,0, 0.3) transparent',
+            borderWidth: `0 ${secondBackgroundHeight} ${secondBackgroundHeight} 0`,
             borderStyle: 'solid',
           }}
         />
