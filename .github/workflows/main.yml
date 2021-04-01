@@ -90,24 +90,25 @@ jobs:
     name: Backstop Test
     steps:
       - uses: actions/checkout@v2
-      - uses: bahmutov/npm-install@v1
-        with:
-          working-directory: backstop_data
-        env:
-          NODE_ENV: production
-      - run: yarn backstop:test
-        working-directory: backstop_data
-        env:
-          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-      - name: Archive results
-        uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
-        with:
-          name: backstop report
-          path: |
-            backstop_data/html_report/
-            backstop_data/bitmaps_test/
-            backstop_data/bitmaps_reference/
+      - uses: gvdp/backstop-testing/run-backstop-test
+  #      - uses: bahmutov/npm-install@v1
+  #        with:
+  #          working-directory: backstop_data
+  #        env:
+  #          NODE_ENV: production
+  #      - run: yarn backstop:test
+  #        working-directory: backstop_data
+  #        env:
+  #          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+  #      - name: Archive results
+  #        uses: actions/upload-artifact@v2
+  #        if: ${{ failure() }}
+  #        with:
+  #          name: backstop report
+  #          path: |
+  #            backstop_data/html_report/
+  #            backstop_data/bitmaps_test/
+  #            backstop_data/bitmaps_reference/
 
   lighthouse-check:
     needs: build-prod
