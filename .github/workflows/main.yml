@@ -90,7 +90,7 @@ jobs:
     name: Backstop Test
     steps:
       - uses: actions/checkout@v2
-      - uses: gvdp/backstop-testing/run-backstop-test@v1-beta
+      - uses: gvdp/backstop-testing/run-backstop-test@main
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
           URL_TO_REPLACE: 'http://localhost:8000'
