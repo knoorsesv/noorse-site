@@ -93,6 +93,8 @@ jobs:
       - uses: gvdp/backstop-testing/run-backstop-test@main
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+          URL_TO_REPLACE: 'http://localhost:8000'
+
   #      - uses: bahmutov/npm-install@v1
   #        with:
   #          working-directory: backstop_data
