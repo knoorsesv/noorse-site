@@ -24,7 +24,7 @@ jobs:
       - run: yarn build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
-          CONTENTFUL_PREVIEW_TOKEN: ${{secrets.CONTENTFUL_PREVIEW_TOKEN}}
+          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_PREVIEW: ${{ github.event.inputs.preview }}
           PROD: true
