@@ -13,7 +13,9 @@ import { Helmet } from 'react-helmet'
 const LidMaatschapPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { name: { eq: "InschrijvingsbriefJeugdNoorse2021" } }) {
+      allFile(
+        filter: { name: { eq: "Inschrijvingsbrief_K._Noorse_SV_-_2021-2022" } }
+      ) {
         edges {
           node {
             publicURL
@@ -33,8 +35,8 @@ const LidMaatschapPage = () => {
         <Title>Lid Worden</Title>
         <SubTitle>Bestaande leden</SubTitle>
         <TextBlock>
-          Inschrijvingsgeld bedraagt 130€, te storten op de specifieke rekening
-          van jouw categorie:
+          Inschrijvingsgeld bedraagt 130€ voor 31 mei 2021, daarna is het 150€ ,
+          te storten op de specifieke rekening van jouw categorie:
         </TextBlock>
         <TextBlock>
           <table className={'table-fixed text-sm'}>
@@ -80,7 +82,7 @@ const LidMaatschapPage = () => {
           vragen wij u APART te storten: voor uw dochter op de meisjesrekening
           en voor uw zoon op de jongensrekening.
           <br />
-          Betaling van het lidgeld aan dit tarief kan tot 31 mei 2020. Na deze
+          Betaling van het lidgeld aan dit tarief kan tot 31 mei 2021. Na deze
           datum bedraagt het lidgeld 150€.
           <br />
           Wij vragen u deze datum te respecteren zodat wij de nodige
@@ -125,11 +127,11 @@ const LidMaatschapPage = () => {
         <SubTitle>Extra Info Jeugd</SubTitle>
         <TextBlock>
           <a href={data.allFile.edges[0].node.publicURL} download>
-            Inschrijvingsbrief K. Noorse SV – 2020-2021
+            Inschrijvingsbrief Jeugd Jongens K. Noorse SV – 2021-2022
           </a>
           <br />
           Bestaande leden van jeugd jongens kunnen zich{' '}
-          <ExternalLink url="https://forms.gle/SWG2tV2q9wP5WiX16">
+          <ExternalLink url="https://forms.gle/xgvF8VuGmvZjeafz9">
             hier
           </ExternalLink>{' '}
           opnieuw aanmelden.
