@@ -42,22 +42,6 @@ describe('Home Page', function () {
       })
   })
 
-  it('should go to news item when clicking card', () => {
-    cy.contains('Noorse gaat door met trainersduo')
-      .parents('article')
-      .as('card')
-
-    //todo: get rid of wait
-    cy.wait(500)
-
-    cy.get('@card').click()
-
-    cy.url().should(
-      'contain',
-      '/nieuws/Noorse%20gaat%20door%20met%20trainersduo'
-    )
-  })
-
   it('should list events', () => {
     cy.contains('h1', 'Evenementen')
       .parents('section')
