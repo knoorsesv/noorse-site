@@ -66,7 +66,7 @@ const BestuursCard = ({ bestuursLid }) => {
   )
 }
 
-export default () => {
+const Bestuur = () => {
   const data = useStaticQuery(query)
 
   return (
@@ -92,3 +92,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Bestuur

@@ -4,7 +4,9 @@ import { ClickableCard, SubHeader } from './cards'
 import { createSnippetFromContentArray } from './snippet'
 
 export const NewsCard = ({ newsNode }) => {
-  const snippet = createSnippetFromContentArray(newsNode.body.json.content)
+  const snippet = createSnippetFromContentArray(
+    JSON.parse(newsNode.body.raw).content
+  )
 
   const goToNews = () => {
     navigate(`/nieuws/${newsNode.title}`)

@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allContentfulNews {
         nodes {
           body {
-            json
+            raw
           }
           category {
             naam
@@ -91,7 +91,7 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           title
           content {
-            json
+            raw
           }
           attachment {
             description

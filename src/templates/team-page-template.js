@@ -108,7 +108,7 @@ function CalendarTable({ calendar }) {
   )
 }
 
-export default ({ pageContext: { contentfulPloeg }, data }) => {
+const TeamPage = ({ pageContext: { contentfulPloeg }, data }) => {
   if (process.env.GATSBY_VV_TEST_DATA === 'on') {
     // setting some dummy data here because this info will naturally change and break tests, and this is easier than mocking the graphql api
     data.vv.teamCalendar = [
@@ -218,3 +218,5 @@ export default ({ pageContext: { contentfulPloeg }, data }) => {
     </Layout>
   )
 }
+
+export default TeamPage

@@ -6,7 +6,7 @@ import { CategoryTeamNavigation } from '../components/team-navigation'
 import { Section } from '../components/layout/section'
 import Helmet from 'react-helmet'
 
-export default ({ pageContext: { categoryNode } }) => {
+const CategoryPage = ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
       <Helmet>
@@ -34,3 +34,5 @@ export default ({ pageContext: { categoryNode } }) => {
     </Layout>
   )
 }
+
+export default CategoryPage

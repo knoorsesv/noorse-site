@@ -10,7 +10,7 @@ export const NewsList = (breakpointColumnsObj) => {
         nodes {
           title
           body {
-            json
+            raw
           }
           createdAt(formatString: "DD/MM/YY", locale: "nl-BE")
           publishDate(formatString: "DD/MM/YY", locale: "nl-BE")

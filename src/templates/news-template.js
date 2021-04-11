@@ -8,9 +8,9 @@ import { createSnippetFromContentArray } from '../components/snippet'
 import { Attachments } from '../components/attachment-list'
 import { imageFileTypes } from '../env/constants'
 
-export default ({ pageContext: { newsNode } }) => {
+const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
-  const newsContentArray = newsNode.body.json.content
+  const newsContentArray = JSON.parse(newsNode.body.raw).content
 
   function callLoaded() {
     if (process.env.GATSBY_BACKSTOP_READY === 'on') {
@@ -76,3 +76,5 @@ const getImageAttachments = (attachments) => {
     )
   )
 }
+
+export default NewsTemplate

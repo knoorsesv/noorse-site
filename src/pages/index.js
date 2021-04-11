@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text'
 import { Card, ClickableCard } from '../components/cards'
 import { SectionTitle } from '../components/titles'
@@ -84,12 +84,12 @@ const NieuwsSection = ({ className }) => {
   )
 }
 
-export default () => {
+const Home = () => {
   return (
     <div>
       <Navbar pageHasCoverPhoto={true} />
 
-      <SEO title="Home" keywords={[`noorse`]} />
+      <Seo title="Home" keywords={[`noorse`]} />
 
       <div
         className={`flex flex-col lg:grid
@@ -114,3 +114,5 @@ export default () => {
     </div>
   )
 }
+
+export default Home

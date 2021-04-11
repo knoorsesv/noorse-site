@@ -2,12 +2,12 @@ import React from 'react'
 
 import { Footer } from './footer'
 import { Navbar } from './navbar'
-import SEO from './seo'
+import Seo from './seo'
 
 const Layout = ({ children }) => {
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
-      <SEO keywords={[`noorse`]} />
+      <Seo keywords={[`noorse`]} />
 
       <Navbar />
       <div id="content" className={'min-h-3/4 relative flex justify-center'}>
