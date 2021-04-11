@@ -6,8 +6,8 @@ import { Attachments } from '../components/attachment-list'
 import { ContentfulJsonContent } from '../components/contentful-content'
 import { createSnippetFromContentArray } from '../components/snippet'
 
-export default ({ pageContext: { infoPage } }) => {
-  const contentArray = infoPage.content.json.content
+const InfoPage = ({ pageContext: { infoPage } }) => {
+  const contentArray = JSON.parse(infoPage.content.raw).content
   return (
     <Layout>
       <Helmet>
@@ -28,3 +28,5 @@ export default ({ pageContext: { infoPage } }) => {
     </Layout>
   )
 }
+
+export default InfoPage
