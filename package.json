@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.12.13",
     "@fortawesome/fontawesome-svg-core": "1.2.30",
-    "@fortawesome/free-brands-svg-icons": "5.14.0",
+    "@fortawesome/free-brands-svg-icons": "5.15.3",
     "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@fortawesome/react-fontawesome": "0.1.12",
     "autoprefixer": "^10.2.3",
