@@ -93,6 +93,8 @@ const Realisation = ({ realisatie }) => {
       className={'list-none text-center lg:text-left my-2 md:w-3/4'}
       key={realisatie.naam}
     >
+      {/*todo: add "PLANNED" of zoiets als't in de toekomst is*/}
+      {/*todo: misschien afbeeldingen of link naar artikel of wie gesponsord heeft?*/}
       <div className={'font-bold mb-2'}>
         <div className={'underline'}>{realisatie.naam}</div>
         <div>{formatter.format(realisatie.kost)}</div>
