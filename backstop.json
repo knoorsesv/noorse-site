@@ -117,7 +117,7 @@
     {
       "label": "Realisaties",
       "delay": 500,
-      "url": "http://localhost:8000/info/realisaties",
+      "url": "http://localhost:8000/info/realisaties  ",
       "selectors": ["document"]
     },
     {

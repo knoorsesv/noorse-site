@@ -25,14 +25,7 @@ const query = graphql`
 const Realisaties = () => {
   const data = useStaticQuery(query)
 
-  const formatter = new Intl.NumberFormat('nl-BE', {
-    style: 'currency',
-    currency: 'EUR',
-    minimumFractionDigits: 2,
-  })
-
   const realisaties = data.allContentfulRealisatie.nodes
-
   const realisatiesPerJaar = realisaties.reduce(
     (realisatiesPerJaar, realisatie) => {
       if (realisatiesPerJaar[realisatie.jaar]) {
@@ -44,8 +37,6 @@ const Realisaties = () => {
     },
     {}
   )
-
-  console.log(realisatiesPerJaar)
 
   return (
     <Layout>
@@ -64,54 +55,94 @@ const Realisaties = () => {
           molestie at elementum eu. Porta lorem mollis aliquam ut porttitor leo.
           Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
         </TextBlock>
-        <div className={`flex flex-col items-start px-4`}>
-          {Object.keys(realisatiesPerJaar).map((jaar, index) => {
-            return (
-              <React.Fragment>
-                <div
-                  className={'flex flex-row justify-start w-full'}
-                  key={jaar}
-                >
-                  <h2
-                    className={
-                      'mb-0 flex-shrink-0 w-24 h-24 p-2 border-4 border-gray-700 rounded-full flex justify-center items-center'
-                    }
-                  >
-                    {jaar}
-                  </h2>
-                  <ul className={'mb-0 ml-8 max-3/4'}>
-                    {realisatiesPerJaar[jaar].map((realisatie) => (
-                      <li className={'mb-4'} key={realisatie.naam}>
-                        <div className={'font-medium mb-2'}>
-                          {realisatie.naam} -{' '}
-                          {formatter.format(realisatie.kost)}
-                        </div>
-                        {realisatie.omschrijving ? (
-                          <span className={'italic'}>
-                            {realisatie.omschrijving.omschrijving}
-                          </span>
-                        ) : (
-                          ''
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {index + 1 < Object.keys(realisatiesPerJaar).length ? (
-                  <FontAwesomeIcon
-                    className={'my-4 w-24'}
-                    size="1x"
-                    icon={faEllipsisV}
-                  />
-                ) : (
-                  ''
-                )}
-              </React.Fragment>
-            )
-          })}
-        </div>
+        <section className={`flex flex-col items-center px-4 mt-10`}>
+          {Object.keys(realisatiesPerJaar).map((jaar, index) => (
+            <RealisationsForYear
+              realisatiesPerJaar={realisatiesPerJaar}
+              index={index}
+              jaar={jaar}
+            />
+          ))}
+        </section>
       </Container>
     </Layout>
+  )
+}
+
+const Year = ({ jaar }) => {
+  return (
+    <h2
+      className={
+        'mb-0 bg-grey-300 border-opacity-40 ring-2 ring-grey-700 flex-shrink-0 color-grey-300  w-24 h-24 p-2 border-4 border-gray-700 rounded-full flex justify-center items-center'
+      }
+    >
+      {jaar}
+    </h2>
+  )
+}
+
+const Realisation = ({ realisatie }) => {
+  const formatter = new Intl.NumberFormat('nl-BE', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: 2,
+  })
+
+  return (
+    <li
+      className={'list-none text-center lg:text-left my-2 md:w-3/4'}
+      key={realisatie.naam}
+    >
+      <div className={'font-bold mb-2'}>
+        <div className={'underline'}>{realisatie.naam}</div>
+        <div>{formatter.format(realisatie.kost)}</div>
+      </div>
+      {realisatie.omschrijving ? (
+        <span className={'italic'}>
+          {' '}
+          {realisatie.omschrijving.omschrijving}{' '}
+        </span>
+      ) : (
+        ''
+      )}
+    </li>
+  )
+}
+
+const RealisationsForYear = ({ jaar, realisatiesPerJaar }) => {
+  return (
+    <React.Fragment>
+      <article
+        className={
+          'flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:items-start w-full lg:px-24'
+        }
+        key={jaar}
+      >
+        <Year jaar={jaar} />
+        <Ellipsis className={'lg:hidden'} />
+        <ul className={'mb-0 w-full flex flex-col items-center'}>
+          {realisatiesPerJaar[jaar].map((realisatie) => (
+            <React.Fragment>
+              <Realisation realisatie={realisatie} />
+              <Ellipsis className={'lg:hidden'} />
+            </React.Fragment>
+          ))}
+        </ul>
+      </article>
+      <div
+        className={'border-b-2 border-gray-700 w-1/4 hidden lg:block my-8'}
+      />
+    </React.Fragment>
+  )
+}
+
+const Ellipsis = ({ className }) => {
+  return (
+    <FontAwesomeIcon
+      className={className + ' my-4 w-24'}
+      size="1x"
+      icon={faEllipsisV}
+    />
   )
 }
 
