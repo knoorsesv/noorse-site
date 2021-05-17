@@ -13,7 +13,7 @@ describe('Navigation', function () {
       // .should('be.visible')
       .should('have.attr', 'target', '_blank')
       .and('have.prop', 'href')
-      .and('equal', 'https://www.qlub.com/qlub?club=k00332')
+      .and('equal', 'https://noorsesv.shop4clubs.eu/')
   })
 
   it('should be possible to go to static info pages', () => {

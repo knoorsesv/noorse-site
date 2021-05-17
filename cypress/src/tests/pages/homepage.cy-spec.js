@@ -16,7 +16,7 @@ describe('Home Page', function () {
         cy.get('a')
           .should('have.attr', 'target', '_blank')
           .and('have.prop', 'href')
-          .and('equal', 'https://www.qlub.com/qlub?club=k00332')
+          .and('equal', 'https://noorsesv.shop4clubs.eu/')
       })
   })
 
