@@ -1,4 +1,4 @@
-export const webshopLink = 'https://www.qlub.com/qlub?club=k00332'
+export const webshopLink = 'https://noorsesv.shop4clubs.eu/'
 
 export const siteMap = {
   items: [
