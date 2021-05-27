@@ -66,7 +66,7 @@ const LidMaatschapPage = () => {
                 </td>
               </tr>
               <tr>
-                <td> Jongens (tot U17)</td>
+                <td> Jongens (tot U21)</td>
                 <td className={'font-bold'}> BE86 7350 4969 9350</td>
               </tr>
               <tr>
