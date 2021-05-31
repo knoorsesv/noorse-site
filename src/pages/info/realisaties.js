@@ -17,6 +17,7 @@ const query = graphql`
           omschrijving
         }
         jaar
+        sponsoredBy
       }
     }
   }
@@ -87,23 +88,35 @@ const Realisation = ({ realisatie }) => {
     currency: 'EUR',
     minimumFractionDigits: 2,
   })
-
+  console.log(realisatie)
   return (
     <li
       className={'list-none text-center lg:text-left my-2 md:w-3/4'}
       key={realisatie.naam}
     >
-      {/*todo: add "PLANNED" of zoiets als't in de toekomst is*/}
-      {/*todo: misschien afbeeldingen of link naar artikel of wie gesponsord heeft?*/}
       <div className={'font-bold mb-2'}>
         <div className={'underline'}>{realisatie.naam}</div>
         <div>{formatter.format(realisatie.kost)}</div>
       </div>
       {realisatie.omschrijving ? (
-        <span className={'italic'}>
-          {' '}
+        <div className={'italic mb-4'}>
           {realisatie.omschrijving.omschrijving}{' '}
-        </span>
+        </div>
+      ) : (
+        ''
+      )}
+      {realisatie.sponsoredBy ? (
+        <div className={'text-sm'}>
+          <div className={'italic'}>{'Mogelijk gemaakt door: '}</div>
+          <div>
+            {realisatie.sponsoredBy.map((sponsor, index) => (
+              <span className={'font-semibold'}>
+                {sponsor}
+                {index + 1 < realisatie.sponsoredBy.length ? ', ' : ''}
+              </span>
+            ))}
+          </div>
+        </div>
       ) : (
         ''
       )}
