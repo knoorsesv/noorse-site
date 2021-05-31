@@ -15,7 +15,7 @@ describe('Category page', () => {
 
     it('shows list of ploegen', () => {
       cy.get('#content-wrapper').within(() => {
-        cy.contains('Ploegen')
+        cy.contains('h3', 'Ploegen')
           .parent()
           .within(() => {
             cy.get('a')
