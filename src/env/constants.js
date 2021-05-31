@@ -7,7 +7,13 @@ export const siteMap = {
       name: 'Info',
       subItems: [],
     },
-    { name: 'Senioren', link: '/senioren' },
+    {
+      name: 'Senioren',
+      subItems: [
+        { name: 'Ploegen', link: '/senioren' },
+        { name: 'Voorbereiding', link: '/senioren/voorbereiding' },
+      ],
+    },
     { name: 'Jeugd', link: '/jeugd' },
     { name: 'Dames', link: '/dames' },
     { name: 'Meisjes', link: '/meisjes' },
