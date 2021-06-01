@@ -69,9 +69,12 @@ const Realisaties = () => {
 const Year = ({ jaar }) => {
   return (
     <h2
-      className={
-        'mb-0 bg-grey-300 border-opacity-40 ring-2 ring-grey-700 flex-shrink-0 color-grey-300  w-24 h-24 p-2 border-4 border-gray-700 rounded-full flex justify-center items-center'
-      }
+      className={`
+        border-opacity-40 ring-2 ring-grey-700 border-4 border-gray-700 rounded-full
+        bg-grey-300 color-grey-300  
+        mb-0 w-24 h-24 p-2 
+        flex justify-center items-center flex-shrink-0
+        `}
     >
       {jaar}
     </h2>
