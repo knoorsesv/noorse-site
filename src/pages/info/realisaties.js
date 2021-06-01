@@ -47,14 +47,10 @@ const Realisaties = () => {
       <Container>
         <Title>Realisaties en Focus Infrastructuur</Title>
         <TextBlock>
-          Intro tekst Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
-          enim praesent elementum facilisis. Ipsum nunc aliquet bibendum enim
-          facilisis gravida neque convallis. Nisl rhoncus mattis rhoncus urna
-          neque viverra justo nec ultrices. At volutpat diam ut venenatis tellus
-          in metus vulputate eu. Pharetra convallis posuere morbi leo urna
-          molestie at elementum eu. Porta lorem mollis aliquam ut porttitor leo.
-          Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
+          De voorbije jaren koos Noorse ervoor om in het kader van onze groei
+          als club te blijven investeren in infrastructuur. Hieronder vindt u
+          een overzicht van de gemaakte investeringen de afgelopen jaren alsook
+          een preview van wat nog gepland is.
         </TextBlock>
         <section className={`flex flex-col items-center px-4 mt-10`}>
           {Object.keys(realisatiesPerJaar).map((jaar, index) => (
