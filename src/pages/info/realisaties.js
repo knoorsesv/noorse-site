@@ -84,7 +84,6 @@ const Realisation = ({ realisatie }) => {
     currency: 'EUR',
     minimumFractionDigits: 2,
   })
-  console.log(realisatie)
   return (
     <li
       className={'list-none text-center lg:text-left my-2 md:w-3/4'}
