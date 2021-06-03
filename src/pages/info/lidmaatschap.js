@@ -9,6 +9,7 @@ import {
 } from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { createSnippetFromContentArray } from '../../components/snippet'
 
 const LidMaatschapPage = () => {
   const data = useStaticQuery(graphql`
@@ -30,6 +31,11 @@ const LidMaatschapPage = () => {
     <Layout>
       <Helmet>
         <title>Lid Worden</title>
+        <meta property="og:title" content={`Lid Worden`} />
+        <meta
+          property="og:description"
+          content={`Wil je lid worden van één van onze jeugd- of meisjesploegen? Hier vindt je alle info.`}
+        />
       </Helmet>
       <Container>
         <Title>Lid Worden</Title>
