@@ -113,9 +113,12 @@ const LidMaatschapPage = () => {
           lidgeld kan je dan langskomen op Noorse om de inschrijving af te
           ronden.
           <br />
-          Geïnteresseerden voor jeugd jongens kunnen mailen naar{' '}
-          <EmailLink address="jeugd@noorse.be" /> om meer informatie te
-          verkrijgen.
+          Geïnteresseerden voor jeugd jongens kunnen zich{' '}
+          <ExternalLink url="https://forms.gle/BfcSSbdRZkkx6MHe6">
+            hier
+          </ExternalLink>{' '}
+          aanmelden of mailen naar <EmailLink address="jeugd@noorse.be" /> om
+          meer informatie te verkrijgen.
           <br />
           Voor nieuwe leden bedraagt het lidgeld 150€.
           <br />
@@ -130,11 +133,11 @@ const LidMaatschapPage = () => {
             Inschrijvingsbrief Jeugd Jongens K. Noorse SV – 2021-2022
           </a>
           <br />
-          Bestaande leden van jeugd jongens kunnen zich{' '}
-          <ExternalLink url="https://forms.gle/xgvF8VuGmvZjeafz9">
-            hier
-          </ExternalLink>{' '}
-          opnieuw aanmelden.
+          {/*Bestaande leden van jeugd jongens kunnen zich{' '}*/}
+          {/*<ExternalLink url="https://forms.gle/xgvF8VuGmvZjeafz9">*/}
+          {/*  hier*/}
+          {/*</ExternalLink>{' '}*/}
+          {/* aanmelden.*/}
         </TextBlock>
 
         <SubTitle>Meer info</SubTitle>
