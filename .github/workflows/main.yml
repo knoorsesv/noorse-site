@@ -8,6 +8,7 @@ on:
 
 jobs:
   build-prod:
+    if: ${{ github.actor == 'dependabot[bot]' || github.event_name == 'pull_request'}}
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
@@ -39,7 +40,7 @@ jobs:
       prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
 
   build-dev:
-    if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+    if: ${{ github.actor == 'dependabot[bot]' || github.event_name == 'pull_request'}}
     runs-on: ubuntu-latest
     name: Build DEV
     steps:
