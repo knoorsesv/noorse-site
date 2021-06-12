@@ -46,7 +46,7 @@ describe('Home Page', function () {
     cy.contains('h1', 'Evenementen')
       .parents('section')
       .within(() => {
-        cy.contains('01/05/21')
+        cy.contains('01/05/22')
         cy.contains('6 Tegen 6')
           .get('a')
           .should('have.attr', 'href')

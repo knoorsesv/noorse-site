@@ -41,7 +41,9 @@ describe('Navigation', function () {
   })
 
   it('should be possible to go to all category pages', () => {
-    cy.get('nav').contains('Senioren').should('have.attr', 'href', '/senioren')
+    cy.get('nav').contains('Senioren').get('#dropdown').invoke('show')
+
+    cy.contains('Ploegen').should('have.attr', 'href', '/senioren')
     cy.get('nav').contains('Jeugd').should('have.attr', 'href', '/jeugd')
     cy.get('nav')
       .contains('G-Voetbal')
