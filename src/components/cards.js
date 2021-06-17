@@ -1,6 +1,7 @@
 import React from 'react'
 import { Clickable } from './a11y'
 import Img from 'gatsby-image'
+import ctl from '@netlify/classnames-template-literals'
 
 export const Card = ({
   header,
@@ -11,16 +12,21 @@ export const Card = ({
   headerHeight,
   ...props
 }) => {
+  const articleClasses = ctl(`${className} 
+  bg-white elevation-2  
+  m-auto w-full
+  `)
+
+  const titleHeaderClasses = ctl(
+    `text-center p-3 m-0 uppercase break-normal ${
+      headerHeight ? headerHeight : 'min-h-64p'
+    }`
+  )
+
   return (
-    <article
-      {...props}
-      className={`${className} 
-      bg-white elevation-2  
-      m-auto w-full
-      `}
-    >
+    <article {...props} className={articleClasses}>
       {header && (
-        <div className={``}>
+        <div>
           {image && (
             <Img
               style={{ height: '202px' }}
@@ -29,13 +35,7 @@ export const Card = ({
               imgStyle={{ objectFit: 'cover' }}
             />
           )}
-          <h2
-            className={`text-center p-3 m-0 uppercase break-normal ${
-              headerHeight ? headerHeight : 'min-h-64p'
-            }`}
-          >
-            {header}
-          </h2>
+          <h2 className={titleHeaderClasses}> {header} </h2>
         </div>
       )}
       {children && (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import ctl from '@netlify/classnames-template-literals'
 
 export const TextBlock = ({ children }) => {
   return (
@@ -21,11 +22,13 @@ export const ExternalLink = ({
   textColor = '',
   className,
 }) => {
+  const linkClasses = ctl(
+    `${styled && 'underline'} ${textColor || 'text-gray-dark'} ${className}`
+  )
+
   return (
     <a
-      className={`${styled && 'underline'} ${
-        textColor || 'text-gray-dark'
-      } ${className}`}
+      className={linkClasses}
       href={url}
       aria-label={`${altText}`}
       target="_blank"

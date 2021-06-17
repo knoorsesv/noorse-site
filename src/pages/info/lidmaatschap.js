@@ -9,7 +9,6 @@ import {
 } from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { createSnippetFromContentArray } from '../../components/snippet'
 
 const LidMaatschapPage = () => {
   const data = useStaticQuery(graphql`

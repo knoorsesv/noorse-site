@@ -14,6 +14,6 @@ export const Clickable = (Component, onClick, { className, ...props }) => {
       onKeyDown={keyDownHandler}
       role="link"
       tabIndex="0"
-    ></Component>
+    />
   )
 }
