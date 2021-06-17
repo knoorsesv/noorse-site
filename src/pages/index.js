@@ -12,6 +12,7 @@ import { navigate } from 'gatsby-link'
 import { Section } from '../components/layout/section'
 import { EventsSection } from '../components/events'
 import { SportVlaanderen } from '../components/sport-vlaanderen-logo'
+import ctl from '@netlify/classnames-template-literals'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -92,11 +93,11 @@ const Home = () => {
       <Seo title="Home" keywords={[`noorse`]} />
 
       <div
-        className={`flex flex-col lg:grid
+        className={ctl(`flex flex-col lg:grid
         lg:gap-2 grid-cols-3 
         md:px-12 lg:px-6 lg:mx-8 xl:mx-64        
         lg:bg-gray-light
-        `}
+        `)}
         id="homepage-content"
       >
         <NieuwsSection className={'lg:col-span-2 lg:row-span-4'} />

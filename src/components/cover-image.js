@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import ctl from '@netlify/classnames-template-literals'
 
 export const CoverImage = ({ children, className }) => {
   const image = useStaticQuery(graphql`
@@ -26,7 +27,7 @@ export const CoverImage = ({ children, className }) => {
       id={'background-image'}
       alt={'background image'}
       fluid={image.lucht.nodes[0].fluid}
-      className={`${className} absolute w-full`}
+      className={ctl(`${className} absolute w-full`)}
       fadeIn={process.env.PROD === 'true'}
       imgStyle={{ objectFit: 'cover', objectPosition: 'center' }}
       onLoad={callLoaded}

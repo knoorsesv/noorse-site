@@ -7,6 +7,7 @@ import { Card, SubHeader } from '../../components/cards'
 import { Title } from '../../components/titles'
 import { EmailLink } from '../../components/text'
 import { Helmet } from 'react-helmet'
+import ctl from '@netlify/classnames-template-literals'
 
 const query = graphql`
   query {
@@ -69,6 +70,8 @@ const BestuursCard = ({ bestuursLid }) => {
 const Bestuur = () => {
   const data = useStaticQuery(query)
 
+  const bestuursListClasses = ctl(`flex flex-col sm:flex-row 
+            sm:flex-wrap sm:justify-between lg:justify-center`)
   return (
     <Layout>
       <Helmet>
@@ -76,9 +79,7 @@ const Bestuur = () => {
       </Helmet>
       <Container>
         <Title>Bestuur</Title>
-        <div
-          className={`flex flex-col sm:flex-row sm:flex-wrap sm:justify-between lg:justify-center `}
-        >
+        <div className={bestuursListClasses}>
           {data.allContentfulBestuurslid.edges.map((bestuursLid) => {
             return (
               <BestuursCard

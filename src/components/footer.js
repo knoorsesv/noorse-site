@@ -7,6 +7,7 @@ import { Title } from './titles'
 import { Logo } from './images'
 import { ContactInfo } from './contact'
 import { Version } from './version'
+import ctl from '@netlify/classnames-template-literals'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -69,32 +70,28 @@ export const Footer = () => {
 }
 
 export const ContactAndSponsorFooter = () => {
+  const wrapperClasses = ctl(`flex flex-col items-center 
+    md:flex md:flex-row md:align-center md:justify-between 
+    pt-12 pb-6 md:px-6 lg:px-20 xl:px-64 
+    bg-green bg-opacity-75`)
+
+  const sponsorListContainer = ctl(`flex flex-col items-center md:hidden
+ bg-gray-light
+ w-screen py-4 md:w-2/3 lg:w-1/2`)
+
+  const contactInfoWrapper =
+    'flex flex-col items-center text-center pt-8 md:p-0 md:ml-4'
   return (
     <React.Fragment>
-      <div
-        className={
-          'flex flex-col items-center ' +
-          'md:flex md:flex-row md:align-center md:justify-between ' +
-          'pt-12 pb-6 md:px-6 lg:px-20 xl:px-64 ' +
-          'bg-green bg-opacity-75 '
-        }
-      >
+      <div className={wrapperClasses}>
         <Title>K. Noorse S.V.</Title>
         <div className={`w-1/4 pb-12 lg:p-6 lg:w-48`}>
           <Logo />
         </div>
-        <div
-          className={`flex flex-col items-center md:hidden
-         bg-gray-light
-         w-screen py-4 md:w-2/3 lg:w-1/2`}
-        >
+        <div className={sponsorListContainer}>
           <SponsorList />
         </div>
-        <div
-          className={
-            'flex flex-col items-center text-center pt-8 md:p-0 md:ml-4'
-          }
-        >
+        <div className={contactInfoWrapper}>
           <ContactInfo />
         </div>
       </div>
@@ -106,12 +103,10 @@ export const ContactAndSponsorFooter = () => {
 }
 
 export const CopyRightFooter = () => {
+  const copyRightWrapper =
+    'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
   return (
-    <div
-      className={
-        'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
-      }
-    >
+    <div className={copyRightWrapper}>
       <div className={'small text-center px-4'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
         <EmailLink address={'website@noorse.be'} />
