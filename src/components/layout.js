@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Seo keywords={[`noorse`]} />
 
       <Navbar />
-      <div id="content" className={'min-h-3/4 relative flex justify-center'}>
+      <div id="content" className={'min-h-[75vh] relative flex justify-center'}>
         {children}
       </div>
       <Footer />
@@ -25,7 +25,7 @@ export const Container = ({ children }) => {
   const containerWrapperClasses = ctl(`flex flex-col items-center 
     pt-6 sm:pt-8 md:mx-8 pb-12 
     bg-gray-light 
-    min-h-3/4 h-auto w-11/12 sm:w-5/6 xl:w-3/5 
+    min-h-[75vh] h-auto w-11/12 sm:w-5/6 xl:w-3/5 
     relative`)
   const childrenWrapper = ctl(`px-8 md:px-10 lg:px-20 
                               pt-4

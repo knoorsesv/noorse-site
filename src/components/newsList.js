@@ -34,7 +34,7 @@ export const NewsList = (breakpointColumnsObj) => {
       columnClassName="masonry-column"
     >
       {newsItems.allContentfulNews.nodes.map((node) => (
-        <div key={node.title} className={'mb-10p'}>
+        <div key={node.title} className={'mb-[10px]'}>
           <NewsCard newsNode={node} />
         </div>
       ))}
