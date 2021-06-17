@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   corePlugins: {
     preflight: false,
   },
@@ -22,9 +23,6 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
-      margin: {
-        '10p': '10px',
-      },
       colors: {
         black: {
           DEFAULT: '#000000',
@@ -51,8 +49,6 @@ module.exports = {
         },
       },
       height: {
-        half: '50vh',
-        '3/4': '75vh',
         '1p': '1px',
         '2p': '2px',
         '4p': '4px',
@@ -75,16 +71,8 @@ module.exports = {
         '48v': '48vh',
         '64v': '64vh',
         '128v': '128vh',
-        '150': '150%',
-        '80': '80%',
-        '70': '70%',
-        '20': '20%',
-        'video-desktop': '300px',
-        'video-tablet': '180px',
       },
       minHeight: {
-        half: '50vh',
-        '3/4': '75vh',
         '1p': '1px',
         '2p': '2px',
         '4p': '4px',
@@ -105,16 +93,8 @@ module.exports = {
         '32v': '32vh',
         '64v': '64vh',
         '128v': '128vh',
-        '150': '150%',
-        '80': '80%',
-        '70': '70%',
-        '20': '20%',
-        'video-desktop': '300px',
-        'video-tablet': '180px',
       },
       maxHeight: {
-        half: '50vh',
-        '3/4': '75vh',
         '1p': '1px',
         '2p': '2px',
         '4p': '4px',
@@ -137,18 +117,10 @@ module.exports = {
         '32v': '32vh',
         '64v': '64vh',
         '128v': '128vh',
-        '150': '150%',
-        '80': '80%',
-        '70': '70%',
-        '20': '20%',
-        'video-desktop': '300px',
-        'video-tablet': '180px',
-      },
-      width: {
-        '60': '60%',
-        '1/10': '10%',
-        'video-desktop': '500px',
-        'video-tablet': '280px',
+        150: '150%',
+        80: '80%',
+        70: '70%',
+        20: '20%',
       },
       inset: {
         '1p': '1px',
@@ -176,27 +148,7 @@ module.exports = {
         '64v': '64vh',
         '128v': '128vh',
       },
-      zIndex: {
-        '60': 60,
-      },
-      maxWidth: {
-        '400': '400px',
-        '300': '300px',
-        '1/3': '33%',
-        '1/2': '50%',
-        '3/4': '75%',
-        logo: '30%',
-      },
     },
-  },
-  variants: {
-    backgroundOpacity: ['hover', 'focus', 'group-hover', 'responsive'],
-    opacity: ['hover', 'focus', 'group-hover', 'responsive'],
-    backgroundColor: ['hover', 'focus', 'group-hover', 'responsive'],
-    visibility: ['hover', 'focus', 'group-hover', 'responsive'],
-    position: ['hover', 'focus', 'group-hover', 'responsive'],
-    width: ['hover', 'focus', 'group-hover', 'responsive'],
-    display: ['hover', 'focus', 'group-hover', 'responsive'],
   },
   plugins: [require('tailwindcss-elevation')(['responsive'])],
 }

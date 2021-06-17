@@ -126,10 +126,14 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   w-1/2 sm:w-2/5 
   list-none z-50
   ${transition}
-  ${!sideBarMenuShown ? 'opacity-0 -right-1/2 lg:right-0' : ''}
   ${
-    sideBarMenuShown || topMenuBarShown
-      ? 'h-full lg:h-80p bg-green opacity-100 right-0 lg:w-full lg:py-10'
+    sideBarMenuShown
+      ? 'h-full lg:h-80p bg-green opacity-100 right-0 lg:w-full lg:py-1'
+      : 'opacity-0 -right-1/2 lg:right-0'
+  }
+  ${
+    topMenuBarShown
+      ? 'h-full lg:h-80p bg-green lg:opacity-100 right-0 lg:w-full lg:py-10'
       : 'lg:right-0 lg:w-auto lg:h-16 lg:top-6 lg:pt-0 lg:pl-5 lg:opacity-90 lg:bg-green'
   }
   `)

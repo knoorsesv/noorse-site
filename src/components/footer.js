@@ -12,7 +12,7 @@ import ctl from '@netlify/classnames-template-literals'
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
     <LazyLoad once={true} key={sponsorNode.naam}>
-      <div className={`max-w-logo p-2 ${logoWidth}`}>
+      <div className={`max-w-[30%] p-2 ${logoWidth}`}>
         <ExternalLink url={sponsorNode.websiteUrl} styled={false} icon={false}>
           <Img
             fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
