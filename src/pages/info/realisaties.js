@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { TextBlock } from '../../components/text'
+import ctl from '@netlify/classnames-template-literals'
 
 const query = graphql`
   query {
@@ -67,18 +68,13 @@ const Realisaties = () => {
 }
 
 const Year = ({ jaar }) => {
-  return (
-    <h2
-      className={`
-        border-opacity-40 ring-2 ring-grey-700 border-4 border-gray-700 rounded-full
-        bg-grey-300 color-grey-300  
-        mb-0 w-24 h-24 p-2 
-        flex justify-center items-center flex-shrink-0
-        `}
-    >
-      {jaar}
-    </h2>
-  )
+  const yearClasses = ctl(`
+    border-opacity-40 ring-2 ring-grey-700 border-4 border-gray-700 rounded-full
+    bg-grey-300 color-grey-300  
+    mb-0 w-24 h-24 p-2 
+    flex justify-center items-center flex-shrink-0
+    `)
+  return <h2 className={yearClasses}>{jaar} </h2>
 }
 
 const Realisation = ({ realisatie }) => {
@@ -123,14 +119,13 @@ const Realisation = ({ realisatie }) => {
 }
 
 const RealisationsForYear = ({ jaar, realisatiesPerJaar }) => {
+  const articleClasses = ctl(`
+  flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:items-start
+   w-full lg:px-24  `)
+  const dividerClasses = 'border-b-2 border-gray-700 w-1/4 hidden lg:block my-8'
   return (
     <React.Fragment>
-      <article
-        className={
-          'flex flex-col lg:flex-row items-center justify-start lg:justify-center lg:items-start w-full lg:px-24'
-        }
-        key={jaar}
-      >
+      <article className={articleClasses} key={jaar}>
         <Year jaar={jaar} />
         <Ellipsis className={'lg:hidden'} />
         <ul className={'mb-0 w-full flex flex-col items-center'}>
@@ -142,9 +137,7 @@ const RealisationsForYear = ({ jaar, realisatiesPerJaar }) => {
           ))}
         </ul>
       </article>
-      <div
-        className={'border-b-2 border-gray-700 w-1/4 hidden lg:block my-8'}
-      />
+      <div className={dividerClasses} />
     </React.Fragment>
   )
 }
