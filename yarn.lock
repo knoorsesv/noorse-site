@@ -6741,12 +6741,12 @@ gatsby-page-utils@^1.7.1:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-google-analytics@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.2.0.tgz#d651c05a665427d1c812e1da08a8351c0680d261"
-  integrity sha512-Cc/Gh6fkZWta6h+ieRjU/4GuN5wMGfiP+rv1EylLYUpTS/BSZf5sUqBsJbwWerPyKXkGJ35YaYWa5Vkzu4lBZw==
+gatsby-plugin-google-analytics@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.7.1.tgz#c54821e609d10ca6f4843b60054bf0b243302cb4"
+  integrity sha512-50NT0Fvv/f+pSxohheVixYxrRHf2mE/XtGOyGMVl9Qxbry8evaqSLMYaoLP6JCcm/pzEoHQk04Cyrlo173JBMQ==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
     minimatch "3.0.4"
 
 gatsby-plugin-image@^1.2.1:
@@ -6845,12 +6845,12 @@ gatsby-plugin-typescript@^3.2.0:
     "@babel/runtime" "^7.14.0"
     babel-plugin-remove-graphql-queries "^3.7.1"
 
-gatsby-plugin-typography@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-3.2.0.tgz#9a34d7ecfe2087b3982a236d7044043baa389312"
-  integrity sha512-EBejTcWoYUkuSc6FpSlLbFHagbyIXRSCS3JveDRZsyV7J4g7XUS68OKwVNbv18+DLkDu6/PHwhvy0eZdBA7OGg==
+gatsby-plugin-typography@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-3.7.1.tgz#1c9b1771eaf1acead988f9b3f29c12441d6e72bf"
+  integrity sha512-43uuglr3kspmsu+4gZTUOJk3hthZQEtiraua+ZSki4qMh9z/knhwkTdp5TNYycKzRgPL7DvF0trkHX7tojrdSg==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
 
 gatsby-plugin-use-query-params@1.0.1:
   version "1.0.1"
