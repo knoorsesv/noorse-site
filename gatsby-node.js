@@ -25,13 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
           image {
-            fluid {
-              base64
-              aspectRatio
-              src
-              srcSet
-              sizes
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
           title
           publishDate(formatString: "dddd D MMMM yyyy", locale: "nl-BE")

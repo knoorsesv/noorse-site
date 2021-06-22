@@ -1,6 +1,6 @@
 import React from 'react'
 import { Clickable } from './a11y'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import ctl from '@netlify/classnames-template-literals'
 
 export const Card = ({
@@ -22,15 +22,15 @@ export const Card = ({
       headerHeight ? headerHeight : 'min-h-64p'
     }`
   )
-
+  console.log(image)
   return (
     <article {...props} className={articleClasses}>
       {header && (
         <div>
           {image && (
-            <Img
+            <GatsbyImage
+              image={image.gatsbyImageData}
               style={{ height: '202px' }}
-              fluid={image.fluid}
               alt={'Card Header Image'}
               imgStyle={{ objectFit: 'cover' }}
             />
