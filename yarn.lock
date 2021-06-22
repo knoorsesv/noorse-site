@@ -6770,12 +6770,12 @@ gatsby-plugin-react-helmet@4.7.1:
   dependencies:
     "@babel/runtime" "^7.14.0"
 
-gatsby-plugin-sass@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-4.2.0.tgz#15802a17e253dbd60530cba7079628255cdb5521"
-  integrity sha512-WnboqnpqZdkkQBYwbwnAAloJqBLuxR4FP2lp7jdrJPW4Drp0MQ2sf7XdtFjbNtmgpdXTeYFRBHazZpd25xsIgA==
+gatsby-plugin-sass@4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-4.7.1.tgz#53e53039218f8203c3f59a4be75215b59da17337"
+  integrity sha512-W3YIHAJzpkH94nSZu+MmL6UKxT3VoHCfxTfiOG+vF/c/VKhMwkyO+1cSMufRlxcTGWmP2pgFNA57a7ZoXQdCTw==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
     resolve-url-loader "^3.1.2"
     sass-loader "^10.1.1"
 
@@ -7009,12 +7009,12 @@ gatsby-telemetry@^2.7.1:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-transformer-sharp@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-3.3.0.tgz#238b4180570687a891a43a8c5082fb99b9d813de"
-  integrity sha512-P5J1SE/g8qOYdjPP3SYRSAOoaQQEPfYpbvDtgstlegogt7zsytBRNOjrDijEzXnC/D/Hcp9Obwr0Ez8vL4FGsw==
+gatsby-transformer-sharp@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-3.7.1.tgz#c1458a056dc9a8e27a556f29a176b8cb422e2282"
+  integrity sha512-Q+/X8sbVpabJz4G+V4aMt0f7XlB5lsPfM3zYUkb9ns4c+soN+qPMqZRiaKqoLb7hXG9Bs48EV8mJXeWc4w+xOA==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
     bluebird "^3.7.2"
     common-tags "^1.8.0"
     fs-extra "^9.1.0"
@@ -12143,10 +12143,10 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
-react-typography@0.16.19:
-  version "0.16.19"
-  resolved "https://registry.yarnpkg.com/react-typography/-/react-typography-0.16.19.tgz#5736b47961dcf6b9605b6fa38d41980db2588e28"
-  integrity sha512-kV2qLEsdm0x9P4YXQEDVc88tDb4Vg0h/vdVZGgbqaRn8ERvNzV76JHUeOby3vvcUYU5MPd5Kz5DPH9Bhp4I/iw==
+react-typography@0.16.20:
+  version "0.16.20"
+  resolved "https://registry.yarnpkg.com/react-typography/-/react-typography-0.16.20.tgz#6861fef52ab3156eda334cbe110fb66646340f57"
+  integrity sha512-xRDlR5mYA/NI2WAc/DPvmODWK5UvY6LsjzPEeiT5X1yXUDpqFAFnWi/m5atrAtaIOeZqT982DQM+Cy8Io+jVFg==
 
 react@16.13.1:
   version "16.13.1"
