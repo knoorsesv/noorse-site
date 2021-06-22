@@ -68,7 +68,15 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `tracedSVG`,
+        },
+      },
+    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-typography`,

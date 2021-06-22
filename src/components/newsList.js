@@ -18,9 +18,7 @@ export const NewsList = (breakpointColumnsObj) => {
             naam
           }
           image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
