@@ -18,7 +18,6 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
     }
   }
 
-  console.log(newsNode.image.gatsbyImageData.images.fallback.src)
   return (
     <Layout>
       <Helmet>
@@ -43,7 +42,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
             image={newsNode.image.gatsbyImageData}
             alt={'News Image'}
             style={{ maxHeight: '300px' }}
-            imgStyle={{ objectFit: 'contain' }}
+            objectFit={'contain'}
             onLoad={callLoaded}
           />
         )}

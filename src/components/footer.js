@@ -15,7 +15,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
         <GatsbyImage
           image={sponsorNode.logo.gatsbyImageData}
           alt={`Logo ${sponsorNode.naam}`}
-          imgStyle={{ objectFit: 'scale-down' }}
+          objectFit={'scale-down'}
         />
       </ExternalLink>
     </div>
