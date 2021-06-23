@@ -22,7 +22,6 @@ export const Card = ({
       headerHeight ? headerHeight : 'min-h-64p'
     }`
   )
-  console.log(image)
   return (
     <article {...props} className={articleClasses}>
       {header && (
@@ -32,7 +31,7 @@ export const Card = ({
               image={image.gatsbyImageData}
               style={{ height: '202px' }}
               alt={'Card Header Image'}
-              imgStyle={{ objectFit: 'cover' }}
+              objectFit={'cover'}
             />
           )}
           <h2 className={titleHeaderClasses}> {header} </h2>

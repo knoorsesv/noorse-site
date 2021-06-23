@@ -26,9 +26,10 @@ export const CoverImage = ({ children }) => {
       image={image.allContentfulAsset.nodes[0].gatsbyImageData}
       id={'background-image'}
       alt={'Luchtfoto Noorse velden'}
+      loading={'eager'}
       className={ctl(`${coverSectionHeight} absolute w-full`)}
-      fadeIn={process.env.PROD === 'true'}
-      imgStyle={{ objectFit: 'cover', objectPosition: 'center' }}
+      objectFit="cover"
+      objectPosition="center"
       onLoad={callLoaded}
     >
       {children}

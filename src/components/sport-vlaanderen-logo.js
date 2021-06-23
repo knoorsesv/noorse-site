@@ -1,4 +1,4 @@
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -21,8 +21,7 @@ export const SportVlaanderen = () => {
       image={image.sportVlaanderen.nodes[0].gatsbyImageData}
       id="logo"
       alt={'Noorse Logo'}
-      fadeIn={process.env.PROD === 'true'}
-      imgStyle={{ objectFit: 'contain' }}
+      objectFit={'contain'}
       className={`h-full w-full max-w-full max-h-full`}
     />
   )
