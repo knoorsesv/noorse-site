@@ -1342,7 +1342,7 @@
     "@graphql-tools/utils" "^7.0.0"
     tslib "~2.0.1"
 
-"@graphql-tools/links@^7.0.3":
+"@graphql-tools/links@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/links/-/links-7.1.0.tgz#239eaf4832a9871d490fec272766916688d6e7fc"
   integrity sha512-8cJLs3ko0Zq0agJiFiHuAZ27OXbfgRF5JtVtIx8q2RfjVN0sss9QeetrTBjc2XfTj5HYZr6BHqqlyMMA4OXp7A==
@@ -1413,7 +1413,7 @@
     valid-url "1.0.9"
     ws "7.4.5"
 
-"@graphql-tools/utils@^7.0.0", "@graphql-tools/utils@^7.0.2", "@graphql-tools/utils@^7.1.2", "@graphql-tools/utils@^7.5.0", "@graphql-tools/utils@^7.7.0", "@graphql-tools/utils@^7.7.1", "@graphql-tools/utils@^7.8.1", "@graphql-tools/utils@^7.9.0":
+"@graphql-tools/utils@^7.0.0", "@graphql-tools/utils@^7.0.2", "@graphql-tools/utils@^7.1.2", "@graphql-tools/utils@^7.5.0", "@graphql-tools/utils@^7.7.0", "@graphql-tools/utils@^7.7.1", "@graphql-tools/utils@^7.7.3", "@graphql-tools/utils@^7.8.1", "@graphql-tools/utils@^7.9.0":
   version "7.10.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-7.10.0.tgz#07a4cb5d1bec1ff1dc1d47a935919ee6abd38699"
   integrity sha512-d334r6bo9mxdSqZW6zWboEnnOOFRrAPVQJ7LkU8/6grglrbcu6WhwCLzHb90E94JI3TD3ricC3YGbUqIi9Xg0w==
@@ -1422,7 +1422,7 @@
     camel-case "4.1.2"
     tslib "~2.2.0"
 
-"@graphql-tools/wrap@^7.0.1", "@graphql-tools/wrap@^7.0.4":
+"@graphql-tools/wrap@^7.0.4", "@graphql-tools/wrap@^7.0.5":
   version "7.0.8"
   resolved "https://registry.yarnpkg.com/@graphql-tools/wrap/-/wrap-7.0.8.tgz#ad41e487135ca3ea1ae0ea04bb3f596177fb4f50"
   integrity sha512-1NDUymworsOlb53Qfh7fonDi2STvqCtbeE68ntKY9K/Ju/be2ZNxrFSbrBHwnxWcN9PjISNnLcAyJ1L5tCUyhg==
@@ -6973,15 +6973,15 @@ gatsby-source-filesystem@^3.2.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-source-graphql@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-graphql/-/gatsby-source-graphql-3.2.0.tgz#6d8bf01cf861deab3bf298de7194150af24dde87"
-  integrity sha512-uce3fXQRjm55MroAQNemPoQSlZj3pc5mI8NH9IwW9R1wGp04X2LynVQpT48JL0pDXZftHK+d/Hy7ESSW0KWhmg==
+gatsby-source-graphql@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-graphql/-/gatsby-source-graphql-3.8.0.tgz#cd75fced2397601d00d9498f082b5eb6de58125d"
+  integrity sha512-5TfiJBJ4C/w4LhQ3vEYTqeQcmBWt2Ms4SKmRxgFWsZZnSPA+5lUWjl+vwTi2knCL4BtBR80NY94++Be2oo8w5w==
   dependencies:
-    "@babel/runtime" "^7.12.5"
-    "@graphql-tools/links" "^7.0.3"
-    "@graphql-tools/utils" "^7.0.2"
-    "@graphql-tools/wrap" "^7.0.1"
+    "@babel/runtime" "^7.14.0"
+    "@graphql-tools/links" "^7.1.0"
+    "@graphql-tools/utils" "^7.7.3"
+    "@graphql-tools/wrap" "^7.0.5"
     apollo-link "1.2.14"
     apollo-link-http "^1.5.17"
     dataloader "^2.0.0"
