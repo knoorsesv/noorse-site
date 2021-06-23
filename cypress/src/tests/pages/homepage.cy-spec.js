@@ -59,7 +59,7 @@ describe('Home Page', function () {
       .last()
       .scrollIntoView()
       .within(() => {
-        cy.get('.lazyload-placeholder').should('have.length', 5)
+        cy.get('img').should('have.length', 5)
       })
   })
 })
