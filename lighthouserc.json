@@ -11,6 +11,7 @@
       "assertions": {
         "font-display": "off",
         "is-crawlable": "off",
+        "unsized-images": "off",
         "uses-rel-preconnect": ["warn"],
         "uses-responsive-images": [
           "warn",
