@@ -29,7 +29,7 @@ export const Card = ({
           {image && (
             <GatsbyImage
               image={image.gatsbyImageData}
-              style={{ height: '202px' }}
+              imgStyle={{ height: '202px' }}
               alt={'Card Header Image'}
               objectFit={'cover'}
             />
