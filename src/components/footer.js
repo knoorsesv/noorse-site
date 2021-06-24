@@ -11,16 +11,30 @@ import ctl from '@netlify/classnames-template-literals'
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
     <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsorNode.naam}>
-      <ExternalLink url={sponsorNode.websiteUrl} styled={false} icon={false}>
+      <ConditionalWrapper
+        condition={!!sponsorNode.websiteUrl}
+        wrapper={(children) => (
+          <ExternalLink
+            url={sponsorNode.websiteUrl}
+            styled={false}
+            icon={false}
+          >
+            {children}
+          </ExternalLink>
+        )}
+      >
         <GatsbyImage
           image={sponsorNode.logo.gatsbyImageData}
           alt={`Logo ${sponsorNode.naam}`}
           objectFit={'scale-down'}
         />
-      </ExternalLink>
+      </ConditionalWrapper>
     </div>
   )
 }
+
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children
 
 export const SponsorList = ({ logoWidth }) => {
   const sponsors = useStaticQuery(graphql`
