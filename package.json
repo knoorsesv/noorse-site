@@ -46,7 +46,7 @@
     "gatsby-plugin-typography": "3.7.1",
     "gatsby-plugin-use-query-params": "1.0.1",
     "gatsby-source-contentful": "5.2.1",
-    "gatsby-source-filesystem": "3.2.0",
+    "gatsby-source-filesystem": "3.8.0",
     "gatsby-source-graphql": "3.8.0",
     "gatsby-transformer-sharp": "3.7.1",
     "husky": "4.3.0",
