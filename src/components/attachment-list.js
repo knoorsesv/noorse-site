@@ -9,7 +9,11 @@ export const Attachments = ({ attachments }) => {
       <h3 className={'mt-8'}>
         {defaultAttachments.length > 1 ? 'Bijlagen' : 'Bijlage'}
       </h3>
-      {defaultAttachments.map(DocumentLink)}
+      <ul>
+        {defaultAttachments.map((att) => (
+          <li key={att.title}>{DocumentLink(att)}</li>
+        ))}
+      </ul>
     </React.Fragment>
   ) : null
 }
