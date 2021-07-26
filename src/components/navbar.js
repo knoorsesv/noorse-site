@@ -12,15 +12,15 @@ const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
 const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
 
-const pagesQuery = graphql`
-  query {
-    allSitePage {
-      nodes {
-        path
-      }
-    }
-  }
-`
+// const pagesQuery = graphql`
+//   query {
+//     allSitePage {
+//       nodes {
+//         path
+//       }
+//     }
+//   }
+// `
 
 const NavSection = ({
   pageHasCoverPhoto,
@@ -68,19 +68,19 @@ export const Navbar = ({ pageHasCoverPhoto = false, siteMap }) => {
     setMenuShown(!sideBarMenuShown)
   }
 
-  const allPages = useStaticQuery(pagesQuery)
+  // const allPages = useStaticQuery(pagesQuery)
 
   siteMap = siteMap || defaultSiteMap
 
   // it should be possible to do this cleaner + query could happen outside of navbar component to keep it cleaner / dumber
-  const infoPageSiteMaps = allPages.allSitePage.nodes
-    .filter((node) => node.path.includes('info'))
-    .map((node) => ({
-      name: node.path.replace('/info/', '').replace('/', ''),
-      link: node.path,
-    }))
+  // const infoPageSiteMaps = allPages.allSitePage.nodes
+  //   .filter((node) => node.path.includes('info'))
+  //   .map((node) => ({
+  //     name: node.path.replace('/info/', '').replace('/', ''),
+  //     link: node.path,
+  //   }))
   siteMap.items.find((item) => item.name === 'Info').subItems = [
-    ...infoPageSiteMaps,
+    // ...infoPageSiteMaps,
     {
       name: 'Webshop',
       extLink: webshopLink,
