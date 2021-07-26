@@ -1,14 +1,13 @@
 import React from 'react'
 import Seo from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text'
-import { Card, ClickableCard } from '../components/cards'
+import { Card } from '../components/cards'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
 import { NewsList } from '../components/newsList'
 import { webshopLink } from '../env/constants'
-import { navigate } from 'gatsby-link'
 import { Section } from '../components/layout/section'
 import { EventsSection } from '../components/events'
 import { SportVlaanderen } from '../components/sport-vlaanderen-logo'
@@ -54,19 +53,21 @@ const WebshopSection = ({ className }) => {
 }
 
 const CovidSection = ({ className }) => {
-  const goToCovidPage = () => {
-    // this is flaky because page title comes from contentful, but hey it'll all be over soon right?
-    navigate(`/info/Covid Regels`)
-  }
   return (
     <Section className={`${className}`}>
       <SectionTitle>Covid-19</SectionTitle>
-      <ClickableCard onClick={goToCovidPage}>
+      <Card>
         <div className={'text-center'}>
-          De regels die op onze club van kracht zijn vindt u{' '}
-          <span className={'underline'}>hier</span>
+          Op Noorse zijn{' '}
+          <ExternalLink
+            icon={false}
+            url={'https://www.sport.vlaanderen/sporten-in-tijden-van-corona/'}
+          >
+            de algemene veiligheidsmaatregelen omtrent COVID-19
+          </ExternalLink>{' '}
+          van kracht
         </div>
-      </ClickableCard>
+      </Card>
     </Section>
   )
 }
