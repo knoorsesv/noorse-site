@@ -85,25 +85,25 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const infoPages = await graphql(`
-    query {
-      allContentfulPage {
-        nodes {
-          title
-          content {
-            raw
-          }
-          attachment {
-            description
-            title
-            file {
-              url
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const infoPages = await graphql(`
+  //   query {
+  //     allContentfulPage {
+  //       nodes {
+  //         title
+  //         content {
+  //           raw
+  //         }
+  //         attachment {
+  //           description
+  //           title
+  //           file {
+  //             url
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   news.data.allContentfulNews.nodes.forEach((newsNode) => {
     console.log('creating news page for ', newsNode.title)
@@ -114,14 +114,14 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  infoPages.data.allContentfulPage.nodes.forEach((infoPage) => {
-    console.log('creating info page for ', infoPage.title)
-    createPage({
-      path: `/info/${infoPage.title}`,
-      component: require.resolve(`./src/templates/info-page-template.js`),
-      context: { infoPage },
-    })
-  })
+  // infoPages.data.allContentfulPage.nodes.forEach((infoPage) => {
+  //   console.log('creating info page for ', infoPage.title)
+  //   createPage({
+  //     path: `/info/${infoPage.title}`,
+  //     component: require.resolve(`./src/templates/info-page-template.js`),
+  //     context: { infoPage },
+  //   })
+  // })
 
   categories.data.allContentfulCategorie.nodes.forEach((categoryNode) => {
     console.log('creating category page for', categoryNode.naam)
