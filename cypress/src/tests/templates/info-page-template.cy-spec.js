@@ -1,4 +1,4 @@
-it('should create an info page from contentful info', function () {
+xit('should create an info page from contentful info', function () {
   cy.visit('/info/Covid Regels')
 
   cy.contains('h1', 'Covid Regels')
