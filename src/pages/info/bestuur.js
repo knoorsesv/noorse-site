@@ -16,7 +16,6 @@ const query = graphql`
         node {
           naam
           email
-          phone
           title
           sponsorVerantwoordelijke
           category {
@@ -50,16 +49,6 @@ const BestuursCard = ({ bestuursLid }) => {
           <div className={'font-extralight truncate'}>
             <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
             <EmailLink address={bestuursLid.node.email} />
-          </div>
-        )}
-        {bestuursLid.node.phone && (
-          <div className={'font-extralight'}>
-            <FontAwesomeIcon
-              icon={faPhoneAlt}
-              className={'mr-1'}
-            ></FontAwesomeIcon>
-
-            {bestuursLid.node.phone}
           </div>
         )}
       </div>
