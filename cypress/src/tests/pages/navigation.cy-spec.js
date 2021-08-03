@@ -30,7 +30,7 @@ describe('Navigation', function () {
     cy.contains('documenten').should('have.attr', 'href', '/info/documenten/')
   })
 
-  it('should be possible to go to generated info page', () => {
+  xit('should be possible to go to generated info page', () => {
     cy.contains('Info').get('#dropdown').invoke('show')
 
     cy.contains('Covid Regels').should(

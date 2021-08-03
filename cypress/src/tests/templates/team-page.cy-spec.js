@@ -60,7 +60,7 @@ describe('team page', () => {
         cy.contains('4 PROV. A').should(
           'have.attr',
           'href',
-          'https://www.voetbalvlaanderen.be/competitie/CHP_94483/rangschikking'
+          'https://www.voetbalvlaanderen.be/competitie/CHP_98714/rangschikking'
         )
       })
   })
