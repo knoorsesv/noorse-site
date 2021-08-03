@@ -91,12 +91,6 @@
       "selectors": ["document"]
     },
     {
-      "label": "Generated Info Page",
-      "delay": 500,
-      "url": "http://localhost:8000/info/Covid Regels/",
-      "selectors": ["document"]
-    },
-    {
       "label": "Ploeg Page",
       "delay": 500,
       "url": "http://localhost:8000/team/noorse%201",
