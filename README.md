@@ -11,7 +11,7 @@
     <img alt="License: MIT" src="https://img.shields.io/github/license/gvdp/website-noorse" />
   </a>
 </p>
-
+ 
 ![Build Status](https://github.com/knoorsesv/noorse-site/workflows/Noorse%20site%20CI/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cfb311e2-904f-4acb-9937-30e50d59f3ca/deploy-status)](https://app.netlify.com/sites/modest-golick-edc673/deploys)
 
