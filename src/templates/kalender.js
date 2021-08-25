@@ -1,21 +1,23 @@
 import React from 'react'
 import Layout, { Container } from '../components/layout'
-import { Title } from '../components/titles'
+import { SubTitle, Title } from '../components/titles'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import { format, parseISO } from 'date-fns'
 import { titleCase } from '../utils/formatting'
 import { nlBE } from 'date-fns/locale'
+import startOfWeek from 'date-fns/startOfWeek'
+import endOfWeek from 'date-fns/endOfWeek'
 
 export const query = graphql`
-  query($clubId: ID!) {
+  query($clubId: ID!, $startDate: String!, $endDate: String!) {
     vv {
       clubMatchesAssignations(
         clubId: $clubId
         language: nl
-        startDate: "2021/08/20"
-        endDate: "2021/08/26"
-        hasLocation: true
+        startDate: $startDate
+        endDate: $endDate
+        hasLocation: false
       ) {
         id
         startDate
@@ -42,6 +44,12 @@ const KalenderPage = ({ data }) => {
   const formatDate = (date) => {
     return format(parseISO(date), 'eeeeee dd/MM - HH:mm', { locale: nlBE })
   }
+
+  // console.log(format(new Date(), 'yyyy/MM/dd'))
+  console.log(
+    format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy/MM/dd')
+  )
+  console.log(format(endOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy/MM/dd'))
   return (
     <Layout>
       <Helmet>
@@ -49,11 +57,12 @@ const KalenderPage = ({ data }) => {
       </Helmet>
       <Container>
         <Title>Kalender</Title>
+        <SubTitle>Wedstrijden deze week</SubTitle>
         <table>
           <tbody>
             {data.vv.clubMatchesAssignations.map((game) => {
               return (
-                <tr>
+                <tr key={game.id}>
                   <td>{formatDate(game.startDate)}</td>
                   <td>{game.title}</td>
                   <td>{titleCase(game.homeTeam.name)}</td>
