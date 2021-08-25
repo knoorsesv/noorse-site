@@ -1,6 +1,7 @@
 type Query {
    teamCalendar(teamId: ID!, language: Lang): [MatchDetail]
    clubTeams(clubId: Int, language: Lang): [Team]
+   clubMatchesAssignations(clubId: ID!, language: Lang, startDate: String, endDate: String, hasLocation: Boolean): [MatchDetail]
    teamSeriesAndRankings(teamId: ID!, language: Lang): SeriesAndRankings
 }
 
@@ -16,6 +17,7 @@ type Series {
 type MatchDetail {
   id: String
   startDate: String
+  title: String
   homeTeam: Team
   awayTeam: Team
   outcome: Outcome

@@ -15,7 +15,7 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "netlify deploy --dir public",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "develop:master": "CONTENTFUL_ENV=master gatsby develop",
     "test:backstop": "backstop test",
     "release": "standard-version && git push --follow-tags",

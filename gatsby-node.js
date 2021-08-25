@@ -152,4 +152,10 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { vvInfo, teamId: vvInfo ? vvInfo.id : 'none', contentfulPloeg },
     })
   })
+
+  createPage({
+    path: `/info/kalender`,
+    component: require.resolve(`./src/templates/kalender.js`),
+    context: { clubId: '8179' },
+  })
 }
