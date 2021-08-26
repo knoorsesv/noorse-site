@@ -75,6 +75,7 @@ export const Navbar = ({ pageHasCoverPhoto = false, siteMap }) => {
   // it should be possible to do this cleaner + query could happen outside of navbar component to keep it cleaner / dumber
   const infoPageSiteMaps = allPages.allSitePage.nodes
     .filter((node) => node.path.includes('info'))
+    .filter((node) => !node.path.includes('realisaties'))
     .map((node) => ({
       name: node.path.replace('/info/', '').replace('/', ''),
       link: node.path,
