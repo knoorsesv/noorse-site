@@ -157,17 +157,22 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  console.log('creating kalender', process.env.NODE_ENV)
+
   createPage({
     path: `/info/kalender`,
     component: require.resolve(`./src/templates/kalender.js`),
     context: {
       clubId: '8179',
-      startDate: format(
-        startOfWeek(new Date(), { weekStartsOn: 1 }),
-        'yyyy/MM/dd'
-      ),
+      startDate:
+        process.env.PROD === 'true'
+          ? format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy/MM/dd')
+          : '2021/08/20',
       // moving end of week by a day because vv api sucks and it doesnt include matches on the endDate
-      endDate: format(endOfWeek(new Date(), { weekStartsOn: 2 }), 'yyyy/MM/dd'),
+      endDate:
+        process.env.PROD === 'true'
+          ? format(endOfWeek(new Date(), { weekStartsOn: 2 }), 'yyyy/MM/dd')
+          : '2021/08/26',
     },
   })
 }
