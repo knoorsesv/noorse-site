@@ -99,7 +99,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: gvdp/backstop-testing/run-backstop-test@main
+      - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
           URL_TO_REPLACE: 'http://localhost:8000'
