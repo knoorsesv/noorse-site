@@ -1,16 +1,15 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import ctl from '@netlify/classnames-template-literals'
+import { coverSectionHeight } from './navbar'
 
-export const CoverImage = ({ children, className }) => {
+export const CoverImage = ({ children }) => {
   const image = useStaticQuery(graphql`
     query {
-      lucht: allContentfulAsset(filter: { title: { eq: "Noorse luchtfoto" } }) {
+      allContentfulAsset(filter: { title: { eq: "Noorse luchtfoto" } }) {
         nodes {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
@@ -23,16 +22,17 @@ export const CoverImage = ({ children, className }) => {
   }
 
   return (
-    <Img
+    <GatsbyImage
+      image={image.allContentfulAsset.nodes[0].gatsbyImageData}
       id={'background-image'}
-      alt={'background image'}
-      fluid={image.lucht.nodes[0].fluid}
-      className={ctl(`${className} absolute w-full`)}
-      fadeIn={process.env.PROD === 'true'}
-      imgStyle={{ objectFit: 'cover', objectPosition: 'center' }}
+      alt={'Luchtfoto Noorse velden'}
+      loading={'eager'}
+      className={ctl(`${coverSectionHeight} absolute w-full`)}
+      objectFit="cover"
+      objectPosition="center"
       onLoad={callLoaded}
     >
       {children}
-    </Img>
+    </GatsbyImage>
   )
 }

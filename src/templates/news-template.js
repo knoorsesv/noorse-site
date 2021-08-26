@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Helmet } from 'react-helmet'
 import { ContentfulJsonContent } from '../components/contentful-content'
 import { createSnippetFromContentArray } from '../components/snippet'
@@ -31,18 +31,18 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         {newsNode.image && (
           <meta
             property="og:image"
-            content={`https:${newsNode.image.fluid.src}`}
+            content={`https:${newsNode.image.gatsbyImageData.images.fallback.src}`}
           />
         )}
       </Helmet>
       <Container>
         <Title>{newsNode.title}</Title>
         {newsNode.showImageOnPage && (
-          <Img
-            fluid={newsNode.image.fluid}
+          <GatsbyImage
+            image={newsNode.image.gatsbyImageData}
             alt={'News Image'}
             style={{ maxHeight: '300px' }}
-            imgStyle={{ objectFit: 'contain' }}
+            objectFit={'contain'}
             onLoad={callLoaded}
           />
         )}
@@ -65,6 +65,7 @@ const Images = ({ images }) => {
   )
 }
 const NewsImage = (image) => {
+  //todo: make this a gatsby image
   return <img key={image.file.url} src={image.file.url} alt={image.title} />
 }
 

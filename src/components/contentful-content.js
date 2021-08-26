@@ -32,7 +32,7 @@ const node = (nodeWithType, index) => {
 
   if (nodeWithType.nodeType === 'hyperlink') {
     return (
-      <ExternalLink url={nodeWithType.data.uri} icon={false}>
+      <ExternalLink url={nodeWithType.data.uri} icon={false} key={index}>
         {nodeWithType.content[0].value}
       </ExternalLink>
     )
