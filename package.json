@@ -62,7 +62,7 @@
     "react-typography": "0.16.20",
     "tailwindcss": "2.2.7",
     "tailwindcss-elevation": "1.0.1",
-    "typography": "0.16.19",
+    "typography": "0.16.21",
     "use-query-params": "^1.2.3"
   },
   "devDependencies": {
