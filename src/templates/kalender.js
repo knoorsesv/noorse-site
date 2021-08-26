@@ -39,17 +39,16 @@ export const query = graphql`
 `
 
 const KalenderPage = ({ data }) => {
-  console.log(data)
-
-  const formatDate = (date) => {
-    return format(parseISO(date), 'eeeeee dd/MM - HH:mm', { locale: nlBE })
+  const day = (date) => {
+    return format(parseISO(date), 'eeeeee', { locale: nlBE })
+  }
+  const date = (date) => {
+    return format(parseISO(date), 'dd/MM', { locale: nlBE })
   }
 
-  // console.log(format(new Date(), 'yyyy/MM/dd'))
-  console.log(
-    format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy/MM/dd')
-  )
-  console.log(format(endOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy/MM/dd'))
+  const hour = (date) => {
+    return format(parseISO(date), 'HH:mm', { locale: nlBE })
+  }
   return (
     <Layout>
       <Helmet>
@@ -58,24 +57,73 @@ const KalenderPage = ({ data }) => {
       <Container>
         <Title>Kalender</Title>
         <SubTitle>Wedstrijden deze week</SubTitle>
-        <table>
+        <table className={'border-collapse'}>
           <tbody>
             {data.vv.clubMatchesAssignations.map((game) => {
               return (
-                <tr key={game.id}>
-                  <td>{formatDate(game.startDate)}</td>
-                  <td>{game.title}</td>
-                  <td>{titleCase(game.homeTeam.name)}</td>
-                  <td>-</td>
-                  <td>{titleCase(game.awayTeam.name)}</td>
-                </tr>
+                <React.Fragment>
+                  <tr key={game.id} className={'lg:hidden'}>
+                    <td
+                      className={
+                        'w-2/5 font-bold underline border-none sm:hidden'
+                      }
+                    >
+                      {date(game.startDate)} {hour(game.startDate)}
+                    </td>
+                    <td
+                      className={
+                        'hidden sm:table-cell pl-0 font-bold underline border-none'
+                      }
+                    >
+                      {day(game.startDate)} {date(game.startDate)} -{' '}
+                      {hour(game.startDate)}
+                    </td>
+                    <td className={'border-none'}></td>
+                  </tr>
+                  <tr className={'lg:hidden'}>
+                    <td className={'border-none py-1'}>{game.title}</td>
+                    <td className={'border-none py-1'}>
+                      {titleCase(game.awayTeam.name)}
+                    </td>
+                  </tr>
+                  <tr className={'lg:hidden'}>
+                    <td className={''} />
+                    <td className={'py-1'}>{titleCase(game.homeTeam.name)}</td>
+                  </tr>
+
+                  <tr key={game.id} className={'hidden lg:table-row xl:hidden'}>
+                    <td
+                      colSpan={3}
+                      className={'font-bold underline border-none'}
+                    >
+                      {day(game.startDate)} {date(game.startDate)}
+                    </td>
+                  </tr>
+                  <tr className={'hidden lg:table-row xl:hidden'}>
+                    <td className={''}>{game.title}</td>
+                    <td className={''}> {hour(game.startDate)}</td>
+                    <td className={''}>
+                      {titleCase(game.homeTeam.name)} -{' '}
+                      {titleCase(game.awayTeam.name)}
+                    </td>
+                  </tr>
+
+                  <tr key={game.id} className={'hidden xl:table-row'}>
+                    <td className={'font-bold underline'}>
+                      {day(game.startDate)} {date(game.startDate)} -{' '}
+                      {hour(game.startDate)}
+                    </td>
+                    <td className={''}>{game.title}</td>
+                    <td className={''}>
+                      {titleCase(game.homeTeam.name)} -{' '}
+                      {titleCase(game.awayTeam.name)}
+                    </td>
+                  </tr>
+                </React.Fragment>
               )
             })}
           </tbody>
         </table>
-
-        {/* either make this table more expansive or just show it on the home page*/}
-        {/*<CalendarTable calendar={data.vv.clubMatchesAssignations}/>*/}
       </Container>
     </Layout>
   )

@@ -1,7 +1,3 @@
-// import startOfWeek from 'date-fns/startOfWeek'
-// import endOfWeek from 'date-fns/endOfWeek'
-// import { format } from 'date-fns'
-
 const startOfWeek = require('date-fns/startOfWeek')
 const endOfWeek = require('date-fns/endOfWeek')
 const format = require('date-fns/format')
