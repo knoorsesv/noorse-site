@@ -17,7 +17,6 @@
     "deploy": "netlify deploy --dir public",
     "start": "gatsby develop",
     "develop:master": "CONTENTFUL_ENV=master gatsby develop",
-    "test:backstop": "backstop test",
     "release": "standard-version && git push --follow-tags",
     "serve": "gatsby serve"
   },
