@@ -1,3 +1,7 @@
+const startOfWeek = require('date-fns/startOfWeek')
+const endOfWeek = require('date-fns/endOfWeek')
+const format = require('date-fns/format')
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -151,5 +155,24 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve(`./src/templates/team-page-template.js`),
       context: { vvInfo, teamId: vvInfo ? vvInfo.id : 'none', contentfulPloeg },
     })
+  })
+
+  console.log('creating kalender', process.env.NODE_ENV)
+
+  createPage({
+    path: `/info/kalender`,
+    component: require.resolve(`./src/templates/kalender.js`),
+    context: {
+      clubId: '8179',
+      startDate:
+        process.env.PROD === 'true'
+          ? format(startOfWeek(new Date(), { weekStartsOn: 1 }), 'yyyy/MM/dd')
+          : '2021/08/20',
+      // moving end of week by a day because vv api sucks and it doesnt include matches on the endDate
+      endDate:
+        process.env.PROD === 'true'
+          ? format(endOfWeek(new Date(), { weekStartsOn: 2 }), 'yyyy/MM/dd')
+          : '2021/08/26',
+    },
   })
 }

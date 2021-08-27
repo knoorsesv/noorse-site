@@ -97,6 +97,12 @@
       "selectors": ["document"]
     },
     {
+      "label": "Kalender Page",
+      "delay": 500,
+      "url": "http://localhost:8000/info/kalender",
+      "selectors": ["document"]
+    },
+    {
       "label": "Category Page",
       "delay": 500,
       "url": "http://localhost:8000/senioren",

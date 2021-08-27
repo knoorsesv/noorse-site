@@ -11,6 +11,6 @@ jobs:
     name: Approve Images From Test Report
     steps:
       - uses: actions/checkout@v2
-      - uses: gvdp/backstop-testing/approve-images@main
+      - uses: gvdp/backstop-testing/approve-images@v1.0.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
