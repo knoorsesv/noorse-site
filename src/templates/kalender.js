@@ -47,6 +47,7 @@ const KalenderPage = ({ data }) => {
   const hour = (date) => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
+  const games = data.vv.clubMatchesAssignations
   return (
     <Layout>
       <Helmet>
@@ -57,7 +58,7 @@ const KalenderPage = ({ data }) => {
         <SubTitle>Wedstrijden deze week</SubTitle>
         <table className={'border-collapse'}>
           <tbody>
-            {data.vv.clubMatchesAssignations.map((game) => {
+            {games.map((game, index) => {
               return (
                 <React.Fragment>
                   <tr key={game.id} className={'lg:hidden'}>
@@ -89,17 +90,25 @@ const KalenderPage = ({ data }) => {
                     <td className={'py-1'}>{titleCase(game.homeTeam.name)}</td>
                   </tr>
 
-                  <tr key={game.id} className={'hidden lg:table-row xl:hidden'}>
-                    <td
-                      colSpan={3}
-                      className={'font-bold underline border-none'}
+                  {index === 0 ||
+                  date(game.startDate) !== date(games[index - 1].startDate) ? (
+                    <tr
+                      key={game.id}
+                      className={'hidden lg:table-row xl:hidden'}
                     >
-                      {day(game.startDate)} {date(game.startDate)}
-                    </td>
-                  </tr>
+                      <td
+                        colSpan={3}
+                        className={'font-bold underline border-none'}
+                      >
+                        {day(game.startDate)} {date(game.startDate)}
+                      </td>
+                    </tr>
+                  ) : (
+                    <></>
+                  )}
                   <tr className={'hidden lg:table-row xl:hidden'}>
                     <td className={''}>{game.title}</td>
-                    <td className={''}> {hour(game.startDate)}</td>
+                    <td className={''}>{hour(game.startDate)}</td>
                     <td className={''}>
                       {titleCase(game.homeTeam.name)} -{' '}
                       {titleCase(game.awayTeam.name)}
