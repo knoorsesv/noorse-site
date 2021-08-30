@@ -6,8 +6,6 @@ import { graphql } from 'gatsby'
 import { format, parseISO } from 'date-fns'
 import { titleCase } from '../utils/formatting'
 import { nlBE } from 'date-fns/locale'
-import startOfWeek from 'date-fns/startOfWeek'
-import endOfWeek from 'date-fns/endOfWeek'
 
 export const query = graphql`
   query($clubId: ID!, $startDate: String!, $endDate: String!) {
