@@ -4,7 +4,7 @@ import { SubTitle, Title } from '../components/titles'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import { format, parseISO } from 'date-fns'
-import { titleCase } from '../utils/formatting'
+import { sanitizeTeamName } from '../utils/formatting'
 import { nlBE } from 'date-fns/locale'
 
 export const query = graphql`
@@ -82,12 +82,14 @@ const KalenderPage = ({ data }) => {
                   <tr className={'lg:hidden'}>
                     <td className={'border-none py-1'}>{game.title}</td>
                     <td className={'border-none py-1'}>
-                      {titleCase(game.awayTeam.name)}
+                      {sanitizeTeamName(game.awayTeam.name)}
                     </td>
                   </tr>
                   <tr className={'lg:hidden'}>
                     <td className={''} />
-                    <td className={'py-1'}>{titleCase(game.homeTeam.name)}</td>
+                    <td className={'py-1'}>
+                      {sanitizeTeamName(game.homeTeam.name)}
+                    </td>
                   </tr>
 
                   {index === 0 ||
@@ -110,8 +112,8 @@ const KalenderPage = ({ data }) => {
                     <td className={''}>{game.title}</td>
                     <td className={''}>{hour(game.startDate)}</td>
                     <td className={''}>
-                      {titleCase(game.homeTeam.name)} -{' '}
-                      {titleCase(game.awayTeam.name)}
+                      {sanitizeTeamName(game.homeTeam.name)} -{' '}
+                      {sanitizeTeamName(game.awayTeam.name)}
                     </td>
                   </tr>
 
@@ -122,8 +124,8 @@ const KalenderPage = ({ data }) => {
                     </td>
                     <td className={''}>{game.title}</td>
                     <td className={''}>
-                      {titleCase(game.homeTeam.name)} -{' '}
-                      {titleCase(game.awayTeam.name)}
+                      {sanitizeTeamName(game.homeTeam.name)} -{' '}
+                      {sanitizeTeamName(game.awayTeam.name)}
                     </td>
                   </tr>
                 </React.Fragment>

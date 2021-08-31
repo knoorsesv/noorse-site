@@ -1,12 +1,12 @@
 import { format, parseISO } from 'date-fns'
 import React from 'react'
-import { titleCase } from '../utils/formatting'
+import { sanitizeTeamName } from '../utils/formatting'
 
 export function CalendarTable({ calendar }) {
   function formatTeamName(team) {
     return team.name.toLowerCase().includes('noorse')
       ? 'Noorse'
-      : titleCase(team.name)
+      : sanitizeTeamName(team.name)
   }
 
   function notCancelled(game) {
