@@ -2,6 +2,7 @@ import React from 'react'
 import { Clickable } from './a11y'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import ctl from '@netlify/classnames-template-literals'
+import { Logo } from './images'
 
 export const Card = ({
   header,
@@ -27,7 +28,7 @@ export const Card = ({
       {header && (
         <div>
           {/* added block class here to override .gatsby-image-wrapper-constrained display: inline-block, not sure if it's the best solution */}
-          {image && (
+          {image ? (
             <GatsbyImage
               image={image.gatsbyImageData}
               className={'min-h-[200px] block'}
@@ -35,6 +36,8 @@ export const Card = ({
               alt={'Card Header Image'}
               objectFit={'cover'}
             />
+          ) : (
+            <Logo style={{ height: '202px' }} />
           )}
           <h2 className={titleHeaderClasses}> {header} </h2>
         </div>

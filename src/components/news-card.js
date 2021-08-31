@@ -11,7 +11,7 @@ export const NewsCard = ({ newsNode }) => {
   const goToNews = () => {
     navigate(`/nieuws/${newsNode.title}`)
   }
-
+  console.log(newsNode.image)
   return (
     <ClickableCard
       header={newsNode.title}
