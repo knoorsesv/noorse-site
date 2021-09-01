@@ -26,10 +26,12 @@ export const Card = ({
     <article {...props} className={articleClasses}>
       {header && (
         <div>
+          {/* added block class here to override .gatsby-image-wrapper-constrained display: inline-block, not sure if it's the best solution */}
           {image && (
             <GatsbyImage
               image={image.gatsbyImageData}
-              imgStyle={{ height: '202px' }}
+              className={'min-h-[200px] block'}
+              imgStyle={{ height: '200px' }}
               alt={'Card Header Image'}
               objectFit={'cover'}
             />
