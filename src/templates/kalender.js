@@ -49,7 +49,7 @@ const KalenderPage = ({ data }) => {
   }
   const games = data.vv.clubMatchesAssignations
 
-  function dayIsNotListed(index, game) {
+  function dateDiffersFromPreviousGame(index, game) {
     return (
       index === 0 || date(game.startDate) !== date(games[index - 1].startDate)
     )
@@ -63,82 +63,64 @@ const KalenderPage = ({ data }) => {
       <Container>
         <Title>Kalender</Title>
         <SubTitle>Wedstrijden deze week</SubTitle>
-        <table className={'border-collapse'}>
-          <tbody>
+        <section
+          className={'min-w-[75vw] lg:w-[75vw] lg:min-w-0 xl:max-w-full'}
+        >
+          <ul className={'list-none'}>
             {games.map((game, index) => {
               return (
                 <React.Fragment>
-                  <tr key={game.id} className={'lg:hidden'}>
-                    <td
-                      className={
-                        'w-2/5 font-bold underline border-none sm:hidden'
-                      }
-                    >
-                      {date(game.startDate)} {hour(game.startDate)}
-                    </td>
-                    <td
-                      className={
-                        'hidden sm:table-cell pl-0 font-bold underline border-none'
-                      }
-                    >
-                      {day(game.startDate)} {date(game.startDate)} -{' '}
-                      {hour(game.startDate)}
-                    </td>
-                    <td className={'border-none'}></td>
-                  </tr>
-                  <tr className={'lg:hidden'}>
-                    <td className={''} />
-                    <td className={'py-1'}>
-                      {sanitizeTeamName(game.homeTeam.name)}
-                    </td>
-                    <tr className={'lg:hidden'}>
-                      <td className={'border-none py-1'}>{game.title}</td>
-                      <td className={'border-none py-1'}>
-                        {sanitizeTeamName(game.awayTeam.name)}
-                      </td>
-                    </tr>
-                  </tr>
-
-                  {dayIsNotListed(index, game) ? (
-                    <tr
-                      key={game.id}
-                      className={'hidden lg:table-row xl:hidden'}
-                    >
-                      <td
-                        colSpan={3}
-                        className={'font-bold underline border-none'}
-                      >
+                  {dateDiffersFromPreviousGame(index, game) ? (
+                    <li className={''}>
+                      <span className={'font-bold underline border-none'}>
                         {day(game.startDate)} {date(game.startDate)}
-                      </td>
-                    </tr>
+                      </span>
+                    </li>
                   ) : (
                     <></>
                   )}
-                  <tr className={'hidden lg:table-row xl:hidden'}>
-                    <td className={''}>{game.title}</td>
-                    <td className={''}>{hour(game.startDate)}</td>
-                    <td className={''}>
-                      {sanitizeTeamName(game.homeTeam.name)} -{' '}
-                      {sanitizeTeamName(game.awayTeam.name)}
-                    </td>
-                  </tr>
 
-                  <tr key={game.id} className={'hidden xl:table-row'}>
-                    <td className={'font-bold underline'}>
-                      {day(game.startDate)} {date(game.startDate)} -{' '}
+                  <li
+                    key={game.id}
+                    className={
+                      'flex justify-between align-start w-full border-b border-gray py-1'
+                    }
+                  >
+                    <div className={'sm:my-1 lg:w-1/12'}>
                       {hour(game.startDate)}
-                    </td>
-                    <td className={''}>{game.title}</td>
-                    <td className={''}>
-                      {sanitizeTeamName(game.homeTeam.name)} -{' '}
-                      {sanitizeTeamName(game.awayTeam.name)}
-                    </td>
-                  </tr>
+                    </div>
+                    <div
+                      className={'flex flex-col w-3/4 lg:w-11/12 lg:flex-row'}
+                    >
+                      <div
+                        className={
+                          'underline sm:my-1 lg:my-0 lg:w-1/5 xl:w-1/4'
+                        }
+                      >
+                        {game.title}
+                      </div>
+                      <div
+                        className={
+                          'flex flex-col sm:flex-row sm:justify-between lg:w-3/5 xl:w-3/4'
+                        }
+                      >
+                        <div className={'sm:w-2/5'}>
+                          {sanitizeTeamName(game.homeTeam.name)}
+                        </div>
+                        <div className={'hidden sm:block px-2'}>
+                          <span>-</span>
+                        </div>
+                        <div className={'sm:w-2/5'}>
+                          {sanitizeTeamName(game.awayTeam.name)}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </React.Fragment>
               )
             })}
-          </tbody>
-        </table>
+          </ul>
+        </section>
       </Container>
     </Layout>
   )

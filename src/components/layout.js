@@ -27,7 +27,7 @@ export const Container = ({ children }) => {
     bg-gray-light 
     min-h-[75vh] h-auto w-11/12 sm:w-5/6 xl:w-3/5 
     relative`)
-  const childrenWrapper = ctl(`px-8 md:px-10 lg:px-20 
+  const childrenWrapper = ctl(`px-4 md:px-10 lg:px-20 
                               pt-4
                               max-w-full`)
   return (
