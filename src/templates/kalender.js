@@ -48,6 +48,13 @@ const KalenderPage = ({ data }) => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
   const games = data.vv.clubMatchesAssignations
+
+  function dayIsNotListed(index, game) {
+    return (
+      index === 0 || date(game.startDate) !== date(games[index - 1].startDate)
+    )
+  }
+
   return (
     <Layout>
       <Helmet>
@@ -80,20 +87,19 @@ const KalenderPage = ({ data }) => {
                     <td className={'border-none'}></td>
                   </tr>
                   <tr className={'lg:hidden'}>
-                    <td className={'border-none py-1'}>{game.title}</td>
-                    <td className={'border-none py-1'}>
-                      {sanitizeTeamName(game.awayTeam.name)}
-                    </td>
-                  </tr>
-                  <tr className={'lg:hidden'}>
                     <td className={''} />
                     <td className={'py-1'}>
                       {sanitizeTeamName(game.homeTeam.name)}
                     </td>
+                    <tr className={'lg:hidden'}>
+                      <td className={'border-none py-1'}>{game.title}</td>
+                      <td className={'border-none py-1'}>
+                        {sanitizeTeamName(game.awayTeam.name)}
+                      </td>
+                    </tr>
                   </tr>
 
-                  {index === 0 ||
-                  date(game.startDate) !== date(games[index - 1].startDate) ? (
+                  {dayIsNotListed(index, game) ? (
                     <tr
                       key={game.id}
                       className={'hidden lg:table-row xl:hidden'}
