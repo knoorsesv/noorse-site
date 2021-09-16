@@ -74,6 +74,7 @@ module.exports = {
       options: {
         defaults: {
           placeholder: `tracedSVG`,
+          // breakpoints: [750, 1080, 1366, 1920],
         },
       },
     },
