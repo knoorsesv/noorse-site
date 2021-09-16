@@ -104,6 +104,8 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
+        with:
+          backstop-version: 5.3.7
         env:
           BASE_URL: ${{needs.build-dev.outputs.dev-url}}
           URL_TO_REPLACE: 'http://localhost:8000'
