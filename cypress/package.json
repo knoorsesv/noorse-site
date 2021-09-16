@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:test": "cypress run"
+    "test-watch": "cypress open",
+    "test": "cypress run"
   },
   "dependencies": {
-    "cypress": "^7.5.0",
+    "cypress": "8.3.1",
     "cypress-pipe": "2.0.0"
   }
 }

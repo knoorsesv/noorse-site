@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Logo } from './images'
 import { ExternalLink } from './text'
-import { siteMap as defaultSiteMap, webshopLink } from '../env/constants'
+import { siteMap, webshopLink } from '../env/constants'
 import { CoverImage } from './cover-image'
 import ctl from '@netlify/classnames-template-literals'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p sm:h-80p'
-const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
+export const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
 
 const pagesQuery = graphql`
   query {
@@ -50,85 +50,24 @@ const NavSection = ({
   w-full static`)
   return (
     <section ref={ref} id="nav-container" className={navContainerClasses}>
-      {pageHasCoverPhoto ? (
-        <CoverImage className={coverSectionHeight} />
-      ) : (
-        <></>
-      )}
+      {pageHasCoverPhoto ? <CoverImage /> : <></>}
       {children}
     </section>
   )
 }
 
-export const Navbar = ({ pageHasCoverPhoto = false, siteMap }) => {
-  const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
-  const [sideBarMenuShown, setMenuShown] = useState(false)
-
-  const toggleMenuShown = () => {
-    setMenuShown(!sideBarMenuShown)
-  }
-
-  const allPages = useStaticQuery(pagesQuery)
-
-  siteMap = siteMap || defaultSiteMap
-
-  // it should be possible to do this cleaner + query could happen outside of navbar component to keep it cleaner / dumber
-  const infoPageSiteMaps = allPages.allSitePage.nodes
-    .filter((node) => node.path.includes('info'))
-    .map((node) => ({
-      name: node.path.replace('/info/', '').replace('/', ''),
-      link: node.path,
-    }))
-  siteMap.items.find((item) => item.name === 'Info').subItems = [
-    ...infoPageSiteMaps,
-    {
-      name: 'Webshop',
-      extLink: webshopLink,
-    },
-  ].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
-
-  const navClasses = `
-  ${transition}
-  fixed w-full
-  pr-4
-  ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
-  `
-  return (
-    <React.Fragment>
-      <NavSection
-        topMenuBarShown={topMenuBarShown}
-        pageHasCoverPhoto={pageHasCoverPhoto}
-        setTopMenuBarShown={setTopMenuBarShown}
-      >
-        <nav className={navClasses}>
-          <MenuItemList
-            topMenuBarShown={topMenuBarShown}
-            sideBarMenuShown={sideBarMenuShown}
-            siteMap={siteMap}
-          />
-        </nav>
-        <MenuLogo topMenuBarShown={topMenuBarShown} />
-        <MenuToggle
-          clickBurger={toggleMenuShown}
-          sideBarMenuShown={sideBarMenuShown}
-          topMenuBarShown={topMenuBarShown}
-        />
-      </NavSection>
-    </React.Fragment>
-  )
-}
 const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   const ulClasses = ctl(`
   fixed top-0 
+  list-none z-50
   flex flex-col lg:flex-row lg:justify-end lg:items-center
   space-y-3 lg:space-y-0
   pt-16 pr-4 lg:pr-6
   w-1/2 sm:w-2/5 
-  list-none z-50
   ${transition}
   ${
     sideBarMenuShown
-      ? 'h-full lg:h-80p bg-green opacity-100 right-0 lg:w-full lg:py-1'
+      ? 'h-full bg-green opacity-100 right-0'
       : 'opacity-0 -right-1/2 lg:right-0'
   }
   ${
@@ -137,24 +76,32 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
       : 'lg:right-0 lg:w-auto lg:h-16 lg:top-6 lg:pt-0 lg:pl-5 lg:opacity-90 lg:bg-green'
   }
   `)
+  const navClasses = ctl(`
+  ${transition}
+  fixed w-full
+  pr-4
+  ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
+  `)
 
   return (
-    <ul id="menu-list" className={ulClasses}>
-      {siteMap.items.map((item) => {
-        const liClasses = ctl(`text-right lg:text-center
+    <nav className={navClasses}>
+      <ul id="menu-list" className={ulClasses}>
+        {siteMap.items.map((item) => {
+          const liClasses = ctl(`text-right lg:text-center
     lg:mx-2 xl:px-3 lg:py-3
   ${transition}
   ${item.subItems && 'group'}`)
-        return (
-          <li id={'menu-item'} key={item.name} className={liClasses}>
-            <NavLink item={item} />
-            {item.subItems && (
-              <SubMenuItemList fixedToTop={topMenuBarShown} item={item} />
-            )}
-          </li>
-        )
-      })}
-    </ul>
+          return (
+            <li id={'menu-item'} key={item.name} className={liClasses}>
+              <NavLink item={item} />
+              {item.subItems && (
+                <SubMenuItemList fixedToTop={topMenuBarShown} item={item} />
+              )}
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
   )
 }
 
@@ -241,5 +188,53 @@ const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
         id="menu-hamburger"
       />
     </div>
+  )
+}
+
+export const Navbar = ({ pageHasCoverPhoto = false }) => {
+  const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
+  const [sideBarMenuShown, setMenuShown] = useState(false)
+
+  const toggleMenuShown = () => {
+    setMenuShown(!sideBarMenuShown)
+  }
+
+  const allPages = useStaticQuery(pagesQuery)
+
+  // it should be possible to do this cleaner + query could happen outside of navbar component to keep it cleaner / dumber
+  // todo: extract and unit test this
+  const infoPageSiteMaps = allPages.allSitePage.nodes
+    .filter((node) => node.path.includes('info'))
+    .map((node) => ({
+      name: node.path.replace('/info/', '').replace('/', ''),
+      link: node.path,
+    }))
+
+  siteMap.items.find((item) => item.name === 'Info').subItems = [
+    ...infoPageSiteMaps,
+    {
+      name: 'Webshop',
+      extLink: webshopLink,
+    },
+  ].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
+
+  return (
+    <NavSection
+      topMenuBarShown={topMenuBarShown}
+      pageHasCoverPhoto={pageHasCoverPhoto}
+      setTopMenuBarShown={setTopMenuBarShown}
+    >
+      <MenuItemList
+        topMenuBarShown={topMenuBarShown}
+        sideBarMenuShown={sideBarMenuShown}
+        siteMap={siteMap}
+      />
+      <MenuLogo topMenuBarShown={topMenuBarShown} />
+      <MenuToggle
+        clickBurger={toggleMenuShown}
+        sideBarMenuShown={sideBarMenuShown}
+        topMenuBarShown={topMenuBarShown}
+      />
+    </NavSection>
   )
 }

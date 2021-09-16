@@ -1,8 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { EmailLink, ExternalLink } from './text'
-import Img from 'gatsby-image'
-import LazyLoad from 'react-lazyload'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Title } from './titles'
 import { Logo } from './images'
 import { ContactInfo } from './contact'
@@ -11,35 +10,41 @@ import ctl from '@netlify/classnames-template-literals'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
-    <LazyLoad once={true} key={sponsorNode.naam}>
-      <div className={`max-w-[30%] p-2 ${logoWidth}`}>
-        <ExternalLink url={sponsorNode.websiteUrl} styled={false} icon={false}>
-          <Img
-            fluid={sponsorNode.logo.localFile.childImageSharp.fluid}
-            alt={'logo'}
-            imgStyle={{ objectFit: 'scale-down' }}
-          />
-        </ExternalLink>
-      </div>
-    </LazyLoad>
+    <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsorNode.naam}>
+      <ConditionalWrapper
+        condition={!!sponsorNode.websiteUrl}
+        wrapper={(children) => (
+          <ExternalLink
+            url={sponsorNode.websiteUrl}
+            styled={false}
+            icon={false}
+          >
+            {children}
+          </ExternalLink>
+        )}
+      >
+        <GatsbyImage
+          image={sponsorNode.logo.gatsbyImageData}
+          alt={`Logo ${sponsorNode.naam}`}
+          objectFit={'scale-down'}
+        />
+      </ConditionalWrapper>
+    </div>
   )
 }
 
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children
+
 export const SponsorList = ({ logoWidth }) => {
   const sponsors = useStaticQuery(graphql`
-    query {
+    {
       allContentfulSponsor {
         nodes {
           naam
           websiteUrl
           logo {
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

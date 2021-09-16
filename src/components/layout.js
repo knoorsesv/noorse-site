@@ -23,7 +23,7 @@ export default Layout
 
 export const Container = ({ children }) => {
   const containerWrapperClasses = ctl(`flex flex-col items-center 
-    pt-6 sm:pt-8 md:mx-8 pb-12 
+    pt-6 sm:pt-8 md:mx-8 pb-20 
     bg-gray-light 
     min-h-[75vh] h-auto w-11/12 sm:w-5/6 xl:w-3/5 
     relative`)

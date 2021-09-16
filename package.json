@@ -18,7 +18,9 @@
     "start": "gatsby develop",
     "develop:master": "CONTENTFUL_ENV=master gatsby develop",
     "release": "standard-version && git push --follow-tags",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "test-backstop": "node backstop_data/run",
+    "approve-backstop": "backstop approve"
   },
   "husky": {
     "hooks": {
@@ -37,8 +39,8 @@
     "autoprefixer": "^10.2.3",
     "date-fns": "2.20.0",
     "gatsby": "3.12.0",
-    "gatsby-image": "3.2.0",
     "gatsby-plugin-google-analytics": "3.11.0",
+    "gatsby-plugin-image": "1.8.0",
     "gatsby-plugin-postcss": "4.2.0",
     "gatsby-plugin-react-helmet": "4.7.1",
     "gatsby-plugin-sass": "4.12.0",
