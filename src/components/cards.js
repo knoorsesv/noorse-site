@@ -5,14 +5,14 @@ import ctl from '@netlify/classnames-template-literals'
 import { Logo } from './images'
 
 export const Card = ({
-  header,
-  image,
-  children,
-  className,
-  containerClass,
-  headerHeight,
-  ...props
-}) => {
+                       header,
+                       image,
+                       children,
+                       className,
+                       containerClass,
+                       headerHeight,
+                       ...props
+                     }) => {
   const articleClasses = ctl(`${className} 
   bg-white elevation-2  
   m-auto w-full
@@ -21,7 +21,7 @@ export const Card = ({
   const titleHeaderClasses = ctl(
     `text-center p-3 m-0 uppercase break-normal ${
       headerHeight ? headerHeight : 'min-h-64p'
-    }`
+    }`,
   )
   return (
     <article {...props} className={articleClasses}>
@@ -35,9 +35,7 @@ export const Card = ({
               imgStyle={{ height: '200px' }}
               alt={'Card Header Image'}
               objectFit={'cover'}
-            />
-          ) : (
-            <Logo style={{ height: '202px' }} />
+            />) : (<Logo style={{ height: '202px' }}/>
           )}
           <h2 className={titleHeaderClasses}> {header} </h2>
         </div>

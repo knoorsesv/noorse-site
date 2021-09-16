@@ -30,6 +30,9 @@ module.exports = {
     version:
       process.env.PROD === 'true' ? process.env.npm_package_version : '0.dev',
   },
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     ...(tracking
       ? [

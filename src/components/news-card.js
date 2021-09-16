@@ -2,8 +2,21 @@ import { navigate } from 'gatsby-link'
 import React from 'react'
 import { ClickableCard, SubHeader } from './cards'
 import { createSnippetFromContentArray } from './snippet'
+import { graphql, useStaticQuery } from 'gatsby'
 
 export const NewsCard = ({ newsNode }) => {
+  const images = useStaticQuery(graphql`
+    query {
+      logo: file(name: { eq: "Logo_highres" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `)
+
   const snippet = createSnippetFromContentArray(
     JSON.parse(newsNode.body.raw).content
   )
@@ -15,7 +28,7 @@ export const NewsCard = ({ newsNode }) => {
   return (
     <ClickableCard
       header={newsNode.title}
-      image={newsNode.image}
+      image={newsNode.image || images.logo.childImageSharp}
       containerClass={'min-h-128p'}
       onClick={goToNews}
     >
