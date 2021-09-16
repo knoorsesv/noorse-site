@@ -69,9 +69,9 @@ const KalenderPage = ({ data }) => {
           <ul className={'list-none'}>
             {games.map((game, index) => {
               return (
-                <React.Fragment>
+                <React.Fragment key={game.id}>
                   {dateDiffersFromPreviousGame(index, game) ? (
-                    <li className={''}>
+                    <li className={''} key={`date-${game.id}`}>
                       <span className={'font-bold underline border-none'}>
                         {day(game.startDate)} {date(game.startDate)}
                       </span>
