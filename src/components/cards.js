@@ -27,14 +27,15 @@ export const Card = ({
       {header && (
         <div>
           {/* added block class here to override .gatsby-image-wrapper-constrained display: inline-block, not sure if it's the best solution */}
-          {image && (
-            <GatsbyImage
-              image={image.gatsbyImageData}
-              className={'min-h-[200px] block'}
-              imgStyle={{ height: '200px' }}
-              alt={'Card Header Image'}
-              objectFit={'cover'}
-            />
+          {image ? (
+            <div className={'h-[200px] text-center'}>
+              <GatsbyImage
+                image={image.gatsbyImageData}
+                alt={'Card Header Image'}
+              />
+            </div>
+          ) : (
+            <></>
           )}
           <h2 className={titleHeaderClasses}> {header} </h2>
         </div>

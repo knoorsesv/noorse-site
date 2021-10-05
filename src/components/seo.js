@@ -93,12 +93,20 @@ function Seo({ description, lang, meta, keywords, title }) {
         .concat(meta)}
     >
       <link rel="icon" href={favicon} />
-      <link rel="preconnect" href="https://images.ctfassets.net" crossorigin />
-      <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+      <link
+        rel="preconnect"
+        href="https://images.ctfassets.net"
+        crossOrigin="true"
+      />
+      <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossOrigin="true"
+      />
       <link
         rel="preconnect"
         href="https://www.google-analytics.com"
-        crossorigin
+        crossOrigin="true"
       />
     </Helmet>
   )

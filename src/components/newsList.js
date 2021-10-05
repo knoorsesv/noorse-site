@@ -1,12 +1,11 @@
-import Masonry from 'react-masonry-css'
 import { NewsCard } from './news-card'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
-export const NewsList = (breakpointColumnsObj) => {
+export const NewsList = () => {
   const newsItems = useStaticQuery(graphql`
     query {
-      allContentfulNews(sort: { fields: createdAt, order: DESC }) {
+      allContentfulNews(sort: { fields: createdAt, order: DESC }, limit: 8) {
         nodes {
           title
           body {
@@ -18,7 +17,7 @@ export const NewsList = (breakpointColumnsObj) => {
             naam
           }
           image {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(layout: CONSTRAINED, height: 200)
           }
         }
       }
@@ -26,16 +25,12 @@ export const NewsList = (breakpointColumnsObj) => {
   `)
 
   return (
-    <Masonry
-      breakpointCols={breakpointColumnsObj}
-      className="my-masonry-grid"
-      columnClassName="masonry-column"
-    >
+    <section className={'flex flex-col sm:flex-row flex-wrap'}>
       {newsItems.allContentfulNews.nodes.map((node) => (
-        <div key={node.title} className={'mb-[10px]'}>
+        <div key={node.title} className={'mb-[10px] sm:w-1/2 sm:px-2'}>
           <NewsCard newsNode={node} />
         </div>
       ))}
-    </Masonry>
+    </section>
   )
 }
