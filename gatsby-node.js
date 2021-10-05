@@ -152,6 +152,9 @@ exports.createPages = async ({ graphql, actions }) => {
       vvInfo && vvInfo.id,
       googleCalConfig
     )
+    if (!googleCalConfig) {
+      throw new Error('No Google Cal Config for ', contentfulPloeg)
+    }
     createPage({
       path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
       component: require.resolve(`./src/templates/team-page-template.js`),
