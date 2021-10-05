@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
-export const Logo = ({ className, style }) => {
+export const Logo = ({ className }) => {
   return (
     <Link
       to={'/'}
