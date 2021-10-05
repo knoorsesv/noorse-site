@@ -17,7 +17,7 @@ export const NewsList = () => {
             naam
           }
           image {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(layout: CONSTRAINED, height: 200)
           }
         }
       }

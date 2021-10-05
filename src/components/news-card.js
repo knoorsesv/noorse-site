@@ -9,9 +9,7 @@ export const NewsCard = ({ newsNode }) => {
     query {
       logo: file(name: { eq: "Logo_highres" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED, height: 200)
         }
       }
     }
@@ -24,7 +22,6 @@ export const NewsCard = ({ newsNode }) => {
   const goToNews = () => {
     navigate(`/nieuws/${newsNode.title}`)
   }
-  console.log(newsNode.image)
   return (
     <ClickableCard
       header={newsNode.title}
