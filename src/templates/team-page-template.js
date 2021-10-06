@@ -6,6 +6,8 @@ import { ExternalLink } from '../components/text'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import Helmet from 'react-helmet'
 import { CalendarTable } from '../components/game-table'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarPlus } from '@fortawesome/free-solid-svg-icons'
 
 export const query = graphql`
   query($teamId: ID!) {
@@ -35,7 +37,7 @@ export const query = graphql`
   }
 `
 
-const TeamPage = ({ pageContext: { contentfulPloeg }, data }) => {
+const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
   if (process.env.GATSBY_VV_TEST_DATA === 'on') {
     // setting some dummy data here because this info will naturally change and break tests, and this is easier than mocking the graphql api
     data.vv.teamCalendar = [
@@ -130,6 +132,19 @@ const TeamPage = ({ pageContext: { contentfulPloeg }, data }) => {
                 </section>
               )}
               <br className={'mb-4'} />
+              <div className={'my-6'}>
+                <ExternalLink
+                  url={`https://calendar.google.com/calendar/u/0/r?cid=${googleCalId}`}
+                  altText={'Google Calendar'}
+                  styled={false}
+                  icon={false}
+                >
+                  <div className={'flex flex-row items-center underline'}>
+                    <FontAwesomeIcon size="1x" icon={faCalendarPlus} />
+                    <span className={'ml-2'}>Google Calendar</span>
+                  </div>
+                </ExternalLink>
+              </div>
             </div>
           </div>
           {data.vv && data.vv.teamCalendar && (

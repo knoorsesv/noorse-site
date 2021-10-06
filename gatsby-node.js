@@ -2,6 +2,9 @@ const startOfWeek = require('date-fns/startOfWeek')
 const endOfWeek = require('date-fns/endOfWeek')
 const format = require('date-fns/format')
 const add = require('date-fns/add')
+const fs = require('fs')
+
+const calendarConfig = JSON.parse(fs.readFileSync('data/calendar-config.json'))
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -139,16 +142,25 @@ exports.createPages = async ({ graphql, actions }) => {
         (contentfulPloeg.naamOpVoetbalVlaanderen || contentfulPloeg.naam) ===
         vvTeam.name
     )
+    const googleCalConfig = calendarConfig.find(
+      (config) => config.teamName === contentfulPloeg.naam
+    )
     console.log(
       'creating team page for',
       contentfulPloeg.naam,
       contentfulPloeg.naamOpVoetbalVlaanderen,
-      vvInfo && vvInfo.id
+      vvInfo && vvInfo.id,
+      googleCalConfig
     )
     createPage({
       path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
       component: require.resolve(`./src/templates/team-page-template.js`),
-      context: { vvInfo, teamId: vvInfo ? vvInfo.id : 'none', contentfulPloeg },
+      context: {
+        vvInfo,
+        teamId: vvInfo ? vvInfo.id : 'none',
+        contentfulPloeg,
+        googleCalId: googleCalConfig && googleCalConfig.calendarId,
+      },
     })
   })
 

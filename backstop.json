@@ -35,7 +35,7 @@
       "url": "http://localhost:8000",
       "delay": 2500,
       "readyEvent": "backstopjs_ready",
-      "misMatchThreshold": "1",
+      "misMatchThreshold": "3",
       "selectors": ["viewport"]
     },
     {
@@ -44,7 +44,7 @@
       "delay": 2500,
       "readyEvent": "backstopjs_ready",
       "removeSelectors": ["section#nav-container"],
-      "misMatchThreshold": "1",
+      "misMatchThreshold": "3",
       "selectors": ["#___gatsby"]
     },
     {
@@ -55,7 +55,7 @@
       "readyEvent": "backstopjs_ready",
       "postInteractionWait": "500ms",
       "removeSelectors": ["[title=trooper-video]"],
-      "misMatchThreshold": "1",
+      "misMatchThreshold": "3",
       "selectors": ["viewport"]
     },
     {
@@ -80,6 +80,7 @@
         }
       ],
       "postInteractionWait": "500ms",
+      "misMatchThreshold": "3",
       "clickSelector": "#menu-hamburger",
       "selectors": ["viewport"]
     },
@@ -87,17 +88,20 @@
       "label": "News Page",
       "delay": 2500,
       "readyEvent": "backstopjs_ready",
+      "misMatchThreshold": "3",
       "url": "http://localhost:8000/nieuws/Nieuwe%20spelers%202020-2021/",
       "selectors": ["document"]
     },
     {
       "label": "Ploeg Page",
       "delay": 2500,
+      "misMatchThreshold": "3",
       "url": "http://localhost:8000/team/noorse%201",
       "selectors": ["document"]
     },
     {
       "label": "Kalender Page",
+      "misMatchThreshold": "3",
       "delay": 2500,
       "url": "http://localhost:8000/info/kalender",
       "selectors": ["document"]
@@ -105,23 +109,27 @@
     {
       "label": "Category Page",
       "delay": 2500,
+      "misMatchThreshold": "3",
       "url": "http://localhost:8000/senioren",
       "selectors": ["document"]
     },
     {
       "label": "Contact Page",
       "delay": 2500,
+      "misMatchThreshold": "3",
       "url": "http://localhost:8000/contact",
       "selectors": ["document"]
     },
     {
       "label": "Bestuur Page",
       "delay": 2500,
+      "misMatchThreshold": "3",
       "url": "http://localhost:8000/info/bestuur",
       "selectors": ["document"]
     },
     {
       "label": "Lidmaatschap Page",
+      "misMatchThreshold": "3",
       "delay": 2500,
       "url": "http://localhost:8000/info/lidmaatschap",
       "selectors": ["document"]
