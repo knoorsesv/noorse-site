@@ -10,7 +10,7 @@ export const CategoryTeamNavigation = ({ category, header }) => {
       <h3 className={'w-full pb-2 border-b-2 border-black text-center'}>
         {header || category.naam}
       </h3>
-      <div className={'flex flex-wrap justify-around mx-1'}>
+      <div className={'flex flex-wrap flex-start mx-1'}>
         {category.ploeg &&
           category.ploeg
             .sort((ploeg1, ploeg2) => (ploeg1.naam > ploeg2.naam ? '1' : '-1'))
@@ -18,7 +18,7 @@ export const CategoryTeamNavigation = ({ category, header }) => {
               <Link
                 key={ploeg.naam}
                 to={`/team/${ploeg.naam.toLowerCase()}`}
-                className={'text-gray-dark underline mx-3'}
+                className={'text-gray-dark underline mx-3 w-[80px]'}
               >
                 {ploeg.naam}
               </Link>
