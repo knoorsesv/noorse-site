@@ -13,7 +13,7 @@
   "license": "MIT",
   "author": "gvdp",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp _redirects public/_redirects",
     "deploy": "netlify deploy --dir public",
     "start": "gatsby develop",
     "develop:master": "CONTENTFUL_ENV=master gatsby develop",
