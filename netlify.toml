@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/quiz"
+  to = "https://docs.google.com/forms/d/1tOC5r99ikBVV0C5ZFACEWJA_vhFfYsKUAdr0HufalFE/viewform"
+  status = 301
+  force = true
