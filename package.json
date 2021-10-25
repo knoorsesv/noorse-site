@@ -51,7 +51,7 @@
     "gatsby-source-filesystem": "3.8.0",
     "gatsby-source-graphql": "3.11.0",
     "gatsby-transformer-sharp": "3.7.1",
-    "husky": "4.3.0",
+    "husky": "7.0.4",
     "node-sass": "6.0.1",
     "postcss": "^8.2.4",
     "prop-types": "15.7.2",
