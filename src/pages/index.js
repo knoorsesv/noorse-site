@@ -12,6 +12,7 @@ import { Section } from '../components/layout/section'
 import { EventsSection } from '../components/events'
 import { SportVlaanderen } from '../components/sport-vlaanderen-logo'
 import ctl from '@netlify/classnames-template-literals'
+import { Link } from 'gatsby'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -65,7 +66,11 @@ const CovidSection = ({ className }) => {
           >
             de algemene veiligheidsmaatregelen omtrent COVID-19
           </ExternalLink>{' '}
-          van kracht
+          van kracht.
+        </div>
+        <div className={'text-center'}>
+          De specifieke maatregelen vindt u{' '}
+          <Link to={'/nieuws/Nieuwe%20COVID%20maatregelen'}>hier.</Link>{' '}
         </div>
       </Card>
     </Section>
@@ -95,8 +100,8 @@ const Home = () => {
 
       <div
         className={ctl(`flex flex-col lg:grid
-        lg:gap-2 grid-cols-3 
-        md:px-12 lg:px-6 lg:mx-8 xl:mx-64        
+        lg:gap-2 grid-cols-3
+        md:px-12 lg:px-6 lg:mx-8 xl:mx-64
         lg:bg-gray-light
         `)}
         id="homepage-content"
