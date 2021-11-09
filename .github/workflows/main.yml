@@ -92,23 +92,24 @@ jobs:
           config-file: cypress.json
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
-  visual-test:
-    needs: build-dev
-    runs-on: ubuntu-latest
-    name: Backstop Test
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
-        with:
-          backstop-version: 5.3.7
-        env:
-          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-          URL_TO_REPLACE: 'http://localhost:8000'
+  #  visual-test:
+  #    needs: build-dev
+  #    runs-on: ubuntu-latest
+  #    name: Backstop Test
+  #    steps:
+  #      - uses: actions/checkout@v2
+  #        with:
+  #          ref: ${{ github.event.pull_request.head.sha }}
+  #      - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
+  #        with:
+  #          backstop-version: 5.3.7
+  #        env:
+  #          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+  #          URL_TO_REPLACE: 'http://localhost:8000'
 
   lighthouse-check:
     needs: build-prod

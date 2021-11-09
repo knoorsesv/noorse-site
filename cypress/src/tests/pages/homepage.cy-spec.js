@@ -1,12 +1,22 @@
 describe('Home Page', function () {
-  //
-  // before(() => {
-  //   cy.viewport(1800, 1800)
-  // })
-
   beforeEach(() => {
     cy.visit('/')
     //  todo: intercept background image call so it doesn't need to load every time
+  })
+
+  it('should look the same', () => {
+    cy.eyesOpen({
+      appName: 'Noorse Website',
+      testName: 'HomePage',
+    })
+
+    cy.eyesCheckWindow({
+      tag: 'Login Window',
+      target: 'window',
+      fully: true,
+    })
+
+    cy.eyesClose()
   })
 
   it('should have a webshop section containing link', () => {
