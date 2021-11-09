@@ -3,19 +3,6 @@ describe('Navigation', function () {
     cy.visit('/')
   })
 
-  // todo: do this on small screen too
-
-  it('should be possible to go to webshop from navbar', () => {
-    cy.contains('Info').get('#dropdown').invoke('show')
-
-    //todo: hovering doesn't really work yet, trigger hover and check next element is visible
-    cy.contains('Webshop')
-      // .should('be.visible')
-      .should('have.attr', 'target', '_blank')
-      .and('have.prop', 'href')
-      .and('equal', 'https://noorsesv.shop4clubs.eu/')
-  })
-
   it('should be possible to go to static info pages', () => {
     cy.contains('Info').get('#dropdown').invoke('show')
     cy.contains('bestuur').should('have.attr', 'href', '/info/bestuur/')
