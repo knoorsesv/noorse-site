@@ -1,44 +1,44 @@
-name: Rebuild and deploy site
-on:
-  workflow_dispatch:
-    inputs:
-      preview:
-        description: 'Use staged content'
-        required: false
-        default: 'false'
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: '0 5 * * 1'
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    name: Build PROD
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: main
-      - uses: bahmutov/npm-install@v1
-        env:
-          NODE_ENV: production
-      - run: yarn build
-        env:
-          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
-          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
-          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
-          CONTENTFUL_PREVIEW: ${{ github.event.inputs.preview }}
-          PROD: true
-          GA_TRACKING_ID: ${{secrets.GA_TRACKING_ID}}
-          TRACKING: true
-      - name: deploy
-        uses: nwtgck/actions-netlify@v1
-        with:
-          publish-dir: './public'
-          production-deploy: ${{ github.event.inputs.preview != 'true' }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: 'Deploy ${{ github.ref }}'
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+#name: Rebuild and deploy site
+#on:
+#  workflow_dispatch:
+#    inputs:
+#      preview:
+#        description: 'Use staged content'
+#        required: false
+#        default: 'false'
+#  push:
+#    branches:
+#      - main
+#  schedule:
+#    - cron: '0 5 * * 1'
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    name: Build PROD
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          ref: main
+#      - uses: bahmutov/npm-install@v1
+#        env:
+#          NODE_ENV: production
+#      - run: yarn build
+#        env:
+#          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+#          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
+#          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+#          CONTENTFUL_PREVIEW: ${{ github.event.inputs.preview }}
+#          PROD: true
+#          GA_TRACKING_ID: ${{secrets.GA_TRACKING_ID}}
+#          TRACKING: true
+#      - name: deploy
+#        uses: nwtgck/actions-netlify@v1
+#        with:
+#          publish-dir: './public'
+#          production-deploy: ${{ github.event.inputs.preview != 'true' }}
+#          github-token: ${{ secrets.GITHUB_TOKEN }}
+#          deploy-message: 'Deploy ${{ github.ref }}'
+#        env:
+#          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
