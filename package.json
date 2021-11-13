@@ -20,13 +20,9 @@
     "release": "standard-version && git push --follow-tags",
     "serve": "gatsby serve",
     "test-backstop": "node backstop_data/run",
-    "approve-backstop": "backstop approve"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "approve-backstop": "backstop approve",
+    "lint": "pretty-quick --staged",
+    "lint-commit": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "dependencies": {
     "@babel/preset-env": "^7.15.0",
