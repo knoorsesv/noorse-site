@@ -1,11 +1,11 @@
 import { NewsCard } from './news-card'
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
-export const NewsList = () => {
+export const NewsList = ({ maxItems }) => {
   const newsItems = useStaticQuery(graphql`
     query {
-      allContentfulNews(sort: { fields: createdAt, order: DESC }, limit: 8) {
+      allContentfulNews(sort: { fields: createdAt, order: DESC }) {
         nodes {
           title
           body {
@@ -23,14 +23,25 @@ export const NewsList = () => {
       }
     }
   `)
-
+  const shownNewsItems = !!maxItems
+    ? newsItems.allContentfulNews.nodes.slice(0, maxItems)
+    : newsItems.allContentfulNews.nodes
   return (
     <section className={'flex flex-col sm:flex-row flex-wrap'}>
-      {newsItems.allContentfulNews.nodes.map((node) => (
+      {shownNewsItems.map((node) => (
         <div key={node.title} className={'mb-[10px] sm:w-1/2 sm:px-2'}>
           <NewsCard newsNode={node} />
         </div>
       ))}
+      <div className={'w-full flex justify-center my-4 text-xl'}>
+        {!!maxItems ? (
+          <Link className={'font-bold text-black'} to={'info/nieuws'}>
+            ...
+          </Link>
+        ) : (
+          <></>
+        )}
+      </div>
     </section>
   )
 }
