@@ -93,6 +93,14 @@
       "selectors": ["document"]
     },
     {
+      "label": "All News Overview Page",
+      "delay": 2500,
+      "readyEvent": "backstopjs_ready",
+      "misMatchThreshold": "3",
+      "url": "http://localhost:8000/info/nieuws/",
+      "selectors": ["document"]
+    },
+    {
       "label": "Ploeg Page",
       "delay": 2500,
       "misMatchThreshold": "3",

@@ -78,15 +78,10 @@ const CovidSection = ({ className }) => {
 }
 
 const NieuwsSection = ({ className }) => {
-  const newsListBreakPoints = {
-    default: 3,
-    1600: 2,
-    600: 1,
-  }
   return (
     <Section id="news-list" className={className}>
       <SectionTitle>Nieuws</SectionTitle>
-      {NewsList(newsListBreakPoints)}
+      <NewsList maxItems={6} />
     </Section>
   )
 }

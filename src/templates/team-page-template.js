@@ -80,7 +80,6 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
       </Helmet>
       <Container>
         <Title>{contentfulPloeg.naam}</Title>
-
         <div className={'flex flex-col lg:grid lg:grid-cols-3'}>
           <div className={'flex flex-col lg:grid-col-1'}>
             <div className={'flex flex-col items-center'}>
