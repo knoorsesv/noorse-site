@@ -134,7 +134,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  console.log('teams op vv', vvTeams.data.vv.clubTeams)
+  // console.log('teams op vv', vvTeams.data.vv.clubTeams)
 
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
     const vvInfo = vvTeams.data.vv.clubTeams.find(
@@ -147,10 +147,10 @@ exports.createPages = async ({ graphql, actions }) => {
     )
     console.log(
       'creating team page for',
-      contentfulPloeg.naam,
-      contentfulPloeg.naamOpVoetbalVlaanderen,
-      vvInfo && vvInfo.id,
-      googleCalConfig
+      contentfulPloeg.naam
+      // contentfulPloeg.naamOpVoetbalVlaanderen,
+      // vvInfo && vvInfo.id,
+      // googleCalConfig
     )
     createPage({
       path: `/team/${contentfulPloeg.naam.toLowerCase()}`,

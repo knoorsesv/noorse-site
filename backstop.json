@@ -87,7 +87,6 @@
     {
       "label": "News Page",
       "delay": 2500,
-      "readyEvent": "backstopjs_ready",
       "misMatchThreshold": "3",
       "url": "http://localhost:8000/nieuws/Nieuwe%20spelers%202020-2021/",
       "selectors": ["document"]
@@ -95,7 +94,6 @@
     {
       "label": "All News Overview Page",
       "delay": 2500,
-      "readyEvent": "backstopjs_ready",
       "misMatchThreshold": "3",
       "url": "http://localhost:8000/info/nieuws/",
       "selectors": ["document"]
@@ -155,7 +153,7 @@
   "engineOptions": {
     "args": ["--no-sandbox"]
   },
-  "asyncCaptureLimit": 5,
+  "asyncCaptureLimit": 3,
   "asyncCompareLimit": 50,
   "debug": false,
   "debugWindow": false
