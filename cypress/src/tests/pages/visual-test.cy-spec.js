@@ -1,4 +1,4 @@
-describe('Visual Test', function () {
+describe.skip('Visual Test', function () {
   beforeEach(() => {
     cy.eyesOpen({
       appName: 'Noorse Website',

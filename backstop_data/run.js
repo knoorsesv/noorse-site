@@ -1,6 +1,6 @@
 const backstop = require('backstopjs')
 const customConfig = require('../backstop.json')
-const baseUrl = 'http://host.docker.internal:8000'
+const baseUrl = 'http://host.docker.internal:9000'
 
 customConfig.scenarios.forEach((scenario) => {
   scenario.url = scenario.url.replace('http://localhost:8000', baseUrl)
