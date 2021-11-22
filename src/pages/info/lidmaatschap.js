@@ -13,13 +13,12 @@ import { Helmet } from 'react-helmet'
 const LidMaatschapPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(
-        filter: { name: { eq: "Inschrijvingsbrief_K._Noorse_SV_-_2021-2022" } }
+      inschrijvingsBrief: allContentfulAsset(
+        filter: { title: { eq: "InschrijvingsbriefJeugdNoorse2021" } }
       ) {
-        edges {
-          node {
-            publicURL
-            name
+        nodes {
+          localFile {
+            url
           }
         }
       }
@@ -134,7 +133,7 @@ const LidMaatschapPage = () => {
 
         <SubTitle>Extra Info Jeugd</SubTitle>
         <TextBlock>
-          <a href={data.allFile.edges[0].node.publicURL} download>
+          <a href={data.inschrijvingsBrief.nodes[0].localFile.url} download>
             Inschrijvingsbrief Jeugd Jongens K. Noorse SV – 2021-2022
           </a>
           <br />

@@ -3,17 +3,8 @@ export const webshopLink = 'https://noorsesv.shop4clubs.eu/'
 export const siteMap = {
   items: [
     { name: 'Home', link: '/' },
-    {
-      name: 'Info',
-      subItems: [],
-    },
-    {
-      name: 'Senioren',
-      subItems: [
-        { name: 'Ploegen', link: '/senioren' },
-        { name: 'Voorbereiding', link: '/senioren/voorbereiding' },
-      ],
-    },
+    { name: 'Info', subItems: [] },
+    { name: 'Senioren', link: '/senioren' },
     { name: 'Jeugd', link: '/jeugd' },
     { name: 'Dames', link: '/dames' },
     { name: 'Meisjes', link: '/meisjes' },

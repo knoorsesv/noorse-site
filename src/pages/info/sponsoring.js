@@ -8,11 +8,12 @@ import { Helmet } from 'react-helmet'
 const SponsoringPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { name: { eq: "SponsoringNoorse-20192020" } }) {
-        edges {
-          node {
-            publicURL
-            name
+      sponsorFolder: allContentfulAsset(
+        filter: { title: { eq: "SponsoringNoorse-20192020" } }
+      ) {
+        nodes {
+          localFile {
+            url
           }
         }
       }
@@ -57,7 +58,7 @@ const SponsoringPage = () => {
           hebben wij u nodig.
         </TextBlock>
         <TextBlock>
-          <a href={data.allFile.edges[0].node.publicURL} download>
+          <a href={data.sponsorFolder.nodes[0].localFile.url} download>
             Sponsor brochure
           </a>
         </TextBlock>
