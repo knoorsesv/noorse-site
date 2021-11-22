@@ -80,8 +80,8 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
       </Helmet>
       <Container>
         <Title>{contentfulPloeg.naam}</Title>
-        <div className={'flex flex-col lg:grid lg:grid-cols-3'}>
-          <div className={'flex flex-col lg:grid-col-1'}>
+        <div className={'flex flex-col large:grid large:grid-cols-3'}>
+          <div className={'flex flex-col large:grid-col-1'}>
             <div className={'flex flex-col items-center'}>
               {contentfulPloeg.coach && (
                 <section className={'flex flex-col items-center'}>
@@ -147,7 +147,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
             </div>
           </div>
           {data.vv && data.vv.teamCalendar && (
-            <section className={'mt-6 lg:mt-0 lg:col-span-2'}>
+            <section className={'mt-6 large:mt-0 large:col-span-2'}>
               <SubTitle>Kalender</SubTitle>
               <CalendarTable calendar={data.vv.teamCalendar} />
             </section>

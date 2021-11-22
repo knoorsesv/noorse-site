@@ -12,14 +12,14 @@ export const Card = ({
   headerHeight,
   ...props
 }) => {
-  const articleClasses = ctl(`${className} 
-  bg-white elevation-2  
+  const articleClasses = ctl(`${className}
+  bg-white elevation-2
   m-auto w-full
   `)
 
   const titleHeaderClasses = ctl(
     `text-center p-3 m-0 uppercase break-normal ${
-      headerHeight ? headerHeight : 'min-h-64p'
+      headerHeight ? headerHeight : 'h-[88px]'
     }`
   )
   return (

@@ -27,9 +27,9 @@ export const NewsList = ({ maxItems }) => {
     ? newsItems.allContentfulNews.nodes.slice(0, maxItems)
     : newsItems.allContentfulNews.nodes
   return (
-    <section className={'flex flex-col sm:flex-row flex-wrap'}>
+    <section className={'flex flex-col medium:flex-row flex-wrap'}>
       {shownNewsItems.map((node) => (
-        <div key={node.title} className={'mb-[10px] sm:w-1/2 sm:px-2'}>
+        <div key={node.title} className={'mb-[10px] medium:w-1/2 medium:px-2'}>
           <NewsCard newsNode={node} />
         </div>
       ))}

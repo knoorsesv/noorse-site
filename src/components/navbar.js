@@ -9,8 +9,8 @@ import { CoverImage } from './cover-image'
 import ctl from '@netlify/classnames-template-literals'
 
 const transition = `transition-all duration-200 ease-in`
-const menuBarHeight = 'h-64p sm:h-80p'
-export const coverSectionHeight = 'h-32v sm:h-48v lg:64v'
+const menuBarHeight = 'h-64p'
+export const coverSectionHeight = 'h-32v medium:h-48v large:64v'
 
 const pagesQuery = graphql`
   query {
@@ -45,35 +45,35 @@ const NavSection = ({
   }, [pageHasCoverPhoto, setTopMenuBarShown])
 
   const navContainerClasses = ctl(`
-  ${pageHasCoverPhoto ? coverSectionHeight : menuBarHeight} 
+  ${pageHasCoverPhoto ? coverSectionHeight : menuBarHeight}
   ${topMenuBarShown ? 'bg-green' : ''}
   w-full static`)
   return (
-    <section ref={ref} id="nav-container" className={navContainerClasses}>
+    <header ref={ref} id="nav-container" className={navContainerClasses}>
       {pageHasCoverPhoto ? <CoverImage /> : <></>}
       {children}
-    </section>
+    </header>
   )
 }
 
 const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   const ulClasses = ctl(`
-  fixed top-0 
+  fixed top-0
   list-none z-50
-  flex flex-col lg:flex-row lg:justify-end lg:items-center
-  space-y-3 lg:space-y-0
-  pt-16 pr-4 lg:pr-6
-  w-1/2 sm:w-2/5 
+  flex flex-col large:flex-row large:justify-end large:items-center
+  space-y-3 large:space-y-0
+  pt-16 pr-4 large:pr-6
+  w-1/2 medium:w-2/5
   ${transition}
   ${
     sideBarMenuShown
       ? 'h-full bg-green opacity-100 right-0'
-      : 'opacity-0 -right-1/2 lg:right-0'
+      : 'opacity-0 -right-1/2 large:right-0'
   }
   ${
     topMenuBarShown
-      ? 'h-full lg:h-80p bg-green lg:opacity-100 right-0 lg:w-full lg:py-10'
-      : 'lg:right-0 lg:w-auto lg:h-16 lg:top-6 lg:pt-0 lg:pl-5 lg:opacity-90 lg:bg-green'
+      ? 'h-full large:h-80p bg-green large:opacity-100 right-0 large:w-full large:py-10'
+      : 'large:right-0 large:w-auto large:h-16 large:top-6 large:pt-0 large:pl-5 large:opacity-90 large:bg-green'
   }
   `)
   const navClasses = ctl(`
@@ -87,8 +87,8 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
     <nav className={navClasses}>
       <ul id="menu-list" className={ulClasses}>
         {siteMap.items.map((item) => {
-          const liClasses = ctl(`text-right lg:text-center
-    lg:mx-2 xl:px-3 lg:py-3
+          const liClasses = ctl(`text-right large:text-center
+    large:mx-2 large:px-3 large:py-3
   ${transition}
   ${item.subItems && 'group'}`)
           return (
@@ -108,9 +108,9 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
 const SubMenuItemList = ({ item }) => {
   const ulClasses = ctl(`
   list-none
-  lg:hidden lg:group-hover:absolute lg:group-hover:flex
-  flex flex-col space-y-3 lg:items-start lg:-ml-1
-  w-auto lg:p-6 mr-4 lg:bg-green lg:opacity-90
+  large:hidden large:group-hover:absolute large:group-hover:flex
+  flex flex-col space-y-3 large:items-start large:-ml-1
+  w-auto large:p-6 mr-4 large:bg-green large:opacity-90
   ${transition}`)
 
   return (
@@ -163,8 +163,8 @@ const MenuLogo = ({ topMenuBarShown }) => {
        flex fixed z-20
       ${
         topMenuBarShown
-          ? `justify-start w-1/6 top-8 sm:top-32p left-16p ${menuBarHeight}`
-          : `justify-center w-full top-0 lg:w-1/2 p-2 sm:p-6 lg:p-8 ${coverSectionHeight}`
+          ? `justify-start w-1/6 top-8 left-16p ${menuBarHeight}`
+          : `justify-center w-full top-0 large:w-1/3 p-2 large:p-8 ${coverSectionHeight}`
       }     `)
   return (
     <div id="logo-container" className={logContainerClasses}>
@@ -174,9 +174,9 @@ const MenuLogo = ({ topMenuBarShown }) => {
 }
 
 const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
-  const toggleWrapperClasses = ctl(`fixed right-0 
-    lg:hidden
-    mt-4 mr-3 sm:mt-6 sm:mr-4 
+  const toggleWrapperClasses = ctl(`fixed right-0
+    large:hidden
+    mt-4 mr-3 medium:mt-6 medium:mr-4
     p-2 z-50 text-white
     ${sideBarMenuShown || topMenuBarShown ? '' : 'bg-green'} ${transition}`)
   return (

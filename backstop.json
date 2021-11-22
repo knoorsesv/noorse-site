@@ -2,29 +2,19 @@
   "id": "backstop_noorse",
   "viewports": [
     {
-      "label": "phone",
+      "label": "small",
       "width": 320,
       "height": 640
     },
     {
-      "label": "sm",
-      "width": 480,
-      "height": 906
+      "label": "medium",
+      "width": 640,
+      "height": 800
     },
     {
-      "label": "md",
-      "width": 768,
-      "height": 1152
-    },
-    {
-      "label": "lg",
+      "label": "large",
       "width": 1024,
       "height": 768
-    },
-    {
-      "label": "xl",
-      "width": 1400,
-      "height": 960
     }
   ],
   "onBeforeScript": "puppet/onBefore.js",
@@ -43,7 +33,7 @@
       "url": "http://localhost:8000",
       "delay": 2500,
       "readyEvent": "backstopjs_ready",
-      "removeSelectors": ["section#nav-container"],
+      "removeSelectors": ["header#nav-container"],
       "misMatchThreshold": "3",
       "selectors": ["#___gatsby"]
     },
@@ -64,19 +54,14 @@
       "delay": 2500,
       "viewports": [
         {
-          "label": "phone",
+          "label": "small",
           "width": 320,
           "height": 640
         },
         {
-          "label": "sm",
-          "width": 480,
-          "height": 906
-        },
-        {
-          "label": "md",
-          "width": 768,
-          "height": 1152
+          "label": "medium",
+          "width": 640,
+          "height": 800
         }
       ],
       "postInteractionWait": "500ms",

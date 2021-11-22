@@ -26,7 +26,7 @@ export const NewsCard = ({ newsNode }) => {
     <ClickableCard
       header={newsNode.title}
       image={newsNode.image || images.logo.childImageSharp}
-      containerClass={'min-h-128p'}
+      containerClass={'h-[148px]'}
       onClick={goToNews}
     >
       <SubHeader>

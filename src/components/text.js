@@ -5,7 +5,9 @@ import ctl from '@netlify/classnames-template-literals'
 
 export const TextBlock = ({ children }) => {
   return (
-    <div className={'mt-2 mb-4 sm:mb-8 font-light sm:px-6'}>{children}</div>
+    <div className={'mt-2 mb-4 medium:mb-8 font-light medium:px-6'}>
+      {children}
+    </div>
   )
 }
 
