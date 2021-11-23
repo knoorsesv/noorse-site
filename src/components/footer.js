@@ -75,22 +75,26 @@ export const Footer = () => {
 }
 
 export const ContactAndSponsorFooter = () => {
-  const wrapperClasses = ctl(`flex flex-col items-center 
-    md:flex md:flex-row md:align-center md:justify-between 
-    pt-12 pb-6 md:px-6 lg:px-20 xl:px-64 
+  const wrapperClasses = ctl(`
+    flex flex-col items-center
+    medium:flex medium:flex-row medium:align-center medium:justify-between
+    pt-12 pb-6 medium:px-6 large:px-32
     bg-green bg-opacity-75`)
 
-  const sponsorListContainer = ctl(`flex flex-col items-center md:hidden
- bg-gray-light
- w-screen py-4 md:w-2/3 lg:w-1/2`)
+  const sponsorListContainer = ctl(`flex flex-col items-center medium:hidden
+      py-4
+     bg-gray-light
+     w-screen  medium:w-2/3 large:w-1/2`)
 
-  const contactInfoWrapper =
-    'flex flex-col items-center text-center pt-8 md:p-0 md:ml-4'
+  const contactInfoWrapper = ctl(`
+      flex flex-col items-center text-center
+      pt-8 medium:p-0 medium:ml-4`)
+
   return (
     <React.Fragment>
       <div className={wrapperClasses}>
         <Title>K. Noorse S.V.</Title>
-        <div className={`w-1/4 pb-12 lg:p-6 lg:w-48`}>
+        <div className={`w-1/4 pb-12 large:p-6 large:w-48`}>
           <Logo />
         </div>
         <div className={sponsorListContainer}>
@@ -100,26 +104,30 @@ export const ContactAndSponsorFooter = () => {
           <ContactInfo />
         </div>
       </div>
-      <div className={'hidden md:block bg-gray-light w-full'}>
-        <SponsorList logoWidth={'md:w-32 lg:w-40'} />
+      <div className={'hidden medium:block bg-gray-light w-full'}>
+        <SponsorList logoWidth={'medium:w-32 large:w-40'} />
       </div>
     </React.Fragment>
   )
 }
 
 export const CopyRightFooter = () => {
-  const copyRightWrapper =
-    'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
+  const copyRightWrapper = ctl(`
+  flex flex-col justify-start items-center
+  bg-green-dark bg-opacity-75
+  text-black
+  py-3`)
+
   return (
     <div className={copyRightWrapper}>
-      <div className={'small text-center px-4'}>
+      <div className={'text-center px-4'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
         <EmailLink address={'website@noorse.be'} />
       </div>
-      <div className={'small'}>
+      <div>
         <Version /> © {new Date().getFullYear()}, K. Noorse S.V.
       </div>
-      <div className={'small'}>
+      <div>
         Powered by{' '}
         <ExternalLink textColor={'text-black'} url="https://www.gatsbyjs.org">
           Gatsby

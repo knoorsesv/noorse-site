@@ -3,16 +3,22 @@ import Layout, { Container } from '../components/layout'
 import { Title } from '../components/titles'
 import { SpacedInfo } from '../components/text'
 import { Helmet } from 'react-helmet'
+import ctl from '@netlify/classnames-template-literals'
 
 const Block = ({ children }) => {
-  const blockClass =
-    'my-3 w-full flex flex-col items-center sm:w-1/2 md:w-2/5 lg:mb-6'
+  const blockClass = ctl(`
+  flex flex-col items-center
+  my-3  large:mb-6
+  w-full medium:w-4/5
+  `)
   return <div className={blockClass}>{children}</div>
 }
 
 const ContactPage = () => {
-  const containerClasses =
-    'mb-3 lg:w-4/5 lg:m-auto flex flex-col items-center md:flex-row md:flex-wrap md:justify-between md:items-stretch lg:justify-around'
+  const containerClasses = ctl(`
+    flex flex-col items-center large:flex-row large:flex-wrap large:items-stretch large:justify-around
+    mb-3 large:m-auto
+    large:w-4/5`)
   return (
     <Layout>
       <Helmet>

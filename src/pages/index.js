@@ -92,26 +92,30 @@ const Home = () => {
       <Navbar pageHasCoverPhoto={true} />
 
       <Seo title="Home" keywords={[`noorse`]} />
-
-      <div
-        className={ctl(`flex flex-col lg:grid
-        lg:gap-2 grid-cols-3
-        md:px-12 lg:px-6 lg:mx-8 xl:mx-64
-        lg:bg-gray-light
-        `)}
-        id="homepage-content"
+      {/*todo: don't do this with a grid*/}
+      <main
+        className={'large:flex large:flex-col large:items-center large:w-full'}
       >
-        <NieuwsSection className={'lg:col-span-2 lg:row-span-4'} />
-        <WebshopSection className={'lg:row-start-1 lg:col-start-3'} />
-        <EventsSection className={'lg:row-start-2 lg:col-start-3'} />
-        <CovidSection className={'lg:row-start-3 lg:col-start-3'} />
-        <TrooperSection className={'lg:row-start-4 lg:col-start-3'} />
-        <Section className={'lg:row-start-5 lg:col-start-3'}>
-          <Card>
-            <SportVlaanderen />
-          </Card>
-        </Section>
-      </div>
+        <div
+          className={ctl(`flex flex-col large:grid
+        large:gap-2 grid-cols-3
+        medium:px-12 large:px-6 large:mx-24
+        large:bg-gray-light large:max-w-[1200px]
+        `)}
+          id="homepage-content"
+        >
+          <NieuwsSection className={'large:col-span-2 large:row-span-4'} />
+          <WebshopSection className={'large:row-start-1 large:col-start-3'} />
+          <EventsSection className={'large:row-start-2 large:col-start-3'} />
+          <CovidSection className={'large:row-start-3 large:col-start-3'} />
+          <TrooperSection className={'large:row-start-4 large:col-start-3'} />
+          <Section className={'large:row-start-5 large:col-start-3'}>
+            <Card>
+              <SportVlaanderen />
+            </Card>
+          </Section>
+        </div>
+      </main>
       <Footer />
     </div>
   )

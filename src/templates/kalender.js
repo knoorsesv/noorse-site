@@ -64,7 +64,9 @@ const KalenderPage = ({ data }) => {
         <Title>Kalender</Title>
         <SubTitle>Wedstrijden deze week</SubTitle>
         <section
-          className={'min-w-[75vw] lg:w-[75vw] lg:min-w-0 xl:max-w-full'}
+          className={
+            'min-w-[75vw] large:w-[75vw] large:min-w-0 large:max-w-full'
+          }
         >
           <ul className={'list-none'}>
             {games.map((game, index) => {
@@ -86,31 +88,33 @@ const KalenderPage = ({ data }) => {
                       'flex justify-between align-start w-full border-b border-gray py-1'
                     }
                   >
-                    <div className={'sm:my-1 lg:w-1/12'}>
+                    <div className={'medium:my-1 large:w-1/12'}>
                       {hour(game.startDate)}
                     </div>
                     <div
-                      className={'flex flex-col w-3/4 lg:w-11/12 lg:flex-row'}
+                      className={
+                        'flex flex-col w-3/4 large:w-11/12 large:flex-row'
+                      }
                     >
                       <div
                         className={
-                          'underline sm:my-1 lg:my-0 lg:w-1/5 xl:w-1/4'
+                          'underline medium:my-1 large:my-0 large:w-1/4'
                         }
                       >
                         {game.title}
                       </div>
                       <div
                         className={
-                          'flex flex-col sm:flex-row sm:justify-between lg:w-3/5 xl:w-3/4'
+                          'flex flex-col medium:flex-row medium:justify-between large:w-3/4'
                         }
                       >
-                        <div className={'sm:w-2/5'}>
+                        <div className={'medium:w-2/5'}>
                           {sanitizeTeamName(game.homeTeam.name)}
                         </div>
-                        <div className={'hidden sm:block px-2'}>
+                        <div className={'hidden medium:block px-2'}>
                           <span>-</span>
                         </div>
-                        <div className={'sm:w-2/5'}>
+                        <div className={'medium:w-2/5'}>
                           {sanitizeTeamName(game.awayTeam.name)}
                         </div>
                       </div>

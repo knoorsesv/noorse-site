@@ -31,8 +31,8 @@ const BestuursCard = ({ bestuursLid }) => {
   return (
     <Card
       header={bestuursLid.node.naam}
-      headerHeight={'min-h-32p'}
-      className={'h-48 sm:w-2/5 lg:w-1/4 lg:mx-2 my-2'}
+      headerHeight={'small'}
+      className={'h-48 medium:w-2/5 medium:mx-2 my-2'}
     >
       <div className={'text-xs'}>
         <SubHeader>
@@ -59,8 +59,8 @@ const BestuursCard = ({ bestuursLid }) => {
 const Bestuur = () => {
   const data = useStaticQuery(query)
 
-  const bestuursListClasses = ctl(`flex flex-col sm:flex-row 
-            sm:flex-wrap sm:justify-between lg:justify-center`)
+  const bestuursListClasses = ctl(`flex flex-col medium:flex-row
+            medium:flex-wrap medium:justify-between large:justify-center`)
   return (
     <Layout>
       <Helmet>

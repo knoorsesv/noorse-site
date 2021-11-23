@@ -59,7 +59,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
 
 const Images = ({ images }) => {
   return (
-    <div className={'mt-10 md:max-w-[75%] lg:max-w-1/2'}>
+    <div className={'mt-10 medium:max-w-[75%] large:max-w-1/2'}>
       {images.map(NewsImage)}
     </div>
   )

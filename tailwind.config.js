@@ -10,6 +10,10 @@ module.exports = {
     content: ['./src/**/*.js'],
   },
   theme: {
+    screens: {
+      medium: '640px',
+      large: '1024px',
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
