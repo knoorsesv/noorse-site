@@ -75,17 +75,21 @@ export const Footer = () => {
 }
 
 export const ContactAndSponsorFooter = () => {
-  const wrapperClasses = ctl(`flex flex-col items-center
+  const wrapperClasses = ctl(`
+    flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
     pt-12 pb-6 medium:px-6 large:px-32
     bg-green bg-opacity-75`)
 
   const sponsorListContainer = ctl(`flex flex-col items-center medium:hidden
- bg-gray-light
- w-screen py-4 medium:w-2/3 large:w-1/2`)
+      py-4
+     bg-gray-light
+     w-screen  medium:w-2/3 large:w-1/2`)
 
-  const contactInfoWrapper =
-    'flex flex-col items-center text-center pt-8 medium:p-0 medium:ml-4'
+  const contactInfoWrapper = ctl(`
+      flex flex-col items-center text-center
+      pt-8 medium:p-0 medium:ml-4`)
+
   return (
     <React.Fragment>
       <div className={wrapperClasses}>
@@ -108,18 +112,22 @@ export const ContactAndSponsorFooter = () => {
 }
 
 export const CopyRightFooter = () => {
-  const copyRightWrapper =
-    'flex flex-col justify-start items-center bg-green-dark text-black bg-opacity-75 py-3'
+  const copyRightWrapper = ctl(`
+  flex flex-col justify-start items-center
+  bg-green-dark bg-opacity-75
+  text-black
+  py-3`)
+
   return (
     <div className={copyRightWrapper}>
-      <div className={'small text-center px-4'}>
+      <div className={'text-center px-4'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
         <EmailLink address={'website@noorse.be'} />
       </div>
-      <div className={'small'}>
+      <div>
         <Version /> © {new Date().getFullYear()}, K. Noorse S.V.
       </div>
-      <div className={'small'}>
+      <div>
         Powered by{' '}
         <ExternalLink textColor={'text-black'} url="https://www.gatsbyjs.org">
           Gatsby
