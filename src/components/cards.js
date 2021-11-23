@@ -3,6 +3,8 @@ import { Clickable } from './a11y'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import ctl from '@netlify/classnames-template-literals'
 
+// todo: type the input
+// todo: try to get rid of custom classNames, make all cards the same
 export const Card = ({
   header,
   image,
@@ -17,10 +19,11 @@ export const Card = ({
   m-auto w-full
   `)
 
+  const headerClass = headerHeight === 'small' ? 'h-[32px]' : 'h-[88px]'
   const titleHeaderClasses = ctl(
-    `text-center p-3 m-0 uppercase break-normal ${
-      headerHeight ? headerHeight : 'h-[88px]'
-    }`
+    `text-center p-3 m-0
+    uppercase break-normal
+    ${headerClass}`
   )
   return (
     <article {...props} className={articleClasses}>

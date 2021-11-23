@@ -31,7 +31,7 @@ const BestuursCard = ({ bestuursLid }) => {
   return (
     <Card
       header={bestuursLid.node.naam}
-      headerHeight={'min-h-32p'}
+      headerHeight={'small'}
       className={'h-48 medium:w-2/5 medium:mx-2 my-2'}
     >
       <div className={'text-xs'}>
