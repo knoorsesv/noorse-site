@@ -30,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
           image {
             gatsbyImageData(layout: CONSTRAINED)
           }
+          blurb
           title
           publishDate(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
           showImageOnPage
@@ -87,26 +88,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  // const infoPages = await graphql(`
-  //   query {
-  //     allContentfulPage {
-  //       nodes {
-  //         title
-  //         content {
-  //           raw
-  //         }
-  //         attachment {
-  //           description
-  //           title
-  //           file {
-  //             url
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   news.data.allContentfulNews.nodes.forEach((newsNode) => {
     console.log('creating news page for ', newsNode.title)
     createPage({
@@ -115,15 +96,6 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { newsNode },
     })
   })
-
-  // infoPages.data.allContentfulPage.nodes.forEach((infoPage) => {
-  //   console.log('creating info page for ', infoPage.title)
-  //   createPage({
-  //     path: `/info/${infoPage.title}`,
-  //     component: require.resolve(`./src/templates/info-page-template.js`),
-  //     context: { infoPage },
-  //   })
-  // })
 
   categories.data.allContentfulCategorie.nodes.forEach((categoryNode) => {
     console.log('creating category page for', categoryNode.naam)

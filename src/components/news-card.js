@@ -15,9 +15,9 @@ export const NewsCard = ({ newsNode }) => {
     }
   `)
 
-  const snippet = createSnippetFromContentArray(
-    JSON.parse(newsNode.body.raw).content
-  )
+  const snippet =
+    newsNode.blurb ||
+    createSnippetFromContentArray(JSON.parse(newsNode.body.raw).content)
 
   const goToNews = () => {
     navigate(`/nieuws/${newsNode.title}`)
