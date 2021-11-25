@@ -25,7 +25,9 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <meta property="og:title" content={`${newsNode.title}`} />
         <meta
           property="og:description"
-          content={`${createSnippetFromContentArray(newsContentArray)}`}
+          content={`${
+            newsNode.blurb || createSnippetFromContentArray(newsContentArray)
+          }`}
         />
         $
         {newsNode.image && (

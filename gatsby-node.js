@@ -30,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
           image {
             gatsbyImageData(layout: CONSTRAINED)
           }
+          blurb
           title
           publishDate(formatString: "dddd D MMMM yyyy", locale: "nl-BE")
           showImageOnPage
@@ -86,26 +87,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
-  // const infoPages = await graphql(`
-  //   query {
-  //     allContentfulPage {
-  //       nodes {
-  //         title
-  //         content {
-  //           raw
-  //         }
-  //         attachment {
-  //           description
-  //           title
-  //           file {
-  //             url
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
   news.data.allContentfulNews.nodes.forEach((newsNode) => {
     console.log('creating news page for ', newsNode.title)

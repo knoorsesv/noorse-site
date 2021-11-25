@@ -16,6 +16,7 @@ export const NewsList = ({ maxItems }) => {
           category {
             naam
           }
+          blurb
           image {
             gatsbyImageData(layout: CONSTRAINED, height: 200)
           }
