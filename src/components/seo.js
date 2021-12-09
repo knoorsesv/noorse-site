@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet'
 import favicon from '../images/Logo_highres.png'
 import { graphql, useStaticQuery } from 'gatsby'
 
-function Seo({ description, lang, meta, keywords, title }) {
+function Seo({ description, lang, meta, title }) {
   const { site, logo } = useStaticQuery(
     graphql`
       query {
@@ -82,14 +82,7 @@ function Seo({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
       ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
+        
         .concat(meta)}
     >
       <link rel="icon" href={favicon} />
@@ -113,9 +106,8 @@ function Seo({ description, lang, meta, keywords, title }) {
 }
 
 Seo.defaultProps = {
-  lang: `en`,
+	lang: `nl`,
   meta: [],
-  keywords: [],
   description: ``,
   title: 'K. Noorse S.V.',
 }
@@ -124,7 +116,6 @@ Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  keywords: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default Seo
