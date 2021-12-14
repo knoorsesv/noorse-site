@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet'
 import favicon from '../images/Logo_highres.png'
 import { graphql, useStaticQuery } from 'gatsby'
 
-function Seo({ description, lang, meta, title }) {
+function Seo({ title }) {
   const { site, logo } = useStaticQuery(
     graphql`
       query {
@@ -34,57 +34,42 @@ function Seo({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = site.siteMetadata.description
   const logoSrc = logo.childImageSharp.resize.src
-
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:image`,
-          content: logoSrc,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
+    <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}   >
+        <meta 
+          name= "description"
+          content={ metaDescription}
+        />
+        <meta  property= "og:title"
+          content={ title}
+       /> 
+       <meta 
+          property= "og:image"
+          content={ logoSrc}
+       /> 
+       <meta 
+          property= "og:description"
+          content={ metaDescription}
+       /> 
+       <meta 
+          property= "og:type"
+          content="website"
+       /> 
+       <meta 
+          name= "twitter:title"
+          content={ title}
         
-        .concat(meta)}
-    >
+		  />
+       <meta 
+          name= "twitter:description"
+          content={ metaDescription}
+        />
+    
+		      <html lang="nl" amp />
+
+		  <title>{title}</title>
       <link rel="icon" href={favicon} />
       <link
         rel="preconnect"
@@ -103,19 +88,6 @@ function Seo({ description, lang, meta, title }) {
       />
     </Helmet>
   )
-}
-
-Seo.defaultProps = {
-	lang: `nl`,
-  meta: [],
-  description: ``,
-  title: 'K. Noorse S.V.',
-}
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default Seo
