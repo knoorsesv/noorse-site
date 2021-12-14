@@ -6,7 +6,6 @@
  */
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import favicon from '../images/Logo_highres.png'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -37,40 +36,19 @@ function Seo({ title }) {
   const metaDescription = site.siteMetadata.description
   const logoSrc = logo.childImageSharp.resize.src
   return (
-    <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}   >
-        <meta 
-          name= "description"
-          content={ metaDescription}
-        />
-        <meta  property= "og:title"
-          content={ title}
-       /> 
-       <meta 
-          property= "og:image"
-          content={ logoSrc}
-       /> 
-       <meta 
-          property= "og:description"
-          content={ metaDescription}
-       /> 
-       <meta 
-          property= "og:type"
-          content="website"
-       /> 
-       <meta 
-          name= "twitter:title"
-          content={ title}
-        
-		  />
-       <meta 
-          name= "twitter:description"
-          content={ metaDescription}
-        />
-    
-		      <html lang="nl" amp />
-
-		  <title>{title}</title>
+    <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}>
+      <html lang="nl" amp />
+      <title>{title}</title>
       <link rel="icon" href={favicon} />
+      
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:image" content={logoSrc} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+
       <link
         rel="preconnect"
         href="https://images.ctfassets.net"
