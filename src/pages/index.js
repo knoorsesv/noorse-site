@@ -91,7 +91,7 @@ const Home = () => {
     <div>
       <Navbar pageHasCoverPhoto={true} />
 
-      <Seo title="Home" keywords={[`noorse`]} />
+      <Seo title="Home" />
       {/*todo: don't do this with a grid*/}
       <main
         className={'large:flex large:flex-col large:items-center large:w-full'}

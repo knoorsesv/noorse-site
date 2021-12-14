@@ -8,7 +8,7 @@ import ctl from '@netlify/classnames-template-literals'
 const Layout = ({ children }) => {
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
-      <Seo keywords={[`noorse`]} />
+      <Seo />
 
       <Navbar />
       <div id="content" className={'min-h-[75vh] relative flex justify-center'}>
