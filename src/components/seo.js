@@ -37,7 +37,7 @@ function Seo({ title }) {
   const logoSrc = logo.childImageSharp.resize.src
   return (
     <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}>
-      <html lang="nl" amp />
+      <html lang="nl" />
       <title>{title}</title>
       <link rel="icon" href={favicon} />
       
