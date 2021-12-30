@@ -50,7 +50,7 @@ function Seo({ title }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {enableAnalytics
-      && (<script defer data-domain="noorse.be" src="https://plausible.io/js/plausible.js"></script>)
+      && (<script defer data-domain="noorse.be" data-api="/plausible/api/event" src="/plausible.js"></script>)
       }
 
       <link

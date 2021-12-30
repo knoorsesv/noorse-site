@@ -3,3 +3,13 @@
   to = "https://docs.google.com/forms/d/1tOC5r99ikBVV0C5ZFACEWJA_vhFfYsKUAdr0HufalFE/viewform"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/plausible.js" 
+  to = "https://plausible.io/js/plausible.js"
+  status = 200
+
+[[redirects]]
+  from = "/plausible/api/event" 
+  to = "https://plausible.io/api/event"
+  status = 200
