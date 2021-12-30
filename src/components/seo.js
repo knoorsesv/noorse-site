@@ -35,6 +35,7 @@ function Seo({ title }) {
 
   const metaDescription = site.siteMetadata.description
   const logoSrc = logo.childImageSharp.resize.src
+  const enableAnalytics = process.env.GATSBY_ENABLE_ANALYTICS === 'true'
   return (
     <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}>
       <html lang="nl" />
@@ -48,7 +49,9 @@ function Seo({ title }) {
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <script defer data-domain="noorse.be" src="https://plausible.io/js/plausible.js"></script>
+      {enableAnalytics
+      && (<script defer data-domain="noorse.be" src="https://plausible.io/js/plausible.js"></script>)
+      }
 
       <link
         rel="preconnect"

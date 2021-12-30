@@ -29,7 +29,6 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
             newsNode.blurb || createSnippetFromContentArray(newsContentArray)
           }`}
         />
-        $
         {newsNode.image && (
           <meta
             property="og:image"
@@ -41,7 +40,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <Title>{newsNode.title}</Title>
         {newsNode.showImageOnPage && (
           <GatsbyImage
-            image={newsNode.image.gatsbyImageData}
+            image={newsNode.image.gatsbyImageData}    
             alt={'News Image'}
             style={{ maxHeight: '300px' }}
             objectFit={'contain'}
