@@ -24,7 +24,7 @@ export function CalendarTable({ calendar }) {
   }
 
   return (
-    <table className={'w-full table-fixed border-separate text-sm large:w-4/5'}>
+    <table className={'w-full table-fixed border-separate text-sm px-2 medium:px-16 large:max-w-4/5'}>
       <tbody>
         {calendar
           .filter(notCancelled)

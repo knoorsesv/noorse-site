@@ -7,6 +7,23 @@ type Query {
 
 type SeriesAndRankings {
   series: [Series]
+  rankings: [Ranking]
+}
+
+type Ranking {
+  id: String
+  name: String
+  rankings: [RankingEntry]
+}
+
+type RankingEntry {
+  teams: [RankingTeam]
+}
+
+type RankingTeam {
+  name: String
+  position: Int
+  points: Int
 }
 
 type Series {
