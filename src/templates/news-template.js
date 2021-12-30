@@ -17,7 +17,6 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
       console.log('backstopjs_ready')
     }
   }
-
   return (
     <Layout>
       <Helmet>
@@ -38,7 +37,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
       </Helmet>
       <Container>
         <Title>{newsNode.title}</Title>
-        {newsNode.showImageOnPage && (
+        {newsNode.showImageOnPage && newsNode.image && (
           <GatsbyImage
             image={newsNode.image.gatsbyImageData}    
             alt={'News Image'}
