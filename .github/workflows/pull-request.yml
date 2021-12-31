@@ -11,6 +11,18 @@ on:
       - completed
 
 jobs:
+
+  npm:
+    runs-on: ubuntu-latest
+    name: "Download and cache npm"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - run: npm install
+
   build-prod:
     if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
     runs-on: ubuntu-latest
@@ -75,47 +87,65 @@ jobs:
     outputs:
       dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
 
-  cypress-test:
-    needs: build-dev
-    runs-on: ubuntu-latest
-    name: Cypress Test
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Install root dependencies
-        uses: bahmutov/npm-install@v1
-        env:
-          NODE_ENV: production
-        with:
-          working-directory: cypress
-      - uses: cypress-io/github-action@v2
-        with:
-          config: baseUrl=${{needs.build-dev.outputs.dev-url}}
-          record: true
-          tag: ${{ github.event_name }}
-          working-directory: cypress
-          config-file: cypress.json
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
-          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+  # cypress-test:
+  #   needs: build-dev
+  #   runs-on: ubuntu-latest
+  #   name: Cypress Test
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         ref: ${{ github.event.pull_request.head.sha }}
+  #     - name: Install root dependencies
+  #       uses: bahmutov/npm-install@v1
+  #       env:
+  #         NODE_ENV: production
+  #       with:
+  #         working-directory: cypress
+  #     - uses: cypress-io/github-action@v2
+  #       with:
+  #         config: baseUrl=${{needs.build-dev.outputs.dev-url}}
+  #         record: true
+  #         tag: ${{ github.event_name }}
+  #         working-directory: cypress
+  #         config-file: cypress.json
+  #       env:
+  #         CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  #         APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+  #         COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
+  #         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
-  visual-test:
-    needs: build-dev
+  # visual-test:
+  #   needs: build-dev
+  #   runs-on: ubuntu-latest
+  #   name: Backstop Test
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         ref: ${{ github.event.pull_request.head.sha }}
+  #     - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
+  #       with:
+  #         backstop-version: 5.3.7
+  #       env:
+  #         BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+  #         URL_TO_REPLACE: 'http://localhost:8000'
+
+
+  test:
+    needs: [build-dev, npm]
     runs-on: ubuntu-latest
-    name: Backstop Test
+    name: Test
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
-        with:
-          backstop-version: 5.3.7
-        env:
-          BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-          URL_TO_REPLACE: 'http://localhost:8000'
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'npm'
+    - name: Install operating system dependencies
+      run: npx playwright install-deps
+    - name: Run your tests
+      run: npm run test
+    env:
+      PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
   lighthouse-check:
     needs: build-prod

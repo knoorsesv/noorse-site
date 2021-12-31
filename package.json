@@ -13,7 +13,6 @@
   "license": "MIT",
   "author": "gvdp",
   "scripts": {
-    "approve-backstop": "backstop approve",
     "build": "gatsby build && cp _redirects public/_redirects",
     "deploy": "netlify deploy --dir public",
     "lint": "pretty-quick --staged",
@@ -22,7 +21,7 @@
     "serve": "gatsby serve",
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
-    "test-backstop": "node backstop_data/run"
+    "test": "playwright test"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.4",
@@ -59,7 +58,8 @@
     "tailwindcss": "^2.2.19",
     "tailwindcss-elevation": "1.0.1",
     "typography": "0.16.21",
-    "use-query-params": "^1.2.3"
+    "use-query-params": "^1.2.3",
+    "@playwright/test": "^1.17.1"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
