@@ -1,15 +1,27 @@
 const { test, expect } = require('@playwright/test')
 
-const pages = ['/', '/senioren', '/contact']
+const pages = [
+  '/',
+  '/nieuws/Nieuwe%20spelers%202020-2021/',
+  '/info/nieuws/',
+  '/team/noorse%201',
+  '/info/kalender',
+  '/senioren',
+  '/contact',
+  '/info/bestuur',
+  '/info/lidmaatschap',
+]
+
 pages.forEach(pageUrl => {
   test(`Screenshot test for ${pageUrl}`, async ({ page }) => {
     await page.goto(pageUrl)
     await page.waitForLoadState('networkidle')
 
-    // await page.locator('body').screenshot({ path: 'playwright/homepage.png' })
+    await (await page.$('#logo')).waitForElementState('stable')
+
     expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
       `screenshot-${pageUrl.replace('/', '-')}.png`,
-      { threshold: 1 }
+      { threshold: 0.5 }
     )
   })
 })

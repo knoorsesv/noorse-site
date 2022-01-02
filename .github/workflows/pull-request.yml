@@ -19,11 +19,21 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
-          cache: 'npm'
+          node-version-file: '.nvmrc'
+          # cache: npm
+      # - run: ls
+      # - run: pwd
+      - uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm install
+          # restore-keys: |
+            # ${{ runner.os }}-node-
+
 
   build-prod:
+    needs: npm
     if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
     runs-on: ubuntu-latest
     name: Build PROD
@@ -31,9 +41,16 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: bahmutov/npm-install@v1
-        env:
-          NODE_ENV: production
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+          # cache: 'npm'
+      - uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: ls
+      # - run: npm ci
       - run: npm run build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
@@ -55,6 +72,7 @@ jobs:
       prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
 
   build-dev:
+    needs: npm
     if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
     runs-on: ubuntu-latest
     name: Build DEV
@@ -62,9 +80,16 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: bahmutov/npm-install@v1
-        env:
-          NODE_ENV: production
+      # - uses: bahmutov/npm-install@v1
+      #   env:
+      #     NODE_ENV: production
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}      
       - run: npm run build
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
@@ -87,66 +112,24 @@ jobs:
     outputs:
       dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
 
-  # cypress-test:
-  #   needs: build-dev
+  # build-playwright:
   #   runs-on: ubuntu-latest
-  #   name: Cypress Test
+  #   name: Build Playwright Docker Image
   #   steps:
   #     - uses: actions/checkout@v2
-  #       with:
-  #         ref: ${{ github.event.pull_request.head.sha }}
-  #     - name: Install root dependencies
-  #       uses: bahmutov/npm-install@v1
-  #       env:
-  #         NODE_ENV: production
-  #       with:
-  #         working-directory: cypress
-  #     - uses: cypress-io/github-action@v2
-  #       with:
-  #         config: baseUrl=${{needs.build-dev.outputs.dev-url}}
-  #         record: true
-  #         tag: ${{ github.event_name }}
-  #         working-directory: cypress
-  #         config-file: cypress.json
-  #       env:
-  #         CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-  #         APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
-  #         COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
-  #         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-
-  # visual-test:
-  #   needs: build-dev
-  #   runs-on: ubuntu-latest
-  #   name: Backstop Test
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #       with:
-  #         ref: ${{ github.event.pull_request.head.sha }}
-  #     - uses: gvdp/backstop-testing/run-backstop-test@v1.0.3
-  #       with:
-  #         backstop-version: 5.3.7
-  #       env:
-  #         BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-  #         URL_TO_REPLACE: 'http://localhost:8000'
-
-
-  build-playwright:
-    runs-on: ubuntu-latest
-    name: Build Playwright Docker Image
-    steps:
-      - uses: actions/checkout@v2
-      - working-directory: ./tests
-        run: 'docker build . -t playwright-test'
+  #     - working-directory: ./tests
+  #       run: 'docker build . -t playwright-test'
   
   test:
-    needs: [build-dev, build-playwright]
+    needs: build-dev
     runs-on: ubuntu-latest
     name: Test
     steps:
     - uses: actions/checkout@v2
     - name: Run your tests
       working-directory: ./tests
-      run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
+      # todo: push docker image so it doesnt need to be rebuilt every time
+      run: 'docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
     env:
       PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
