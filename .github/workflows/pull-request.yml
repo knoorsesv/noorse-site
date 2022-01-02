@@ -130,20 +130,23 @@ jobs:
   #         URL_TO_REPLACE: 'http://localhost:8000'
 
 
+  build-playwright:
+    runs-on: ubuntu-latest
+    name: Build Playwright Docker Image
+    steps:
+      - uses: actions/checkout@v2
+      - working-directory: ./tests
+        run: 'docker build . -t playwright-test'
+  
   test:
-    needs: [build-dev, npm]
+    needs: [build-dev, build-playwright]
     runs-on: ubuntu-latest
     name: Test
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        cache: 'npm'
-    - name: Install operating system dependencies
-      run: npx playwright install-deps
     - name: Run your tests
-      run: npm run test
+      working-directory: ./tests
+      run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
     env:
       PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
