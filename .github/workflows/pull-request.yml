@@ -1,7 +1,6 @@
 name: Build and Test Website
 
 on:
-  commit:
   pull_request_target:
     branches: [main]
   pull_request:
