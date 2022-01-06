@@ -21,8 +21,8 @@
     "serve": "gatsby serve",
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
-    "test": "playwright test",
-    "test:ci": "docker run --rm --network host -v $(pwd)/tests:/work/ -w /work/ mcr.microsoft.com/playwright:v1.12.3-focal /bin/bash /work/run-test.sh"
+    "test": "start-server-and-test start http://localhost:8000 'npm run test --prefix tests'",
+    "test:ci-update": "start-server-and-test start http://localhost:8000 'npm run test:ci-update --prefix tests'"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.4",
@@ -69,7 +69,8 @@
     "prettier": "2.2.1",
     "prettier-plugin-packagejson": "^2.2.15",
     "pretty-quick": "3.1.0",
-    "standard-version": "9.0.0"
+    "standard-version": "9.0.0",
+    "start-server-and-test": "^1.14.0"
   },
   "volta": {
     "node": "14.18.2"

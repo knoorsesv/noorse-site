@@ -6,7 +6,8 @@
   "scripts": {
     "test": "playwright test",
     "test:update": "playwright test --update-snapshots",
-    "test:ci": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh"
+    "test:ci": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh",
+    "test:ci-update": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test-update.sh"
   },
   "author": "",
   "license": "ISC",
