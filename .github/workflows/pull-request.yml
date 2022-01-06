@@ -20,14 +20,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version-file: '.nvmrc'
-          # cache: npm
-      # - run: ls
-      # - run: pwd
       - uses: actions/cache@v2
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm ci
+      - run: git status
           # restore-keys: |
             # ${{ runner.os }}-node-
 
@@ -39,8 +37,8 @@ jobs:
     name: Build PROD
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        # with:
+          # ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v2
         with:
           node-version-file: '.nvmrc'
@@ -78,8 +76,8 @@ jobs:
     name: Build DEV
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        # with:
+          # ref: ${{ github.event.pull_request.head.sha }}
       # - uses: bahmutov/npm-install@v1
       #   env:
       #     NODE_ENV: production
