@@ -11,10 +11,9 @@ on:
       - completed
 
 jobs:
-
   npm:
     runs-on: ubuntu-latest
-    name: "Download and cache npm"
+    name: 'Download and cache npm'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -24,11 +23,8 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-      - run: npm ci
+      - run: npm install
       - run: git status
-          # restore-keys: |
-            # ${{ runner.os }}-node-
-
 
   build-prod:
     needs: npm
@@ -37,12 +33,15 @@ jobs:
     name: Build PROD
     steps:
       - uses: actions/checkout@v2
-        # with:
-          # ref: ${{ github.event.pull_request.head.sha }}
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v2
         with:
           node-version-file: '.nvmrc'
           # cache: 'npm'
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
       - uses: actions/cache@v2
         with:
           path: ./node_modules
@@ -76,8 +75,8 @@ jobs:
     name: Build DEV
     steps:
       - uses: actions/checkout@v2
-        # with:
-          # ref: ${{ github.event.pull_request.head.sha }}
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       # - uses: bahmutov/npm-install@v1
       #   env:
       #     NODE_ENV: production
@@ -87,7 +86,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}      
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
       - run: npm run build
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
@@ -117,17 +116,17 @@ jobs:
   #     - uses: actions/checkout@v2
   #     - working-directory: ./tests
   #       run: 'docker build . -t playwright-test'
-  
+
   test:
     needs: build-dev
     runs-on: ubuntu-latest
     name: Test
     steps:
-    - uses: actions/checkout@v2
-    - name: Run your tests
-      working-directory: ./tests
-      # todo: push docker image so it doesnt need to be rebuilt every time
-      run: 'docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
+      - uses: actions/checkout@v2
+      - name: Run your tests
+        working-directory: ./tests
+        # todo: push docker image so it doesnt need to be rebuilt every time
+        run: 'docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
     env:
       PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
