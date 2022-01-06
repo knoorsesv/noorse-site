@@ -39,9 +39,9 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           # cache: 'npm'
-      - name: Install Dependencies
-        if: steps.npm.outputs.cache-hit != 'true'
-        run: npm install
+      # - name: Install Dependencies
+      # if: steps.npm.outputs.cache-hit != 'true'
+      # run: npm install
       - uses: actions/cache@v2
         with:
           path: ./node_modules
