@@ -22,7 +22,8 @@
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
     "test": "start-server-and-test start http://localhost:8000 'npm run test --prefix tests'",
-    "test:ci-update": "start-server-and-test start http://localhost:8000 'npm run test:ci-update --prefix tests'"
+    "test:update-ci": "start-server-and-test start http://localhost:8000 'npm run test:ci-update --prefix tests'",
+    "test:update-local": "start-server-and-test start http://localhost:8000 'npm run test:update --prefix tests'"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.4",
