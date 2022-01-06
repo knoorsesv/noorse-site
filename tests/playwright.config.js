@@ -5,6 +5,7 @@ require('dotenv').config()
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
+  reporter: process.env.CI ? 'github' : [['list'], ['html', { open: 'never' }]],
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {
@@ -12,6 +13,10 @@ const config = {
     trace: 'on-first-retry',
   },
   projects: [
+    {
+      name: 'Functional',
+      testIgnore: 'screenshots.spec.js',
+    },
     {
       name: 'Desktop Chromium',
       use: {

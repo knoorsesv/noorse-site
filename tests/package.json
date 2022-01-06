@@ -2,15 +2,16 @@
   "name": "tests",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "",
   "main": "homepage.spec.js",
   "scripts": {
     "test": "playwright test",
-    "test:update": "playwright test --update-snapshots",
     "test:ci": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh",
-    "test:ci-update": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test-update.sh"
+    "test:ci-update": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test-update.sh",
+    "test:func": "playwright test --project=Functional",
+    "test:update": "playwright test --update-snapshots"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.17.1",
     "dotenv": "^10.0.0"

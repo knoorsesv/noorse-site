@@ -21,7 +21,8 @@
     "serve": "gatsby serve",
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
-    "test": "start-server-and-test start http://localhost:8000 'npm run test --prefix tests'",
+    "test:all": "start-server-and-test start http://localhost:8000 'npm run test --prefix tests'",
+    "test:func": "start-server-and-test start http://localhost:8000 'npm run test:func --prefix tests'",
     "test:update-ci": "start-server-and-test start http://localhost:8000 'npm run test:ci-update --prefix tests'",
     "test:update-local": "start-server-and-test start http://localhost:8000 'npm run test:update --prefix tests'"
   },
