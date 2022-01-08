@@ -150,6 +150,8 @@ jobs:
       - name: Pull Docker image
         # todo: maybe make it possible to already pull this image in advance to save time
         run: 'docker pull $IMAGE'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
       - name: Run your tests
         working-directory: ./tests
         run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-test.sh'
