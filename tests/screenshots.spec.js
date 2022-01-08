@@ -12,16 +12,17 @@ const pages = [
   '/info/lidmaatschap',
 ]
 
-pages.forEach(pageUrl => {
+pages.forEach((pageUrl) => {
   test(`Screenshot test for ${pageUrl}`, async ({ page }) => {
     await page.goto(pageUrl)
     await page.waitForLoadState('networkidle')
 
     await (await page.$('#logo')).waitForElementState('stable')
 
-    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
-      `screenshot-${pageUrl.replace('/', '-')}.png`,
-      { threshold: 0.5 }
-    )
+    expect(
+      await page.screenshot({ fullPage: false })
+    ).toMatchSnapshot(`screenshot-${pageUrl.replace('/', '-')}.png`, {
+      threshold: 0.8,
+    })
   })
 })
