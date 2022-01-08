@@ -23,6 +23,9 @@ const config = {
     {
       name: 'Functional',
       testIgnore: 'screenshots.spec.js',
+      use: {
+        screenshot: 'only-on-failure',
+      },
     },
     {
       name: 'Screenshot Desktop',

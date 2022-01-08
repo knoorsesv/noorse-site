@@ -11,7 +11,8 @@ test.describe('Home Page', () => {
   })
 
   test('has news items', async ({ page }) => {
-    const newsSection = page.locator('section:text-matches("Nieuws ")')
+    // todo: semantically this cannot be an h1
+    const newsSection = page.locator('section:has(h1:text-is("Nieuws"))')
     // todo: semantically this should probably be <li>
     const newsItems = newsSection.locator('article')
     const firstHeadline = newsItems.first().locator('h2')
@@ -20,9 +21,9 @@ test.describe('Home Page', () => {
       .first()
       .locator(' > div:last-of-type > div:last-of-type')
 
-    await newsSection.waitFor()
+    // await newsSection.waitFor()
 
-    expect(newsSection).toBeDefined()
+    expect(newsSection).toBeVisible()
     expect(await newsItems.count()).toEqual(6)
     expect(await firstHeadline.innerText()).toEqual('NIEUWE SPELERS 2020-2021')
     expect(await firstBlurb.innerText()).toEqual(
