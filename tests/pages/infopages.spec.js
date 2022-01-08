@@ -30,6 +30,7 @@ test.describe('All Info Pages', () => {
       /.*Structuur-2018-2019.pdf/
     )
   })
+
   test('There is a news overview page', async ({ page }) => {
     await page.goto('/info/nieuws')
     const title = page.locator('#content h1')
