@@ -128,7 +128,7 @@ jobs:
         if: ${{ failure() }}
         with:
           name: test-report
-          path: tests/playwright-report
+          path: tests/test-results
     env:
       PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
