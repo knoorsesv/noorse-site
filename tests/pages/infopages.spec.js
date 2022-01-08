@@ -30,4 +30,13 @@ test.describe('All Info Pages', () => {
       /.*Structuur-2018-2019.pdf/
     )
   })
+  test.only('There is a fairplay', async ({ page }) => {
+    await page.goto('/info/fairplay')
+    const title = page.locator('#content h1')
+    const subtitle = page.locator('#content h2')
+
+    expect(title).toHaveText('Intern fairplayreglement')
+    expect(await subtitle.count()).toEqual(18)
+    expect(subtitle.first()).toContainText('Doelstellingen van de club')
+  })
 })
