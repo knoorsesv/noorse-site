@@ -3,11 +3,12 @@
 const { devices } = require('@playwright/test')
 require('dotenv').config()
 
+console.log('running this on CI? ', process.env.CI)
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   reporter: process.env.CI
     ? 'github'
-    : [['list'], ['html', { open: 'on-failure' }]],
+    : [['list'], ['html', { open: process.env.CI ? 'never ' : 'on-failure' }]],
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {
