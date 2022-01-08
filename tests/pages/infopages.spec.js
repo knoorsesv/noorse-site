@@ -30,13 +30,37 @@ test.describe('All Info Pages', () => {
       /.*Structuur-2018-2019.pdf/
     )
   })
-  test.only('There is a fairplay', async ({ page }) => {
-    await page.goto('/info/fairplay')
+  test('There is a news overview page', async ({ page }) => {
+    await page.goto('/info/nieuws')
+    const title = page.locator('#content h1')
+    const articles = page.locator('#content article')
+
+    expect(title).toHaveText('Nieuws')
+    expect(await articles.count()).toEqual(6)
+    expect(articles.first()).toContainText('Nieuwe spelers 2020-2021')
+  })
+
+  test('There is a lidmaatschap page', async ({ page }) => {
+    await page.goto('/info/lidmaatschap')
     const title = page.locator('#content h1')
     const subtitle = page.locator('#content h2')
 
-    expect(title).toHaveText('Intern fairplayreglement')
-    expect(await subtitle.count()).toEqual(18)
-    expect(subtitle.first()).toContainText('Doelstellingen van de club')
+    expect(title).toHaveText('Lid Worden')
+    expect(subtitle.first()).toContainText('Bestaande leden')
+  })
+
+  test('There is a kalender page', async ({ page }) => {
+    await page.goto('/info/kalender')
+    const title = page.locator('#content h1')
+    const subtitle = page.locator('#content h2')
+    const lines = page.locator('#content ul li')
+
+    expect(title).toHaveText('Kalender')
+    expect(subtitle).toHaveText('Wedstrijden deze week')
+    expect(lines.first()).toHaveText('za 21/08')
+    expect(lines.nth(1)).toContainText('18:30')
+    expect(lines.nth(1)).toContainText('Beker Heren groep 3')
+    expect(lines.nth(1)).toContainText('Fc Merksem')
+    expect(lines.nth(1)).toContainText('Noorse')
   })
 })
