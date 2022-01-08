@@ -147,6 +147,9 @@ jobs:
     name: Test
     steps:
       - uses: actions/checkout@v2
+      - name: Pull Docker image
+        # todo: maybe make it possible to already pull this image in advance to save time
+        run: 'docker pull $IMAGE'
       - name: Run your tests
         working-directory: ./tests
         run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-test.sh'
