@@ -11,10 +11,10 @@ console.log(
 )
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
-  reporter: runOnCI
-    ? 'github'
-    : [['list'], ['html', { open: runOnCI ? 'never ' : 'on-failure' }]],
+  reporter: runOnCI ? 'github' : [['list'], ['html', { open: 'never' }]],
   forbidOnly: !!runOnCI,
+  timeout: 10 * 1000,
+
   retries: runOnCI ? 2 : 0,
   use: {
     baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:8000',

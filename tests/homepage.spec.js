@@ -11,7 +11,7 @@ test.describe('Home Page', () => {
   })
 
   test('has news items', async ({ page }) => {
-    const newsSection = page.locator('section:has-text("Nieuws")')
+    const newsSection = page.locator('section:text-matches("Nieuws ")')
     // todo: semantically this should probably be <li>
     const newsItems = newsSection.locator('article')
     const firstHeadline = newsItems.first().locator('h2')
@@ -20,8 +20,10 @@ test.describe('Home Page', () => {
       .first()
       .locator(' > div:last-of-type > div:last-of-type')
 
+    await newsSection.waitFor()
+
     expect(newsSection).toBeDefined()
-    expect(await newsItems.count()).toEqual(7)
+    expect(await newsItems.count()).toEqual(6)
     expect(await firstHeadline.innerText()).toEqual('NIEUWE SPELERS 2020-2021')
     expect(await firstBlurb.innerText()).toEqual(
       'Dit is een andere blurb met niet zo super veel characters but it does make sense.Dit is een ander'
@@ -62,7 +64,7 @@ test.describe('Home Page', () => {
     const section = page.locator('section:has-text("Evenementen")')
     // todo: why is this a table?
     const events = section.locator('table tr')
-
+    console.log(await section.innerHTML())
     expect(await events.count()).toEqual(2)
   })
 
