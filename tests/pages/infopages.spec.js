@@ -50,6 +50,15 @@ test.describe('All Info Pages', () => {
     expect(subtitle.first()).toContainText('Bestaande leden')
   })
 
+  test('There is a sponsoring page', async ({ page }) => {
+    await page.goto('/info/sponsoring')
+    const title = page.locator('#content h1')
+    const subtitle = page.locator('#content h2')
+
+    expect(title).toHaveText('Sponsoring')
+    expect(subtitle.first()).toContainText('Waarom Sponsoren?')
+  })
+
   test('There is a kalender page', async ({ page }) => {
     await page.goto('/info/kalender')
     const title = page.locator('#content h1')
@@ -63,5 +72,15 @@ test.describe('All Info Pages', () => {
     expect(lines.nth(1)).toContainText('Beker Heren groep 3')
     expect(lines.nth(1)).toContainText('Fc Merksem')
     expect(lines.nth(1)).toContainText('Noorse')
+  })
+
+  test('There is a contact page', async ({ page }) => {
+    await page.goto('/contact')
+    const title = page.locator('#content h1')
+
+    expect(await title.allTextContents()).toContain('Koninklijke Noorse SV')
+    expect(await title.allTextContents()).toContain('Contact')
+    expect(await title.allTextContents()).toContain('Bereikbaarheid')
+    expect(await title.allTextContents()).toContain('Kantine')
   })
 })
