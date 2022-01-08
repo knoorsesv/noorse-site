@@ -2,6 +2,8 @@ name: Build and Test Website
 
 on:
   push:
+    branches-ignore:
+      - 'main'
   workflow_run:
     workflows: ['Approve Failed Backstop Test']
     types:
