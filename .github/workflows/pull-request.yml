@@ -130,6 +130,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Check if tag exists
         run: 'docker manifest inspect $IMAGE'
+        continue-on-error: true
         env:
           IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
       - name: Build image
