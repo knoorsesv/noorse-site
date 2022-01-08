@@ -149,7 +149,7 @@ jobs:
       - name: Run your tests
         working-directory: ./tests
         # todo: push docker image so it doesnt need to be rebuilt every time
-        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL ghcr.io/gvdp/playwright-base /bin/bash /work/run-test.sh'
+        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test.sh'
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
         with:
