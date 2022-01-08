@@ -5,7 +5,9 @@ require('dotenv').config()
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
-  reporter: process.env.CI ? 'github' : [['list'], ['html', { open: 'never' }]],
+  reporter: process.env.CI
+    ? 'github'
+    : [['list'], ['html', { open: 'on-failure' }]],
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {

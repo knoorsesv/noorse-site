@@ -125,6 +125,7 @@ jobs:
         # todo: push docker image so it doesnt need to be rebuilt every time
         run: 'docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
       - uses: actions/upload-artifact@v2
+        if: ${{ failure() }}
         with:
           name: test-report
           path: tests/playwright-report
@@ -133,7 +134,7 @@ jobs:
 
   lighthouse-check:
     needs: build-prod
-    if: contains(github.event_name, 'pull_request')
+    # if: contains(github.event_name, 'pull_request')
     runs-on: ubuntu-latest
     name: Lighthouse Check
     steps:
