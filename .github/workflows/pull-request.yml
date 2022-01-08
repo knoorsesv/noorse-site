@@ -128,17 +128,15 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if tag exists
+        run: 'docker manifest inspect $IMAGE'
       - name: Build image
+        # run build if previous call returned error
+        if: ${{ failure() }}
         working-directory: ./tests
-        # todo: push docker image so it doesnt need to be rebuilt every time
         run: 'docker build . -t $IMAGE && docker push $IMAGE'
         env:
           IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
-      - uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
-        with:
-          name: test-report
-          path: tests/test-results
 
   test:
     needs: [build-dev, build-test-base]
