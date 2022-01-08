@@ -25,7 +25,7 @@ jobs:
 
   build-prod:
     needs: npm
-    if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
+    # if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
@@ -67,7 +67,7 @@ jobs:
 
   build-dev:
     needs: npm
-    if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
+    # if: ${{ (github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target') || (github.actor != 'dependabot[bot]' && github.event_name == 'pull_request')}}
     runs-on: ubuntu-latest
     name: Build DEV
     steps:
@@ -124,6 +124,10 @@ jobs:
         working-directory: ./tests
         # todo: push docker image so it doesnt need to be rebuilt every time
         run: 'docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh'
+      - uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: tests/playwright-report
     env:
       PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
