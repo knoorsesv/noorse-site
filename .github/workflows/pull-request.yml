@@ -135,8 +135,8 @@ jobs:
         if: ${{ failure() }}
         working-directory: ./tests
         run: 'docker build . -t $IMAGE && docker push $IMAGE'
-        env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
+    env:
+      IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
 
   test:
     needs: [build-dev, build-test-base]
