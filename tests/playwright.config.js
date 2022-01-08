@@ -4,7 +4,11 @@ const { devices } = require('@playwright/test')
 require('dotenv').config()
 
 const runOnCI = process.env.CI === 'true'
-console.log('running this on CI? ', runOnCI)
+console.log(
+  'running this on CI? ',
+  runOnCI,
+  process.env.PLAYWRIGHT_TEST_BASE_URL
+)
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   reporter: runOnCI
