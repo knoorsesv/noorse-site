@@ -131,7 +131,7 @@ jobs:
       - name: Build image
         working-directory: ./tests
         # todo: push docker image so it doesnt need to be rebuilt every time
-        run: 'docker build . -t ghcr.io/gvdp/playwright-base && docker push ghcr.io/gvdp/playwright-base'
+        run: 'docker build . -t ghcr.io/knoorsesv/playwright-base && docker push ghcr.io/knoorsesv/playwright-base'
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
         with:
