@@ -7,8 +7,9 @@
   "main": "homepage.spec.js",
   "scripts": {
     "test": "playwright test",
-    "test:ci": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test.sh",
-    "test:ci-update": "docker build . -t playwright-test && docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ playwright-test /bin/bash /work/run-test-update.sh",
+    "test:build-docker": "docker build . -t ghcr.io/knoorsesv/playwright-base",
+    "test:ci": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test.sh",
+    "test:ci-update": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test-update.sh",
     "test:func": "playwright test --project=Functional",
     "test:update": "playwright test --update-snapshots screenshots"
   },

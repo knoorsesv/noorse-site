@@ -13,15 +13,15 @@ console.log(
 const config = {
   reporter: runOnCI ? 'github' : [['list'], ['html', { open: 'never' }]],
   forbidOnly: !!runOnCI,
-  retries: runOnCI ? 2 : 0,
+  retries: runOnCI ? 2 : 1,
   use: {
     baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:8000',
     trace: 'on-first-retry',
   },
+  timeout: 10 * 1000,
   projects: [
     {
       name: 'Functional',
-      timeout: 10 * 1000,
       testIgnore: 'screenshots.spec.js',
     },
     {

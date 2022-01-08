@@ -2,9 +2,9 @@ const { test, expect } = require('@playwright/test')
 
 const pages = [
   '/',
-  '/nieuws/Nieuwe%20spelers%202020-2021/',
-  '/info/nieuws/',
-  '/team/noorse%201',
+  '/nieuws/Nieuwe spelers 2020-2021',
+  '/info/nieuws',
+  '/team/Noorse 1',
   '/info/kalender',
   '/senioren',
   '/contact',
@@ -21,7 +21,7 @@ test.describe.parallel('Screenshot Test', () => {
       await (await page.$('#logo')).waitForElementState('stable')
 
       expect(await page.screenshot({ fullPage: false })).toMatchSnapshot(
-        `screenshot-${pageUrl.replace('/', '-')}.png`,
+        `page-${pageUrl.replace('/', '-')}.png`,
         {
           threshold: 0.8,
         }
