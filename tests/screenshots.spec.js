@@ -12,17 +12,20 @@ const pages = [
   '/info/lidmaatschap',
 ]
 
-pages.forEach((pageUrl) => {
-  test(`Screenshot test for ${pageUrl}`, async ({ page }) => {
-    await page.goto(pageUrl)
-    await page.waitForLoadState('networkidle')
+test.describe.parallel('Screenshot Test', () => {
+  pages.forEach((pageUrl) => {
+    test(`for ${pageUrl}`, async ({ page }) => {
+      await page.goto(pageUrl)
+      await page.waitForLoadState('networkidle')
 
-    await (await page.$('#logo')).waitForElementState('stable')
+      await (await page.$('#logo')).waitForElementState('stable')
 
-    expect(
-      await page.screenshot({ fullPage: false })
-    ).toMatchSnapshot(`screenshot-${pageUrl.replace('/', '-')}.png`, {
-      threshold: 0.8,
+      expect(await page.screenshot({ fullPage: false })).toMatchSnapshot(
+        `screenshot-${pageUrl.replace('/', '-')}.png`,
+        {
+          threshold: 0.8,
+        }
+      )
     })
   })
 })

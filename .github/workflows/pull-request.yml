@@ -131,14 +131,14 @@ jobs:
       - name: Build image
         working-directory: ./tests
         # todo: push docker image so it doesnt need to be rebuilt every time
-        run: 'docker build . -t ghcr.io/knoorsesv/playwright-base && docker push ghcr.io/knoorsesv/playwright-base'
+        run: 'docker build . -t $IMAGE && docker push $IMAGE'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
         with:
           name: test-report
           path: tests/test-results
-    env:
-      PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
   test:
     needs: [build-dev, build-test-base]
@@ -149,14 +149,15 @@ jobs:
       - name: Run your tests
         working-directory: ./tests
         # todo: push docker image so it doesnt need to be rebuilt every time
-        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test.sh'
+        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-test.sh'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
+          PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
         with:
           name: test-report
           path: tests/test-results
-    env:
-      PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
 
   lighthouse-check:
     needs: build-prod

@@ -13,8 +13,6 @@ console.log(
 const config = {
   reporter: runOnCI ? 'github' : [['list'], ['html', { open: 'never' }]],
   forbidOnly: !!runOnCI,
-  timeout: 10 * 1000,
-
   retries: runOnCI ? 2 : 0,
   use: {
     baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:8000',
@@ -23,21 +21,25 @@ const config = {
   projects: [
     {
       name: 'Functional',
+      timeout: 10 * 1000,
       testIgnore: 'screenshots.spec.js',
     },
     {
-      name: 'Desktop Chromium',
+      name: 'Screenshot Desktop',
+      testMatch: 'screenshots.spec.js',
       use: {
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },
       },
     },
     {
-      name: 'Mobile Chrome',
+      name: 'Schreenshot Mobile Chrome',
+      testMatch: 'screenshots.spec.js',
       use: devices['Pixel 5'],
     },
     {
-      name: 'Mobile Safari',
+      name: 'Screenshot Mobile Safari',
+      testMatch: 'screenshots.spec.js',
       use: devices['iPhone 12'],
     },
   ],
