@@ -3,6 +3,7 @@ import React from 'react'
 export const Title = ({ children }) => {
   return (
     <div className={'flex items-center flex-col mb-4'}>
+      {/* todo: this should not be an h1, but now it has implicit typography styling so just changing to h2 breaks the styling */}
       <h1 className={'mb-4 text-center'}>{children}</h1>
       <div className={'border-b-2 border-black w-[60%] m-2 text-center'} />
     </div>

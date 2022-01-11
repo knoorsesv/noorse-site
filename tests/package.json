@@ -1,0 +1,20 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "homepage.spec.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:build-docker": "docker build . -t ghcr.io/knoorsesv/playwright-base",
+    "test:ci": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test.sh",
+    "test:ci-update": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test-update.sh",
+    "test:func": "playwright test --project=Functional",
+    "test:update": "playwright test --update-snapshots screenshots"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.17.1",
+    "dotenv": "^10.0.0"
+  }
+}

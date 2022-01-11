@@ -13,16 +13,18 @@
   "license": "MIT",
   "author": "gvdp",
   "scripts": {
-    "approve-backstop": "backstop approve",
     "build": "gatsby build && cp _redirects public/_redirects",
     "deploy": "netlify deploy --dir public",
     "lint": "pretty-quick --staged",
     "lint-commit": "commitlint -E HUSKY_GIT_PARAMS",
     "release": "standard-version && git push --follow-tags",
-    "serve": "gatsby serve",
+    "serve": "gatsby build && gatsby serve",
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
-    "test-backstop": "node backstop_data/run"
+    "test": "start-server-and-test serve http://localhost:9000 'npm run test --prefix tests'",
+    "test:func": "start-server-and-test serve http://localhost:9000 'npm run test:func --prefix tests'",
+    "test:update-ci": "start-server-and-test serve http://localhost:9000 'npm run test:ci-update --prefix tests'",
+    "test:update-local": "start-server-and-test serve http://localhost:9000 'npm run test:update --prefix tests'"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.4",
@@ -64,14 +66,15 @@
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
-    "backstopjs": "5.3.7",
     "husky": "7.0.4",
     "prettier": "2.2.1",
     "prettier-plugin-packagejson": "^2.2.15",
     "pretty-quick": "3.1.0",
-    "standard-version": "9.0.0"
+    "standard-version": "9.0.0",
+    "start-server-and-test": "^1.14.0"
   },
   "volta": {
-    "node": "14.18.2"
+    "node": "14.18.2",
+    "npm": "8.3.0"
   }
 }

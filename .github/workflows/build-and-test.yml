@@ -1,0 +1,158 @@
+name: Build and Test Website
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    name: 'Download and cache npm'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: npm install
+
+  build-prod:
+    needs: npm
+    runs-on: ubuntu-latest
+    name: Build PROD
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: npm run build
+        env:
+          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+          PROD: true
+          TRACKING: ${{ startsWith(github.ref, 'refs/tags/v') }}
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v1
+        id: deploy-prod
+        with:
+          publish-dir: './public'
+          production-deploy: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deployed prod build: ${{ github.ref }}'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+    outputs:
+      prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
+
+  build-dev:
+    needs: npm
+    runs-on: ubuntu-latest
+    name: Build DEV
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: npm run build
+        env:
+          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
+          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+          CONTENTFUL_ENV: staging
+          GATSBY_VV_TEST_DATA: on
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v1
+        id: deploy-dev
+        with:
+          publish-dir: './public'
+          production-deploy: ${{ false }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deploy dev build: ${{ github.ref }}'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+    outputs:
+      dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
+
+  build-test-base:
+    runs-on: ubuntu-latest
+    name: Build Base Docker container for tests
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if tag exists
+        run: 'docker manifest inspect $IMAGE'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
+      - name: Build image
+        # run build if previous call returned error
+        # would be better with an output variable instead of relying on an error
+        if: ${{ failure() }}
+        working-directory: ./tests
+        run: 'docker build . -t $IMAGE && docker push $IMAGE'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
+
+  test:
+    needs: [build-dev, build-test-base]
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: actions/checkout@v2
+      - name: Pull Docker image
+        # todo: maybe make it possible to already pull this image in advance to save time
+        run: 'docker pull $IMAGE'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
+      - name: Run your tests
+        working-directory: ./tests
+        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-test.sh'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
+          PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+      - uses: actions/upload-artifact@v2
+        if: ${{ failure() }}
+        with:
+          name: test-report
+          path: tests/test-results
+
+  lighthouse-check:
+    needs: build-prod
+    runs-on: ubuntu-latest
+    name: Lighthouse Check
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{needs.build-prod.outputs.prod-url}}
+          configPath: './lighthouserc.json'
+          temporaryPublicStorage: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
