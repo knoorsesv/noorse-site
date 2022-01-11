@@ -4,10 +4,6 @@ on:
   push:
     branches-ignore:
       - 'main'
-  workflow_run:
-    workflows: ['Approve Failed Backstop Test']
-    types:
-      - completed
 
 jobs:
   npm:
@@ -93,7 +89,6 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
           GATSBY_VV_TEST_DATA: on
-          GATSBY_BACKSTOP_READY: on
       - name: Deploy
         uses: nwtgck/actions-netlify@v1
         id: deploy-dev

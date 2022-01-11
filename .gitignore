@@ -71,18 +71,12 @@ yarn-error.log
 /yalc.lock
 /.yalc/
 !/yarn.lock
-/backstop_data/bitmaps_test/
-/backstop_data/html_report
-/backstop_data/ci_report/
-/cypress/snapshots/*/__diff_output__/
 /src/output.css
-/cypress/videos/
-/cypress/screenshots/
 /.env.development
 /.env
-backstop.config-for-docker.json
 
 # Local Netlify folder
 .netlify
-/cypress/.env
+
+# playwright results
 tests/test-results

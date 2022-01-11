@@ -15,12 +15,6 @@ export const CoverImage = ({ children }) => {
     }
   `)
 
-  function callLoaded() {
-    if (process.env.GATSBY_BACKSTOP_READY === 'on') {
-      console.log('backstopjs_ready')
-    }
-  }
-
   return (
     <GatsbyImage
       image={image.allContentfulAsset.nodes[0].gatsbyImageData}

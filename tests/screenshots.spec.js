@@ -19,7 +19,7 @@ test.describe.parallel('Screenshot Test', () => {
       await page.waitForLoadState('networkidle')
 
       await (await page.$('#logo')).waitForElementState('stable')
-
+      // todo: maybe scroll on big pages? / open navbar on mobile?
       expect(await page.screenshot({ fullPage: false })).toMatchSnapshot(
         `page-${pageUrl.replace('/', '-')}.png`,
         {
