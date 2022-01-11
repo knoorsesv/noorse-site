@@ -81,3 +81,4 @@ yarn-error.log
 # playwright results
 tests/test-results
 tests/playwright-report
+tests/.env
