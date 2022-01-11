@@ -94,6 +94,7 @@ jobs:
   build-test-base:
     runs-on: ubuntu-latest
     name: Build Base Docker container for tests
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v2
       - name: Login to Docker Hub
@@ -104,11 +105,11 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Check if tag exists
         run: 'docker manifest inspect $IMAGE'
-        # continue-on-error: true
         env:
           IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('package-lock.json') }}
       - name: Build image
         # run build if previous call returned error
+        # would be better with an output variable instead of relying on an error
         if: ${{ failure() }}
         working-directory: ./tests
         run: 'docker build . -t $IMAGE && docker push $IMAGE'
