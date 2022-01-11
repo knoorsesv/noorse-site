@@ -38,7 +38,6 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
             alt={'News Image'}
             style={{ maxHeight: '300px' }}
             objectFit={'contain'}
-            onLoad={callLoaded}
           />
         )}
         <h3 className={'italic mb-6 mt-6 capitalize'}>

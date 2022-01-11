@@ -24,7 +24,6 @@ export const CoverImage = ({ children }) => {
       className={ctl(`${coverSectionHeight} absolute w-full`)}
       objectFit="cover"
       objectPosition="center"
-      onLoad={callLoaded}
     >
       {children}
     </GatsbyImage>
