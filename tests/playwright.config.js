@@ -31,7 +31,7 @@ const config = {
       },
     },
     {
-      name: 'Screenshot Desktop',
+      name: 'Screenshot Large',
       testMatch: 'screenshots.spec.js',
       use: {
         browserName: 'chromium',
@@ -39,14 +39,14 @@ const config = {
       },
     },
     {
-      name: 'Schreenshot Mobile Chrome',
+      name: 'Schreenshot Small',
       testMatch: 'screenshots.spec.js',
-      use: devices['Pixel 5'],
+      use: devices['iPhone 13'],
     },
     {
-      name: 'Screenshot Mobile Safari',
+      name: 'Screenshot Medium',
       testMatch: 'screenshots.spec.js',
-      use: devices['iPhone 12'],
+      use: devices['Nexus 5X landscape'],
     },
   ],
 }
