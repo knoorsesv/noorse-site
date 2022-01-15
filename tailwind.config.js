@@ -1,14 +1,11 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
   corePlugins: {
     preflight: false,
   },
   important: true,
-  purge: {
-    content: ['./src/**/*.js'],
-  },
+  content: ['./src/**/*.js'],
   theme: {
     screens: {
       medium: '640px',
@@ -39,7 +36,7 @@ module.exports = {
           lighter: '#dbdbdb4d',
           light: '#f5f5f5',
         },
-        grey: colors.trueGray,
+        grey: colors.neutral,
         green: {
           DEFAULT: '#098800',
           light: '#51b93c',
