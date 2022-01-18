@@ -26,7 +26,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         {newsNode.image && (
           <meta
             property="og:image"
-            content={`https:${newsNode.image.gatsbyImageData.images.fallback.src}`}
+            content={`${newsNode.image.gatsbyImageData.images.fallback.src}`}
           />
         )}
       </Helmet>
