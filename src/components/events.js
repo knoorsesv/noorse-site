@@ -12,6 +12,7 @@ export const EventsSection = ({ className }) => {
         nodes {
           naam
           datum(formatString: "DD/MM/YY")
+          eindDatum(formatString: "DD/MM/YY")
           aankondiging {
             title
           }
@@ -45,7 +46,9 @@ export const EventList = ({ events }) => {
       <tbody>
         {events.map((event) => (
           <tr key={event.naam}>
-            <td className={'border-0'}>{event.datum}</td>
+            <td className={'border-0'}>
+              {event.datum} {event.eindDatum ? ` - ${event.eindDatum}` : ''}
+            </td>
             <td className={'border-0'}>
               {event.aankondiging ? (
                 <Link
