@@ -54,7 +54,7 @@
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.0",
     "react-typography": "0.16.20",
-    "sass": "^1.48.0",
+    "sass": "^1.49.7",
     "tailwindcss-elevation": "1.0.1",
     "typography": "0.16.21"
   },
