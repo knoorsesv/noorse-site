@@ -6,6 +6,7 @@ require('dotenv').config()
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||
   (process.env.PROD === 'true' ? 'master' : 'staging')
+const fakeVV = true
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
 const accessToken = contentfulPreview
@@ -101,7 +102,9 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: 'vv',
         // URL to query from
-        url: 'https://datalake-prod2018.rbfa.be/graphql',
+        url: fakeVV
+          ? 'http://localhost:4000'
+          : 'https://datalake-prod2018.rbfa.be/graphql',
         createSchema: async () => {
           const sdl = fs.readFileSync(`${__dirname}/graphSchema.sdl`).toString()
           return buildSchema(sdl)

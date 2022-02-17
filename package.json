@@ -21,6 +21,7 @@
     "serve": "gatsby build && gatsby serve",
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
+    "start:fake-vv": "node fake-vv.js",
     "test": "start-server-and-test serve http://localhost:9000 'npm run test --prefix tests'",
     "test:func": "start-server-and-test serve http://localhost:9000 'npm run test:func --prefix tests'",
     "test:update-ci": "start-server-and-test serve http://localhost:9000 'npm run test:ci-update --prefix tests'",
@@ -61,6 +62,7 @@
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
+    "apollo-server": "^3.6.3",
     "autoprefixer": "^10.4.2",
     "husky": "7.0.4",
     "postcss": "^8.4.5",
