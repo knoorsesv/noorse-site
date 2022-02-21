@@ -48,52 +48,16 @@ export const query = graphql`
 `
 
 const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
-  if (process.env.GATSBY_VV_TEST_DATA === 'on') {
-    // setting some dummy data here because this info will naturally change and break tests, and this is easier than mocking the graphql api
-    data.vv.teamCalendar = [
-      {
-        id: 3,
-        awayTeam: { name: 'S.V. NOORSE' },
-        homeTeam: { name: 'KSK EKEREN DONK' },
-        outcome: {
-          status: 'planned',
-          homeTeamGoals: null,
-          awayTeamGoals: null,
-        },
-        startDate: '2020-08-10T16:00',
-      },
-      {
-        id: 2,
-        homeTeam: { name: 'S.V. NOORSE' },
-        awayTeam: { name: 'KSK EKEREN DONK' },
-        outcome: { status: 'finished', homeTeamGoals: 2, awayTeamGoals: 1 },
-        startDate: '2020-08-09T16:00',
-      },
-      {
-        id: 1,
-        homeTeam: { name: 'S.V. NOORSE' },
-        awayTeam: { name: 'KSK EKEREN DONK' },
-        outcome: {
-          status: 'postponed',
-          homeTeamGoals: null,
-          awayTeamGoals: null,
-        },
-        startDate: '2020-08-08T16:00',
-      },
-    ]
-  }
-
   const nonCupRankings =
     data.vv &&
     data.vv.teamSeriesAndRankings &&
     data.vv.teamSeriesAndRankings.rankings.filter(
-      (ranking) => !ranking.name.toLowerCase().includes('beker')
+      ranking => !ranking.name.toLowerCase().includes('beker')
     )
   const generalRanking =
     nonCupRankings && nonCupRankings.length === 1 && nonCupRankings[0].rankings
       ? nonCupRankings[0].rankings[0]
       : null
-
   const teamsAroundNoorseInRanking =
     generalRanking &&
     generalRanking.teams.filter((team, index) => {
@@ -112,7 +76,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
 
   const firstTeamInRanking =
     teamsAroundNoorseInRanking &&
-    teamsAroundNoorseInRanking.every((team) => team.position !== 1)
+    teamsAroundNoorseInRanking.every(team => team.position !== 1)
       ? generalRanking.teams[0]
       : null
   const noorseIsLastOrNextToLast =
@@ -132,7 +96,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
         <Title>{contentfulPloeg.naam}</Title>
         <div className={'flex flex-col large:flex-row large:justify-between'}>
           <div
-            id="team-info"
+            id='team-info'
             className={'flex flex-col px-4 mt-6 large:min-w-[40%]'}
           >
             {/* todo: these could maybe already go side by side on medium screen size */}
@@ -143,7 +107,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                     <SubTitle>
                       Coach{contentfulPloeg.coach.length > 1 ? 'es' : ''}
                     </SubTitle>
-                    {contentfulPloeg.coach.map((coach) => (
+                    {contentfulPloeg.coach.map(coach => (
                       <span key={coach}>{coach}</span>
                     ))}
                   </section>
@@ -157,7 +121,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                       Afgevaardigde
                       {contentfulPloeg.afgevaardigde.length > 1 ? 'n' : ''}
                     </SubTitle>
-                    {contentfulPloeg.afgevaardigde.map((afgevaardigde) => (
+                    {contentfulPloeg.afgevaardigde.map(afgevaardigde => (
                       <span key={afgevaardigde}>{afgevaardigde}</span>
                     ))}
                   </section>
@@ -168,7 +132,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                 <>
                   <section className={'flex flex-col items-center'}>
                     <SubTitle>Training</SubTitle>
-                    {contentfulPloeg.training.map((training) => (
+                    {contentfulPloeg.training.map(training => (
                       <span key={training}> {training}</span>
                     ))}
                   </section>
@@ -183,7 +147,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                       ? 'Reeksen'
                       : 'Reeks'}
                   </SubTitle>
-                  {data.vv.teamSeriesAndRankings.series.map((series) => (
+                  {data.vv.teamSeriesAndRankings.series.map(series => (
                     <ExternalLink
                       key={series.name}
                       url={`https://www.voetbalvlaanderen.be/competitie/${series.serieId}/rangschikking`}
@@ -199,19 +163,19 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                   <SubTitle>Klassement</SubTitle>
                   {/* todo: stupidly formatted by graphql api */}
                   {/* <div>{generalRankingName}</div> */}
-                  <table className="text-sm">
+                  <table className='text-sm'>
                     <tbody>
                       {firstTeamInRanking ? (
                         <>
                           <tr>
-                            <td className="font-bold">
+                            <td className='font-bold'>
                               {firstTeamInRanking.position}
                             </td>
                             <td>{firstTeamInRanking.name}</td>
                             <td>{firstTeamInRanking.points}</td>
                           </tr>
                           <tr>
-                            <td className="text-center" colSpan={3}>
+                            <td className='text-center' colSpan={3}>
                               ...
                             </td>
                           </tr>
@@ -219,10 +183,10 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                       ) : (
                         <></>
                       )}
-                      {teamsAroundNoorseInRanking.map((team) => {
+                      {teamsAroundNoorseInRanking.map(team => {
                         return (
                           <tr key={team.position}>
-                            <td className="font-bold">{team.position}</td>
+                            <td className='font-bold'>{team.position}</td>
                             <td
                               className={
                                 team.name.toLowerCase().includes('noorse')
@@ -238,7 +202,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                       })}
                       {!noorseIsLastOrNextToLast ? (
                         <tr>
-                          <td className="text-center" colSpan={3}>
+                          <td className='text-center' colSpan={3}>
                             ...
                           </td>
                         </tr>
@@ -258,7 +222,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                   icon={false}
                 >
                   <div className={'flex flex-row items-center underline'}>
-                    <FontAwesomeIcon size="1x" icon={faCalendarPlus} />
+                    <FontAwesomeIcon size='1x' icon={faCalendarPlus} />
                     <span className={'ml-2'}>Google Calendar</span>
                   </div>
                 </ExternalLink>
@@ -266,7 +230,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
             </div>
           </div>
           {data.vv && data.vv.teamCalendar && (
-            <div id="team-calendar" className="mt-6 large:max-w-3/4">
+            <div id='team-calendar' className='mt-6 large:max-w-3/4'>
               <section>
                 <SubTitle>Kalender</SubTitle>
                 <CalendarTable calendar={data.vv.teamCalendar} />

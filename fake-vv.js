@@ -1,15 +1,45 @@
 const { ApolloServer, gql } = require('apollo-server')
 const fs = require('fs')
-const casual = require('casual')
-
-// const typeDefs = require('./graphSchema.sdl')
-// console.log(typeDefs)
 
 const resolvers = {
   Query: {
     clubTeams: () => [{ name: 'Eerste Elftallen', id: 1 }],
-    teamCalendar: () => [{ id: casual.id, startDate: '2020-08-10T16:00' }],
-    teamSeriesAndRankings: () => ({ series: [], rankings: [] }),
+    teamCalendar: () =>
+      [...new Array(20)].map((obj, i) => ({
+        id: i,
+        title: 'Competitie',
+        startDate: `2020-08-${i + 10}T16:00`,
+        homeTeam: { name: i % 2 === 1 ? 'Noorse' : 'Tegenstander' },
+        awayTeam: { name: i % 2 === 0 ? 'Noorse' : 'Tegenstander' },
+        outcome: {
+          homeTeamGoals: i % 3,
+          awayTeamGoals: i % 4,
+          status: i < 10 ? 'finished' : 'else',
+        },
+      })),
+    teamSeriesAndRankings: () => ({
+      series: [
+        { seriesId: 'CHP_98714', name: '4 PROV. A' },
+        { seriesId: 'ELSE', name: 'Beker V Antwerpen' },
+      ],
+      rankings: [
+        {
+          name: 'Beker v vanalles',
+        },
+        {
+          name: '4 PROV. A',
+          rankings: [
+            {
+              teams: [...new Array(18)].map((obj, i) => ({
+                position: i + 1,
+                points: (18 - i) * 3,
+                name: i === 10 ? 'Noorse' : `Ploeg ${i + 1}`,
+              })),
+            },
+          ],
+        },
+      ],
+    }),
     clubMatchesAssignations: () =>
       [...new Array(10)].map((obj, i) => ({
         id: i + 1,

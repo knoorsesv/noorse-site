@@ -5,7 +5,7 @@ test.describe('Category Pages', () => {
     await page.goto('/team/noorse 1')
   })
 
-  test('has category page for senioren teams', async ({ page }) => {
+  test.only('has category page for senioren teams', async ({ page }) => {
     const title = page.locator('#content h1')
 
     const coachesSection = page.locator('section:has(h2:has-text("Coaches"))')
@@ -45,7 +45,7 @@ test.describe('Category Pages', () => {
     expect(await trainingen.count()).toEqual(2)
     expect(await reeksen.count()).toEqual(2)
     expect(await klassementEntries.count()).toEqual(6)
-    expect(await kalenderEntries.count()).toEqual(2)
+    expect(await kalenderEntries.count()).toEqual(20)
 
     expect(await coaches.allTextContents()).toContain('Davy Vercauteren')
     expect(await afgevaardigden.allTextContents()).toContain('Pascal ')
@@ -56,39 +56,36 @@ test.describe('Category Pages', () => {
       'https://calendar.google.com/calendar/u/0/r?cid=so48kkhhj47ijph29un9m4gcrc@group.calendar.google.com'
     )
     expect(
-      await reeksen.evaluateAll((links) =>
-        links.map((link) => link.getAttribute('href'))
+      await reeksen.evaluateAll(links =>
+        links.map(link => link.getAttribute('href'))
       )
     ).toContain(
       'https://www.voetbalvlaanderen.be/competitie/CHP_98714/rangschikking'
     )
     const klassementTableContent = await klassementEntries.evaluateAll(
-      (klassementRows) => {
-        return klassementRows.map((row) =>
-          Array.from(row.querySelectorAll('td')).map((cell) => cell.textContent)
+      klassementRows => {
+        return klassementRows.map(row =>
+          Array.from(row.querySelectorAll('td')).map(cell => cell.textContent)
         )
       }
     )
     const kalenderTableContent = await kalenderEntries.evaluateAll(
-      (klassementRows) => {
-        return klassementRows.map((row) =>
-          Array.from(row.querySelectorAll('td')).map((cell) => cell.textContent)
+      klassementRows => {
+        return klassementRows.map(row =>
+          Array.from(row.querySelectorAll('td')).map(cell => cell.textContent)
         )
       }
     )
 
-    expect(klassementTableContent).toContainEqual([
-      '1',
-      'K.V.C. Oostmalle Sp.',
-      '34',
-    ])
+    expect(klassementTableContent).toContainEqual(['1', 'Ploeg 1', '54'])
     expect(klassementTableContent).toContainEqual(['...'])
-    expect(klassementTableContent).toContainEqual(['8', 'S.V. Noorse', '23'])
+    expect(klassementTableContent).toContainEqual(['10', 'Ploeg 10', '27'])
+    expect(klassementTableContent).toContainEqual(['11', 'Noorse', '24'])
 
     expect(kalenderTableContent).toContainEqual([
-      '09/0816:00',
-      'NoorseKsk Ekeren Donk',
-      '21',
+      '10/0816:00',
+      'TegenstanderNoorse',
+      '00',
     ])
   })
 })
