@@ -6,7 +6,8 @@ require('dotenv').config()
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||
   (process.env.PROD === 'true' ? 'master' : 'staging')
-const fakeVV = process.env.PROD !== 'true'
+const fakeVV = process.env.PROD !== 'true' && process.env.REAL_VV !== 'true'
+
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
 const accessToken = contentfulPreview
@@ -21,6 +22,7 @@ console.log('Build settings:', {
   contentfulEnv,
   contentfulPreview,
   tracking,
+  fakeVV,
 })
 
 module.exports = {

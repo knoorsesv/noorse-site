@@ -1,81 +1,28 @@
 const { ApolloServer, gql } = require('apollo-server')
+const fs = require('fs')
+const casual = require('casual')
 
-const typeDefs = gql`
-  type Query {
-    teamCalendar(teamId: ID!, language: Lang): [MatchDetail]
-    clubTeams(clubId: Int, language: Lang): [Team]
-    clubMatchesAssignations(
-      clubId: ID!
-      language: Lang
-      startDate: String
-      endDate: String
-      hasLocation: Boolean
-    ): [MatchDetail]
-    teamSeriesAndRankings(teamId: ID!, language: Lang): SeriesAndRankings
-  }
-
-  type SeriesAndRankings {
-    series: [Series]
-    rankings: [Ranking]
-  }
-
-  type Ranking {
-    id: String
-    name: String
-    rankings: [RankingEntry]
-  }
-
-  type RankingEntry {
-    teams: [RankingTeam]
-  }
-
-  type RankingTeam {
-    name: String
-    position: Int
-    points: Int
-  }
-
-  type Series {
-    serieId: String
-    name: String
-  }
-
-  type MatchDetail {
-    id: String
-    startDate: String
-    title: String
-    homeTeam: Team
-    awayTeam: Team
-    outcome: Outcome
-  }
-
-  type Outcome {
-    status: String
-    homeTeamGoals: Int
-    awayTeamGoals: Int
-  }
-
-  type Team {
-    name: String
-    id: String
-  }
-
-  enum Lang {
-    nl
-  }
-`
+// const typeDefs = require('./graphSchema.sdl')
+// console.log(typeDefs)
 
 const resolvers = {
   Query: {
     clubTeams: () => [{ name: 'Eerste Elftallen', id: 1 }],
-    teamCalendar: () => [{ id: 1, startDate: '2020-08-10T16:00' }],
+    teamCalendar: () => [{ id: casual.id, startDate: '2020-08-10T16:00' }],
     teamSeriesAndRankings: () => ({ series: [], rankings: [] }),
-    clubMatchesAssignations: () => [{ id: 1, startDate: '2020-08-10T16:00' }],
+    clubMatchesAssignations: () =>
+      [...new Array(10)].map((obj, i) => ({
+        id: i + 1,
+        startDate: `2020-08-${10 + Math.round(i / 2)}T16:00`,
+        title: `Noorse U${i + 8} Jeugd Reeks`,
+        homeTeam: { name: 'Noorse Jeugd' },
+        awayTeam: { name: 'Andere prutsers fc' },
+      })),
   },
 }
 
 const server = new ApolloServer({
-  typeDefs,
+  typeDefs: gql(fs.readFileSync(__dirname.concat('/graphSchema.sdl'), 'utf8')),
   resolvers,
   mockEntireSchema: false,
   mocks: true,
