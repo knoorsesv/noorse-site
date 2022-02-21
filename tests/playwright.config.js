@@ -18,7 +18,7 @@ const config = {
   retries: runOnCI ? 2 : 0,
   workers: runOnCI ? 4 : 1,
   use: {
-    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:8000',
+    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:9000',
     trace: 'on-first-retry',
   },
   timeout: 10 * 1000,
@@ -50,5 +50,7 @@ const config = {
     },
   ],
 }
+
+console.log('running test with config ', config)
 
 module.exports = config
