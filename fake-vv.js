@@ -65,8 +65,18 @@ const typeDefs = gql`
   }
 `
 
+const resolvers = {
+  Query: {
+    clubTeams: () => [{ name: 'Eerste Elftallen', id: 1 }],
+    teamCalendar: () => [{ id: 1, startDate: '2020-08-10T16:00' }],
+    teamSeriesAndRankings: () => ({ series: [], rankings: [] }),
+  },
+}
+
 const server = new ApolloServer({
   typeDefs,
+  resolvers,
+  mockEntireSchema: false,
   mocks: true,
 })
 

@@ -112,7 +112,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach(contentfulPloeg => {
     const vvInfo = vvTeams.data.vv.clubTeams.find(vvTeam => {
-      console.log('matching ', vvTeam.name)
+      console.log(
+        'matching ',
+        vvTeam.name,
+        contentfulPloeg.naamOpVoetbalVlaanderen,
+        contentfulPloeg.naam
+      )
       return (
         (contentfulPloeg.naamOpVoetbalVlaanderen || contentfulPloeg.naam) ===
         vvTeam.name
