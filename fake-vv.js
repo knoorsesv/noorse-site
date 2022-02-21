@@ -70,6 +70,7 @@ const resolvers = {
     clubTeams: () => [{ name: 'Eerste Elftallen', id: 1 }],
     teamCalendar: () => [{ id: 1, startDate: '2020-08-10T16:00' }],
     teamSeriesAndRankings: () => ({ series: [], rankings: [] }),
+    clubMatchesAssignations: () => [{ id: 1, startDate: '2020-08-10T16:00' }],
   },
 }
 
