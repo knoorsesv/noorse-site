@@ -6,7 +6,7 @@ require('dotenv').config()
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||
   (process.env.PROD === 'true' ? 'master' : 'staging')
-const fakeVV = true
+const fakeVV = process.env.PROD !== 'true'
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const tracking = process.env.TRACKING === 'true'
 const accessToken = contentfulPreview
