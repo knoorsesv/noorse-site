@@ -5,7 +5,7 @@ test.describe('Category Pages', () => {
     await page.goto('/team/noorse 1')
   })
 
-  test.only('has category page for senioren teams', async ({ page }) => {
+  test('has category page for senioren teams', async ({ page }) => {
     const title = page.locator('#content h1')
 
     const coachesSection = page.locator('section:has(h2:has-text("Coaches"))')

@@ -19,8 +19,8 @@ const resolvers = {
       })),
     teamSeriesAndRankings: () => ({
       series: [
-        { seriesId: 'CHP_98714', name: '4 PROV. A' },
-        { seriesId: 'ELSE', name: 'Beker V Antwerpen' },
+        { serieId: 'CHP_98714', name: '4 PROV. A' },
+        { serieId: 'ELSE', name: 'Beker V Antwerpen' },
       ],
       rankings: [
         {
