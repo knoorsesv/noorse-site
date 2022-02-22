@@ -70,7 +70,7 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-      - run: npm run build
+      - run: npm run build:fake-vv
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
@@ -138,6 +138,11 @@ jobs:
         with:
           name: test-report
           path: tests/test-results
+      - uses: actions/upload-artifact@v2
+        if: ${{ failure() }}
+        with:
+          name: playwright-report
+          path: tests/playwright-report
 
   lighthouse-check:
     needs: build-prod

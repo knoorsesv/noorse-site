@@ -5,20 +5,22 @@ require('dotenv').config()
 
 const runOnCI = process.env.CI === 'true'
 
-// console.log(
-//   'running this on CI? ',
-//   runOnCI,
-//   process.env.PLAYWRIGHT_TEST_BASE_URL
-// )
+let baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:9000'
+
+if (!runOnCI && process.env.RUN_IN_DOCKER === 'true') {
+  baseURL = baseURL.replace('localhost', 'host.docker.internal')
+}
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
-  reporter: runOnCI ? 'github' : [['list'], ['html', { open: 'never' }]],
+  reporter: runOnCI
+    ? [['github'], ['html', { open: 'never' }]]
+    : [['list'], ['html', { open: 'never' }]],
   forbidOnly: !!runOnCI,
   retries: runOnCI ? 2 : 0,
   workers: runOnCI ? 4 : 1,
   use: {
-    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:8000',
+    baseURL,
     trace: 'on-first-retry',
   },
   timeout: 10 * 1000,
@@ -50,5 +52,7 @@ const config = {
     },
   ],
 }
+
+// console.log('running test with config ', config)
 
 module.exports = config

@@ -35,21 +35,21 @@ export const query = graphql`
     }
   }
 `
+// todo: outcome not needed in query?
 
 const KalenderPage = ({ data }) => {
-  const day = (date) => {
+  const day = date => {
     return format(parseISO(date), 'eeeeee', { locale: nlBE })
   }
-  const date = (date) => {
+  const date = date => {
     return format(parseISO(date), 'dd/MM', { locale: nlBE })
   }
 
-  const hour = (date) => {
+  const hour = date => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
   const games = data.vv.clubMatchesAssignations || []
-
-  function dateDiffersFromPreviousGame(index, game) {
+  function dateDiffersFromPreviousGame (index, game) {
     return (
       index === 0 || date(game.startDate) !== date(games[index - 1].startDate)
     )

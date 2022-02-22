@@ -67,11 +67,11 @@ test.describe('All Info Pages', () => {
 
     expect(title).toHaveText('Kalender')
     expect(subtitle).toHaveText('Wedstrijden deze week')
-    expect(lines.first()).toHaveText('za 21/08')
-    expect(lines.nth(1)).toContainText('18:30')
-    expect(lines.nth(1)).toContainText('Beker Heren groep 3')
-    expect(lines.nth(1)).toContainText('Fc Merksem')
+    expect(lines.first()).toHaveText('ma 10/08')
+    expect(lines.nth(1)).toContainText('16:00')
+    expect(lines.nth(1)).toContainText('Noorse U8 Jeugd Reeks')
     expect(lines.nth(1)).toContainText('Noorse')
+    expect(lines.nth(1)).toContainText('Andere Prutsers Fc')
   })
 
   test('There is a contact page', async ({ page }) => {
