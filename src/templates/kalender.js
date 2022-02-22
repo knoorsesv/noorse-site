@@ -49,7 +49,6 @@ const KalenderPage = ({ data }) => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
   const games = data.vv.clubMatchesAssignations || []
-  console.log(data)
   function dateDiffersFromPreviousGame (index, game) {
     return (
       index === 0 || date(game.startDate) !== date(games[index - 1].startDate)

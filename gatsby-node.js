@@ -88,8 +88,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  console.log('teams query result ', vvTeams)
-
   news.data.allContentfulNews.nodes.forEach(newsNode => {
     console.log('creating news page for ', newsNode.title)
     createPage({
