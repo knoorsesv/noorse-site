@@ -9,7 +9,6 @@ const contentfulEnv =
 const fakeVV = process.env.PROD !== 'true' && process.env.REAL_VV !== 'true'
 
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
-const tracking = process.env.TRACKING === 'true'
 const accessToken = contentfulPreview
   ? process.env.CONTENTFUL_TOKEN_PREVIEW
   : process.env.CONTENTFUL_TOKEN
@@ -21,7 +20,6 @@ console.log('Build settings:', {
   spaceId,
   contentfulEnv,
   contentfulPreview,
-  tracking,
   fakeVV,
 })
 
@@ -37,25 +35,6 @@ module.exports = {
     FAST_DEV: true,
   },
   plugins: [
-    ...(tracking
-      ? [
-          {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-              // The property ID; the tracking code won't be generated without it
-              trackingId: process.env.GA_TRACKING_ID,
-              // Defines where to place the tracking script - `true` in the head and `false` in the body
-              head: true,
-              // Setting this parameter is optional
-              anonymize: true,
-              // Setting this parameter is also optional
-              respectDNT: true,
-              // Defers execution of google analytics script after page load
-              defer: true,
-            },
-          },
-        ]
-      : []),
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-fontawesome-css`,
     {

@@ -41,7 +41,7 @@ function Seo({ title }) {
       <html lang="nl" />
       <title>{title}</title>
       <link rel="icon" href={favicon} />
-      
+
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:image" content={logoSrc} />
@@ -49,9 +49,14 @@ function Seo({ title }) {
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      {enableAnalytics
-      && (<script defer data-domain="noorse.be" data-api="/plausible/api/event" src="/plausible.js"></script>)
-      }
+      {enableAnalytics && (
+        <script
+          defer
+          data-domain="noorse.be"
+          data-api="/plausible/api/event"
+          src="/plausible.js"
+        ></script>
+      )}
 
       <link
         rel="preconnect"
@@ -61,11 +66,6 @@ function Seo({ title }) {
       <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
-        crossOrigin="true"
-      />
-      <link
-        rel="preconnect"
-        href="https://www.google-analytics.com"
         crossOrigin="true"
       />
     </Helmet>
