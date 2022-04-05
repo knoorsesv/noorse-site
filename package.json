@@ -63,7 +63,7 @@
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
     "apollo-server": "3.6.3",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "10.4.4",
     "husky": "7.0.4",
     "nodemon": "^2.0.15",
     "postcss": "^8.4.5",
