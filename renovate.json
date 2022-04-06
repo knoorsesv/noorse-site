@@ -3,7 +3,7 @@
     "config:base",
     "schedule:daily"
   ],
-  "prConcurrentLimit": 3,
+  "prConcurrentLimit": 2,
   "assignees": ["gvdp"],
   "packageRules": [
     {
