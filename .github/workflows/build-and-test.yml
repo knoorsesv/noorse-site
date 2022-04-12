@@ -6,9 +6,9 @@ on:
       - 'main'
 
 jobs:
-  npm:
+  deps:
     runs-on: ubuntu-latest
-    name: 'Download and cache npm'
+    name: 'Download and cache dependencies'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -17,11 +17,11 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-      - run: npm install
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+      - run: yarn --frozen-lockfile
 
   build-prod:
-    needs: npm
+    needs: deps
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
@@ -34,8 +34,8 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-      - run: npm run build
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+      - run: yarn build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
@@ -55,7 +55,7 @@ jobs:
       prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
 
   build-dev:
-    needs: npm
+    needs: deps
     runs-on: ubuntu-latest
     name: Build DEV
     steps:
@@ -68,8 +68,8 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-      - run: npm run build:fake-vv
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+      - run: yarn build:fake-vv
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
@@ -105,7 +105,7 @@ jobs:
       - name: Check if tag exists
         run: 'docker manifest inspect $IMAGE'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/package-lock.json') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
       - name: Build image
         # run build if previous call returned error
         # would be better with an output variable instead of relying on an error
@@ -113,7 +113,7 @@ jobs:
         working-directory: ./tests
         run: 'docker build . -t $IMAGE && docker push $IMAGE'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/package-lock.json') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
 
   test:
     needs: [build-dev, build-test-base]
@@ -125,12 +125,12 @@ jobs:
         # todo: maybe make it possible to already pull this image in advance to save time
         run: 'docker pull $IMAGE'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/package-lock.json') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
       - name: Run your tests
         working-directory: ./tests
         run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-test.sh'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/package-lock.json') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
