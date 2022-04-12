@@ -29,7 +29,7 @@
     "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'"
   },
   "dependencies": {
-    "@babel/preset-env": "7.16.8",
+    "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "6.0.0",
