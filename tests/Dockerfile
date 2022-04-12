@@ -4,6 +4,6 @@ WORKDIR /work
 
 ADD package.json /work/package.json
 
-RUN npm install
+RUN yarn
 RUN npx playwright install
 RUN npx playwright install-deps

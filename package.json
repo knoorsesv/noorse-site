@@ -23,10 +23,10 @@
     "start": "gatsby develop",
     "start:master": "CONTENTFUL_ENV=master gatsby develop",
     "start:fake-vv": "nodemon --watch fake-vv.js fake-vv.js",
-    "test": "start-server-and-test serve http://localhost:9000 'npm run test --prefix tests'",
-    "test:func": "start-server-and-test serve http://localhost:9000 'npm run test:func --prefix tests'",
-    "test:update-ci": "start-server-and-test serve http://localhost:9000 'npm run test:ci-update --prefix tests'",
-    "test:update-local": "start-server-and-test serve http://localhost:9000 'npm run test:update --prefix tests'"
+    "test": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test'",
+    "test:func": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:func'",
+    "test:update-ci": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:ci-update'",
+    "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'"
   },
   "dependencies": {
     "@babel/preset-env": "7.16.8",
@@ -76,6 +76,6 @@
   },
   "volta": {
     "node": "14.19.1",
-    "npm": "6.14.16"
+    "yarn": "1.22.18"
   }
 }
