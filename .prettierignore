@@ -1,1 +1,5 @@
 CHANGELOG.md
+.cache
+public
+.netlify
+tests/playwright-report
