@@ -40,7 +40,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
             objectFit={'contain'}
           />
         )}
-        <h3 className={'italic mb-6 mt-6 capitalize'}>
+        <h3 className={'mb-6 mt-6 capitalize italic'}>
           {newsNode.publishDate || newsNode.createdAt}
         </h3>
         <ContentfulJsonContent content={newsContentArray} />
@@ -53,7 +53,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
 
 const Images = ({ images }) => {
   return (
-    <div className={'mt-10 medium:max-w-[75%] large:max-w-1/2'}>
+    <div className={'large:max-w-1/2 mt-10 medium:max-w-[75%]'}>
       {images.map(NewsImage)}
     </div>
   )

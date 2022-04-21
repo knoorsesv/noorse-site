@@ -56,7 +56,7 @@ const LidMaatschapPage = () => {
                   <div>Seniors (vanaf U21)</div>
                   <div>Zaalvoetbal</div>
                 </td>
-                <td className={'font-bold align-middle'}>
+                <td className={'align-middle font-bold'}>
                   BE30 7350 4969 5411
                 </td>
               </tr>
@@ -65,7 +65,7 @@ const LidMaatschapPage = () => {
                   <div>Dames</div>
                   <div>Meisjes</div>
                 </td>
-                <td className={'font-bold align-middle'}>
+                <td className={'align-middle font-bold'}>
                   BE23 7350 5079 9591
                 </td>
               </tr>

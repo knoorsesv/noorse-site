@@ -88,7 +88,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  news.data.allContentfulNews.nodes.forEach(newsNode => {
+  news.data.allContentfulNews.nodes.forEach((newsNode) => {
     console.log('creating news page for ', newsNode.title)
     createPage({
       path: `/nieuws/${newsNode.title}`,
@@ -97,7 +97,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  categories.data.allContentfulCategorie.nodes.forEach(categoryNode => {
+  categories.data.allContentfulCategorie.nodes.forEach((categoryNode) => {
     console.log('creating category page for', categoryNode.naam)
     createPage({
       path: categoryNode.naam.toLowerCase(),
@@ -108,8 +108,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // console.log('teams op vv', vvTeams.data.vv.clubTeams)
 
-  noorsePloegInfo.data.allContentfulPloeg.nodes.forEach(contentfulPloeg => {
-    const vvInfo = vvTeams.data.vv.clubTeams.find(vvTeam => {
+  noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
+    const vvInfo = vvTeams.data.vv.clubTeams.find((vvTeam) => {
       console.log(
         'matching ',
         vvTeam.name,
@@ -122,7 +122,7 @@ exports.createPages = async ({ graphql, actions }) => {
       )
     })
     const googleCalConfig = calendarConfig.find(
-      config => config.teamName === contentfulPloeg.naam
+      (config) => config.teamName === contentfulPloeg.naam
     )
     console.log(
       'creating team page for',

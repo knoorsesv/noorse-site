@@ -35,7 +35,7 @@ export const NewsCard = ({ newsNode }) => {
           {newsNode.publishDate || newsNode.createdAt}
         </div>
       </SubHeader>
-      <div className={'text-center min-h-64p'}>{snippet}</div>
+      <div className={'min-h-64p text-center'}>{snippet}</div>
     </ClickableCard>
   )
 }

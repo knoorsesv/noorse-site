@@ -20,7 +20,7 @@ const TrooperSection = ({ className }) => {
       <SectionTitle>Trooper</SectionTitle>
       <Card>
         <TextBlock>
-          <div className={'text-center px-2'}>
+          <div className={'px-2 text-center'}>
             Steun onze vereniging vanaf nu via{' '}
             <ExternalLink url="https://www.trooper.be/noorse">
               Trooper
@@ -94,22 +94,22 @@ const Home = () => {
       <Seo title="Home" />
       {/*todo: don't do this with a grid*/}
       <main
-        className={'large:flex large:flex-col large:items-center large:w-full'}
+        className={'large:flex large:w-full large:flex-col large:items-center'}
       >
         <div
-          className={ctl(`flex flex-col large:grid
-        large:gap-2 grid-cols-3
-        medium:px-12 large:px-6 large:mx-24
-        large:bg-gray-light large:max-w-[1200px]
+          className={ctl(`flex grid-cols-3 flex-col
+        medium:px-12 large:mx-24
+        large:grid large:max-w-[1200px] large:gap-2
+        large:bg-gray-light large:px-6
         `)}
           id="homepage-content"
         >
           <NieuwsSection className={'large:col-span-2 large:row-span-4'} />
-          <WebshopSection className={'large:row-start-1 large:col-start-3'} />
-          <EventsSection className={'large:row-start-2 large:col-start-3'} />
-          <CovidSection className={'large:row-start-3 large:col-start-3'} />
-          <TrooperSection className={'large:row-start-4 large:col-start-3'} />
-          <Section className={'large:row-start-5 large:col-start-3'}>
+          <WebshopSection className={'large:col-start-3 large:row-start-1'} />
+          <EventsSection className={'large:col-start-3 large:row-start-2'} />
+          <CovidSection className={'large:col-start-3 large:row-start-3'} />
+          <TrooperSection className={'large:col-start-3 large:row-start-4'} />
+          <Section className={'large:col-start-3 large:row-start-5'}>
             <Card>
               <SportVlaanderen />
             </Card>

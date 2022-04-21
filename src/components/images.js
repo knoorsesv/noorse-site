@@ -6,7 +6,7 @@ export const Logo = ({ className }) => {
   return (
     <Link
       to={'/'}
-      className={`${className} h-full w-full max-w-full max-h-full flex flex-col items-center`}
+      className={`${className} flex h-full max-h-full w-full max-w-full flex-col items-center`}
     >
       <StaticImage
         src="../images/Logo_highres.png"
@@ -14,7 +14,7 @@ export const Logo = ({ className }) => {
         placeholder={'tracedSVG'}
         alt={'Noorse Logo'}
         objectFit="contain"
-        className={`h-full w-full max-w-full max-h-full`}
+        className={`h-full max-h-full w-full max-w-full`}
       />
     </Link>
   )

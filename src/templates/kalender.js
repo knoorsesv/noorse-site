@@ -8,7 +8,7 @@ import { sanitizeTeamName } from '../utils/formatting'
 import { nlBE } from 'date-fns/locale'
 
 export const query = graphql`
-  query($clubId: ID!, $startDate: String!, $endDate: String!) {
+  query ($clubId: ID!, $startDate: String!, $endDate: String!) {
     vv {
       clubMatchesAssignations(
         clubId: $clubId
@@ -38,18 +38,18 @@ export const query = graphql`
 // todo: outcome not needed in query?
 
 const KalenderPage = ({ data }) => {
-  const day = date => {
+  const day = (date) => {
     return format(parseISO(date), 'eeeeee', { locale: nlBE })
   }
-  const date = date => {
+  const date = (date) => {
     return format(parseISO(date), 'dd/MM', { locale: nlBE })
   }
 
-  const hour = date => {
+  const hour = (date) => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
   const games = data.vv.clubMatchesAssignations || []
-  function dateDiffersFromPreviousGame (index, game) {
+  function dateDiffersFromPreviousGame(index, game) {
     return (
       index === 0 || date(game.startDate) !== date(games[index - 1].startDate)
     )
@@ -74,7 +74,7 @@ const KalenderPage = ({ data }) => {
                 <React.Fragment key={game.id}>
                   {dateDiffersFromPreviousGame(index, game) ? (
                     <li className={''} key={`date-${game.id}`}>
-                      <span className={'font-bold underline border-none'}>
+                      <span className={'border-none font-bold underline'}>
                         {day(game.startDate)} {date(game.startDate)}
                       </span>
                     </li>
@@ -85,7 +85,7 @@ const KalenderPage = ({ data }) => {
                   <li
                     key={game.id}
                     className={
-                      'flex justify-between align-start w-full border-b border-gray py-1'
+                      'align-start flex w-full justify-between border-b border-gray py-1'
                     }
                   >
                     <div className={'medium:my-1 large:w-1/12'}>
@@ -93,7 +93,7 @@ const KalenderPage = ({ data }) => {
                     </div>
                     <div
                       className={
-                        'flex flex-col w-3/4 large:w-11/12 large:flex-row'
+                        'flex w-3/4 flex-col large:w-11/12 large:flex-row'
                       }
                     >
                       <div
@@ -111,7 +111,7 @@ const KalenderPage = ({ data }) => {
                         <div className={'medium:w-2/5'}>
                           {sanitizeTeamName(game.homeTeam.name)}
                         </div>
-                        <div className={'hidden medium:block px-2'}>
+                        <div className={'hidden px-2 medium:block'}>
                           <span>-</span>
                         </div>
                         <div className={'medium:w-2/5'}>

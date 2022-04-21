@@ -20,7 +20,7 @@ const node = (nodeWithType, index) => {
 
   if (nodeWithType.nodeType === 'unordered-list') {
     return (
-      <ul key={index} className={'list-disc list-inside'}>
+      <ul key={index} className={'list-inside list-disc'}>
         {nodeWithType.content.map(node)}
       </ul>
     )

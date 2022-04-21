@@ -78,7 +78,7 @@ const ContactPage = () => {
                 { label: 'Vrijdag', value: '18u00 – 23u00' },
               ]}
             />
-            <div className={'text-center mt-3'}>
+            <div className={'mt-3 text-center'}>
               Wil je checken of kantine open is? Check even via socceronline of
               bel naar onze kantine.
             </div>

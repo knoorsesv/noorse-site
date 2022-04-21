@@ -24,9 +24,8 @@ export const EventsSection = ({ className }) => {
   const eventIsInfuture = (event) =>
     isFuture(parse(event.datum, 'dd/MM/yy', new Date()))
 
-  const futureEvents = events.allContentfulEvenement.nodes.filter(
-    eventIsInfuture
-  )
+  const futureEvents =
+    events.allContentfulEvenement.nodes.filter(eventIsInfuture)
 
   return (
     <Section className={className}>
@@ -52,7 +51,7 @@ export const EventList = ({ events }) => {
             <td className={'border-0'}>
               {event.aankondiging ? (
                 <Link
-                  className={'underline text-black'}
+                  className={'text-black underline'}
                   to={`/nieuws/${event.aankondiging.title}`}
                 >
                   {event.naam}

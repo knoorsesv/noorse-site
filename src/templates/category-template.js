@@ -19,7 +19,7 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
         <Section className={'flex flex-col items-center'}>
           <SubTitle>Nieuws</SubTitle>
           {categoryNode.news && (
-            <ul className={'list-disc list-inside'}>
+            <ul className={'list-inside list-disc'}>
               {categoryNode.news.map((news) => (
                 <li key={news.title}>
                   <Link to={`/nieuws/${news.title}`} className={'underline'}>

@@ -54,7 +54,7 @@ export const SponsorList = ({ logoWidth }) => {
   return (
     <div
       className={
-        'flex flex-row flex-wrap content-between justify-center items-center w-full'
+        'flex w-full flex-row flex-wrap content-between items-center justify-center'
       }
       title={'List of Sponsors'}
     >
@@ -94,7 +94,7 @@ export const ContactAndSponsorFooter = () => {
     <React.Fragment>
       <div className={wrapperClasses}>
         <Title>K. Noorse S.V.</Title>
-        <div className={`w-1/4 pb-12 large:p-6 large:w-48`}>
+        <div className={`w-1/4 pb-12 large:w-48 large:p-6`}>
           <Logo />
         </div>
         <div className={sponsorListContainer}>
@@ -104,7 +104,7 @@ export const ContactAndSponsorFooter = () => {
           <ContactInfo />
         </div>
       </div>
-      <div className={'hidden medium:block bg-gray-light w-full'}>
+      <div className={'hidden w-full bg-gray-light medium:block'}>
         <SponsorList logoWidth={'medium:w-32 large:w-40'} />
       </div>
     </React.Fragment>
@@ -120,7 +120,7 @@ export const CopyRightFooter = () => {
 
   return (
     <div className={copyRightWrapper}>
-      <div className={'text-center px-4'}>
+      <div className={'px-4 text-center'}>
         Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
         <EmailLink address={'website@noorse.be'} />
       </div>

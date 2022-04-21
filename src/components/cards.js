@@ -54,7 +54,7 @@ export const SubHeader = ({ children }) => {
   return (
     <div
       className={
-        'flex justify-between mb-3 text-gray-darker-readable italic text-sm'
+        'mb-3 flex justify-between text-sm italic text-gray-darker-readable'
       }
     >
       {children}
