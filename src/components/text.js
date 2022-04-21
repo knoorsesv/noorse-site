@@ -5,14 +5,14 @@ import ctl from '@netlify/classnames-template-literals'
 
 export const TextBlock = ({ children }) => {
   return (
-    <div className={'mt-2 mb-4 medium:mb-8 font-light medium:px-6'}>
+    <div className={'mt-2 mb-4 font-light medium:mb-8 medium:px-6'}>
       {children}
     </div>
   )
 }
 
 export const List = ({ children }) => {
-  return <ul className={'list-disc list-inside mb-6'}>{children}</ul>
+  return <ul className={'mb-6 list-inside list-disc'}>{children}</ul>
 }
 
 export const ExternalLink = ({
@@ -41,7 +41,7 @@ export const ExternalLink = ({
         <FontAwesomeIcon
           icon={faExternalLinkAlt}
           size={'sm'}
-          className={'pl-1 max-w-sm'}
+          className={'max-w-sm pl-1'}
         ></FontAwesomeIcon>
       )}
     </a>
@@ -64,11 +64,11 @@ export const SpacedInfo = ({ items }) => {
   return items.map((item) => {
     return (
       <div
-        className={'flex flex-row justify-between w-full flex-wrap'}
+        className={'flex w-full flex-row flex-wrap justify-between'}
         key={item.label}
       >
         <span className={'text-left font-bold'}>{item.label}</span>
-        <span className={'text-right overflow-hidden'}>
+        <span className={'overflow-hidden text-right'}>
           {item.email ? <EmailLink address={item.value} /> : item.value}
         </span>
       </div>

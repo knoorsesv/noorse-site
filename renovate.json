@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "config:base",
-    "schedule:daily"
-  ],
+  "extends": ["config:base", "schedule:daily"],
   "prConcurrentLimit": 2,
   "assignees": ["gvdp"],
   "packageRules": [

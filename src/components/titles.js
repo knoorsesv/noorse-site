@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Title = ({ children }) => {
   return (
-    <div className={'flex items-center flex-col mb-4'}>
+    <div className={'mb-4 flex flex-col items-center'}>
       {/* todo: this should not be an h1, but now it has implicit typography styling so just changing to h2 breaks the styling */}
       <h1 className={'mb-4 text-center'}>{children}</h1>
-      <div className={'border-b-2 border-black w-[60%] m-2 text-center'} />
+      <div className={'m-2 w-[60%] border-b-2 border-black text-center'} />
     </div>
   )
 }
@@ -14,8 +14,8 @@ export const SectionTitle = ({ children }) => {
   const backgroundColorHeight = '16px'
   const secondBackgroundHeight = '3px'
   return (
-    <div className={'flex items-start flex-col mb-2'}>
-      <h1 className={'text-left mb-0 uppercase'}>
+    <div className={'mb-2 flex flex-col items-start'}>
+      <h1 className={'mb-0 text-left uppercase'}>
         {children}
         <div
           style={{
@@ -47,5 +47,5 @@ export const SectionTitle = ({ children }) => {
 }
 
 export const SubTitle = ({ children }) => {
-  return <h2 className={`text-center underline mb-4`}>{children}</h2>
+  return <h2 className={`mb-4 text-center underline`}>{children}</h2>
 }

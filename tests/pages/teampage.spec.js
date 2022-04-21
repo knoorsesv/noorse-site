@@ -56,23 +56,23 @@ test.describe('Category Pages', () => {
       'https://calendar.google.com/calendar/u/0/r?cid=so48kkhhj47ijph29un9m4gcrc@group.calendar.google.com'
     )
     expect(
-      await reeksen.evaluateAll(links =>
-        links.map(link => link.getAttribute('href'))
+      await reeksen.evaluateAll((links) =>
+        links.map((link) => link.getAttribute('href'))
       )
     ).toContain(
       'https://www.voetbalvlaanderen.be/competitie/CHP_98714/rangschikking'
     )
     const klassementTableContent = await klassementEntries.evaluateAll(
-      klassementRows => {
-        return klassementRows.map(row =>
-          Array.from(row.querySelectorAll('td')).map(cell => cell.textContent)
+      (klassementRows) => {
+        return klassementRows.map((row) =>
+          Array.from(row.querySelectorAll('td')).map((cell) => cell.textContent)
         )
       }
     )
     const kalenderTableContent = await kalenderEntries.evaluateAll(
-      klassementRows => {
-        return klassementRows.map(row =>
-          Array.from(row.querySelectorAll('td')).map(cell => cell.textContent)
+      (klassementRows) => {
+        return klassementRows.map((row) =>
+          Array.from(row.querySelectorAll('td')).map((cell) => cell.textContent)
         )
       }
     )

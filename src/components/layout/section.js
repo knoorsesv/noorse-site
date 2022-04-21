@@ -5,8 +5,8 @@ export const Section = ({ children, className }) => {
   return (
     <section
       className={ctl(`${className}
-  bg-gray-light
-  px-6 pt-4 pb-6 medium:pb-2 mb-4 medium:mb-2
+  mb-4
+  bg-gray-light px-6 pt-4 pb-6 medium:mb-2 medium:pb-2
   `)}
     >
       {children}

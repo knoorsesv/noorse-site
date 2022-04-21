@@ -24,7 +24,11 @@ export function CalendarTable({ calendar }) {
   }
 
   return (
-    <table className={'w-full table-fixed border-separate text-sm px-2 medium:px-16 large:max-w-4/5'}>
+    <table
+      className={
+        'large:max-w-4/5 w-full table-fixed border-separate px-2 text-sm medium:px-16'
+      }
+    >
       <tbody>
         {calendar
           .filter(notCancelled)
@@ -35,7 +39,7 @@ export function CalendarTable({ calendar }) {
             game.time = format(parsedDate, 'HH:mm')
             return (
               <tr key={game.id} className={'pb-1'}>
-                <td className={'text-sm w-2/12'}>
+                <td className={'w-2/12 text-sm'}>
                   <div>{game.formattedDate}</div>
                   <div>{game.time}</div>
                 </td>

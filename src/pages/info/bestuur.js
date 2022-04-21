@@ -32,7 +32,7 @@ const BestuursCard = ({ bestuursLid }) => {
     <Card
       header={bestuursLid.node.naam}
       headerHeight={'small'}
-      className={'h-48 medium:w-2/5 medium:mx-2 my-2'}
+      className={'my-2 h-48 medium:mx-2 medium:w-2/5'}
     >
       <div className={'text-xs'}>
         <SubHeader>
@@ -46,7 +46,7 @@ const BestuursCard = ({ bestuursLid }) => {
           <div className={'mb-1'}>Sponsor Verantwoordelijke</div>
         )}
         {bestuursLid.node.email && (
-          <div className={'font-extralight truncate'}>
+          <div className={'truncate font-extralight'}>
             <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
             <EmailLink address={bestuursLid.node.email} />
           </div>

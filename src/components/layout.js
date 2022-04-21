@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Seo />
 
       <Navbar />
-      <div id="content" className={'min-h-[75vh] relative flex justify-center'}>
+      <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
       <Footer />

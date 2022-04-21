@@ -1,6 +1,10 @@
 import { EmailLink, ExternalLink } from './text'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 
 export const ContactInfo = () => {
@@ -12,7 +16,7 @@ export const ContactInfo = () => {
       <span>
         <EmailLink address="info@noorse.be" />
       </span>
-      <div className={'flex flex-row items-center mt-6 space-x-3'}>
+      <div className={'mt-6 flex flex-row items-center space-x-3'}>
         <ExternalLink
           url="https://www.facebook.com/noorsesv/"
           altText={'Link to Facebook'}

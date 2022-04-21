@@ -22,7 +22,7 @@ export const SportVlaanderen = () => {
       id="logo"
       alt={'Noorse Logo'}
       objectFit={'contain'}
-      className={`h-full w-full max-w-full max-h-full`}
+      className={`h-full max-h-full w-full max-w-full`}
     />
   )
 }
