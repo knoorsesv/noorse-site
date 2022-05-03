@@ -22,6 +22,15 @@ const LidMaatschapPage = () => {
           }
         }
       }
+      lidgeldBrief: allContentfulAsset(
+        filter: { title: { eq: "Brief lidgeld 2022-2023" } }
+      ) {
+        nodes {
+          localFile {
+            url
+          }
+        }
+      }
     }
   `)
 
@@ -39,10 +48,54 @@ const LidMaatschapPage = () => {
         <Title>Lid Worden</Title>
         <SubTitle>Bestaande leden</SubTitle>
         <TextBlock>
-          Inschrijvingsgeld bedraagt 130€ voor 31 mei 2021, daarna is het 150€ ,
-          te storten op de specifieke rekening van jouw categorie:
+          De lidgelden voor het komende seizoen 2022-2023 zijn vastgelegd op:
+   <table className={'table-fixed text-sm'}>
+            <thead>
+              <tr>
+                <th className={'font-bold'}>Categorie</th>
+                <th className={'font-bold'}>voor 01-06-2022</th>
+                <th className={'font-bold'}>na 01-06-2022</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>G-Ploeg</td>
+                <td className={'align-middle font-bold'}>
+                  €80
+                </td>
+                <td className={'align-middle font-bold'}>
+                  €110
+                </td>
+              </tr>
+              <tr className={'border-none'}>
+                <td>Instappers
+                </td>
+                <td className={'align-middle font-bold'}>
+€100                </td>
+                <td className={'align-middle font-bold'}>
+€130                </td>
+              </tr>
+              <tr>
+                <td> Jeugd (jongens en meisjes)</td>
+                <td className={'font-bold'}> €180</td>
+                <td className={'font-bold'}> €210</td>
+              </tr>
+              <tr>
+                <td> Senioren (recreatief)</td>
+                <td className={'font-bold'}> €180</td>
+                <td className={'font-bold'}> €210</td>
+              </tr>
+              <tr>
+                <td> Senioren (competitief)</td>
+                <td className={'font-bold'}> €200</td>
+                <td className={'font-bold'}> €230</td>
+              </tr>
+            </tbody>
+          </table>
+
         </TextBlock>
         <TextBlock>
+          Storten kan op volgende rekeningen:
           <table className={'table-fixed text-sm'}>
             <thead>
               <tr>
@@ -86,9 +139,6 @@ const LidMaatschapPage = () => {
           vragen wij u APART te storten: voor uw dochter op de meisjesrekening
           en voor uw zoon op de jongensrekening.
           <br />
-          Betaling van het lidgeld aan dit tarief kan tot 31 mei 2021. Na deze
-          datum bedraagt het lidgeld 150€.
-          <br />
           Wij vragen u deze datum te respecteren zodat wij de nodige
           voorbereidingen kunnen treffen voor het volgend seizoen en
           wachtlijsten kunnen openstellen voor nieuwe leden.
@@ -117,32 +167,26 @@ const LidMaatschapPage = () => {
           lidgeld kan je dan langskomen op Noorse om de inschrijving af te
           ronden.
           <br />
-          Geïnteresseerden voor jeugd jongens kunnen zich{' '}
-          <ExternalLink url="https://forms.gle/BfcSSbdRZkkx6MHe6">
-            hier
-          </ExternalLink>{' '}
-          aanmelden of mailen naar <EmailLink address="jeugd@noorse.be" /> om
+          Geïnteresseerden voor jeugd jongens kunnen zich
+          aanmelden door te mailen naar <EmailLink address="jeugd@noorse.be" /> om
           meer informatie te verkrijgen.
-          <br />
-          Voor nieuwe leden bedraagt het lidgeld 150€.
           <br />
           Wij hopen u alvast op transparante wijze te hebben geïnformeerd
           betreffende deze afspraken. Mocht u verder vragen hebben, dan horen
           wij het graag!
         </TextBlock>
 
-        <SubTitle>Extra Info Jeugd</SubTitle>
+          <a href={data.lidgeldBrief.nodes[0].localFile.url} download>
+            Aankondiging lidgeld 2022-2023
+          </a>
+          <br />
+        {/* <SubTitle>Extra Info Jeugd</SubTitle>
         <TextBlock>
           <a href={data.inschrijvingsBrief.nodes[0].localFile.url} download>
             Inschrijvingsbrief Jeugd Jongens K. Noorse SV – 2021-2022
           </a>
           <br />
-          {/*Bestaande leden van jeugd jongens kunnen zich{' '}*/}
-          {/*<ExternalLink url="https://forms.gle/xgvF8VuGmvZjeafz9">*/}
-          {/*  hier*/}
-          {/*</ExternalLink>{' '}*/}
-          {/* aanmelden.*/}
-        </TextBlock>
+        </TextBlock> */}
 
         <SubTitle>Meer info</SubTitle>
         <TextBlock>
