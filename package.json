@@ -18,6 +18,7 @@
     "deploy": "netlify deploy --dir public",
     "lint": "pretty-quick --staged",
     "lint-commit": "commitlint -E HUSKY_GIT_PARAMS",
+    "prepare": "husky install",
     "release": "standard-version && git push --follow-tags",
     "serve": "gatsby serve",
     "start": "gatsby develop",
