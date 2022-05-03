@@ -51,6 +51,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
   const nonCupRankings =
     data.vv &&
     data.vv.teamSeriesAndRankings &&
+    data.vv.teamSeriesAndRankings.rankings && 
     data.vv.teamSeriesAndRankings.rankings.filter(
       (ranking) => !ranking.name.toLowerCase().includes('beker')
     )

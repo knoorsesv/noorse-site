@@ -106,10 +106,10 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // console.log('teams op vv', vvTeams.data.vv.clubTeams)
+  console.log('teams op vv', vvTeams.data.vv.clubTeams)
 
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
-    const vvInfo = vvTeams.data.vv.clubTeams.find((vvTeam) => {
+    const vvInfo = vvTeams.data.vv.clubTeams?.find((vvTeam) => {
       console.log(
         'matching ',
         vvTeam.name,
