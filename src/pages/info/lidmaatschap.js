@@ -49,31 +49,24 @@ const LidMaatschapPage = () => {
         <SubTitle>Bestaande leden</SubTitle>
         <TextBlock>
           De lidgelden voor het komende seizoen 2022-2023 zijn vastgelegd op:
-   <table className={'table-fixed text-sm'}>
+          <table className={'table-fixed text-sm'}>
             <thead>
               <tr>
                 <th className={'font-bold'}>Categorie</th>
-                <th className={'font-bold'}>voor 01-06-2022</th>
-                <th className={'font-bold'}>na 01-06-2022</th>
+                <th className={'font-bold'}>voor 01-07-2022</th>
+                <th className={'font-bold'}>na 01-07-2022</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>G-Ploeg</td>
-                <td className={'align-middle font-bold'}>
-                  €80
-                </td>
-                <td className={'align-middle font-bold'}>
-                  €110
-                </td>
+                <td className={'align-middle font-bold'}>€80</td>
+                <td className={'align-middle font-bold'}>€110</td>
               </tr>
               <tr className={'border-none'}>
-                <td>Instappers
-                </td>
-                <td className={'align-middle font-bold'}>
-€100                </td>
-                <td className={'align-middle font-bold'}>
-€130                </td>
+                <td>Instappers</td>
+                <td className={'align-middle font-bold'}>€100 </td>
+                <td className={'align-middle font-bold'}>€130 </td>
               </tr>
               <tr>
                 <td> Jeugd (jongens en meisjes)</td>
@@ -92,7 +85,6 @@ const LidMaatschapPage = () => {
               </tr>
             </tbody>
           </table>
-
         </TextBlock>
         <TextBlock>
           Storten kan op volgende rekeningen:
@@ -167,19 +159,19 @@ const LidMaatschapPage = () => {
           lidgeld kan je dan langskomen op Noorse om de inschrijving af te
           ronden.
           <br />
-          Geïnteresseerden voor jeugd jongens kunnen zich
-          aanmelden door te mailen naar <EmailLink address="jeugd@noorse.be" /> om
-          meer informatie te verkrijgen.
+          Geïnteresseerden voor jeugd jongens kunnen zich aanmelden door te
+          mailen naar <EmailLink address="jeugd@noorse.be" /> om meer informatie
+          te verkrijgen.
           <br />
           Wij hopen u alvast op transparante wijze te hebben geïnformeerd
           betreffende deze afspraken. Mocht u verder vragen hebben, dan horen
           wij het graag!
         </TextBlock>
 
-          <a href={data.lidgeldBrief.nodes[0].localFile.url} download>
-            Aankondiging lidgeld 2022-2023
-          </a>
-          <br />
+        <a href={data.lidgeldBrief.nodes[0].localFile.url} download>
+          Aankondiging lidgeld 2022-2023
+        </a>
+        <br />
         {/* <SubTitle>Extra Info Jeugd</SubTitle>
         <TextBlock>
           <a href={data.inschrijvingsBrief.nodes[0].localFile.url} download>
