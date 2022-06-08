@@ -1,0 +1,54 @@
+name: Deploy prod preview
+
+on: workflow_dispatch
+
+jobs:
+  deps:
+    runs-on: ubuntu-latest
+    name: 'Download and cache dependencies'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+      - run: yarn --frozen-lockfile
+
+  build-prod:
+    needs: deps
+    runs-on: ubuntu-latest
+    name: Build PROD
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+      - run: yarn build
+        env:
+          CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+          CONTENTFUL_PREVIEW: true
+          PROD: true
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v1
+        id: deploy-prod
+        with:
+          publish-dir: './public'
+          production-deploy: false
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deployed prod build: ${{ github.ref }}'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+    outputs:
+      prod-url: ${{steps.deploy-prod.outputs.deploy-url}}
