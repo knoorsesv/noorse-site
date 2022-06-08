@@ -168,9 +168,11 @@ const LidMaatschapPage = () => {
           wij het graag!
         </TextBlock>
 
-        <a href={data.lidgeldBrief.nodes[0].localFile.url} download>
-          Aankondiging lidgeld 2022-2023
-        </a>
+        {data.lidgeldBrief.nodes[0] && (
+          <a href={data.lidgeldBrief.nodes[0].localFile.url} download>
+            Aankondiging lidgeld 2022-2023
+          </a>
+        )}
         <br />
         {/* <SubTitle>Extra Info Jeugd</SubTitle>
         <TextBlock>
