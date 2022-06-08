@@ -53,30 +53,6 @@ const WebshopSection = ({ className }) => {
   )
 }
 
-const CovidSection = ({ className }) => {
-  return (
-    <Section className={`${className}`}>
-      <SectionTitle>Covid-19</SectionTitle>
-      <Card>
-        <div className={'text-center'}>
-          Op Noorse zijn{' '}
-          <ExternalLink
-            icon={false}
-            url={'https://www.sport.vlaanderen/sporten-in-tijden-van-corona/'}
-          >
-            de algemene veiligheidsmaatregelen omtrent COVID-19
-          </ExternalLink>{' '}
-          van kracht.
-        </div>
-        <div className={'text-center'}>
-          De specifieke maatregelen vindt u{' '}
-          <Link to={'/nieuws/Nieuwe%20COVID%20maatregelen'}>hier.</Link>{' '}
-        </div>
-      </Card>
-    </Section>
-  )
-}
-
 const NieuwsSection = ({ className }) => {
   return (
     <Section id="news-list" className={className}>
@@ -107,7 +83,6 @@ const Home = () => {
           <NieuwsSection className={'large:col-span-2 large:row-span-4'} />
           <WebshopSection className={'large:col-start-3 large:row-start-1'} />
           <EventsSection className={'large:col-start-3 large:row-start-2'} />
-          <CovidSection className={'large:col-start-3 large:row-start-3'} />
           <TrooperSection className={'large:col-start-3 large:row-start-4'} />
           <Section className={'large:col-start-3 large:row-start-5'}>
             <Card>
