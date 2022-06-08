@@ -66,19 +66,6 @@ test.describe('Home Page', () => {
     expect(await events.count()).toEqual(2)
   })
 
-  test('has a covid rules section', async ({ page }) => {
-    const section = page.locator('section:has-text("Covid-19")')
-    const extLink = section.locator('a[target="_blank"]')
-    const intLink = section.locator('a:not([target])')
-
-    expect(await intLink.getAttribute('href')).toEqual(
-      '/nieuws/Nieuwe%20COVID%20maatregelen'
-    )
-    expect(await extLink.getAttribute('href')).toEqual(
-      'https://www.sport.vlaanderen/sporten-in-tijden-van-corona/'
-    )
-  })
-
   test('has a trooper section', async ({ page }) => {
     const section = page.locator('section:has-text("Trooper")')
     const extLink = section.locator('a[target="_blank"]')
