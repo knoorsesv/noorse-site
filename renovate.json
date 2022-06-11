@@ -1,16 +1,6 @@
 {
-  "extends": ["config:base", "schedule:daily"],
-  "prConcurrentLimit": 2,
-  "assignees": ["gvdp"],
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["patch", "pin", "digest"],
-      "automerge": true
-    },
-    {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchDepTypes": ["devDependencies"],
-      "automerge": true
-    }
+  "extends": [
+    "github>gvdp/renovate-preset",
+    "schedule:daily"
   ]
 }
