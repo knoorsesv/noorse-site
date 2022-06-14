@@ -1,6 +1,5 @@
 {
   "extends": [
-    "github>gvdp/renovate-preset",
-    "schedule:daily"
+    "github>gvdp/renovate-preset"
   ]
 }
