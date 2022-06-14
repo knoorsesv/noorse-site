@@ -53,14 +53,25 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
 
 const Images = ({ images }) => {
   return (
-    <div className={'large:max-w-1/2 mt-10 medium:max-w-[75%]'}>
+    <div className={' mt-10 flex max-w-[90%] flex-wrap justify-center gap-x-2'}>
       {images.map(NewsImage)}
     </div>
   )
 }
+
 const NewsImage = (image) => {
-  //todo: make this a gatsby image
-  return <img key={image.file.url} src={image.file.url} alt={image.title} />
+  return (
+    <GatsbyImage
+      image={image.gatsbyImageData}
+      imgClassName={'p-2 '}
+      className={
+        'aspect-square max-w-[75%] p-2 medium:max-w-[45%] large:max-w-[32%]'
+      }
+      objectFit={'contain'}
+      key={image.title}
+      alt={image.title}
+    />
+  )
 }
 
 const getImageAttachments = (attachments) => {

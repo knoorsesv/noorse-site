@@ -26,6 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
               url
               contentType
             }
+            gatsbyImageData(layout: CONSTRAINED)
           }
           image {
             gatsbyImageData(layout: CONSTRAINED)
