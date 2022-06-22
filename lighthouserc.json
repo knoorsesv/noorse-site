@@ -18,6 +18,12 @@
           { "maxLength": 0 },
           "error",
           { "maxLength": 5 }
+        ],
+        "unused-css-rules": [
+          "warn",
+          { "maxLength": 0 },
+          "error",
+          { "maxLength": 1 }
         ]
       }
     }
