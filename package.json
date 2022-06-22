@@ -32,6 +32,8 @@
   "dependencies": {
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
+    "@fontsource/lato": "^4.5.8",
+    "@fontsource/mulish": "^4.5.11",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "6.1.1",
     "@fortawesome/free-solid-svg-icons": "6.1.1",

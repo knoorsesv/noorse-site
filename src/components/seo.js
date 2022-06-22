@@ -63,11 +63,6 @@ function Seo({ title }) {
         href="https://images.ctfassets.net"
         crossOrigin="true"
       />
-      <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossOrigin="true"
-      />
     </Helmet>
   )
 }
