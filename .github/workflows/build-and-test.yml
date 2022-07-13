@@ -132,12 +132,12 @@ jobs:
         env:
           IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ failure() }}
         with:
           name: test-report
           path: tests/test-results
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ failure() }}
         with:
           name: playwright-report
