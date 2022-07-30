@@ -125,10 +125,7 @@ exports.createPages = async ({ graphql, actions }) => {
       staticTeamConfig
     )
 
-    if (
-      process.env.PROD !== 'true' &&
-      (!staticTeamConfig?.vvId || !staticTeamConfig?.calendarId)
-    ) {
+    if (!staticTeamConfig?.vvId || !staticTeamConfig?.calendarId) {
       teamsWithMissingConfig.push(contentfulPloeg.naam)
     }
 
@@ -143,13 +140,17 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  if (calendarConfig.length > 0) {
+  if (
+    process.env.PROD !== 'true' &&
+    process.env.CONTENTFUL_ENV === 'master' &&
+    calendarConfig.length > 0
+  ) {
     throw new Error(
       `No matching teams for static config ${JSON.stringify(calendarConfig)}`
     )
   }
 
-  if (teamsWithMissingConfig.length > 0) {
+  if (process.env.PROD !== 'true' && teamsWithMissingConfig.length > 0) {
     throw new Error(
       `Config is not correct for ${JSON.stringify(teamsWithMissingConfig)}`
     )

@@ -14,6 +14,7 @@
   "author": "gvdp",
   "scripts": {
     "build": "gatsby build && cp _redirects public/_redirects",
+    "build:dev": "CONTENTFUL_ENV=staging gatsby build",
     "build:fake-vv": "cross-env CONTENTFUL_ENV=staging REAL_VV=false start-server-and-test start:fake-vv http://localhost:4000/.well-known/apollo/server-health 'gatsby build'",
     "deploy": "netlify deploy --dir public",
     "lint": "pretty-quick --staged",
