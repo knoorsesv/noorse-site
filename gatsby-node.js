@@ -4,7 +4,7 @@ const format = require('date-fns/format')
 const add = require('date-fns/add')
 const fs = require('fs')
 
-const calendarConfig = JSON.parse(fs.readFileSync('data/calendar-config.json'))
+let calendarConfig = JSON.parse(fs.readFileSync('data/calendar-config.json'))
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -108,41 +108,52 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   console.log('teams op vv', vvTeams.data.vv.clubTeams)
+  const teamsWithMissingConfig = []
 
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
-    const vvInfo = vvTeams.data.vv.clubTeams?.find((vvTeam) => {
-      console.log(
-        'matching ',
-        vvTeam.name,
-        contentfulPloeg.naamOpVoetbalVlaanderen,
-        contentfulPloeg.naam
-      )
-      return (
-        (contentfulPloeg.naamOpVoetbalVlaanderen || contentfulPloeg.naam) ===
-        vvTeam.name
-      )
-    })
-    const googleCalConfig = calendarConfig.find(
+    const staticTeamConfig = calendarConfig.find(
       (config) => config.teamName === contentfulPloeg.naam
     )
+
+    calendarConfig = calendarConfig.filter(
+      (config) => config.teamName !== contentfulPloeg.naam
+    )
+
     console.log(
       'creating team page for',
       contentfulPloeg.naam,
-      // contentfulPloeg.naamOpVoetbalVlaanderen,
-      vvInfo
-      // googleCalConfig
+      staticTeamConfig
     )
+
+    if (
+      process.env.PROD !== 'true' &&
+      (!staticTeamConfig?.vvId || !staticTeamConfig?.calendarId)
+    ) {
+      teamsWithMissingConfig.push(contentfulPloeg.naam)
+    }
+
     createPage({
       path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
       component: require.resolve(`./src/templates/team-page-template.js`),
       context: {
-        vvInfo,
-        teamId: vvInfo ? vvInfo.id : 'none',
+        teamId: staticTeamConfig?.vvId,
         contentfulPloeg,
-        googleCalId: googleCalConfig && googleCalConfig.calendarId,
+        googleCalId: staticTeamConfig?.calendarId,
       },
     })
   })
+
+  if (calendarConfig.length > 0) {
+    throw new Error(
+      `No matching teams for static config ${JSON.stringify(calendarConfig)}`
+    )
+  }
+
+  if (teamsWithMissingConfig.length > 0) {
+    throw new Error(
+      `Config is not correct for ${JSON.stringify(teamsWithMissingConfig)}`
+    )
+  }
 
   // moving end of week by a day because vv api sucks and it doesnt include matches on the endDate
   const endDayOfWeek = format(
