@@ -1,13 +1,11 @@
-import React from 'react'
-import Layout, { Container } from '../../components/layout'
-import { graphql, useStaticQuery } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAt } from '@fortawesome/free-solid-svg-icons'
-import { Card, SubHeader } from '../../components/cards'
-import { Title } from '../../components/titles'
-import { EmailLink } from '../../components/text'
-import { Helmet } from 'react-helmet'
 import ctl from '@netlify/classnames-template-literals'
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { Card, SubHeader } from '../../components/cards'
+import Layout, { Container } from '../../components/layout'
+import { EmailLink } from '../../components/text'
+import { Title } from '../../components/titles'
 
 const query = graphql`
   query {
@@ -47,7 +45,6 @@ const BestuursCard = ({ bestuursLid }) => {
         )}
         {bestuursLid.node.email && (
           <div className={'truncate font-extralight'}>
-            <FontAwesomeIcon icon={faAt} className={'mr-1'}></FontAwesomeIcon>
             <EmailLink address={bestuursLid.node.email} />
           </div>
         )}
