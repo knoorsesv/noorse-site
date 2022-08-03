@@ -1,14 +1,9 @@
-import React from 'react'
-import Layout, { Container } from '../../components/layout'
-import { SubTitle, Title } from '../../components/titles'
-import {
-  EmailLink,
-  ExternalLink,
-  SpacedInfo,
-  TextBlock,
-} from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import Layout, { Container } from '../../components/layout'
+import { EmailLink, SpacedInfo, TextBlock } from '../../components/text'
+import { SubTitle, Title } from '../../components/titles'
 
 const LidMaatschapPage = () => {
   const data = useStaticQuery(graphql`
