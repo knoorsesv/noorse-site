@@ -1,7 +1,5 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import ctl from '@netlify/classnames-template-literals'
+import React from 'react'
 
 export const TextBlock = ({ children }) => {
   return (
@@ -25,7 +23,9 @@ export const ExternalLink = ({
   className,
 }) => {
   const linkClasses = ctl(
-    `${styled && 'underline'} ${textColor || 'text-gray-dark'} ${className}`
+    `${styled && 'underline'} ${
+      textColor || 'text-gray-dark'
+    } ${className} inline-flex items-center`
   )
 
   return (
@@ -38,11 +38,20 @@ export const ExternalLink = ({
     >
       {children}
       {icon && (
-        <FontAwesomeIcon
-          icon={faExternalLinkAlt}
-          size={'sm'}
-          className={'max-w-sm pl-1'}
-        ></FontAwesomeIcon>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 max-w-sm pl-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          />
+        </svg>
       )}
     </a>
   )
@@ -55,6 +64,21 @@ export const EmailLink = ({ address }) => {
       icon={false}
       textColor={'text-black'}
     >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="mr-1 h-4 w-4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </svg>
+
       {address}
     </ExternalLink>
   )

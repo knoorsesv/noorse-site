@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import ctl from '@netlify/classnames-template-literals'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { Logo } from './images'
-import { ExternalLink } from './text'
+import React, { useEffect, useRef, useState } from 'react'
 import { siteMap, webshopLink } from '../env/constants'
 import { CoverImage } from './cover-image'
-import ctl from '@netlify/classnames-template-literals'
+import { Logo } from './images'
+import { ExternalLink } from './text'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
@@ -181,15 +179,51 @@ const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
     ${sideBarMenuShown || topMenuBarShown ? '' : 'bg-green'} ${transition}`)
   return (
     <div className={toggleWrapperClasses}>
-      <FontAwesomeIcon
-        className={'h-6 w-6'}
-        icon={sideBarMenuShown ? faTimes : faBars}
+      <button
+        className="bg-transparent text-white"
         onClick={clickBurger}
+        aria-label={sideBarMenuShown ? 'Sluit menu' : 'Open menu'}
         id="menu-hamburger"
-      />
+      >
+        {sideBarMenuShown ? <Close /> : <Menu />}
+      </button>
     </div>
   )
 }
+
+const Close = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+)
+
+const Menu = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+  </svg>
+)
 
 export const Navbar = ({ pageHasCoverPhoto = false }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
