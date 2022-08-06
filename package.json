@@ -61,7 +61,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "apollo-server": "3.9.0",
+    "apollo-server": "3.10.0",
     "autoprefixer": "10.4.7",
     "cross-env": "7.0.3",
     "husky": "8.0.1",
