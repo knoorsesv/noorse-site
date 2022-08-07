@@ -35,6 +35,7 @@ export const Card = ({
               <GatsbyImage
                 image={image.gatsbyImageData}
                 alt={'Card Header Image'}
+                loading="lazy"
               />
             </div>
           ) : (

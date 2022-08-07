@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          placeholder: `tracedSVG`,
+          placeholder: `blurred`,
           // breakpoints: [750, 1080, 1366, 1920],
         },
       },

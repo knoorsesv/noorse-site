@@ -35,8 +35,9 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         {newsNode.showImageOnPage && newsNode.image && (
           <GatsbyImage
             image={newsNode.image.gatsbyImageData}
-            alt={'News Image'}
+            alt={'News Image'} // todo: make alt tag specific
             style={{ maxHeight: '300px' }}
+            loading="lazy"
             objectFit={'contain'}
           />
         )}
@@ -67,6 +68,7 @@ const NewsImage = (image) => {
       className={
         'aspect-square max-w-[75%] p-2 medium:max-w-[45%] large:max-w-[32%]'
       }
+      loading="lazy"
       objectFit={'contain'}
       key={image.title}
       alt={image.title}
