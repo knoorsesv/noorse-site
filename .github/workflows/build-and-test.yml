@@ -152,7 +152,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v8
+        uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
             ${{needs.build-prod.outputs.prod-url}}
