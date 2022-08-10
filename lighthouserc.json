@@ -12,6 +12,12 @@
         "font-display": "off",
         "is-crawlable": "off",
         "csp-xss": "off",
+        "offscreen-images": [
+          "warn",
+          { "maxLength": 0 },
+          "error",
+          { "maxLength": 5 }
+        ],
         "unsized-images": "off",
         "uses-rel-preconnect": ["warn"],
         "uses-responsive-images": [
