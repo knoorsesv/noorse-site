@@ -55,8 +55,8 @@ const LidMaatschapPage = () => {
             <tbody>
               <tr>
                 <td>G-Ploeg</td>
-                <td className={'align-middle font-bold'}>€80</td>
                 <td className={'align-middle font-bold'}>€110</td>
+                <td className={'align-middle font-bold'}>€120</td>
               </tr>
               <tr className={'border-none'}>
                 <td>Instappers</td>
