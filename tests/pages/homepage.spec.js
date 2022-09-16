@@ -15,10 +15,10 @@ test.describe('Home Page', () => {
     const newsSection = page.locator('section:has(h1:text-is("Nieuws"))')
     // todo: semantically this should probably be <li>
     const newsItems = newsSection.locator('article')
-    const firstHeadline = newsItems.first().locator('h2')
+    const firstHeadline = newsItems.nth(1).locator('h2')
     // todo: semantically this probably shouldn't be a div
     const firstBlurb = newsItems
-      .first()
+      .nth(1)
       .locator(' > div:last-of-type > div:last-of-type')
 
     expect(newsSection).toBeVisible()
@@ -32,7 +32,7 @@ test.describe('Home Page', () => {
   test('clicking news card takes you to page', async ({ page }) => {
     const newsSection = page.locator('section:has-text("Nieuws")')
     const newsItems = newsSection.locator('article')
-    const firstItem = newsItems.first()
+    const firstItem = newsItems.nth(1)
 
     await firstItem.click()
     await page.waitForNavigation()

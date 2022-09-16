@@ -3,6 +3,7 @@ const { test, expect } = require('@playwright/test')
 const pages = [
   '/',
   '/nieuws/Nieuwe spelers 2020-2021',
+  '/nieuws/Alle Mogelijke Opties',
   '/info/nieuws',
   '/team/Noorse 1',
   '/info/kalender',
@@ -12,6 +13,8 @@ const pages = [
   '/info/lidmaatschap',
 ]
 
+const takeFullPage = ['/nieuws/Alle Mogelijke Opties']
+
 test.describe.parallel('Screenshot Test', () => {
   pages.forEach((pageUrl) => {
     test(`for ${pageUrl}`, async ({ page }) => {
@@ -20,12 +23,11 @@ test.describe.parallel('Screenshot Test', () => {
 
       await (await page.$('#logo')).waitForElementState('stable')
       // todo: maybe scroll on big pages? / open navbar on mobile?
-      expect(await page.screenshot({ fullPage: false })).toMatchSnapshot(
-        `page${pageUrl.replace('/', '-')}.png`,
-        {
-          threshold: 0.8,
-        }
-      )
+      expect(
+        await page.screenshot({ fullPage: takeFullPage.includes(pageUrl) })
+      ).toMatchSnapshot(`page${pageUrl.replace('/', '-')}.png`, {
+        threshold: 0.8,
+      })
     })
   })
 })
