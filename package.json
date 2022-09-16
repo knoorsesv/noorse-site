@@ -36,7 +36,7 @@
     "@fontsource/lato": "4.5.9",
     "@fontsource/mulish": "4.5.12",
     "@netlify/classnames-template-literals": "1.0.3",
-    "date-fns": "2.29.2",
+    "date-fns": "2.29.3",
     "gatsby": "4.23.0",
     "gatsby-plugin-image": "2.23.0",
     "gatsby-plugin-postcss": "5.23.0",
