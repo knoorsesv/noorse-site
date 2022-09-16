@@ -37,8 +37,8 @@ test.describe('All Info Pages', () => {
     const articles = page.locator('#content article')
 
     expect(title).toHaveText('Nieuws')
-    expect(await articles.count()).toEqual(6)
-    expect(articles.first()).toContainText('Nieuwe spelers 2020-2021')
+    expect(await articles.count()).toEqual(7)
+    expect(articles.nth(1)).toContainText('Nieuwe spelers 2020-2021')
   })
 
   test('There is a lidmaatschap page', async ({ page }) => {
