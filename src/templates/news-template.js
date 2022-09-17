@@ -1,13 +1,11 @@
-import React from 'react'
-import Layout, { Container } from '../components/layout'
-import { Title } from '../components/titles'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { marked } from 'marked'
+import React from 'react'
 import { Helmet } from 'react-helmet'
-import { ContentfulJsonContent } from '../components/contentful-content'
-import { createSnippetFromContentArray } from '../components/snippet'
 import { Attachments } from '../components/attachment-list'
+import Layout, { Container } from '../components/layout'
+import { createSnippetFromContentArray } from '../components/snippet'
 import { imageFileTypes } from '../env/constants'
-
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
   const newsContentArray = JSON.parse(newsNode.body.raw).content
@@ -17,6 +15,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
       <Helmet>
         <title>{newsNode.title}</title>
         <meta property="og:title" content={`${newsNode.title}`} />
+        {/* todo: extract blurb from markdown inhoud*/}
         <meta
           property="og:description"
           content={`${
@@ -30,8 +29,8 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
           />
         )}
       </Helmet>
-      <Container>
-        <Title>{newsNode.title}</Title>
+      <Container className={newsNode.inhoud.inhoud && 'prose'}>
+        <h1>{newsNode.title}</h1>
         {newsNode.showImageOnPage && newsNode.image && (
           <GatsbyImage
             image={newsNode.image.gatsbyImageData}
@@ -44,7 +43,13 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <h3 className={'mb-6 mt-6 capitalize italic'}>
           {newsNode.publishDate || newsNode.createdAt}
         </h3>
-        <ContentfulJsonContent content={newsContentArray} />
+        {newsNode.inhoud.inhoud ? (
+          <section
+            dangerouslySetInnerHTML={{ __html: marked(newsNode.inhoud.inhoud) }}
+          ></section>
+        ) : (
+          <ContentfulJsonContent content={newsContentArray} />
+        )}
         <Attachments attachments={newsNode.attachment} />
         {!!images.length && <Images images={images} />}
       </Container>

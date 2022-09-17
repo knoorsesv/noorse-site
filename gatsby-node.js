@@ -16,6 +16,9 @@ exports.createPages = async ({ graphql, actions }) => {
           body {
             raw
           }
+          inhoud {
+            inhoud
+          }
           category {
             naam
           }

@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
       <Seo />
 
       <Navbar />
+      {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
