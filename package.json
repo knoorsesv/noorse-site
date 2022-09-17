@@ -28,7 +28,8 @@
     "test": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test'",
     "test:func": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:func'",
     "test:update-ci": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:ci-update'",
-    "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'"
+    "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'",
+    "update-all": "yarn build:fake-vv && yarn test:update-ci && yarn test:update-local && gcam \"chore: update screenshots\" && gp"
   },
   "dependencies": {
     "@babel/preset-env": "7.19.1",
