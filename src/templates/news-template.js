@@ -6,6 +6,7 @@ import { Attachments } from '../components/attachment-list'
 import { ContentfulJsonContent } from '../components/contentful-content'
 import Layout, { Container } from '../components/layout'
 import { createSnippetFromContentArray } from '../components/snippet'
+import { Title } from '../components/titles'
 import { imageFileTypes } from '../env/constants'
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
@@ -30,8 +31,8 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
           />
         )}
       </Helmet>
-      <Container className={newsNode.inhoud?.inhoud && 'prose'}>
-        <h1>{newsNode.title}</h1>
+      <Container>
+        <Title>{newsNode.title}</Title>
         {newsNode.showImageOnPage && newsNode.image && (
           <GatsbyImage
             image={newsNode.image.gatsbyImageData}
@@ -46,6 +47,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         </h3>
         {newsNode.inhoud?.inhoud ? (
           <section
+            className={'prose'}
             dangerouslySetInnerHTML={{ __html: marked(newsNode.inhoud.inhoud) }}
           ></section>
         ) : (

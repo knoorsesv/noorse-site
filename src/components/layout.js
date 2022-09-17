@@ -22,9 +22,8 @@ const Layout = ({ children }) => {
 
 export default Layout
 
-export const Container = ({ children, className }) => {
+export const Container = ({ children }) => {
   const containerWrapperClasses = ctl(`
-    ${className}
     flex flex-col items-center
     pt-6 medium:mx-8 pb-20
     bg-gray-light
