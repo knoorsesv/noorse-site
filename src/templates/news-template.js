@@ -29,7 +29,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
           />
         )}
       </Helmet>
-      <Container className={newsNode.inhoud.inhoud && 'prose'}>
+      <Container className={newsNode.inhoud?.inhoud && 'prose'}>
         <h1>{newsNode.title}</h1>
         {newsNode.showImageOnPage && newsNode.image && (
           <GatsbyImage
@@ -43,7 +43,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <h3 className={'mb-6 mt-6 capitalize italic'}>
           {newsNode.publishDate || newsNode.createdAt}
         </h3>
-        {newsNode.inhoud.inhoud ? (
+        {newsNode.inhoud?.inhoud ? (
           <section
             dangerouslySetInnerHTML={{ __html: marked(newsNode.inhoud.inhoud) }}
           ></section>
