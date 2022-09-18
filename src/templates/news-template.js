@@ -53,16 +53,25 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         ) : (
           <ContentfulJsonContent content={newsContentArray} />
         )}
-        <Attachments attachments={newsNode.attachment} />
-        {!!images.length && <Images images={images} />}
+        <section className={newsNode.inhoud?.inhoud ? 'prose ' : ''}>
+          <Attachments attachments={newsNode.attachment} />
+        </section>
+        {!!images.length && (
+          <Images
+            images={images}
+            className={
+              newsNode.inhoud?.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'
+            }
+          />
+        )}
       </Container>
     </Layout>
   )
 }
 
-const Images = ({ images }) => {
+const Images = ({ images, className }) => {
   return (
-    <div className={' mt-10 flex max-w-[90%] flex-wrap justify-center gap-x-2'}>
+    <div className={`mt-10 flex flex-wrap justify-center gap-x-2 ${className}`}>
       {images.map(NewsImage)}
     </div>
   )
@@ -73,9 +82,7 @@ const NewsImage = (image) => {
     <GatsbyImage
       image={image.gatsbyImageData}
       imgClassName={'p-2 '}
-      className={
-        'aspect-square max-w-[75%] p-2 medium:max-w-[45%] large:max-w-[32%]'
-      }
+      className={'aspect-square max-w-[75%] p-2 medium:max-w-[45%] '}
       loading="lazy"
       objectFit={'contain'}
       key={image.title}
