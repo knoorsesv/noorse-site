@@ -5,23 +5,27 @@ import { Helmet } from 'react-helmet'
 import { Attachments } from '../components/attachment-list'
 import { ContentfulJsonContent } from '../components/contentful-content'
 import Layout, { Container } from '../components/layout'
-import { createSnippetFromContentArray } from '../components/snippet'
+import {
+  createSnippetFromContentArray,
+  createSnippetFromInhoud,
+} from '../components/snippet'
 import { Title } from '../components/titles'
 import { imageFileTypes } from '../env/constants'
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
   const newsContentArray = JSON.parse(newsNode.body.raw).content
-
   return (
     <Layout>
       <Helmet>
         <title>{newsNode.title}</title>
         <meta property="og:title" content={`${newsNode.title}`} />
-        {/* todo: extract blurb from markdown inhoud*/}
         <meta
           property="og:description"
           content={`${
-            newsNode.blurb || createSnippetFromContentArray(newsContentArray)
+            newsNode.blurb ||
+            (newsNode.inhoud?.inhoud &&
+              createSnippetFromInhoud(newsNode.inhoud?.inhoud)) ||
+            createSnippetFromContentArray(newsContentArray)
           }`}
         />
         {newsNode.image && (
@@ -48,7 +52,9 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         {newsNode.inhoud?.inhoud ? (
           <section
             className={'prose'}
-            dangerouslySetInnerHTML={{ __html: marked(newsNode.inhoud.inhoud) }}
+            dangerouslySetInnerHTML={{
+              __html: marked(newsNode.inhoud?.inhoud),
+            }}
           ></section>
         ) : (
           <ContentfulJsonContent content={newsContentArray} />
