@@ -25,7 +25,7 @@ test.describe('Home Page', () => {
     expect(await newsItems.count()).toEqual(6)
     expect(await firstHeadline.innerText()).toEqual('NIEUWE SPELERS 2020-2021')
     expect(await firstBlurb.innerText()).toEqual(
-      'Dit is een andere blurb met niet zo super veel characters but it does make sense.Dit is een ander'
+      'Na het jammere nieuws dat er dit seizoen niet meer gevoetbald wordt, beginnen we meteen uit te kijke ...'
     )
   })
 
