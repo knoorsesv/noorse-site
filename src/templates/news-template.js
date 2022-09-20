@@ -1,17 +1,19 @@
-import React from 'react'
-import Layout, { Container } from '../components/layout'
-import { Title } from '../components/titles'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { marked } from 'marked'
+import React from 'react'
 import { Helmet } from 'react-helmet'
-import { ContentfulJsonContent } from '../components/contentful-content'
-import { createSnippetFromContentArray } from '../components/snippet'
 import { Attachments } from '../components/attachment-list'
+import { ContentfulJsonContent } from '../components/contentful-content'
+import Layout, { Container } from '../components/layout'
+import {
+  createSnippetFromContentArray,
+  createSnippetFromInhoud,
+} from '../components/snippet'
+import { Title } from '../components/titles'
 import { imageFileTypes } from '../env/constants'
-
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
   const newsContentArray = JSON.parse(newsNode.body.raw).content
-
   return (
     <Layout>
       <Helmet>
@@ -20,7 +22,10 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <meta
           property="og:description"
           content={`${
-            newsNode.blurb || createSnippetFromContentArray(newsContentArray)
+            newsNode.blurb ||
+            (newsNode.inhoud?.inhoud &&
+              createSnippetFromInhoud(newsNode.inhoud?.inhoud)) ||
+            createSnippetFromContentArray(newsContentArray)
           }`}
         />
         {newsNode.image && (
@@ -44,17 +49,35 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <h3 className={'mb-6 mt-6 capitalize italic'}>
           {newsNode.publishDate || newsNode.createdAt}
         </h3>
-        <ContentfulJsonContent content={newsContentArray} />
-        <Attachments attachments={newsNode.attachment} />
-        {!!images.length && <Images images={images} />}
+        {newsNode.inhoud?.inhoud ? (
+          <section
+            className={'prose'}
+            dangerouslySetInnerHTML={{
+              __html: marked(newsNode.inhoud?.inhoud),
+            }}
+          ></section>
+        ) : (
+          <ContentfulJsonContent content={newsContentArray} />
+        )}
+        <section className={newsNode.inhoud?.inhoud ? 'prose ' : ''}>
+          <Attachments attachments={newsNode.attachment} />
+        </section>
+        {!!images.length && (
+          <Images
+            images={images}
+            className={
+              newsNode.inhoud?.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'
+            }
+          />
+        )}
       </Container>
     </Layout>
   )
 }
 
-const Images = ({ images }) => {
+const Images = ({ images, className }) => {
   return (
-    <div className={' mt-10 flex max-w-[90%] flex-wrap justify-center gap-x-2'}>
+    <div className={`mt-10 flex flex-wrap justify-center gap-x-2 ${className}`}>
       {images.map(NewsImage)}
     </div>
   )
@@ -65,9 +88,7 @@ const NewsImage = (image) => {
     <GatsbyImage
       image={image.gatsbyImageData}
       imgClassName={'p-2 '}
-      className={
-        'aspect-square max-w-[75%] p-2 medium:max-w-[45%] large:max-w-[32%]'
-      }
+      className={'aspect-square max-w-[75%] p-2 medium:max-w-[45%] '}
       loading="lazy"
       objectFit={'contain'}
       key={image.title}

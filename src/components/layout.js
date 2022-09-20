@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
       <Seo />
 
       <Navbar />
+      {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
@@ -22,7 +23,8 @@ const Layout = ({ children }) => {
 export default Layout
 
 export const Container = ({ children }) => {
-  const containerWrapperClasses = ctl(`flex flex-col items-center
+  const containerWrapperClasses = ctl(`
+    flex flex-col items-center
     pt-6 medium:mx-8 pb-20
     bg-gray-light
     min-h-[75vh] h-auto w-11/12 medium:w-5/6 large:w-3/4

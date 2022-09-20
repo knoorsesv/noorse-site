@@ -1,7 +1,10 @@
 import { navigate } from 'gatsby-link'
 import React from 'react'
 import { ClickableCard, SubHeader } from './cards'
-import { createSnippetFromContentArray } from './snippet'
+import {
+  createSnippetFromContentArray,
+  createSnippetFromInhoud,
+} from './snippet'
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const NewsCard = ({ newsNode }) => {
@@ -14,9 +17,10 @@ export const NewsCard = ({ newsNode }) => {
       }
     }
   `)
-
   const snippet =
     newsNode.blurb ||
+    (newsNode.inhoud?.inhoud &&
+      createSnippetFromInhoud(newsNode.inhoud?.inhoud)) ||
     createSnippetFromContentArray(JSON.parse(newsNode.body.raw).content)
 
   const goToNews = () => {

@@ -8,6 +8,9 @@ export const NewsList = ({ maxItems }) => {
       allContentfulNews(sort: { fields: createdAt, order: DESC }) {
         nodes {
           title
+          inhoud {
+            inhoud
+          }
           body {
             raw
           }

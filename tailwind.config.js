@@ -151,5 +151,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-elevation')(['responsive'])],
+  plugins: [
+    require('tailwindcss-elevation')(['responsive']),
+    require('@tailwindcss/typography'),
+  ],
 }
