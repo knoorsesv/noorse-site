@@ -32,7 +32,7 @@
     "update-all": "yarn build:fake-vv && yarn test:update-ci && yarn test:update-local && git commit -am \"chore: update screenshots\" && git push"
   },
   "dependencies": {
-    "@babel/preset-env": "7.19.1",
+    "@babel/preset-env": "7.19.3",
     "@babel/preset-react": "7.18.6",
     "@fontsource/lato": "4.5.9",
     "@fontsource/mulish": "4.5.12",
