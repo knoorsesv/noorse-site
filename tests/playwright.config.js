@@ -17,7 +17,7 @@ const config = {
     ? [['github'], ['html', { open: 'never' }]]
     : [['list'], ['html', { open: 'never' }]],
   forbidOnly: !!runOnCI,
-  retries: runOnCI ? 2 : 0,
+  retries: runOnCI ? 3 : 0,
   workers: runOnCI ? 4 : 1,
   use: {
     baseURL,
