@@ -1348,15 +1348,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/lato@4.5.9":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.9.tgz#7c819b412581591f9abc1c04ea07d67af1e501cd"
-  integrity sha512-VkDnHBbPee/KMAUuBwe3rEKRDECo1MsA+I+ucZNU6FYdHrsv+SKpYgNr7nk/OhoaGrn9PrpXcmcd9eoD4J3Y6Q==
+"@fontsource/lato@4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.10.tgz#1ab3d33282e605886e4a8b4c32b1f230a4cb5ea6"
+  integrity sha512-2hYR6r661Cq9B8zugtu6yxuOKqrVhAgfOSaPSq8XoxbC4ebsl0KOTy/vPoP+9U7JuQVLfrmikirW4a9Z0nDUug==
 
-"@fontsource/mulish@4.5.12":
-  version "4.5.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-4.5.12.tgz#6e309b49e6c5c4defc87edb803308337b39ec53b"
-  integrity sha512-rlM4VI9bvS9rxf1LxiSTmnFB7Pjca2NWnWxb/6L3XTWsRJJbc2PN5jenVDJtt/WEVSz18ZdDtYzE/xb1JUYSWQ==
+"@fontsource/mulish@4.5.13":
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-4.5.13.tgz#cba3c17bf943fd1d9a3f0114d536df87c61b5640"
+  integrity sha512-uJ4NzvEZSCZnrKU0Xvk6Qf0WFMRnyCwslLOtHIao3vh2+W1llbaZy4+PiR6mcB2Y62dPG2HvZPN0NnKfDaFSbA==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^1.9.0":
   version "1.9.0"
