@@ -23,7 +23,7 @@ const config = {
     baseURL,
     trace: 'on-first-retry',
   },
-  timeout: 10 * 1000,
+  timeout: 20 * 1000,
   projects: [
     {
       name: 'Functional',
