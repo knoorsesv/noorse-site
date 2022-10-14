@@ -239,6 +239,7 @@ export const Navbar = ({ pageHasCoverPhoto = false }) => {
   // todo: extract and unit test this
   const infoPageSiteMaps = allPages.allSitePage.nodes
     .filter((node) => node.path.includes('info'))
+    .filter((node) => !node.path.includes('sponsoring'))
     .map((node) => ({
       name: node.path.replace('/info/', '').replace('/', ''),
       link: node.path,
