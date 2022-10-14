@@ -63,5 +63,6 @@ export const SubHeader = ({ children }) => {
   )
 }
 export const ClickableCard = ({ onClick, ...props }) => {
+  // todo: this should just be an <a> tag
   return Clickable(Card, onClick, props)
 }
