@@ -7,6 +7,7 @@ const pages = [
   '/info/nieuws',
   '/team/Noorse 1',
   '/info/kalender',
+  '/info/sponsoring',
   '/senioren',
   '/contact',
   '/info/bestuur',
