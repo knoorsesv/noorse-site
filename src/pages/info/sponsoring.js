@@ -1,125 +1,53 @@
-import React from 'react'
-import Layout, { Container } from '../../components/layout'
-import { SubTitle, Title } from '../../components/titles'
-import { List, SpacedInfo, TextBlock } from '../../components/text'
 import { graphql, useStaticQuery } from 'gatsby'
+import { marked } from 'marked'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Attachments } from '../../components/attachment-list'
+import Layout, { Container } from '../../components/layout'
+import { Title } from '../../components/titles'
 
 const SponsoringPage = () => {
   const data = useStaticQuery(graphql`
     {
-      sponsorFolder: allContentfulAsset(
-        filter: { title: { eq: "SponsoringNoorse-20192020" } }
-      ) {
+      allContentfulPage(filter: { title: { eq: "Sponsoring" } }) {
         nodes {
-          localFile {
-            url
+          body {
+            id
+            body
           }
-        }
-      }
-
-      allContentfulBestuurslid(
-        filter: { sponsorVerantwoordelijke: { eq: true } }
-      ) {
-        nodes {
-          naam
-          email
-          category {
-            naam
+          title
+          attachment {
+            file {
+              contentType
+            }
+            title
+            localFile {
+              url
+            }
           }
         }
       }
     }
   `)
 
-  const sponsorVerantwoordelijken = data.allContentfulBestuurslid.nodes.map(
-    (lid) => {
-      return {
-        label: lid.category.naam,
-        value: `${lid.naam} ${lid.email ? ` - ${lid.email}` : ''}`,
-      }
-    }
-  )
+  const content = data.allContentfulPage.nodes[0]
 
   return (
     <Layout>
       <Helmet>
-        <title>Sponsoring</title>
+        <title>{content.title}</title>
       </Helmet>
       <Container>
-        <Title>Sponsoring</Title>
-        <SubTitle> Waarom Sponsoren?</SubTitle>
-        <TextBlock>
-          Deze club is in enkele jaren aanzienlijk gegroeid tot een vereniging
-          met ongeveer 650 actieve sportbeoefenaars.
-          <br />
-          Dit vraagt natuurlijk de nodige fondsen om een comfortabele
-          infrastructuur, het nodige materiaal, enz. te verkrijgen. Daarbij
-          hebben wij u nodig.
-        </TextBlock>
-        <TextBlock>
-          <a href={data.sponsorFolder.nodes[0].localFile.url} download>
-            Sponsor brochure
-          </a>
-        </TextBlock>
-        <TextBlock>
-          <div className={'mb-3'}>
-            Enkele goede redenen om sponsor bij Noorse te worden:
-          </div>
-          <List>
-            <li>
-              {' '}
-              Elk weekend bereikt u vele potentiële klanten, zowel in de
-              gemeente Kapellen als in heel de provincie Antwerpen. U bereikt
-              wekelijks onze spelers, hun ouders, broers en zussen, grootouders,
-              …
-            </li>
-            <li>
-              {' '}
-              U heeft meerdere sponsormogelijkheden: Van het schenken van een
-              wedstrijdbal tot het sponsoren van een sportuitrusting,
-              trainingspakken of regenjassen voor een ploeg, uw logo op
-              A4-formaat in de kantine.
-            </li>
-            <li>
-              {' '}
-              U bereikt alle leeftijden. Bij Noorse spelen jeugdploegen en
-              seniorenploegen, pupillen, miniminiemen, miniemen, cadetten,
-              meisjes, scholieren, dames, junioren, senioren, veteranen en
-              andersvaliden.
-            </li>
-            <li>
-              {' '}
-              Uw sponsoring is natuurlijk fiscaal aftrekbaar. Na betaling wordt
-              u onmiddellijk een fiscaal attest toegestuurd.
-            </li>
-            <li>
-              {' '}
-              Andere sponsorinitiatieven zijn altijd bespreekbaar. U kan
-              hiervoor terecht bij de leden van het sponsorbestuur...
-            </li>
-            <li>
-              {' '}
-              Vanaf een sponsoring boven de 100 euro wordt u uitgenodigd op onze
-              evenementen
-            </li>
-            <li>
-              {' '}
-              U helpt onze club groeien en geeft onze spelers de kans om aan
-              sport te doen.
-            </li>
-            <li>
-              {' '}
-              U wilt sponsoren? Neem dan contact op met een van onze
-              contactpersonen!
-            </li>
-          </List>
-          Noorse dankt u!
-        </TextBlock>
-        <SubTitle>Sponsorverantwoordelijken</SubTitle>
-        <TextBlock>
-          <SpacedInfo items={sponsorVerantwoordelijken} />
-        </TextBlock>
+        <Title>{content.title}</Title>
+        <section
+          className={'prose'}
+          dangerouslySetInnerHTML={{
+            __html: marked(content.body.body),
+          }}
+        ></section>
+        <section className={'prose'}>
+          <Attachments attachments={content.attachment} />
+        </section>
       </Container>
     </Layout>
   )
