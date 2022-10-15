@@ -67,6 +67,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
+    "@storybook/addon-a11y": "^7.0.0-alpha.38",
     "@storybook/addon-essentials": "^7.0.0-alpha.38",
     "@storybook/addon-interactions": "^7.0.0-alpha.38",
     "@storybook/addon-links": "^7.0.0-alpha.38",
