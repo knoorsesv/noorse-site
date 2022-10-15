@@ -10,10 +10,6 @@ export const TextBlock = ({ children }) => {
   )
 }
 
-export const List = ({ children }) => {
-  return <ul className={'mb-6 list-inside list-disc'}>{children}</ul>
-}
-
 export const ExternalLink = ({
   children,
   url,
