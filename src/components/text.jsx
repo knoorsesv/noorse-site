@@ -2,6 +2,7 @@ import ctl from '@netlify/classnames-template-literals'
 import React from 'react'
 
 export const TextBlock = ({ children }) => {
+  // todo: not needed probably if everything is used with tailwind prose classes
   return (
     <div className={'mt-2 mb-4 font-light medium:mb-8 medium:px-6'}>
       {children}
