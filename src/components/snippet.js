@@ -27,7 +27,7 @@ export function createSnippetFromInhoud(inhoud) {
     .split('\n')
     .filter((par) => !par.startsWith('#'))
     .filter((par) => par.match(/[A-Za-z]/g))
-    .map((par) => par.replace(/[\*_]/g, ''))
+    .map((par) => par.replace(/[*_]/g, ''))
 
   while (snippet.length < maxChars && i++ < paragraphs.length) {
     snippet = `${snippet} ${paragraphs[i].substring(
