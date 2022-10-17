@@ -44,10 +44,8 @@ test.describe('All Info Pages', () => {
   test('There is a lidmaatschap page', async ({ page }) => {
     await page.goto('/info/lidmaatschap')
     const title = page.locator('#content h1')
-    const subtitle = page.locator('#content h2')
 
     expect(title).toHaveText('Lid Worden')
-    expect(subtitle.first()).toContainText('Bestaande leden')
   })
 
   test('There is a sponsoring page', async ({ page }) => {

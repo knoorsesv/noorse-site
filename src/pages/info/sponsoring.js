@@ -19,11 +19,9 @@ const SponsoringPage = () => {
           attachment {
             file {
               contentType
-            }
-            title
-            localFile {
               url
             }
+            title
           }
         }
       }

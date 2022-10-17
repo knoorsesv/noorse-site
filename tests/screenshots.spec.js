@@ -11,7 +11,6 @@ const pages = [
   '/senioren',
   '/contact',
   '/info/bestuur',
-  '/info/lidmaatschap',
 ]
 
 const takeFullPage = ['/nieuws/Alle Mogelijke Opties']
