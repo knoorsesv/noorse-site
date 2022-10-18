@@ -9,7 +9,6 @@ const pages = [
   '/info/kalender',
   '/info/sponsoring',
   '/senioren',
-  '/contact',
   '/info/bestuur',
 ]
 
