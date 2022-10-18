@@ -74,11 +74,8 @@ test.describe('All Info Pages', () => {
 
   test('There is a contact page', async ({ page }) => {
     await page.goto('/contact')
-    const title = page.locator('#content h1')
+    const dummyContent = page.locator('#content section')
 
-    expect(await title.allTextContents()).toContain('Koninklijke Noorse SV')
-    expect(await title.allTextContents()).toContain('Contact')
-    expect(await title.allTextContents()).toContain('Bereikbaarheid')
-    expect(await title.allTextContents()).toContain('Kantine')
+    expect(await dummyContent.allTextContents()).toContain('Contact')
   })
 })
