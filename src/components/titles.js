@@ -15,6 +15,7 @@ export const SectionTitle = ({ children }) => {
   const secondBackgroundHeight = '3px'
   return (
     <div className={'mb-2 flex flex-col items-start'}>
+      {/* todo: this probably shouldnt be an h1 */}
       <h1 className={'mb-0 text-left uppercase'}>
         {children}
         <div

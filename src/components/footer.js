@@ -94,6 +94,7 @@ export const ContactAndSponsorFooter = () => {
   return (
     <React.Fragment>
       <div className={wrapperClasses}>
+        {/* todo: this shouldnt be an h1 */}
         <Title>K. Noorse S.V.</Title>
         <div className={`w-1/4 pb-12 large:w-48 large:p-6`}>
           <Logo />
