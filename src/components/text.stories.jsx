@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextBlock } from './text'
+import { TextBlock } from './text.jsx'
 
 export const RandomText = () => <TextBlock>Some random styled text</TextBlock>
 

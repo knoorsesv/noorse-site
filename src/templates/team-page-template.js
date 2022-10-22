@@ -1,10 +1,10 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { CalendarTable } from '../components/game-table'
 import Layout, { Container } from '../components/layout'
 import { CategoryTeamNavigation } from '../components/team-navigation'
-import { ExternalLink } from '../components/text'
+import { ExternalLink } from '../components/text.jsx'
 import { SubTitle, Title } from '../components/titles'
 
 export const query = graphql`

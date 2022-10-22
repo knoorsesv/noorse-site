@@ -4,7 +4,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Card, SubHeader } from '../../components/cards'
 import Layout, { Container } from '../../components/layout'
-import { EmailLink } from '../../components/text'
+import { EmailLink } from '../../components/text.jsx'
 import { Title } from '../../components/titles'
 
 const query = graphql`

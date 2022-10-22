@@ -1,4 +1,4 @@
-import { ExternalLink } from './text'
+import { ExternalLink } from './text.jsx'
 import React from 'react'
 
 export const ContentfulJsonContent = ({ content: contentArray }) => {

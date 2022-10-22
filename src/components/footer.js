@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { EmailLink, ExternalLink } from './text'
+import { EmailLink, ExternalLink } from './text.jsx'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Title } from './titles'
 import { Logo } from './images'
