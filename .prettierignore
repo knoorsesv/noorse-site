@@ -3,3 +3,8 @@ CHANGELOG.md
 public
 .netlify
 tests/playwright-report
+
+.prettierignore
+.eslintignore
+.husky/pre-commit
+yarn.lock
