@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout, { Container } from '../components/layout'
+import Layout, { Container } from '../layouts/layout'
 import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
 import { CategoryTeamNavigation } from '../components/team-navigation'

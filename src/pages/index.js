@@ -12,6 +12,7 @@ import { ExternalLink, TextBlock } from '../components/text.jsx'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { webshopLink } from '../env/constants'
+import { getVersion } from '../queries/version'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -90,7 +91,7 @@ const Home = () => {
           </Section>
         </div>
       </main>
-      <Footer />
+      <Footer version={getVersion()} />
     </div>
   )
 }

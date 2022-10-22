@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../layouts/layout'
 import Seo from '../components/seo'
 import { TextBlock } from '../components/text.jsx'
 import { Title } from '../components/titles'
