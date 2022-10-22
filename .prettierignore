@@ -8,3 +8,6 @@ tests/playwright-report
 .eslintignore
 .husky/pre-commit
 yarn.lock
+
+storybook-static
+
