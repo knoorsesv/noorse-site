@@ -27,7 +27,7 @@ export const NewsList = ({ maxItems }) => {
       }
     }
   `)
-  const shownNewsItems = !!maxItems
+  const shownNewsItems = maxItems
     ? newsItems.allContentfulNews.nodes.slice(0, maxItems)
     : newsItems.allContentfulNews.nodes
   return (
@@ -38,7 +38,7 @@ export const NewsList = ({ maxItems }) => {
         </div>
       ))}
       <div className={'my-4 flex w-full justify-center text-xl'}>
-        {!!maxItems ? (
+        {maxItems ? (
           <Link className={'font-bold text-black'} to={'info/nieuws'}>
             ...
           </Link>

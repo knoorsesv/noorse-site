@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Clickable = (Component, onClick, { className, ...props }) => {
+export const Clickable = (Component, onClick, { ...props }) => {
   const keyDownHandler = (event) => {
     if (event.key === 'Enter') {
       onClick()
