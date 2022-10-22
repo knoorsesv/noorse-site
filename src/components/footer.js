@@ -66,11 +66,11 @@ export const SponsorList = ({ logoWidth }) => {
   )
 }
 
-export const Footer = () => {
+export const Footer = ({ version }) => {
   return (
     <footer id="footer">
       <ContactAndSponsorFooter />
-      <CopyRightFooter />
+      <CopyRightFooter version={version} />
     </footer>
   )
 }
@@ -113,7 +113,7 @@ export const ContactAndSponsorFooter = () => {
   )
 }
 
-export const CopyRightFooter = () => {
+export const CopyRightFooter = ({ version }) => {
   const copyRightWrapper = ctl(`
   flex flex-col justify-start items-center
   bg-green-dark bg-opacity-75
@@ -127,7 +127,7 @@ export const CopyRightFooter = () => {
         <EmailLink address={'website@noorse.be'} />
       </div>
       <div>
-        <Version /> © {new Date().getFullYear()}, K. Noorse S.V.
+        <Version version={version} />
       </div>
       <div>
         Powered by{' '}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout, { Container } from '../components/layout'
+import Layout, { Container } from '../layouts/layout'
 import { SubTitle, Title } from '../components/titles'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'

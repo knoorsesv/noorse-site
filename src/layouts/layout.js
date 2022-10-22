@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { Footer } from './footer'
-import { Navbar } from './navbar'
-import Seo from './seo'
+import { Footer } from '../components/footer'
+import { Navbar } from '../components/navbar'
+import Seo from '../components/seo'
 import ctl from '@netlify/classnames-template-literals'
+import { getVersion } from '../queries/version'
 
 const Layout = ({ children }) => {
   return (
@@ -15,7 +16,7 @@ const Layout = ({ children }) => {
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
-      <Footer />
+      <Footer version={getVersion()} />
     </div>
   )
 }
@@ -32,6 +33,7 @@ export const Container = ({ children }) => {
   const childrenWrapper = ctl(`px-4 medium:px-10 large:px-20
                               pt-4
                               max-w-full`)
+
   return (
     <div id="content-wrapper" className={containerWrapperClasses}>
       <div className={childrenWrapper}>{children}</div>
