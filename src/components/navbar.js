@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { siteMap, webshopLink } from '../env/constants'
 import { CoverImage } from './cover-image'
 import { Logo } from './images'
-import { ExternalLink } from './text'
+import { ExternalLink } from './text.jsx'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'

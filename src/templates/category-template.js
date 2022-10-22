@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { SubTitle, Title } from '../components/titles'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import { Section } from '../components/layout/section'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 const CategoryPage = ({ pageContext: { categoryNode } }) => {
   return (

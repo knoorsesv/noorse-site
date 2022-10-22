@@ -1,5 +1,5 @@
 import React from 'react'
-import { EmailLink, ExternalLink } from './text'
+import { EmailLink, ExternalLink } from './text.jsx'
 
 export const ContactInfo = () => {
   return (

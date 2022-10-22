@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLink } from './text'
+import { ExternalLink } from './text.jsx'
 
 const Link = (args) => (
   <ExternalLink {...args} url="http://www.noorse.be">
