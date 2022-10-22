@@ -1,8 +1,6 @@
 {
-  "extends": [
-    "github>gvdp/renovate-preset"
-  ],
+  "extends": ["github>gvdp/renovate-preset"],
   "minor": {
-    "automerge": true 
+    "automerge": true
   }
 }
