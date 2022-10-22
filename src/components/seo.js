@@ -35,6 +35,7 @@ function Seo({ title }) {
 
   const metaDescription = site.siteMetadata.description
   const logoSrc = logo.childImageSharp.resize.src
+  // eslint-disable-next-line no-undef
   const enableAnalytics = process.env.GATSBY_ENABLE_ANALYTICS === 'true'
   return (
     <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}>
