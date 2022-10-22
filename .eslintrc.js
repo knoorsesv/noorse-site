@@ -19,6 +19,17 @@ module.exports = {
       ],
       env: { node: true },
     },
+    {
+      files: ['./src/components/**'],
+      rules: {
+        'no-restricted-imports': [
+          'warn',
+          {
+            patterns: ['gatsby*'],
+          },
+        ],
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
