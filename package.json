@@ -19,7 +19,8 @@
     "build:fake-vv": "cross-env CONTENTFUL_ENV=staging REAL_VV=false start-server-and-test start:fake-vv http://localhost:4000/.well-known/apollo/server-health 'gatsby build'",
     "build:prod": "cross-env CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false gatsby build",
     "deploy": "netlify deploy --dir public",
-    "lint": "pretty-quick --staged",
+    "format": "prettier . --write",
+    "lint": "eslint .",
     "lint-commit": "commitlint -E HUSKY_GIT_PARAMS",
     "prepare": "husky install",
     "release": "standard-version && git push --follow-tags",
@@ -33,6 +34,10 @@
     "test:update-ci": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:ci-update'",
     "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'",
     "update-all": "yarn build:fake-vv && yarn test:update-ci && yarn test:update-local && git commit -am \"chore: update screenshots\" && git push"
+  },
+  "lint-staged": {
+    "*.js,*.jsx": "eslint --cache --fix",
+    "*": "prettier --write"
   },
   "dependencies": {
     "@babel/preset-env": "7.19.4",
@@ -77,13 +82,15 @@
     "apollo-server": "3.10.3",
     "autoprefixer": "10.4.12",
     "cross-env": "7.0.3",
+    "eslint": "8.26.0",
+    "eslint-plugin-react": "7.31.10",
     "husky": "8.0.1",
+    "lint-staged": "13.0.3",
     "nodemon": "2.0.20",
     "postcss": "8.4.18",
     "prettier": "2.7.1",
     "prettier-plugin-packagejson": "2.3.0",
     "prettier-plugin-tailwindcss": "0.1.13",
-    "pretty-quick": "3.1.3",
     "standard-version": "9.3.2",
     "start-server-and-test": "1.14.0",
     "storybook": "7.0.0-alpha.38",

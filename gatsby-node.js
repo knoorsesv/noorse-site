@@ -5,7 +5,6 @@ const add = require('date-fns/add')
 const fs = require('fs')
 
 let calendarConfig = JSON.parse(fs.readFileSync('data/calendar-config.json'))
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
