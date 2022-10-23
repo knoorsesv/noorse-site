@@ -1,7 +1,6 @@
-import { Link } from 'gatsby'
 import React from 'react'
 
-export const CategoryTeamNavigation = ({ category, header }) => {
+export const CategoryTeamNavigation = ({ category, header, TeamLink }) => {
   return (
     <nav
       aria-labelledby="team-navigation"
@@ -18,13 +17,11 @@ export const CategoryTeamNavigation = ({ category, header }) => {
           category.ploeg
             .sort((ploeg1, ploeg2) => (ploeg1.naam > ploeg2.naam ? '1' : '-1'))
             .map((ploeg) => (
-              <Link
+              <TeamLink
                 key={ploeg.naam}
-                to={`/team/${ploeg.naam.toLowerCase()}`}
+                name={ploeg.naam}
                 className={'mx-3 w-[80px] text-gray-dark underline'}
-              >
-                {ploeg.naam}
-              </Link>
+              />
             ))}
       </div>
     </nav>
