@@ -31,6 +31,7 @@
     "storybook": "storybook dev -p 6006",
     "test": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test'",
     "test:func": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:func'",
+    "test:local": "yarn --cwd tests test:local",
     "test:update-ci": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:ci-update'",
     "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'",
     "update-all": "yarn build:fake-vv && yarn test:update-ci && yarn test:update-local && git commit -am \"chore: update screenshots\" && git push"

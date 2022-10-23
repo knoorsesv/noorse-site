@@ -11,6 +11,7 @@
     "test:ci": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test.sh",
     "test:ci-update": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test-update.sh",
     "test:func": "playwright test --project=Functional",
+    "test:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:8000 yarn test:func",
     "test:update": "playwright test --update-snapshots screenshots"
   },
   "dependencies": {
