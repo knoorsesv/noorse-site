@@ -1,51 +1,20 @@
-/**
- * Seo component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import favicon from '../images/Logo_highres.png'
-import { graphql, useStaticQuery } from 'gatsby'
 
-function Seo({ title }) {
-  const { site, logo } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-        logo: file(name: { eq: "Logo_highres" }) {
-          publicURL
-          childImageSharp {
-            resize(height: 600, width: 1200, fit: CONTAIN) {
-              src
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = site.siteMetadata.description
-  const logoSrc = logo.childImageSharp.resize.src
+function Seo({ title, children }) {
+  const metaDescription =
+    'Al het laatste nieuws over voetbalvereniging Noorse uit Kapellen.'
   // eslint-disable-next-line no-undef
   const enableAnalytics = process.env.GATSBY_ENABLE_ANALYTICS === 'true'
   return (
-    <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}>
+    <Helmet titleTemplate={`%s | K. Noorse S.V.`}>
       <html lang="nl" />
       <title>{title}</title>
       <link rel="icon" href={favicon} />
 
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
-      <meta property="og:image" content={logoSrc} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={title} />
@@ -64,6 +33,7 @@ function Seo({ title }) {
         href="https://images.ctfassets.net"
         crossOrigin="true"
       />
+      {children}
     </Helmet>
   )
 }

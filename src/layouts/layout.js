@@ -5,11 +5,14 @@ import { Navbar } from '../components/navbar'
 import Seo from '../components/seo'
 import ctl from '@netlify/classnames-template-literals'
 import { getVersion } from '../queries/version'
+import { getLogoUrl } from '../queries/resized-logo'
 
 const Layout = ({ children }) => {
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
-      <Seo />
+      <Seo>
+        <meta property="og:image" content={getLogoUrl()} />
+      </Seo>
 
       <Navbar />
       {/* todo: should this be a main tag? */}
