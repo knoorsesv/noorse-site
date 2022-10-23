@@ -1,4 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { Card } from '../components/cards'
 import { EventsSection } from '../components/events'
@@ -7,11 +8,11 @@ import { Section } from '../components/layout/section'
 import { Navbar } from '../components/navbar'
 import { NewsList } from '../components/newsList'
 import Seo from '../components/seo'
-import { SportVlaanderen } from '../components/sport-vlaanderen-logo'
 import { ExternalLink, TextBlock } from '../components/text.jsx'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { webshopLink } from '../env/constants'
+import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
 
 const TrooperSection = ({ className }) => {
@@ -86,7 +87,14 @@ const Home = () => {
           <TrooperSection className={'large:col-start-3 large:row-start-4'} />
           <Section className={'large:col-start-3 large:row-start-5'}>
             <Card>
-              <SportVlaanderen />
+              <GatsbyImage
+                image={getSportVlaanderenLogo()}
+                id="logo"
+                alt={'Sport Vlaaderen Logo'}
+                objectFit={'contain'}
+                loading="lazy"
+                className={`h-full max-h-full w-full max-w-full`}
+              />
             </Card>
           </Section>
         </div>
