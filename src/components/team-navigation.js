@@ -3,11 +3,14 @@ import React from 'react'
 
 export const CategoryTeamNavigation = ({ category, header }) => {
   return (
-    <section
-      id="team-navigation"
+    <nav
+      aria-labelledby="team-navigation"
       className={`bg-green-light bg-opacity-25 p-4`}
     >
-      <h3 className={'w-full border-b-2 border-black pb-2 text-center'}>
+      <h3
+        id="team-navigation"
+        className={'w-full border-b-2 border-black pb-2 text-center'}
+      >
         {header || category.naam}
       </h3>
       <div className={'flex-start mx-1 flex flex-wrap'}>
@@ -24,6 +27,6 @@ export const CategoryTeamNavigation = ({ category, header }) => {
               </Link>
             ))}
       </div>
-    </section>
+    </nav>
   )
 }
