@@ -88,4 +88,23 @@ test.describe('Category Pages', () => {
       '00',
     ])
   })
+
+  test('has a navigation list with all other senioren teams', async ({
+    page,
+  }) => {
+    const navElement = page.locator('nav[aria-labelledby=team-navigation]')
+
+    expect(navElement).toBeVisible()
+    const links = navElement.locator('a')
+    expect(await links.allTextContents()).toEqual([
+      'Noorse 1',
+      'Noorse 3',
+      'Noorse 4',
+      'Reserven A',
+    ])
+    await links.locator('text=Noorse 3').click()
+    await page.waitForURL('**/team/noorse%203')
+
+    expect(page.url()).toContain('/team/noorse%203')
+  })
 })
