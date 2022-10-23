@@ -135,7 +135,30 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: ${{ failure() }}
         with:
-          name: playwright-report
+          name: test-playwright-report
+          path: tests/playwright-report
+
+  screenshots:
+    needs: [build-dev, build-test-base]
+    runs-on: ubuntu-latest
+    name: Visual Test
+    steps:
+      - uses: actions/checkout@v3
+      - name: Pull Docker image
+        # todo: maybe make it possible to already pull this image in advance to save time
+        run: 'docker pull $IMAGE'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+      - name: Run your tests
+        working-directory: ./tests
+        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-screenshot-test.sh'
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+          PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
+      - uses: actions/upload-artifact@v3
+        if: ${{ failure() }}
+        with:
+          name: screenshot-playwright-report
           path: tests/playwright-report
 
   lighthouse-check:
