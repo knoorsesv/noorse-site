@@ -11,3 +11,5 @@ yarn.lock
 
 storybook-static
 
+*.sh
+
