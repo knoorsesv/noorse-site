@@ -15,7 +15,15 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
       <Container>
         <Title>{categoryNode.naam}</Title>
 
-        <CategoryTeamNavigation category={categoryNode} header={'Ploegen'} />
+        <CategoryTeamNavigation
+          category={categoryNode}
+          header={'Ploegen'}
+          TeamLink={({ name, ...props }) => (
+            <Link to={`/team/${name.toLowerCase()}`} {...props}>
+              {name}
+            </Link>
+          )}
+        />
         <Section className={'flex flex-col items-center'}>
           <SubTitle>Nieuws</SubTitle>
           {categoryNode.news && (

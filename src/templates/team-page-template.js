@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { CalendarTable } from '../components/game-table'
@@ -252,7 +252,14 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
           )}
         </div>
 
-        <CategoryTeamNavigation category={contentfulPloeg.categorie} />
+        <CategoryTeamNavigation
+          category={contentfulPloeg.categorie}
+          TeamLink={({ name, ...props }) => (
+            <Link to={`/team/${name.toLowerCase()}`} {...props}>
+              {name}
+            </Link>
+          )}
+        />
       </Container>
     </Layout>
   )
