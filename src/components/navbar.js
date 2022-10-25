@@ -1,5 +1,4 @@
 import ctl from '@netlify/classnames-template-literals'
-import { Link } from 'gatsby'
 import React, { useEffect, useRef, useState } from 'react'
 import { siteMap, webshopLink } from '../env/constants'
 import { CoverImage } from './cover-image'
@@ -44,7 +43,12 @@ const NavSection = ({
   )
 }
 
-const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
+const MenuItemList = ({
+  topMenuBarShown,
+  siteMap,
+  sideBarMenuShown,
+  InfoPageLink,
+}) => {
   const ulClasses = ctl(`
   fixed top-0
   list-none z-50
@@ -81,9 +85,13 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   ${item.subItems && 'group'}`)
           return (
             <li id={'menu-item'} key={item.name} className={liClasses}>
-              <NavLink item={item} />
+              <NavLink item={item} InfoPageLink={InfoPageLink} />
               {item.subItems && (
-                <SubMenuItemList fixedToTop={topMenuBarShown} item={item} />
+                <SubMenuItemList
+                  fixedToTop={topMenuBarShown}
+                  item={item}
+                  InfoPageLink={InfoPageLink}
+                />
               )}
             </li>
           )
@@ -93,7 +101,7 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   )
 }
 
-const SubMenuItemList = ({ item }) => {
+const SubMenuItemList = ({ item, InfoPageLink }) => {
   const ulClasses = ctl(`
   list-none
   large:hidden large:group-hover:absolute large:group-hover:flex
@@ -106,7 +114,7 @@ const SubMenuItemList = ({ item }) => {
       {item.subItems.map((subItem) => {
         return (
           <li key={subItem.name}>
-            <NavLink item={subItem} />
+            <NavLink item={subItem} InfoPageLink={InfoPageLink} />
           </li>
         )
       })}
@@ -114,19 +122,10 @@ const SubMenuItemList = ({ item }) => {
   )
 }
 
-const NavLink = ({ item }) => {
+const NavLink = ({ item, InfoPageLink }) => {
   const className = 'text-white text-lg capitalize'
-
   if (item.link) {
-    return (
-      <Link
-        className={className}
-        activeClassName={'border-b-2 border-white'}
-        to={item.link}
-      >
-        {item.name}
-      </Link>
-    )
+    return <InfoPageLink className={className} item={item} />
   }
 
   if (item.extLink) {
@@ -216,7 +215,11 @@ const Menu = () => (
 )
 
 // todo: just make 2 separate components instead of having a boolean for the cover photo
-export const Navbar = ({ pageHasCoverPhoto = false, infoPageSiteMaps }) => {
+export const Navbar = ({
+  pageHasCoverPhoto = false,
+  infoPageSiteMaps,
+  InfoPageLink,
+}) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
 
@@ -231,7 +234,6 @@ export const Navbar = ({ pageHasCoverPhoto = false, infoPageSiteMaps }) => {
       extLink: webshopLink,
     },
   ].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
-
   return (
     <NavSection
       topMenuBarShown={topMenuBarShown}
@@ -242,6 +244,7 @@ export const Navbar = ({ pageHasCoverPhoto = false, infoPageSiteMaps }) => {
         topMenuBarShown={topMenuBarShown}
         sideBarMenuShown={sideBarMenuShown}
         siteMap={siteMap}
+        InfoPageLink={InfoPageLink}
       />
       <MenuLogo topMenuBarShown={topMenuBarShown} />
       <MenuToggle

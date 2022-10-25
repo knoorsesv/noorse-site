@@ -1,4 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
+import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { Card } from '../components/cards'
@@ -64,12 +65,25 @@ const NieuwsSection = ({ className }) => {
   )
 }
 
+const InfoPageLink = ({ item, className }) => {
+  return (
+    <Link
+      className={className}
+      activeClassName={'border-b-2 border-white'}
+      to={item.link}
+    >
+      {item.name}
+    </Link>
+  )
+}
+
 const Home = () => {
   return (
     <div>
       <Navbar
         pageHasCoverPhoto={true}
         infoPageSiteMaps={getSiteMapForInfoPages()}
+        InfoPageLink={InfoPageLink}
       />
 
       <Seo title="Home" />

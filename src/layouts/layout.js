@@ -7,6 +7,7 @@ import ctl from '@netlify/classnames-template-literals'
 import { getVersion } from '../queries/version'
 import { getLogoUrl } from '../queries/resized-logo'
 import { getSiteMapForInfoPages } from '../queries/pages'
+import { Link } from 'gatsby'
 
 const Layout = ({ children }) => {
   return (
@@ -15,13 +16,28 @@ const Layout = ({ children }) => {
         <meta property="og:image" content={getLogoUrl()} />
       </Seo>
 
-      <Navbar infoPageSiteMaps={getSiteMapForInfoPages()} />
+      <Navbar
+        infoPageSiteMaps={getSiteMapForInfoPages()}
+        InfoPageLink={InfoPageLink}
+      />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
       <Footer version={getVersion()} />
     </div>
+  )
+}
+
+const InfoPageLink = ({ item, className }) => {
+  return (
+    <Link
+      className={className}
+      activeClassName={'border-b-2 border-white'}
+      to={item.link}
+    >
+      {item.name}
+    </Link>
   )
 }
 
