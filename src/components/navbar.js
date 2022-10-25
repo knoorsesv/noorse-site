@@ -1,7 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import React, { useEffect, useRef, useState } from 'react'
 import { siteMap, webshopLink } from '../env/constants'
-import { CoverImage } from './cover-image'
 import { Logo } from './images'
 import { ExternalLink } from './text.jsx'
 
@@ -14,6 +13,7 @@ const NavSection = ({
   children,
   setTopMenuBarShown,
   topMenuBarShown,
+  CoverImage,
 }) => {
   const ref = useRef(null)
 
@@ -37,7 +37,11 @@ const NavSection = ({
   w-full static`)
   return (
     <header ref={ref} id="nav-container" className={navContainerClasses}>
-      {pageHasCoverPhoto ? <CoverImage /> : <></>}
+      {pageHasCoverPhoto ? (
+        <CoverImage className={ctl(`${coverSectionHeight} absolute w-full`)} />
+      ) : (
+        <></>
+      )}
       {children}
     </header>
   )
@@ -219,6 +223,7 @@ export const Navbar = ({
   pageHasCoverPhoto = false,
   infoPageSiteMaps,
   InfoPageLink,
+  CoverImage,
 }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
@@ -239,6 +244,7 @@ export const Navbar = ({
       topMenuBarShown={topMenuBarShown}
       pageHasCoverPhoto={pageHasCoverPhoto}
       setTopMenuBarShown={setTopMenuBarShown}
+      CoverImage={CoverImage}
     >
       <MenuItemList
         topMenuBarShown={topMenuBarShown}
