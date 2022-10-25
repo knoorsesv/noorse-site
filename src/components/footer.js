@@ -1,11 +1,10 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { EmailLink, ExternalLink } from './text.jsx'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import { Title } from './titles'
-import { ContactInfo } from './contact'
-import { Version } from './version'
 import ctl from '@netlify/classnames-template-literals'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react'
+import { ContactInfo } from './contact'
+import { EmailLink, ExternalLink } from './text.jsx'
+import { Title } from './titles'
+import { Version } from './version'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -36,21 +35,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children
 
-export const SponsorList = ({ logoWidth }) => {
-  const sponsors = useStaticQuery(graphql`
-    {
-      allContentfulSponsor {
-        nodes {
-          naam
-          websiteUrl
-          logo {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-        }
-      }
-    }
-  `)
-
+export const SponsorList = ({ logoWidth, sponsors }) => {
   return (
     <div
       className={
@@ -58,23 +43,21 @@ export const SponsorList = ({ logoWidth }) => {
       }
       title={'List of Sponsors'}
     >
-      {sponsors.allContentfulSponsor.nodes.map((sponsor) =>
-        SponsorWithLogo(sponsor, logoWidth)
-      )}
+      {sponsors?.map((sponsor) => SponsorWithLogo(sponsor, logoWidth))}
     </div>
   )
 }
 
-export const Footer = ({ version, Logo }) => {
+export const Footer = ({ version, Logo, sponsors }) => {
   return (
     <footer id="footer">
-      <ContactAndSponsorFooter Logo={Logo} />
+      <ContactAndSponsorFooter Logo={Logo} sponsors={sponsors} />
       <CopyRightFooter version={version} />
     </footer>
   )
 }
 
-export const ContactAndSponsorFooter = ({ Logo }) => {
+export const ContactAndSponsorFooter = ({ Logo, sponsors }) => {
   const wrapperClasses = ctl(`
     flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
@@ -99,14 +82,14 @@ export const ContactAndSponsorFooter = ({ Logo }) => {
           <Logo />
         </div>
         <div className={sponsorListContainer}>
-          <SponsorList />
+          <SponsorList sponsors={sponsors} />
         </div>
         <div className={contactInfoWrapper}>
           <ContactInfo />
         </div>
       </div>
       <div className={'hidden w-full bg-gray-light medium:block'}>
-        <SponsorList logoWidth={'medium:w-32 large:w-40'} />
+        <SponsorList logoWidth={'medium:w-32 large:w-40'} sponsors={sponsors} />
       </div>
     </React.Fragment>
   )

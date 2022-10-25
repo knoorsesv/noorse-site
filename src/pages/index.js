@@ -22,6 +22,7 @@ import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
 import { getConstrainedLogoData } from '../queries/constrained-logo'
 import { Logo } from '../static-images/logo'
+import { getSponsors } from '../queries/sponsors'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -180,7 +181,7 @@ const Home = () => {
           </Section>
         </div>
       </main>
-      <Footer version={getVersion()} Logo={Logo} />
+      <Footer version={getVersion()} Logo={Logo} sponsors={getSponsors()} />
     </div>
   )
 }
