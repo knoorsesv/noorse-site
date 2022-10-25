@@ -1,45 +1,22 @@
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import { isFuture, parse } from 'date-fns'
+import { Card } from './cards'
 import { Section } from './layout/section'
 import { SectionTitle } from './titles'
-import { Card } from './cards'
 
-export const EventsSection = ({ className }) => {
-  const events = useStaticQuery(graphql`
-    query {
-      allContentfulEvenement(sort: { fields: datum }) {
-        nodes {
-          naam
-          datum(formatString: "DD/MM/YY")
-          eindDatum(formatString: "DD/MM/YY")
-          aankondiging {
-            title
-          }
-        }
-      }
-    }
-  `)
-
-  const eventIsInfuture = (event) =>
-    isFuture(parse(event.datum, 'dd/MM/yy', new Date()))
-
-  const futureEvents =
-    events.allContentfulEvenement.nodes.filter(eventIsInfuture)
-
+export const EventsSection = ({ className, futureEvents, EventLink }) => {
   return (
     <Section className={className}>
       <SectionTitle>Evenementen</SectionTitle>
       <Card className={'mb-4'}>
         <div className={'py-2 px-3'}>
-          <EventList events={futureEvents} />
+          <EventList events={futureEvents} EventLink={EventLink} />
         </div>
       </Card>
     </Section>
   )
 }
 
-export const EventList = ({ events }) => {
+const EventList = ({ events, EventLink }) => {
   return events.length ? (
     <table>
       <tbody>
@@ -50,12 +27,7 @@ export const EventList = ({ events }) => {
             </td>
             <td className={'border-0'}>
               {event.aankondiging ? (
-                <Link
-                  className={'text-black underline'}
-                  to={`/nieuws/${event.aankondiging.title}`}
-                >
-                  {event.naam}
-                </Link>
+                <EventLink event={event} />
               ) : (
                 <span className={''}> {event.naam}</span>
               )}
