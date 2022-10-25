@@ -1,5 +1,4 @@
 import ctl from '@netlify/classnames-template-literals'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { ContactInfo } from './contact'
 import { EmailLink, ExternalLink } from './text.jsx'
@@ -21,12 +20,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
           </ExternalLink>
         )}
       >
-        <GatsbyImage
-          image={sponsorNode.logo.gatsbyImageData}
-          alt={`Logo ${sponsorNode.naam}`}
-          loading="lazy"
-          objectFit={'scale-down'}
-        />
+        <sponsorNode.Image />
       </ConditionalWrapper>
     </div>
   )
