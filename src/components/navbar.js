@@ -1,7 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import React, { useEffect, useRef, useState } from 'react'
 import { siteMap, webshopLink } from '../env/constants'
-import { Logo } from './images'
 import { ExternalLink } from './text.jsx'
 
 const transition = `transition-all duration-200 ease-in`
@@ -149,7 +148,7 @@ const NavLink = ({ item, InfoPageLink }) => {
   return <span className={className}>{item.name}</span>
 }
 
-const MenuLogo = ({ topMenuBarShown }) => {
+const MenuLogo = ({ topMenuBarShown, Logo }) => {
   const logContainerClasses = ctl(`${transition}
        flex fixed z-20
       ${
@@ -224,6 +223,7 @@ export const Navbar = ({
   infoPageSiteMaps,
   InfoPageLink,
   CoverImage,
+  Logo,
 }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
@@ -252,7 +252,7 @@ export const Navbar = ({
         siteMap={siteMap}
         InfoPageLink={InfoPageLink}
       />
-      <MenuLogo topMenuBarShown={topMenuBarShown} />
+      <MenuLogo topMenuBarShown={topMenuBarShown} Logo={Logo} />
       <MenuToggle
         clickBurger={toggleMenuShown}
         sideBarMenuShown={sideBarMenuShown}

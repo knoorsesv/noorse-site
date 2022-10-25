@@ -8,6 +8,7 @@ import { getVersion } from '../queries/version'
 import { getLogoUrl } from '../queries/resized-logo'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { Link } from 'gatsby'
+import { Logo } from '../static-images/logo'
 
 const Layout = ({ children }) => {
   return (
@@ -19,12 +20,13 @@ const Layout = ({ children }) => {
       <Navbar
         infoPageSiteMaps={getSiteMapForInfoPages()}
         InfoPageLink={InfoPageLink}
+        Logo={Logo}
       />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
-      <Footer version={getVersion()} />
+      <Footer version={getVersion()} Logo={Logo} />
     </div>
   )
 }

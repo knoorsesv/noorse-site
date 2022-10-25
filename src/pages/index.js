@@ -21,6 +21,7 @@ import { getCoverImageData } from '../queries/cover-image'
 import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
 import { getConstrainedLogoData } from '../queries/constrained-logo'
+import { Logo } from '../static-images/logo'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -141,6 +142,7 @@ const Home = () => {
         infoPageSiteMaps={getSiteMapForInfoPages()}
         InfoPageLink={InfoPageLink}
         CoverImage={CoverImage}
+        Logo={Logo}
       />
 
       <Seo title="Home" />
@@ -178,7 +180,7 @@ const Home = () => {
           </Section>
         </div>
       </main>
-      <Footer version={getVersion()} />
+      <Footer version={getVersion()} Logo={Logo} />
     </div>
   )
 }
