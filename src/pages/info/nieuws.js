@@ -6,6 +6,7 @@ import { NewsList } from '../../components/newsList'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { getNewsItems } from '../../queries/news'
 import { getConstrainedLogoData } from '../../queries/constrained-logo'
+import { navigate } from 'gatsby-link'
 
 const NewsCardImage = ({ image }) => {
   const fallBackLogo = getConstrainedLogoData()
@@ -22,6 +23,9 @@ const NewsCardImage = ({ image }) => {
 }
 
 const Nieuws = () => {
+  const goToNews = (newsNode) => {
+    navigate(`/nieuws/${newsNode.title}`)
+  }
   return (
     <Layout>
       <Helmet>
@@ -32,6 +36,7 @@ const Nieuws = () => {
         <NewsList
           NewsCardImage={NewsCardImage}
           shownNewsItems={getNewsItems()}
+          onClick={goToNews}
         />
       </Container>
     </Layout>
