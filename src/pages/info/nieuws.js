@@ -4,6 +4,7 @@ import { Title } from '../../components/titles'
 import { Helmet } from 'react-helmet'
 import { NewsList } from '../../components/newsList'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { getNewsItems } from '../../queries/news'
 
 const NewsCardImage = ({ image }) => {
   return (
@@ -25,7 +26,10 @@ const Nieuws = () => {
       </Helmet>
       <Container>
         <Title>Nieuws</Title>
-        <NewsList NewsCardImage={NewsCardImage} />
+        <NewsList
+          NewsCardImage={NewsCardImage}
+          shownNewsItems={getNewsItems()}
+        />
       </Container>
     </Layout>
   )

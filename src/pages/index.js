@@ -18,6 +18,7 @@ import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
 import { getCoverImageData } from '../queries/cover-image'
 import { getFutureEvents } from '../queries/events'
+import { getNewsItems } from '../queries/news'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -74,7 +75,11 @@ const NieuwsSection = ({ className }) => {
   return (
     <Section id="news-list" className={className}>
       <SectionTitle>Nieuws</SectionTitle>
-      <NewsList maxItems={6} NewsCardImage={NewsCardImage} />
+      <NewsList NewsCardImage={NewsCardImage} shownNewsItems={getNewsItems(6)}>
+        <Link className={'font-bold text-black'} to={'info/nieuws'}>
+          ...
+        </Link>
+      </NewsList>
     </Section>
   )
 }
