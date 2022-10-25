@@ -23,7 +23,7 @@ module.exports = {
       files: ['./src/components/**'],
       rules: {
         'no-restricted-imports': [
-          'warn',
+          'error',
           {
             patterns: ['gatsby*'],
           },
