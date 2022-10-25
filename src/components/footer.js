@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { EmailLink, ExternalLink } from './text.jsx'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Title } from './titles'
-import { Logo } from './images'
 import { ContactInfo } from './contact'
 import { Version } from './version'
 import ctl from '@netlify/classnames-template-literals'
@@ -66,16 +65,16 @@ export const SponsorList = ({ logoWidth }) => {
   )
 }
 
-export const Footer = ({ version }) => {
+export const Footer = ({ version, Logo }) => {
   return (
     <footer id="footer">
-      <ContactAndSponsorFooter />
+      <ContactAndSponsorFooter Logo={Logo} />
       <CopyRightFooter version={version} />
     </footer>
   )
 }
 
-export const ContactAndSponsorFooter = () => {
+export const ContactAndSponsorFooter = ({ Logo }) => {
   const wrapperClasses = ctl(`
     flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
