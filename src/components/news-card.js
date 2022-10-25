@@ -7,7 +7,7 @@ import {
 } from './snippet'
 import { graphql, useStaticQuery } from 'gatsby'
 
-export const NewsCard = ({ newsNode }) => {
+export const NewsCard = ({ newsNode, NewsCardImage }) => {
   const images = useStaticQuery(graphql`
     query {
       logo: file(name: { eq: "Logo_highres" }) {
@@ -30,6 +30,9 @@ export const NewsCard = ({ newsNode }) => {
     <ClickableCard
       header={newsNode.title}
       image={newsNode.image || images.logo.childImageSharp}
+      Image={() => (
+        <NewsCardImage image={newsNode.image || images.logo.childImageSharp} />
+      )}
       containerClass={'h-[148px]'}
       onClick={goToNews}
     >
