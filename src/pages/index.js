@@ -17,6 +17,7 @@ import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
 import { getCoverImageData } from '../queries/cover-image'
+import { getFutureEvents } from '../queries/events'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -106,6 +107,17 @@ const CoverImage = ({ children, ...props }) => {
   )
 }
 
+const EventLink = ({ event }) => {
+  return (
+    <Link
+      className={'text-black underline'}
+      to={`/nieuws/${event.aankondiging.title}`}
+    >
+      {event.naam}
+    </Link>
+  )
+}
+
 const Home = () => {
   return (
     <div>
@@ -131,7 +143,11 @@ const Home = () => {
         >
           <NieuwsSection className={'large:col-span-2 large:row-span-4'} />
           <WebshopSection className={'large:col-start-3 large:row-start-1'} />
-          <EventsSection className={'large:col-start-3 large:row-start-2'} />
+          <EventsSection
+            className={'large:col-start-3 large:row-start-2'}
+            futureEvents={getFutureEvents()}
+            EventLink={EventLink}
+          />
           <TrooperSection className={'large:col-start-3 large:row-start-4'} />
           <Section className={'large:col-start-3 large:row-start-5'}>
             <Card>
