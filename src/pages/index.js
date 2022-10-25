@@ -12,6 +12,7 @@ import { ExternalLink, TextBlock } from '../components/text.jsx'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { webshopLink } from '../env/constants'
+import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
 
@@ -66,7 +67,10 @@ const NieuwsSection = ({ className }) => {
 const Home = () => {
   return (
     <div>
-      <Navbar pageHasCoverPhoto={true} />
+      <Navbar
+        pageHasCoverPhoto={true}
+        infoPageSiteMaps={getSiteMapForInfoPages()}
+      />
 
       <Seo title="Home" />
       {/*todo: don't do this with a grid*/}

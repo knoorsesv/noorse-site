@@ -6,6 +6,7 @@ import Seo from '../components/seo'
 import ctl from '@netlify/classnames-template-literals'
 import { getVersion } from '../queries/version'
 import { getLogoUrl } from '../queries/resized-logo'
+import { getSiteMapForInfoPages } from '../queries/pages'
 
 const Layout = ({ children }) => {
   return (
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
         <meta property="og:image" content={getLogoUrl()} />
       </Seo>
 
-      <Navbar />
+      <Navbar infoPageSiteMaps={getSiteMapForInfoPages()} />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
