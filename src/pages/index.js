@@ -57,11 +57,23 @@ const WebshopSection = ({ className }) => {
   )
 }
 
+const NewsCardImage = ({ image }) => {
+  return (
+    <div className={'h-[200px] text-center'}>
+      <GatsbyImage
+        image={image.gatsbyImageData}
+        alt={'Card Header Image'}
+        loading="lazy"
+      />
+    </div>
+  )
+}
+
 const NieuwsSection = ({ className }) => {
   return (
     <Section id="news-list" className={className}>
       <SectionTitle>Nieuws</SectionTitle>
-      <NewsList maxItems={6} />
+      <NewsList maxItems={6} NewsCardImage={NewsCardImage} />
     </Section>
   )
 }

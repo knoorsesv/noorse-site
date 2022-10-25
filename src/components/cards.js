@@ -1,13 +1,12 @@
 import React from 'react'
 import { Clickable } from './a11y'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import ctl from '@netlify/classnames-template-literals'
 
 // todo: type the input
 // todo: try to get rid of custom classNames, make all cards the same
 export const Card = ({
   header,
-  image,
+  Image,
   children,
   className,
   containerClass,
@@ -30,17 +29,7 @@ export const Card = ({
       {header && (
         <div>
           {/* added block class here to override .gatsby-image-wrapper-constrained display: inline-block, not sure if it's the best solution */}
-          {image ? (
-            <div className={'h-[200px] text-center'}>
-              <GatsbyImage
-                image={image.gatsbyImageData}
-                alt={'Card Header Image'}
-                loading="lazy"
-              />
-            </div>
-          ) : (
-            <></>
-          )}
+          {Image ? <Image /> : <></>}
           <h2 className={titleHeaderClasses}> {header} </h2>
         </div>
       )}
