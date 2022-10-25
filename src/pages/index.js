@@ -16,6 +16,7 @@ import { webshopLink } from '../env/constants'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
+import { getCoverImageData } from '../queries/cover-image'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -77,6 +78,22 @@ const InfoPageLink = ({ item, className }) => {
   )
 }
 
+const CoverImage = ({ children, ...props }) => {
+  return (
+    <GatsbyImage
+      image={getCoverImageData()}
+      id={'background-image'}
+      alt={'Luchtfoto Noorse velden'}
+      loading={'eager'}
+      objectFit="cover"
+      objectPosition="center"
+      {...props}
+    >
+      {children}
+    </GatsbyImage>
+  )
+}
+
 const Home = () => {
   return (
     <div>
@@ -84,6 +101,7 @@ const Home = () => {
         pageHasCoverPhoto={true}
         infoPageSiteMaps={getSiteMapForInfoPages()}
         InfoPageLink={InfoPageLink}
+        CoverImage={CoverImage}
       />
 
       <Seo title="Home" />
