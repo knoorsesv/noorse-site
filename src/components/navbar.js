@@ -1,5 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import React, { useEffect, useRef, useState } from 'react'
 import { siteMap, webshopLink } from '../env/constants'
 import { CoverImage } from './cover-image'
@@ -9,16 +9,6 @@ import { ExternalLink } from './text.jsx'
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
 export const coverSectionHeight = 'h-32v medium:h-48v large:64v'
-
-const pagesQuery = graphql`
-  query {
-    allSitePage {
-      nodes {
-        path
-      }
-    }
-  }
-`
 
 const NavSection = ({
   pageHasCoverPhoto,
@@ -225,25 +215,14 @@ const Menu = () => (
   </svg>
 )
 
-export const Navbar = ({ pageHasCoverPhoto = false }) => {
+// todo: just make 2 separate components instead of having a boolean for the cover photo
+export const Navbar = ({ pageHasCoverPhoto = false, infoPageSiteMaps }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
 
   const toggleMenuShown = () => {
     setMenuShown(!sideBarMenuShown)
   }
-
-  const allPages = useStaticQuery(pagesQuery)
-
-  // it should be possible to do this cleaner + query could happen outside of navbar component to keep it cleaner / dumber
-  // todo: extract and unit test this
-  const infoPageSiteMaps = allPages.allSitePage.nodes
-    .filter((node) => node.path.includes('info'))
-    .filter((node) => !node.path.includes('sponsoring'))
-    .map((node) => ({
-      name: node.path.replace('/info/', '').replace('/', ''),
-      link: node.path,
-    }))
 
   siteMap.items.find((item) => item.name === 'Info').subItems = [
     ...infoPageSiteMaps,
