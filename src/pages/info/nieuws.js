@@ -5,12 +5,15 @@ import { Helmet } from 'react-helmet'
 import { NewsList } from '../../components/newsList'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { getNewsItems } from '../../queries/news'
+import { getConstrainedLogoData } from '../../queries/constrained-logo'
 
 const NewsCardImage = ({ image }) => {
+  const fallBackLogo = getConstrainedLogoData()
+
   return (
     <div className={'h-[200px] text-center'}>
       <GatsbyImage
-        image={image.gatsbyImageData}
+        image={image?.gatsbyImageData || fallBackLogo.gatsbyImageData}
         alt={'Card Header Image'}
         loading="lazy"
       />

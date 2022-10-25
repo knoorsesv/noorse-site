@@ -19,6 +19,7 @@ import { getVersion } from '../queries/version'
 import { getCoverImageData } from '../queries/cover-image'
 import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
+import { getConstrainedLogoData } from '../queries/constrained-logo'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -60,10 +61,11 @@ const WebshopSection = ({ className }) => {
 }
 
 const NewsCardImage = ({ image }) => {
+  const fallBackLogo = getConstrainedLogoData()
   return (
     <div className={'h-[200px] text-center'}>
       <GatsbyImage
-        image={image.gatsbyImageData}
+        image={image?.gatsbyImageData || fallBackLogo.gatsbyImageData}
         alt={'Card Header Image'}
         loading="lazy"
       />
