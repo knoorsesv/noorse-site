@@ -2,13 +2,14 @@ import ctl from '@netlify/classnames-template-literals'
 import { Link } from 'gatsby'
 import React from 'react'
 import { Footer } from '../components/footer'
-import { Navbar } from '../components/navbar'
+import { Navbar } from '../components/navbar.jsx'
 import Seo from '../components/seo'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { getLogoUrl } from '../queries/resized-logo'
 import { getSponsors } from '../queries/sponsors'
 import { getVersion } from '../queries/version'
 import { Logo } from '../static-images/logo'
+import { mergeSiteMap } from '../utils/sitemap'
 
 const Layout = ({ children }) => {
   return (
@@ -18,7 +19,7 @@ const Layout = ({ children }) => {
       </Seo>
 
       <Navbar
-        infoPageSiteMaps={getSiteMapForInfoPages()}
+        siteMap={mergeSiteMap(getSiteMapForInfoPages())}
         InfoPageLink={InfoPageLink}
         Logo={Logo}
       />
