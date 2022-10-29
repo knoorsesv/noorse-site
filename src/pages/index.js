@@ -7,7 +7,7 @@ import { Card } from '../components/cards'
 import { EventsSection } from '../components/events'
 import { Footer } from '../components/footer'
 import { Section } from '../components/layout/section'
-import { Navbar } from '../components/navbar'
+import { Navbar } from '../components/navbar.jsx'
 import { NewsList } from '../components/newsList'
 import Seo from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text.jsx'
@@ -23,6 +23,7 @@ import { getNewsItems } from '../queries/news'
 import { getConstrainedLogoData } from '../queries/constrained-logo'
 import { Logo } from '../static-images/logo'
 import { getSponsors } from '../queries/sponsors'
+import { mergeSiteMap } from '../utils/sitemap'
 
 const TrooperSection = ({ className }) => {
   return (
@@ -140,7 +141,7 @@ const Home = () => {
     <div>
       <Navbar
         pageHasCoverPhoto={true}
-        infoPageSiteMaps={getSiteMapForInfoPages()}
+        siteMap={mergeSiteMap(getSiteMapForInfoPages())}
         InfoPageLink={InfoPageLink}
         CoverImage={CoverImage}
         Logo={Logo}

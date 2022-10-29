@@ -1,6 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
 import React, { useEffect, useRef, useState } from 'react'
-import { siteMap, webshopLink } from '../env/constants'
 import { ExternalLink } from './text.jsx'
 
 const transition = `transition-all duration-200 ease-in`
@@ -67,7 +66,7 @@ const MenuItemList = ({
   }
   ${
     topMenuBarShown
-      ? 'h-full large:h-80p bg-green large:opacity-100 right-0 large:w-full large:py-10'
+      ? `h-full large:h-80p bg-green large:opacity-100 right-0 large:w-full large:py-10`
       : 'large:right-0 large:w-auto large:h-16 large:top-6 large:pt-0 large:pl-5 large:opacity-90 large:bg-green'
   }
   `)
@@ -220,7 +219,7 @@ const Menu = () => (
 // todo: just make 2 separate components instead of having a boolean for the cover photo
 export const Navbar = ({
   pageHasCoverPhoto = false,
-  infoPageSiteMaps,
+  siteMap,
   InfoPageLink,
   CoverImage,
   Logo,
@@ -232,13 +231,6 @@ export const Navbar = ({
     setMenuShown(!sideBarMenuShown)
   }
 
-  siteMap.items.find((item) => item.name === 'Info').subItems = [
-    ...infoPageSiteMaps,
-    {
-      name: 'Webshop',
-      extLink: webshopLink,
-    },
-  ].sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
   return (
     <NavSection
       topMenuBarShown={topMenuBarShown}
