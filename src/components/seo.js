@@ -23,8 +23,7 @@ function Seo({ title, children }) {
         <script
           defer
           data-domain="noorse.be"
-          data-api="/plausible/api/event"
-          src="/plausible.js"
+          src="https://serve.gvdp.be:6342/js/plausible.js"
         ></script>
       )}
 
