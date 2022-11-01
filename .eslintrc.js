@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:import/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   overrides: [
     {
@@ -35,7 +36,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'jsx-a11y'],
   rules: {
     'react/prop-types': 'off', // will use typescript for this
   },
@@ -43,6 +44,12 @@ module.exports = {
   settings: {
     react: {
       version: 'detect', // React version. "detect" automatically picks the version you have installed.
+    },
+    'jsx-a11y': {
+      components: {
+        GatsbyImage: 'img',
+        StaticImage: 'img',
+      },
     },
   },
 }
