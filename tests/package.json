@@ -7,15 +7,14 @@
   "main": "homepage.spec.js",
   "scripts": {
     "test": "playwright test",
-    "test:build-docker": "docker build . -t ghcr.io/knoorsesv/playwright-base",
-    "test:ci": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test.sh",
-    "test:ci-update": "docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ ghcr.io/knoorsesv/playwright-base /bin/bash /work/run-test-update.sh",
     "test:func": "playwright test --project=Functional",
-    "test:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:8000 yarn test:func",
-    "test:update": "playwright test --update-snapshots screenshots"
+    "test:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:8000 pnpm test:func",
+    "test:update": "playwright test --update-snapshots screenshots",
+    "test:visual": "playwright test screenshots",
+    "test:visual:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:9000 playwright test screenshots"
   },
   "dependencies": {
-    "@playwright/test": "^1.17.1",
-    "dotenv": "^10.0.0"
+    "@playwright/test": "1.17.1",
+    "dotenv": "10.0.0"
   }
 }
