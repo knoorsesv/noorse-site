@@ -83,3 +83,4 @@ tests/test-results
 tests/playwright-report
 tests/.env
 storybook-static
+tests/.pnpm-store
