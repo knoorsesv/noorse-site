@@ -14,8 +14,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn --frozen-lockfile
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm i --frozen-lockfile
 
   build-prod:
     needs: deps
@@ -31,8 +31,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}

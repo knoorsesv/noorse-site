@@ -7,10 +7,6 @@ const runOnCI = process.env.CI === 'true'
 
 let baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:9000'
 
-if (!runOnCI && process.env.RUN_IN_DOCKER === 'true') {
-  baseURL = baseURL.replace('localhost', 'host.docker.internal')
-}
-
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   reporter: runOnCI
@@ -41,7 +37,7 @@ const config = {
       },
     },
     {
-      name: 'Schreenshot Small',
+      name: 'Schreenshot Small', // todo: fix this typo and update relevant filenames
       testMatch: 'screenshots.spec.js',
       use: devices['iPhone 13'],
     },
