@@ -22,13 +22,13 @@
 ## Install
 
 ```sh
-yarn install
+pnpm install
 ```
 
 ## Usage
 
 ```sh
-yarn develop
+pnpm develop
 ```
 
 ## Author

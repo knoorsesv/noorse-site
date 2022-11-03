@@ -8,8 +8,14 @@ tests/playwright-report
 .eslintignore
 .husky/pre-commit
 yarn.lock
+.npmrc
 
 storybook-static
 
+tests/Dockerfile
+
+*pnpm-lock.yaml
 *.sh
 
+*.gitignore
+*.png
