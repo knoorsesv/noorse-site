@@ -11,6 +11,7 @@ const pages = [
   '/senioren',
   '/info/bestuur',
 ]
+// todo: remove comparison screenshots which are no longer relevant
 
 const takeFullPage = ['/nieuws/Alle Mogelijke Opties']
 
@@ -25,7 +26,7 @@ test.describe.parallel('Screenshot Test', () => {
       expect(
         await page.screenshot({ fullPage: takeFullPage.includes(pageUrl) })
       ).toMatchSnapshot(`page${pageUrl.replace('/', '-')}.png`, {
-        threshold: 0.8,
+        maxDiffPixelRatio: 0.05,
       })
     })
   })
