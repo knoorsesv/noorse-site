@@ -11,14 +11,18 @@ jobs:
     name: 'Download and cache dependencies'
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
       - uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn --frozen-lockfile
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm install --frozen-lockfile
 
   build-prod:
     needs: deps
@@ -28,14 +32,18 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
       - uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
@@ -62,14 +70,18 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
       - uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build:fake-vv
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm build:fake-vv
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
@@ -105,61 +117,70 @@ jobs:
       - name: Check if tag exists
         run: 'docker manifest inspect $IMAGE'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
       - name: Build image
         # run build if previous call returned error
         # would be better with an output variable instead of relying on an error
         if: ${{ failure() }}
         working-directory: ./tests
-        run: 'docker build . -t $IMAGE && docker push $IMAGE'
+        run: docker build . -t $IMAGE && docker push $IMAGE
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
+      - name: Build latest image
+        # run build if previous call returned error
+        # would be better with an output variable instead of relying on an error
+        working-directory: ./tests
+        run: docker tag $IMAGE $LATEST_IMAGE && docker push $LATEST_IMAGE
+        env:
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
+          LATEST_IMAGE: ghcr.io/knoorsesv/playwright-base:1.0
 
   test:
     needs: [build-dev, build-test-base]
     runs-on: ubuntu-latest
-    name: Test
+    name: Functional Test
+    container:
+      image: ghcr.io/knoorsesv/playwright-base:1.0
     steps:
       - uses: actions/checkout@v3
-      - name: Pull Docker image
-        # todo: maybe make it possible to already pull this image in advance to save time
-        run: 'docker pull $IMAGE'
-        env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+      - run: pnpm i --frozen-lockfile
+        working-directory: ./tests
       - name: Run your tests
         working-directory: ./tests
-        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-test.sh'
+        run: pnpm test:func
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - uses: actions/upload-artifact@v3
         if: ${{ failure() }}
         with:
-          name: test-playwright-report
+          name: functional-test-playwright-report
           path: tests/playwright-report
 
   screenshots:
     needs: [build-dev, build-test-base]
     runs-on: ubuntu-latest
     name: Visual Test
+    container:
+      image: ghcr.io/knoorsesv/playwright-base:1.0
     steps:
       - uses: actions/checkout@v3
-      - name: Pull Docker image
-        # todo: maybe make it possible to already pull this image in advance to save time
-        run: 'docker pull $IMAGE'
-        env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+      - run: pnpm i --frozen-lockfile
+        working-directory: ./tests
       - name: Run your tests
         working-directory: ./tests
-        run: 'docker run --rm --ipc=host -v $(pwd):/work/ -w /work/ --env CI=true --env PLAYWRIGHT_TEST_BASE_URL=$PLAYWRIGHT_TEST_BASE_URL $IMAGE /bin/bash /work/run-screenshot-test.sh'
+        run: pnpm test:visual
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - uses: actions/upload-artifact@v3
         if: ${{ failure() }}
         with:
-          name: screenshot-playwright-report
+          name: screenshot-test-playwright-report
           path: tests/playwright-report
+      - uses: actions/upload-artifact@v3
+        if: ${{ failure() }}
+        with:
+          name: screenshot-test-test-results
+          path: tests/test-results
 
   lighthouse-check:
     needs: build-prod
