@@ -109,7 +109,6 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  console.log('teams op vv', vvTeams.data.vv.clubTeams)
   const teamsWithMissingConfig = []
 
   noorsePloegInfo.data.allContentfulPloeg.nodes.forEach((contentfulPloeg) => {
@@ -121,11 +120,7 @@ exports.createPages = async ({ graphql, actions }) => {
       (config) => config.teamName !== contentfulPloeg.naam
     )
 
-    console.log(
-      'creating team page for',
-      contentfulPloeg.naam,
-      staticTeamConfig
-    )
+    console.log('creating team page for', contentfulPloeg.naam)
 
     if (!staticTeamConfig?.vvId || !staticTeamConfig?.calendarId) {
       teamsWithMissingConfig.push(contentfulPloeg.naam)
