@@ -16,7 +16,6 @@ const NewsCardImage = ({ image }) => {
       <GatsbyImage
         image={image?.gatsbyImageData || fallBackLogo.gatsbyImageData}
         alt={'Card Header'}
-        loading="lazy"
       />
     </div>
   )
