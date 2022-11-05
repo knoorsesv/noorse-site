@@ -6,7 +6,7 @@ test.describe('Home Page', () => {
   })
 
   test('has a nav bar', async ({ page }) => {
-    const title = page.locator('nav li#menu-item:first-of-type')
+    const title = page.locator('nav ul#menu-list>li:first-of-type')
     await expect(title).toHaveText('Home')
   })
 
