@@ -120,17 +120,12 @@ jobs:
           IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
       - name: Build image
         # run build if previous call returned error
-        # would be better with an output variable instead of relying on an error
+        # todo: would be better with an output variable instead of relying on an error
         if: ${{ failure() }}
         working-directory: ./tests
-        run: docker build . -t $IMAGE && docker push $IMAGE
-        env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
-      - name: Build latest image
-        # run build if previous call returned error
-        # would be better with an output variable instead of relying on an error
-        working-directory: ./tests
-        run: docker tag $IMAGE $LATEST_IMAGE && docker push $LATEST_IMAGE
+        run: |
+          docker build . -t $IMAGE && docker push $IMAGE
+          docker tag $IMAGE $LATEST_IMAGE && docker push $LATEST_IMAGE
         env:
           IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
           LATEST_IMAGE: ghcr.io/knoorsesv/playwright-base:1.0
