@@ -39,6 +39,7 @@ module.exports = {
   plugins: ['react', 'jsx-a11y'],
   rules: {
     'react/prop-types': 'off', // will use typescript for this
+    'no-console': 'error',
   },
   root: true,
   settings: {

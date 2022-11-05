@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const startOfWeek = require('date-fns/startOfWeek')
 const endOfWeek = require('date-fns/endOfWeek')
 const format = require('date-fns/format')
@@ -75,17 +76,6 @@ exports.createPages = async ({ graphql, actions }) => {
               naam
             }
           }
-        }
-      }
-    }
-  `)
-
-  const vvTeams = await graphql(`
-    query {
-      vv {
-        clubTeams(clubId: 8179, language: nl) {
-          name
-          id
         }
       }
     }
