@@ -86,7 +86,7 @@ const MenuItemList = ({
   ${transition}
   ${item.subItems && 'group'}`)
           return (
-            <li id={'menu-item'} key={item.name} className={liClasses}>
+            <li key={item.name} className={liClasses}>
               <NavLink item={item} InfoPageLink={InfoPageLink} />
               {item.subItems && (
                 <SubMenuItemList
