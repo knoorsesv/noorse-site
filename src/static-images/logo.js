@@ -10,7 +10,6 @@ export const Logo = ({ className }) => {
     >
       <StaticImage
         src="../images/Logo_highres.png"
-        id="noorse-logo"
         placeholder={'tracedSVG'}
         alt={'Noorse Logo'}
         objectFit="contain"
