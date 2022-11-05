@@ -172,8 +172,8 @@ const Home = () => {
             <Card>
               <GatsbyImage
                 image={getSportVlaanderenLogo()}
-                id="logo"
-                alt={'Sport Vlaaderen Logo'}
+                id="sport-vlaanderen-logo"
+                alt={'Sport Vlaanderen Logo'}
                 objectFit={'contain'}
                 loading="lazy"
                 className={`h-full max-h-full w-full max-w-full`}

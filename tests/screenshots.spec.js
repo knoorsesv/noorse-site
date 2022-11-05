@@ -21,7 +21,7 @@ test.describe.parallel('Screenshot Test', () => {
       await page.goto(pageUrl)
       await page.waitForLoadState('networkidle')
 
-      await (await page.$('#logo')).waitForElementState('stable')
+      await (await page.$('#noorse-logo')).waitForElementState('stable')
       // todo: maybe scroll on big pages? / open navbar on mobile?
       expect(
         await page.screenshot({ fullPage: takeFullPage.includes(pageUrl) })
