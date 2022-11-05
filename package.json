@@ -23,7 +23,6 @@
     "lint": "eslint .",
     "lint-commit": "commitlint -E HUSKY_GIT_PARAMS",
     "prepare": "husky install",
-    "release": "standard-version && git push --follow-tags",
     "serve": "gatsby serve",
     "start": "CONTENTFUL_ENV=staging gatsby develop",
     "start:fake-vv": "nodemon --watch fake-vv.js fake-vv.js",
