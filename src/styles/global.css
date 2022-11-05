@@ -29,31 +29,31 @@ a:visited {
 }
 
 body {
-  $line: rgba(#92969a, 0.1);
-  $background: rgba(#78828d, 0.2);
+  --line: rgba(#92969a, 0.1);
+
   background-image: linear-gradient(
       135deg,
       transparent 22px,
-      $line 22px,
-      $line 24px,
+      var(--line) 22px,
+      var(--line) 24px,
       transparent 24px,
       transparent 67px,
-      $line 67px,
-      $line 69px,
+      var(--line) 67px,
+      var(--line) 69px,
       transparent 69px
     ),
     linear-gradient(
       225deg,
       transparent 22px,
-      $line 22px,
-      $line 24px,
+      var(--line) 22px,
+      var(--line) 24px,
       transparent 24px,
       transparent 67px,
-      $line 67px,
-      $line 69px,
+      var(--line) 67px,
+      var(--line) 69px,
       transparent 69px
     );
-  background-color: $background;
+  background-color: rgba(#78828d, 0.2);
   background-position: 0 0, 0 64px;
   background-size: 64px 128px;
 }

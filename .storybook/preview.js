@@ -1,4 +1,4 @@
-import '../src/styles/global.scss'
+import '../src/styles/global.css'
 import '../src/styles/tailwind-import.css'
 import typography from '../src/utils/typography'
 // todo: maybe the storybook shouldn't rely on this? there are "reset" classes on ul tags for example without which the components dont look good isolated
