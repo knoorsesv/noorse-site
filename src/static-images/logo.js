@@ -13,7 +13,6 @@ export const Logo = ({ className }) => {
         id="noorse-logo"
         placeholder={'tracedSVG'}
         alt={'Noorse Logo'}
-        loading="lazy"
         objectFit="contain"
         className={`h-full max-h-full w-full max-w-full`}
       />
