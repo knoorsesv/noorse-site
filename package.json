@@ -81,7 +81,7 @@
     "@storybook/react": "7.0.0-alpha.46",
     "@storybook/react-vite": "7.0.0-alpha.46",
     "@storybook/testing-library": "0.0.13",
-    "apollo-server": "3.10.3",
+    "apollo-server": "3.11.0",
     "autoprefixer": "10.4.13",
     "cross-env": "7.0.3",
     "eslint": "8.26.0",
