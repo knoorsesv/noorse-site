@@ -17,9 +17,9 @@ const config = {
   workers: runOnCI ? 4 : 1,
   use: {
     baseURL,
-    trace: 'on-first-retry',
+    trace: 'off',
   },
-  timeout: 20 * 1000,
+  timeout: runOnCI ? 20 * 1000 : 5 * 1000,
   projects: [
     {
       name: 'Functional',
