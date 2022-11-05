@@ -15,6 +15,8 @@ const accessToken = contentfulPreview
 
 const env = process.env.NODE_ENV
 const spaceId = process.env.CONTENTFUL_SPACE_ID
+
+// eslint-disable-next-line no-console
 console.log('Build settings:', {
   env,
   spaceId,
