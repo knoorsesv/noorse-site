@@ -75,12 +75,12 @@
   "devDependencies": {
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
-    "@storybook/addon-a11y": "7.0.0-alpha.46",
-    "@storybook/addon-essentials": "7.0.0-alpha.46",
-    "@storybook/addon-interactions": "7.0.0-alpha.46",
-    "@storybook/addon-links": "7.0.0-alpha.46",
-    "@storybook/react": "7.0.0-alpha.46",
-    "@storybook/react-vite": "7.0.0-alpha.46",
+    "@storybook/addon-a11y": "7.0.0-alpha.47",
+    "@storybook/addon-essentials": "7.0.0-alpha.47",
+    "@storybook/addon-interactions": "7.0.0-alpha.47",
+    "@storybook/addon-links": "7.0.0-alpha.47",
+    "@storybook/react": "7.0.0-alpha.47",
+    "@storybook/react-vite": "7.0.0-alpha.47",
     "@storybook/testing-library": "0.0.13",
     "apollo-server": "3.11.0",
     "autoprefixer": "10.4.13",
@@ -98,7 +98,7 @@
     "prettier-plugin-packagejson": "2.3.0",
     "prettier-plugin-tailwindcss": "0.1.13",
     "start-server-and-test": "1.14.0",
-    "storybook": "7.0.0-alpha.46",
+    "storybook": "7.0.0-alpha.47",
     "tailwindcss": "3.2.1"
   },
   "engines": {
