@@ -39,7 +39,7 @@ specifiers:
   gatsby-transformer-sharp: 4.24.0
   husky: 8.0.1
   lint-staged: 13.0.3
-  marked: 4.1.1
+  marked: 4.2.1
   nodemon: 2.0.20
   postcss: 8.4.18
   prettier: 2.7.1
@@ -78,7 +78,7 @@ dependencies:
   gatsby-source-filesystem: 4.24.0_gatsby@4.24.6
   gatsby-source-graphql: 4.24.0_di3hql4ji6biak7zmvf6beitwu
   gatsby-transformer-sharp: 4.24.0_srth6aysrh5jhehhvi7n6hmrei
-  marked: 4.1.1
+  marked: 4.2.1
   prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -12660,8 +12660,8 @@ packages:
       react: 18.2.0
     dev: true
 
-  /marked/4.1.1:
-    resolution: {integrity: sha512-0cNMnTcUJPxbA6uWmCmjWz4NJRe/0Xfk2NhXCUHjew9qJzFN20krFnsUe7QynwqOwa5m1fZ4UDg0ycKFVC0ccw==}
+  /marked/4.2.1:
+    resolution: {integrity: sha512-VK1/jNtwqDLvPktNpL0Fdg3qoeUZhmRsuiIjPEy/lHwXW4ouLoZfO4XoWd4ClDt+hupV1VLpkZhEovjU0W/kqA==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: false
