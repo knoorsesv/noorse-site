@@ -16,7 +16,7 @@ specifiers:
   '@storybook/react-vite': 7.0.0-alpha.47
   '@storybook/testing-library': 0.0.13
   '@tailwindcss/typography': 0.5.7
-  apollo-server: 3.11.0
+  apollo-server: 3.11.1
   autoprefixer: 10.4.13
   concurrently: 7.5.0
   cross-env: 7.0.3
@@ -99,7 +99,7 @@ devDependencies:
   '@storybook/react': 7.0.0-alpha.47_yalvw3r2waubxycyb7k7qsruca
   '@storybook/react-vite': 7.0.0-alpha.47_tlf3c5fwzkwtjjp73rnwzg5pnm
   '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
-  apollo-server: 3.11.0_graphql@15.8.0
+  apollo-server: 3.11.1_graphql@15.8.0
   autoprefixer: 10.4.13_postcss@8.4.18
   concurrently: 7.5.0
   cross-env: 7.0.3
@@ -5814,8 +5814,8 @@ packages:
       - encoding
     dev: true
 
-  /apollo-server/3.11.0_graphql@15.8.0:
-    resolution: {integrity: sha512-1EiGE8RjF4fOJQbZkx/3PVPMb+PR9ZFxluoq4krW2umsPdDjGzIS6nrSmmGaJW6wLQdjE+Gy2d+4PZMby2WI1g==}
+  /apollo-server/3.11.1_graphql@15.8.0:
+    resolution: {integrity: sha512-3RZ/veWGbi0zXy2YVaPkYIAavpbHyEVui91DNYvz6UFS0fZmhJwG7f1VmGheeRiqiV8nFa8GuBejI1niTeAYzA==}
     peerDependencies:
       graphql: ^15.3.0 || ^16.0.0
     dependencies:
