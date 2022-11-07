@@ -102,6 +102,40 @@ jobs:
     outputs:
       dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
 
+  build-storybook:
+    needs: deps
+    runs-on: ubuntu-latest
+    name: Build Storybook
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7.13.4
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm build-storybook
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v1
+        id: deploy-dev
+        with:
+          publish-dir: './storybook-static'
+          production-deploy: ${{ false }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deploy storybook build: ${{ github.ref }}'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+    outputs:
+      dev-url: ${{steps.build-storybook.outputs.deploy-url}}
+
   build-test-base:
     runs-on: ubuntu-latest
     name: Build Base Docker container for tests
