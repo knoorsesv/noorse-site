@@ -1,5 +1,6 @@
 import React from 'react'
 import { imageFileTypes } from '../env/constants'
+import { DocumentLink } from './document-link.jsx'
 
 export const Attachments = ({ attachments }) => {
   const defaultAttachments = getDefaultAttachments(attachments)
@@ -24,21 +25,5 @@ const getDefaultAttachments = (attachments) => {
     attachments.filter(
       (attachment) => !imageFileTypes.includes(attachment.file.contentType)
     )
-  )
-}
-
-export const DocumentLink = (documentNode) => {
-  if (!documentNode) {
-    return <div>Document not found</div>
-  }
-  return (
-    <a
-      href={documentNode.file.url}
-      key={documentNode.file.url}
-      download
-      className={'underline'}
-    >
-      {documentNode.title || documentNode.naam}
-    </a>
   )
 }
