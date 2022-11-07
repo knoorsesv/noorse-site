@@ -13,7 +13,7 @@ import Seo from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text.jsx'
 import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
-import { webshopLink } from '../env/constants'
+import { newsletterLink, webshopLink } from '../env/constants'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
@@ -58,6 +58,23 @@ const WebshopSection = ({ className }) => {
             hier
           </ExternalLink>{' '}
           onze officiële webshop!
+        </div>
+      </Card>
+    </Section>
+  )
+}
+
+const NewsletterSection = ({ className }) => {
+  return (
+    <Section className={`${className}`}>
+      <SectionTitle>Nieuwsbrief</SectionTitle>
+      <Card>
+        <div className={'text-center'}>
+          Noorse heeft een nieuwsbrief! Schrijf je{' '}
+          <ExternalLink icon={false} url={newsletterLink}>
+            hier
+          </ExternalLink>{' '}
+          in.
         </div>
       </Card>
     </Section>
@@ -159,14 +176,17 @@ const Home = () => {
         `)}
           id="homepage-content"
         >
-          <NieuwsSection className={'large:col-span-2 large:row-span-4'} />
+          <NieuwsSection className={'large:col-span-2 large:row-span-5'} />
           <WebshopSection className={'large:col-start-3 large:row-start-1'} />
           <EventsSection
             className={'large:col-start-3 large:row-start-2'}
             futureEvents={getFutureEvents()}
             EventLink={EventLink}
           />
-          <TrooperSection className={'large:col-start-3 large:row-start-4'} />
+          <TrooperSection className={'large:col-start-3 large:row-start-3'} />
+          <NewsletterSection
+            className={'large:col-start-3 large:row-start-4'}
+          />
           <Section className={'large:col-start-3 large:row-start-5'}>
             <Card>
               <GatsbyImage
