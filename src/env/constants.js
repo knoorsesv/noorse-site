@@ -1,4 +1,5 @@
 export const webshopLink = 'https://noorsesv.shop4clubs.eu/'
+export const newsletterLink = 'http://eepurl.com/hRibPn'
 
 export const siteMap = {
   items: [
