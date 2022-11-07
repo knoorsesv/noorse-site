@@ -2,7 +2,7 @@ import React from 'react'
 import Layout, { Container } from '../../layouts/layout'
 import { Title } from '../../components/titles'
 import { graphql, useStaticQuery } from 'gatsby'
-import { DocumentLink } from '../../components/attachment-list'
+import { DocumentLink } from '../../components/document-link.jsx'
 import { Helmet } from 'react-helmet'
 
 const DocumentenPage = () => {
