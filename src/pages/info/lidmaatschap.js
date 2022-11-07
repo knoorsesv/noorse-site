@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { marked } from 'marked'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Attachments } from '../../components/attachment-list'
+import { Attachments } from '../../components/attachments.jsx'
 import Layout, { Container } from '../../layouts/layout'
 import { Title } from '../../components/titles'
 
