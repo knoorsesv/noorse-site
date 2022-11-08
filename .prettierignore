@@ -14,7 +14,6 @@ storybook-static
 
 tests/Dockerfile
 
-*pnpm-lock.yaml
 *.sh
 
 *.gitignore
