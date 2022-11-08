@@ -26,16 +26,16 @@
     "serve": "gatsby serve",
     "start": "CONTENTFUL_ENV=staging gatsby develop",
     "start:fake-vv": "nodemon --watch fake-vv.js fake-vv.js",
-    "start:site-with-fake-vv": "CONTENTFUL_ENV=staging REAL_VV=false concurrently pnpm:start:fake-vv pnpm:start",
     "start:master": "CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false gatsby develop",
+    "start:site-with-fake-vv": "CONTENTFUL_ENV=staging REAL_VV=false concurrently yarn:start:fake-vv yarn:start",
     "storybook": "storybook dev -p 6006",
-    "test": "start-server-and-test serve http://localhost:9000 'pnpm --dir tests test'",
-    "test:func": "start-server-and-test serve http://localhost:9000 'pnpm --dir tests test:func'",
-    "test:local": "pnpm --dir tests test:local",
-    "test:build-and-local": "pnpm build:fake-vv && pnpm test:visual-local",
-    "test:update-ci": "start-server-and-test serve http://localhost:9000 'pnpm --dir tests test:ci-update'",
-    "test:update-local": "start-server-and-test serve http://localhost:9000 'pnpm --dir tests test:update'",
-    "test:visual-local": "start-server-and-test serve http://localhost:9000 'pnpm --dir tests test:visual:local'"
+    "test": "start-server-and-test serve http://localhost:9000 'yarn --dir tests test'",
+    "test:build-and-local": "yarn build:fake-vv && yarn test:visual-local",
+    "test:func": "start-server-and-test serve http://localhost:9000 'yarn --dir tests test:func'",
+    "test:local": "yarn --dir tests test:local",
+    "test:update-ci": "start-server-and-test serve http://localhost:9000 'yarn --dir tests test:ci-update'",
+    "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --dir tests test:update'",
+    "test:visual-local": "start-server-and-test serve http://localhost:9000 'yarn --dir tests test:visual:local'"
   },
   "lint-staged": {
     "*.js,*.jsx": "eslint --cache --fix",
@@ -51,7 +51,6 @@
     "date-fns": "2.29.3",
     "gatsby": "4.24.7",
     "gatsby-plugin-image": "2.24.0",
-    "gatsby-plugin-pnpm": "1.2.10",
     "gatsby-plugin-postcss": "5.24.0",
     "gatsby-plugin-react-helmet": "5.24.0",
     "gatsby-plugin-sharp": "4.24.0",
@@ -100,11 +99,8 @@
     "storybook": "7.0.0-alpha.48",
     "tailwindcss": "3.2.2"
   },
-  "engines": {
-    "node": "18.12.1",
-    "pnpm": "7.13.4"
-  },
   "volta": {
-    "node": "18.12.1"
+    "node": "18.12.1",
+    "yarn": "1.22.19"
   }
 }

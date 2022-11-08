@@ -8,7 +8,7 @@
   "scripts": {
     "test": "playwright test",
     "test:func": "playwright test --project=Functional",
-    "test:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:8000 pnpm test:func",
+    "test:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:8000 yarn test:func",
     "test:update": "playwright test --update-snapshots screenshots",
     "test:visual": "playwright test screenshots",
     "test:visual:local": "PLAYWRIGHT_TEST_BASE_URL=http://localhost:9000 playwright test screenshots"
