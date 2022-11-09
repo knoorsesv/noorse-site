@@ -87,6 +87,7 @@ const NewsCardImage = ({ image }) => {
     <div className={'h-[200px] text-center'}>
       <GatsbyImage
         image={image?.gatsbyImageData || fallBackLogo.gatsbyImageData}
+        loading={'eager'}
         alt={'Card Header'} // todo: pass a proper alt text here
       />
     </div>
