@@ -39,12 +39,30 @@ const config = {
     {
       name: 'Schreenshot Small', // todo: fix this typo and update relevant filenames
       testMatch: 'screenshots.spec.js',
-      use: devices['iPhone 13'],
+      use: {
+        viewport: {
+          width: 390,
+          height: 664,
+        },
+        deviceScaleFactor: 3,
+        isMobile: true,
+        hasTouch: true,
+        defaultBrowserType: 'webkit',
+      },
     },
     {
       name: 'Screenshot Medium',
       testMatch: 'screenshots.spec.js',
-      use: devices['Nexus 5X landscape'],
+      use: {
+        viewport: {
+          width: 640,
+          height: 360,
+        },
+        deviceScaleFactor: 3,
+        isMobile: true,
+        hasTouch: true,
+        defaultBrowserType: 'chromium',
+      },
     },
   ],
 }

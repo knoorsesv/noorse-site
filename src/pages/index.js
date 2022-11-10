@@ -161,7 +161,6 @@ const Home = () => {
         siteMap={mergeSiteMap(getSiteMapForInfoPages())}
         InfoPageLink={InfoPageLink}
         CoverImage={CoverImage}
-        Logo={Logo}
       />
 
       <Seo title="Home" />

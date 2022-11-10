@@ -1,5 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import React, { useEffect, useRef, useState } from 'react'
+import { Logo } from './logo.jsx'
 import { ExternalLink } from './text.jsx'
 
 const transition = `transition-all duration-200 ease-in`
@@ -147,23 +148,29 @@ const NavLink = ({ item, InfoPageLink }) => {
   return <span className={className}>{item.name}</span>
 }
 
-const MenuLogo = ({ topMenuBarShown, Logo }) => {
+const MenuLogo = ({ topMenuBarShown }) => {
   const logContainerClasses = ctl(`${transition}
-       flex fixed z-20
+       flex items-center z-20 
       ${
         topMenuBarShown
-          ? `justify-start w-1/6 top-8 left-16p ${menuBarHeight}`
-          : `justify-center w-full top-0 large:w-1/3 p-2 large:p-8 ${coverSectionHeight}`
+          ? `justify-start fixed top-8 left-16p large:left-96p`
+          : `justify-center w-full h-full top-0 large:w-1/3 p-2 large:p-8 `
       }     `)
   return (
     <div id="logo-container" className={logContainerClasses}>
-      <Logo className={`${transition}`} />
+      <Logo
+        className={ctl(`${transition} z-30 aspect-square h-auto max-h-full w-full
+      ${
+        topMenuBarShown ? `max-w-[64px] ` : `max-w-[200px] medium:max-w-[312px]`
+      }
+      `)}
+      />
     </div>
   )
 }
 
 const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
-  const toggleWrapperClasses = ctl(`fixed right-0
+  const toggleWrapperClasses = ctl(`fixed right-0 top-0
     large:hidden
     mt-4 mr-3 medium:mt-6 medium:mr-4
     p-2 z-50 text-white
@@ -224,7 +231,6 @@ export const Navbar = ({
   siteMap,
   InfoPageLink,
   CoverImage,
-  Logo,
 }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
@@ -246,7 +252,7 @@ export const Navbar = ({
         siteMap={siteMap}
         InfoPageLink={InfoPageLink}
       />
-      <MenuLogo topMenuBarShown={topMenuBarShown} Logo={Logo} />
+      <MenuLogo topMenuBarShown={topMenuBarShown} />
       <MenuToggle
         clickBurger={toggleMenuShown}
         sideBarMenuShown={sideBarMenuShown}
