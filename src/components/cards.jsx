@@ -1,5 +1,5 @@
 import React from 'react'
-import { Clickable } from './a11y'
+import { Clickable } from './a11y.jsx'
 import ctl from '@netlify/classnames-template-literals'
 
 // todo: type the input

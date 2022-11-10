@@ -1,5 +1,6 @@
 import React from 'react'
 
+// todo: remove this, should just be an <a tag
 export const Clickable = (Component, onClick, { ...props }) => {
   const keyDownHandler = (event) => {
     if (event.key === 'Enter') {
