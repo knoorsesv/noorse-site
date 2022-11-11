@@ -55,7 +55,7 @@
     "gatsby-plugin-react-helmet": "5.24.0",
     "gatsby-plugin-sharp": "4.24.0",
     "gatsby-plugin-typography": "4.24.0",
-    "gatsby-source-contentful": "7.22.0",
+    "gatsby-source-contentful": "8.0.0",
     "gatsby-source-filesystem": "4.24.0",
     "gatsby-source-graphql": "4.24.0",
     "gatsby-transformer-sharp": "4.24.0",

@@ -8700,6 +8700,27 @@ gatsby-core-utils@^3.24.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
+gatsby-core-utils@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.0.0.tgz#28bdcb82a5b2f81214e160012f2d3530f4e9aa04"
+  integrity sha512-ucrEUfVWVUMTEfqZO4o9XHZgVg2airwm2WJSSFUroIAZ2/7YjEiKtZV3RDO1iEqB1beNjrSLa+eZ1LJhbvsHDQ==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    fastq "^1.13.0"
+    file-type "^16.5.3"
+    fs-extra "^10.1.0"
+    got "^11.8.5"
+    import-from "^4.0.0"
+    lmdb "2.5.3"
+    lock "^1.1.0"
+    node-object-hash "^2.3.10"
+    proper-lockfile "^4.1.2"
+    resolve-from "^5.0.0"
+    tmp "^0.2.1"
+    xdg-basedir "^4.0.0"
+
 gatsby-graphiql-explorer@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-2.24.0.tgz#044f24ad9149dffefb783bb2b6d27d49fb968113"
@@ -8868,6 +8889,24 @@ gatsby-plugin-utils@^3.18.0:
     mini-svg-data-uri "^1.4.4"
     svgo "^2.8.0"
 
+gatsby-plugin-utils@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-4.0.0.tgz#d5793f4b409c2969068f45647e5afbca0a2af11d"
+  integrity sha512-JwZKxnosXZloPGF7nrHcvBsMM/wAV0GvwsJm02WW1vhnv6ZLuDyhbVxQPBp+4wBvCzjXxLjqzs47ETck2eAlqA==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@gatsbyjs/potrace" "^2.3.0"
+    fastq "^1.13.0"
+    fs-extra "^10.1.0"
+    gatsby-core-utils "^4.0.0"
+    gatsby-sharp "^1.0.0"
+    graphql-compose "^9.0.9"
+    import-from "^4.0.0"
+    joi "^17.4.2"
+    mime "^3.0.0"
+    mini-svg-data-uri "^1.4.4"
+    svgo "^2.8.0"
+
 gatsby-react-router-scroll@^5.24.0:
   version "5.24.0"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-5.24.0.tgz#d37579dba12435f56a98fede831851c3224c60b4"
@@ -8889,10 +8928,18 @@ gatsby-sharp@^0.18.0:
     "@types/sharp" "^0.30.5"
     sharp "^0.30.7"
 
-gatsby-source-contentful@7.22.0:
-  version "7.22.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-7.22.0.tgz#677cb61c8dd69fb330ee06a6ab401b5391355ea0"
-  integrity sha512-POTCu8C7J+F+Ptl1zNKyHKvodhUPBggaD5MIXZryEVTqgMdAA9b4UdGWgTwW2rVLPHZcEY95ypuN4UDPXgStYQ==
+gatsby-sharp@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-1.0.0.tgz#3eecebbec90c813cc43a693c4bcd9f0c30c765ba"
+  integrity sha512-DJkZun184CpgwfPaoJmWFmguoJm15IhK4ozIQVgI5E3Wcrj/9YX4bdX0BI7VsT5tR87FD53Y5A5AwWXOBjeTrw==
+  dependencies:
+    "@types/sharp" "^0.30.5"
+    sharp "^0.30.7"
+
+gatsby-source-contentful@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-8.0.0.tgz#c62649e4f2e3bd77ea1eb47ba5aacd419d14f1ff"
+  integrity sha512-Jfx6OAvz+SmVDGZ1b4NGCGMqnaCd81POyWlV38zq7Pm8M4FAKCAuk6nRVRMCnKcYRqbNMIZyIXK7GP8+uqBEeA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@contentful/rich-text-react-renderer" "^15.12.1"
@@ -8903,9 +8950,9 @@ gatsby-source-contentful@7.22.0:
     common-tags "^1.8.2"
     contentful "^9.1.33"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.24.0"
-    gatsby-plugin-utils "^3.18.0"
-    gatsby-source-filesystem "^4.24.0"
+    gatsby-core-utils "^4.0.0"
+    gatsby-plugin-utils "^4.0.0"
+    gatsby-source-filesystem "^5.0.0"
     is-online "^9.0.1"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.21"
@@ -8913,7 +8960,7 @@ gatsby-source-contentful@7.22.0:
     semver "^7.3.7"
     url "^0.11.0"
 
-gatsby-source-filesystem@4.24.0, gatsby-source-filesystem@^4.24.0:
+gatsby-source-filesystem@4.24.0:
   version "4.24.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.24.0.tgz#628d438e8f208af075db680b5bce0ed957fd4ffb"
   integrity sha512-oTjjVmAcU83pR9SUW6x6u4PjHAcs1Szg/WfBYGBBxrH7mjm3UA34mb3KtYQSrYsC3maCxfTKn6CJ11F+2/4NRg==
@@ -8923,6 +8970,22 @@ gatsby-source-filesystem@4.24.0, gatsby-source-filesystem@^4.24.0:
     file-type "^16.5.4"
     fs-extra "^10.1.0"
     gatsby-core-utils "^3.24.0"
+    md5-file "^5.0.0"
+    mime "^2.5.2"
+    pretty-bytes "^5.4.1"
+    valid-url "^1.0.9"
+    xstate "4.32.1"
+
+gatsby-source-filesystem@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.0.0.tgz#60f21959c8525f705d4054919760a46c38c39afd"
+  integrity sha512-GBHqJ+NXQhru83DFssgJQkgqM2h1ZALb0+4+TXvRUPQWIK9UyZ1Yb4nXAC6EWi+vx2m/B1W+mZH77WTNdh32Bw==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    chokidar "^3.5.3"
+    file-type "^16.5.4"
+    fs-extra "^10.1.0"
+    gatsby-core-utils "^4.0.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
     pretty-bytes "^5.4.1"
@@ -9455,7 +9518,7 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
-graphql-compose@^9.0.7:
+graphql-compose@^9.0.7, graphql-compose@^9.0.9:
   version "9.0.10"
   resolved "https://registry.yarnpkg.com/graphql-compose/-/graphql-compose-9.0.10.tgz#1e870166deb1785761865fe742dea0601d2c77f2"
   integrity sha512-UsVoxfi2+c8WbHl2pEB+teoRRZoY4mbWBoijeLDGpAZBSPChnqtSRjp+T9UcouLCwGr5ooNyOQLoI3OVzU1bPQ==
