@@ -8794,18 +8794,18 @@ gatsby-plugin-page-creator@^4.24.1:
     globby "^11.1.0"
     lodash "^4.17.21"
 
-gatsby-plugin-postcss@5.24.0:
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-5.24.0.tgz#0591fc1e3d3af7b3002238e3dd317a2ffd46f69d"
-  integrity sha512-QLQ49vXmYdbXKKpigGsfK5Ny+/UhbeETzYIo92DFbiS+NgBz9Rt9kGeppedOO2jv+CxcN4ebSRwvyLc9U5vFUQ==
+gatsby-plugin-postcss@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-6.0.0.tgz#a8c25c6dd99187e84f5ccfa28b56fcde2ddb8ebc"
+  integrity sha512-Zegx2z/X2gO2o/lD0gUDqhpQys3z+kNOU1Kgq8fbyPF1kl6KxwIza5Vgb0yl5LE/H+Bp5+SDJsW1FpzYCOoZYw==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    postcss-loader "^4.3.0"
+    postcss-loader "^7.0.1"
 
-gatsby-plugin-react-helmet@5.24.0:
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.24.0.tgz#8c9cf8e93e184c87ee9e605467c735c7eb02b821"
-  integrity sha512-SU/SrWsbEFLQhuzDXucYlQ4O5pTdpOdxw07xIRwyFfxFzGml/9f62h2dTtUJOIXP1mYfl31bw7eCbGlc8QzF5w==
+gatsby-plugin-react-helmet@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-6.0.0.tgz#2296dda64cb2930a2542ebd91d275252bc800ba2"
+  integrity sha512-uK+KManFE06oeWrZcxpmrpDT0dfDLMPtTxBiU1YPeQeP31IMSsR1vMDTYnQcB+8y8Jw7xwM59id+mwmAYz1fZA==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -10869,7 +10869,7 @@ kleur@^4.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
 
-klona@^2.0.4:
+klona@^2.0.4, klona@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.5.tgz#d166574d90076395d9963aa7a928fabb8d76afbc"
   integrity sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==
@@ -13031,17 +13031,6 @@ postcss-load-config@^3.1.4:
     lilconfig "^2.0.5"
     yaml "^1.10.2"
 
-postcss-loader@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-4.3.0.tgz#2c4de9657cd4f07af5ab42bd60a673004da1b8cc"
-  integrity sha512-M/dSoIiNDOo8Rk0mUqoj4kpGq91gcxCfb9PoyZVdZ76/AuhxylHDYZblNE8o+EQ9AMSASeMFEKxZf5aU6wlx1Q==
-  dependencies:
-    cosmiconfig "^7.0.0"
-    klona "^2.0.4"
-    loader-utils "^2.0.0"
-    schema-utils "^3.0.0"
-    semver "^7.3.4"
-
 postcss-loader@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-5.3.0.tgz#1657f869e48d4fdb018a40771c235e499ee26244"
@@ -13050,6 +13039,15 @@ postcss-loader@^5.3.0:
     cosmiconfig "^7.0.0"
     klona "^2.0.4"
     semver "^7.3.4"
+
+postcss-loader@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-7.0.1.tgz#4c883cc0a1b2bfe2074377b7a74c1cd805684395"
+  integrity sha512-VRviFEyYlLjctSM93gAZtcJJ/iSkPZ79zWbN/1fSH+NisBByEiVLqpdVDrPLVSi8DX0oJo12kL/GppTBdKVXiQ==
+  dependencies:
+    cosmiconfig "^7.0.0"
+    klona "^2.0.5"
+    semver "^7.3.7"
 
 postcss-merge-longhand@^5.1.7:
   version "5.1.7"
