@@ -97,7 +97,7 @@
     "prettier-plugin-tailwindcss": "0.1.13",
     "start-server-and-test": "1.14.0",
     "storybook": "7.0.0-alpha.48",
-    "tailwindcss": "3.2.3"
+    "tailwindcss": "3.2.4"
   },
   "volta": {
     "node": "18.12.1",
