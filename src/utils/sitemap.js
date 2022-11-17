@@ -1,7 +1,7 @@
 import { siteMap, webshopLink } from '../env/constants'
 
 export const mergeSiteMap = (infoPageSiteMaps) => {
-  siteMap.items.find((item) => item.name === 'Info').subItems = [
+  siteMap.items.find((item) => item.name === 'Club').subItems = [
     ...infoPageSiteMaps,
     {
       name: 'Webshop',

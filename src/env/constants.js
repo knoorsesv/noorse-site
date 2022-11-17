@@ -4,7 +4,7 @@ export const newsletterLink = 'http://eepurl.com/hRibPn'
 export const siteMap = {
   items: [
     { name: 'Home', link: '/' },
-    { name: 'Info', subItems: [] },
+    { name: 'Club', subItems: [] },
     { name: 'Senioren', link: '/senioren' },
     { name: 'Jeugd', link: '/jeugd' },
     { name: 'Dames', link: '/dames' },
