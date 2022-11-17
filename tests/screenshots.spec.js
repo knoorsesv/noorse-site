@@ -12,6 +12,7 @@ const pages = [
   '/g-werking',
 ]
 
+// todo: maybe also do this for the teampage because not everything is included now
 const takeFullPage = ['/nieuws/Alle Mogelijke Opties', '/']
 
 test.describe.parallel('Screenshot Test', () => {
