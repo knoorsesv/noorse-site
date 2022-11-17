@@ -88,6 +88,8 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
       generalRanking.teams[generalRanking.teams.length - 2].name
         .toLowerCase()
         .includes('noorse'))
+
+  const ploegFotoUrl = contentfulPloeg.ploegFoto?.url
   return (
     <Layout>
       <Helmet>
@@ -95,6 +97,19 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
       </Helmet>
       <Container>
         <Title>{contentfulPloeg.naam}</Title>
+        {ploegFotoUrl && (
+          <>
+            <section className={' hidden flex-col items-center large:flex'}>
+              {/* todo: can be improved with cloudinary */}
+              <img
+                className="max-w-[400px]"
+                src={ploegFotoUrl}
+                alt={`Ploegfoto ${contentfulPloeg.naam}`}
+              />
+            </section>
+            <br className={'mb-4'} />
+          </>
+        )}
         <div className={'flex flex-col large:flex-row large:justify-between'}>
           <div
             id="team-info"
@@ -102,6 +117,21 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
           >
             {/* todo: these could maybe already go side by side on medium screen size */}
             <div className={'flex flex-col items-center'}>
+              {ploegFotoUrl && (
+                <>
+                  <section
+                    className={'flex flex-col items-center large:hidden'}
+                  >
+                    {/* todo: can be improved with cloudinary */}
+                    <img
+                      className="max-w-[75%] medium:max-w-[350px]"
+                      src={ploegFotoUrl}
+                      alt={`Ploegfoto ${contentfulPloeg.naam}`}
+                    />
+                  </section>
+                  <br className={'mb-4'} />
+                </>
+              )}
               {contentfulPloeg.coach && (
                 <>
                   <section className={'flex flex-col items-center'}>

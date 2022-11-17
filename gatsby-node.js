@@ -70,6 +70,9 @@ exports.createPages = async ({ graphql, actions }) => {
           training
           coach
           afgevaardigde
+          ploegFoto {
+            url
+          }
           categorie {
             naam
             ploeg {
