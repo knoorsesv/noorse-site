@@ -47,6 +47,7 @@ const InfoPageLink = ({ item, className }) => {
 export default Layout
 
 export const Container = ({ children }) => {
+  // todo: needs more top padding?
   const containerWrapperClasses = ctl(`
     flex flex-col items-center
     pt-6 medium:mx-8 pb-20
