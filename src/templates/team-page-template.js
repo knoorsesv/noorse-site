@@ -6,6 +6,7 @@ import Layout, { Container } from '../layouts/layout'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import { ExternalLink } from '../components/text.jsx'
 import { SubTitle, Title } from '../components/titles'
+import { Calendar } from '../components/icons/icons.jsx'
 
 export const query = graphql`
   query ($teamId: ID!) {
@@ -221,22 +222,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                   icon={false}
                 >
                   <div className={'flex flex-row items-center underline'}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      width="16px"
-                      height="16px"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-
+                    <Calendar />
                     <span className={'ml-2'}>Google Calendar</span>
                   </div>
                 </ExternalLink>
