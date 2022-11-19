@@ -1,6 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import React, { useEffect, useRef, useState } from 'react'
-import { Close, Menu } from './icons/icons.jsx'
+import { ChevronRight, ChevronDown, Close, Menu } from './icons/icons.jsx'
 import { Logo } from './logo.jsx'
 import { ExternalLink } from './text.jsx'
 
@@ -8,6 +8,7 @@ const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
 export const coverSectionHeight = 'h-32v medium:h-48v large:64v'
 
+//  topMenuBarShown is a bad name, it means the fixed non transparent navbar should be shown
 const NavSection = ({
   pageHasCoverPhoto,
   children,
@@ -58,13 +59,13 @@ const MenuItemList = ({
   list-none z-50
   flex flex-col large:flex-row large:justify-end large:items-center
   space-y-3 large:space-y-0
-  pt-16 pr-4 large:pr-6
+  pr-4 large:pr-6
   w-1/2 medium:w-2/5
   ${transition}
   ${
     sideBarMenuShown
-      ? 'h-full bg-green opacity-100 right-0'
-      : 'opacity-0 -right-1/2 large:right-0'
+      ? 'pt-20 h-full bg-green opacity-100 right-0'
+      : 'pt-16 opacity-0 -right-1/2 large:right-0'
   }
   ${
     topMenuBarShown
@@ -83,14 +84,50 @@ const MenuItemList = ({
     <nav className={navClasses}>
       <ul id="menu-list" className={ulClasses}>
         {siteMap.items.map((item) => {
+          const [opened, setOpened] = useState(false)
           const liClasses = ctl(`text-right large:text-center
     large:mx-2 large:px-3 large:py-3
   ${transition}
   ${item.subItems && 'group'}`)
           return (
             <li key={item.name} className={liClasses}>
-              <NavLink item={item} InfoPageLink={InfoPageLink} />
-              {item.subItems && (
+              <NavLink
+                item={item}
+                InfoPageLink={InfoPageLink}
+                onClick={() => setOpened(!opened)}
+              />
+              {/* todo: icon should be inside button so all is clickable */}
+              <span className="inline-flex items-center">
+                {sideBarMenuShown ? (
+                  opened ? (
+                    <ChevronDown
+                      className={`ml-1 text-white ${
+                        !item.subItems && 'large:hidden'
+                      } `}
+                    />
+                  ) : (
+                    <ChevronRight
+                      className={`ml-1 text-white ${
+                        !item.subItems && 'large:hidden'
+                      } `}
+                    />
+                  )
+                ) : (
+                  <>
+                    <ChevronDown
+                      className={`ml-1 text-white ${
+                        !item.subItems ? 'hidden' : 'hidden group-hover:inline'
+                      } `}
+                    />
+                    <ChevronRight
+                      className={`ml-1 text-white ${
+                        !item.subItems ? 'hidden' : 'inline group-hover:hidden'
+                      } `}
+                    />
+                  </>
+                )}
+              </span>
+              {item.subItems && (!sideBarMenuShown || opened) && (
                 <SubMenuItemList
                   fixedToTop={topMenuBarShown}
                   item={item}
@@ -126,7 +163,7 @@ const SubMenuItemList = ({ item, InfoPageLink }) => {
   )
 }
 
-const NavLink = ({ item, InfoPageLink }) => {
+const NavLink = ({ item, InfoPageLink, onClick }) => {
   const className = 'text-white text-lg capitalize'
   if (item.link) {
     return <InfoPageLink className={className} item={item} />
@@ -146,7 +183,11 @@ const NavLink = ({ item, InfoPageLink }) => {
       </ExternalLink>
     )
   }
-  return <span className={className}>{item.name}</span>
+  return (
+    <button className={className} onClick={onClick}>
+      {item.name}
+    </button>
+  )
 }
 
 const MenuLogo = ({ topMenuBarShown }) => {
@@ -179,7 +220,7 @@ const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
   return (
     <div className={toggleWrapperClasses}>
       <button
-        className="bg-transparent text-white"
+        className="text-white"
         onClick={clickBurger}
         aria-label={sideBarMenuShown ? 'Sluit menu' : 'Open menu'}
         id="menu-hamburger"
