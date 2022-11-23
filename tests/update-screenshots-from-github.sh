@@ -6,9 +6,15 @@ echo "fetching test reports from github"
 rm -rf ./playwright-report
 rm -rf ./test-results
 
-# todo: this just takes the latest run, should probably be filtered by branch
-gh run download --name screenshot-test-playwright-report --dir ./playwright-report
-gh run download --name screenshot-test-test-results --dir ./test-results
+
+branch=$(git symbolic-ref --short HEAD)
+
+lastRunId=$(gh run list --branch $branch --limit 1 --json databaseId --jq '.[0].databaseId')
+
+echo "Got run id $lastRunId for branch $branch"
+
+gh run download $lastRunId --name screenshot-test-playwright-report --dir ./playwright-report
+gh run download $lastRunId --name screenshot-test-test-results --dir ./test-results
 
 setopt extended_glob
 
