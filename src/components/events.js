@@ -1,12 +1,11 @@
 import React from 'react'
 import { Card } from './cards.jsx'
-import { Section } from './layout/section'
-import { SectionTitle } from './titles'
+import { Section } from './layout/section.jsx'
 
 export const EventsSection = ({ className, futureEvents, EventLink }) => {
   return (
     <Section className={className}>
-      <SectionTitle>Evenementen</SectionTitle>
+      <Section.Title>Evenementen</Section.Title>
       <Card className={'mb-4'}>
         <div className={'py-2 px-3'}>
           <EventList events={futureEvents} EventLink={EventLink} />

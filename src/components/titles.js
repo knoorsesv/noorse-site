@@ -10,43 +10,6 @@ export const Title = ({ children }) => {
   )
 }
 
-export const SectionTitle = ({ children }) => {
-  const backgroundColorHeight = '16px'
-  const secondBackgroundHeight = '3px'
-  return (
-    <div className={'mb-2 flex flex-col items-start'}>
-      {/* todo: this probably shouldnt be an h1 */}
-      <h1 className={'mb-0 text-left uppercase'}>
-        {children}
-        <div
-          style={{
-            width: '140%',
-            position: 'relative',
-            top: `-15px`,
-            visibility: 'visible',
-            borderColor:
-              'transparent transparent rgba(0,120,0, 0.3) transparent',
-            borderWidth: `0 ${backgroundColorHeight} ${backgroundColorHeight} 0`,
-            borderStyle: 'solid',
-          }}
-        />
-        <div
-          style={{
-            width: '140%',
-            position: 'relative',
-            top: `-12px`,
-            visibility: 'visible',
-            borderColor:
-              'transparent transparent rgba(0,120,0, 0.3) transparent',
-            borderWidth: `0 ${secondBackgroundHeight} ${secondBackgroundHeight} 0`,
-            borderStyle: 'solid',
-          }}
-        />
-      </h1>
-    </div>
-  )
-}
-
 export const SubTitle = ({ children }) => {
   return <h2 className={`mb-4 text-center underline`}>{children}</h2>
 }
