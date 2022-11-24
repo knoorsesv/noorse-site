@@ -6,12 +6,11 @@ import React from 'react'
 import { Card } from '../components/cards.jsx'
 import { EventsSection } from '../components/events'
 import { Footer } from '../components/footer'
-import { Section } from '../components/layout/section'
+import { Section } from '../components/layout/section.jsx'
 import { Navbar } from '../components/navbar.jsx'
 import { NewsList } from '../components/newsList'
 import Seo from '../components/seo'
 import { ExternalLink, TextBlock } from '../components/text.jsx'
-import { SectionTitle } from '../components/titles'
 import { ResponsiveVideo } from '../components/video'
 import { newsletterLink, webshopLink } from '../env/constants'
 import { getSiteMapForInfoPages } from '../queries/pages'
@@ -28,7 +27,7 @@ import { mergeSiteMap } from '../utils/sitemap'
 const TrooperSection = ({ className }) => {
   return (
     <Section className={className}>
-      <SectionTitle>Trooper</SectionTitle>
+      <Section.Title>Trooper</Section.Title>
       <Card>
         <TextBlock>
           <div className={'px-2 text-center'}>
@@ -50,7 +49,7 @@ const TrooperSection = ({ className }) => {
 const WebshopSection = ({ className }) => {
   return (
     <Section className={`${className}`}>
-      <SectionTitle>Webshop</SectionTitle>
+      <Section.Title>Webshop</Section.Title>
       <Card>
         <div className={'text-center'}>
           Ontdek{' '}
@@ -67,7 +66,7 @@ const WebshopSection = ({ className }) => {
 const NewsletterSection = ({ className }) => {
   return (
     <Section className={`${className}`}>
-      <SectionTitle>Nieuwsbrief</SectionTitle>
+      <Section.Title>Nieuwsbrief</Section.Title>
       <Card>
         <div className={'text-center'}>
           Noorse heeft een nieuwsbrief! Schrijf je{' '}
@@ -100,7 +99,7 @@ const NieuwsSection = ({ className }) => {
   }
   return (
     <Section id="news-list" className={className}>
-      <SectionTitle>Nieuws</SectionTitle>
+      <Section.Title>Nieuws</Section.Title>
       <NewsList
         NewsCardImage={NewsCardImage}
         shownNewsItems={getNewsItems(6)}
