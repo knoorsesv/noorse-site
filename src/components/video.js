@@ -20,7 +20,7 @@ const iframeStyle = {
 
 export const ResponsiveVideo = ({ src }) => {
   return (
-    <LazyLoad once={true} offset={100}>
+    <LazyLoad once={true} offset={100} className={'h-full w-full'}>
       <div style={containerStyle}>
         <iframe
           src={src}
