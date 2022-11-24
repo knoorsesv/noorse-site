@@ -30,7 +30,7 @@ export const Card = ({
         <div>
           {/* added block class here to override .gatsby-image-wrapper-constrained display: inline-block, not sure if it's the best solution */}
           {Image ? <Image /> : <></>}
-          <h2 className={titleHeaderClasses}> {header} </h2>
+          <h3 className={titleHeaderClasses}> {header} </h3>
         </div>
       )}
       {children && (

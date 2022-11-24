@@ -19,7 +19,7 @@ const SectionTitle = ({ children }) => {
   const secondBackgroundHeight = '3px'
   return (
     <div className={'mb-2 flex flex-col items-start'}>
-      <h3 className={'mb-0 text-left uppercase'}>
+      <h2 className={'mb-0 text-left uppercase'}>
         {children}
         <div
           style={{
@@ -45,7 +45,7 @@ const SectionTitle = ({ children }) => {
             borderStyle: 'solid',
           }}
         />
-      </h3>
+      </h2>
     </div>
   )
 }
