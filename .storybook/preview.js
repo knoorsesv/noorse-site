@@ -6,7 +6,23 @@ typography.injectStyles()
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  backgrounds: { default: 'light' },
+  backgrounds: {
+    default: 'none',
+    values: [
+      {
+        name: 'light',
+        value: '#f1f5f9',
+      },
+      {
+        name: 'white',
+        value: '#ffffff',
+      },
+      {
+        name: 'dark',
+        value: '##27272a',
+      },
+    ],
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
