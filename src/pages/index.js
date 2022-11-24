@@ -117,7 +117,7 @@ const EventsSection = ({ className, futureEvents, EventLink }) => {
   return (
     <Section className={className}>
       <Section.Title>Evenementen</Section.Title>
-      <Card className={'mb-4'}>
+      <Card>
         <div className={'py-2 px-3'}>
           <EventList events={futureEvents} EventLink={EventLink} />
         </div>
