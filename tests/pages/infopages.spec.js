@@ -9,7 +9,7 @@ test.describe('All Info Pages', () => {
 
     expect(title).toHaveText('Bestuur')
     expect(await leden.count()).toEqual(4)
-    expect(ben.locator('h2')).toHaveText('Ben De Block')
+    expect(ben.locator('h3')).toHaveText('Ben De Block')
     expect(ben).toContainText('Senioren')
     expect(ben).toContainText('Veurzitter-in-spe')
     expect(ben).toContainText('Sponsor Verantwoordelijke')
