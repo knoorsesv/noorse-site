@@ -4,7 +4,7 @@ import { navigate } from 'gatsby-link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { Card } from '../components/cards.jsx'
-import { EventsSection } from '../components/events'
+import { EventList } from '../components/events'
 import { Footer } from '../components/footer'
 import { Section } from '../components/layout/section.jsx'
 import { Navbar } from '../components/navbar.jsx'
@@ -109,6 +109,19 @@ const NieuwsSection = ({ className }) => {
           ...
         </Link>
       </NewsList>
+    </Section>
+  )
+}
+
+const EventsSection = ({ className, futureEvents, EventLink }) => {
+  return (
+    <Section className={className}>
+      <Section.Title>Evenementen</Section.Title>
+      <Card className={'mb-4'}>
+        <div className={'py-2 px-3'}>
+          <EventList events={futureEvents} EventLink={EventLink} />
+        </div>
+      </Card>
     </Section>
   )
 }
