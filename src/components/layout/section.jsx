@@ -50,6 +50,11 @@ const SectionTitle = ({ children }) => {
   )
 }
 
+const SectionTextContent = ({ children }) => (
+  <div className="my-4 text-center medium:my-8">{children}</div>
+)
+
 Section.Title = SectionTitle
+Section.TextContent = SectionTextContent
 
 export { Section }

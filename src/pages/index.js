@@ -10,7 +10,7 @@ import { Section } from '../components/layout/section.jsx'
 import { Navbar } from '../components/navbar.jsx'
 import { NewsList } from '../components/newsList'
 import Seo from '../components/seo'
-import { ExternalLink, TextBlock } from '../components/text.jsx'
+import { ExternalLink } from '../components/text.jsx'
 import { ResponsiveVideo } from '../components/video'
 import { newsletterLink, webshopLink } from '../env/constants'
 import { getSiteMapForInfoPages } from '../queries/pages'
@@ -29,18 +29,14 @@ const TrooperSection = ({ className }) => {
     <Section className={className}>
       <Section.Title>Trooper</Section.Title>
       <Card>
-        <TextBlock>
-          <div className={'px-2 text-center'}>
-            Steun onze vereniging vanaf nu via{' '}
-            <ExternalLink url="https://www.trooper.be/noorse">
-              Trooper
-            </ExternalLink>{' '}
-            !
-          </div>
-        </TextBlock>
-        <div className={'flex justify-center p-4'} title={'trooper-video'}>
-          <ResponsiveVideo src={'https://www.youtube.com/embed/jGgVgioUMq0'} />
-        </div>
+        <Section.TextContent>
+          Steun onze vereniging vanaf nu via{' '}
+          <ExternalLink url="https://www.trooper.be/noorse">
+            Trooper
+          </ExternalLink>{' '}
+          !
+        </Section.TextContent>
+        <ResponsiveVideo src={'https://www.youtube.com/embed/jGgVgioUMq0'} />
       </Card>
     </Section>
   )
@@ -51,13 +47,13 @@ const WebshopSection = ({ className }) => {
     <Section className={`${className}`}>
       <Section.Title>Webshop</Section.Title>
       <Card>
-        <div className={'text-center'}>
+        <Section.TextContent>
           Ontdek{' '}
           <ExternalLink icon={false} url={webshopLink}>
             hier
           </ExternalLink>{' '}
           onze officiële webshop!
-        </div>
+        </Section.TextContent>
       </Card>
     </Section>
   )
@@ -68,13 +64,13 @@ const NewsletterSection = ({ className }) => {
     <Section className={`${className}`}>
       <Section.Title>Nieuwsbrief</Section.Title>
       <Card>
-        <div className={'text-center'}>
+        <Section.TextContent>
           Noorse heeft een nieuwsbrief! Schrijf je{' '}
           <ExternalLink icon={false} url={newsletterLink}>
             hier
           </ExternalLink>{' '}
           in.
-        </div>
+        </Section.TextContent>
       </Card>
     </Section>
   )
@@ -118,9 +114,7 @@ const EventsSection = ({ className, futureEvents, EventLink }) => {
     <Section className={className}>
       <Section.Title>Evenementen</Section.Title>
       <Card>
-        <div className={'py-2 px-3'}>
-          <EventList events={futureEvents} EventLink={EventLink} />
-        </div>
+        <EventList events={futureEvents} EventLink={EventLink} />
       </Card>
     </Section>
   )
