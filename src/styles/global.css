@@ -28,6 +28,11 @@ a:visited {
   color: inherit;
 }
 
+/* typography default overwrite */
+table {
+  margin-bottom: 0;
+}
+
 body {
   --line: rgba(146, 150, 154, 0.1);
 
