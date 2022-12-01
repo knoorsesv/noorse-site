@@ -28,7 +28,7 @@ import { mergeSiteMap } from '../utils/sitemap'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar
         pageHasCoverPhoto={true}
         siteMap={mergeSiteMap(getSiteMapForInfoPages())}
@@ -116,7 +116,7 @@ const Home = () => {
         </div>
       </main>
       <Footer version={getVersion()} Logo={Logo} sponsors={getSponsors()} />
-    </div>
+    </>
   )
 }
 
