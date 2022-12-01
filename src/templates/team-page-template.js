@@ -151,7 +151,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
                   {data.vv.teamSeriesAndRankings.series.map((series) => (
                     <ExternalLink
                       key={series.name}
-                      url={`https://www.voetbalvlaanderen.be/competitie/${series.serieId}/rangschikking`}
+                      href={`https://www.voetbalvlaanderen.be/competitie/${series.serieId}/rangschikking`}
                     >
                       {' '}
                       {series.name}
@@ -217,7 +217,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
 
               <div className={'my-6'}>
                 <ExternalLink
-                  url={`https://calendar.google.com/calendar/u/0/r?cid=${googleCalId}`}
+                  href={`https://calendar.google.com/calendar/u/0/r?cid=${googleCalId}`}
                   altText={'Google Calendar'}
                   styled={false}
                   icon={false}

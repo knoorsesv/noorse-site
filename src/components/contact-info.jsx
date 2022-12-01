@@ -13,24 +13,24 @@ export const ContactInfo = () => {
       </span>
       <div className="mt-6 flex flex-row items-center space-x-3">
         <ExternalLink
-          url="https://www.facebook.com/noorsesv/"
           altText={'Facebook'}
+          href="https://www.facebook.com/noorsesv/"
           styled={false}
           icon={false}
         >
           <Facebook />
         </ExternalLink>
         <ExternalLink
-          url="https://www.instagram.com/knoorsesv/"
           altText={'Instagram'}
+          href="https://www.instagram.com/knoorsesv/"
           styled={false}
           icon={false}
         >
           <Instagram />
         </ExternalLink>
         <ExternalLink
-          url="https://github.com/knoorsesv/noorse-site/"
           altText={'Github'}
+          href="https://github.com/knoorsesv/noorse-site/"
           styled={false}
           icon={false}
         >

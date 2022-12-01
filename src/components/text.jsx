@@ -13,7 +13,7 @@ export const TextBlock = ({ children }) => {
 
 export const ExternalLink = ({
   children,
-  url,
+  href,
   icon = true,
   styled = true,
   altText = '',
@@ -31,7 +31,7 @@ export const ExternalLink = ({
   return (
     <a
       className={linkClasses}
-      href={url}
+      href={href}
       aria-label={`${altText}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export const ExternalLink = ({
 export const EmailLink = ({ address }) => {
   return (
     <ExternalLink
-      url={`mailto:${address}`}
+      href={`mailto:${address}`}
       icon={false}
       textColor={'text-black'}
     >

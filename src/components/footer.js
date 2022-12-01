@@ -12,7 +12,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
         condition={!!sponsorNode.websiteUrl}
         wrapper={(children) => (
           <ExternalLink
-            url={sponsorNode.websiteUrl}
+            href={sponsorNode.websiteUrl}
             styled={false}
             icon={false}
           >
@@ -107,11 +107,11 @@ export const CopyRightFooter = ({ version }) => {
       </div>
       <div>
         Powered by{' '}
-        <ExternalLink textColor={'text-black'} url="https://www.gatsbyjs.org">
+        <ExternalLink textColor={'text-black'} href="https://www.gatsbyjs.org">
           Gatsby
         </ExternalLink>{' '}
         and{' '}
-        <ExternalLink textColor={'text-black'} url="https://tailwindcss.com/">
+        <ExternalLink textColor={'text-black'} href="https://tailwindcss.com/">
           Tailwind
         </ExternalLink>
       </div>
