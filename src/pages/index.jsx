@@ -3,25 +3,27 @@ import { Link } from 'gatsby'
 import { navigate } from 'gatsby-link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
-import { Card } from '../components/cards.jsx'
-import { EventList } from '../components/events'
-import { Footer } from '../components/footer'
-import { Section } from '../components/layout/section.jsx'
-import { Navbar } from '../components/navbar.jsx'
-import { NewsList } from '../components/newsList'
-import Seo from '../components/seo'
-import { ExternalLink } from '../components/text.jsx'
-import { ResponsiveVideo } from '../components/video'
+import {
+  Card,
+  EventList,
+  ExternalLink,
+  Footer,
+  Navbar,
+  NewsList,
+  ResponsiveVideo,
+  Section,
+} from '../components'
+import Seo from '../components/seo' // todo: also import this from barrel file
 import { newsletterLink, webshopLink } from '../env/constants'
-import { getSiteMapForInfoPages } from '../queries/pages'
-import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
-import { getVersion } from '../queries/version'
+import { getConstrainedLogoData } from '../queries/constrained-logo'
 import { getCoverImageData } from '../queries/cover-image'
 import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
-import { getConstrainedLogoData } from '../queries/constrained-logo'
-import { Logo } from '../static-images/logo'
+import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSponsors } from '../queries/sponsors'
+import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
+import { getVersion } from '../queries/version'
+import { Logo } from '../static-images/logo'
 import { mergeSiteMap } from '../utils/sitemap'
 
 const Home = () => {
