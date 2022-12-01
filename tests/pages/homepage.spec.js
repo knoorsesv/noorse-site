@@ -42,7 +42,7 @@ test.describe('Home Page', () => {
 
   test('clicking dots takes you to news overview', async ({ page }) => {
     const newsSection = page.locator('section:has-text("Nieuws")')
-    const lastLink = newsSection.locator('a:has-text("...")')
+    const lastLink = newsSection.locator('a:has-text("Meer Nieuws")')
 
     await lastLink.click()
     await page.waitForNavigation()

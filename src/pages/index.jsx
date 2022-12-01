@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import {
+  ArrowRight,
   Card,
   EventList,
   ExternalLink,
@@ -54,8 +55,11 @@ const Home = () => {
               NewsCardImage={NewsCardImage}
               shownNewsItems={getNewsItems(6)}
             >
-              <Link className={'font-bold text-black'} to={'info/nieuws'}>
-                ...
+              <Link
+                className={'font-bold text-black underline'}
+                to={'info/nieuws'}
+              >
+                Meer Nieuws <ArrowRight />
               </Link>
             </NewsList>
           </Section>
