@@ -1,6 +1,5 @@
-import React from 'react'
-import { Clickable } from './a11y.jsx'
 import ctl from '@netlify/classnames-template-literals'
+import React from 'react'
 
 // todo: type the input
 // todo: try to get rid of custom classNames, make all cards the same
@@ -22,6 +21,7 @@ export const Card = ({
   const titleHeaderClasses = ctl(
     `text-center p-3 m-0
     uppercase break-normal
+    text-black
     ${headerClass}`
   )
   return (
@@ -50,8 +50,4 @@ export const SubHeader = ({ children }) => {
       {children}
     </div>
   )
-}
-export const ClickableCard = ({ onClick, ...props }) => {
-  // todo: this should just be an <a> tag
-  return Clickable(Card, onClick, props)
 }

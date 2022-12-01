@@ -1,6 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
 import { Link } from 'gatsby'
-import { navigate } from 'gatsby-link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import {
@@ -54,7 +53,6 @@ const Home = () => {
             <NewsList
               NewsCardImage={NewsCardImage}
               shownNewsItems={getNewsItems(6)}
-              onClick={(newsNode) => navigate(`/nieuws/${newsNode.title}`)}
             >
               <Link className={'font-bold text-black'} to={'info/nieuws'}>
                 ...

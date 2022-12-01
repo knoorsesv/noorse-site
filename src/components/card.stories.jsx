@@ -1,10 +1,9 @@
-import { expect, jest } from '@storybook/jest'
-import { userEvent, within } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
+import { within } from '@storybook/testing-library'
 import React from 'react'
-import { Card, ClickableCard, SubHeader } from './cards'
+import { Card, SubHeader } from './cards.jsx'
 
 const dummyImageUrl = 'https://dummyimage.com/200x100/87c425/1100ff'
-const mockClick = jest.fn()
 
 const Template = (args) => (
   <Card {...args}>
@@ -26,9 +25,6 @@ export const Small = Template.bind({})
 export const WithImage = Template.bind({})
 export const WithClassName = Template.bind({})
 export const WithContainerClass = Template.bind({})
-export const Clickable = () => (
-  <ClickableCard onClick={mockClick}>Some clickable content</ClickableCard>
-)
 
 Small.args = {
   headerHeight: 'small',
@@ -56,12 +52,4 @@ WithImage.play = async ({ canvasElement }) => {
   await expect(canvas.getByRole('img').getAttribute('src')).toEqual(
     dummyImageUrl
   )
-}
-
-Clickable.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  await expect(canvas.getByRole('link')).toBeInTheDocument()
-
-  await userEvent.click(canvas.getByRole('link'))
-  await expect(mockClick).toHaveBeenCalled()
 }
