@@ -172,7 +172,7 @@ const NavLink = ({ item, InfoPageLink, onClick }) => {
   if (item.extLink) {
     return (
       <ExternalLink
-        url={item.extLink}
+        href={item.extLink}
         styled={false}
         icon={false}
         className={className}

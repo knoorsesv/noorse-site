@@ -2,7 +2,7 @@ import React from 'react'
 import { ExternalLink } from './text.jsx'
 
 const Link = (args) => (
-  <ExternalLink {...args} url="http://www.noorse.be">
+  <ExternalLink {...args} href="http://www.noorse.be">
     Go Outside
   </ExternalLink>
 )

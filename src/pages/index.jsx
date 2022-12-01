@@ -63,7 +63,7 @@ const Home = () => {
             <Section.Title>Webshop</Section.Title>
             <Card>
               <Section.TextContent>
-                <ExternalLink url={webshopLink}>
+                <ExternalLink href={webshopLink}>
                   Ontdek hier onze officiële webshop!
                 </ExternalLink>
               </Section.TextContent>
@@ -79,7 +79,7 @@ const Home = () => {
             <Section.Title>Trooper</Section.Title>
             <Card>
               <Section.TextContent>
-                <ExternalLink url="https://www.trooper.be/noorse">
+                <ExternalLink href="https://www.trooper.be/noorse">
                   Steun onze vereniging vanaf nu via Trooper !
                 </ExternalLink>
               </Section.TextContent>
@@ -93,7 +93,7 @@ const Home = () => {
             <Card>
               <Section.TextContent>
                 <p>Noorse heeft een nieuwsbrief!</p>
-                <ExternalLink url={newsletterLink}>
+                <ExternalLink href={newsletterLink}>
                   Schrijf je hier in.
                 </ExternalLink>
               </Section.TextContent>
