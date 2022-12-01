@@ -63,11 +63,9 @@ const Home = () => {
             <Section.Title>Webshop</Section.Title>
             <Card>
               <Section.TextContent>
-                Ontdek{' '}
-                <ExternalLink icon={false} url={webshopLink}>
-                  hier
-                </ExternalLink>{' '}
-                onze officiële webshop!
+                <ExternalLink url={webshopLink}>
+                  Ontdek hier onze officiële webshop!
+                </ExternalLink>
               </Section.TextContent>
             </Card>
           </Section>
@@ -81,11 +79,9 @@ const Home = () => {
             <Section.Title>Trooper</Section.Title>
             <Card>
               <Section.TextContent>
-                Steun onze vereniging vanaf nu via{' '}
                 <ExternalLink url="https://www.trooper.be/noorse">
-                  Trooper
-                </ExternalLink>{' '}
-                !
+                  Steun onze vereniging vanaf nu via Trooper !
+                </ExternalLink>
               </Section.TextContent>
               <ResponsiveVideo
                 src={'https://www.youtube.com/embed/jGgVgioUMq0'}
@@ -96,11 +92,10 @@ const Home = () => {
             <Section.Title>Nieuwsbrief</Section.Title>
             <Card>
               <Section.TextContent>
-                Noorse heeft een nieuwsbrief! Schrijf je{' '}
-                <ExternalLink icon={false} url={newsletterLink}>
-                  hier
-                </ExternalLink>{' '}
-                in.
+                <p>Noorse heeft een nieuwsbrief!</p>
+                <ExternalLink url={newsletterLink}>
+                  Schrijf je hier in.
+                </ExternalLink>
               </Section.TextContent>
             </Card>
           </Section>
