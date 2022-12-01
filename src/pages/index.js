@@ -24,55 +24,102 @@ import { Logo } from '../static-images/logo'
 import { getSponsors } from '../queries/sponsors'
 import { mergeSiteMap } from '../utils/sitemap'
 
-const TrooperSection = ({ className }) => {
+const Home = () => {
   return (
-    <Section className={className}>
-      <Section.Title>Trooper</Section.Title>
-      <Card>
-        <Section.TextContent>
-          Steun onze vereniging vanaf nu via{' '}
-          <ExternalLink url="https://www.trooper.be/noorse">
-            Trooper
-          </ExternalLink>{' '}
-          !
-        </Section.TextContent>
-        <ResponsiveVideo src={'https://www.youtube.com/embed/jGgVgioUMq0'} />
-      </Card>
-    </Section>
-  )
-}
+    <div>
+      <Navbar
+        pageHasCoverPhoto={true}
+        siteMap={mergeSiteMap(getSiteMapForInfoPages())}
+        InfoPageLink={InfoPageLink}
+        CoverImage={CoverImage}
+      />
 
-const WebshopSection = ({ className }) => {
-  return (
-    <Section className={`${className}`}>
-      <Section.Title>Webshop</Section.Title>
-      <Card>
-        <Section.TextContent>
-          Ontdek{' '}
-          <ExternalLink icon={false} url={webshopLink}>
-            hier
-          </ExternalLink>{' '}
-          onze officiële webshop!
-        </Section.TextContent>
-      </Card>
-    </Section>
-  )
-}
-
-const NewsletterSection = ({ className }) => {
-  return (
-    <Section className={`${className}`}>
-      <Section.Title>Nieuwsbrief</Section.Title>
-      <Card>
-        <Section.TextContent>
-          Noorse heeft een nieuwsbrief! Schrijf je{' '}
-          <ExternalLink icon={false} url={newsletterLink}>
-            hier
-          </ExternalLink>{' '}
-          in.
-        </Section.TextContent>
-      </Card>
-    </Section>
+      <Seo title="Home" />
+      {/*todo: don't do this with a grid*/}
+      <main
+        className={'large:flex large:w-full large:flex-col large:items-center'}
+      >
+        <div
+          className={ctl(`flex grid-cols-3 flex-col
+        medium:px-12 large:mx-24
+        large:grid large:max-w-[1200px] large:gap-2
+        large:bg-gray-light large:px-6
+        `)}
+          id="homepage-content"
+        >
+          <Section id="news-list" className="large:col-span-2 large:row-span-5">
+            <Section.Title>Nieuws</Section.Title>
+            <NewsList
+              NewsCardImage={NewsCardImage}
+              shownNewsItems={getNewsItems(6)}
+              onClick={(newsNode) => navigate(`/nieuws/${newsNode.title}`)}
+            >
+              <Link className={'font-bold text-black'} to={'info/nieuws'}>
+                ...
+              </Link>
+            </NewsList>
+          </Section>
+          <Section className="large:col-start-3 large:row-start-1">
+            <Section.Title>Webshop</Section.Title>
+            <Card>
+              <Section.TextContent>
+                Ontdek{' '}
+                <ExternalLink icon={false} url={webshopLink}>
+                  hier
+                </ExternalLink>{' '}
+                onze officiële webshop!
+              </Section.TextContent>
+            </Card>
+          </Section>
+          <Section className="large:row-start-2' large:col-start-3">
+            <Section.Title>Evenementen</Section.Title>
+            <Card>
+              <EventList events={getFutureEvents()} EventLink={EventLink} />
+            </Card>
+          </Section>
+          <Section className={'large:col-start-3 large:row-start-3'}>
+            <Section.Title>Trooper</Section.Title>
+            <Card>
+              <Section.TextContent>
+                Steun onze vereniging vanaf nu via{' '}
+                <ExternalLink url="https://www.trooper.be/noorse">
+                  Trooper
+                </ExternalLink>{' '}
+                !
+              </Section.TextContent>
+              <ResponsiveVideo
+                src={'https://www.youtube.com/embed/jGgVgioUMq0'}
+              />
+            </Card>
+          </Section>
+          <Section className="large:col-start-3 large:row-start-4">
+            <Section.Title>Nieuwsbrief</Section.Title>
+            <Card>
+              <Section.TextContent>
+                Noorse heeft een nieuwsbrief! Schrijf je{' '}
+                <ExternalLink icon={false} url={newsletterLink}>
+                  hier
+                </ExternalLink>{' '}
+                in.
+              </Section.TextContent>
+            </Card>
+          </Section>
+          <Section className={'large:col-start-3 large:row-start-5'}>
+            <Card>
+              <GatsbyImage
+                image={getSportVlaanderenLogo()}
+                id="sport-vlaanderen-logo"
+                alt={'Sport Vlaanderen Logo'}
+                objectFit={'contain'}
+                loading="lazy"
+                className={`h-full max-h-full w-full max-w-full`}
+              />
+            </Card>
+          </Section>
+        </div>
+      </main>
+      <Footer version={getVersion()} Logo={Logo} sponsors={getSponsors()} />
+    </div>
   )
 }
 
@@ -86,37 +133,6 @@ const NewsCardImage = ({ image }) => {
         alt={'Card Header'} // todo: pass a proper alt text here
       />
     </div>
-  )
-}
-
-const NieuwsSection = ({ className }) => {
-  const goToNews = (newsNode) => {
-    navigate(`/nieuws/${newsNode.title}`)
-  }
-  return (
-    <Section id="news-list" className={className}>
-      <Section.Title>Nieuws</Section.Title>
-      <NewsList
-        NewsCardImage={NewsCardImage}
-        shownNewsItems={getNewsItems(6)}
-        onClick={goToNews}
-      >
-        <Link className={'font-bold text-black'} to={'info/nieuws'}>
-          ...
-        </Link>
-      </NewsList>
-    </Section>
-  )
-}
-
-const EventsSection = ({ className, futureEvents, EventLink }) => {
-  return (
-    <Section className={className}>
-      <Section.Title>Evenementen</Section.Title>
-      <Card>
-        <EventList events={futureEvents} EventLink={EventLink} />
-      </Card>
-    </Section>
   )
 }
 
@@ -156,59 +172,6 @@ const EventLink = ({ event }) => {
     >
       {event.naam}
     </Link>
-  )
-}
-
-const Home = () => {
-  return (
-    <div>
-      <Navbar
-        pageHasCoverPhoto={true}
-        siteMap={mergeSiteMap(getSiteMapForInfoPages())}
-        InfoPageLink={InfoPageLink}
-        CoverImage={CoverImage}
-      />
-
-      <Seo title="Home" />
-      {/*todo: don't do this with a grid*/}
-      <main
-        className={'large:flex large:w-full large:flex-col large:items-center'}
-      >
-        <div
-          className={ctl(`flex grid-cols-3 flex-col
-        medium:px-12 large:mx-24
-        large:grid large:max-w-[1200px] large:gap-2
-        large:bg-gray-light large:px-6
-        `)}
-          id="homepage-content"
-        >
-          <NieuwsSection className={'large:col-span-2 large:row-span-5'} />
-          <WebshopSection className={'large:col-start-3 large:row-start-1'} />
-          <EventsSection
-            className={'large:col-start-3 large:row-start-2'}
-            futureEvents={getFutureEvents()}
-            EventLink={EventLink}
-          />
-          <TrooperSection className={'large:col-start-3 large:row-start-3'} />
-          <NewsletterSection
-            className={'large:col-start-3 large:row-start-4'}
-          />
-          <Section className={'large:col-start-3 large:row-start-5'}>
-            <Card>
-              <GatsbyImage
-                image={getSportVlaanderenLogo()}
-                id="sport-vlaanderen-logo"
-                alt={'Sport Vlaanderen Logo'}
-                objectFit={'contain'}
-                loading="lazy"
-                className={`h-full max-h-full w-full max-w-full`}
-              />
-            </Card>
-          </Section>
-        </div>
-      </main>
-      <Footer version={getVersion()} Logo={Logo} sponsors={getSponsors()} />
-    </div>
   )
 }
 
