@@ -25,7 +25,7 @@ export const NewsCard = ({ newsNode, NewsCardImage }) => {
             {newsNode.publishDate || newsNode.createdAt}
           </div>
         </SubHeader>
-        <div className={'min-h-64p text-center'}>{snippet}</div>
+        <div className={'min-h-64p text-center text-gray-dark'}>{snippet}</div>
       </Card>
     </a>
   )
