@@ -42,7 +42,7 @@ const Home = () => {
             <Section.Title>Nieuws</Section.Title>
             <NewsList
               NewsCardImage={NewsCardImage}
-              shownNewsItems={getNewsItems(6)}
+              shownNewsItems={getNewsItems(3)}
             >
               <Link
                 className={'font-bold text-black underline'}
