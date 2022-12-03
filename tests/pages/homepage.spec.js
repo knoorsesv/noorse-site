@@ -22,7 +22,7 @@ test.describe('Home Page', () => {
       .locator(' > div:last-of-type > div:last-of-type')
 
     expect(newsSection).toBeVisible()
-    expect(await newsItems.count()).toEqual(6)
+    expect(await newsItems.count()).toEqual(3)
     expect(await firstHeadline.innerText()).toEqual('NIEUWE SPELERS 2020-2021')
     expect(await firstBlurb.innerText()).toEqual(
       'Na het jammere nieuws dat er dit seizoen niet meer gevoetbald wordt, beginnen we meteen uit te kijke ...'

@@ -14,7 +14,11 @@ export const NewsList = ({ children, NewsCardImage, shownNewsItems }) => {
           <NewsCard newsNode={node} NewsCardImage={NewsCardImage} />
         </div>
       ))}
-      <div className={'my-4 flex w-full justify-center text-xl'}>
+      <div
+        className={
+          'my-4 flex items-center justify-center text-xl medium:basis-1/2 large:flex-grow'
+        }
+      >
         {children}
       </div>
     </section>
