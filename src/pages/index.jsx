@@ -1,4 +1,3 @@
-import ctl from '@netlify/classnames-template-literals'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
@@ -37,19 +36,9 @@ const Home = () => {
       />
 
       <Seo title="Home" />
-      {/*todo: don't do this with a grid*/}
-      <main
-        className={'large:flex large:w-full large:flex-col large:items-center'}
-      >
-        <div
-          className={ctl(`flex grid-cols-3 flex-col
-        medium:px-12 large:mx-24
-        large:grid large:max-w-[1200px] large:gap-2
-        large:bg-gray-light large:px-6
-        `)}
-          id="homepage-content"
-        >
-          <Section id="news-list" className="large:col-span-2 large:row-span-5">
+      <main className={'flex w-full flex-col items-center medium:px-8'}>
+        <Section.List>
+          <Section>
             <Section.Title>Nieuws</Section.Title>
             <NewsList
               NewsCardImage={NewsCardImage}
@@ -63,7 +52,7 @@ const Home = () => {
               </Link>
             </NewsList>
           </Section>
-          <Section className="large:col-start-3 large:row-start-1">
+          <Section>
             <Section.Title>Webshop</Section.Title>
             <Card>
               <Section.TextContent>
@@ -73,15 +62,15 @@ const Home = () => {
               </Section.TextContent>
             </Card>
           </Section>
-          <Section className="large:row-start-2' large:col-start-3">
+          <Section>
             <Section.Title>Evenementen</Section.Title>
             <Card>
               <EventList events={getFutureEvents()} EventLink={EventLink} />
             </Card>
           </Section>
-          <Section className={'large:col-start-3 large:row-start-3'}>
+          <Section>
             <Section.Title>Trooper</Section.Title>
-            <Card>
+            <Card containerClass="flex flex-col items-center">
               <Section.TextContent>
                 <ExternalLink href="https://www.trooper.be/noorse">
                   Steun onze vereniging vanaf nu via Trooper !
@@ -92,7 +81,7 @@ const Home = () => {
               />
             </Card>
           </Section>
-          <Section className="large:col-start-3 large:row-start-4">
+          <Section>
             <Section.Title>Nieuwsbrief</Section.Title>
             <Card>
               <Section.TextContent>
@@ -103,19 +92,19 @@ const Home = () => {
               </Section.TextContent>
             </Card>
           </Section>
-          <Section className={'large:col-start-3 large:row-start-5'}>
-            <Card>
+          <Section>
+            <Card containerClass="flex flex-col items-center">
               <GatsbyImage
                 image={getSportVlaanderenLogo()}
                 id="sport-vlaanderen-logo"
                 alt={'Sport Vlaanderen Logo'}
                 objectFit={'contain'}
                 loading="lazy"
-                className={`h-full max-h-full w-full max-w-full`}
+                className={`h-full max-h-full w-full max-w-full large:max-w-[500px]`}
               />
             </Card>
           </Section>
-        </div>
+        </Section.List>
       </main>
       <Footer version={getVersion()} Logo={Logo} sponsors={getSponsors()} />
     </>
