@@ -30,11 +30,9 @@ test.describe('Home Page', () => {
   })
 
   test('clicking news card takes you to page', async ({ page }) => {
-    const newsSection = page.locator('section:has-text("Nieuws")')
-    const newsItems = newsSection.locator('article')
-    const firstItem = newsItems.nth(1)
+    const link = page.locator('a article:has-text("Nieuwe spelers")')
 
-    await firstItem.click()
+    await link.click()
     await page.waitForNavigation()
 
     expect(page.url()).toContain('/nieuws/Nieuwe%20spelers%202020-2021')
