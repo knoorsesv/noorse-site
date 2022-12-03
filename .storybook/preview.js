@@ -23,6 +23,38 @@ export const parameters = {
       },
     ],
   },
+  viewport: {
+    viewports: {
+      small: {
+        name: 'Small',
+        styles: {
+          width: '512px',
+          height: '963px',
+        },
+      },
+      medium: {
+        name: 'Medium',
+        styles: {
+          width: '680px',
+          height: '963px',
+        },
+      },
+      large: {
+        name: 'Large',
+        styles: {
+          width: '1024px',
+          height: '963px',
+        },
+      },
+      extralarge: {
+        name: 'Extra Large',
+        styles: {
+          width: '1400px',
+          height: '1200px',
+        },
+      },
+    },
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
