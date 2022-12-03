@@ -39,6 +39,33 @@ const Home = () => {
       <main className={'flex w-full flex-col items-center medium:px-8'}>
         <Section.List>
           <Section>
+            <Section.Title>Evenementen</Section.Title>
+            <Card>
+              <EventList events={getFutureEvents()} EventLink={EventLink} />
+            </Card>
+          </Section>
+          <Section>
+            <Section.Title>Nieuwsbrief</Section.Title>
+            <Card>
+              <Section.TextContent>
+                <p>Noorse heeft een nieuwsbrief!</p>
+                <ExternalLink href={newsletterLink}>
+                  Schrijf je hier in.
+                </ExternalLink>
+              </Section.TextContent>
+            </Card>
+          </Section>
+          <Section>
+            <Section.Title>Webshop</Section.Title>
+            <Card>
+              <Section.TextContent>
+                <ExternalLink href={webshopLink}>
+                  Ontdek hier onze officiële webshop!
+                </ExternalLink>
+              </Section.TextContent>
+            </Card>
+          </Section>
+          <Section>
             <Section.Title>Nieuws</Section.Title>
             <NewsList
               NewsCardImage={NewsCardImage}
@@ -53,22 +80,6 @@ const Home = () => {
             </NewsList>
           </Section>
           <Section>
-            <Section.Title>Webshop</Section.Title>
-            <Card>
-              <Section.TextContent>
-                <ExternalLink href={webshopLink}>
-                  Ontdek hier onze officiële webshop!
-                </ExternalLink>
-              </Section.TextContent>
-            </Card>
-          </Section>
-          <Section>
-            <Section.Title>Evenementen</Section.Title>
-            <Card>
-              <EventList events={getFutureEvents()} EventLink={EventLink} />
-            </Card>
-          </Section>
-          <Section>
             <Section.Title>Trooper</Section.Title>
             <Card containerClass="flex flex-col items-center">
               <Section.TextContent>
@@ -81,17 +92,7 @@ const Home = () => {
               />
             </Card>
           </Section>
-          <Section>
-            <Section.Title>Nieuwsbrief</Section.Title>
-            <Card>
-              <Section.TextContent>
-                <p>Noorse heeft een nieuwsbrief!</p>
-                <ExternalLink href={newsletterLink}>
-                  Schrijf je hier in.
-                </ExternalLink>
-              </Section.TextContent>
-            </Card>
-          </Section>
+
           <Section>
             <Card containerClass="flex flex-col items-center">
               <GatsbyImage
