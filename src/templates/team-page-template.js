@@ -51,9 +51,10 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
     data.vv &&
     data.vv.teamSeriesAndRankings &&
     data.vv.teamSeriesAndRankings.rankings &&
-    data.vv.teamSeriesAndRankings.rankings.filter(
-      (ranking) => !ranking.name.toLowerCase().includes('beker')
-    )
+    data.vv.teamSeriesAndRankings.rankings
+      .filter((ranking) => !ranking.name.toLowerCase().includes('beker'))
+      .filter((ranking) => !ranking.name.toLowerCase().includes('bva'))
+
   const generalRanking =
     nonCupRankings && nonCupRankings.length === 1 && nonCupRankings[0].rankings
       ? nonCupRankings[0].rankings[0]
