@@ -37,7 +37,7 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           PROD: true
       - name: Deploy
-        uses: nwtgck/actions-netlify@v1
+        uses: nwtgck/actions-netlify@v2
         id: deploy-prod
         with:
           publish-dir: './public'
@@ -73,7 +73,7 @@ jobs:
           CONTENTFUL_ENV: staging
           GATSBY_VV_TEST_DATA: on
       - name: Deploy
-        uses: nwtgck/actions-netlify@v1
+        uses: nwtgck/actions-netlify@v2
         id: deploy-dev
         with:
           publish-dir: './public'
@@ -103,7 +103,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
       - run: yarn build-storybook
       - name: Deploy
-        uses: nwtgck/actions-netlify@v1
+        uses: nwtgck/actions-netlify@v2
         id: deploy-dev
         with:
           publish-dir: './storybook-static'

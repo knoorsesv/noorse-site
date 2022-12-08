@@ -40,7 +40,7 @@ jobs:
           CONTENTFUL_PREVIEW: true
           PROD: true
       - name: Deploy
-        uses: nwtgck/actions-netlify@v1
+        uses: nwtgck/actions-netlify@v2
         id: deploy-prod
         with:
           publish-dir: './public'
