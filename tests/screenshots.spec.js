@@ -2,18 +2,16 @@ const { test, expect } = require('@playwright/test')
 
 const pages = [
   '/',
-  '/nieuws/Nieuwe spelers 2020-2021',
-  '/nieuws/Alle Mogelijke Opties',
   '/info/nieuws',
-  '/team/Noorse 1',
   '/info/kalender',
   '/info/sponsoring',
-  '/senioren',
   '/info/bestuur',
+  '/nieuws/Alle Mogelijke Opties',
+  '/senioren',
+  '/team/Noorse 1',
 ]
-// todo: remove comparison screenshots which are no longer relevant
 
-const takeFullPage = ['/nieuws/Alle Mogelijke Opties']
+const takeFullPage = ['/nieuws/Alle Mogelijke Opties', '/']
 
 test.describe.parallel('Screenshot Test', () => {
   pages.forEach((pageUrl) => {

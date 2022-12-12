@@ -19,7 +19,7 @@ const config = {
     baseURL,
     trace: 'off',
   },
-  timeout: runOnCI ? 20 * 1000 : 5 * 1000,
+  timeout: runOnCI ? 20 * 1000 : 10 * 1000,
   projects: [
     {
       name: 'Functional',
