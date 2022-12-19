@@ -79,7 +79,7 @@
     "@storybook/jest": "0.0.10",
     "@storybook/react": "7.0.0-beta.10",
     "@storybook/react-vite": "7.0.0-beta.10",
-    "@storybook/testing-library": "0.0.14-next.0",
+    "@storybook/testing-library": "0.0.14-next.1",
     "apollo-server": "3.11.1",
     "autoprefixer": "10.4.13",
     "concurrently": "7.6.0",
