@@ -1,6 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import React from 'react'
-import { ContactInfo } from './contact'
+import { ContactInfo } from './contact-info.jsx'
 import { EmailLink, ExternalLink } from './text.jsx'
 import { Title } from './titles'
 import { Version } from './version'

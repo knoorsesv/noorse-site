@@ -26,6 +26,8 @@ export const ExternalLink = ({
     } ${className} inline-flex items-center`
   )
 
+  // todo: too many properties here, aria-label is only necessary when there is only an icon, should be a separate component
+  // todo: icon is a badly named boolean, should just be a child component
   return (
     <a
       className={linkClasses}

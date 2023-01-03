@@ -4,17 +4,17 @@ import { EmailLink, ExternalLink } from './text.jsx'
 
 export const ContactInfo = () => {
   return (
-    <div id="contact-info" className={`flex flex-col items-center`}>
+    <div className="flex flex-col items-center">
       <span>Frans de Peuterstraat 50</span>
       <span>2950 Kapellen</span>
       <span>03/664.44.11</span>
       <span>
         <EmailLink address="info@noorse.be" />
       </span>
-      <div className={'mt-6 flex flex-row items-center space-x-3'}>
+      <div className="mt-6 flex flex-row items-center space-x-3">
         <ExternalLink
           url="https://www.facebook.com/noorsesv/"
-          altText={'Link to Facebook'}
+          altText={'Facebook'}
           styled={false}
           icon={false}
         >
@@ -22,7 +22,7 @@ export const ContactInfo = () => {
         </ExternalLink>
         <ExternalLink
           url="https://www.instagram.com/knoorsesv/"
-          altText={'Link to Instagram'}
+          altText={'Instagram'}
           styled={false}
           icon={false}
         >
@@ -30,7 +30,7 @@ export const ContactInfo = () => {
         </ExternalLink>
         <ExternalLink
           url="https://github.com/knoorsesv/noorse-site/"
-          altText={'Link to Github'}
+          altText={'Github'}
           styled={false}
           icon={false}
         >
