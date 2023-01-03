@@ -1,5 +1,5 @@
 import React from 'react'
-import { ClickableCard, SubHeader } from './cards'
+import { ClickableCard, SubHeader } from './cards.jsx'
 import {
   createSnippetFromContentArray,
   createSnippetFromInhoud,
