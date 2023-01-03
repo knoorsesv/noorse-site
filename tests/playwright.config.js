@@ -1,6 +1,5 @@
 // playwright.config.js
 // @ts-check
-const { devices } = require('@playwright/test')
 require('dotenv').config()
 
 const runOnCI = process.env.CI === 'true'

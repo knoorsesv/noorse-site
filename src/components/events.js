@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from './cards'
+import { Card } from './cards.jsx'
 import { Section } from './layout/section'
 import { SectionTitle } from './titles'
 

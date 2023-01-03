@@ -1,7 +1,6 @@
 import React from 'react'
-import { Facebook, Instagram } from './icons/icons.jsx'
+import { Facebook, Github, Instagram } from './icons/icons.jsx'
 import { EmailLink, ExternalLink } from './text.jsx'
-import { Github } from './icons/icons'
 
 export const ContactInfo = () => {
   return (
