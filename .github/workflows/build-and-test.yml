@@ -88,6 +88,21 @@ jobs:
     outputs:
       dev-url: ${{steps.deploy-dev.outputs.deploy-url}}
 
+  lint:
+    needs: deps
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: volta-cli/action@v4
+      - uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+      - run: yarn lint
+
   build-storybook:
     needs: deps
     runs-on: ubuntu-latest
