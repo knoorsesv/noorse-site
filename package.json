@@ -70,8 +70,8 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.1",
-    "@commitlint/config-conventional": "17.4.0",
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
     "@storybook/addon-a11y": "7.0.0-beta.25",
     "@storybook/addon-essentials": "7.0.0-beta.25",
     "@storybook/addon-interactions": "7.0.0-beta.25",
