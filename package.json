@@ -95,7 +95,7 @@
     "prettier": "2.8.3",
     "prettier-plugin-packagejson": "2.4.0",
     "prettier-plugin-tailwindcss": "0.2.1",
-    "start-server-and-test": "1.15.2",
+    "start-server-and-test": "1.15.3",
     "storybook": "7.0.0-beta.31",
     "tailwindcss": "3.2.4",
     "vite": "4.0.4"
