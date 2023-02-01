@@ -93,7 +93,7 @@
     "nodemon": "2.0.20",
     "postcss": "8.4.21",
     "prettier": "2.8.3",
-    "prettier-plugin-packagejson": "2.4.0",
+    "prettier-plugin-packagejson": "2.4.2",
     "prettier-plugin-tailwindcss": "0.2.2",
     "start-server-and-test": "1.15.3",
     "storybook": "7.0.0-beta.35",
