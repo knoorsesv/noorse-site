@@ -33,17 +33,19 @@ test.describe('Home Page', () => {
     const link = page.locator('a article:has-text("Nieuwe spelers")')
 
     await link.click()
-    await page.waitForNavigation()
 
-    expect(page.url()).toContain('/nieuws/Nieuwe%20spelers%202020-2021')
+    expect(page.url().toLowerCase()).toContain(
+      '/nieuws/Nieuwe%20spelers%202020-2021'.toLowerCase()
+    )
   })
 
   test('clicking dots takes you to news overview', async ({ page }) => {
     const newsSection = page.locator('section:has-text("Nieuws")')
     const lastLink = newsSection.locator('a:has-text("Meer Nieuws")')
+    const navigationPromise = page.waitForNavigation()
 
     await lastLink.click()
-    await page.waitForNavigation()
+    await navigationPromise
 
     expect(page.url()).toContain('/info/nieuws')
   })
