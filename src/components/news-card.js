@@ -1,16 +1,10 @@
 import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
-import {
-  createSnippetFromContentArray,
-  createSnippetFromInhoud
-} from './snippet'
+import { createSnippetFromInhoud } from './snippet'
 
 export const NewsCard = ({ newsNode, NewsCardImage }) => {
   const snippet =
-    newsNode.blurb ||
-    (newsNode.inhoud?.inhoud &&
-      createSnippetFromInhoud(newsNode.inhoud?.inhoud)) ||
-    createSnippetFromContentArray(JSON.parse(newsNode.body.raw).content)
+    newsNode.blurb || createSnippetFromInhoud(newsNode.inhoud?.inhoud)
 
   return (
     <a href={`/nieuws/${newsNode.title}`}>
