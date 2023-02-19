@@ -13,7 +13,7 @@ import { Title } from '../components/titles'
 import { imageFileTypes } from '../env/constants'
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
-  const newsContentArray = JSON.parse(newsNode.body.raw).content
+  const newsContentArray = JSON.parse(newsNode.body?.raw || '{}').content
   return (
     <Layout>
       <Helmet>
