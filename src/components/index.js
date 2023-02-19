@@ -1,7 +1,7 @@
 export * from './attachments.jsx'
 export * from './attachments.jsx'
 export * from './cards.jsx'
-export * from './contact'
+export * from './contact-info.jsx'
 export * from './contentful-content' // todo: deprecate
 export * from './document-link.jsx'
 export * from './events'
