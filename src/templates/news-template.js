@@ -3,17 +3,12 @@ import { marked } from 'marked'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Attachments } from '../components/attachments.jsx'
-import { ContentfulJsonContent } from '../components/contentful-content'
-import Layout, { Container } from '../layouts/layout'
-import {
-  createSnippetFromContentArray,
-  createSnippetFromInhoud,
-} from '../components/snippet'
+import { createSnippetFromInhoud } from '../components/snippet'
 import { Title } from '../components/titles'
 import { imageFileTypes } from '../env/constants'
+import Layout, { Container } from '../layouts/layout'
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
-  const newsContentArray = JSON.parse(newsNode.body?.raw || '{}').content
   return (
     <Layout>
       <Helmet>
@@ -22,10 +17,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <meta
           property="og:description"
           content={`${
-            newsNode.blurb ||
-            (newsNode.inhoud?.inhoud &&
-              createSnippetFromInhoud(newsNode.inhoud?.inhoud)) ||
-            createSnippetFromContentArray(newsContentArray)
+            newsNode.blurb || createSnippetFromInhoud(newsNode.inhoud?.inhoud)
           }`}
         />
         {newsNode.image && (
@@ -48,15 +40,13 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
         <h3 className={'mb-6 mt-6 capitalize italic'}>
           {newsNode.publishDate || newsNode.createdAt}
         </h3>
-        {newsNode.inhoud?.inhoud ? (
+        {newsNode.inhoud?.inhoud && (
           <section
             className={'prose'}
             dangerouslySetInnerHTML={{
               __html: marked(newsNode.inhoud?.inhoud),
             }}
           ></section>
-        ) : (
-          <ContentfulJsonContent content={newsContentArray} />
         )}
         <section className={newsNode.inhoud?.inhoud ? 'prose ' : ''}>
           <Attachments attachments={newsNode.attachment} />

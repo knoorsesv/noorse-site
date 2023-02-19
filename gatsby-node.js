@@ -14,9 +14,6 @@ exports.createPages = async ({ graphql, actions }) => {
     query {
       allContentfulNews {
         nodes {
-          body {
-            raw
-          }
           inhoud {
             inhoud
           }
