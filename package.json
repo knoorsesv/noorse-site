@@ -66,7 +66,7 @@
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.0",
     "react-typography": "0.16.23",
-    "tailwindcss-elevation": "1.0.1",
+    "tailwindcss-elevation": "2.0.0",
     "typography": "0.16.21"
   },
   "devDependencies": {
