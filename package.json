@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "7.22.2",
-    "@babel/preset-react": "7.22.0",
+    "@babel/preset-react": "7.22.3",
     "@fontsource/lato": "5.0.1",
     "@fontsource/mulish": "5.0.1",
     "@netlify/classnames-template-literals": "1.0.3",
