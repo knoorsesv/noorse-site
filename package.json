@@ -42,7 +42,7 @@
     "*": "prettier --write"
   },
   "dependencies": {
-    "@babel/preset-env": "7.22.2",
+    "@babel/preset-env": "7.22.4",
     "@babel/preset-react": "7.22.3",
     "@fontsource/lato": "5.0.1",
     "@fontsource/mulish": "5.0.1",
