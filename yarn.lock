@@ -1987,10 +1987,10 @@
   resolved "https://registry.yarnpkg.com/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz#c05ed35ad82df8e6ac616c68b92c2282bd083ba4"
   integrity sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==
 
-"@fontsource/lato@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.1.tgz#393a4295663c7151b835922a60260bf03233b13a"
-  integrity sha512-/ZUqq3x4uuG5tM0a8JlZM3ulwFREPGI80FJr6yQ3gFs4c9Mr6bhKiPd2XGpI0OPeR9W7zF59vB8C3XLYfSauUA==
+"@fontsource/lato@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.2.tgz#5a00d7776985d291a9943175e9f32fb98fb0fd08"
+  integrity sha512-28FpWT8Ge+Awg+OSg50BSd9WoJBlFUi/uC8l+2vnMNpjUGy0qtxNtgQNgIrDj3FAlaah6T8VDVkgBU72uMpPqw==
 
 "@fontsource/mulish@5.0.1":
   version "5.0.1"
