@@ -6,7 +6,7 @@ const Section = ({ children, className }) => {
     <section
       className={ctl(`${className}
   group mb-4
-  w-full bg-gray-light px-6 pt-4 pb-6 medium:mb-2
+  w-full px-6 pb-6 pt-4 medium:mb-2
   medium:pb-2
   `)}
     >

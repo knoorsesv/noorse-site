@@ -4,6 +4,7 @@ import React from 'react'
 import { Footer } from '../components/footer'
 import { Navbar } from '../components/navbar.jsx'
 import Seo from '../components/seo'
+import { UpdateBanner } from '../components/update-banner.jsx'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { getLogoUrl } from '../queries/resized-logo'
 import { getSponsors } from '../queries/sponsors'
@@ -59,6 +60,9 @@ export const Container = ({ children }) => {
 
   return (
     <div id="content-wrapper" className={containerWrapperClasses}>
+      <div className="px-4 py-2">
+        <UpdateBanner />
+      </div>
       <div className={childrenWrapper}>{children}</div>
     </div>
   )

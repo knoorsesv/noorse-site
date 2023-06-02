@@ -13,6 +13,7 @@ import {
   Section,
 } from '../components'
 import Seo from '../components/seo' // todo: also import this from barrel file
+import { UpdateBanner } from '../components/update-banner.jsx'
 import { newsletterLink, webshopLink } from '../env/constants'
 import { getConstrainedLogoData } from '../queries/constrained-logo'
 import { getCoverImageData } from '../queries/cover-image'
@@ -38,6 +39,9 @@ const Home = () => {
       <Seo title="Home" />
       <main className={'flex w-full flex-col items-center medium:px-8'}>
         <Section.List>
+          <Section>
+            <UpdateBanner />
+          </Section>
           <Section>
             <Section.Title>Evenementen</Section.Title>
             <Card>
