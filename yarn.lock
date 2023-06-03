@@ -1992,10 +1992,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.2.tgz#5a00d7776985d291a9943175e9f32fb98fb0fd08"
   integrity sha512-28FpWT8Ge+Awg+OSg50BSd9WoJBlFUi/uC8l+2vnMNpjUGy0qtxNtgQNgIrDj3FAlaah6T8VDVkgBU72uMpPqw==
 
-"@fontsource/mulish@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.1.tgz#b508a93c4ee55c1c62f929bb4b0e87284ddbdfd0"
-  integrity sha512-DeFa5Atg5BL23BV6zpaz+LGMI1k95WPMmi1ifobU2SH6KgJO9FUuUKPPrjfKgPqLgtuuOOaD7BMmuuT1bwLuDA==
+"@fontsource/mulish@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.2.tgz#982f249485ffda38f0e8d97d39719d96f02fe32b"
+  integrity sha512-Q77c9NFy56+16GhZqkb0h9oSjA5PMgfyDgZof0PTkXh56CXJbVb/sR6Fp6Bse2WUJq03SV6QBPvTuPo9mvkDww==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@1.9.0":
   version "1.9.0"
