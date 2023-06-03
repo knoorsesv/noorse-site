@@ -45,7 +45,7 @@
     "@babel/preset-env": "7.22.4",
     "@babel/preset-react": "7.22.3",
     "@fontsource/lato": "5.0.2",
-    "@fontsource/mulish": "5.0.1",
+    "@fontsource/mulish": "5.0.2",
     "@netlify/classnames-template-literals": "1.0.3",
     "@tailwindcss/typography": "0.5.9",
     "date-fns": "2.30.0",
