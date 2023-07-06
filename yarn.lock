@@ -1989,15 +1989,15 @@
   resolved "https://registry.yarnpkg.com/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz#c05ed35ad82df8e6ac616c68b92c2282bd083ba4"
   integrity sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==
 
-"@fontsource/lato@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.3.tgz#4d45be36c3b949844bbed5d679f8272e3149ba41"
-  integrity sha512-5rfhzbJyFVKvfDhSeyBhfixX2VogW7LpGCB94kRHuxVBfzdXa3a8ovOR/fkXb+24NGiQd0cSnxQHTcBGjqjJOw==
+"@fontsource/lato@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.4.tgz#e8cacb2fb4eddc1cc4571079771516da73f2f1e1"
+  integrity sha512-56SSR09E/DXtJKwl6unJnnQE6tI8dAd4txyZhrobtvfYGf1IV8Jo3oDBZDaiFuHWeGUm8kfJ/qGHPMzzEIlx+Q==
 
-"@fontsource/mulish@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.3.tgz#5343897db8e2801fd4814748a595962878f0470e"
-  integrity sha512-OLMJ3bYMw1I7to0oCCufWlL73Gn+ZtQOgWbiHsEeB37dPRh5qnVltGuZFOJkt9OQeziMD5Nus82iBUu/Me59ZQ==
+"@fontsource/mulish@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.4.tgz#f5afe27afa630ed4c40ca9fd6590695b7b23ce98"
+  integrity sha512-cLgouNTk9LgjTlTEu/o7DFBuqe/aaZJH98qaMa3FtcicSQAiEHpI8PLV7kqGjZQf0JX5T/33if65s8oHryp4fg==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@1.9.0":
   version "1.9.0"
