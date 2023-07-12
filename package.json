@@ -67,7 +67,7 @@
     "react-lazyload": "3.2.0",
     "react-typography": "0.16.23",
     "tailwindcss-elevation": "2.0.0",
-    "typography": "0.16.21"
+    "typography": "0.16.24"
   },
   "devDependencies": {
     "@commitlint/cli": "17.6.6",
