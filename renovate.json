@@ -3,11 +3,9 @@
   "minor": {
     "automerge": true
   },
-   "packageRules": [
+  "packageRules": [
     {
-      "matchSourceUrls": [
-        "https://github.com/storybookjs/storybook"
-      ],
+      "matchSourceUrls": ["https://github.com/storybookjs/storybook"],
       "matchUpdateTypes": ["patch"],
       "enabled": false
     }
