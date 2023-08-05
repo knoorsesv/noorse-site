@@ -1704,15 +1704,15 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
   integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
-"@fontsource/lato@5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.5.tgz#b78f11a2875441520ec8ae9175555fcdfb0ec4a5"
-  integrity sha512-hZ9tmHO8vmXPxNAWENTcitEabJeKbOICwok4EBjVIuY985dg1AAy0vUGUMVTpPKgf425An/+qCrO/GJt3tP2Uw==
+"@fontsource/lato@5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.6.tgz#67a5396185c015f3c589326702de39ff8e5d762e"
+  integrity sha512-BJbs2Fxib0R1MyNRu0ComuB1mRZfD1SuuvKZwCp+1sfuSeJDGepKxWwAx8khh4d3jHlMvQidb225fZG25n/HUg==
 
-"@fontsource/mulish@5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.5.tgz#0fd6c363a4641f79f05c2cc16dfc54d6f8d06332"
-  integrity sha512-C2eHZ11poELitOhh/73s+NI7PyAAbLMm0FVgnnAesI51ntpDX6bnK4nU+2j/xrajGmSjeKtqFKWjbAVsKkfPzA==
+"@fontsource/mulish@5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.6.tgz#ce2b84d27fb4d5a7e541a909dd2859802290e615"
+  integrity sha512-oCIRpP86jn8DTA8AIsbjUQxol++nYuNodxF0PGftPz6Se3pv8d1upvfckonyZ8Q4PW744jTQbYkHWySgAE2vrA==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@1.9.0":
   version "1.9.0"
