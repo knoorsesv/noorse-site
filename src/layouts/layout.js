@@ -47,9 +47,9 @@ const InfoPageLink = ({ item, className }) => {
 
 export default Layout
 
-export const Container = ({ children }) => {
+export const Container = ({ children, centered = true }) => {
   const containerWrapperClasses = ctl(`
-    flex flex-col items-center
+    flex flex-col ${centered ? 'items-center' : ''}
     pt-6 medium:mx-8 pb-20
     bg-gray-light
     min-h-[75vh] h-auto w-11/12 medium:w-5/6 large:w-3/4
