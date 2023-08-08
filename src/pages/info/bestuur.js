@@ -60,7 +60,7 @@ const Bestuur = () => {
 
         <SubTitle>Organigram</SubTitle>
         <img
-          className="w-[800px] m-8"
+          className="max-w-screen-md medium:w-[800px] medium:max-w-full  m-8"
           alt="Bestuursorganigram"
           src={
             'https://www.mermaidchart.com/raw/8ba49245-d4d8-455f-ad19-50cccfa42034?version=v0.1&theme=light&format=svg'
