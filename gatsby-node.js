@@ -53,6 +53,10 @@ exports.createPages = async ({ graphql, actions }) => {
           ploeg {
             naam
           }
+          general_info {
+            id
+            general_info
+          }
         }
       }
     }
