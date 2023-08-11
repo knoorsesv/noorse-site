@@ -6,7 +6,9 @@ import { CategoryTeamNavigation } from '../components/team-navigation'
 import { Section } from '../components/layout/section.jsx'
 import { Helmet } from 'react-helmet'
 
+import { marked } from 'marked'
 const CategoryPage = ({ pageContext: { categoryNode } }) => {
+  console.log(categoryNode)
   return (
     <Layout>
       <Helmet>
@@ -14,6 +16,13 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
       </Helmet>
       <Container>
         <Title>{categoryNode.naam}</Title>
+        <SubTitle>Info</SubTitle>
+        <section
+          className={'prose mb-4'}
+          dangerouslySetInnerHTML={{
+            __html: marked(categoryNode?.general_info?.general_info),
+          }}
+        ></section>
 
         <CategoryTeamNavigation
           category={categoryNode}
