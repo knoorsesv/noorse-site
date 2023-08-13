@@ -1,21 +1,33 @@
 [
   {
-    "vvName": "Recrea Mannen A",
-    "teamName": "Noorse 5",
-    "calendarId": "06iqkd5d54rv3stab7sbj49ang@group.calendar.google.com",
-    "vvId": "291788"
+    "vvName": "Dames Jeugd C",
+    "teamName": "U13 Groen",
+    "calendarId": "11juat0rqt9e869lh2rsnf1b2c@group.calendar.google.com",
+    "vvId": "291758"
   },
   {
-    "vvName": "Recrea Mannen C",
-    "teamName": "Noorse 4",
-    "calendarId": "nll29odbchl1kogrfohthf2b8c@group.calendar.google.com",
-    "vvId": "291786"
+    "vvName": "Dames Jeugd B",
+    "teamName": "U13 Geel",
+    "calendarId": "7punid2u0td3kvs7kudnqvbut0@group.calendar.google.com",
+    "vvId": "291759"
   },
   {
-    "vvName": "Recrea Mannen B",
-    "teamName": "Noorse 3",
-    "calendarId": "bgd3ga04jfuk91svrcoq4galeg@group.calendar.google.com",
-    "vvId": "291787"
+    "vvName": "Dames Jeugd A",
+    "teamName": "U16",
+    "calendarId": "ae000n24qiu7noo3r3ki5irla4@group.calendar.google.com",
+    "vvId": "291760"
+  },
+  {
+    "vvName": "Reserven",
+    "teamName": "Reserven A",
+    "calendarId": "979kvv93lc01sol3gdroklvlt8@group.calendar.google.com",
+    "vvId": "291790"
+  },
+  {
+    "vvName": "Eerste Elftal (Dames) C",
+    "teamName": "Dames 3",
+    "calendarId": "47fn27vb1v956pgenhbcik8f3g@group.calendar.google.com",
+    "vvId": "291755"
   },
   {
     "vvName": "Eerste Elftal (Dames) A",
@@ -30,58 +42,34 @@
     "vvId": "291756"
   },
   {
-    "vvName": "Eerste Elftal (Dames) C",
-    "teamName": "Dames 3",
-    "calendarId": "47fn27vb1v956pgenhbcik8f3g@group.calendar.google.com",
-    "vvId": "291755"
-  },
-  {
-    "vvName": "Dames Jeugd A",
-    "teamName": "Meisjes U16",
-    "calendarId": "o4nr1lrg5e76oi8jcmffn1opug@group.calendar.google.com",
-    "vvId": "291760"
-  },
-  {
-    "vvName": "Dames Jeugd B",
-    "teamName": "Meisjes U13",
-    "calendarId": "eeaeavjpken28jki72k4kfu74g@group.calendar.google.com",
-    "vvId": "291759"
-  },
-  {
-    "vvName": "Dames Jeugd C",
-    "teamName": "Meisjes U11",
-    "calendarId": "d6ka1cqrvhn5954uufsa6h7cvg@group.calendar.google.com",
-    "vvId": "291758"
-  },
-  {
-    "vvName": "U9 M",
-    "teamName": "Meisjes U9",
-    "calendarId": "th1g7jc55lehohjg4qjjqecbic@group.calendar.google.com",
-    "vvId": "291780"
-  },
-  {
-    "vvName": "U13 M",
-    "teamName": "Meisjes U13",
-    "calendarId": "eeaeavjpken28jki72k4kfu74g@group.calendar.google.com",
-    "vvId": "291765"
-  },
-  {
-    "teamName": "Noorse 1",
-    "vvName": "Eerste Elftal",
-    "calendarId": "so48kkhhj47ijph29un9m4gcrc@group.calendar.google.com",
-    "vvId": "291754"
-  },
-  {
-    "teamName": "Reserven A",
-    "vvName": "Reserven",
-    "calendarId": "979kvv93lc01sol3gdroklvlt8@group.calendar.google.com",
-    "vvId": "291790"
-  },
-  {
-    "teamName": "Veteranen",
     "vvName": "Recrea Veteranen",
+    "teamName": "Veteranen",
     "calendarId": "1d84gmtass5hl7sq04hi79ftms@group.calendar.google.com",
     "vvId": "291789"
+  },
+  {
+    "vvName": "Recrea Mannen C",
+    "teamName": "Noorse 4",
+    "calendarId": "nll29odbchl1kogrfohthf2b8c@group.calendar.google.com",
+    "vvId": "291786"
+  },
+  {
+    "vvName": "Recrea Mannen B",
+    "teamName": "Noorse 5",
+    "calendarId": "06iqkd5d54rv3stab7sbj49ang@group.calendar.google.com",
+    "vvId": "291787"
+  },
+  {
+    "vvName": "Recrea Mannen A",
+    "teamName": "Noorse 3",
+    "calendarId": "bgd3ga04jfuk91svrcoq4galeg@group.calendar.google.com",
+    "vvId": "291788"
+  },
+  {
+    "teamName": "Eerste Elftal",
+    "vvName": "Eerste Elftal",
+    "calendarId": "s9j0spprk073p6u4n75f0h5rgc@group.calendar.google.com",
+    "vvId": "291754"
   },
   {
     "teamName": "U21",
@@ -124,6 +112,12 @@
     "vvName": "U13 B",
     "calendarId": "loa7b5dme4dt7pb96ap9okjevc@group.calendar.google.com",
     "vvId": "291766"
+  },
+  {
+    "teamName": "U13 M",
+    "vvName": "U13 M",
+    "calendarId": "rflnuav00h497d9js365ob340s@group.calendar.google.com",
+    "vvId": "291765"
   },
   {
     "teamName": "U12 A",
@@ -172,6 +166,12 @@
     "vvName": "U9 B",
     "calendarId": "i8ihfq5tou07hdblcq2hgqd2bg@group.calendar.google.com",
     "vvId": "291781"
+  },
+  {
+    "teamName": "U9 M",
+    "vvName": "U9 M",
+    "calendarId": "bcsbq5png28mj6j5t726a2hnrg@group.calendar.google.com",
+    "vvId": "291780"
   },
   {
     "teamName": "U8 A",
