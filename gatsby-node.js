@@ -107,24 +107,42 @@ exports.createPages = async ({ graphql, actions }) => {
     )
 
     calendarConfig = calendarConfig.filter(
-      (config) => config.teamName !== contentfulPloeg.naam
+      (config) => config !== staticTeamConfig
     )
 
-    console.log('creating team page for', contentfulPloeg.naam)
+    console.log(
+      'creating team page for',
+      contentfulPloeg.naam,
+      staticTeamConfig
+    )
 
-    if (!staticTeamConfig?.vvId || !staticTeamConfig?.calendarId) {
+    if (
+      (!staticTeamConfig?.vvId || !staticTeamConfig?.calendarId) &&
+      !contentfulPloeg.naam.includes('Starters')
+    ) {
       teamsWithMissingConfig.push(contentfulPloeg.naam)
     }
-
-    createPage({
-      path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
-      component: require.resolve(`./src/templates/team-page-template.js`),
-      context: {
-        teamId: staticTeamConfig?.vvId,
-        contentfulPloeg,
-        googleCalId: staticTeamConfig?.calendarId,
-      },
-    })
+    if (staticTeamConfig) {
+      createPage({
+        path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
+        component: require.resolve(`./src/templates/team-page-template.js`),
+        context: {
+          teamId: staticTeamConfig?.vvId,
+          contentfulPloeg,
+          googleCalId: staticTeamConfig?.calendarId,
+        },
+      })
+    } else {
+      createPage({
+        path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
+        component: require.resolve(
+          `./src/templates/team-page-no-vv-template.js`
+        ),
+        context: {
+          contentfulPloeg,
+        },
+      })
+    }
   })
 
   if (
