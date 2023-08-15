@@ -15,14 +15,16 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
       </Helmet>
       <Container>
         <Title>{categoryNode.naam}</Title>
-        <SubTitle>Info</SubTitle>
         {categoryNode?.general_info && (
-          <section
-            className={'prose mb-4'}
-            dangerouslySetInnerHTML={{
-              __html: marked(categoryNode?.general_info?.general_info),
-            }}
-          ></section>
+          <>
+            <SubTitle>Info</SubTitle>
+            <section
+              className={'prose mb-4'}
+              dangerouslySetInnerHTML={{
+                __html: marked(categoryNode?.general_info?.general_info),
+              }}
+            ></section>
+          </>
         )}
 
         <CategoryTeamNavigation
