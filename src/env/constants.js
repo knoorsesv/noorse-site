@@ -7,10 +7,10 @@ export const siteMap = {
     { name: 'Home', link: '/' },
     { name: 'Club', subItems: [] },
     { name: 'Senioren', link: '/senioren' },
-    { name: 'Jeugd Jongens', link: '/jeugd' },
+    { name: 'Jeugd Jongens', link: '/jeugd jongens' },
     { name: 'Dames', link: '/dames' },
-    { name: 'Jeugd Meisjes', link: '/meisjes' },
-    { name: 'G-Werking', link: '/g-voetbal' },
+    { name: 'Jeugd Meisjes', link: '/jeugd meisjes' },
+    { name: 'G-Werking', link: '/g-werking' },
     { name: 'Contact', link: '/contact' },
   ],
 }

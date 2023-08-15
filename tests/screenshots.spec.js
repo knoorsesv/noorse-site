@@ -9,7 +9,7 @@ const pages = [
   '/nieuws/Alle Mogelijke Opties',
   '/team/Eerste Elftal',
   '/senioren',
-  '/g-voetbal',
+  '/g-werking',
 ]
 
 const takeFullPage = ['/nieuws/Alle Mogelijke Opties', '/']
