@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const CategoryTeamNavigation = ({ category, header, TeamLink }) => {
-  if (!category.ploeg.length) {
+  if (!category?.ploeg?.length) {
     return <></>
   }
 

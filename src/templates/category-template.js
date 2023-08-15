@@ -34,7 +34,7 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
             </Link>
           )}
         />
-        {categoryNode.news.length ? (
+        {categoryNode?.news?.length ? (
           <Section className={'flex flex-col items-center'}>
             <SubTitle>Nieuws</SubTitle>
             {categoryNode.news && (
