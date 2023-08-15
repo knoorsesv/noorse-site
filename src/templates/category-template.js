@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet'
 
 import { marked } from 'marked'
 const CategoryPage = ({ pageContext: { categoryNode } }) => {
-  console.log(categoryNode)
   return (
     <Layout>
       <Helmet>
