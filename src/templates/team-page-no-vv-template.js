@@ -1,12 +1,9 @@
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { CalendarTable } from '../components/game-table'
 import Layout, { Container } from '../layouts/layout'
 import { CategoryTeamNavigation } from '../components/team-navigation'
-import { ExternalLink } from '../components/text.jsx'
 import { SubTitle, Title } from '../components/titles'
-import { Calendar } from '../components/icons/icons.jsx'
 
 const TeamPage = ({ pageContext: { contentfulPloeg } }) => {
   return (
