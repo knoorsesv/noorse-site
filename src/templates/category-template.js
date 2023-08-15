@@ -34,20 +34,24 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
             </Link>
           )}
         />
-        <Section className={'flex flex-col items-center'}>
-          <SubTitle>Nieuws</SubTitle>
-          {categoryNode.news && (
-            <ul className={'list-inside list-disc'}>
-              {categoryNode.news.map((news) => (
-                <li key={news.title}>
-                  <Link to={`/nieuws/${news.title}`} className={'underline'}>
-                    {news.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </Section>
+        {categoryNode.news.length ? (
+          <Section className={'flex flex-col items-center'}>
+            <SubTitle>Nieuws</SubTitle>
+            {categoryNode.news && (
+              <ul className={'list-inside list-disc'}>
+                {categoryNode.news.map((news) => (
+                  <li key={news.title}>
+                    <Link to={`/nieuws/${news.title}`} className={'underline'}>
+                      {news.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Section>
+        ) : (
+          <></>
+        )}
       </Container>
     </Layout>
   )
