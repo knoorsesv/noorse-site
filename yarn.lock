@@ -1692,10 +1692,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
   integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
-"@fontsource/lato@5.0.8":
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.8.tgz#30362aabe517d80bf3eddc7eb10352be4346423c"
-  integrity sha512-a4XnSIbiISLf0UFflBJ4H4HErH2xvQO99hOm9an7ljBY7cUruaEIMHmqOraPPS8alYikkmMEOOksdulDFyLfFg==
+"@fontsource/lato@5.0.9":
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.9.tgz#0e306d6ddd9acf7fbd92334fac98a4498e7507a8"
+  integrity sha512-VqqZWU5he/4gCBjbexQCL5chelaeYu+ssZ8im4vx4VeDeMS/M6mxPelX2zlCbCdzYczwrVBodr3GVRbqIMpWUg==
 
 "@fontsource/mulish@5.0.8":
   version "5.0.8"
