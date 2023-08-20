@@ -6,6 +6,7 @@ import { CategoryTeamNavigation } from '../components/team-navigation'
 import { Section } from '../components/layout/section.jsx'
 import { Helmet } from 'react-helmet'
 
+import { marked } from 'marked'
 const CategoryPage = ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
@@ -14,6 +15,17 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
       </Helmet>
       <Container>
         <Title>{categoryNode.naam}</Title>
+        {categoryNode?.general_info && (
+          <>
+            <SubTitle>Info</SubTitle>
+            <section
+              className={'prose mb-4'}
+              dangerouslySetInnerHTML={{
+                __html: marked(categoryNode?.general_info?.general_info),
+              }}
+            ></section>
+          </>
+        )}
 
         <CategoryTeamNavigation
           category={categoryNode}
@@ -24,20 +36,24 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
             </Link>
           )}
         />
-        <Section className={'flex flex-col items-center'}>
-          <SubTitle>Nieuws</SubTitle>
-          {categoryNode.news && (
-            <ul className={'list-inside list-disc'}>
-              {categoryNode.news.map((news) => (
-                <li key={news.title}>
-                  <Link to={`/nieuws/${news.title}`} className={'underline'}>
-                    {news.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </Section>
+        {categoryNode?.news?.length ? (
+          <Section className={'flex flex-col items-center'}>
+            <SubTitle>Nieuws</SubTitle>
+            {categoryNode.news && (
+              <ul className={'list-inside list-disc'}>
+                {categoryNode.news.map((news) => (
+                  <li key={news.title}>
+                    <Link to={`/nieuws/${news.title}`} className={'underline'}>
+                      {news.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Section>
+        ) : (
+          <></>
+        )}
       </Container>
     </Layout>
   )

@@ -4,12 +4,12 @@ test.describe('All Info Pages', () => {
   test('There is a bestuur page', async ({ page }) => {
     await page.goto('/info/bestuur')
     const title = page.locator('#content h1')
-    const leden = page.locator('#content article')
+    const leden = page.locator('#content ul li')
     const ben = leden.nth(1)
 
     expect(title).toHaveText('Bestuur')
     expect(await leden.count()).toEqual(4)
-    expect(ben.locator('h3')).toHaveText('Ben De Block')
+    expect(ben).toHaveText('Ben De Block')
     expect(ben).toContainText('Senioren')
     expect(ben).toContainText('Veurzitter-in-spe')
     expect(ben).toContainText('Sponsor Verantwoordelijke')

@@ -1,6 +1,10 @@
 import React from 'react'
 
 export const CategoryTeamNavigation = ({ category, header, TeamLink }) => {
+  if (!category?.ploeg?.length) {
+    return <></>
+  }
+
   return (
     <nav
       aria-labelledby="team-navigation"

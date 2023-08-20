@@ -4,6 +4,7 @@ import React from 'react'
 import { Footer } from '../components/footer'
 import { Navbar } from '../components/navbar.jsx'
 import Seo from '../components/seo'
+import { UpdateBanner } from '../components/update-banner.jsx'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { getLogoUrl } from '../queries/resized-logo'
 import { getSponsors } from '../queries/sponsors'
@@ -46,10 +47,10 @@ const InfoPageLink = ({ item, className }) => {
 
 export default Layout
 
-export const Container = ({ children }) => {
   // todo: needs more top padding?
+export const Container = ({ children, centered = true }) => {
   const containerWrapperClasses = ctl(`
-    flex flex-col items-center
+    flex flex-col ${centered ? 'items-center' : ''}
     pt-6 medium:mx-8 pb-20
     bg-gray-light
     min-h-[75vh] h-auto w-11/12 medium:w-5/6 large:w-3/4
@@ -60,6 +61,9 @@ export const Container = ({ children }) => {
 
   return (
     <div id="content-wrapper" className={containerWrapperClasses}>
+      <div className="px-4 py-2">
+        <UpdateBanner />
+      </div>
       <div className={childrenWrapper}>{children}</div>
     </div>
   )

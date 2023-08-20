@@ -9,9 +9,6 @@ export const getNewsItems = (maxItems) => {
           inhoud {
             inhoud
           }
-          body {
-            raw
-          }
           createdAt(formatString: "DD/MM/YY", locale: "nl-BE")
           publishDate(formatString: "DD/MM/YY", locale: "nl-BE")
           category {

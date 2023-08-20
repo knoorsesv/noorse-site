@@ -1,15 +1,16 @@
 export const webshopLink = 'https://noorsesv.shop4clubs.eu/'
 export const newsletterLink = 'http://eepurl.com/hRibPn'
 
+// todo: these category names could be fetched from contentful
 export const siteMap = {
   items: [
     { name: 'Home', link: '/' },
     { name: 'Club', subItems: [] },
     { name: 'Senioren', link: '/senioren' },
-    { name: 'Jeugd', link: '/jeugd' },
+    { name: 'Jeugd Jongens', link: '/jeugd jongens' },
     { name: 'Dames', link: '/dames' },
-    { name: 'Meisjes', link: '/meisjes' },
-    { name: 'G-Voetbal', link: '/g-voetbal' },
+    { name: 'Jeugd Meisjes', link: '/jeugd meisjes' },
+    { name: 'G-Werking', link: '/g-werking' },
     { name: 'Contact', link: '/contact' },
   ],
 }

@@ -2,5 +2,12 @@
   "extends": ["github>gvdp/renovate-preset"],
   "minor": {
     "automerge": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchSourceUrls": ["https://github.com/storybookjs/storybook"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": false
+    }
+  ]
 }

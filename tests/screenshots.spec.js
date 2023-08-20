@@ -7,8 +7,9 @@ const pages = [
   '/info/sponsoring',
   '/info/bestuur',
   '/nieuws/Alle Mogelijke Opties',
+  '/team/Eerste Elftal',
   '/senioren',
-  '/team/Noorse 1',
+  '/g-werking',
 ]
 
 const takeFullPage = ['/nieuws/Alle Mogelijke Opties', '/']
