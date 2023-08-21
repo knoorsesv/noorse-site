@@ -46,6 +46,11 @@ const Bestuur = () => {
   const bestuursLeden = data.allContentfulBestuurslid.edges
     .map(({ node }) => node)
     .filter(({ type }) => type === 'bestuursorgaan')
+    .sort((a, b) => {
+      if (a.title === 'Voorzitter') return -1
+      if (b.title === 'Voorzitter') return 1
+      return 0
+    })
   const deelwerkingen = data.allContentfulBestuurslid.edges
     .map(({ node }) => node)
     .filter(({ type }) => type === 'deelwerking')
