@@ -11072,10 +11072,10 @@ markdown-to-jsx@^7.1.8:
   resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-7.1.9.tgz#1ffae0cda07c189163d273bd57a5b8f8f8745586"
   integrity sha512-x4STVIKIJR0mGgZIZ5RyAeQD7FEZd5tS8m/htbcVGlex32J+hlSLj+ExrHCxP6nRKF1EKbcO7i6WhC1GtOpBlA==
 
-marked@7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-7.0.3.tgz#680778f4612ba483d89e851fc70690d867165e42"
-  integrity sha512-ev2uM40p0zQ/GbvqotfKcSWEa59fJwluGZj5dcaUOwDRrB1F3dncdXy8NWUApk4fi8atU3kTBOwjyjZ0ud0dxw==
+marked@7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-7.0.4.tgz#e2558ee2d535b9df6a27c6e282dc603a18388a6d"
+  integrity sha512-t8eP0dXRJMtMvBojtkcsA7n48BkauktUKzfkPSCq85ZMTJ0v76Rke4DYz01omYpPTUh4p/f7HePgRo3ebG8+QQ==
 
 md5-file@^5.0.0:
   version "5.0.0"
