@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Download and cache dependencies'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v3
