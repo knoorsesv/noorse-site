@@ -7,7 +7,7 @@ const pages = [
   '/info/sponsoring',
   '/info/bestuur',
   '/nieuws/Alle Mogelijke Opties',
-  '/team/Eerste Elftal',
+  '/team/senioren/Eerste Elftal',
   '/senioren',
   '/g-werking',
 ]

@@ -122,9 +122,10 @@ exports.createPages = async ({ graphql, actions }) => {
     ) {
       teamsWithMissingConfig.push(contentfulPloeg.naam)
     }
+    const path = `/team/${contentfulPloeg.categorie.naam.toLowerCase()}/${contentfulPloeg.naam.toLowerCase()}`
     if (staticTeamConfig) {
       createPage({
-        path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
+        path,
         component: require.resolve(`./src/templates/team-page-template.js`),
         context: {
           teamId: staticTeamConfig?.vvId,
@@ -134,7 +135,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     } else {
       createPage({
-        path: `/team/${contentfulPloeg.naam.toLowerCase()}`,
+        path,
         component: require.resolve(
           `./src/templates/team-page-no-vv-template.js`
         ),
