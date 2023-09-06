@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout, { Container } from '../../layouts/layout'
-import { Title } from '../../components/titles'
+import { Title } from '../../components/titles.jsx'
 import { Helmet } from 'react-helmet'
 import { NewsList } from '../../components/newsList'
 import { GatsbyImage } from 'gatsby-plugin-image'

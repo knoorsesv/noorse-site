@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout, { Container } from '../layouts/layout'
-import { SubTitle, Title } from '../components/titles'
+import { SubTitle, Title } from '../components/titles.jsx'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import { format, parseISO } from 'date-fns'

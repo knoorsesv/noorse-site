@@ -4,7 +4,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Attachments } from '../components/attachments.jsx'
 import { createSnippetFromInhoud } from '../components/snippet'
-import { Title } from '../components/titles'
+import { Title } from '../components/titles.jsx'
 import { imageFileTypes } from '../env/constants'
 import Layout, { Container } from '../layouts/layout'
 const NewsTemplate = ({ pageContext: { newsNode } }) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout, { Container } from '../layouts/layout'
 import { Link } from 'gatsby'
-import { SubTitle, Title } from '../components/titles'
+import { SubTitle, Title } from '../components/titles.jsx'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import { Section } from '../components/layout/section.jsx'
 import { Helmet } from 'react-helmet'
