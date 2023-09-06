@@ -2,8 +2,8 @@ import ctl from '@netlify/classnames-template-literals'
 import React from 'react'
 import { ContactInfo } from './contact-info.jsx'
 import { EmailLink, ExternalLink } from './text.jsx'
-import { Title } from './titles'
-import { Version } from './version'
+import { Title } from './titles.jsx'
+import { Version } from './version.jsx'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -29,7 +29,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children
 
-export const SponsorList = ({ logoWidth, sponsors }) => {
+const SponsorList = ({ logoWidth, sponsors }) => {
   return (
     <div
       className={
@@ -42,16 +42,7 @@ export const SponsorList = ({ logoWidth, sponsors }) => {
   )
 }
 
-export const Footer = ({ version, Logo, sponsors }) => {
-  return (
-    <footer id="footer">
-      <ContactAndSponsorFooter Logo={Logo} sponsors={sponsors} />
-      <CopyRightFooter version={version} />
-    </footer>
-  )
-}
-
-export const ContactAndSponsorFooter = ({ Logo, sponsors }) => {
+const ContactAndSponsorFooter = ({ Logo, sponsors }) => {
   const wrapperClasses = ctl(`
     flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
@@ -73,7 +64,7 @@ export const ContactAndSponsorFooter = ({ Logo, sponsors }) => {
         {/* todo: this shouldnt be an h1 */}
         <Title>K. Noorse S.V.</Title>
         <div className={`w-1/4 pb-12 large:w-48 large:p-6`}>
-          <Logo />
+          <Logo width="100%" height="100%" />
         </div>
         <div className={sponsorListContainer}>
           <SponsorList sponsors={sponsors} />
@@ -89,7 +80,7 @@ export const ContactAndSponsorFooter = ({ Logo, sponsors }) => {
   )
 }
 
-export const CopyRightFooter = ({ version }) => {
+const CopyRightFooter = ({ version }) => {
   const copyRightWrapper = ctl(`
   flex flex-col justify-start items-center
   bg-green-dark bg-opacity-75
@@ -116,5 +107,14 @@ export const CopyRightFooter = ({ version }) => {
         </ExternalLink>
       </div>
     </div>
+  )
+}
+
+export const Footer = ({ version, Logo, sponsors }) => {
+  return (
+    <footer id="footer">
+      <ContactAndSponsorFooter Logo={Logo} sponsors={sponsors} />
+      <CopyRightFooter version={version} />
+    </footer>
   )
 }

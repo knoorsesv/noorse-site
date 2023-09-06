@@ -8,7 +8,7 @@ import { getSiteMapForInfoPages } from '../queries/pages'
 import { getLogoUrl } from '../queries/resized-logo'
 import { getSponsors } from '../queries/sponsors'
 import { getVersion } from '../queries/version'
-import { Logo } from '../static-images/logo'
+import { Logo } from '../static-images/logo.jsx'
 import { mergeSiteMap } from '../utils/sitemap'
 
 const Layout = ({ children }) => {
