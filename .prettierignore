@@ -18,3 +18,5 @@ tests/Dockerfile
 
 *.gitignore
 *.png
+
+.todos

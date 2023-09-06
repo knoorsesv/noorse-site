@@ -14,8 +14,8 @@ export * as Seo from './seo'
 export * from './snippet' // todo: should be a util
 export * from './team-navigation'
 export * from './text.jsx'
-export * from './titles'
-export * from './version'
+export * from './titles.jsx'
+export * from './version.jsx'
 export * from './video'
 
 export * from './layout/section.jsx'
