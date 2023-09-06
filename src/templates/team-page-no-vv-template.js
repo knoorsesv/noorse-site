@@ -62,7 +62,12 @@ const TeamPage = ({ pageContext: { contentfulPloeg } }) => {
               <CategoryTeamNavigation
                 category={contentfulPloeg.categorie}
                 TeamLink={({ name, ...props }) => (
-                  <Link to={`/team/${name.toLowerCase()}`} {...props}>
+                  <Link
+                    to={`/team/${
+                      contentfulPloeg.categorie.naam.toLowerCase()
+                    }/${name.toLowerCase()}`}
+                    {...props}
+                  >
                     {name}
                   </Link>
                 )}

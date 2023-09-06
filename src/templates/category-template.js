@@ -31,7 +31,10 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
           category={categoryNode}
           header={'Ploegen'}
           TeamLink={({ name, ...props }) => (
-            <Link to={`/team/${name.toLowerCase()}`} {...props}>
+            <Link
+              to={`/team/${categoryNode.naam.toLowerCase()}/${name.toLowerCase()}`}
+              {...props}
+            >
               {name}
             </Link>
           )}

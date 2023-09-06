@@ -28,6 +28,6 @@ test.describe('Category Pages', () => {
     await links.locator('text=Noorse 3').click()
     await page.waitForURL('**/team/**')
 
-    expect(page.url()).toContain('/team/noorse%203')
+    expect(page.url()).toContain('/team/senioren/noorse%203')
   })
 })

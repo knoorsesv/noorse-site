@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test')
 
 test.describe('Category Pages', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/team/noorse 1')
+    await page.goto('/team/senioren/noorse 1')
   })
 
   test('has category page for senioren teams', async ({ page }) => {
@@ -103,8 +103,8 @@ test.describe('Category Pages', () => {
       'Reserven A',
     ])
     await links.locator('text=Noorse 3').click()
-    await page.waitForURL('**/team/noorse%203')
+    await page.waitForURL('**/team/senioren/noorse%203')
 
-    expect(page.url()).toContain('/team/noorse%203')
+    expect(page.url()).toContain('/team/senioren/noorse%203')
   })
 })
