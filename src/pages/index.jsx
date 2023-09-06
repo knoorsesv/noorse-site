@@ -22,7 +22,7 @@ import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSponsors } from '../queries/sponsors'
 import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
-import { Logo } from '../static-images/logo'
+import { Logo } from '../static-images/logo.jsx'
 import { mergeSiteMap } from '../utils/sitemap'
 
 const Home = () => {
