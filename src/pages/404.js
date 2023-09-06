@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../layouts/layout'
 import Seo from '../components/seo'
 import { TextBlock } from '../components/text.jsx'
-import { Title } from '../components/titles'
+import { Title } from '../components/titles.jsx'
 
 const NotFoundPage = () => (
   <Layout>

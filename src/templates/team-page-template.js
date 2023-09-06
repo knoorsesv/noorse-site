@@ -5,7 +5,7 @@ import { CalendarTable } from '../components/game-table'
 import Layout, { Container } from '../layouts/layout'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import { ExternalLink } from '../components/text.jsx'
-import { SubTitle, Title } from '../components/titles'
+import { SubTitle, Title } from '../components/titles.jsx'
 import { Calendar } from '../components/icons/icons.jsx'
 
 export const query = graphql`

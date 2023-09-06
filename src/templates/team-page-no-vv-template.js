@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout, { Container } from '../layouts/layout'
 import { CategoryTeamNavigation } from '../components/team-navigation'
-import { SubTitle, Title } from '../components/titles'
+import { SubTitle, Title } from '../components/titles.jsx'
 
 const TeamPage = ({ pageContext: { contentfulPloeg } }) => {
   return (
@@ -63,9 +63,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg } }) => {
                 category={contentfulPloeg.categorie}
                 TeamLink={({ name, ...props }) => (
                   <Link
-                    to={`/team/${
-                      contentfulPloeg.categorie.naam.toLowerCase()
-                    }/${name.toLowerCase()}`}
+                    to={`/team/${contentfulPloeg.categorie.naam.toLowerCase()}/${name.toLowerCase()}`}
                     {...props}
                   >
                     {name}

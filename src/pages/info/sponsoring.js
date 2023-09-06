@@ -4,7 +4,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Attachments } from '../../components/attachments.jsx'
 import Layout, { Container } from '../../layouts/layout'
-import { Title } from '../../components/titles'
+import { Title } from '../../components/titles.jsx'
 
 const SponsoringPage = () => {
   const data = useStaticQuery(graphql`

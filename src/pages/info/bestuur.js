@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { EmailLink } from '../../components/text.jsx'
-import { SubTitle, Title } from '../../components/titles'
+import { SubTitle, Title } from '../../components/titles.jsx'
 import Layout, { Container } from '../../layouts/layout'
 
 const query = graphql`
