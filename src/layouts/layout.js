@@ -1,7 +1,7 @@
 import ctl from '@netlify/classnames-template-literals'
 import { Link } from 'gatsby'
 import React from 'react'
-import { Footer } from '../components/footer'
+import { Footer } from '../components/footer.jsx'
 import { Navbar } from '../components/navbar.jsx'
 import Seo from '../components/seo'
 import { getSiteMapForInfoPages } from '../queries/pages'
