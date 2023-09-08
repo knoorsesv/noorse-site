@@ -82,10 +82,10 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
       : null
   const noorseIsLastOrNextToLast =
     generalRanking &&
-    (generalRanking.teams[generalRanking.teams.length - 1].name
+    (generalRanking.teams[generalRanking.teams.length - 1]?.name
       .toLowerCase()
       .includes('noorse') ||
-      generalRanking.teams[generalRanking.teams.length - 2].name
+      generalRanking.teams[generalRanking.teams.length - 2]?.name
         .toLowerCase()
         .includes('noorse'))
   return (
@@ -244,9 +244,7 @@ const TeamPage = ({ pageContext: { contentfulPloeg, googleCalId }, data }) => {
           category={contentfulPloeg.categorie}
           TeamLink={({ name, ...props }) => (
             <Link
-              to={`/team/${
-                contentfulPloeg.categorie.naam.toLowerCase()
-              }/${name.toLowerCase()}`}
+              to={`/team/${contentfulPloeg.categorie.naam.toLowerCase()}/${name.toLowerCase()}`}
               {...props}
             >
               {name}
