@@ -1,12 +1,12 @@
-import React from 'react'
-import Layout, { Container } from '../layouts/layout'
 import { Link } from 'gatsby'
-import { SubTitle, Title } from '../components/titles.jsx'
-import { CategoryTeamNavigation } from '../components/team-navigation'
-import { Section } from '../components/layout/section.jsx'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Section } from '../components/layout/section.jsx'
+import { MarkDown } from '../components/markdown.jsx'
+import { CategoryTeamNavigation } from '../components/team-navigation'
+import { SubTitle, Title } from '../components/titles.jsx'
+import Layout, { Container } from '../layouts/layout'
 
-import { marked } from 'marked'
 const CategoryPage = ({ pageContext: { categoryNode } }) => {
   return (
     <Layout>
@@ -18,12 +18,7 @@ const CategoryPage = ({ pageContext: { categoryNode } }) => {
         {categoryNode?.general_info && (
           <>
             <SubTitle>Info</SubTitle>
-            <section
-              className={'prose mb-4'}
-              dangerouslySetInnerHTML={{
-                __html: marked(categoryNode?.general_info?.general_info),
-              }}
-            ></section>
+            <MarkDown>{categoryNode?.general_info?.general_info}</MarkDown>
           </>
         )}
 

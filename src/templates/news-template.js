@@ -1,12 +1,13 @@
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { marked } from 'marked'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Attachments } from '../components/attachments.jsx'
+import { MarkDown } from '../components/markdown.jsx'
 import { createSnippetFromInhoud } from '../components/snippet'
 import { Title } from '../components/titles.jsx'
 import { imageFileTypes } from '../env/constants'
 import Layout, { Container } from '../layouts/layout'
+
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)
   return (
@@ -41,12 +42,7 @@ const NewsTemplate = ({ pageContext: { newsNode } }) => {
           {newsNode.publishDate || newsNode.createdAt}
         </h3>
         {newsNode.inhoud?.inhoud && (
-          <section
-            className={'prose'}
-            dangerouslySetInnerHTML={{
-              __html: marked(newsNode.inhoud?.inhoud),
-            }}
-          ></section>
+          <MarkDown>{newsNode.inhoud?.inhoud}</MarkDown>
         )}
         <section className={newsNode.inhoud?.inhoud ? 'prose ' : ''}>
           <Attachments attachments={newsNode.attachment} />

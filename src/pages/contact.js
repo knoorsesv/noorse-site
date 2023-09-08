@@ -1,8 +1,8 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { MarkDown } from '../components/markdown.jsx'
 import Layout, { Container } from '../layouts/layout'
-import { marked } from 'marked'
-import { graphql, useStaticQuery } from 'gatsby'
 
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,12 +27,7 @@ const ContactPage = () => {
       </Helmet>
       <Container>
         {content ? (
-          <section
-            className={'prose'}
-            dangerouslySetInnerHTML={{
-              __html: marked(content.body.body),
-            }}
-          ></section>
+          <MarkDown>{content.body.body}</MarkDown>
         ) : (
           <section>Contact</section>
         )}
