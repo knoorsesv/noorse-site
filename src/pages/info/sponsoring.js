@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import { marked } from 'marked'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Attachments } from '../../components/attachments.jsx'
-import Layout, { Container } from '../../layouts/layout'
+import { MarkDown } from '../../components/markdown.jsx'
 import { Title } from '../../components/titles.jsx'
+import Layout, { Container } from '../../layouts/layout'
 
 const SponsoringPage = () => {
   const data = useStaticQuery(graphql`
@@ -37,12 +37,7 @@ const SponsoringPage = () => {
       </Helmet>
       <Container>
         <Title>{content.title}</Title>
-        <section
-          className={'prose'}
-          dangerouslySetInnerHTML={{
-            __html: marked(content.body.body),
-          }}
-        ></section>
+        <MarkDown>{content.body.body}</MarkDown>
         <section className={'prose'}>
           <Attachments attachments={content.attachment} />
         </section>

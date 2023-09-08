@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import { marked } from 'marked'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { MarkDown } from '../../components/markdown.jsx'
 import Layout, { Container } from '../../layouts/layout'
 
 const VerzekeringPage = () => {
@@ -31,12 +31,7 @@ const VerzekeringPage = () => {
         <title>{content?.title}</title>
       </Helmet>
       <Container>
-        <section
-          className={'prose'}
-          dangerouslySetInnerHTML={{
-            __html: marked(content?.body.body),
-          }}
-        ></section>
+        <MarkDown>{content?.body.body}</MarkDown>
       </Container>
     </Layout>
   )
