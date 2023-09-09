@@ -42,8 +42,8 @@
     "*": "prettier --write"
   },
   "dependencies": {
-    "@babel/preset-env": "7.22.14",
-    "@babel/preset-react": "7.22.5",
+    "@babel/preset-env": "7.22.15",
+    "@babel/preset-react": "7.22.15",
     "@fontsource/lato": "5.0.11",
     "@fontsource/mulish": "5.0.8",
     "@netlify/classnames-template-literals": "1.0.3",
