@@ -11,8 +11,8 @@ import {
   NewsList,
   ResponsiveVideo,
   Section,
+  Seo,
 } from '../components'
-import Seo from '../components/seo' // todo: also import this from barrel file
 import { newsletterLink, webshopLink } from '../env/constants'
 import { getConstrainedLogoData } from '../queries/constrained-logo'
 import { getCoverImageData } from '../queries/cover-image'

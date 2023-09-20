@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import favicon from '../images/Logo_highres.png'
 
-function Seo({ title, children }) {
+export const Seo = ({ title, children }) => {
   const metaDescription =
     'Al het laatste nieuws over voetbalvereniging Noorse uit Kapellen.'
   // eslint-disable-next-line no-undef
@@ -36,5 +36,3 @@ function Seo({ title, children }) {
     </Helmet>
   )
 }
-
-export default Seo
