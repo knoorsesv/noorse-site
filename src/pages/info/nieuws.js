@@ -1,12 +1,12 @@
-import React from 'react'
-import Layout, { Container } from '../../layouts/layout'
-import { Title } from '../../components/titles.jsx'
-import { Helmet } from 'react-helmet'
-import { NewsList } from '../../components/news-list.jsx'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import { getNewsItems } from '../../queries/news'
-import { getConstrainedLogoData } from '../../queries/constrained-logo'
 import { navigate } from 'gatsby-link'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { NewsList, Title } from '../../components'
+import { Container } from '../../components/layout'
+import Layout from '../../layouts/layout'
+import { getConstrainedLogoData } from '../../queries/constrained-logo'
+import { getNewsItems } from '../../queries/news'
 
 const NewsCardImage = ({ image }) => {
   const fallBackLogo = getConstrainedLogoData()

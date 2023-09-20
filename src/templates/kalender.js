@@ -1,11 +1,12 @@
-import React from 'react'
-import Layout, { Container } from '../layouts/layout'
-import { SubTitle, Title } from '../components/titles.jsx'
-import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
 import { format, parseISO } from 'date-fns'
-import { sanitizeTeamName } from '../utils/formatting'
 import { nlBE } from 'date-fns/locale'
+import { graphql } from 'gatsby'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { SubTitle, Title } from '../components'
+import { Container } from '../components/layout'
+import Layout from '../layouts/layout'
+import { sanitizeTeamName } from '../utils/formatting'
 
 export const query = graphql`
   query ($clubId: ID!, $startDate: String!, $endDate: String!) {

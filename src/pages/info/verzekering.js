@@ -1,8 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import { MarkDown } from '../../components/markdown.jsx'
-import Layout, { Container } from '../../layouts/layout'
+import { MarkDownPage } from '../../components/layout'
+import Layout from '../../layouts/layout'
 
 const VerzekeringPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,14 +25,7 @@ const VerzekeringPage = () => {
   }
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{content?.title}</title>
-      </Helmet>
-      <Container>
-        <MarkDown>{content?.body.body}</MarkDown>
-      </Container>
-    </Layout>
+    <MarkDownPage title={content?.title}>{content?.body.body}</MarkDownPage>
   )
 }
 

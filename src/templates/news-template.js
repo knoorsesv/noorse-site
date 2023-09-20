@@ -1,12 +1,10 @@
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Attachments } from '../components/attachments.jsx'
-import { MarkDown } from '../components/markdown.jsx'
-import { createSnippetFromInhoud } from '../utils/snippet.js'
-import { Title } from '../components/titles.jsx'
+import { Attachments, Container, MarkDown, Title } from '../components'
 import { imageFileTypes } from '../env/constants'
-import Layout, { Container } from '../layouts/layout'
+import Layout from '../layouts/layout'
+import { createSnippetFromInhoud } from '../utils/snippet.js'
 
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
   const images = getImageAttachments(newsNode.attachment)

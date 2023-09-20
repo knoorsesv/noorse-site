@@ -2,7 +2,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { MarkDown } from '../components/markdown.jsx'
-import Layout, { Container } from '../layouts/layout'
+import Layout from '../layouts/layout'
+import { Container } from '../components/layout'
 
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
