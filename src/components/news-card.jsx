@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
-import { createSnippetFromInhoud } from './snippet.js'
+import { createSnippetFromInhoud } from '../utils/snippet.js'
 
 // todo: this input should not be called node, props shoule be mapped before coming in here
 export const NewsCard = ({ newsNode, NewsCardImage }) => {
