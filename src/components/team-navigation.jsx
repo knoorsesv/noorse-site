@@ -1,5 +1,6 @@
 import React from 'react'
 
+// todo: dees is echt lelijk
 export const CategoryTeamNavigation = ({ category, header, TeamLink }) => {
   if (!category?.ploeg?.length) {
     return <></>
