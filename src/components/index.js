@@ -11,7 +11,6 @@ export * from './navbar.jsx'
 export * from './news-card.jsx'
 export * from './news-list.jsx'
 export * as Seo from './seo'
-export * from './snippet' // todo: should be a util
 export * from './team-navigation'
 export * from './text.jsx'
 export * from './titles.jsx'
