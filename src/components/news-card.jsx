@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
-import { createSnippetFromInhoud } from './snippet'
+import { createSnippetFromInhoud } from './snippet.js'
 
+// todo: this input should not be called node, props shoule be mapped before coming in here
 export const NewsCard = ({ newsNode, NewsCardImage }) => {
   const snippet =
     newsNode.blurb || createSnippetFromInhoud(newsNode.inhoud?.inhoud)
@@ -16,6 +17,7 @@ export const NewsCard = ({ newsNode, NewsCardImage }) => {
         <SubHeader>
           <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
           <div className={'text-center'}>
+            {/* todo: correct formatting should happen in here */}
             {newsNode.publishDate || newsNode.createdAt}
           </div>
         </SubHeader>
