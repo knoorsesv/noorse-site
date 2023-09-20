@@ -33,7 +33,7 @@ type Series {
 
 type MatchDetail {
   id: String
-  startDate: String
+  startTime: String
   title: String
   homeTeam: Team
   awayTeam: Team

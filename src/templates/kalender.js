@@ -15,10 +15,10 @@ export const query = graphql`
         language: nl
         startDate: $startDate
         endDate: $endDate
-        hasLocation: false
+        hasLocation: true
       ) {
         id
-        startDate
+        startTime
         title
         homeTeam {
           name
@@ -51,7 +51,7 @@ const KalenderPage = ({ data }) => {
   const games = data.vv.clubMatchesAssignations || []
   function dateDiffersFromPreviousGame(index, game) {
     return (
-      index === 0 || date(game.startDate) !== date(games[index - 1].startDate)
+      index === 0 || date(game.startTime) !== date(games[index - 1].startTime)
     )
   }
 
@@ -75,7 +75,7 @@ const KalenderPage = ({ data }) => {
                   {dateDiffersFromPreviousGame(index, game) ? (
                     <li className={''} key={`date-${game.id}`}>
                       <span className={'border-none font-bold underline'}>
-                        {day(game.startDate)} {date(game.startDate)}
+                        {day(game.startTime)} {date(game.startTime)}
                       </span>
                     </li>
                   ) : (
@@ -89,7 +89,7 @@ const KalenderPage = ({ data }) => {
                     }
                   >
                     <div className={'medium:my-1 large:w-1/12'}>
-                      {hour(game.startDate)}
+                      {hour(game.startTime)}
                     </div>
                     <div
                       className={
