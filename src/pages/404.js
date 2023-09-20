@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../layouts/layout'
-import Seo from '../components/seo'
+import { Seo } from '../components'
 import { TextBlock } from '../components/text.jsx'
 import { Title } from '../components/titles.jsx'
 
