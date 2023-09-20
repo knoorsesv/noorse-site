@@ -8,7 +8,8 @@ const resolvers = {
       [...new Array(20)].map((obj, i) => ({
         id: i,
         title: 'Competitie',
-        startDate: `2020-08-${i + 10}T16:00`,
+        // startDate: `2020-08-${i + 10}T16:00`,
+        startTime: `2020-08-${i + 10}T16:00`,
         homeTeam: { name: i % 2 === 1 ? 'Noorse' : 'Tegenstander' },
         awayTeam: { name: i % 2 === 0 ? 'Noorse' : 'Tegenstander' },
         outcome: {
@@ -43,7 +44,8 @@ const resolvers = {
     clubMatchesAssignations: () =>
       [...new Array(10)].map((obj, i) => ({
         id: i + 1,
-        startDate: `2020-08-${10 + Math.round(i / 2)}T16:00`,
+        // startDate: `2020-08-${10 + Math.round(i / 2)}T16:00`,
+        startTime: `2020-08-${10 + Math.round(i / 2)}T16:00`,
         title: `Noorse U${i + 8} Jeugd Reeks`,
         homeTeam: { name: 'Noorse Jeugd' },
         awayTeam: { name: 'Andere prutsers fc' },

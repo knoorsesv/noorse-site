@@ -13,7 +13,7 @@ export const query = graphql`
     vv {
       teamCalendar(teamId: $teamId, language: nl) {
         id
-        startDate
+        startTime
         homeTeam {
           name
         }

@@ -34,7 +34,7 @@ export function CalendarTable({ calendar }) {
           .filter(notCancelled)
           .sort(gameSort)
           .map((game) => {
-            const parsedDate = parseISO(game.startDate)
+            const parsedDate = parseISO(game.startTime)
             game.formattedDate = format(parsedDate, 'dd/MM')
             game.time = format(parsedDate, 'HH:mm')
             return (

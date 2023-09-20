@@ -20,3 +20,5 @@ tests/Dockerfile
 *.png
 
 .todos
+
+*.sdl
