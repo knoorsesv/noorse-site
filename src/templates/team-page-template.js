@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { CalendarTable } from '../components/game-table'
+import { CalendarTable } from '../components/game-table.jsx'
 import Layout, { Container } from '../layouts/layout'
 import { CategoryTeamNavigation } from '../components/team-navigation'
 import { ExternalLink } from '../components/text.jsx'
