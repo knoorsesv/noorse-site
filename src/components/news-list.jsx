@@ -1,5 +1,5 @@
 import React from 'react'
-import { NewsCard } from './news-card'
+import { NewsCard } from './news-card.jsx'
 
 export const NewsList = ({ children, NewsCardImage, shownNewsItems }) => {
   return (
