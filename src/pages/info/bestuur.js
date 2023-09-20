@@ -3,7 +3,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { EmailLink } from '../../components/text.jsx'
 import { SubTitle, Title } from '../../components/titles.jsx'
-import Layout, { Container } from '../../layouts/layout'
+import Layout from '../../layouts/layout'
+import { Container } from '../../components/layout'
 
 const query = graphql`
   query {

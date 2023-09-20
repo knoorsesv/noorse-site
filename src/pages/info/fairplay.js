@@ -1,9 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import { MarkDown } from '../../components/markdown.jsx'
-import { Title } from '../../components/titles.jsx'
-import Layout, { Container } from '../../layouts/layout'
+import { MarkDownPage } from '../../components/layout'
+import Layout from '../../layouts/layout'
 
 const FairplayPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,15 +25,7 @@ const FairplayPage = () => {
   }
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{content?.title}</title>
-      </Helmet>
-      <Container>
-        <Title>{content?.title}</Title>
-        <MarkDown>{content?.body.body}</MarkDown>
-      </Container>
-    </Layout>
+    <MarkDownPage title={content?.title}>{content?.body.body}</MarkDownPage>
   )
 }
 

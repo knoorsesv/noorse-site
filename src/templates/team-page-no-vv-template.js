@@ -1,9 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Layout, { Container } from '../layouts/layout'
-import { CategoryTeamNavigation } from '../components/team-navigation'
-import { SubTitle, Title } from '../components/titles.jsx'
+import { CategoryTeamNavigation, SubTitle, Title } from '../components'
+import { Container } from '../components/layout'
+import Layout from '../layouts/layout'
 
 const TeamPage = ({ pageContext: { contentfulPloeg } }) => {
   return (

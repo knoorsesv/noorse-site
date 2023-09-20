@@ -1,12 +1,16 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { CalendarTable } from '../components/game-table.jsx'
-import Layout, { Container } from '../layouts/layout'
-import { CategoryTeamNavigation } from '../components/team-navigation'
-import { ExternalLink } from '../components/text.jsx'
-import { SubTitle, Title } from '../components/titles.jsx'
+import {
+  CalendarTable,
+  CategoryTeamNavigation,
+  ExternalLink,
+  SubTitle,
+  Title,
+} from '../components'
 import { Calendar } from '../components/icons/icons.jsx'
+import { Container } from '../components/layout'
+import Layout from '../layouts/layout'
 
 export const query = graphql`
   query ($teamId: ID!) {

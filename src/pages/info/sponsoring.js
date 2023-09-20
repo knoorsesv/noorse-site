@@ -1,10 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Attachments } from '../../components/attachments.jsx'
-import { MarkDown } from '../../components/markdown.jsx'
-import { Title } from '../../components/titles.jsx'
-import Layout, { Container } from '../../layouts/layout'
+import { Attachments, MarkDown, Title } from '../../components'
+import { Container } from '../../components/layout'
+import Layout from '../../layouts/layout'
 
 const SponsoringPage = () => {
   const data = useStaticQuery(graphql`

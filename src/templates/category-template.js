@@ -1,11 +1,14 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Section } from '../components/layout/section.jsx'
-import { MarkDown } from '../components/markdown.jsx'
-import { CategoryTeamNavigation } from '../components/team-navigation'
-import { SubTitle, Title } from '../components/titles.jsx'
-import Layout, { Container } from '../layouts/layout'
+import {
+  CategoryTeamNavigation,
+  MarkDown,
+  SubTitle,
+  Title,
+} from '../components'
+import { Container, Section } from '../components/layout'
+import Layout from '../layouts/layout'
 
 const CategoryPage = ({ pageContext: { categoryNode } }) => {
   return (
