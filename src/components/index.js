@@ -1,5 +1,6 @@
 export * from './attachments.jsx'
 export * from './attachments.jsx'
+export * from './bestuur-list.jsx'
 export * from './cards.jsx'
 export * from './contact-info.jsx'
 export * from './document-link.jsx'

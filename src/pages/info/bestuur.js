@@ -1,10 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { EmailLink } from '../../components/text.jsx'
-import { SubTitle, Title } from '../../components/titles.jsx'
-import Layout from '../../layouts/layout'
+import { BestuurList, SubTitle, Title } from '../../components'
 import { Container } from '../../components/layout'
+import Layout from '../../layouts/layout'
 
 const query = graphql`
   query {
@@ -20,26 +19,6 @@ const query = graphql`
     }
   }
 `
-
-const BestuurList = ({ leden }) => {
-  return (
-    <ul className="list-none flex flex-col gap-8 my-10">
-      {leden.map((lid) => {
-        return (
-          <li key={lid.title}>
-            <div className="text-lg">
-              <div className="font-semibold underline mb-2">{lid.title}</div>
-              <span className="ml-4">{lid.naam && `${lid.naam}`}</span>
-            </div>
-            <span className="ml-4">
-              <EmailLink address={lid.email}></EmailLink>
-            </span>
-          </li>
-        )
-      })}
-    </ul>
-  )
-}
 
 const Bestuur = () => {
   const data = useStaticQuery(query)
@@ -63,7 +42,6 @@ const Bestuur = () => {
       </Helmet>
       <Container centered={false}>
         <Title>Bestuur</Title>
-
         <SubTitle>Organigram</SubTitle>
         <img
           className="max-w-screen-md medium:w-[800px] medium:max-w-full  m-8"
