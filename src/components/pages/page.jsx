@@ -1,12 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Layout from '../../layouts/layout'
-import { Container } from '../layout'
 import { Title } from '../index'
+import { Container } from '../layout'
 
 export const Page = ({ title, children, centered = true }) => {
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>{title}</title>
       </Helmet>
@@ -14,6 +13,6 @@ export const Page = ({ title, children, centered = true }) => {
         <Title>{title}</Title>
         {children}
       </Container>
-    </Layout>
+    </>
   )
 }

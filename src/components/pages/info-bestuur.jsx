@@ -16,7 +16,7 @@ export const InfoBestuurPage = ({ leden }) => {
     .filter(({ type }) => type === 'deelwerking')
 
   return (
-    <Page title="Bestuur" centered={true}>
+    <Page title="Bestuur" centered={false}>
       <SubTitle>Organigram</SubTitle>
       <img
         className="max-w-screen-md medium:w-[800px] medium:max-w-full  m-8"

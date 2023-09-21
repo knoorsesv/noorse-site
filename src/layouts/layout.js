@@ -1,45 +1,24 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { Footer } from '../components/footer.jsx'
-import { Navbar } from '../components/navbar.jsx'
-import { Seo } from '../components'
-import { getSiteMapForInfoPages } from '../queries/pages'
-import { getLogoUrl } from '../queries/resized-logo'
-import { getSponsors } from '../queries/sponsors'
-import { getVersion } from '../queries/version'
+import { getSiteMapForInfoPages } from '../queries/pages.js'
+import { getLogoUrl } from '../queries/resized-logo.js'
+import { getSponsors } from '../queries/sponsors.js'
+import { getVersion } from '../queries/version.js'
 import { Logo } from '../static-images/logo.jsx'
-import { mergeSiteMap } from '../utils/sitemap'
+import { Layout as LayoutPage } from '../components/pages'
 
 const Layout = ({ children }) => {
   return (
-    <div id="page-wrapper" className={'flex flex-col'}>
-      <Seo>
-        <meta property="og:image" content={getLogoUrl()} />
-      </Seo>
-
-      <Navbar
-        siteMap={mergeSiteMap(getSiteMapForInfoPages())}
-        InfoPageLink={InfoPageLink}
-        Logo={Logo}
-      />
-      {/* todo: should this be a main tag? */}
-      <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
-        {children}
-      </div>
-      <Footer version={getVersion()} Logo={Logo} sponsors={getSponsors()} />
-    </div>
-  )
-}
-
-const InfoPageLink = ({ item, className }) => {
-  return (
-    <Link
-      className={className}
-      activeClassName={'border-b-2 border-white'}
-      to={item.link}
+    <LayoutPage
+      Link={Link}
+      Logo={Logo}
+      logoUrl={getLogoUrl()}
+      sitemap={getSiteMapForInfoPages()}
+      sponsors={getSponsors()}
+      version={getVersion()}
     >
-      {item.name}
-    </Link>
+      {children}
+    </LayoutPage>
   )
 }
 

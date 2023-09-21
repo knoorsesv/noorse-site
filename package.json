@@ -78,7 +78,7 @@
     "@storybook/addon-links": "7.3.0",
     "@storybook/jest": "0.2.2",
     "@storybook/react": "7.3.0",
-    "@storybook/react-vite": "7.3.0",
+    "@storybook/react-vite": "7.4.3",
     "@storybook/testing-library": "0.2.0",
     "apollo-server": "3.12.1",
     "autoprefixer": "10.4.15",

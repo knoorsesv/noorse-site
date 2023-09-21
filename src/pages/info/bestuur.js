@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { InfoBestuurPage } from '../../components/pages'
+import Layout from '../../layouts/layout'
 
 const query = graphql`
   query {
@@ -19,7 +20,11 @@ const query = graphql`
 
 const Bestuur = () => {
   const data = useStaticQuery(query)
-  return <InfoBestuurPage leden={data.allContentfulBestuurslid.edges} />
+  return (
+    <Layout>
+      <InfoBestuurPage leden={data.allContentfulBestuurslid.edges} />
+    </Layout>
+  )
 }
 
 export default Bestuur

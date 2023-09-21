@@ -25,7 +25,9 @@ const VerzekeringPage = () => {
   }
 
   return (
-    <MarkDownPage title={content?.title}>{content?.body.body}</MarkDownPage>
+    <Layout>
+      <MarkDownPage title={content?.title}>{content?.body.body}</MarkDownPage>
+    </Layout>
   )
 }
 
