@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../layouts/layout'
+import { CalendarPage } from '../components/pages'
 
 export const query = graphql`
   query ($clubId: ID!, $startDate: String!, $endDate: String!) {
@@ -32,12 +33,12 @@ export const query = graphql`
 `
 // todo: outcome not needed in query?
 
-const KalenderPage = ({ data }) => {
+const KalenderTemplate = ({ data }) => {
   return (
     <Layout>
-      <KalenderPage games={data?.vv?.clubMatchesAssignations || []} />
+      <CalendarPage games={data?.vv?.clubMatchesAssignations || []} />
     </Layout>
   )
 }
 
-export default KalenderPage
+export default KalenderTemplate
