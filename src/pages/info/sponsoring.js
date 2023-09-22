@@ -27,6 +27,10 @@ const SponsoringPage = () => {
 
   const content = data.allContentfulPage.nodes[0]
 
+  if (!content) {
+    return <Layout>Sponsoring</Layout>
+  }
+
   return (
     <Layout>
       <MarkDownPage title={content?.title} attachment={content?.attachment}>
