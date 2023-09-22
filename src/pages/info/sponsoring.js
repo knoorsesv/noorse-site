@@ -1,8 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import { Attachments, MarkDown, Title } from '../../components'
-import { Container } from '../../components/layout'
+import { MarkDownPage } from '../../components/layout'
 import Layout from '../../layouts/layout'
 
 const SponsoringPage = () => {
@@ -31,16 +29,9 @@ const SponsoringPage = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>{content.title}</title>
-      </Helmet>
-      <Container>
-        <Title>{content.title}</Title>
-        <MarkDown>{content.body.body}</MarkDown>
-        <section className={'prose'}>
-          <Attachments attachments={content.attachment} />
-        </section>
-      </Container>
+      <MarkDownPage title={content?.title} attachment={content?.attachment}>
+        {content?.body.body}
+      </MarkDownPage>
     </Layout>
   )
 }
