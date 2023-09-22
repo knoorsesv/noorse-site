@@ -35,7 +35,7 @@ export const query = graphql`
 const KalenderPage = ({ data }) => {
   return (
     <Layout>
-      <KalenderPage games={data.vv.clubMatchesAssignations || []} />
+      <KalenderPage games={data?.vv?.clubMatchesAssignations || []} />
     </Layout>
   )
 }
