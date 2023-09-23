@@ -1,12 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import favicon from '../images/Logo_highres.png'
+import config from '../env/config'
 
 export const Seo = ({ title, children }) => {
   const metaDescription =
     'Al het laatste nieuws over voetbalvereniging Noorse uit Kapellen.'
-  // eslint-disable-next-line no-undef
-  const enableAnalytics = process.env.GATSBY_ENABLE_ANALYTICS === 'true'
+
   return (
     <Helmet titleTemplate={`%s | K. Noorse S.V.`}>
       <html lang="nl" />
@@ -19,7 +19,7 @@ export const Seo = ({ title, children }) => {
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      {enableAnalytics && (
+      {config.enableAnalytics && (
         <script
           defer
           data-domain="noorse.be"

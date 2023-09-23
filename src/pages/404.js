@@ -1,21 +1,12 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
+import { NotFoundPage } from '../components/pages'
 import Layout from '../layouts/layout'
-import { Seo } from '../components'
-import { TextBlock } from '../components/text.jsx'
-import { Title } from '../components/titles.jsx'
 
-const NotFoundPage = () => (
+const NotFoundTemplate = () => (
   <Layout>
-    <Seo title="404: Not found" />
-    <Title>Not found</Title>
-    <TextBlock>
-      De pagina die je zoekt bestaat niet.
-      <p>
-        <Link to={'/'}>Go Home</Link>
-      </p>
-    </TextBlock>
+    <NotFoundPage Link={Link} />
   </Layout>
 )
 
-export default NotFoundPage
+export default NotFoundTemplate
