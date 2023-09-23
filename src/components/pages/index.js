@@ -1,5 +1,6 @@
 export * from './calendar-page.jsx'
 export * from './category-page.jsx'
+export * from './home-page.jsx'
 export * from './info-bestuur.jsx'
 export * from './info-lidmaatschap-page.jsx'
 export * from './layout.jsx'
