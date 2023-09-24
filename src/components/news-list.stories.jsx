@@ -1,5 +1,11 @@
 import React from 'react'
 import { NewsList } from './news-list.jsx'
+import {
+  newsFactory,
+  withOutBlurb,
+  withOutImage,
+  withOutPublishDate,
+} from './data/news-factory.js'
 
 const Template = (args) => (
   <NewsList {...args}>Extra info of ne link ofzo</NewsList>
@@ -10,27 +16,12 @@ export default {
   component: NewsList,
   args: {
     shownNewsItems: [
-      {
-        blurb: 'Some headline content',
-        category: { naam: 'Senioren' },
-        title: 'Nieuws',
-        publishDate: new Date().toDateString(),
-      },
-      {
-        blurb: 'Some headline content',
-        category: { naam: 'Senioren' },
-        title: 'Nieuws',
-        publishDate: new Date().toDateString(),
-      },
-      {
-        blurb: 'Some headline content',
-        category: { naam: 'Senioren' },
-        title: 'Nieuws',
-        publishDate: new Date().toDateString(),
-      },
+      newsFactory({ title: 'Some good news' }),
+      withOutBlurb({ title: 'Some bad news' }),
+      withOutPublishDate(),
     ],
     NewsCardImage: () => (
-      <img src="https://placekitten.com/100/100" alt="Sponsor logo" />
+      <img src="https://placekitten.com/200/100" alt="Sponsor logo" />
     ),
   },
 }

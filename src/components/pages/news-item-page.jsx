@@ -8,7 +8,6 @@ import { Container } from '../layout'
 
 export const NewsItemPage = ({ newsItem, Image }) => {
   const images = getImageAttachments(newsItem.attachment)
-
   return (
     <>
       <Helmet>
