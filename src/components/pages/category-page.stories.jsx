@@ -1,5 +1,7 @@
 import React from 'react'
 import { CategoryPage } from './category-page.jsx'
+import { teamFactory } from '../data/team-factory.js'
+import { newsFactory } from '../data/news-factory.js'
 
 const Template = (args) => <CategoryPage {...args} />
 
@@ -9,7 +11,10 @@ export default {
   args: {
     category: {
       naam: 'Senioren',
-      ploeg: [{ naam: 'Ploeg 1' }, { naam: 'Andere Ploeg' }],
+      ploeg: [
+        teamFactory({ naam: 'Ploeg 1' }),
+        teamFactory({ naam: 'Andere ploeg' }),
+      ],
     },
     Link: ({ to, children }) => <a href={to}>{children}</a>,
   },
@@ -33,6 +38,9 @@ WithInfo.args = {
 WithNews.args = {
   category: {
     naam: 'Met nieuws',
-    news: [{ title: 'Een bericht' }, { title: 'nog Een bericht' }],
+    news: [
+      newsFactory({ title: 'Een bericht' }),
+      newsFactory({ title: 'nog Een bericht' }),
+    ],
   },
 }
