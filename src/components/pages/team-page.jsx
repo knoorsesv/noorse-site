@@ -203,6 +203,7 @@ export const TeamPage = ({
           )}
         </div>
 
+        {/* todo: categorie should be English */}
         <CategoryTeamNavigation
           category={ploeg.categorie}
           TeamLink={({ name, ...props }) => (

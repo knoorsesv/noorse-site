@@ -1,7 +1,7 @@
 import React from 'react'
-import { CategoryPage } from './category-page.jsx'
-import { teamFactory } from '../data/team-factory.js'
+import { categoryFactory } from '../data/category-factory.js'
 import { newsFactory } from '../data/news-factory.js'
+import { CategoryPage } from './category-page.jsx'
 
 const Template = (args) => <CategoryPage {...args} />
 
@@ -9,13 +9,7 @@ export default {
   title: 'Pages/CategoryPage',
   component: CategoryPage,
   args: {
-    category: {
-      naam: 'Senioren',
-      ploeg: [
-        teamFactory({ naam: 'Ploeg 1' }),
-        teamFactory({ naam: 'Andere ploeg' }),
-      ],
-    },
+    category: categoryFactory(),
     Link: ({ to, children }) => <a href={to}>{children}</a>,
   },
 }
