@@ -1,5 +1,7 @@
 import React from 'react'
 import { NewsItemPage } from './news-item-page.jsx'
+import { DummyImage } from '../data/dummy-image.jsx'
+import { newsFactory } from '../data/news-factory.js'
 
 const Template = (args) => <NewsItemPage {...args} />
 
@@ -7,11 +9,8 @@ export default {
   title: 'Pages/NewsItemPage',
   component: NewsItemPage,
   args: {
-    newsItem: {
-      title: 'Good news everyone',
-      // todo: needs more test data
-    },
-    Image: () => <img src="https://placekitten.com/200/300" alt="Some cat" />,
+    newsItem: newsFactory(),
+    Image: DummyImage,
   },
 }
 

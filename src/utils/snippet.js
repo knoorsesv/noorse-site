@@ -12,7 +12,7 @@ export function createSnippetFromInhoud(inhoud) {
     .filter((par) => par.match(/[A-Za-z]/g))
     .map((par) => par.replace(/[*_]/g, ''))
 
-  while (snippet.length < maxChars && i++ < paragraphs.length) {
+  while (snippet.length < maxChars && i++ < paragraphs.length - 1) {
     snippet = `${snippet} ${paragraphs[i].substring(
       0,
       Math.min(paragraphs[i].length, maxChars - snippet.length)

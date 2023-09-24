@@ -1,5 +1,12 @@
 import React from 'react'
 import { NewsPage } from './news-page.jsx'
+import {
+  newsFactory,
+  withOutBlurb,
+  withOutImage,
+  withOutPublishDate,
+} from '../data/news-factory.js'
+import { DummyImage } from '../data/dummy-image.jsx'
 
 const Template = (args) => <NewsPage {...args} />
 
@@ -8,15 +15,13 @@ export default {
   component: NewsPage,
   args: {
     newsItems: [
-      {
-        category: {},
-        image: {},
-        title: 'Good news everyone',
-        // todo: needs more test data
-      },
+      newsFactory({ title: 'Some good news' }),
+      withOutBlurb({ title: 'Some bad news' }),
+      withOutImage({ title: 'Some no image news' }),
+      withOutPublishDate(),
     ],
     fallBackLogo: {},
-    Image: () => <img src="https://placekitten.com/200/300" alt="Some cat" />,
+    Image: DummyImage,
   },
 }
 
