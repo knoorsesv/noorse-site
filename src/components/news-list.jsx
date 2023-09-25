@@ -1,7 +1,7 @@
 import React from 'react'
 import { NewsCard } from './news-card.jsx'
 
-export const NewsList = ({ children, NewsCardImage, shownNewsItems }) => {
+export const NewsList = ({ children, fallBackLogo, shownNewsItems }) => {
   return (
     <section
       className={'flex flex-col flex-wrap justify-between medium:flex-row'}
@@ -11,7 +11,7 @@ export const NewsList = ({ children, NewsCardImage, shownNewsItems }) => {
           key={node.title}
           className={'mb-[10px] medium:basis-1/2 medium:px-2 large:basis-1/3 '}
         >
-          <NewsCard newsNode={node} NewsCardImage={NewsCardImage} />
+          <NewsCard newsNode={node} fallBackLogo={fallBackLogo} />
         </div>
       ))}
       <div

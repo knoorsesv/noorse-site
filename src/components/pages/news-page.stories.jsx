@@ -7,6 +7,7 @@ import {
   withOutPublishDate,
 } from '../data/news-factory.js'
 import { DummyImage } from '../data/dummy-image.jsx'
+import { imageFactory } from '../data/image-factory.js'
 
 const Template = (args) => <NewsPage {...args} />
 
@@ -20,7 +21,7 @@ export default {
       withOutImage({ title: 'Some no image news' }),
       withOutPublishDate(),
     ],
-    fallBackLogo: {},
+    fallBackLogo: imageFactory(), // todo: distinguish this from the dummy kittens so its obviously the fallback
     Image: DummyImage,
   },
 }

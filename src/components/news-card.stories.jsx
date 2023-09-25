@@ -13,9 +13,6 @@ export default {
   component: NewsCard,
   args: {
     newsNode: newsFactory(),
-    NewsCardImage: () => (
-      <img src="https://placekitten.com/200/300" alt="Sponsor logo" />
-    ),
   },
 }
 

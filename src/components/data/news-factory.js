@@ -1,6 +1,8 @@
+import { imageFactory } from './image-factory'
+
 export const newsFactory = (attrs) => ({
   title: 'Good News Everyone',
-  image: { gatsbyImageData: { images: { fallback: { src: '' } } } },
+  image: imageFactory(),
   blurb: 'Some headline content in the form of a blurb',
   category: { naam: 'Senioren' },
   publishDate: new Date('2023-09-01').toDateString(),

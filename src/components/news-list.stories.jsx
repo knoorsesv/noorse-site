@@ -3,7 +3,6 @@ import { NewsList } from './news-list.jsx'
 import {
   newsFactory,
   withOutBlurb,
-  withOutImage,
   withOutPublishDate,
 } from './data/news-factory.js'
 
@@ -20,9 +19,7 @@ export default {
       withOutBlurb({ title: 'Some bad news' }),
       withOutPublishDate(),
     ],
-    NewsCardImage: () => (
-      <img src="https://placekitten.com/200/100" alt="Sponsor logo" />
-    ),
+    // todo: add 1 for fallbacklogo
   },
 }
 
