@@ -36,17 +36,6 @@ export const HomePage = ({
       </Link>
     )
   }
-  const NewsCardImage = ({ image }) => {
-    return (
-      <div className={'h-[200px] text-center'}>
-        <Image
-          image={image?.gatsbyImageData || fallBackLogo.gatsbyImageData}
-          loading={'eager'}
-          alt={'Card Header'} // todo: pass a proper alt text here
-        />
-      </div>
-    )
-  }
 
   const InfoPageLink = ({ item, className }) => {
     return (
@@ -117,7 +106,7 @@ export const HomePage = ({
           </Section>
           <Section>
             <Section.Title>Nieuws</Section.Title>
-            <NewsList NewsCardImage={NewsCardImage} shownNewsItems={newsItems}>
+            <NewsList shownNewsItems={newsItems} fallBackLogo={fallBackLogo}>
               <Link
                 className={'font-bold text-black underline'}
                 to={'info/nieuws'}
