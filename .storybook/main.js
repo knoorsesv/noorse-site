@@ -11,4 +11,5 @@ module.exports = {
     name: '@storybook/react-vite',
     options: {},
   },
+  staticDirs: ['../src/images'],
 }

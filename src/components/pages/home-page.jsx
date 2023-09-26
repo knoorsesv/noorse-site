@@ -11,16 +11,15 @@ import {
   Section,
   Seo,
 } from '../index'
+import { ImageWrapper } from '../../wrappers/image.jsx'
 
 export const HomePage = ({
   Link,
-  Image,
   version,
   Logo,
   sponsors,
   newsItems,
   fallBackLogo,
-  coverImage,
   siteMap,
   sportVlaanderenLogo,
   events,
@@ -49,29 +48,12 @@ export const HomePage = ({
     )
   }
 
-  const CoverImage = ({ children, ...props }) => {
-    return (
-      <Image
-        image={coverImage}
-        id={'background-image'}
-        alt={'Luchtfoto Noorse velden'}
-        loading={'eager'}
-        objectFit="cover"
-        objectPosition="center"
-        {...props}
-      >
-        {children}
-      </Image>
-    )
-  }
-
   return (
     <>
       <Navbar
         pageHasCoverPhoto={true}
         siteMap={siteMap}
         InfoPageLink={InfoPageLink}
-        CoverImage={CoverImage}
       />
 
       <Seo title="Home" />
@@ -131,7 +113,8 @@ export const HomePage = ({
 
           <Section>
             <Card containerClass="flex flex-col items-center">
-              <Image
+              {/* todo: also just make this a static image in the images folder */}
+              <ImageWrapper
                 image={sportVlaanderenLogo}
                 id="sport-vlaanderen-logo"
                 alt={'Sport Vlaanderen Logo'}

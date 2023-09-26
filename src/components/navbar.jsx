@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { ChevronRight, ChevronDown, Close, Menu } from './icons/icons.jsx'
 import { Logo } from './logo.jsx'
 import { ExternalLink } from './text.jsx'
+import { ImageWrapper } from '../wrappers/image.jsx'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
@@ -14,7 +15,6 @@ const NavSection = ({
   children,
   setTopMenuBarShown,
   topMenuBarShown,
-  CoverImage,
 }) => {
   const ref = useRef(null)
 
@@ -39,7 +39,16 @@ const NavSection = ({
   return (
     <header ref={ref} id="nav-container" className={navContainerClasses}>
       {pageHasCoverPhoto ? (
-        <CoverImage className={ctl(`${coverSectionHeight} absolute w-full`)} />
+        <div className={ctl(`${coverSectionHeight} absolute w-full`)}>
+          <ImageWrapper
+            id={'background-image'}
+            alt={'Luchtfoto Noorse velden'}
+            loading={'eager'}
+            objectFit="cover"
+            objectPosition="center"
+            src="../images/noorse_aerial.png"
+          />
+        </div>
       ) : (
         <></>
       )}
@@ -236,7 +245,6 @@ export const Navbar = ({
   pageHasCoverPhoto = false,
   siteMap,
   InfoPageLink,
-  CoverImage,
 }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
@@ -250,7 +258,6 @@ export const Navbar = ({
       topMenuBarShown={topMenuBarShown}
       pageHasCoverPhoto={pageHasCoverPhoto}
       setTopMenuBarShown={setTopMenuBarShown}
-      CoverImage={CoverImage}
     >
       <MenuItemList
         topMenuBarShown={topMenuBarShown}

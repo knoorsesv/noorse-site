@@ -18,17 +18,6 @@ export default {
         {item.name}
       </a>
     ),
-    CoverImage: ({ children, className, ...props }) => (
-      <img
-        // todo: the object-cover should be passed down, not redefined here? Or in actual GatsbyImage CoverImage functio
-        alt="test cover"
-        className={`object-cover ${className}`}
-        {...props}
-        src="https://images.ctfassets.net/5t2yp7qsooos/42LqCeeQUGOgPkOtzLFBN0/16d40f93bebf49d2c7c7393605e1f904/noorse_aerial.png?w=1920&h=1080&q=50&fm=webp"
-      >
-        {children}
-      </img>
-    ),
     Logo: ({ className }) => (
       <img
         alt="test logo"
