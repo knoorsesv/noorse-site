@@ -1,9 +1,7 @@
 import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { newsletterLink, webshopLink } from '../env/constants'
 import { getConstrainedLogoData } from '../queries/constrained-logo'
-import { getCoverImageData } from '../queries/cover-image'
 import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
 import { getSiteMapForInfoPages } from '../queries/pages'
@@ -16,7 +14,6 @@ import { HomePage } from '../components/pages'
 
 const Home = () => {
   const fallBackLogo = getConstrainedLogoData()
-  const coverImage = getCoverImageData()
   const siteMap = mergeSiteMap(getSiteMapForInfoPages())
   const events = getFutureEvents()
   const links = { newsletterLink, webshopLink }
@@ -27,9 +24,7 @@ const Home = () => {
   return (
     <HomePage
       Link={Link}
-      Image={GatsbyImage}
       fallBackLogo={fallBackLogo}
-      coverImage={coverImage}
       siteMap={siteMap}
       events={events}
       links={links}
