@@ -1,6 +1,7 @@
 import React from 'react'
 import { Footer } from './footer.jsx'
 import { Logo } from './logo.jsx'
+import { imageFactory } from './data/image-factory'
 
 const Template = (args) => <Footer {...args} />
 
@@ -14,34 +15,20 @@ export default {
   },
 }
 
+const sponsorFactory = (attrs) => ({
+  naam: 'Sponsor',
+  websiteUrl: 'www.google.be',
+  logo: imageFactory(),
+  ...attrs,
+})
+
 export const Default = Template.bind({})
 export const WithSponsors = Template.bind({})
 
 WithSponsors.args = {
   sponsors: [
-    {
-      naam: 'Sponsor 1',
-      websiteUrl: 'www.google.be',
-      Image: () => (
-        <img src="https://placekitten.com/200/300" alt="Sponsor logo" />
-      ),
-    },
-    {
-      naam: 'Sponsor 2',
-      websiteUrl: 'www.google.be',
-      Image: () => (
-        <img src="https://placekitten.com/200/200" alt="Sponsor logo" />
-      ),
-    },
-    {
-      naam: 'Sponsor 3',
-      websiteUrl: 'www.google.be',
-      Image: () => (
-        <img
-          src="https://dummyimage.com/200x100/87c425/1100ff"
-          alt="Sponsor logo"
-        />
-      ),
-    },
+    sponsorFactory(),
+    sponsorFactory({ naam: 'Sponsor 2' }),
+    sponsorFactory({ naam: 'Sponsor 3' }),
   ],
 }
