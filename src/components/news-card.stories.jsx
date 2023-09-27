@@ -5,6 +5,7 @@ import {
   withOutBlurb,
   withOutPublishDate,
 } from './data/news-factory.js'
+import { imageFactory } from './data/image-factory.js'
 
 const Template = (args) => <NewsCard {...args} />
 
@@ -12,7 +13,8 @@ export default {
   title: 'Component/NewsCard',
   component: NewsCard,
   args: {
-    newsNode: newsFactory(),
+    newsItem: newsFactory(),
+    image: imageFactory().gatsbyImageData,
   },
 }
 

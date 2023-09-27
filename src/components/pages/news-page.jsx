@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet'
 import { NewsList, Title } from '../../components'
 import { Container } from '../../components/layout'
 
-export const NewsPage = ({ newsItems, fallBackLogo }) => {
+export const NewsPage = ({ newsItems, fallbackLogo }) => {
+  console.log('fallbackLogo', fallbackLogo)
   return (
     <>
       <Helmet>
@@ -11,7 +12,7 @@ export const NewsPage = ({ newsItems, fallBackLogo }) => {
       </Helmet>
       <Container>
         <Title>Nieuws</Title>
-        <NewsList fallBackLogo={fallBackLogo} shownNewsItems={newsItems} />
+        <NewsList fallbackLogo={fallbackLogo} shownNewsItems={newsItems} />
       </Container>
     </>
   )

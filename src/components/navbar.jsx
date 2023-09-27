@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { ChevronRight, ChevronDown, Close, Menu } from './icons/icons.jsx'
 import { Logo } from './logo.jsx'
 import { ExternalLink } from './text.jsx'
-import { ImageWrapper } from '../wrappers/image.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
