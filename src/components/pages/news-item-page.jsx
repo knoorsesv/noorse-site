@@ -5,8 +5,9 @@ import { Helmet } from 'react-helmet'
 import { createSnippetFromInhoud } from '../../utils/snippet.js'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from '../layout'
+import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
 
-export const NewsItemPage = ({ newsItem, Image }) => {
+export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
   return (
     <>
@@ -29,7 +30,7 @@ export const NewsItemPage = ({ newsItem, Image }) => {
       <Container>
         <Title>{newsItem.title}</Title>
         {newsItem.showImageOnPage && newsItem.image && (
-          <Image
+          <ImageWrapper
             image={newsItem.image.gatsbyImageData}
             alt={'News'} // todo: make alt tag specific
             style={{ maxHeight: '300px' }}
@@ -47,7 +48,6 @@ export const NewsItemPage = ({ newsItem, Image }) => {
         </section>
         {!!images.length && (
           <Images
-            Image={Image}
             images={images}
             className={
               newsItem.inhoud?.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'
@@ -68,12 +68,12 @@ const getImageAttachments = (attachments) => {
   )
 }
 
-const Images = ({ images, className, Image }) => {
+const Images = ({ images, className }) => {
   const NewsImage = (image) => {
     return (
-      <Image
+      <ImageWrapper
         image={image.gatsbyImageData}
-        imgClassName={'p-2 '}
+        imgClassName={'p-2'}
         className={'aspect-square max-w-[75%] p-2 medium:max-w-[45%] '}
         loading="lazy"
         objectFit={'contain'}
