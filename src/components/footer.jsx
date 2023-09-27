@@ -4,6 +4,7 @@ import { ContactInfo } from './contact-info.jsx'
 import { EmailLink, ExternalLink } from './text.jsx'
 import { Title } from './titles.jsx'
 import { Version } from './version.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -20,7 +21,12 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
           </ExternalLink>
         )}
       >
-        <sponsorNode.Image />
+        <ImageWrapper
+          image={sponsorNode.logo.gatsbyImageData}
+          alt={`Logo ${sponsorNode.naam}`}
+          loading="lazy"
+          objectFit={'scale-down'}
+        />
       </ConditionalWrapper>
     </div>
   )
