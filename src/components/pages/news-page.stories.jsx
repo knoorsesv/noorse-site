@@ -21,7 +21,7 @@ export default {
       withOutImage({ title: 'Some no image news' }),
       withOutPublishDate(),
     ],
-    fallBackLogo: imageFactory(), // todo: distinguish this from the dummy kittens so its obviously the fallback
+    fallbackLogo: imageFactory(), // todo: distinguish this from the dummy kittens so its obviously the fallback
     Image: DummyImage,
   },
 }

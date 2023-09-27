@@ -32,7 +32,8 @@ export const DummyImage = (attrs) => {
   return (
     <img
       src={
-        attrs.src.replace('../images/', '/') ||
+        attrs.src?.replace('../images/', '/') ||
+        attrs.image?.src ||
         `https://placekitten.com/${image.height}/${image.width}`
       }
       alt="Some cat"

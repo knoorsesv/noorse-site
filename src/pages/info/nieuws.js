@@ -11,7 +11,7 @@ const Nieuws = () => {
       <NewsPage
         newsItems={getNewsItems()}
         Image={GatsbyImage}
-        fallBackLogo={getConstrainedLogoData()}
+        fallbackLogo={getConstrainedLogoData()}
       />
     </Layout>
   )

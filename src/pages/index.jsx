@@ -13,7 +13,7 @@ import { mergeSiteMap } from '../utils/sitemap'
 import { HomePage } from '../components/pages'
 
 const Home = () => {
-  const fallBackLogo = getConstrainedLogoData()
+  const fallbackLogo = getConstrainedLogoData()
   const siteMap = mergeSiteMap(getSiteMapForInfoPages())
   const events = getFutureEvents()
   const links = { newsletterLink, webshopLink }
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <HomePage
       Link={Link}
-      fallBackLogo={fallBackLogo}
+      fallbackLogo={fallbackLogo}
       siteMap={siteMap}
       events={events}
       links={links}

@@ -11,7 +11,7 @@ import {
   Section,
   Seo,
 } from '../index'
-import { ImageWrapper } from '../../wrappers/image.jsx'
+import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
 
 export const HomePage = ({
   Link,
@@ -19,7 +19,7 @@ export const HomePage = ({
   Logo,
   sponsors,
   newsItems,
-  fallBackLogo,
+  fallbackLogo,
   siteMap,
   sportVlaanderenLogo,
   events,
@@ -88,7 +88,7 @@ export const HomePage = ({
           </Section>
           <Section>
             <Section.Title>Nieuws</Section.Title>
-            <NewsList shownNewsItems={newsItems} fallBackLogo={fallBackLogo}>
+            <NewsList shownNewsItems={newsItems} fallbackLogo={fallbackLogo}>
               <Link
                 className={'font-bold text-black underline'}
                 to={'info/nieuws'}

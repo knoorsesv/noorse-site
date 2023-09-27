@@ -3,8 +3,10 @@ import { NewsList } from './news-list.jsx'
 import {
   newsFactory,
   withOutBlurb,
+  withOutImage,
   withOutPublishDate,
 } from './data/news-factory.js'
+import { imageFactory } from './data/image-factory.js'
 
 const Template = (args) => (
   <NewsList {...args}>Extra info of ne link ofzo</NewsList>
@@ -18,8 +20,10 @@ export default {
       newsFactory({ title: 'Some good news' }),
       withOutBlurb({ title: 'Some bad news' }),
       withOutPublishDate(),
+      withOutImage({ title: 'Without provided image' }),
     ],
-    // todo: add 1 for fallbacklogo
+    fallbackLogo: imageFactory({ src: 'https://placehold.co/600x400' }),
+    // todo: add 1 for fallbackLogo
   },
 }
 

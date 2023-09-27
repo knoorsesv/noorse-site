@@ -1,35 +1,34 @@
 import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
 import { createSnippetFromInhoud } from '../utils/snippet.js'
-import { ImageWrapper } from '../wrappers/image.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
 
-// todo: this input should not be called node, props shoule be mapped before coming in here
-export const NewsCard = ({ newsNode, fallBackLogo }) => {
+export const NewsCard = ({ newsItem, image }) => {
   const snippet =
-    newsNode.blurb || createSnippetFromInhoud(newsNode.inhoud?.inhoud)
+    newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud?.inhoud)
   const NewsCardImage = ({ image }) => {
     return (
       <div className={'h-[200px] text-center'}>
         <ImageWrapper
-          image={image?.gatsbyImageData || fallBackLogo.gatsbyImageData}
-          alt={'Card Header'}
+          image={image}
+          alt={'Card Header'} // todo: this is not meaningful alt text about what is in the image
         />
       </div>
     )
   }
 
   return (
-    <a href={`/nieuws/${newsNode.title}`}>
+    <a href={`/nieuws/${newsItem.title}`}>
       <Card
-        header={newsNode.title}
-        Image={() => <NewsCardImage image={newsNode.image} />}
+        header={newsItem.title}
+        Image={() => <NewsCardImage image={image} />}
         containerClass={'h-[148px]'}
       >
         <SubHeader>
-          <div className={'text-left uppercase'}>{newsNode.category.naam}</div>
+          <div className={'text-left uppercase'}>{newsItem.category.naam}</div>
           <div className={'text-center'}>
             {/* todo: correct formatting should happen in here */}
-            {newsNode.publishDate || newsNode.createdAt}
+            {newsItem.publishDate || newsItem.createdAt}
           </div>
         </SubHeader>
         <div className={'min-h-64p text-center text-gray-dark'}>{snippet}</div>
