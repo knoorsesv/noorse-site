@@ -8,10 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knoorsesv/noorse-site"
+    "url": "git+https://github.com/knoorsesv/noorse-site.git"
   },
   "license": "MIT",
-  "author": "gvdp",
+  "author": {
+    "name": "gvdp"
+  },
   "scripts": {
     "build": "gatsby build && cp _redirects public/_redirects",
     "build-storybook": "storybook build",
@@ -35,7 +37,8 @@
     "test:local": "yarn --cwd tests test:local",
     "test:update-ci": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:ci-update'",
     "test:update-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:update'",
-    "test:visual-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:visual'"
+    "test:visual-local": "start-server-and-test serve http://localhost:9000 'yarn --cwd tests test:visual'",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "lint-staged": {
     "*.js,*.jsx": "eslint --cache --fix",
@@ -82,6 +85,7 @@
     "@storybook/testing-library": "0.2.1",
     "apollo-server": "3.12.1",
     "autoprefixer": "10.4.15",
+    "chromatic": "^7.2.0",
     "concurrently": "8.2.1",
     "cross-env": "7.0.3",
     "eslint": "8.50.0",
@@ -103,5 +107,8 @@
   "volta": {
     "node": "18.18.0",
     "yarn": "1.22.19"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/knoorsesv/noorse-site#readme",
+  "_id": "website-noorse@1.0.5"
 }

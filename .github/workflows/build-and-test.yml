@@ -207,6 +207,19 @@ jobs:
           name: screenshot-test-test-results
           path: tests/test-results
 
+  chromatic:
+    runs-on: ubuntu-latest
+    name: Visual Storybook Test
+    steps:
+      - uses: actions/checkout@v4
+      - run: yarn install --frozen-lockfile
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
   lighthouse-check:
     needs: build-prod
     runs-on: ubuntu-latest
