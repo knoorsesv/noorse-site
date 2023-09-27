@@ -28,16 +28,18 @@ export const ImageWrapper = (attrs) => {
 }
 
 export const DummyImage = (attrs) => {
-  const { image } = attrs
+  const { image, src, className, imgClassName, ...rest } = attrs
+  // console.log('DummyImage attrs', attrs);
   return (
     <img
       src={
-        attrs.src?.replace('../images/', '/') ||
-        attrs.image?.src ||
+        src?.replace('../images/', '/') ||
+        image?.src ||
         `https://placekitten.com/${image.height}/${image.width}`
       }
       alt="Some cat"
-      className="w-full h-full"
+      className={`not-prose ${imgClassName || 'w-full h-full'} ${className}`}
+      {...rest}
     />
   )
 }
