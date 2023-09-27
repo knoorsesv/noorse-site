@@ -1,4 +1,3 @@
-import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { NewsPage } from '../../components/pages'
 import Layout from '../../layouts/layout'
@@ -10,7 +9,6 @@ const Nieuws = () => {
     <Layout>
       <NewsPage
         newsItems={getNewsItems()}
-        Image={GatsbyImage}
         fallbackLogo={getConstrainedLogoData()}
       />
     </Layout>

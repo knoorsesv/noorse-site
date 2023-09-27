@@ -4,7 +4,6 @@ import { NewsList, Title } from '../../components'
 import { Container } from '../../components/layout'
 
 export const NewsPage = ({ newsItems, fallbackLogo }) => {
-  console.log('fallbackLogo', fallbackLogo)
   return (
     <>
       <Helmet>
