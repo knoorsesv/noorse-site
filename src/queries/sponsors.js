@@ -16,6 +16,6 @@ export const getSponsors = () => {
   `)
   return sponsors.allContentfulSponsor.nodes.map((node) => ({
     ...node,
-    logo: node.logo.gatsbyImageData,
+    logo: node.logo?.gatsbyImageData,
   }))
 }
