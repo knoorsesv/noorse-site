@@ -44,8 +44,8 @@ const NavSection = ({
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
             loading={'eager'}
-            objectFit="cover"
-            objectPosition="center"
+            objectfit="cover"
+            objectposition="center"
             src="../images/noorse_aerial.png"
           />
         </div>

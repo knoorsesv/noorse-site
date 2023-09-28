@@ -19,7 +19,6 @@ export const HomePage = ({
   sponsors,
   newsItems,
   siteMap,
-  sportVlaanderenLogo,
   events,
   links,
 }) => {
@@ -111,12 +110,11 @@ export const HomePage = ({
 
           <Section>
             <Card containerClass="flex flex-col items-center">
-              {/* todo: also just make this a static image in the images folder */}
               <ImageWrapper
-                image={sportVlaanderenLogo}
+                src="../images/sport-vlaanderen.jpg"
                 id="sport-vlaanderen-logo"
                 alt={'Sport Vlaanderen Logo'}
-                objectFit={'contain'}
+                objectfit={'contain'}
                 loading="lazy"
                 className={`h-full max-h-full w-full max-w-full large:max-w-[500px]`}
               />
