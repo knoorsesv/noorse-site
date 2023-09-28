@@ -8,7 +8,6 @@ import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSponsors } from '../queries/sponsors'
 import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
-import { Logo } from '../static-images/logo.jsx'
 import { mergeSiteMap } from '../utils/sitemap'
 import { HomePage } from '../components/pages'
 
@@ -30,7 +29,6 @@ const Home = () => {
       links={links}
       newsItems={newsItems}
       version={version}
-      Logo={Logo}
       sponsors={sponsors}
       sportVlaanderenLogo={sportVlaanderenLogo}
     />
