@@ -23,7 +23,9 @@ export const getNewsItems = (maxItems) => {
     }
   `)
 
-  return maxItems
-    ? newsItems.allContentfulNews.nodes.slice(0, maxItems)
-    : newsItems.allContentfulNews.nodes
+  return (
+    maxItems
+      ? newsItems.allContentfulNews.nodes.slice(0, maxItems)
+      : newsItems.allContentfulNews.nodes
+  ).map((node) => ({ ...node, image: node.image?.gatsbyImageData }))
 }
