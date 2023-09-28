@@ -1,7 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { newsletterLink, webshopLink } from '../env/constants'
-import { getConstrainedLogoData } from '../queries/constrained-logo'
 import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
 import { getSiteMapForInfoPages } from '../queries/pages'
@@ -12,7 +11,6 @@ import { mergeSiteMap } from '../utils/sitemap'
 import { HomePage } from '../components/pages'
 
 const Home = () => {
-  const fallbackLogo = getConstrainedLogoData()
   const siteMap = mergeSiteMap(getSiteMapForInfoPages())
   const events = getFutureEvents()
   const links = { newsletterLink, webshopLink }
@@ -23,7 +21,6 @@ const Home = () => {
   return (
     <HomePage
       Link={Link}
-      fallbackLogo={fallbackLogo}
       siteMap={siteMap}
       events={events}
       links={links}

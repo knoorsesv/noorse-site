@@ -1,13 +1,12 @@
 import React from 'react'
-import { NewsPage } from './news-page.jsx'
+import { DummyImage } from '../data/dummy-image.jsx'
 import {
   newsFactory,
   withOutBlurb,
   withOutImage,
   withOutPublishDate,
 } from '../data/news-factory.js'
-import { DummyImage } from '../data/dummy-image.jsx'
-import { imageFactory } from '../data/image-factory.js'
+import { NewsPage } from './news-page.jsx'
 
 const Template = (args) => <NewsPage {...args} />
 
@@ -21,7 +20,6 @@ export default {
       withOutImage({ title: 'Some no image news' }),
       withOutPublishDate(),
     ],
-    fallbackLogo: imageFactory(), // todo: distinguish this from the dummy kittens so its obviously the fallback
     Image: DummyImage,
   },
 }

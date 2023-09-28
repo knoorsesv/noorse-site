@@ -18,7 +18,6 @@ export const HomePage = ({
   version,
   sponsors,
   newsItems,
-  fallbackLogo,
   siteMap,
   sportVlaanderenLogo,
   events,
@@ -87,7 +86,7 @@ export const HomePage = ({
           </Section>
           <Section>
             <Section.Title>Nieuws</Section.Title>
-            <NewsList shownNewsItems={newsItems} fallbackLogo={fallbackLogo}>
+            <NewsList shownNewsItems={newsItems}>
               <Link
                 className={'font-bold text-black underline'}
                 to={'info/nieuws'}
