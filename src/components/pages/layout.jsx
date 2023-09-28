@@ -4,7 +4,6 @@ import { mergeSiteMap } from '../../utils/sitemap.js'
 
 export const Layout = ({
   children,
-  Logo,
   version,
   sponsors,
   logoUrl,
@@ -28,16 +27,12 @@ export const Layout = ({
       <Seo>
         <meta property="og:image" content={logoUrl} />
       </Seo>
-      <Navbar
-        siteMap={mergeSiteMap(sitemap)}
-        InfoPageLink={InfoPageLink}
-        Logo={Logo}
-      />
+      <Navbar siteMap={mergeSiteMap(sitemap)} InfoPageLink={InfoPageLink} />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}
       </div>
-      <Footer version={version} Logo={Logo} sponsors={sponsors} />
+      <Footer version={version} sponsors={sponsors} />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import { EmailLink, ExternalLink } from './text.jsx'
 import { Title } from './titles.jsx'
 import { Version } from './version.jsx'
 import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
+import { Logo } from './logo.jsx'
 
 const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
   return (
@@ -48,7 +49,7 @@ const SponsorList = ({ logoWidth, sponsors }) => {
   )
 }
 
-const ContactAndSponsorFooter = ({ Logo, sponsors }) => {
+const ContactAndSponsorFooter = ({ sponsors }) => {
   const wrapperClasses = ctl(`
     flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
@@ -116,10 +117,10 @@ const CopyRightFooter = ({ version }) => {
   )
 }
 
-export const Footer = ({ version, Logo, sponsors }) => {
+export const Footer = ({ version, sponsors }) => {
   return (
     <footer id="footer">
-      <ContactAndSponsorFooter Logo={Logo} sponsors={sponsors} />
+      <ContactAndSponsorFooter sponsors={sponsors} />
       <CopyRightFooter version={version} />
     </footer>
   )

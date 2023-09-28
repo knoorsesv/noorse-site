@@ -16,7 +16,6 @@ import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
 export const HomePage = ({
   Link,
   version,
-  Logo,
   sponsors,
   newsItems,
   fallbackLogo,
@@ -126,7 +125,7 @@ export const HomePage = ({
           </Section>
         </Section.List>
       </main>
-      <Footer version={version} Logo={Logo} sponsors={sponsors} />
+      <Footer version={version} sponsors={sponsors} />
     </>
   )
 }
