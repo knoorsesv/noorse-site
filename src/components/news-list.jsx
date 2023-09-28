@@ -1,7 +1,7 @@
 import React from 'react'
 import { NewsCard } from './news-card.jsx'
 
-export const NewsList = ({ children, fallbackLogo, shownNewsItems }) => {
+export const NewsList = ({ children, shownNewsItems }) => {
   return (
     <section
       className={'flex flex-col flex-wrap justify-between medium:flex-row'}
@@ -13,9 +13,7 @@ export const NewsList = ({ children, fallbackLogo, shownNewsItems }) => {
         >
           <NewsCard
             newsItem={newsItem}
-            image={
-              newsItem.image?.gatsbyImageData || fallbackLogo.gatsbyImageData
-            }
+            image={newsItem.image?.gatsbyImageData}
           />
         </div>
       ))}

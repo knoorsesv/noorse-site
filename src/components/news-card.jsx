@@ -2,17 +2,23 @@ import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
 import { createSnippetFromInhoud } from '../utils/snippet.js'
 import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
+import { Logo } from './logo.jsx'
 
 export const NewsCard = ({ newsItem, image }) => {
   const snippet =
     newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud?.inhoud)
+
   const NewsCardImage = ({ image }) => {
     return (
       <div className={'h-[200px] text-center'}>
-        <ImageWrapper
-          image={image}
-          alt={'Card Header'} // todo: this is not meaningful alt text about what is in the image
-        />
+        {image ? (
+          <ImageWrapper
+            image={image}
+            alt={'Card Header'} // todo: this is not meaningful alt text about what is in the image
+          />
+        ) : (
+          <Logo height="100%" width="100%" />
+        )}
       </div>
     )
   }
