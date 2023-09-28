@@ -13,6 +13,7 @@ const query = graphql`
   }
 `
 
+// todo: deprecate this, just use the Cloudinary Logo component
 export const getLogoUrl = () => {
   const { logo } = useStaticQuery(query)
   return logo.childImageSharp.resize.src
