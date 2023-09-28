@@ -26,7 +26,7 @@ const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
           image={sponsorNode.logo.gatsbyImageData}
           alt={`Logo ${sponsorNode.naam}`}
           loading="lazy"
-          objectFit={'scale-down'}
+          objectfit={'scale-down'}
         />
       </ConditionalWrapper>
     </div>

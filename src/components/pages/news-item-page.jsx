@@ -34,7 +34,7 @@ export const NewsItemPage = ({ newsItem }) => {
             image={newsItem.image.gatsbyImageData}
             alt={'News'} // todo: make alt tag specific
             style={{ maxHeight: '300px' }}
-            objectFit={'contain'}
+            objectfit={'contain'}
           />
         )}
         <h3 className={'mb-6 mt-6 capitalize italic'}>
@@ -76,7 +76,7 @@ const Images = ({ images, className }) => {
         imgClassName={'p-2'}
         className={'aspect-square max-w-[75%] p-2 medium:max-w-[45%] '}
         loading="lazy"
-        objectFit={'contain'}
+        objectfit={'contain'}
         key={image.title}
         alt={image.title}
       />
