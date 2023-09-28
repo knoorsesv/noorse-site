@@ -7,24 +7,20 @@ import { Version } from './version.jsx'
 import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
 import { Logo } from './logo.jsx'
 
-const SponsorWithLogo = (sponsorNode, logoWidth = 'w-1/2') => {
+const SponsorWithLogo = (sponsor, logoWidth = 'w-1/2') => {
   return (
-    <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsorNode.naam}>
+    <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsor.naam}>
       <ConditionalWrapper
-        condition={!!sponsorNode.websiteUrl}
+        condition={!!sponsor.websiteUrl}
         wrapper={(children) => (
-          <ExternalLink
-            href={sponsorNode.websiteUrl}
-            styled={false}
-            icon={false}
-          >
+          <ExternalLink href={sponsor.websiteUrl} styled={false} icon={false}>
             {children}
           </ExternalLink>
         )}
       >
         <ImageWrapper
-          image={sponsorNode.logo.gatsbyImageData}
-          alt={`Logo ${sponsorNode.naam}`}
+          image={sponsor.logo}
+          alt={`Logo ${sponsor.naam}`}
           loading="lazy"
           objectfit={'scale-down'}
         />

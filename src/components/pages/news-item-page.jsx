@@ -9,6 +9,7 @@ import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
 
 export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
+  console.log(newsItem.image)
   return (
     <>
       <Helmet>
@@ -23,7 +24,7 @@ export const NewsItemPage = ({ newsItem }) => {
         {newsItem.image && (
           <meta
             property="og:image"
-            content={`${newsItem.image.gatsbyImageData.images.fallback.src}`}
+            content={`${newsItem.image.images.fallback.src}`}
           />
         )}
       </Helmet>
@@ -31,10 +32,10 @@ export const NewsItemPage = ({ newsItem }) => {
         <Title>{newsItem.title}</Title>
         {newsItem.showImageOnPage && newsItem.image && (
           <ImageWrapper
-            image={newsItem.image.gatsbyImageData}
+            image={newsItem.image}
             alt={'News'} // todo: make alt tag specific
             style={{ maxHeight: '300px' }}
-            objectfit={'contain'}
+            objectFit={'contain'}
           />
         )}
         <h3 className={'mb-6 mt-6 capitalize italic'}>
@@ -72,7 +73,7 @@ const Images = ({ images, className }) => {
   const NewsImage = (image) => {
     return (
       <ImageWrapper
-        image={image.gatsbyImageData}
+        image={image}
         imgClassName={'p-2'}
         className={'aspect-square max-w-[75%] p-2 medium:max-w-[45%] '}
         loading="lazy"

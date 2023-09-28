@@ -3,9 +3,10 @@ import { NewsItemPage } from '../components/pages'
 import Layout from '../layouts/layout'
 
 const NewsTemplate = ({ pageContext: { newsNode } }) => {
+  const newsItem = { ...newsNode, image: newsNode.image.gatsbyImageData }
   return (
     <Layout>
-      <NewsItemPage newsItem={newsNode} />
+      <NewsItemPage newsItem={newsItem} />
     </Layout>
   )
 }

@@ -11,10 +11,7 @@ export const NewsList = ({ children, shownNewsItems }) => {
           key={newsItem.title}
           className={'mb-[10px] medium:basis-1/2 medium:px-2 large:basis-1/3 '}
         >
-          <NewsCard
-            newsItem={newsItem}
-            image={newsItem.image?.gatsbyImageData}
-          />
+          <NewsCard newsItem={newsItem} image={newsItem.image} />
         </div>
       ))}
       <div

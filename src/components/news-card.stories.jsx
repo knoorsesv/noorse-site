@@ -15,7 +15,7 @@ export default {
   component: NewsCard,
   args: {
     newsItem: newsFactory(),
-    image: imageFactory().gatsbyImageData,
+    image: imageFactory(),
   },
 }
 
