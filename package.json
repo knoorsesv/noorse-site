@@ -85,7 +85,7 @@
     "@storybook/testing-library": "0.2.1",
     "apollo-server": "3.12.1",
     "autoprefixer": "10.4.15",
-    "chromatic": "^7.2.0",
+    "chromatic": "7.2.0",
     "concurrently": "8.2.1",
     "cross-env": "7.0.3",
     "eslint": "8.50.0",
