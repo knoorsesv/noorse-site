@@ -10,16 +10,27 @@ export const ImageWrapper = (attrs) => {
   // https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#restrictions-on-using-staticimage
   // cant pass in attrs, so lets just hardcode these until we ditch Gatsby
   if (attrs.src && attrs.src === '../images/noorse_aerial.png') {
-    // eslint-disable-next-line jsx-a11y/alt-text
     return (
       <StaticImage
         id={'background-image'}
         alt={'Luchtfoto Noorse velden'}
         loading={'eager'}
-        objectFit="cover"
-        objectPosition="center"
+        objectfit="cover"
+        objectposition="center"
         src="../images/noorse_aerial.png"
         className={`h-full max-h-full w-full max-w-full`}
+      />
+    )
+  }
+  if (attrs.src && attrs.src === '../images/sport-vlaanderen.jpg') {
+    return (
+      <StaticImage
+        src="../images/sport-vlaanderen.jpg"
+        id="sport-vlaanderen-logo"
+        alt={'Sport Vlaanderen Logo'}
+        objectfit={'contain'}
+        loading="lazy"
+        className={`h-full max-h-full w-full max-w-full large:max-w-[500px]`}
       />
     )
   }

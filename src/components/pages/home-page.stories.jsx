@@ -1,6 +1,5 @@
 import React from 'react'
 import { HomePage } from './home-page.jsx'
-import { imageFactory } from '../data/image-factory.js'
 
 const Template = (args) => <HomePage {...args} />
 
@@ -13,7 +12,6 @@ export default {
     sponsors: [],
     newsItems: [],
     siteMap: { items: [] },
-    sportVlaanderenLogo: imageFactory(),
     events: [],
     links: [],
   },

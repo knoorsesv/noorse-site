@@ -5,7 +5,6 @@ import { getFutureEvents } from '../queries/events'
 import { getNewsItems } from '../queries/news'
 import { getSiteMapForInfoPages } from '../queries/pages'
 import { getSponsors } from '../queries/sponsors'
-import { getSportVlaanderenLogo } from '../queries/sport-vlaanderen-logo'
 import { getVersion } from '../queries/version'
 import { mergeSiteMap } from '../utils/sitemap'
 import { HomePage } from '../components/pages'
@@ -17,7 +16,6 @@ const Home = () => {
   const newsItems = getNewsItems(3)
   const version = getVersion()
   const sponsors = getSponsors()
-  const sportVlaanderenLogo = getSportVlaanderenLogo()
   return (
     <HomePage
       Link={Link}
@@ -27,7 +25,6 @@ const Home = () => {
       newsItems={newsItems}
       version={version}
       sponsors={sponsors}
-      sportVlaanderenLogo={sportVlaanderenLogo}
     />
   )
 }
