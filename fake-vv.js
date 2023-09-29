@@ -1,6 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server')
 const fs = require('fs')
-
+// todo: this setup is entirely too cumbersome, so just replacing it with a periodic update-vv-data script , this is deprecated
 const resolvers = {
   Query: {
     clubTeams: () => [{ name: 'Eerste Elftallen', id: 1 }],
