@@ -6,11 +6,7 @@ const Template = (args) => <NotFoundPage {...args} />
 export default {
   title: 'Pages/NotFoundPage',
   component: NotFoundPage,
-  args: {
-    Link: ({ to, children }) => {
-      return <a href={to}>{children}</a>
-    },
-  },
+  args: {},
 }
 
 export const Default = Template.bind({})

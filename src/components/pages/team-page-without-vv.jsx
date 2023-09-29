@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { CategoryTeamNavigation, SubTitle, Title } from '../index'
 import { Container } from '../layout'
 
-export const TeamPageWithoutVV = ({ ploeg, Link }) => {
+export const TeamPageWithoutVV = ({ ploeg }) => {
   return (
     <>
       <Helmet>
@@ -57,17 +57,7 @@ export const TeamPageWithoutVV = ({ ploeg, Link }) => {
                 </>
               )}
 
-              <CategoryTeamNavigation
-                category={ploeg.categorie}
-                TeamLink={({ name, ...props }) => (
-                  <Link
-                    to={`/team/${ploeg.categorie.naam.toLowerCase()}/${name.toLowerCase()}`}
-                    {...props}
-                  >
-                    {name}
-                  </Link>
-                )}
-              />
+              <CategoryTeamNavigation category={ploeg.categorie} />
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import React from 'react'
 import { newsletterLink, webshopLink } from '../env/constants'
 import { getFutureEvents } from '../queries/events'
@@ -18,7 +17,6 @@ const Home = () => {
   const sponsors = getSponsors()
   return (
     <HomePage
-      Link={Link}
       siteMap={siteMap}
       events={events}
       links={links}

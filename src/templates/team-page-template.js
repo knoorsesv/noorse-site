@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import React from 'react'
 import { TeamPage } from '../components/pages'
 import Layout from '../layouts/layout'
@@ -52,7 +52,6 @@ const TeamPageTemplate = ({
         rankings={data?.vv?.teamSeriesAndRankings?.rankings}
         series={data?.vv?.teamSeriesAndRankings?.series}
         teamCalendar={data?.vv?.teamCalendar}
-        Link={Link}
         googleCalId={googleCalId}
       />
     </Layout>

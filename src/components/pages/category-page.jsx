@@ -1,8 +1,9 @@
 import React from 'react'
+import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
+import { CategoryTeamNavigation, MarkDown, Section, SubTitle } from '../index'
 import { Page } from './page.jsx'
-import { SubTitle, MarkDown, CategoryTeamNavigation, Section } from '../index'
 
-export const CategoryPage = ({ category, Link }) => {
+export const CategoryPage = ({ category }) => {
   return (
     <Page title={category.naam}>
       {category?.general_info && (
@@ -12,18 +13,7 @@ export const CategoryPage = ({ category, Link }) => {
         </>
       )}
 
-      <CategoryTeamNavigation
-        category={category}
-        header={'Ploegen'}
-        TeamLink={({ name, ...props }) => (
-          <Link
-            to={`/team/${category.naam.toLowerCase()}/${name.toLowerCase()}`}
-            {...props}
-          >
-            {name}
-          </Link>
-        )}
-      />
+      <CategoryTeamNavigation category={category} header={'Ploegen'} />
       {category?.news?.length ? (
         <Section className={'flex flex-col items-center'}>
           <SubTitle>Nieuws</SubTitle>
@@ -31,9 +21,12 @@ export const CategoryPage = ({ category, Link }) => {
             <ul className={'list-inside list-disc'}>
               {category.news.map((news) => (
                 <li key={news.title}>
-                  <Link to={`/nieuws/${news.title}`} className={'underline'}>
+                  <LinkWrapper
+                    href={`/nieuws/${news.title}`}
+                    className={'underline'}
+                  >
                     {news.title}
-                  </Link>
+                  </LinkWrapper>
                 </li>
               ))}
             </ul>

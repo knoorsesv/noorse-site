@@ -7,7 +7,6 @@ export default {
   title: 'Pages/HomePage',
   component: HomePage,
   args: {
-    Link: () => <a href="/test">TestLink</a>,
     version: '1.0.0',
     sponsors: [],
     newsItems: [],

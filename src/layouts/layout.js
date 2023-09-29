@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import React from 'react'
 import { getSiteMapForInfoPages } from '../queries/pages.js'
 import { getLogoUrl } from '../queries/resized-logo.js'
@@ -9,7 +8,6 @@ import { Layout as LayoutPage } from '../components/pages'
 const Layout = ({ children }) => {
   return (
     <LayoutPage
-      Link={Link}
       logoUrl={getLogoUrl()}
       sitemap={getSiteMapForInfoPages()}
       sponsors={getSponsors()}

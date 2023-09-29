@@ -22,9 +22,6 @@ export default {
       rankingFactory({ name: 'bva' }),
     ],
     teamCalendar: calendar(),
-    Link: ({ to, children }) => {
-      return <a href={to}>{children}</a>
-    },
   },
 }
 
