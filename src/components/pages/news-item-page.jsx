@@ -20,7 +20,7 @@ export const NewsItemPage = ({ newsItem }) => {
             newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud?.inhoud)
           }`}
         />
-        {newsItem.image && (
+        {newsItem.image?.images?.length > 0 && (
           <meta
             property="og:image"
             content={`${newsItem.image?.images?.fallback.src}`}
