@@ -1,24 +1,18 @@
 import React from 'react'
 import { Seo, Footer, Navbar } from '../index.js'
 import { mergeSiteMap } from '../../utils/sitemap.js'
+import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 
-export const Layout = ({
-  children,
-  version,
-  sponsors,
-  logoUrl,
-  sitemap,
-  Link,
-}) => {
+export const Layout = ({ children, version, sponsors, logoUrl, sitemap }) => {
   const InfoPageLink = ({ item, className }) => {
     return (
-      <Link
+      <LinkWrapper
         className={className}
         activeClassName={'border-b-2 border-white'}
         to={item.link}
       >
         {item.name}
-      </Link>
+      </LinkWrapper>
     )
   }
 

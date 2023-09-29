@@ -10,9 +10,6 @@ export default {
   component: TeamPageWithoutVV,
   args: {
     ploeg: teamFactory({ categorie: categoryFactory() }),
-    Link: ({ to, children }) => {
-      return <a href={to}>{children}</a>
-    },
   },
 }
 

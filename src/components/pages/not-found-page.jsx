@@ -1,7 +1,8 @@
 import React from 'react'
 import { Seo, TextBlock, Title } from '../index'
+import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 
-export const NotFoundPage = ({ Link }) => {
+export const NotFoundPage = () => {
   return (
     <>
       <Seo title="404: Not found" />
@@ -9,7 +10,7 @@ export const NotFoundPage = ({ Link }) => {
       <TextBlock>
         De pagina die je zoekt bestaat niet.
         <p>
-          <Link to={'/'}>Go Home</Link>
+          <LinkWrapper href={'/'}>Go Home</LinkWrapper>
         </p>
       </TextBlock>
     </>

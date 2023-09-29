@@ -1,5 +1,5 @@
 import React from 'react'
-import { EmailLink } from './text.jsx'
+import { EmailLink } from './links/email-link.jsx'
 
 export const BestuurList = ({ leden }) => {
   return (
@@ -12,7 +12,7 @@ export const BestuurList = ({ leden }) => {
               <span className="ml-4">{lid.naam && `${lid.naam}`}</span>
             </div>
             <span className="ml-4">
-              <EmailLink address={lid.email}></EmailLink>
+              <EmailLink address={lid.email} />
             </span>
           </li>
         )

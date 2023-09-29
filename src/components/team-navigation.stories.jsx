@@ -11,11 +11,12 @@ export default {
       naam: 'Category',
       ploeg: [{ naam: 'Ploeg 1' }, { naam: 'Ploeg 2' }, { naam: 'Ploeg' }],
     },
-    header: 'Header',
-    TeamLink: ({ name }) => {
-      return <span>link naar team: {name}</span>
-    },
   },
 }
 
 export const Default = Template.bind({})
+export const WithHeader = Template.bind({})
+
+WithHeader.args = {
+  header: 'Custom Header',
+}

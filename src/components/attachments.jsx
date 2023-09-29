@@ -1,12 +1,12 @@
 import React from 'react'
 import { imageFileTypes } from '../env/constants'
-import { DocumentLink } from './document-link.jsx'
+import { DocumentLink } from './links/document-link.jsx'
 
 export const Attachments = ({ attachments }) => {
   const defaultAttachments = getDefaultAttachments(attachments)
 
   return defaultAttachments.length ? (
-    <React.Fragment>
+    <>
       <h3 className={'mt-8'}>
         {defaultAttachments.length > 1 ? 'Bijlagen' : 'Bijlage'}
       </h3>
@@ -15,8 +15,10 @@ export const Attachments = ({ attachments }) => {
           <li key={att.title}>{DocumentLink(att)}</li>
         ))}
       </ul>
-    </React.Fragment>
-  ) : null
+    </>
+  ) : (
+    <></>
+  )
 }
 
 const getDefaultAttachments = (attachments) => {

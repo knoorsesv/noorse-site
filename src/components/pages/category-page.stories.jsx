@@ -10,7 +10,6 @@ export default {
   component: CategoryPage,
   args: {
     category: categoryFactory(),
-    Link: ({ to, children }) => <a href={to}>{children}</a>,
   },
 }
 

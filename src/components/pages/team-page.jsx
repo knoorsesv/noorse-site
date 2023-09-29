@@ -1,21 +1,20 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Calendar } from '../icons/icons.jsx'
 import {
   CalendarTable,
   CategoryTeamNavigation,
-  ExternalLink,
   SubTitle,
   Title,
 } from '../index'
-import { Calendar } from '../icons/icons.jsx'
 import { Container } from '../layout'
+import { ExternalLink } from '../links/external-link.jsx'
 
 export const TeamPage = ({
   ploeg,
   rankings,
   series,
   teamCalendar,
-  Link,
   googleCalId,
 }) => {
   const nonCupRankings = rankings
@@ -203,18 +202,7 @@ export const TeamPage = ({
           )}
         </div>
 
-        {/* todo: categorie should be English */}
-        <CategoryTeamNavigation
-          category={ploeg.categorie}
-          TeamLink={({ name, ...props }) => (
-            <Link
-              to={`/team/${ploeg.categorie.naam.toLowerCase()}/${name.toLowerCase()}`}
-              {...props}
-            >
-              {name}
-            </Link>
-          )}
-        />
+        <CategoryTeamNavigation category={ploeg.categorie} />
       </Container>
     </>
   )

@@ -1,7 +1,8 @@
 import React from 'react'
+import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
 // todo: dees is echt lelijk
-export const CategoryTeamNavigation = ({ category, header, TeamLink }) => {
+export const CategoryTeamNavigation = ({ category, header }) => {
   if (!category?.ploeg?.length) {
     return <></>
   }
@@ -22,11 +23,13 @@ export const CategoryTeamNavigation = ({ category, header, TeamLink }) => {
           category.ploeg
             .sort((ploeg1, ploeg2) => (ploeg1.naam > ploeg2.naam ? '1' : '-1'))
             .map((ploeg) => (
-              <TeamLink
+              <LinkWrapper
                 key={ploeg.naam}
-                name={ploeg.naam}
+                href={`/team/${category.naam.toLowerCase()}/${ploeg.naam.toLowerCase()}`}
                 className={'mx-3 w-[80px] text-gray-dark underline'}
-              />
+              >
+                {ploeg.naam}
+              </LinkWrapper>
             ))}
       </div>
     </nav>

@@ -1,9 +1,10 @@
 import React from 'react'
+import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
+import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 import {
   ArrowRight,
   Card,
   EventList,
-  ExternalLink,
   Footer,
   Navbar,
   NewsList,
@@ -11,10 +12,9 @@ import {
   Section,
   Seo,
 } from '../index'
-import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
+import { ExternalLink } from '../links/external-link.jsx'
 
 export const HomePage = ({
-  Link,
   version,
   sponsors,
   newsItems,
@@ -24,24 +24,24 @@ export const HomePage = ({
 }) => {
   const EventLink = ({ event }) => {
     return (
-      <Link
+      <LinkWrapper
         className={'text-black underline'}
-        to={`/nieuws/${event.aankondiging.title}`}
+        href={`/nieuws/${event.aankondiging.title}`}
       >
         {event.naam}
-      </Link>
+      </LinkWrapper>
     )
   }
 
   const InfoPageLink = ({ item, className }) => {
     return (
-      <Link
+      <LinkWrapper
         className={className}
         activeClassName={'border-b-2 border-white'}
-        to={item.link}
+        href={item.link}
       >
         {item.name}
-      </Link>
+      </LinkWrapper>
     )
   }
 
@@ -86,12 +86,12 @@ export const HomePage = ({
           <Section>
             <Section.Title>Nieuws</Section.Title>
             <NewsList shownNewsItems={newsItems}>
-              <Link
+              <LinkWrapper
                 className={'font-bold text-black underline'}
-                to={'info/nieuws'}
+                href={'info/nieuws'}
               >
                 Meer Nieuws <ArrowRight />
-              </Link>
+              </LinkWrapper>
             </NewsList>
           </Section>
           <Section>

@@ -1,6 +1,5 @@
-import ctl from '@netlify/classnames-template-literals'
 import React from 'react'
-import { Envelope, External } from './icons/icons.jsx'
+import { EmailLink } from './links/email-link.jsx'
 
 export const TextBlock = ({ children }) => {
   // todo: not needed probably if everything is used with tailwind prose classes
@@ -8,50 +7,6 @@ export const TextBlock = ({ children }) => {
     <div className={'mt-2 mb-4 font-light medium:mb-8 medium:px-6'}>
       {children}
     </div>
-  )
-}
-
-export const ExternalLink = ({
-  children,
-  href,
-  icon = true,
-  styled = true,
-  altText = '',
-  textColor = '',
-  className,
-}) => {
-  const linkClasses = ctl(
-    `${styled && 'underline'} ${
-      textColor || 'text-gray-dark'
-    } ${className} inline-flex items-center`
-  )
-
-  // todo: too many properties here, aria-label is only necessary when there is only an icon, should be a separate component
-  // todo: icon is a badly named boolean, should just be a child component
-  return (
-    <a
-      className={linkClasses}
-      href={href}
-      aria-label={`${altText}`}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {children}
-      {icon && <External />}
-    </a>
-  )
-}
-
-export const EmailLink = ({ address }) => {
-  return (
-    <ExternalLink
-      href={`mailto:${address}`}
-      icon={false}
-      textColor={'text-black'}
-    >
-      <Envelope />
-      {address}
-    </ExternalLink>
   )
 }
 

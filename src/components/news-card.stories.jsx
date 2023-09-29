@@ -1,9 +1,9 @@
 import React from 'react'
 import { imageFactory } from './data/image-factory.js'
-import { withOutImage } from './data/news-factory'
 import {
   newsFactory,
   withOutBlurb,
+  withOutImage,
   withOutPublishDate,
 } from './data/news-factory.js'
 import { NewsCard } from './news-card.jsx'
