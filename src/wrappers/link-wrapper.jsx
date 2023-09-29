@@ -9,7 +9,11 @@ export const LinkWrapper = ({
   ...props
 }) => {
   // console.log('import.meta.env?.STORYBOOK', import.meta.env?.STORYBOOK)
-  const isActive = window.location.href.includes(href)
+  let isActive = false
+  // if (typeof window === 'object') {
+  // todo: doesnt work because then the ssr differs fromt the client side
+  //   isActive = window && window.location.href.includes(href)
+  // }
   return (
     <a
       href={href}
