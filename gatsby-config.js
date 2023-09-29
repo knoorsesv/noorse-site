@@ -1,12 +1,8 @@
-const { buildSchema } = require('graphql')
-const fs = require('fs')
-
 require('dotenv').config()
 
 const contentfulEnv =
   process.env.CONTENTFUL_ENV ||
   (process.env.PROD === 'true' ? 'master' : 'staging')
-const fakeVV = process.env.PROD !== 'true' && process.env.REAL_VV !== 'true'
 
 const contentfulPreview = process.env.CONTENTFUL_PREVIEW === 'true'
 const accessToken = contentfulPreview
@@ -22,7 +18,6 @@ console.log('Build settings:', {
   spaceId,
   contentfulEnv,
   contentfulPreview,
-  fakeVV,
 })
 
 module.exports = {
