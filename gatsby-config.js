@@ -75,22 +75,5 @@ module.exports = {
         downloadLocal: true,
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        // This type will contain remote schema Query type
-        typeName: 'VV',
-        // This is the field under which it's accessible
-        fieldName: 'vv',
-        // URL to query from
-        url: fakeVV
-          ? 'http://localhost:4000'
-          : 'https://datalake-prod2018.rbfa.be/graphql',
-        createSchema: async () => {
-          const sdl = fs.readFileSync(`${__dirname}/graphSchema.sdl`).toString()
-          return buildSchema(sdl)
-        },
-      },
-    },
   ],
 }

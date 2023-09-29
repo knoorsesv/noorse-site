@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-const startOfWeek = require('date-fns/startOfWeek')
-const endOfWeek = require('date-fns/endOfWeek')
-const format = require('date-fns/format')
-const add = require('date-fns/add')
 const fs = require('fs')
 
 let calendarConfig = JSON.parse(fs.readFileSync('data/calendar-config.json'))
+let vvData =
+  process.env.PROD === 'true'
+    ? JSON.parse(fs.readFileSync('data/vv-responses.json'))
+    : JSON.parse(fs.readFileSync('data/test-vv-responses.json'))
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -124,12 +124,17 @@ exports.createPages = async ({ graphql, actions }) => {
     }
     const path = `/team/${contentfulPloeg.categorie.naam.toLowerCase()}/${contentfulPloeg.naam.toLowerCase()}`
     if (staticTeamConfig) {
+      const teamCalendar = vvData.teamCalendar[staticTeamConfig?.vvId]
+      const teamSeriesAndRankings =
+        vvData.teamSeriesAndRankings[staticTeamConfig?.vvId]
       createPage({
         path,
         component: require.resolve(`./src/templates/team-page-template.js`),
         context: {
           teamId: staticTeamConfig?.vvId,
           contentfulPloeg,
+          teamCalendar,
+          teamSeriesAndRankings,
           googleCalId: staticTeamConfig?.calendarId,
         },
       })
@@ -162,24 +167,14 @@ exports.createPages = async ({ graphql, actions }) => {
     )
   }
 
-  // moving end of week by a day because vv api sucks and it doesnt include matches on the endDate
-  const endDayOfWeek = format(
-    endOfWeek(add(new Date(), { days: 1 }), { weekStartsOn: 2 }),
-    'yyyy/MM/dd'
-  )
-  const startDayOfWeek = format(
-    startOfWeek(new Date(), { weekStartsOn: 1 }),
-    'yyyy/MM/dd'
-  )
+  const clubMatchesAssignations = vvData.clubMatchesAssignations
 
-  console.log('creating kalender for days ', startDayOfWeek, endDayOfWeek)
+  console.log('creating kalender')
   createPage({
     path: `/info/kalender`,
     component: require.resolve(`./src/templates/kalender.js`),
     context: {
-      clubId: '8179',
-      startDate: process.env.PROD === 'true' ? startDayOfWeek : '2021/08/20',
-      endDate: process.env.PROD === 'true' ? endDayOfWeek : '2021/08/26',
+      clubMatchesAssignations,
     },
   })
 }
