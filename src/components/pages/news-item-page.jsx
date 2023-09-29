@@ -9,7 +9,6 @@ import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
 
 export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
-  console.log(newsItem.image)
   return (
     <>
       <Helmet>
@@ -24,7 +23,7 @@ export const NewsItemPage = ({ newsItem }) => {
         {newsItem.image && (
           <meta
             property="og:image"
-            content={`${newsItem.image.images.fallback.src}`}
+            content={`${newsItem.image?.images?.fallback.src}`}
           />
         )}
       </Helmet>
