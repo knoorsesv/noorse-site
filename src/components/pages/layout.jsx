@@ -1,9 +1,9 @@
 import React from 'react'
-import { Seo, Footer, Navbar } from '../index.js'
 import { mergeSiteMap } from '../../utils/sitemap.js'
 import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
+import { Footer, Navbar } from '../index.js'
 
-export const Layout = ({ children, version, sponsors, logoUrl, sitemap }) => {
+export const Layout = ({ children, version, sponsors, sitemap }) => {
   const InfoPageLink = ({ item, className }) => {
     return (
       <LinkWrapper
@@ -19,9 +19,10 @@ export const Layout = ({ children, version, sponsors, logoUrl, sitemap }) => {
 
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
-      <Seo>
+      {/* todo: reenable some sort of fallback social media image */}
+      {/* <Seo>
         <meta property="og:image" content={logoUrl} />
-      </Seo>
+      </Seo> */}
       <Navbar siteMap={mergeSiteMap(sitemap)} InfoPageLink={InfoPageLink} />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
