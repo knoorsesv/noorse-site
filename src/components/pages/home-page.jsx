@@ -37,7 +37,9 @@ export const HomePage = ({
     return (
       <LinkWrapper
         className={className}
-        activeClassName={'border-b-2 border-white'}
+        // todo: reenable this when we've moved off gatsby
+
+        // activeClassName={'border-b-2 border-white'}
         href={item.link}
       >
         {item.name}

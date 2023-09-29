@@ -8,8 +8,9 @@ export const Layout = ({ children, version, sponsors, logoUrl, sitemap }) => {
     return (
       <LinkWrapper
         className={className}
-        activeClassName={'border-b-2 border-white'}
-        to={item.link}
+        // todo: reenable this when we've moved off gatsby
+        // activeClassName={'border-b-2 border-white'}
+        href={item.link}
       >
         {item.name}
       </LinkWrapper>
