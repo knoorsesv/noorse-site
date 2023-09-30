@@ -10,6 +10,6 @@ const withAnnouncement = (attrs) =>
 
 export const eventList = [
   eventFactory(),
-  withEndDate({ naam: 'Met een einddatum' }),
-  withAnnouncement({ naam: 'Met een aankondiging' }),
+  withEndDate({ naam: 'Met een einddatum', datum: '8 mei 2023' }),
+  withAnnouncement({ naam: 'Met een aankondiging', datum: '9 mei 2023' }),
 ]
