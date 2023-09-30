@@ -19,7 +19,7 @@ test.describe('Category Pages', () => {
     expect(navElement).toBeVisible()
     const links = navElement.locator('a')
     expect(await links.allTextContents()).toEqual([
-      'Noorse 1',
+      'Eerste Elftal',
       'Noorse 3',
       'Noorse 4',
       'Reserven A',

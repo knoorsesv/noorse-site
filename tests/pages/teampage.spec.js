@@ -1,11 +1,11 @@
 const { test, expect } = require('@playwright/test')
 
-test.describe('Category Pages', () => {
+test.describe('Team Pages', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/team/senioren/noorse 1')
+    await page.goto('/team/senioren/eerste%20elftal')
   })
 
-  test('has category page for senioren teams', async ({ page }) => {
+  test('has a team page with all data', async ({ page }) => {
     const title = page.locator('#content h1')
 
     const coachesSection = page.locator('section:has(h2:has-text("Coaches"))')
@@ -32,7 +32,7 @@ test.describe('Category Pages', () => {
     )
     const afgevaardigden = afgevaardigedeSection.locator('span')
 
-    expect(title).toHaveText('Noorse 1')
+    expect(title).toHaveText('Eerste Elftal')
     expect(coachesSection).toBeVisible()
     expect(afgevaardigedeSection).toBeVisible()
     expect(trainingSection).toBeVisible()
@@ -44,23 +44,23 @@ test.describe('Category Pages', () => {
     expect(await afgevaardigden.count()).toEqual(1)
     expect(await trainingen.count()).toEqual(2)
     expect(await reeksen.count()).toEqual(2)
-    expect(await klassementEntries.count()).toEqual(6)
-    expect(await kalenderEntries.count()).toEqual(20)
+    expect(await klassementEntries.count()).toEqual(5)
+    expect(await kalenderEntries.count()).toEqual(37)
 
     expect(await coaches.allTextContents()).toContain('Davy Vercauteren')
     expect(await afgevaardigden.allTextContents()).toContain('Pascal ')
     expect(await trainingen.allTextContents()).toContain(' Dinsdag 20u')
-    expect(await reeksen.allTextContents()).toContain(' 4 PROV. A')
+    expect(await reeksen.allTextContents()).toContain(' 4 Provinciaal Antw C')
 
     expect(await calendarLink.getAttribute('href')).toEqual(
-      'https://calendar.google.com/calendar/u/0/r?cid=so48kkhhj47ijph29un9m4gcrc@group.calendar.google.com'
+      'https://calendar.google.com/calendar/u/0/r?cid=4cklu63vhlfe3353mckt69vmmo@group.calendar.google.com'
     )
     expect(
       await reeksen.evaluateAll((links) =>
         links.map((link) => link.getAttribute('href'))
       )
     ).toContain(
-      'https://www.voetbalvlaanderen.be/competitie/CHP_98714/rangschikking'
+      'https://www.voetbalvlaanderen.be/competitie/CHP_113216/rangschikking'
     )
     const klassementTableContent = await klassementEntries.evaluateAll(
       (klassementRows) => {
@@ -77,15 +77,19 @@ test.describe('Category Pages', () => {
       }
     )
 
-    expect(klassementTableContent).toContainEqual(['1', 'Ploeg 1', '54'])
+    expect(klassementTableContent).toContainEqual(['1', 'K. HEIBOS S.V.', '12'])
     expect(klassementTableContent).toContainEqual(['...'])
-    expect(klassementTableContent).toContainEqual(['10', 'Ploeg 10', '27'])
-    expect(klassementTableContent).toContainEqual(['11', 'Noorse', '24'])
+    expect(klassementTableContent).toContainEqual([
+      '14',
+      'FC BUCOVINA LOENHOUT',
+      '2',
+    ])
+    expect(klassementTableContent).toContainEqual(['15', 'S.V. NOORSE', '1'])
 
     expect(kalenderTableContent).toContainEqual([
-      '10/0816:00',
-      'TegenstanderNoorse',
-      '00',
+      '27/0720:00',
+      'Fc HoogeindeNoorse',
+      '32',
     ])
   })
 
@@ -97,7 +101,7 @@ test.describe('Category Pages', () => {
     expect(navElement).toBeVisible()
     const links = navElement.locator('a')
     expect(await links.allTextContents()).toEqual([
-      'Noorse 1',
+      'Eerste Elftal',
       'Noorse 3',
       'Noorse 4',
       'Reserven A',
