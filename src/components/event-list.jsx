@@ -1,6 +1,18 @@
 import React from 'react'
+import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
-export const EventList = ({ events, EventLink }) => {
+export const EventList = ({ events }) => {
+  const EventLink = ({ event }) => {
+    return (
+      <LinkWrapper
+        className={'text-black underline'}
+        href={`/nieuws/${event.aankondiging.title}`}
+      >
+        {event.naam}
+      </LinkWrapper>
+    )
+  }
+
   return events.length ? (
     <table>
       <tbody>

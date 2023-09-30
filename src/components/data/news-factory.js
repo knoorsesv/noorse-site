@@ -34,3 +34,10 @@ export const withOutBlurb = (attrs) => newsFactory({ blurb: null, ...attrs })
 export const withOutImage = (attrs) => newsFactory({ image: null, ...attrs })
 export const withOutAttachments = (attrs) =>
   newsFactory({ attachment: null, ...attrs })
+
+export const allNewsItems = [
+  newsFactory({ title: 'Some good news' }),
+  withOutBlurb({ title: 'Some bad news' }),
+  withOutPublishDate(),
+  withOutImage({ title: 'Without provided image' }),
+]

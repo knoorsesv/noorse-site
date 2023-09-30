@@ -17,7 +17,6 @@ export const CalendarPage = ({ games }) => {
   const hour = (date) => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
-  // const games = data.vv.clubMatchesAssignations || []
 
   function dateDiffersFromPreviousGame(index, game) {
     return (

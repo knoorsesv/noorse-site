@@ -22,46 +22,16 @@ export const HomePage = ({
   events,
   links,
 }) => {
-  const EventLink = ({ event }) => {
-    return (
-      <LinkWrapper
-        className={'text-black underline'}
-        href={`/nieuws/${event.aankondiging.title}`}
-      >
-        {event.naam}
-      </LinkWrapper>
-    )
-  }
-
-  const InfoPageLink = ({ item, className }) => {
-    return (
-      <LinkWrapper
-        className={className}
-        // todo: reenable this when we've moved off gatsby
-
-        // activeClassName={'border-b-2 border-white'}
-        href={item.link}
-      >
-        {item.name}
-      </LinkWrapper>
-    )
-  }
-
   return (
     <>
-      <Navbar
-        pageHasCoverPhoto={true}
-        siteMap={siteMap}
-        InfoPageLink={InfoPageLink}
-      />
-
+      <Navbar pageHasCoverPhoto={true} siteMap={siteMap} />
       <Seo title="Home" />
       <main className={'flex w-full flex-col items-center medium:px-8'}>
         <Section.List>
           <Section>
             <Section.Title>Evenementen</Section.Title>
             <Card>
-              <EventList events={events} EventLink={EventLink} />
+              <EventList events={events} />
             </Card>
           </Section>
           <Section>

@@ -4,6 +4,7 @@ import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
+import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
@@ -57,12 +58,7 @@ const NavSection = ({
   )
 }
 
-const MenuItemList = ({
-  topMenuBarShown,
-  siteMap,
-  sideBarMenuShown,
-  InfoPageLink,
-}) => {
+const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   const ulClasses = ctl(`
   fixed top-0
   list-none z-50
@@ -88,6 +84,19 @@ const MenuItemList = ({
   pr-4
   ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
   `)
+
+  const InfoPageLink = ({ item, className }) => {
+    return (
+      <LinkWrapper
+        className={className}
+        // todo: reenable this when we've moved off gatsby
+        // activeClassName={'border-b-2 border-white'}
+        href={item.link}
+      >
+        {item.name}
+      </LinkWrapper>
+    )
+  }
 
   return (
     <nav className={navClasses}>
@@ -241,11 +250,7 @@ const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
 }
 
 // todo: just make 2 separate components instead of having a boolean for the cover photo
-export const Navbar = ({
-  pageHasCoverPhoto = false,
-  siteMap,
-  InfoPageLink,
-}) => {
+export const Navbar = ({ pageHasCoverPhoto = false, siteMap }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
 
@@ -263,7 +268,6 @@ export const Navbar = ({
         topMenuBarShown={topMenuBarShown}
         sideBarMenuShown={sideBarMenuShown}
         siteMap={siteMap}
-        InfoPageLink={InfoPageLink}
       />
       <MenuLogo topMenuBarShown={topMenuBarShown} />
       <MenuToggle

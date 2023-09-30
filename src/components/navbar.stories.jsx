@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar } from './navbar.jsx'
+import { siteMapFactory } from './data/sitemap-factory.js'
 
 const Template = (args) => (
   <div className="m-2 h-[200vh] border border-solid border-red-100">
@@ -12,19 +13,7 @@ export default {
   component: Navbar,
   args: {
     pageHasCoverPhoto: false,
-    siteMap: { items: [{ name: 'Home', link: '/' }] },
-    InfoPageLink: ({ item, className }) => (
-      <a className={className} href={item.link}>
-        {item.name}
-      </a>
-    ),
-    Logo: ({ className }) => (
-      <img
-        alt="test logo"
-        className={className}
-        src="https://www.noorse.be/static/4bf10272fbe05968077c354cd02ce7ff/2b921/Logo_highres.webp"
-      />
-    ),
+    siteMap: siteMapFactory(),
   },
 }
 

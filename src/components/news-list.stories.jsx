@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  newsFactory,
-  withOutBlurb,
-  withOutImage,
-  withOutPublishDate,
-} from './data/news-factory.js'
+import { allNewsItems } from './data/news-factory.js'
 import { NewsList } from './news-list.jsx'
 
 const Template = (args) => (
@@ -15,12 +10,7 @@ export default {
   title: 'Component/NewsList',
   component: NewsList,
   args: {
-    shownNewsItems: [
-      newsFactory({ title: 'Some good news' }),
-      withOutBlurb({ title: 'Some bad news' }),
-      withOutPublishDate(),
-      withOutImage({ title: 'Without provided image' }),
-    ],
+    shownNewsItems: allNewsItems,
   },
 }
 

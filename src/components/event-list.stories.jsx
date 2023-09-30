@@ -2,6 +2,7 @@ import React from 'react'
 import { EventList } from './event-list.jsx'
 import { expect } from '@storybook/jest'
 import { within } from '@storybook/testing-library'
+import { eventList } from './data/event-factory.js'
 
 const Template = (args) => <EventList {...args} />
 
@@ -9,19 +10,7 @@ export default {
   title: 'Component/EventList',
   component: EventList,
   args: {
-    events: [
-      {
-        naam: '6 tegen 6',
-        datum: '7 mei 2023',
-      },
-      {
-        naam: 'Jeudg',
-        datum: '10 mei',
-        eindDatum: '15 mei',
-        aankondiging: 'link naar event',
-      },
-    ],
-    EventLink: ({ event }) => <span>{event.aankondiging}</span>,
+    events: eventList,
   },
 }
 

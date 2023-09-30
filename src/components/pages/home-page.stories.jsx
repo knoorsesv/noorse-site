@@ -1,5 +1,9 @@
 import React from 'react'
+import { allNewsItems } from '../data/news-factory.js'
+import { sponsorList } from '../data/sponsor-factory.js'
 import { HomePage } from './home-page.jsx'
+import { eventList } from '../data/event-factory.js'
+import { siteMapFactory } from '../data/sitemap-factory.js'
 
 const Template = (args) => <HomePage {...args} />
 
@@ -8,11 +12,11 @@ export default {
   component: HomePage,
   args: {
     version: '1.0.0',
-    sponsors: [],
-    newsItems: [],
-    siteMap: { items: [] },
-    events: [],
-    links: [],
+    sponsors: sponsorList,
+    newsItems: allNewsItems,
+    siteMap: siteMapFactory(),
+    events: eventList,
+    links: { newsletterLink: '/test-newsletter', webshopLink: '/test-webshop' },
   },
 }
 
