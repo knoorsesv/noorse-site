@@ -65,13 +65,12 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build:fake-vv
+      - run: yarn build:dev
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
-          GATSBY_VV_TEST_DATA: on
       - name: Deploy
         uses: nwtgck/actions-netlify@v2
         id: deploy-dev
