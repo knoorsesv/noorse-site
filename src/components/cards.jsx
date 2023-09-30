@@ -28,7 +28,6 @@ export const Card = ({
     <article {...props} className={articleClasses}>
       {header && (
         <div>
-          {/* added block class here to override .gatsby-image-wrapper-constrained display: inline-block, not sure if it's the best solution */}
           {Image ? <Image /> : <></>}
           <h3 className={titleHeaderClasses}> {header} </h3>
         </div>
