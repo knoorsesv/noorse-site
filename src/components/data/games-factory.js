@@ -7,6 +7,7 @@ export const gamesFactory = (attrs) => ({
     startTime: new Date(attrs.startTime).toISOString(),
   }),
   outcome: { status: 'finished', homeTeamGoals: 3, awayTeamGoals: 4 },
+  id: Math.round(Math.random() * 1000),
   ...attrs,
 })
 
