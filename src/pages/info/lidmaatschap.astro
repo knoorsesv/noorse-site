@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { MarkDownPage } from '../../react/layout'
+import { contentfulClient } from '../../lib/contentful'
+
+interface Page {
+  contentTypeId: 'page'
+  fields: {
+    title: EntryFieldTypes.Text
+    body: EntryFieldTypes.RichText
+    attachment: EntryFieldTypes.AssetLink
+  }
+}
+
+const page = (
+  await contentfulClient.getEntries<Page>({
+    'fields.title': 'Lidmaatschap',
+    content_type: 'page',
+  })
+).items[0]?.fields
+
+// console.log('page', page)
+---
+
+<Layout title="Lidmaatschap">
+  {
+    page ? (
+      <MarkDownPage
+        title={page.title}
+        content={page.body}
+        attachment={page.attachment.map(({ fields }) => fields)}
+      />
+    ) : (
+      <h1>No Lidmaatschap</h1>
+    )
+  }
+</Layout>

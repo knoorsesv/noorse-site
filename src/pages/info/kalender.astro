@@ -1,0 +1,11 @@
+---
+import vvData from '../../../data/vv-responses.json'
+import Layout from '../../layouts/Layout.astro'
+import { CalendarPage } from '../../react/pages'
+
+const clubMatchesAssignations = vvData.clubMatchesAssignations
+---
+
+<Layout title="Kalender">
+  <CalendarPage games={clubMatchesAssignations || []} />
+</Layout>

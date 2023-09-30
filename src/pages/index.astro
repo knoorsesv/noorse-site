@@ -1,0 +1,80 @@
+---
+import { HomePage } from '../react/pages'
+import Page from '../layouts/Page.astro'
+import { contentfulClient } from '../lib/contentful'
+import type { EntryFieldTypes } from 'contentful'
+import { isFuture, parse } from 'date-fns'
+import { newsletterLink, siteMap, webshopLink } from '../env/constants'
+import { siteMetadata } from '../data/siteMetadata.js'
+
+interface Sponsor {
+  contentTypeId: 'sponsor'
+  fields: {
+    naam: EntryFieldTypes.Text
+    websiteUrl: EntryFieldTypes.Text
+    logo: EntryFieldTypes.AssetLink
+  }
+}
+
+// todo: same as in layout, could be extracted
+const sponsors = (
+  await contentfulClient.getEntries<Sponsor>({
+    content_type: 'sponsor',
+  })
+).items.map(({ fields }) => fields)
+
+// todo: correctly type
+// todo: same as in niuws.astro, could be extracted
+interface NewsItem {
+  contentTypeId: 'news'
+  fields: {
+    title: EntryFieldTypes.Text
+    body: EntryFieldTypes.RichText
+    attachment: EntryFieldTypes.AssetLink
+  }
+}
+
+// todo: could be limited by a query instead of fetching everything and then limiting
+const newsItems = (
+  await contentfulClient.getEntries<NewsItem>({
+    content_type: 'news',
+  })
+).items
+  .map(({ fields }) => fields)
+  .slice(0, 3)
+
+// todo: correctly type
+interface Event {
+  contentTypeId: 'evenement'
+  fields: {
+    title: EntryFieldTypes.Text
+  }
+}
+
+const eventIsInfuture = (event) =>
+  isFuture(parse(event.datum, 'dd/MM/yy', new Date()))
+
+const events = (
+  await contentfulClient.getEntries<Event>({
+    content_type: 'evenement',
+  })
+).items
+  .map(({ fields }) => fields)
+  .filter(eventIsInfuture)
+
+// const siteMap = siteMap
+const links = { newsletterLink, webshopLink }
+const version = siteMetadata.version //getVersion()
+---
+
+<Page>
+  <HomePage
+    siteMap={siteMap}
+    events={events}
+    links={links}
+    newsItems={newsItems}
+    version={version}
+    sponsors={sponsors}
+    client:visible
+  />
+</Page>

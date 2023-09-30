@@ -1,0 +1,70 @@
+---
+// todo: make import aliases so the relative .../.././. are not necessary
+import Layout from '../../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { NewsItemPage } from '../../react/pages'
+import { contentfulClient } from '../../lib/contentful'
+
+// todo: correctly type
+interface NewsItem {
+  contentTypeId: 'news'
+  fields: {
+    title: EntryFieldTypes.Text
+    image: any
+    attachment: EntryFieldTypes.AssetLink
+  }
+}
+
+export async function getStaticPaths() {
+  const newsItems = (
+    await contentfulClient.getEntries<NewsItem>({
+      content_type: 'news',
+    })
+  ).items
+
+  // const newsItems = await Promise.all(
+  //   categories.map((categorie) => {
+  //     return contentfulClient.getEntries({
+  //       content_type: 'news',
+  //       'fields.category.sys.id': categorie.sys.id,
+  //     })
+  //   })
+  // )
+
+  // const ploegen = await Promise.all(
+  //   categories.map((categorie) => {
+  //     return contentfulClient.getEntries({
+  //       content_type: 'ploeg',
+  //       // todo: inconsistent that this is categorie in Dutch
+  //       'fields.categorie.sys.id': categorie.sys.id,
+  //     })
+  //   })
+  // )
+
+  // console.log(
+  //   'newsItems',
+  //   newsItems.map(({ fields }) => fields)
+  // )
+  return newsItems
+    .map(({ fields }) => fields)
+    .map((newsItem, index) => ({
+      params: { title: newsItem.title.replaceAll('/', '-').toLowerCase() },
+      props: {
+        newsItem: {
+          ...newsItem,
+          image: newsItem.image?.fields,
+          attachment: newsItem.attachment?.map(({ fields }) => fields),
+          // news: newsItems[index].items.map(({ fields }) => fields),
+        },
+      },
+    }))
+}
+
+const { title } = Astro.params
+const { newsItem } = Astro.props
+---
+
+<!-- todo: give correct SEO title and tab header (with Helmet?) -->
+<Layout title={title}>
+  <NewsItemPage newsItem={newsItem} />
+</Layout>

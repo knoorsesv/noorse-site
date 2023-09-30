@@ -1,8 +1,7 @@
 import '../src/styles/global.css'
-import '../src/styles/tailwind-import.css'
-import typography from '../src/utils/typography'
+import '../src/styles/tailwind.css'
 // todo: maybe the storybook shouldn't rely on this? there are "reset" classes on ul tags for example without which the components dont look good isolated
-typography.injectStyles()
+import '../src/styles/typography.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

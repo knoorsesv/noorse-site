@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { InfoBestuurPage } from '../../react/pages'
+import { contentfulClient } from '../../lib/contentful'
+
+// todo: correctly type
+interface BestuursLid {
+  contentTypeId: 'bestuurslid'
+  fields: {
+    title: EntryFieldTypes.Text
+    body: EntryFieldTypes.RichText
+    attachment: EntryFieldTypes.AssetLink
+  }
+}
+
+const leden = (
+  await contentfulClient.getEntries<BestuursLid>({
+    content_type: 'bestuurslid',
+  })
+).items.map(({ fields }) => fields)
+---
+
+<Layout title="Bestuur">
+  <InfoBestuurPage leden={leden} />
+</Layout>

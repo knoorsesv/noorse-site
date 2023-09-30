@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { MarkDownPage } from '../../react/layout'
+import { contentfulClient } from '../../lib/contentful'
+
+interface Page {
+  contentTypeId: 'page'
+  fields: {
+    title: EntryFieldTypes.Text
+    body: EntryFieldTypes.RichText
+  }
+}
+
+const page = (
+  await contentfulClient.getEntries<Page>({
+    'fields.title': 'Verzekering',
+    content_type: 'page',
+  })
+).items[0]?.fields
+---
+
+<Layout title="Verzekering">
+  {
+    page ? (
+      <MarkDownPage title={page.title} content={page.body} />
+    ) : (
+      <h1>No Verzekering</h1>
+    )
+  }
+</Layout>
