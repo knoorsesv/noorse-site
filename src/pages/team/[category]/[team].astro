@@ -1,0 +1,115 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { TeamPage } from '../../../react/pages'
+import { contentfulClient } from '../../../lib/contentful'
+import calendarConfig from '../../../../data/calendar-config.json'
+import vvData from '../../../../data/vv-responses.json'
+// todo: add test data import
+
+// todo: correctly type
+interface Team {
+  contentTypeId: 'ploeg'
+  fields: {
+    naam: EntryFieldTypes.Text
+  }
+}
+
+export async function getStaticPaths() {
+  const teams = (
+    await contentfulClient.getEntries<any>({
+      content_type: 'ploeg',
+    })
+  ).items
+
+  // console.log('teams', teams)
+
+  // const newsItems = await Promise.all(
+  //   categories.map((categorie) => {
+  //     return contentfulClient.getEntries({
+  //       content_type: 'news',
+  //       'fields.category.sys.id': categorie.sys.id,
+  //     })
+  //   })
+  // )
+
+  // const ploegen = await Promise.all(
+  //   categories.map((categorie) => {
+  //     return contentfulClient.getEntries({
+  //       content_type: 'ploeg',
+  //       // todo: inconsistent that this is categorie in Dutch
+  //       'fields.categorie.sys.id': categorie.sys.id,
+  //     })
+  //   })
+  // )
+
+  // const categories = (
+  //   await contentfulClient.getEntries({
+  //     content_type: 'categorie',
+  //   })
+  // ).items
+
+  // const ploegen = await Promise.all(
+  //   categories.map((categorie) => {
+  //     return contentfulClient.getEntries({
+  //       content_type: 'ploeg',
+  //       // todo: inconsistent that this is categorie in Dutch
+  //       'fields.categorie.sys.id': categorie.sys.id,
+  //     })
+  //   })
+  // )
+
+  return teams
+    .map(({ fields }) => fields)
+    .map((team, index) => {
+      const config = calendarConfig.find(
+        ({ vvName }) => vvName === (team.naamOpVoetbalVlaanderen || team.naam)
+      )
+
+      // console.log('config?.vvId', config?.vvId, config?.teamName, team.naam)
+      return {
+        params: {
+          category: team.categorie?.fields.naam?.toLowerCase(),
+          team: team.naam?.toLowerCase(),
+        },
+        props: {
+          ploeg: {
+            ...team,
+            categorie: {
+              naam: team.categorie?.fields.naam,
+              ploeg: teams
+                .map(({ fields }) => fields)
+                .filter(
+                  (teamToFilter) =>
+                    teamToFilter.categorie?.fields.naam ===
+                    team.categorie?.fields.naam
+                ),
+            },
+            // news: newsItems[index].items.map(({ fields }) => fields),
+            // //  todo: this should be called teams plural,
+            // ploeg: ploegen[index].items.map(({ fields }) => fields),
+          },
+          // rankings={teamSeriesAndRankings?.rankings}
+          // series={teamSeriesAndRankings?.series}
+          rankings: vvData.teamSeriesAndRankings[config?.vvId]?.rankings,
+          series: vvData.teamSeriesAndRankings[config?.vvId]?.series,
+          teamCalendar: vvData.teamCalendar[config?.vvId],
+          googleCalId: config?.calendarId,
+        },
+      }
+    })
+}
+
+const { teamName, category } = Astro.params
+const { ploeg, rankings, series, teamCalendar, googleCalId } = Astro.props
+---
+
+<Layout title={teamName}>
+  <TeamPage
+    ploeg={ploeg}
+    rankings={rankings}
+    series={series}
+    teamCalendar={teamCalendar}
+    googleCalId={googleCalId}
+  />
+</Layout>

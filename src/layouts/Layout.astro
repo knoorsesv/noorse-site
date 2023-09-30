@@ -1,0 +1,44 @@
+---
+import { Layout as LayoutPage } from '../react/pages/layout'
+interface Props {
+  title: string
+}
+import '../styles/typography.css'
+import { contentfulClient } from '../lib/contentful'
+import { siteMetadata } from '../data/siteMetadata'
+import type { EntryFieldTypes } from 'contentful'
+import Page from './Page.astro'
+import { siteMap } from '../env/constants'
+
+interface Sponsor {
+  contentTypeId: 'sponsor'
+  fields: {
+    naam: EntryFieldTypes.Text
+    websiteUrl: EntryFieldTypes.Text
+    logo: EntryFieldTypes.AssetLink
+  }
+}
+
+const sponsors = (
+  await contentfulClient.getEntries<Sponsor>({
+    content_type: 'sponsor',
+  })
+).items.map(({ fields }) => fields)
+
+// console.log('sponsors', sponsors);
+
+const { title } = Astro.props
+const sitemap = siteMap
+const version = siteMetadata.version //getVersion()
+---
+
+<Page>
+  <LayoutPage
+    sitemap={sitemap}
+    sponsors={sponsors}
+    version={version}
+    client:visible
+  >
+    <slot />
+  </LayoutPage>
+</Page>

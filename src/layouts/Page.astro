@@ -1,0 +1,26 @@
+---
+import { Layout as LayoutPage } from '../react/pages/layout'
+interface Props {
+  title: string
+}
+import '../styles/typography.css'
+import '../styles/global.css'
+import '../styles/tailwind.css'
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/images/Logo_highres.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

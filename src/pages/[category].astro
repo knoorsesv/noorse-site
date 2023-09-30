@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { CategoryPage } from '../react/pages'
+import { contentfulClient } from '../lib/contentful'
+
+// todo: correctly type
+interface Category {
+  contentTypeId: 'categorie'
+  fields: {
+    naam: EntryFieldTypes.Text
+  }
+}
+
+export async function getStaticPaths() {
+  const categories = (
+    await contentfulClient.getEntries<Category>({
+      content_type: 'categorie',
+    })
+  ).items
+
+  const newsItems = await Promise.all(
+    categories.map((categorie) => {
+      return contentfulClient.getEntries({
+        content_type: 'news',
+        'fields.category.sys.id': categorie.sys.id,
+      })
+    })
+  )
+
+  const ploegen = await Promise.all(
+    categories.map((categorie) => {
+      return contentfulClient.getEntries({
+        content_type: 'ploeg',
+        // todo: inconsistent that this is categorie in Dutch
+        'fields.categorie.sys.id': categorie.sys.id,
+      })
+    })
+  )
+
+  return categories
+    .map(({ fields }) => fields)
+    .map((categorie, index) => ({
+      params: { category: categorie.naam.toLowerCase() },
+      props: {
+        categoryData: {
+          ...categorie,
+          news: newsItems[index].items.map(({ fields }) => fields),
+          //  todo: this should be called teams plural,
+          ploeg: ploegen[index].items.map(({ fields }) => fields),
+        },
+      },
+    }))
+}
+
+const { category } = Astro.params
+const { categoryData } = Astro.props
+---
+
+<Layout title={category}>
+  <CategoryPage category={categoryData} />
+</Layout>

@@ -5,7 +5,39 @@ export const newsletterLink = 'http://eepurl.com/hRibPn'
 export const siteMap = {
   items: [
     { name: 'Home', link: '/' },
-    { name: 'Club', subItems: [] },
+    {
+      name: 'Club',
+      subItems: [
+        {
+          name: 'Bestuur',
+          link: '/info/bestuur',
+        },
+        {
+          name: 'Fairplay',
+          link: '/info/fairplay',
+        },
+        {
+          name: 'Kalender',
+          link: '/info/kalender',
+        },
+        {
+          name: 'Lidmaatschap',
+          link: '/info/lidmaatschap',
+        },
+        {
+          name: 'Nieuws',
+          link: '/info/nieuws',
+        },
+        {
+          name: 'Verzekering',
+          link: '/info/verzekering',
+        },
+        {
+          name: 'Webshop',
+          extLink: webshopLink,
+        },
+      ],
+    },
     { name: 'Senioren', link: '/senioren' },
     { name: 'Jeugd Jongens', link: '/jeugd jongens' },
     { name: 'Dames', link: '/dames' },
