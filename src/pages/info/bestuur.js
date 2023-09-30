@@ -22,7 +22,9 @@ const Bestuur = () => {
   const data = useStaticQuery(query)
   return (
     <Layout>
-      <InfoBestuurPage leden={data.allContentfulBestuurslid.edges} />
+      <InfoBestuurPage
+        leden={data.allContentfulBestuurslid.edges.map(({ node }) => node)}
+      />
     </Layout>
   )
 }

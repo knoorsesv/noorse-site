@@ -4,16 +4,13 @@ import { Page } from './page.jsx'
 
 export const InfoBestuurPage = ({ leden }) => {
   const bestuursLeden = leden
-    .map(({ node }) => node)
     .filter(({ type }) => type === 'bestuursorgaan')
     .sort((a, b) => {
       if (a.title === 'Voorzitter') return -1
       if (b.title === 'Voorzitter') return 1
       return 0
     })
-  const deelwerkingen = leden
-    .map(({ node }) => node)
-    .filter(({ type }) => type === 'deelwerking')
+  const deelwerkingen = leden.filter(({ type }) => type === 'deelwerking')
 
   return (
     <Page title="Bestuur" centered={false}>
