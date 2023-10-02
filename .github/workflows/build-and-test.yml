@@ -24,8 +24,8 @@ jobs:
     name: Build PROD
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        # with:
+        #   ref: ${{ github.event.pull_request.head.sha }}
       - uses: volta-cli/action@v4
       - uses: actions/cache@v3
         with:
@@ -58,8 +58,8 @@ jobs:
     name: Build DEV
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        # with:
+        #   ref: ${{ github.event.pull_request.head.sha }}
       - uses: volta-cli/action@v4
       - uses: actions/cache@v3
         with:
@@ -108,8 +108,8 @@ jobs:
     name: Build Storybook
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        # with:
+        #   ref: ${{ github.event.pull_request.head.sha }}
       - uses: volta-cli/action@v4
       - uses: actions/cache@v3
         with:
