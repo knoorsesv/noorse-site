@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
 import { createSnippetFromInhoud } from '../utils/snippet.js'
-import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper'
 import { Logo } from './logo.jsx'
 
 export const NewsCard = ({ newsItem, image }) => {

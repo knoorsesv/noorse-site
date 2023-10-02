@@ -5,7 +5,7 @@ import { ExternalLink } from './links/external-link.jsx'
 import { EmailLink } from './links/email-link.jsx'
 import { Title } from './titles.jsx'
 import { Version } from './version.jsx'
-import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper'
 import { Logo } from './logo.jsx'
 
 const SponsorWithLogo = (sponsor, logoWidth = 'w-1/2') => {

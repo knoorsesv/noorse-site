@@ -23,7 +23,7 @@
     "format": "prettier . --write --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss",
     "lint": "concurrently --group --prefix-colors auto \"npm:lint:*\"",
     "lint:astro": "astro check",
-    "lint:js": "eslint .",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx,.astro,.mjs,.cjs .",
     "prepare": "husky install",
     "serve": "astro preview",
     "start": "CONTENTFUL_ENV=staging astro dev",

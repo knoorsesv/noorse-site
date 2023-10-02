@@ -1,12 +1,9 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from './index'
 
 export const MarkDownPage = ({
   children,
   title,
-  description,
   content,
   attachment,
 }) => {
