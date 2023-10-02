@@ -1,4 +1,3 @@
-import React from 'react'
 import { Version } from './version.jsx'
 
 const Template = (args) => <Version {...args} />

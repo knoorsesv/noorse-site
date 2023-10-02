@@ -102,33 +102,35 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
       - run: yarn lint
 
-  build-storybook:
-    needs: deps
-    runs-on: ubuntu-latest
-    name: Build Storybook
-    steps:
-      - uses: actions/checkout@v4
-        # with:
-        #   ref: ${{ github.event.pull_request.head.sha }}
-      - uses: volta-cli/action@v4
-      - uses: actions/cache@v3
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build-storybook
-      - name: Deploy
-        uses: nwtgck/actions-netlify@v2
-        id: deploy-dev
-        with:
-          publish-dir: './storybook-static'
-          production-deploy: ${{ false }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: 'Deploy storybook build: ${{ github.ref }}'
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
-    outputs:
-      dev-url: ${{steps.build-storybook.outputs.deploy-url}}
+  # todo: maybe reenable this when chromatich subscription runs out?
+  # build-storybook:
+  #   needs: deps
+  #   runs-on: ubuntu-latest
+  #   name: Build Storybook
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       # with:
+  #       #   ref: ${{ github.event.pull_request.head.sha }}
+  #     - uses: volta-cli/action@v4
+  #     - uses: actions/cache@v3
+  #       with:
+  #         path: ./node_modules
+  #         key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+  #     - run: yarn build-storybook
+  #     - name: Deploy
+  #       uses: nwtgck/actions-netlify@v2
+  #       id: deploy-storybook
+  #       with:
+  #         publish-dir: './storybook-static'
+  #         production-deploy: ${{ false }}
+  #         github-token: ${{ secrets.GITHUB_TOKEN }}
+  #         deploy-message: 'Deploy storybook build: ${{ github.ref }}'
+  #         enable-commit-comment: false
+  #       env:
+  #         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  #         NETLIFY_SITE_ID: cfb311e2-904f-4acb-9937-30e50d59f3ca
+  #   outputs:
+  #     dev-url: ${{steps.build-storybook.outputs.deploy-url}}
 
   build-test-base:
     runs-on: ubuntu-latest

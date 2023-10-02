@@ -1,4 +1,3 @@
-import React from 'react'
 import { BestuurList, SubTitle } from '../index'
 import { Page } from './page.jsx'
 

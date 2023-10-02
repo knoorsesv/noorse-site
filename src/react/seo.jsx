@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet'
 // import favicon from '../images/Logo_highres.png'
 import config from '../env/config'

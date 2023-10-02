@@ -1,10 +1,10 @@
 import { format, parseISO } from 'date-fns'
-import { nlBE } from 'date-fns/locale/index.js'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { sanitizeTeamName } from '../../utils/formatting'
 import { SubTitle, Title } from '../index'
 import { Container } from '../layout'
+import nlBE from 'date-fns/locale/nl-BE'
 
 export const CalendarPage = ({ games }) => {
   const day = (date) => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet'
 import { CategoryTeamNavigation, SubTitle, Title } from '../index'
 import { Container } from '../layout'

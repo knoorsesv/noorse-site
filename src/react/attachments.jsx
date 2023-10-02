@@ -1,4 +1,3 @@
-import React from 'react'
 import { imageFileTypes } from '../env/constants'
 import { DocumentLink } from './links/document-link.jsx'
 

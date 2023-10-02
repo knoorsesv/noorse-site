@@ -1,4 +1,3 @@
-import React from 'react'
 import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 import { CategoryTeamNavigation, MarkDown, Section, SubTitle } from '../index'
 import { Page } from './page.jsx'

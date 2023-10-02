@@ -1,4 +1,3 @@
-import React from 'react'
 import { allNewsItems } from '../data/news-factory.js'
 import { sponsorList } from '../data/sponsor-factory.js'
 import { HomePage } from './home-page.jsx'

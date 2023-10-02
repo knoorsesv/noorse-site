@@ -1,5 +1,4 @@
 import ctl from '@netlify/classnames-template-literals'
-import React from 'react'
 
 // todo: type the input
 // todo: try to get rid of custom classNames, make all cards the same

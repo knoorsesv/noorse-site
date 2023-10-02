@@ -1,4 +1,3 @@
-import React from 'react'
 import { MarkDown } from './markdown.jsx'
 
 const Template = () => (

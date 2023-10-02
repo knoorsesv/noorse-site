@@ -1,4 +1,3 @@
-import React from 'react'
 import { NewsCard } from './news-card.jsx'
 
 export const NewsList = ({ children, shownNewsItems }) => {

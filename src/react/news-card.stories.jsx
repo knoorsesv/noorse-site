@@ -1,4 +1,3 @@
-import React from 'react'
 import { imageFactory } from './data/image-factory.js'
 import {
   newsFactory,

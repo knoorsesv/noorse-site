@@ -1,4 +1,3 @@
-import React from 'react'
 import { UpdateBanner } from './update-banner.jsx'
 
 const Template = () => <UpdateBanner />

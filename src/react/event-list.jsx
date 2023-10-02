@@ -1,4 +1,3 @@
-import React from 'react'
 import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
 export const EventList = ({ events }) => {

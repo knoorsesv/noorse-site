@@ -1,4 +1,3 @@
-import React from 'react'
 import { SubTitle, Title } from './titles.jsx'
 
 const Template = () => (

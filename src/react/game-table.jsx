@@ -1,5 +1,4 @@
 import { format, parseISO } from 'date-fns'
-import React from 'react'
 import { sanitizeTeamName } from '../utils/formatting'
 
 export function CalendarTable({ calendar }) {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navbar } from './navbar.jsx'
 import { siteMapFactory } from './data/sitemap-factory.js'
 

@@ -1,26 +1,25 @@
 ---
-import Layout from '../../layouts/Layout.astro'
 import type { EntryFieldTypes } from 'contentful'
-import { MarkDownPage } from '../../react/layout'
+import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
+import { MarkDownPage } from '../../react/layout'
 
 interface Page {
   contentTypeId: 'page'
   fields: {
     title: EntryFieldTypes.Text
-    body: EntryFieldTypes.RichText
-    attachment: EntryFieldTypes.AssetLink
+    body: EntryFieldTypes.Text
+    // todo: this should be plural since its an array
+    attachment: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
   }
 }
 
 const page = (
-  await contentfulClient.getEntries<Page>({
+  await contentfulClient.withoutUnresolvableLinks.getEntries<Page>({
     'fields.title': 'Lidmaatschap',
     content_type: 'page',
   })
 ).items[0]?.fields
-
-// console.log('page', page)
 ---
 
 <Layout title="Lidmaatschap">
@@ -29,7 +28,7 @@ const page = (
       <MarkDownPage
         title={page.title}
         content={page.body}
-        attachment={page.attachment.map(({ fields }) => fields)}
+        attachment={page.attachment.map((asset) => asset?.fields)}
       />
     ) : (
       <h1>No Lidmaatschap</h1>

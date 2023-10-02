@@ -1,4 +1,3 @@
-import React from 'react'
 import { allNewsItems } from './data/news-factory.js'
 import { NewsList } from './news-list.jsx'
 

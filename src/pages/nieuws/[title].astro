@@ -5,46 +5,22 @@ import type { EntryFieldTypes } from 'contentful'
 import { NewsItemPage } from '../../react/pages'
 import { contentfulClient } from '../../lib/contentful'
 
-// todo: correctly type
 interface NewsItem {
   contentTypeId: 'news'
   fields: {
     title: EntryFieldTypes.Text
-    image: any
-    attachment: EntryFieldTypes.AssetLink
+    image: EntryFieldTypes.AssetLink
+    attachment: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
   }
 }
 
 export async function getStaticPaths() {
   const newsItems = (
-    await contentfulClient.getEntries<NewsItem>({
+    await contentfulClient.withoutUnresolvableLinks.getEntries<NewsItem>({
       content_type: 'news',
     })
   ).items
 
-  // const newsItems = await Promise.all(
-  //   categories.map((categorie) => {
-  //     return contentfulClient.getEntries({
-  //       content_type: 'news',
-  //       'fields.category.sys.id': categorie.sys.id,
-  //     })
-  //   })
-  // )
-
-  // const ploegen = await Promise.all(
-  //   categories.map((categorie) => {
-  //     return contentfulClient.getEntries({
-  //       content_type: 'ploeg',
-  //       // todo: inconsistent that this is categorie in Dutch
-  //       'fields.categorie.sys.id': categorie.sys.id,
-  //     })
-  //   })
-  // )
-
-  // console.log(
-  //   'newsItems',
-  //   newsItems.map(({ fields }) => fields)
-  // )
   return newsItems
     .map(({ fields }) => fields)
     .map((newsItem) => ({
@@ -53,8 +29,7 @@ export async function getStaticPaths() {
         newsItem: {
           ...newsItem,
           image: newsItem.image?.fields,
-          attachment: newsItem.attachment?.map(({ fields }) => fields),
-          // news: newsItems[index].items.map(({ fields }) => fields),
+          attachment: newsItem.attachment?.map((asset) => asset?.fields),
         },
       },
     }))

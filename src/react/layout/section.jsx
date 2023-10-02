@@ -1,4 +1,3 @@
-import React from 'react'
 import ctl from '@netlify/classnames-template-literals'
 
 const Section = ({ children, className }) => {

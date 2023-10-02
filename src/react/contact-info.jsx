@@ -1,4 +1,3 @@
-import React from 'react'
 import { Facebook, Github, Instagram } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { EmailLink } from './links/email-link.jsx'

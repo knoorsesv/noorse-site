@@ -7,7 +7,8 @@ import {
   Footer,
   Navbar,
   NewsList,
-  Section
+  ResponsiveVideo,
+  Section,
 } from '../index'
 import { ExternalLink } from '../links/external-link.jsx'
 
@@ -73,10 +74,9 @@ export const HomePage = ({
                   Steun onze vereniging vanaf nu via Trooper !
                 </ExternalLink>
               </Section.TextContent>
-              {/* todo: this breaks the Astro build, maybe because of the react lazy component? */}
-              {/* <ResponsiveVideo
+              <ResponsiveVideo
                 src={'https://www.youtube.com/embed/jGgVgioUMq0'}
-              /> */}
+              />
             </Card>
           </Section>
 

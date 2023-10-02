@@ -1,4 +1,3 @@
-import React from 'react'
 import { Attachments } from './attachments.jsx'
 
 import { within } from '@storybook/testing-library'

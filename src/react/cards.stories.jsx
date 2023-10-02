@@ -1,6 +1,5 @@
 import { expect } from '@storybook/jest'
 import { within } from '@storybook/testing-library'
-import React from 'react'
 import { Card, SubHeader } from './cards.jsx'
 
 const dummyImageUrl = 'https://dummyimage.com/200x100/87c425/1100ff'

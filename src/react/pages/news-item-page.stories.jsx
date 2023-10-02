@@ -1,4 +1,3 @@
-import React from 'react'
 import { NewsItemPage } from './news-item-page.jsx'
 import { newsFactory, withOutAttachments } from '../data/news-factory.js'
 
