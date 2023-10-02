@@ -9,7 +9,6 @@ import { ImageWrapper } from '../../wrappers/image-wrapper'
 export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
 
-  // console.log('newsItem', newsItem)
   return (
     <>
       <Helmet>
@@ -70,7 +69,6 @@ const getImageAttachments = (attachments) => {
 
 const Images = ({ images, className }) => {
   const NewsImage = (image) => {
-    // todo: check if this separate imgClassName is necessary
     return (
       <ImageWrapper
         image={image}

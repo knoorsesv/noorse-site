@@ -4,7 +4,7 @@ require('dotenv').config()
 
 const runOnCI = process.env.CI === 'true'
 
-let baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:9000'
+let baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:4321'
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {

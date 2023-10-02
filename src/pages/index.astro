@@ -51,8 +51,10 @@ interface EventEntryType {
   fields: Event
 }
 
+// todo: two conditions because contentful API returns different formats for different environments, should be fixed there
 const eventIsInfuture = (datum: string): boolean =>
-  isFuture(parse(datum, 'dd/MM/yy', new Date()))
+  isFuture(parse(datum, 'dd/MM/yy', new Date())) ||
+  isFuture(parse(datum, 'yyyy-MM-dd', new Date()))
 
 const events = (
   await contentfulClient.getEntries<EventEntryType>({
@@ -60,7 +62,9 @@ const events = (
   })
 ).items
   .map((item) => item?.fields)
-  .filter((item) => eventIsInfuture(item.datum))
+  .filter((item) => {
+    return eventIsInfuture(item.datum)
+  })
 
 const links = { newsletterLink, webshopLink }
 const version = siteMetadata.version
