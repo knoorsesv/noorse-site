@@ -4,7 +4,6 @@ const pages = [
   '/',
   '/info/nieuws',
   '/info/kalender',
-  '/info/sponsoring',
   '/info/bestuur',
   '/nieuws/Alle Mogelijke Opties',
   '/team/senioren/Eerste Elftal',
