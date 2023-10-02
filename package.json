@@ -21,9 +21,9 @@
     "build:prod": "cross-env CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false astro build",
     "deploy": "netlify deploy --dir public",
     "format": "prettier . --write --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss",
-    "lint": "eslint .",
+    "lint": "concurrently --group --prefix-colors auto \"npm:lint:*\"",
     "lint:astro": "astro check",
-    "lint-commit": "commitlint -E HUSKY_GIT_PARAMS",
+    "lint:js": "eslint .",
     "prepare": "husky install",
     "serve": "astro preview",
     "start": "CONTENTFUL_ENV=staging astro dev",
@@ -39,7 +39,8 @@
     "update-vv-data": "node fetch-vv.mjs"
   },
   "lint-staged": {
-    "*.js,*.jsx,*.astro": "eslint --cache --fix",
+    "*.js,*.jsx": "eslint --cache --fix",
+    "*.astro": "astro check",
     "*": "prettier --write"
   },
   "dependencies": {
@@ -77,11 +78,13 @@
     "@storybook/react": "7.3.0",
     "@storybook/react-vite": "7.4.3",
     "@storybook/testing-library": "0.2.1",
+    "@typescript-eslint/parser": "6.7.3",
     "autoprefixer": "10.4.16",
     "chromatic": "7.2.0",
     "concurrently": "8.2.1",
     "cross-env": "7.0.3",
     "eslint": "8.50.0",
+    "eslint-plugin-astro": "0.29.1",
     "eslint-plugin-import": "2.28.1",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.33.2",

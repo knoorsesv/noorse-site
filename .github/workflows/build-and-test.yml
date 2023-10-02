@@ -208,7 +208,7 @@ jobs:
   chromatic:
     runs-on: ubuntu-latest
     name: Visual Storybook Test
-    needs: [build-dev, build-prod]
+    needs: [build-dev, build-prod, lint]
     steps:
       - uses: actions/checkout@v4
         with:

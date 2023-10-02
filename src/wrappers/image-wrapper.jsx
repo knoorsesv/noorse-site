@@ -12,10 +12,10 @@ export const ImageWrapper = ({ image, src, ...attrs }) => {
 
   // console.log('image.fields.file', image.fields.file)
 
+  // eslint-disable-next-line jsx-a11y/alt-text
   // todo: not all fields are mapped in the contentful calls, keeping both options for now
   // should be linted on the ImageWrapper, the alt tag is passed from theres
   return (
-    // eslint-disable-next-line jsx-a11y/alt-text
     <img src={image?.fields?.file.url || image?.file?.url || src} {...attrs} />
   )
 
