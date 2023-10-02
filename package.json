@@ -15,7 +15,6 @@
     "name": "gvdp"
   },
   "scripts": {
-    "astro": "astro",
     "build": "astro build && cp _redirects public/_redirects",
     "build-storybook": "storybook build",
     "build:dev": "cross-env CONTENTFUL_ENV=staging astro build",
@@ -23,6 +22,7 @@
     "deploy": "netlify deploy --dir public",
     "format": "prettier . --write --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss",
     "lint": "eslint .",
+    "lint:astro": "astro check",
     "lint-commit": "commitlint -E HUSKY_GIT_PARAMS",
     "prepare": "husky install",
     "serve": "astro preview",
