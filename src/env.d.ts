@@ -8,10 +8,4 @@ interface ImportMetaEnv {
   readonly CONTENTFUL_TOKEN: string
   readonly CONTENTFUL_TOKEN_PREVIEW: string
 }
-
-// declare module '*vv-responses.json' {
-//   const value: { haha: string }
-//   export value
-// }
-
 declare module 'date-fns/locale/index.js'

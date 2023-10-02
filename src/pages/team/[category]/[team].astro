@@ -43,7 +43,8 @@ export async function getStaticPaths() {
     .map(({ fields }) => fields)
     .map((team) => {
       const config = calendarConfig.find(
-        ({ vvName }) => vvName === (team.naamOpVoetbalVlaanderen || team.naam)
+        ({ vvName }) =>
+          vvName === team.naamOpVoetbalVlaanderen || vvName === team.naam
       )
       const vvId = config?.vvId
 

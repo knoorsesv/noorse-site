@@ -123,8 +123,6 @@ export const TeamPage = ({
               {generalRanking && (
                 <section className={'flex flex-col items-center'}>
                   <SubTitle>Klassement</SubTitle>
-                  {/* todo: stupidly formatted by graphql api */}
-                  {/* <div>{generalRankingName}</div> */}
                   <table className="text-sm">
                     <tbody>
                       {firstTeamInRanking ? (
