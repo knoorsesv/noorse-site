@@ -14,4 +14,4 @@ interface ImportMetaEnv {
 //   export value
 // }
 
-;`declare module 'date-fns/locale/index.js';`
+declare module 'date-fns/locale/index.js'
