@@ -45,7 +45,7 @@ const NavSection = ({
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
             loading={'eager'}
-            className="object-cover object-center h-full w-full"
+            className="h-full w-full object-cover object-center"
             // todo: this is Astro specific now, does it work in Storybook?
             src="/images/noorse_aerial.png"
           />
