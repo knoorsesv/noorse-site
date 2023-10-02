@@ -1,8 +1,5 @@
 ---
 import { Layout as LayoutPage } from '../react/pages/layout'
-interface Props {
-  title: string
-}
 import '../styles/typography.css'
 import { contentfulClient } from '../lib/contentful'
 import { siteMetadata } from '../data/siteMetadata'
@@ -27,7 +24,6 @@ const sponsors = (
 
 // console.log('sponsors', sponsors);
 
-const { title } = Astro.props
 const sitemap = siteMap
 const version = siteMetadata.version //getVersion()
 ---

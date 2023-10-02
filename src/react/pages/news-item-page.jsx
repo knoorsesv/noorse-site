@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import { createSnippetFromInhoud } from '../../utils/snippet.js'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from '../layout'
-import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
+import { ImageWrapper } from '../../wrappers/image-wrapper'
 
 export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)

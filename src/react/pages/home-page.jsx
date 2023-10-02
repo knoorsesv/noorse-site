@@ -1,5 +1,4 @@
-import React from 'react'
-import { ImageWrapper } from '../../wrappers/image-wrapper.jsx'
+import { ImageWrapper } from '../../wrappers/image-wrapper'
 import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 import {
   ArrowRight,
@@ -8,9 +7,7 @@ import {
   Footer,
   Navbar,
   NewsList,
-  ResponsiveVideo,
-  Section,
-  Seo,
+  Section
 } from '../index'
 import { ExternalLink } from '../links/external-link.jsx'
 

@@ -1,5 +1,4 @@
-import React from 'react'
-import { Seo, TextBlock, Title } from '../index'
+import { TextBlock, Title } from '../index'
 import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 
 export const NotFoundPage = () => {

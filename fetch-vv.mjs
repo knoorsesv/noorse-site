@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+// todo: add proper logging methods / framework
 import { add, endOfWeek, format, startOfWeek } from 'date-fns'
 import fs from 'fs'
 import querystring from 'node:querystring'

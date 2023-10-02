@@ -1,19 +1,11 @@
 ---
 import Layout from '../../../layouts/Layout.astro'
-import type { EntryFieldTypes } from 'contentful'
 import { TeamPage } from '../../../react/pages'
 import { contentfulClient } from '../../../lib/contentful'
 import calendarConfig from '../../../../data/calendar-config.json'
 import vvData from '../../../../data/vv-responses.json'
 // todo: add test data import
 
-// todo: correctly type
-interface Team {
-  contentTypeId: 'ploeg'
-  fields: {
-    naam: EntryFieldTypes.Text
-  }
-}
 
 export async function getStaticPaths() {
   const teams = (
@@ -61,7 +53,7 @@ export async function getStaticPaths() {
 
   return teams
     .map(({ fields }) => fields)
-    .map((team, index) => {
+    .map((team) => {
       const config = calendarConfig.find(
         ({ vvName }) => vvName === (team.naamOpVoetbalVlaanderen || team.naam)
       )
@@ -100,7 +92,7 @@ export async function getStaticPaths() {
     })
 }
 
-const { teamName, category } = Astro.params
+const { teamName } = Astro.params
 const { ploeg, rankings, series, teamCalendar, googleCalId } = Astro.props
 ---
 

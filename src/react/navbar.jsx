@@ -1,6 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import React, { useEffect, useRef, useState } from 'react'
-import { ImageWrapper } from '../wrappers/image-wrapper.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
