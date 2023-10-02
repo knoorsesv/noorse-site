@@ -1,5 +1,4 @@
 import ctl from '@netlify/classnames-template-literals'
-import React from 'react'
 import { ContactInfo } from './contact-info.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { EmailLink } from './links/email-link.jsx'
@@ -63,7 +62,7 @@ const ContactAndSponsorFooter = ({ sponsors }) => {
       pt-8 medium:p-0 medium:ml-4`)
 
   return (
-    <React.Fragment>
+    <>
       <div className={wrapperClasses}>
         {/* todo: this shouldnt be an h1 */}
         <Title>K. Noorse S.V.</Title>
@@ -80,7 +79,7 @@ const ContactAndSponsorFooter = ({ sponsors }) => {
       <div className={'hidden w-full bg-gray-light medium:block'}>
         <SponsorList logoWidth={'medium:w-32 large:w-40'} sponsors={sponsors} />
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

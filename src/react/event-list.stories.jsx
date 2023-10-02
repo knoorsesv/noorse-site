@@ -1,4 +1,3 @@
-import React from 'react'
 import { EventList } from './event-list.jsx'
 import { expect } from '@storybook/jest'
 import { within } from '@storybook/testing-library'

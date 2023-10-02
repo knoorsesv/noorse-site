@@ -1,5 +1,3 @@
-import React from 'react'
-
 // todo: this input should not be a node, just an object with url and name
 export const DocumentLink = (documentNode) => {
   if (!documentNode) {

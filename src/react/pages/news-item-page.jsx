@@ -1,4 +1,3 @@
-import React from 'react'
 import { imageFileTypes } from '../../env/constants'
 
 import { Helmet } from 'react-helmet'

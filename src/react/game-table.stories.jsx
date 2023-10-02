@@ -1,4 +1,3 @@
-import React from 'react'
 import { CalendarTable } from './game-table.jsx'
 import { gamesFactory } from './data/games-factory.js'
 

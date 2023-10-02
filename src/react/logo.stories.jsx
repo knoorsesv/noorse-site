@@ -1,4 +1,3 @@
-import React from 'react'
 import { Logo } from './logo.jsx'
 
 const Template = (args) => <Logo {...args} />

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Exclamation } from './icons/icons.jsx'
 
 export const UpdateBanner = () => {

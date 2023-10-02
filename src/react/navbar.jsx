@@ -1,10 +1,10 @@
 import ctl from '@netlify/classnames-template-literals'
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ImageWrapper } from '../wrappers/image-wrapper'
+import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
-import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'

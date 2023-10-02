@@ -1,4 +1,3 @@
-import React from 'react'
 import { EmailLink } from './email-link.jsx'
 
 const Template = (args) => <EmailLink {...args} />

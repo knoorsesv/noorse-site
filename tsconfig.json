@@ -4,5 +4,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "exclude": ["dist", "storybook-static"]
+  "exclude": ["dist", "storybook-static", "tests"]
 }

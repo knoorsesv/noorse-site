@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Title = ({ children }) => {
   return (
     <div className={'mb-4 flex flex-col items-center'}>

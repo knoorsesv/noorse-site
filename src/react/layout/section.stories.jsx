@@ -1,4 +1,3 @@
-import React from 'react'
 import { Card } from '../cards.jsx'
 import { Section } from './section.jsx'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { ContactInfo } from './contact-info.jsx'
 
 const Template = () => <ContactInfo />

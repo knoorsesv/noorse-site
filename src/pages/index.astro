@@ -23,7 +23,6 @@ const sponsors = (
   })
 ).items.map(({ fields }) => fields)
 
-// todo: correctly type
 // todo: same as in niuws.astro, could be extracted
 interface NewsItem {
   contentTypeId: 'news'
@@ -43,31 +42,32 @@ const newsItems = (
   .map(({ fields }) => fields)
   .slice(0, 3)
 
-// todo: correctly type
 interface Event {
+  title: EntryFieldTypes.Text
+  datum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
+}
+interface EventEntryType {
   contentTypeId: 'evenement'
-  fields: {
-    title: EntryFieldTypes.Text
-  }
+  fields: Event
 }
 
-const eventIsInfuture = (event) =>
-  isFuture(parse(event.datum, 'dd/MM/yy', new Date()))
+const eventIsInfuture = (datum: string): boolean =>
+  isFuture(parse(datum, 'dd/MM/yy', new Date()))
 
 const events = (
-  await contentfulClient.getEntries<Event>({
+  await contentfulClient.getEntries<EventEntryType>({
     content_type: 'evenement',
   })
 ).items
-  .map(({ fields }) => fields)
-  .filter(eventIsInfuture)
+  .map((item) => item?.fields)
+  .filter((item) => eventIsInfuture(item.datum))
 
-// const siteMap = siteMap
 const links = { newsletterLink, webshopLink }
-const version = siteMetadata.version //getVersion()
+const version = siteMetadata.version
 ---
 
-<Page>
+<!-- todo: use correct title  -->
+<Page title="Home">
   <HomePage
     siteMap={siteMap}
     events={events}

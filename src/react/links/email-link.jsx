@@ -1,4 +1,3 @@
-import React from 'react'
 import { Envelope } from '../icons/icons.jsx'
 import { ExternalLink } from './external-link.jsx'
 

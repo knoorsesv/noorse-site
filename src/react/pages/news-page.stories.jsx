@@ -1,5 +1,3 @@
-import React from 'react'
-import { DummyImage } from '../data/dummy-image.jsx'
 import {
   newsFactory,
   withOutBlurb,
@@ -20,7 +18,6 @@ export default {
       withOutImage({ title: 'Some no image news' }),
       withOutPublishDate(),
     ],
-    Image: DummyImage,
   },
 }
 

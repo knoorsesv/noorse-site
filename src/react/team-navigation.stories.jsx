@@ -1,4 +1,3 @@
-import React from 'react'
 import { CategoryTeamNavigation } from './team-navigation.jsx'
 
 const Template = (args) => <CategoryTeamNavigation {...args} />

@@ -1,5 +1,4 @@
 import ctl from '@netlify/classnames-template-literals'
-import React from 'react'
 
 export const LinkWrapper = ({
   href,

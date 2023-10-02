@@ -4,52 +4,40 @@ import { TeamPage } from '../../../react/pages'
 import { contentfulClient } from '../../../lib/contentful'
 import calendarConfig from '../../../../data/calendar-config.json'
 import vvData from '../../../../data/vv-responses.json'
-// todo: add test data import
+import type { EntryFieldTypes } from 'contentful'
 
+const data: {
+  teamSeriesAndRankings: Record<
+    string,
+    { series?: any[]; rankings: null | any[]; __typename: string }
+  >
+  teamCalendar: Record<string, Object>
+} = vvData
+// todo: add test data import here
+
+interface Category {
+  contentTypeId: 'ploeg'
+  fields: {
+    naam: EntryFieldTypes.Text
+  }
+}
+
+interface TeamEntry {
+  contentTypeId: 'ploeg'
+  fields: {
+    naam: EntryFieldTypes.Text
+    naamOpVoetbalVlaanderen: EntryFieldTypes.Text
+    categorie: EntryFieldTypes.EntryResourceLink<Category>
+    logo: EntryFieldTypes.AssetLink
+  }
+}
 
 export async function getStaticPaths() {
   const teams = (
-    await contentfulClient.getEntries<any>({
+    await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
       content_type: 'ploeg',
     })
   ).items
-
-  // console.log('teams', teams)
-
-  // const newsItems = await Promise.all(
-  //   categories.map((categorie) => {
-  //     return contentfulClient.getEntries({
-  //       content_type: 'news',
-  //       'fields.category.sys.id': categorie.sys.id,
-  //     })
-  //   })
-  // )
-
-  // const ploegen = await Promise.all(
-  //   categories.map((categorie) => {
-  //     return contentfulClient.getEntries({
-  //       content_type: 'ploeg',
-  //       // todo: inconsistent that this is categorie in Dutch
-  //       'fields.categorie.sys.id': categorie.sys.id,
-  //     })
-  //   })
-  // )
-
-  // const categories = (
-  //   await contentfulClient.getEntries({
-  //     content_type: 'categorie',
-  //   })
-  // ).items
-
-  // const ploegen = await Promise.all(
-  //   categories.map((categorie) => {
-  //     return contentfulClient.getEntries({
-  //       content_type: 'ploeg',
-  //       // todo: inconsistent that this is categorie in Dutch
-  //       'fields.categorie.sys.id': categorie.sys.id,
-  //     })
-  //   })
-  // )
 
   return teams
     .map(({ fields }) => fields)
@@ -57,8 +45,8 @@ export async function getStaticPaths() {
       const config = calendarConfig.find(
         ({ vvName }) => vvName === (team.naamOpVoetbalVlaanderen || team.naam)
       )
+      const vvId = config?.vvId
 
-      // console.log('config?.vvId', config?.vvId, config?.teamName, team.naam)
       return {
         params: {
           category: team.categorie?.fields.naam?.toLowerCase(),
@@ -77,15 +65,10 @@ export async function getStaticPaths() {
                     team.categorie?.fields.naam
                 ),
             },
-            // news: newsItems[index].items.map(({ fields }) => fields),
-            // //  todo: this should be called teams plural,
-            // ploeg: ploegen[index].items.map(({ fields }) => fields),
           },
-          // rankings={teamSeriesAndRankings?.rankings}
-          // series={teamSeriesAndRankings?.series}
-          rankings: vvData.teamSeriesAndRankings[config?.vvId]?.rankings,
-          series: vvData.teamSeriesAndRankings[config?.vvId]?.series,
-          teamCalendar: vvData.teamCalendar[config?.vvId],
+          rankings: vvId && data.teamSeriesAndRankings[vvId]?.rankings,
+          series: vvId && data.teamSeriesAndRankings[vvId]?.series,
+          teamCalendar: vvId && data.teamCalendar[vvId],
           googleCalId: config?.calendarId,
         },
       }

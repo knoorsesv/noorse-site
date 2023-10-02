@@ -1,4 +1,3 @@
-import React from 'react'
 import { sponsorList } from './data/sponsor-factory.js'
 import { Footer } from './footer.jsx'
 import { Logo } from './logo.jsx'

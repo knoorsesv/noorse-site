@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Title } from '../index'
 import { Container } from '../layout'

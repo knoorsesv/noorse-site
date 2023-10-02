@@ -1,4 +1,3 @@
-import React from 'react'
 import { MarkDownPage } from '../layout'
 
 export const InfoLidmaatschapPage = ({ content }) => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { InfoBestuurPage } from './info-bestuur.jsx'
 
 const Template = (args) => <InfoBestuurPage {...args} />

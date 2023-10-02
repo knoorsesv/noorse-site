@@ -1,4 +1,3 @@
-import React from 'react'
 import { NotFoundPage } from './not-found-page.jsx'
 
 const Template = (args) => <NotFoundPage {...args} />

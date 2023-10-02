@@ -1,4 +1,3 @@
-import React from 'react'
 import { categoryFactory } from '../data/category-factory.js'
 import { newsFactory } from '../data/news-factory.js'
 import { CategoryPage } from './category-page.jsx'

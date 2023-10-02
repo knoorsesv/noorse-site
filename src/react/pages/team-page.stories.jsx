@@ -1,4 +1,3 @@
-import React from 'react'
 import { TeamPage } from './team-page.jsx'
 import {
   rankingFactory,

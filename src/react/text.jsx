@@ -1,4 +1,3 @@
-import React from 'react'
 import { EmailLink } from './links/email-link.jsx'
 
 export const TextBlock = ({ children }) => {
