@@ -4,6 +4,7 @@ import { TeamPage } from '../../../react/pages'
 import { contentfulClient } from '../../../lib/contentful'
 import calendarConfig from '../../../../data/calendar-config.json'
 import vvData from '../../../../data/vv-responses.json'
+import testVvData from '../../../../data/test-vv-responses.json'
 import type { EntryFieldTypes } from 'contentful'
 
 interface Category {
@@ -30,8 +31,7 @@ export async function getStaticPaths() {
       { series?: any[]; rankings: null | any[]; __typename: string }
     >
     teamCalendar: Record<string, Object>
-  } = vvData
-  // todo: add test data import here
+  } = import.meta.env.PROD ? vvData : testVvData
 
   const teams = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
