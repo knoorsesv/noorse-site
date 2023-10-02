@@ -32,11 +32,11 @@ export const NewsItemPage = ({ newsItem }) => {
       <Container>
         <Title>{newsItem.title}</Title>
         {newsItem.showImageOnPage && newsItem.image && (
-          <div className="w-full flex justify-center">
+          <div className="flex w-full justify-center">
             <ImageWrapper
               image={newsItem.image}
               alt={'News'} // todo: make alt tag specific
-              className="object-contain max-h-[300px] "
+              className="max-h-[300px] object-contain "
             />
           </div>
         )}
@@ -76,7 +76,7 @@ const Images = ({ images, className }) => {
       <ImageWrapper
         image={image}
         className={
-          'object-contain aspect-square max-w-[75%] p-2 medium:max-w-[45%] '
+          'aspect-square max-w-[75%] object-contain p-2 medium:max-w-[45%] '
         }
         loading="lazy"
         key={image.title}
