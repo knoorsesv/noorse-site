@@ -14,6 +14,7 @@ interface NewsItem {
   }
 }
 
+// todo: categorie mist in uiteindelijke NewsPage
 const newsItems = (
   await contentfulClient.getEntries<NewsItem>({
     content_type: 'news',
