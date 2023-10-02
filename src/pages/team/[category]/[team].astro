@@ -6,15 +6,6 @@ import calendarConfig from '../../../../data/calendar-config.json'
 import vvData from '../../../../data/vv-responses.json'
 import type { EntryFieldTypes } from 'contentful'
 
-const data: {
-  teamSeriesAndRankings: Record<
-    string,
-    { series?: any[]; rankings: null | any[]; __typename: string }
-  >
-  teamCalendar: Record<string, Object>
-} = vvData
-// todo: add test data import here
-
 interface Category {
   contentTypeId: 'ploeg'
   fields: {
@@ -33,6 +24,15 @@ interface TeamEntry {
 }
 
 export async function getStaticPaths() {
+  const typedData: {
+    teamSeriesAndRankings: Record<
+      string,
+      { series?: any[]; rankings: null | any[]; __typename: string }
+    >
+    teamCalendar: Record<string, Object>
+  } = vvData
+  // todo: add test data import here
+
   const teams = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
       content_type: 'ploeg',
@@ -66,9 +66,9 @@ export async function getStaticPaths() {
                 ),
             },
           },
-          rankings: vvId && data.teamSeriesAndRankings[vvId]?.rankings,
-          series: vvId && data.teamSeriesAndRankings[vvId]?.series,
-          teamCalendar: vvId && data.teamCalendar[vvId],
+          rankings: vvId && typedData.teamSeriesAndRankings[vvId]?.rankings,
+          series: vvId && typedData.teamSeriesAndRankings[vvId]?.series,
+          teamCalendar: vvId && typedData.teamCalendar[vvId],
           googleCalId: config?.calendarId,
         },
       }

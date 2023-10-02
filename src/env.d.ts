@@ -13,3 +13,5 @@ interface ImportMetaEnv {
 //   const value: { haha: string }
 //   export value
 // }
+
+;`declare module 'date-fns/locale/index.js';`
