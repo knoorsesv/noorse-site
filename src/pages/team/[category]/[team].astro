@@ -31,7 +31,7 @@ export async function getStaticPaths() {
       { series?: any[]; rankings: null | any[]; __typename: string }
     >
     teamCalendar: Record<string, Object>
-  } = import.meta.env.PROD ? vvData : testVvData
+  } = import.meta.env.CONTENTFUL_ENV === 'master' ? vvData : testVvData
 
   const teams = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
