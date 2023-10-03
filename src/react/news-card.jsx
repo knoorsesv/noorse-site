@@ -2,10 +2,12 @@ import { Card, SubHeader } from './cards.jsx'
 import { createSnippetFromInhoud } from '../utils/snippet.js'
 import { ImageWrapper } from '../wrappers/image-wrapper'
 import { Logo } from './logo.jsx'
+import { format } from 'date-fns'
 
 export const NewsCard = ({ newsItem, image }) => {
   const snippet = newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud)
-  // console.log('newsItem', newsItem)
+  const dateToShow = newsItem.publishDate || newsItem.createdAt
+
   const NewsCardImage = ({ image }) => {
     return (
       <div className={'h-[200px] text-center'}>
@@ -32,8 +34,7 @@ export const NewsCard = ({ newsItem, image }) => {
         <SubHeader>
           <div className={'text-left uppercase'}>{newsItem.category.naam}</div>
           <div className={'text-center'}>
-            {/* todo: correct formatting should happen in here */}
-            {newsItem.publishDate || newsItem.createdAt}
+            {dateToShow && format(new Date(dateToShow), 'dd/MM/yy')}
           </div>
         </SubHeader>
         <div className={'min-h-64p text-center text-gray-dark'}>{snippet}</div>
