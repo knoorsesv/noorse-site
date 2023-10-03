@@ -65,6 +65,7 @@ const events = (
   .filter((item) => {
     return eventIsInfuture(item.datum)
   })
+  .sort((a, b) => new Date(a.datum).getTime() - new Date(b.datum).getTime())
 
 const links = { newsletterLink, webshopLink }
 const version = siteMetadata.version
