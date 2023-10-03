@@ -22,7 +22,7 @@ export async function getStaticPaths() {
   ).items
 
   return newsItems
-    .map(({ fields }) => fields)
+    .map(({ fields, sys }) => ({ ...fields, createdAt: sys.createdAt }))
     .map((newsItem) => ({
       params: { title: newsItem.title.replaceAll('/', '-').toLowerCase() },
       props: {
