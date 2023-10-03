@@ -1,3 +1,4 @@
+import { format } from 'date-fns'
 import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
 export const EventList = ({ events }) => {
@@ -15,13 +16,16 @@ export const EventList = ({ events }) => {
     )
   }
 
+  const formatDate = (datum) => format(new Date(datum), 'dd/MM/yy')
+
   return events.length ? (
     <table>
       <tbody>
         {events.map((event) => (
           <tr key={event.naam}>
             <td className={'border-0'}>
-              {event.datum} {event.eindDatum ? ` - ${event.eindDatum}` : ''}
+              {formatDate(event.datum)}{' '}
+              {event.eindDatum ? ` - ${formatDate(event.eindDatum)}` : ''}
             </td>
             <td className={'border-0'}>
               {event.aankondiging ? (
