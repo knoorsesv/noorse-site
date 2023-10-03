@@ -5,10 +5,17 @@ import { createSnippetFromInhoud } from '../../utils/snippet.js'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from '../layout'
 import { ImageWrapper } from '../../wrappers/image-wrapper'
+import { format } from 'date-fns'
+import nlBE from 'date-fns/locale/nl-BE/index.js'
 
 export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
 
+  const formattedDate = format(
+    new Date(newsItem.publishDate || newsItem.createdAt),
+    'PPPP',
+    { locale: nlBE }
+  )
   return (
     <>
       <Helmet>
@@ -39,9 +46,7 @@ export const NewsItemPage = ({ newsItem }) => {
               />
             </div>
           )}
-          <h3 className={'mb-6 mt-6 capitalize italic'}>
-            {newsItem.publishDate || newsItem.createdAt}
-          </h3>
+          <h3 className={'mb-6 mt-6 capitalize italic'}>{formattedDate}</h3>
           {newsItem.inhoud && <MarkDown>{newsItem.inhoud}</MarkDown>}
           <section className={newsItem.inhoud ? 'prose ' : ''}>
             <Attachments attachments={newsItem.attachment} />
