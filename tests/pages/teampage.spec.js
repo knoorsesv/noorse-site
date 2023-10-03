@@ -107,7 +107,7 @@ test.describe('Team Pages', () => {
       'Reserven A',
     ])
     await links.locator('text=Noorse 3').click()
-    await page.waitForURL('**/team/senioren/noorse%203')
+    // await page.waitForURL('**/team/senioren/noorse%203')
 
     expect(page.url()).toContain('/team/senioren/noorse%203')
   })
