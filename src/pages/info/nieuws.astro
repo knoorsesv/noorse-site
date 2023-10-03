@@ -1,25 +1,35 @@
 ---
-import Layout from '../../layouts/Layout.astro'
 import type { EntryFieldTypes } from 'contentful'
-import { NewsPage } from '../../react/pages'
+import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
+import { NewsPage } from '../../react/pages'
 
-// todo: correctly type
+interface Category {
+  contentTypeId: 'categorie'
+  fields: {
+    naam: EntryFieldTypes.Text
+  }
+}
+
 interface NewsItem {
   contentTypeId: 'news'
   fields: {
     title: EntryFieldTypes.Text
     body: EntryFieldTypes.RichText
     attachment: EntryFieldTypes.AssetLink
+    category: EntryFieldTypes.EntryResourceLink<Category>
   }
 }
 
-// todo: categorie mist in uiteindelijke NewsPage
 const newsItems = (
-  await contentfulClient.getEntries<NewsItem>({
+  await contentfulClient.withoutUnresolvableLinks.getEntries<NewsItem>({
     content_type: 'news',
   })
-).items.map(({ fields }) => fields)
+).items.map(({ fields, sys }) => ({
+  ...fields,
+  createdAt: sys.createdAt,
+  category: { naam: fields.category?.fields.naam },
+}))
 ---
 
 <Layout title="Nieuws">
