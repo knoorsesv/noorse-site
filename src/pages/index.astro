@@ -15,6 +15,12 @@ interface Sponsor {
     logo: EntryFieldTypes.AssetLink
   }
 }
+interface Category {
+  contentTypeId: 'categorie'
+  fields: {
+    naam: EntryFieldTypes.Text
+  }
+}
 
 // todo: same as in layout, could be extracted
 const sponsors = (
@@ -30,16 +36,21 @@ interface NewsItem {
     title: EntryFieldTypes.Text
     body: EntryFieldTypes.RichText
     attachment: EntryFieldTypes.AssetLink
+    category: EntryFieldTypes.EntryResourceLink<Category>
   }
 }
 
 // todo: could be limited by a query instead of fetching everything and then limiting
 const newsItems = (
-  await contentfulClient.getEntries<NewsItem>({
+  await contentfulClient.withoutUnresolvableLinks.getEntries<NewsItem>({
     content_type: 'news',
   })
 ).items
-  .map(({ fields }) => fields)
+  .map(({ fields, sys }) => ({
+    ...fields,
+    createdAt: sys.createdAt,
+    category: { naam: fields.category?.fields.naam },
+  }))
   .slice(0, 3)
 
 interface Event {
