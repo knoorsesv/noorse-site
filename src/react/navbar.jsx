@@ -218,13 +218,25 @@ const MenuLogo = ({ topMenuBarShown }) => {
       }     `)
   return (
     <div id="logo-container" className={logContainerClasses}>
-      <Logo
-        className={ctl(`${transition} z-30 aspect-square h-auto max-h-full w-full
-      ${
-        topMenuBarShown ? `max-w-[64px] ` : `max-w-[200px] medium:max-w-[312px]`
-      }
-      `)}
-      />
+      {topMenuBarShown ? (
+        <a href="/">
+          <Logo
+            className={ctl(`${transition} z-30 aspect-square h-auto max-h-full w-full
+  ${topMenuBarShown ? `max-w-[64px] ` : `max-w-[200px] medium:max-w-[312px]`}
+  `)}
+          />
+        </a>
+      ) : (
+        <Logo
+          className={ctl(`${transition} z-30 aspect-square h-auto max-h-full w-full
+        ${
+          topMenuBarShown
+            ? `max-w-[64px] `
+            : `max-w-[200px] medium:max-w-[312px]`
+        }
+        `)}
+        />
+      )}
     </div>
   )
 }
