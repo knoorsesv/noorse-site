@@ -28,31 +28,33 @@ export const NewsItemPage = ({ newsItem }) => {
         )}
       </Helmet>
       <Container>
-        <Title>{newsItem.title}</Title>
-        {newsItem.showImageOnPage && newsItem.image && (
-          <div className="flex w-full justify-center">
-            <ImageWrapper
-              image={newsItem.image}
-              alt={'News'} // todo: make alt tag specific
-              className="max-h-[300px] object-contain "
+        <div className="max-w-[600px]">
+          <Title>{newsItem.title}</Title>
+          {newsItem.showImageOnPage && newsItem.image && (
+            <div className="flex w-full justify-center">
+              <ImageWrapper
+                image={newsItem.image}
+                alt={'News'} // todo: make alt tag specific
+                className="max-h-[300px] object-contain "
+              />
+            </div>
+          )}
+          <h3 className={'mb-6 mt-6 capitalize italic'}>
+            {newsItem.publishDate || newsItem.createdAt}
+          </h3>
+          {newsItem.inhoud && <MarkDown>{newsItem.inhoud}</MarkDown>}
+          <section className={newsItem.inhoud ? 'prose ' : ''}>
+            <Attachments attachments={newsItem.attachment} />
+          </section>
+          {!!images.length && (
+            <Images
+              images={images}
+              className={
+                newsItem.inhoud?.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'
+              }
             />
-          </div>
-        )}
-        <h3 className={'mb-6 mt-6 capitalize italic'}>
-          {newsItem.publishDate || newsItem.createdAt}
-        </h3>
-        {newsItem.inhoud && <MarkDown>{newsItem.inhoud}</MarkDown>}
-        <section className={newsItem.inhoud ? 'prose ' : ''}>
-          <Attachments attachments={newsItem.attachment} />
-        </section>
-        {!!images.length && (
-          <Images
-            images={images}
-            className={
-              newsItem.inhoud?.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'
-            }
-          />
-        )}
+          )}
+        </div>
       </Container>
     </>
   )
