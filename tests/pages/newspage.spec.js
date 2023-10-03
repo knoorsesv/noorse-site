@@ -11,9 +11,7 @@ test.describe('News Page', () => {
     const firstParagraph = page.locator('#content p').first()
 
     await expect(title).toHaveText('Nieuwe spelers 2020-2021')
-    // todo: fix this formatting so the full text is shown again
-    // await expect(date).toHaveText('donderdag 14 januari 2021')
-    await expect(date).toHaveText('2021-01-14')
+    await expect(date).toHaveText('donderdag 14 januari 2021')
     await expect(firstParagraph).toHaveText(
       'Na het jammere nieuws dat er dit seizoen niet meer gevoetbald wordt, beginnen we meteen uit te kijken naar het komende seizoen. We kunnen nu al meedelen dat deze spelers volgend jaar de kleuren van Noorse zullen verdedigen:'
     )
