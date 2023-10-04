@@ -1,3 +1,5 @@
+// todo: properly type this
+
 export const ImageWrapper = ({ image, src, ...attrs }) => {
   if (import.meta.env?.STORYBOOK) {
     return <DummyImage {...attrs} src={src} />
@@ -8,7 +10,7 @@ export const ImageWrapper = ({ image, src, ...attrs }) => {
   //   return
   // }
 
-  console.log(src)
+  // console.log(src)
 
   // todo: not all fields are mapped in the contentful calls, keeping both options for now
   // should be linted on the ImageWrapper, the alt tag is passed from theres
@@ -55,7 +57,7 @@ export const ImageWrapper = ({ image, src, ...attrs }) => {
 
 export const DummyImage = (attrs) => {
   const { image, src, className, imgClassName, ...rest } = attrs
-  console.log('DummyImage attrs', attrs)
+  // console.log('DummyImage attrs', attrs)
   return (
     <img
       src={
