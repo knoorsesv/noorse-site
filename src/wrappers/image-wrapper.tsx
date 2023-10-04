@@ -1,6 +1,6 @@
 export const ImageWrapper = ({ image, src, ...attrs }) => {
   if (import.meta.env?.STORYBOOK) {
-    return <DummyImage {...attrs} />
+    return <DummyImage {...attrs} src={src} />
   }
 
   // if(!image) {
@@ -8,13 +8,17 @@ export const ImageWrapper = ({ image, src, ...attrs }) => {
   //   return
   // }
 
-  // console.log('image.fields.file', image.fields.file)
+  console.log(src)
 
   // todo: not all fields are mapped in the contentful calls, keeping both options for now
   // should be linted on the ImageWrapper, the alt tag is passed from theres
   return (
     // eslint-disable-next-line jsx-a11y/alt-text
-    <img src={image?.fields?.file.url || image?.file?.url || src} {...attrs} />
+    <img
+      srcSet={src}
+      src={image?.fields?.file.url || image?.file?.url || src}
+      {...attrs}
+    />
   )
 
   // WTF Gatsby:
@@ -51,13 +55,13 @@ export const ImageWrapper = ({ image, src, ...attrs }) => {
 
 export const DummyImage = (attrs) => {
   const { image, src, className, imgClassName, ...rest } = attrs
-  // console.log('DummyImage attrs', attrs);
+  console.log('DummyImage attrs', attrs)
   return (
     <img
       src={
         src?.replace('../images/', '/') ||
         image?.src ||
-        `https://placekitten.com/${image.height}/${image.width}`
+        `https://placekitten.com/${image?.height}/${image?.width}`
       }
       alt="Some cat"
       className={`not-prose ${imgClassName || 'h-full w-full'} ${className}`}

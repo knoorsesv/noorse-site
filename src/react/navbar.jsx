@@ -5,6 +5,7 @@ import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
+import aerial from '../images/noorse_aerial.png?w=600;800;1200&h=200;400;800&format=webp&q=50,100'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
@@ -46,8 +47,7 @@ const NavSection = ({
             alt={'Luchtfoto Noorse velden'}
             loading={'eager'}
             className="h-full w-full object-cover object-center"
-            // todo: this is Astro specific now, does it work in Storybook?
-            src="/images/noorse_aerial.png"
+            src={aerial}
           />
         </div>
       ) : (
