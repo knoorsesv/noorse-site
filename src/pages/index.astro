@@ -24,10 +24,19 @@ interface Category {
 
 // todo: same as in layout, could be extracted
 const sponsors = (
-  await contentfulClient.getEntries<Sponsor>({
+  await contentfulClient.withoutUnresolvableLinks.getEntries<Sponsor>({
     content_type: 'sponsor',
   })
-).items.map(({ fields }) => fields)
+).items.map(({ fields }) => ({
+  ...fields,
+  image: {
+    responsiveURL:
+      fields.logo?.fields.file?.url.replace('//', 'https://') +
+      '?w=300&h=200&fm=jpg&fl=progressive',
+  },
+}))
+
+// console.log('sponsors', sponsors[0].logo?.fields);
 
 // todo: same as in niuws.astro, could be extracted
 interface NewsItem {
@@ -36,6 +45,7 @@ interface NewsItem {
     title: EntryFieldTypes.Text
     body: EntryFieldTypes.RichText
     attachment: EntryFieldTypes.AssetLink
+    image: EntryFieldTypes.AssetLink
     category: EntryFieldTypes.EntryResourceLink<Category>
   }
 }
@@ -50,6 +60,11 @@ const newsItems = (
     ...fields,
     createdAt: sys.createdAt,
     category: { naam: fields.category?.fields.naam },
+    image: {
+      responsiveURL:
+        fields.image?.fields.file?.url.replace('//', 'https://') +
+        '?w=300&h=200&fm=webp',
+    },
   }))
   .slice(0, 3)
 
