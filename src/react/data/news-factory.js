@@ -7,7 +7,7 @@ export const newsFactory = (attrs) => ({
   category: { naam: 'Senioren' },
   publishDate: new Date('2023-09-01').toDateString(),
   createdAt: new Date('2022-08-07').toDateString(),
-  inhoud: { inhoud: 'Some very interesting content \n next line' },
+  inhoud: 'Some very interesting content \n next line',
   attachment: [
     {
       ...imageFactory(),
