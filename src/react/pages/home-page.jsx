@@ -11,6 +11,7 @@ import {
   Section,
 } from '../index'
 import { ExternalLink } from '../links/external-link.jsx'
+import sportVlaanderen from '../../images/sport-vlaanderen.webp?w=600;800;1200&h=200;400;800&format=webp&q=50,100'
 
 export const HomePage = ({
   version,
@@ -83,7 +84,7 @@ export const HomePage = ({
           <Section>
             <Card containerClass="flex flex-col items-center">
               <ImageWrapper
-                src="/images/sport-vlaanderen.jpg"
+                src={sportVlaanderen}
                 id="sport-vlaanderen-logo"
                 alt={'Sport Vlaanderen Logo'}
                 loading="lazy"
