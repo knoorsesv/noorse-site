@@ -3,6 +3,7 @@ import type { EntryFieldTypes } from 'contentful'
 import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
 import { NewsPage } from '../../react/pages'
+import { importImage } from 'astro-imagetools/api'
 
 interface Category {
   contentTypeId: 'categorie'
@@ -17,6 +18,7 @@ interface NewsItem {
     title: EntryFieldTypes.Text
     body: EntryFieldTypes.RichText
     attachment: EntryFieldTypes.AssetLink
+    image: EntryFieldTypes.AssetLink
     category: EntryFieldTypes.EntryResourceLink<Category>
   }
 }
@@ -29,6 +31,11 @@ const newsItems = (
   ...fields,
   createdAt: sys.createdAt,
   category: { naam: fields.category?.fields.naam },
+  image: {
+    responsiveURL:
+      fields.image?.fields.file?.url.replace('//', 'https://') +
+      '?w=300&h=200&fm=jpg&fl=progressive',
+  },
 }))
 ---
 

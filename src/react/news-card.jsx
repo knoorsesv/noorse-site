@@ -8,13 +8,15 @@ export const NewsCard = ({ newsItem, image }) => {
   const snippet = newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud)
   const dateToShow = newsItem.publishDate || newsItem.createdAt
 
-  const NewsCardImage = ({ image }) => {
+  const NewsCardImage = ({ image, srcSet }) => {
     return (
       <div className={'h-[200px] text-center'}>
         {image ? (
           <ImageWrapper
             image={image}
-            className={'h-full'}
+            srcSet={srcSet}
+            className="h-full w-auto aspect-auto"
+            height="200"
             alt={'Card Header'} // todo: this is not meaningful alt text about what is in the image
           />
         ) : (
@@ -28,7 +30,7 @@ export const NewsCard = ({ newsItem, image }) => {
     <a href={`/nieuws/${newsItem.title.replace('/', '-').toLowerCase()}`}>
       <Card
         header={newsItem.title}
-        Image={() => <NewsCardImage image={image} />}
+        Image={() => <NewsCardImage image={image} srcSet={newsItem.srcSet} />}
         containerClass={'h-[148px]'}
       >
         <SubHeader>

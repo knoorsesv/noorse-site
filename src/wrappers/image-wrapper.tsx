@@ -1,6 +1,8 @@
 // todo: properly type this
 
-export const ImageWrapper = ({ image, src, ...attrs }) => {
+// import Image from "astro/components/Image.astro"
+
+export const ImageWrapper = ({ image, src, srcSet, ...attrs }) => {
   if (import.meta.env?.STORYBOOK) {
     return <DummyImage {...attrs} src={src} />
   }
@@ -10,15 +12,23 @@ export const ImageWrapper = ({ image, src, ...attrs }) => {
   //   return
   // }
 
-  // console.log(src)
+  // console.log(src, srcSet, image?.fields.file.url)
+  // if(image?.fields.file.url) {
+  //   return <Image src={image.fields.file.url.replace('//', 'https://')} alt={image?.fields.title}  width="50" height="50" />
+  // }
 
   // todo: not all fields are mapped in the contentful calls, keeping both options for now
   // should be linted on the ImageWrapper, the alt tag is passed from theres
   return (
     // eslint-disable-next-line jsx-a11y/alt-text
     <img
-      srcSet={src}
-      src={image?.fields?.file.url || image?.file?.url || src}
+      srcSet={src || srcSet}
+      src={
+        image?.responsiveURL ||
+        image?.fields?.file.url ||
+        image?.file?.url ||
+        src
+      }
       {...attrs}
     />
   )

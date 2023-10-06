@@ -7,7 +7,7 @@ import { Version } from './version.jsx'
 import { ImageWrapper } from '../wrappers/image-wrapper'
 import { Logo } from './logo.jsx'
 
-const SponsorWithLogo = (sponsor, logoWidth = 'w-1/2') => {
+const SponsorWithLogo = ({ sponsor, logoWidth = 'w-1/2' }) => {
   return (
     <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsor.naam}>
       <ConditionalWrapper
@@ -19,7 +19,7 @@ const SponsorWithLogo = (sponsor, logoWidth = 'w-1/2') => {
         )}
       >
         <ImageWrapper
-          image={sponsor.logo}
+          image={sponsor.image}
           alt={`Logo ${sponsor.naam}`}
           loading="lazy"
           className="object-scale-down"
@@ -40,7 +40,15 @@ const SponsorList = ({ logoWidth, sponsors }) => {
       }
       title={'List of Sponsors'}
     >
-      {sponsors?.map((sponsor) => SponsorWithLogo(sponsor, logoWidth))}
+      {sponsors?.map((sponsor) => {
+        return (
+          <SponsorWithLogo
+            key={sponsor.naam}
+            sponsor={sponsor}
+            logoWidth={logoWidth}
+          />
+        )
+      })}
     </div>
   )
 }
