@@ -4,7 +4,6 @@ import { add, endOfWeek, format, startOfWeek } from 'date-fns'
 import fs from 'fs'
 import querystring from 'node:querystring'
 const config = JSON.parse(fs.readFileSync('./data/calendar-config.json'))
-// console.log('config', config)
 const url = 'https://datalake-prod2018.rbfa.be/graphql'
 
 const headers = new Headers()
