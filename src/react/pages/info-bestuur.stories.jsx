@@ -8,7 +8,6 @@ export default {
   args: {
     leden: [
       {
-        // todo: node should not be a part of this type
         type: 'bestuursorgaan',
         title: 'Voorzitter',
         naam: 'Joske',

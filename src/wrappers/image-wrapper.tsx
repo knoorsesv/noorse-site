@@ -1,21 +1,17 @@
-// todo: properly type this
+import type { FC } from 'react'
 
-// import Image from "astro/components/Image.astro"
-
-export const ImageWrapper = ({ image, src, srcSet, ...attrs }) => {
+export const ImageWrapper: FC<{
+  image?: {
+    responsiveURL?: string
+    fields?: { file: { url: string } }
+    file: { url: string }
+  }
+  src?: string
+  srcSet?: string
+}> = ({ image, src, srcSet, ...attrs }) => {
   if (import.meta.env?.STORYBOOK) {
     return <DummyImage {...attrs} src={src} />
   }
-
-  // if(!image) {
-  //   console.error('missing image', attrs)
-  //   return
-  // }
-
-  // console.log(src, srcSet, image?.fields.file.url)
-  // if(image?.fields.file.url) {
-  //   return <Image src={image.fields.file.url.replace('//', 'https://')} alt={image?.fields.title}  width="50" height="50" />
-  // }
 
   // todo: not all fields are mapped in the contentful calls, keeping both options for now
   // should be linted on the ImageWrapper, the alt tag is passed from theres
@@ -32,42 +28,21 @@ export const ImageWrapper = ({ image, src, srcSet, ...attrs }) => {
       {...attrs}
     />
   )
-
-  // WTF Gatsby:
-  // https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#restrictions-on-using-staticimage
-  // cant pass in attrs, so lets just hardcode these until we ditch Gatsby
-  // if (attrs.src && attrs.src === '../images/noorse_aerial.png') {
-  //   return (
-  //     <StaticImage
-  //       id={'background-image'}
-  //       alt={'Luchtfoto Noorse velden'}
-  //       loading={'eager'}
-  //       objectfit="cover"
-  //       objectposition="center"
-  //       src="../images/noorse_aerial.png"
-  //       className={`h-full max-h-full w-full max-w-full`}
-  //     />
-  //   )
-  // }
-  // if (attrs.src && attrs.src === '../images/sport-vlaanderen.jpg') {
-  //   return (
-  //     <StaticImage
-  //       src="../images/sport-vlaanderen.jpg"
-  //       id="sport-vlaanderen-logo"
-  //       alt={'Sport Vlaanderen Logo'}
-  //       objectfit={'contain'}
-  //       loading="lazy"
-  //       className={`h-full max-h-full w-full max-w-full large:max-w-[500px]`}
-  //     />
-  //   )
-  // }
-  // // // eslint-disable-next-line jsx-a11y/alt-text
-  // // return <GatsbyImage {...attrs} />
 }
 
-export const DummyImage = (attrs) => {
+export const DummyImage: FC<{
+  image?: {
+    src?: string
+    responsiveURL?: string
+    fields?: { file: { url: string } }
+    file: { url: string }
+  }
+  className?: string
+  imgClassName?: string
+  src?: string
+  srcSet?: string
+}> = (attrs) => {
   const { image, src, className, imgClassName, ...rest } = attrs
-  // console.log('DummyImage attrs', attrs)
   return (
     <img
       src={
