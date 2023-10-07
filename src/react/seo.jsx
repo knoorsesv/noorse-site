@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet'
-// import favicon from '../images/Logo_highres.png'
 import config from '../env/config'
 
 export const Seo = ({ title, children }) => {
@@ -10,8 +9,6 @@ export const Seo = ({ title, children }) => {
     <Helmet titleTemplate={`%s | K. Noorse S.V.`}>
       <html lang="nl" />
       <title>{title}</title>
-      {/* <link rel="icon" href={favicon} /> */}
-
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />

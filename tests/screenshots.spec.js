@@ -8,7 +8,6 @@ const pages = [
   '/nieuws/Alle Mogelijke Opties',
   '/team/senioren/Eerste Elftal',
   '/senioren',
-  // '/g-werking',
 ]
 
 const takeFullPage = ['/nieuws/Alle Mogelijke Opties', '/']

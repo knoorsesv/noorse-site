@@ -3,7 +3,6 @@ import { CategoryTeamNavigation, MarkDown, Section, SubTitle } from '../index'
 import { Page } from './page.jsx'
 
 export const CategoryPage = ({ category }) => {
-  // console.log('category', category)
   return (
     <Page title={category.naam}>
       {category?.general_info && (
