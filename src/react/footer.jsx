@@ -108,11 +108,11 @@ const CopyRightFooter = ({ version }) => {
         <Version version={version} />
       </div>
       <div>
-        Powered by{' '}
-        <ExternalLink textColor={'text-black'} href="https://www.gatsbyjs.org">
-          Gatsby
-        </ExternalLink>{' '}
-        and{' '}
+        Powered by
+        <ExternalLink textColor={'text-black'} href="https://www.astro.build">
+          Astro
+        </ExternalLink>
+        and
         <ExternalLink textColor={'text-black'} href="https://tailwindcss.com/">
           Tailwind
         </ExternalLink>
