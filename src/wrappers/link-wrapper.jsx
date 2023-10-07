@@ -7,7 +7,6 @@ export const LinkWrapper = ({
   activeClassName,
   ...props
 }) => {
-  // console.log('import.meta.env?.STORYBOOK', import.meta.env?.STORYBOOK)
   let isActive = false
   // if (typeof window === 'object') {
   // todo: doesnt work because then the ssr differs fromt the client side

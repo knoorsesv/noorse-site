@@ -24,9 +24,6 @@ export const HomePage = ({
   return (
     <>
       <Navbar pageHasCoverPhoto={true} siteMap={siteMap} />
-      {/* todo: reenable the SEO, Helmet crashes */}
-      {/* <Seo title="Home" /> */}
-
       <main className={'flex w-full flex-col items-center medium:px-8'}>
         <Section.List>
           <Section>

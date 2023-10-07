@@ -11,7 +11,6 @@ export const MarkDownPage: FC<
     attachment?: (AssetFields | undefined)[]
   }>
 > = ({ children, title, content, attachment }) => {
-  // console.log(attachment)
   return (
     <>
       {/* <Helmet>

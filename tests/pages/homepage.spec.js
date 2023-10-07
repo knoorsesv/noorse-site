@@ -11,12 +11,9 @@ test.describe('Home Page', () => {
   })
 
   test('has news items', async ({ page }) => {
-    // todo: semantically this cannot be an h1
     const newsSection = page.locator('section:has(h2:text-is("Nieuws"))')
-    // todo: semantically this should probably be <li>
     const newsItems = newsSection.locator('article')
     const firstHeadline = newsItems.nth(1).locator('h3')
-    // todo: semantically this probably shouldn't be a div
     const firstBlurb = newsItems
       .nth(1)
       .locator(' > div:last-of-type > div:last-of-type')

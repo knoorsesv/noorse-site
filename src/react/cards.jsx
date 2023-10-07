@@ -1,6 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
 
-// todo: type the input
 // todo: try to get rid of custom classNames, make all cards the same
 export const Card = ({
   header,

@@ -2,7 +2,6 @@ import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
 
 // todo: dees is echt lelijk
 export const CategoryTeamNavigation = ({ category, header }) => {
-  // console.log('category', category)
   if (!category?.ploeg?.length) {
     return <></>
   }
