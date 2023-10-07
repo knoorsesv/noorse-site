@@ -29,14 +29,13 @@ const sponsors = (
   },
 }))
 
-// console.log('sponsors', sponsors);
-
 const sitemap = siteMap
-const version = siteMetadata.version //getVersion()
+const version = siteMetadata.version
+
+const { title } = Astro.props
 ---
 
-<!-- todo: proper title -->
-<Page title="should come from input prop">
+<Page title={title}>
   <LayoutPage
     sitemap={sitemap}
     sponsors={sponsors}

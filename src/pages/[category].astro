@@ -53,10 +53,9 @@ export async function getStaticPaths() {
     }))
 }
 
-const { category } = Astro.params
 const { categoryData } = Astro.props
 ---
 
-<Layout title={category}>
+<Layout title={categoryData.naam}>
   <CategoryPage category={categoryData} />
 </Layout>

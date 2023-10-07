@@ -24,7 +24,9 @@ export async function getStaticPaths() {
   return newsItems
     .map(({ fields, sys }) => ({ ...fields, createdAt: sys.createdAt }))
     .map((newsItem) => ({
-      params: { title: newsItem.title.replaceAll('/', '-').toLowerCase() },
+      params: {
+        title: newsItem.title.replaceAll('/', '-').toLowerCase(),
+      },
       props: {
         newsItem: {
           ...newsItem,
@@ -35,11 +37,9 @@ export async function getStaticPaths() {
     }))
 }
 
-const { title } = Astro.params
 const { newsItem } = Astro.props
 ---
 
-<!-- todo: give correct SEO title and tab header (with Helmet?) -->
-<Layout title={title}>
+<Layout title={`Nieuws - ${newsItem.title}`}>
   <NewsItemPage newsItem={newsItem} />
 </Layout>
