@@ -40,9 +40,9 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaVersion: 'latest',
-      ecmaFeatures: {
-        jsx: true,
-      },
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   // parserOptions: {
   //   ecmaFeatures: {
@@ -63,7 +63,6 @@ module.exports = {
     },
     'jsx-a11y': {
       components: {
-        GatsbyImage: 'img',
         StaticImage: 'img',
       },
     },
