@@ -21,7 +21,6 @@ export const Attachments = ({ attachments }) => {
 }
 
 const getDefaultAttachments = (attachments) => {
-  // console.log(attachments)
   return (
     !!attachments &&
     attachments.filter(
