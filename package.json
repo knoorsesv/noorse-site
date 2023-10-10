@@ -78,7 +78,7 @@
     "@storybook/jest": "0.2.3",
     "@storybook/react": "7.4.6",
     "@storybook/react-vite": "7.4.6",
-    "@storybook/testing-library": "0.2.1",
+    "@storybook/testing-library": "0.2.2",
     "@types/date-fns": "2.6.0",
     "@types/react-helmet": "6.1.7",
     "@typescript-eslint/parser": "6.7.4",
