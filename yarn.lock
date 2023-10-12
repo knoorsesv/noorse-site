@@ -1691,15 +1691,15 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
   integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
-"@fontsource/lato@5.0.14":
-  version "5.0.14"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.14.tgz#550f9dbc3c9065ef542868558a88b371648aeef0"
-  integrity sha512-LVygmrEjoxlBPBcp5QMaH5fZ+aAIMR2h2Q3K4W2DETh1kphEjn/bBwiZEhg3ZFPIMu5A34lOVZygKq4HOVY8iQ==
+"@fontsource/lato@5.0.15":
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.15.tgz#e6eb2bb7b6dbac915eeafb4a990c4badc3ff4bae"
+  integrity sha512-9aDcNLhisbUHLa4sisBtN7qh7Bzs4oCMO5q3xypc7WNY6ZOtGwf0HF8u/DuYhVMmwo6C/QvlpwUgjYJO8PPL1g==
 
-"@fontsource/mulish@5.0.12":
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.12.tgz#276e713ccb071ccdb7761481be9f6d52700ac15d"
-  integrity sha512-c7dCi/7hS3o9OqjKxG8XUYtpSEqM3i2A9ExkOVCESvupGhiNSDaeosjFwlY//Fd1YMMa+wWWJyy+4ZEKEqtRgA==
+"@fontsource/mulish@5.0.13":
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-5.0.13.tgz#178f27c6d815250738f1716d2f2ab7f1c756a9f8"
+  integrity sha512-oaNm+Oh/7YH5ApVOPJrwOXbPrNATKw880JhsUvA4s0fxErUe4gKKinpzALBxkNM9xdbPU9Oo70UU5XWsChNAbw==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
