@@ -46,7 +46,7 @@
   "dependencies": {
     "@astrojs/check": "0.2.0",
     "@astrojs/react": "3.0.3",
-    "@astrojs/tailwind": "5.0.1",
+    "@astrojs/tailwind": "5.0.2",
     "@fontsource/lato": "5.0.15",
     "@fontsource/mulish": "5.0.13",
     "@netlify/classnames-template-literals": "1.0.3",
