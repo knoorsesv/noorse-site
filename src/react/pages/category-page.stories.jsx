@@ -19,11 +19,9 @@ export const WithNews = Template.bind({})
 WithInfo.args = {
   category: {
     naam: 'Senioren',
-    general_info: {
-      general_info: `# Some info
+    general_info: `# Some info
   *In markdown*
   `,
-    },
   },
 }
 

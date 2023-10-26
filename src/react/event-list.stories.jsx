@@ -19,8 +19,8 @@ export const Empty = Template.bind({})
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   await expect(canvas.getByText('6 tegen 6')).toBeInTheDocument()
-  await expect(canvas.getByText('7 mei 2023')).toBeInTheDocument()
-  await expect(canvas.getByText('8 mei 2023 - 15 mei')).toBeInTheDocument()
+  await expect(canvas.getByText('07/05/23')).toBeInTheDocument()
+  await expect(canvas.getByText('07/05/23 - 15/05/23')).toBeInTheDocument()
   await expect(canvas.getByText('Met een aankondiging')).toBeInTheDocument()
 }
 
