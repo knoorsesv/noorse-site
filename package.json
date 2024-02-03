@@ -55,7 +55,7 @@
     "@types/react-dom": "18.2.12",
     "astro": "3.3.4",
     "astro-imagetools": "0.9.0",
-    "contentful": "10.6.4",
+    "contentful": "10.6.21",
     "date-fns": "2.30.0",
     "marked": "9.1.2",
     "prop-types": "15.8.1",
