@@ -171,7 +171,7 @@ jobs:
         run: yarn test:func
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ failure() }}
         with:
           name: functional-test-playwright-report
@@ -192,12 +192,12 @@ jobs:
         run: yarn test:visual
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ failure() }}
         with:
           name: screenshot-test-playwright-report
           path: tests/playwright-report
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ failure() }}
         with:
           name: screenshot-test-test-results
