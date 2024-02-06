@@ -6,7 +6,7 @@ import { Attachments, MarkDown, Title } from '../index'
 import { Container } from '../layout'
 import { ImageWrapper } from '../../wrappers/image-wrapper'
 import { format } from 'date-fns'
-import nlBE from 'date-fns/locale/nl-BE/index.js'
+import { nlBE } from 'date-fns/locale'
 
 export const NewsItemPage = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)

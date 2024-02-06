@@ -8,6 +8,5 @@ interface ImportMetaEnv {
   readonly CONTENTFUL_TOKEN: string
   readonly CONTENTFUL_TOKEN_PREVIEW: string
 }
-declare module 'date-fns/locale/index.js'
 
 declare module 'astro-imagetools/api'

@@ -1,5 +1,5 @@
 import { format, parseISO } from 'date-fns'
-import nlBE from 'date-fns/locale/nl-BE/index.js'
+import { nlBE } from 'date-fns/locale'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { sanitizeTeamName } from '../../utils/formatting'
