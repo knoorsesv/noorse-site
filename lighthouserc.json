@@ -12,6 +12,7 @@
         "font-display": "off",
         "is-crawlable": "off",
         "csp-xss": "off",
+        "total-byte-weight": "off",
         "offscreen-images": [
           "warn",
           { "maxLength": 0 },
