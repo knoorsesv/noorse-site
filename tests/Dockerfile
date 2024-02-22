@@ -2,7 +2,8 @@ FROM mcr.microsoft.com/playwright:v1.38.1-focal
 
 WORKDIR /work
 
-ADD package.json yarn.lock /work/
+ADD package.json pnpm-lock.yaml /work/
+RUN corepack enable
 
-RUN yarn install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 RUN npx playwright install --with-deps

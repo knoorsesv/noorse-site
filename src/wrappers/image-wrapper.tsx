@@ -36,6 +36,8 @@ export const DummyImage: FC<{
     responsiveURL?: string
     fields?: { file: { url: string } }
     file: { url: string }
+    height?: number
+    width?: number
   }
   className?: string
   imgClassName?: string

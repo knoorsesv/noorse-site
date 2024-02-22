@@ -7,7 +7,7 @@ tests/playwright-report
 .prettierignore
 .eslintignore
 .husky/pre-commit
-yarn.lock
+pnpm-lock.yaml
 .npmrc
 
 storybook-static
