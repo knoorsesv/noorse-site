@@ -29,12 +29,12 @@
     "start": "CONTENTFUL_ENV=staging astro dev",
     "start:master": "CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false astro dev",
     "storybook": "storybook dev -p 6006",
-    "test": "start-server-and-test serve 'yarn --cwd tests test'",
-    "test:func": "start-server-and-test serve 'yarn --cwd tests test:func'",
-    "test:local": "yarn --cwd tests test:local",
-    "test:update-ci": "start-server-and-test serve 'yarn --cwd tests test:ci-update'",
-    "test:update-local": "start-server-and-test serve 'yarn --cwd tests test:update'",
-    "test:visual-local": "start-server-and-test serve 'yarn --cwd tests test:visual'",
+    "test": "start-server-and-test serve 'pnpm --cwd tests test'",
+    "test:func": "start-server-and-test serve 'pnpm --cwd tests test:func'",
+    "test:local": "pnpm --cwd tests test:local",
+    "test:update-ci": "start-server-and-test serve 'pnpm --cwd tests test:ci-update'",
+    "test:update-local": "start-server-and-test serve 'pnpm --cwd tests test:update'",
+    "test:visual-local": "start-server-and-test serve 'pnpm --cwd tests test:visual'",
     "chromatic": "chromatic --exit-zero-on-changes",
     "update-vv-data": "node fetch-vv.mjs"
   },
@@ -103,9 +103,10 @@
     "tailwindcss": "3.4.1",
     "vite": "4.4.11"
   },
+  "packageManager": "pnpm@8.15.3",
   "volta": {
     "node": "20.9.0",
-    "yarn": "1.22.19"
+    "pnpm": "8.15.3"
   },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/knoorsesv/noorse-site#readme",

@@ -67,7 +67,7 @@ yarn-error.log
 /.idea/
 /yalc.lock
 /.yalc/
-!/yarn.lock
+!/pnpm-lock.yaml
 /src/output.css
 /.env.development
 /.env

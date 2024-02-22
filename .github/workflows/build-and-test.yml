@@ -5,6 +5,9 @@ on:
     branches-ignore:
       - 'main'
 
+env:
+  VOLTA_FEATURE_PNPM: 1
+
 jobs:
   deps:
     runs-on: ubuntu-latest
@@ -15,8 +18,8 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm install --frozen-lockfile
 
   build-prod:
     needs: deps
@@ -28,8 +31,8 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm build
         env:
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
@@ -60,8 +63,8 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn build:dev
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm build:dev
         env:
           CONTENTFUL_TOKEN_PREVIEW: ${{secrets.CONTENTFUL_TOKEN_PREVIEW}}
           CONTENTFUL_TOKEN: ${{secrets.CONTENTFUL_TOKEN}}
@@ -95,8 +98,8 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-      - run: yarn lint
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm lint
 
   # todo: maybe reenable this when chromatich subscription runs out?
   # build-storybook:
@@ -111,8 +114,8 @@ jobs:
   #     - uses: actions/cache@v3
   #       with:
   #         path: ./node_modules
-  #         key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-  #     - run: yarn build-storybook
+  #         key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+  #     - run: pnpm build-storybook
   #     - name: Deploy
   #       uses: nwtgck/actions-netlify@v2
   #       id: deploy-storybook
@@ -143,7 +146,7 @@ jobs:
       - name: Check if tag exists
         run: 'docker manifest inspect $IMAGE'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
       - name: Build image
         # run build if previous call returned error
         # todo: would be better with an output variable instead of relying on an error
@@ -153,22 +156,22 @@ jobs:
           docker build . -t $IMAGE && docker push $IMAGE
           docker tag $IMAGE $LATEST_IMAGE && docker push $LATEST_IMAGE
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/yarn.lock') }}
-          LATEST_IMAGE: ghcr.io/knoorsesv/playwright-base:yarn-1.0
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
+          LATEST_IMAGE: ghcr.io/knoorsesv/playwright-base:pnpm-1.0
 
   test:
     needs: [build-dev, build-test-base]
     runs-on: ubuntu-latest
     name: Functional Test
     container:
-      image: ghcr.io/knoorsesv/playwright-base:yarn-1.0
+      image: ghcr.io/knoorsesv/playwright-base:pnpm-1.0
     steps:
       - uses: actions/checkout@v4
-      - run: yarn install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
         working-directory: ./tests
       - name: Run your tests
         working-directory: ./tests
-        run: yarn test:func
+        run: pnpm test:func
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - uses: actions/upload-artifact@v4
@@ -182,14 +185,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Visual Test
     container:
-      image: ghcr.io/knoorsesv/playwright-base:yarn-1.0
+      image: ghcr.io/knoorsesv/playwright-base:pnpm-1.0
     steps:
       - uses: actions/checkout@v4
-      - run: yarn install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
         working-directory: ./tests
       - name: Run your tests
         working-directory: ./tests
-        run: yarn test:visual
+        run: pnpm test:visual
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
       - uses: actions/upload-artifact@v4
@@ -205,13 +208,14 @@ jobs:
 
   chromatic:
     runs-on: ubuntu-latest
-    name: Visual Storybook Test
+    name: Chromatic Storybook Test
     needs: [build-dev, build-prod, lint]
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - run: yarn install --frozen-lockfile
+      - uses: volta-cli/action@v4
+      - run: pnpm install --frozen-lockfile
       - name: Publish to Chromatic
         uses: chromaui/action@v10
         # Chromatic GitHub Action options
