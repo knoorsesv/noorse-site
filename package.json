@@ -24,7 +24,7 @@
     "lint": "concurrently --group --prefix-colors auto \"npm:lint:*\"",
     "lint:astro": "astro check",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx,.astro,.mjs,.cjs .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "serve": "astro preview",
     "start": "CONTENTFUL_ENV=staging astro dev",
     "start:master": "CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false astro dev",

@@ -24,3 +24,5 @@ tests/Dockerfile
 *.webp
 *.sdl
 *.jpg
+
+/.husky
