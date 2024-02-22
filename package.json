@@ -80,7 +80,7 @@
     "@storybook/react-vite": "7.6.13",
     "@storybook/testing-library": "0.2.2",
     "@types/react-helmet": "6.1.11",
-    "@typescript-eslint/parser": "6.7.4",
+    "@typescript-eslint/parser": "7.0.2",
     "autoprefixer": "10.4.17",
     "chromatic": "10.8.0",
     "concurrently": "8.2.2",
