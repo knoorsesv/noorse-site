@@ -116,8 +116,8 @@ devDependencies:
     specifier: 10.4.17
     version: 10.4.17(postcss@8.4.35)
   chromatic:
-    specifier: 10.8.0
-    version: 10.8.0
+    specifier: 11.0.0
+    version: 11.0.0
   concurrently:
     specifier: 8.2.2
     version: 8.2.2
@@ -5807,8 +5807,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@10.8.0:
-    resolution: {integrity: sha512-DdgUSJJ5u+Czf+KZI+1NRz4RP/PbpcytWSUtpgqEBolGDw65VYwjI489yis+jfwKMev1VWEhj1xMYGITbD6XIA==}
+  /chromatic@11.0.0:
+    resolution: {integrity: sha512-utzRVqdMrpzYwZNf7dHWU0z0/rx6SH/FUVNozQxYHDtQfYUdEj+Ro4OSch5+Wsk2FoUmznJyLkaC2J839z1N7A==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.5.2 || ^1.0.0
