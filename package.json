@@ -44,7 +44,7 @@
     "*": "prettier --write"
   },
   "dependencies": {
-    "@astrojs/check": "0.5.5",
+    "@astrojs/check": "0.5.9",
     "@astrojs/react": "3.0.10",
     "@astrojs/tailwind": "5.1.0",
     "@fontsource/lato": "5.0.18",
