@@ -38,7 +38,7 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           PROD: true
       - name: Deploy
-        uses: nwtgck/actions-netlify@v2
+        uses: nwtgck/actions-netlify@v3
         id: deploy-prod
         with:
           publish-dir: './dist'
@@ -71,7 +71,7 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
           CONTENTFUL_ENV: staging
       - name: Deploy
-        uses: nwtgck/actions-netlify@v2
+        uses: nwtgck/actions-netlify@v3
         id: deploy-dev
         with:
           publish-dir: './dist'
