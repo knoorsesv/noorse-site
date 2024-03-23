@@ -15,11 +15,11 @@ dependencies:
     specifier: 5.1.0
     version: 5.1.0(astro@4.5.6)(tailwindcss@3.4.1)
   '@fontsource/lato':
-    specifier: 5.0.18
-    version: 5.0.18
+    specifier: 5.0.20
+    version: 5.0.20
   '@fontsource/mulish':
-    specifier: 5.0.16
-    version: 5.0.16
+    specifier: 5.0.17
+    version: 5.0.17
   '@netlify/classnames-template-literals':
     specifier: 1.0.3
     version: 1.0.3
@@ -2280,12 +2280,12 @@ packages:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: true
 
-  /@fontsource/lato@5.0.18:
-    resolution: {integrity: sha512-lJa0f4MPXtHsZsLz37wo7d4m5odfOdwCNRg0IjV06ri/fIPypJLEuUB12oWCJ38DDD/XhKVSQPo8BWV8CRBhzQ==}
+  /@fontsource/lato@5.0.20:
+    resolution: {integrity: sha512-2ej7KDuTFoea6Q2hWjx3Png1+MdNcW4V6l7sw/vNauuxCv9xBIZCmpXnTz9eVdj/5Ui//jiWWiQk57mGwjCNwA==}
     dev: false
 
-  /@fontsource/mulish@5.0.16:
-    resolution: {integrity: sha512-NM1LDZRDBWzK+9iVzgINGHVkGrSHVCJsGAK8PKrnyQ+rt99vYPGz7JOtBkEQZQbP6+Zn0uV+ie3SdETNzBAJtA==}
+  /@fontsource/mulish@5.0.17:
+    resolution: {integrity: sha512-PAJc/7O0aR9qMLDKTwi3TpTUNzOEDs6p7TA/diakl309qaug/fWfv4LUPfx5uG0CvTMMfX2pGD54AwumFuaujg==}
     dev: false
 
   /@hapi/hoek@9.3.0:
