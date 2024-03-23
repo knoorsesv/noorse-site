@@ -51,7 +51,7 @@
     "@fontsource/mulish": "5.0.17",
     "@netlify/classnames-template-literals": "1.0.3",
     "@tailwindcss/typography": "0.5.10",
-    "@types/react": "18.2.65",
+    "@types/react": "18.2.67",
     "@types/react-dom": "18.2.22",
     "astro": "4.5.6",
     "astro-imagetools": "0.9.0",
