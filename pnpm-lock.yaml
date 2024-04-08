@@ -39,8 +39,8 @@ dependencies:
     specifier: 0.9.0
     version: 0.9.0(astro@4.5.16)
   contentful:
-    specifier: 10.8.4
-    version: 10.8.4
+    specifier: 10.8.7
+    version: 10.8.7
   date-fns:
     specifier: 3.6.0
     version: 3.6.0
@@ -7182,8 +7182,8 @@ packages:
       qs: 6.11.2
     dev: false
 
-  /contentful@10.8.4:
-    resolution: {integrity: sha512-oWTG4GSp5bf6AVXMvFESEIv0R4wd0Dw0JoUHFL2Wsz984KNP35B1TMcKA2LIMW9AcE4qk36X8O9txt2WJrnCOg==}
+  /contentful@10.8.7:
+    resolution: {integrity: sha512-BkHspZUmeaqCkJXljBJBZ+WnMVU/3N1rYIxVuwH3X/0Q88zF8hb02dsZupmecm5LOHSYWg7lKKrbKit6Q0JL2A==}
     engines: {node: '>=18'}
     dependencies:
       '@contentful/rich-text-types': 16.3.4
