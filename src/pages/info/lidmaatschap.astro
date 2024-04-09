@@ -28,7 +28,7 @@ const page = (
       <MarkDownPage
         title={page.title}
         content={page.body}
-        attachment={page.attachment.map((asset) => asset?.fields)}
+        attachment={page.attachment?.map((asset) => asset?.fields)}
       />
     ) : (
       <h1>No Lidmaatschap</h1>
