@@ -19,7 +19,7 @@ export const Seo = ({ title, children }) => {
         <script
           defer
           data-domain="noorse.be"
-          src="https://serve.gvdp.be:6342/js/plausible.js"
+          src="https://plausible.io/js/script.js"
         ></script>
       )}
 

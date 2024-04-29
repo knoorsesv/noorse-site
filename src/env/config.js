@@ -1,4 +1,4 @@
-let enableAnalytics = false
+let enableAnalytics = true
 
 export default {
   enableAnalytics,
