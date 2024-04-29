@@ -9,7 +9,7 @@ export const ContactInfo = () => {
       <span>2950 Kapellen</span>
       <span>03/664.44.11</span>
       <span>
-        <EmailLink address="info@noorse.be" />
+        <EmailLink address="secretariaatnoorse@gmail.com" />
       </span>
       <div className="mt-6 flex flex-row items-center space-x-3">
         <ExternalLink
