@@ -1,5 +1,5 @@
 import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
-import { Footer, Navbar } from '../index.js'
+import { Footer, Navbar, Seo } from '../index.js'
 
 export const Layout = ({ children, version, sponsors, sitemap }) => {
   const InfoPageLink = ({ item, className }) => {
@@ -18,9 +18,7 @@ export const Layout = ({ children, version, sponsors, sitemap }) => {
   return (
     <div id="page-wrapper" className={'flex flex-col'}>
       {/* todo: reenable some sort of fallback social media image */}
-      {/* <Seo>
-        <meta property="og:image" content={logoUrl} />
-      </Seo> */}
+      <Seo>{/* <meta property="og:image" content={logoUrl} /> */}</Seo>
       <Navbar siteMap={sitemap} InfoPageLink={InfoPageLink} />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
