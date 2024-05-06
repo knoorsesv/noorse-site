@@ -45,8 +45,8 @@ dependencies:
     specifier: 3.6.0
     version: 3.6.0
   marked:
-    specifier: 12.0.1
-    version: 12.0.1
+    specifier: 12.0.2
+    version: 12.0.2
   prop-types:
     specifier: 15.8.1
     version: 15.8.1
@@ -10117,8 +10117,8 @@ packages:
       react: 18.3.1
     dev: true
 
-  /marked@12.0.1:
-    resolution: {integrity: sha512-Y1/V2yafOcOdWQCX0XpAKXzDakPOpn6U0YLxTJs3cww6VxOzZV1BTOOYWLvH3gX38cq+iLwljHHTnMtlDfg01Q==}
+  /marked@12.0.2:
+    resolution: {integrity: sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==}
     engines: {node: '>= 18'}
     hasBin: true
     dev: false
