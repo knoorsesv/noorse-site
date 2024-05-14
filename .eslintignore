@@ -1,9 +1,0 @@
-/node_modules
-/public
-/storybook-static
-/test/node_modules
-/dist
-
-.eslintrc.js
-loadershim.js
-
