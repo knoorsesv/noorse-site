@@ -6,8 +6,8 @@ const environment =
 
 const contentfulPreview = import.meta.env.CONTENTFUL_PREVIEW === 'true'
 const accessToken = contentfulPreview
-  ? (import.meta.env.CONTENTFUL_TOKEN_PREVIEW as string)
-  : (import.meta.env.CONTENTFUL_TOKEN as string)
+  ? import.meta.env.CONTENTFUL_TOKEN_PREVIEW
+  : import.meta.env.CONTENTFUL_TOKEN
 
 const space = import.meta.env.CONTENTFUL_SPACE_ID
 

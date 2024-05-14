@@ -29,9 +29,9 @@ export async function getStaticPaths() {
   const typedData: {
     teamSeriesAndRankings: Record<
       string,
-      { series?: any[]; rankings: null | any[]; __typename: string }
+      { series?: object[]; rankings: null | object[]; __typename: string }
     >
-    teamCalendar: Record<string, Object>
+    teamCalendar: Record<string, object>
   } = import.meta.env.CONTENTFUL_ENV === 'master' ? vvData : testVvData
   const actualCalendarConfig =
     import.meta.env.CONTENTFUL_ENV === 'master'
