@@ -1,5 +1,6 @@
 import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
 import { Footer, Navbar, Seo } from '../index.js'
+import { UpdateBanner } from '../update-banner.jsx'
 
 export const Layout = ({ children, version, sponsors, sitemap }) => {
   const InfoPageLink = ({ item, className }) => {
@@ -20,6 +21,7 @@ export const Layout = ({ children, version, sponsors, sitemap }) => {
       {/* todo: reenable some sort of fallback social media image */}
       <Seo>{/* <meta property="og:image" content={logoUrl} /> */}</Seo>
       <Navbar siteMap={sitemap} InfoPageLink={InfoPageLink} />
+      <UpdateBanner />
       {/* todo: should this be a main tag? */}
       <div id="content" className={'relative flex min-h-[75vh] justify-center'}>
         {children}

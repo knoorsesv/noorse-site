@@ -6,6 +6,7 @@ import type { EntryFieldTypes } from 'contentful'
 import { isFuture, parse } from 'date-fns'
 import { newsletterLink, siteMap, webshopLink } from '../env/constants'
 import { siteMetadata } from '../data/siteMetadata'
+import { UpdateBanner } from '../react/update-banner.jsx'
 
 interface Sponsor {
   contentTypeId: 'sponsor'
@@ -96,6 +97,7 @@ const version = siteMetadata.version
 ---
 
 <Page title="Home">
+  <UpdateBanner fixed={true} />
   <HomePage
     siteMap={siteMap}
     events={events}
