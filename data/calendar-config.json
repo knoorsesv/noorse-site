@@ -56,20 +56,6 @@
     "vvId": "310611"
   },
   {
-    "vvName": "Recrea Mannen B",
-    "teamName": "Noorse 3",
-    "category": "Senioren",
-    "calendarId": "5fq2ftvgpq1vnijcm2l96v38n8@group.calendar.google.com",
-    "vvId": "310609"
-  },
-  {
-    "vvName": "Recrea Mannen A",
-    "teamName": "Noorse 5",
-    "category": "Senioren",
-    "calendarId": "1rk5f44etng16fa6mv3rsod29s@group.calendar.google.com",
-    "vvId": "310610"
-  },
-  {
     "vvName": "Reserven",
     "teamName": "Reserven",
     "category": "Senioren",
@@ -197,5 +183,19 @@
     "vvName": "Eerste Elftal",
     "calendarId": "4cklu63vhlfe3353mckt69vmmo@group.calendar.google.com",
     "vvId": "310607"
+  },
+  {
+    "teamName": "Recrea Mannen A",
+    "vvName": "Recrea Mannen A",
+    "category": "Senioren",
+    "calendarId": "1rk5f44etng16fa6mv3rsod29s@group.calendar.google.com",
+    "vvId": "310610"
+  },
+  {
+    "teamName": "Recrea Mannen B",
+    "vvName": "Recrea Mannen B",
+    "category": "Senioren",
+    "calendarId": "5fq2ftvgpq1vnijcm2l96v38n8@group.calendar.google.com",
+    "vvId": "310609"
   }
 ]
