@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro'
 import { TeamPage } from '../../../react/pages'
 import { contentfulClient } from '../../../lib/contentful'
 import calendarConfig from '../../../../data/calendar-config.json'
+import testCalendarConfig from '../../../../data/test-calendar-config.json'
 import vvData from '../../../../data/vv-responses.json'
 import testVvData from '../../../../data/test-vv-responses.json'
 import type { EntryFieldTypes } from 'contentful'
@@ -32,7 +33,10 @@ export async function getStaticPaths() {
     >
     teamCalendar: Record<string, Object>
   } = import.meta.env.CONTENTFUL_ENV === 'master' ? vvData : testVvData
-
+  const actualCalendarConfig =
+    import.meta.env.CONTENTFUL_ENV === 'master'
+      ? calendarConfig
+      : testCalendarConfig
   const teams = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
       content_type: 'ploeg',
@@ -42,7 +46,7 @@ export async function getStaticPaths() {
   return teams
     .map(({ fields }) => fields)
     .map((team) => {
-      const config = calendarConfig.find(
+      const config = actualCalendarConfig.find(
         ({ vvName }) =>
           vvName === team.naamOpVoetbalVlaanderen || vvName === team.naam
       )
