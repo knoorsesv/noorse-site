@@ -37,7 +37,7 @@ export async function getStaticPaths() {
     })
   )
 
-  return categories
+  const allSeparateCategories = categories
     .map(({ fields }) => fields)
     .map((categorie, index) => ({
       params: { category: categorie.naam.toLowerCase() },
@@ -50,6 +50,21 @@ export async function getStaticPaths() {
         },
       },
     }))
+
+  return [
+    ...allSeparateCategories,
+    {
+      params: { category: 'jeugd' },
+      props: {
+        categoryData: {
+          naam: 'Jeugd',
+          categories: allSeparateCategories.filter(({ params }) =>
+            params.category.includes('jeugd')
+          ),
+        },
+      },
+    },
+  ]
 }
 
 const { categoryData } = Astro.props
