@@ -12,9 +12,7 @@ export const CategoryPage = ({ category }) => {
               key={subCategory.props.categoryData.naam}
               className="flex flex-col w-full items-center mb-10"
             >
-              <h3 className="uppercase font-bold text-xl">
-                {subCategory.props.categoryData.naam}
-              </h3>
+              <SubTitle>{subCategory.props.categoryData.naam}</SubTitle>
               <CategoryContent category={subCategory.props.categoryData} />
             </section>
           )
@@ -35,7 +33,6 @@ const CategoryContent = ({ category }) => {
     <>
       {category?.general_info && (
         <>
-          <SubTitle>Info</SubTitle>
           <MarkDown>{category.general_info}</MarkDown>
         </>
       )}
