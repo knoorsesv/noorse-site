@@ -67,6 +67,17 @@ export const TeamPage = ({
           >
             {/* todo: these could maybe already go side by side on medium screen size */}
             <div className={'flex flex-col items-center'}>
+              {ploeg.ploegfoto && (
+                <>
+                  <section className={'flex flex-col items-center'}>
+                    <img
+                      alt={`Ploegfoto ${ploeg.naam}`}
+                      src={ploeg.ploegfoto.fields.file.url}
+                      className="m-8 max-w-[360px]"
+                    />
+                  </section>
+                </>
+              )}
               {ploeg.coach && (
                 <>
                   <section className={'flex flex-col items-center'}>
@@ -196,7 +207,7 @@ export const TeamPage = ({
             </div>
           </div>
           {teamCalendar && (
-            <div id="team-calendar" className="large:max-w-3/4 mt-6">
+            <div id="team-calendar" className="large:max-w-3/4 my-6">
               <section>
                 <SubTitle>Kalender</SubTitle>
                 <CalendarTable calendar={teamCalendar} />

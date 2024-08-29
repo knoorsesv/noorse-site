@@ -6,8 +6,6 @@ export const CategoryTeamNavigation = ({ category, header }) => {
     return <></>
   }
 
-  console.log(category.ploeg)
-
   const bouwen = category.ploeg.reduce((bouwlijst, ploeg) => {
     return {
       ...bouwlijst,
