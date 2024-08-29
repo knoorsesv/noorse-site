@@ -25,7 +25,6 @@
     "lint:astro": "astro check",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx,.astro,.mjs,.cjs .",
     "prepare": "husky",
-    "serve": "astro preview",
     "start": "CONTENTFUL_ENV=staging astro dev",
     "start:master": "CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false astro dev",
     "storybook": "storybook dev -p 6006",
