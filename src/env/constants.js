@@ -51,7 +51,7 @@ export const siteMap = {
     // { name: 'Jeugd Jongens', link: '/jeugd jongens' },
     { name: 'Dames', link: '/dames' },
     // { name: 'Jeugd Meisjes', link: '/jeugd meisjes' },
-    { name: 'G-Werking', link: '/g-werking' },
+    // { name: 'G-Werking', link: '/g-werking' },
     { name: 'Contact', link: '/contact' },
   ],
 }
