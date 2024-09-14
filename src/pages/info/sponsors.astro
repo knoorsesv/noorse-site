@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import type { EntryFieldTypes } from 'contentful'
+import { SponsorPage } from '../../react/pages'
+import { contentfulClient } from '../../lib/contentful'
+
+interface Sponsor {
+  contentTypeId: 'sponsor'
+  fields: {
+    naam: EntryFieldTypes.Text
+    websiteUrl: EntryFieldTypes.Text
+    logo: EntryFieldTypes.AssetLink
+  }
+}
+
+interface Page {
+  contentTypeId: 'page'
+  fields: {
+    title: EntryFieldTypes.Text
+    body: EntryFieldTypes.Text
+  }
+}
+
+const sponsors = (
+  await contentfulClient.withoutUnresolvableLinks.getEntries<Sponsor>({
+    content_type: 'sponsor',
+  })
+).items.map(({ fields }) => ({
+  ...fields,
+  image: {
+    responsiveURL:
+      fields.logo?.fields.file?.url.replace('//', 'https://') +
+      '?w=300&h=200&fm=jpg&fl=progressive',
+  },
+}))
+
+const page = (
+  await contentfulClient.getEntries<Page>({
+    'fields.title': 'Sponsors',
+    content_type: 'page',
+  })
+).items[0]?.fields
+---
+
+<Layout title="Info - Bestuur">
+  <SponsorPage sponsors={sponsors} description={page.body} />
+</Layout>

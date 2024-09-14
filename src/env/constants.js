@@ -33,6 +33,10 @@ export const siteMap = {
           link: '/info/nieuws',
         },
         {
+          name: 'Sponsors',
+          link: '/info/sponsors',
+        },
+        {
           name: 'Structuur',
           link: '/info/structuur',
         },

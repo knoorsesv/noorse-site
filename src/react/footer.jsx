@@ -7,7 +7,7 @@ import { Version } from './version.jsx'
 import { ImageWrapper } from '../wrappers/image-wrapper'
 import { Logo } from './logo.jsx'
 
-const SponsorWithLogo = ({ sponsor, logoWidth = 'w-1/2' }) => {
+export const SponsorWithLogo = ({ sponsor, logoWidth = 'w-1/2' }) => {
   return (
     <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsor.naam}>
       <ConditionalWrapper
