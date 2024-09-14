@@ -13,6 +13,10 @@ export const siteMap = {
           link: '/info/bestuur',
         },
         {
+          name: 'Beleidsplan',
+          link: '/info/beleidsplan',
+        },
+        {
           name: 'Fairplay',
           link: '/info/fairplay',
         },
@@ -27,6 +31,10 @@ export const siteMap = {
         {
           name: 'Nieuws',
           link: '/info/nieuws',
+        },
+        {
+          name: 'Structuur',
+          link: '/info/structuur',
         },
         {
           name: 'Verzekering',
