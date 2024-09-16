@@ -31,6 +31,11 @@ const endDate = endDayOfWeek
 for (const team of config) {
   console.log('team.vvId', team.vvId)
 
+  if (!team.vvId) {
+    console.error(`No vv id for`, team)
+    throw new Error('No vvie')
+  }
+
   const params = {
     operationName: 'GetTeamCalendar',
     variables: JSON.stringify({
