@@ -7469,10 +7469,10 @@
         },
         "officials": [
           {
-            "lastName": null,
-            "firstName": null,
-            "status": "Nog aan te duiden",
-            "personAssigned": false,
+            "lastName": "De Crom",
+            "firstName": "Johan",
+            "status": null,
+            "personAssigned": true,
             "__typename": "MatchDetailOfficial"
           }
         ],
@@ -20607,6 +20607,45 @@
         "__typename": "MatchDetail"
       },
       {
+        "id": "6934272",
+        "startTime": "2024-09-18T18:00:00",
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "id": "325289",
+          "name": "K. HEIBOS SV",
+          "clubId": "1973",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
+          "__typename": "MatchDetailTeam"
+        },
+        "awayTeam": {
+          "id": "327747",
+          "name": "SV NOORSE",
+          "clubId": "8179",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "__typename": "MatchDetailTeam"
+        },
+        "outcome": {
+          "status": "planned",
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "subscript": null,
+          "__typename": "MatchDetailOutcome"
+        },
+        "series": {
+          "id": "FRN_886",
+          "name": "U13",
+          "__typename": "MatchSeries"
+        },
+        "officials": [],
+        "showScore": false,
+        "state": "planned",
+        "startDateTimeInThePassed": false,
+        "ageGroup": "U13",
+        "__typename": "MatchDetail"
+      },
+      {
         "id": "6854484",
         "startTime": "2024-09-21T12:00:00",
         "channel": "voetbalvlaanderen",
@@ -21760,12 +21799,12 @@
           "__typename": "MatchDetailTeam"
         },
         "outcome": {
-          "status": "planned",
+          "status": "forfeit",
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
           "awayTeamGoals": null,
           "awayTeamPenaltiesScored": null,
-          "subscript": null,
+          "subscript": "Forfait",
           "__typename": "MatchDetailOutcome"
         },
         "series": {
@@ -21775,7 +21814,7 @@
         },
         "officials": [],
         "showScore": false,
-        "state": "planned",
+        "state": "forfeitByOneTeam",
         "startDateTimeInThePassed": false,
         "ageGroup": "Wu11",
         "__typename": "MatchDetail"
@@ -28543,7 +28582,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00956.jpg",
                   "clubRegistrationNumber": null,
                   "points": null,
-                  "matchesPlayed": 1,
+                  "matchesPlayed": 2,
                   "matchesWon": null,
                   "matchesLost": null,
                   "matchesDrawn": null,
@@ -28597,14 +28636,14 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
                   "clubRegistrationNumber": null,
                   "points": null,
-                  "matchesPlayed": 2,
+                  "matchesPlayed": 3,
                   "matchesWon": null,
                   "matchesLost": null,
                   "matchesDrawn": null,
                   "goalsFor": null,
                   "goalsAgainst": null,
                   "goalDifference": null,
-                  "fairplayPercentage": 90,
+                  "fairplayPercentage": 93,
                   "__typename": "RankingTeam"
                 },
                 {
@@ -28718,7 +28757,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
                   "clubRegistrationNumber": null,
                   "points": null,
-                  "matchesPlayed": 1,
+                  "matchesPlayed": 2,
                   "matchesWon": null,
                   "matchesLost": null,
                   "matchesDrawn": null,
@@ -28736,7 +28775,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03182.jpg",
                   "clubRegistrationNumber": null,
                   "points": null,
-                  "matchesPlayed": 1,
+                  "matchesPlayed": 2,
                   "matchesWon": null,
                   "matchesLost": null,
                   "matchesDrawn": null,
@@ -29743,6 +29782,24 @@
                   "__typename": "RankingTeam"
                 },
                 {
+                  "teamId": "328302",
+                  "name": "F.C. KONINGSHOF A",
+                  "position": 2,
+                  "clubId": "8177",
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
+                  "clubRegistrationNumber": "R61014",
+                  "points": 7,
+                  "matchesPlayed": 3,
+                  "matchesWon": 2,
+                  "matchesLost": 0,
+                  "matchesDrawn": 1,
+                  "goalsFor": 12,
+                  "goalsAgainst": 7,
+                  "goalDifference": 5,
+                  "fairplayPercentage": 97,
+                  "__typename": "RankingTeam"
+                },
+                {
                   "teamId": "327703",
                   "name": "V.V. O.S.S.M.I. C",
                   "position": 2,
@@ -29758,24 +29815,6 @@
                   "goalsAgainst": 6,
                   "goalDifference": 5,
                   "fairplayPercentage": 94,
-                  "__typename": "RankingTeam"
-                },
-                {
-                  "teamId": "328302",
-                  "name": "F.C. KONINGSHOF A",
-                  "position": 4,
-                  "clubId": "8177",
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-                  "clubRegistrationNumber": "R61014",
-                  "points": 4,
-                  "matchesPlayed": 2,
-                  "matchesWon": 1,
-                  "matchesLost": 0,
-                  "matchesDrawn": 1,
-                  "goalsFor": 8,
-                  "goalsAgainst": 5,
-                  "goalDifference": 3,
-                  "fairplayPercentage": 96,
                   "__typename": "RankingTeam"
                 },
                 {
@@ -29840,13 +29879,13 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
                   "clubRegistrationNumber": "R61040",
                   "points": 0,
-                  "matchesPlayed": 2,
+                  "matchesPlayed": 3,
                   "matchesWon": 0,
-                  "matchesLost": 2,
+                  "matchesLost": 3,
                   "matchesDrawn": 0,
-                  "goalsFor": 2,
-                  "goalsAgainst": 7,
-                  "goalDifference": -5,
+                  "goalsFor": 4,
+                  "goalsAgainst": 11,
+                  "goalDifference": -7,
                   "fairplayPercentage": 100,
                   "__typename": "RankingTeam"
                 }
@@ -31760,6 +31799,51 @@
       "__typename": "MatchDetail"
     },
     {
+      "id": "6934272",
+      "state": "planned",
+      "title": "U13",
+      "series": { "id": "FRN_886", "__typename": "MatchSeries" },
+      "startTime": "2024-09-18T18:00:00",
+      "homeTeam": {
+        "name": "K. HEIBOS SV",
+        "clubId": "1973",
+        "id": "325289",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
+        "__typename": "MatchDetailTeam"
+      },
+      "awayTeam": {
+        "name": "SV NOORSE",
+        "clubId": "8179",
+        "id": "327747",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "__typename": "MatchDetailTeam"
+      },
+      "officials": [],
+      "province": "Voetbal Vlaanderen",
+      "eventType": "friendly",
+      "outcome": {
+        "status": "planned",
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "subscript": null,
+        "__typename": "MatchDetailOutcome"
+      },
+      "location": {
+        "pitchCode": "1",
+        "synthetic": true,
+        "address": "Vredelaan 19",
+        "postalCode": "2920",
+        "city": "Kalmthout",
+        "__typename": "MatchLocation"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "ageGroup": "U13",
+      "__typename": "MatchDetail"
+    },
+    {
       "id": "6933775",
       "state": "planned",
       "title": "U12",
@@ -32044,10 +32128,10 @@
       },
       "officials": [
         {
-          "firstName": null,
-          "lastName": null,
-          "status": "Nog aan te duiden",
-          "personAssigned": false,
+          "firstName": "Johan",
+          "lastName": "De Crom",
+          "status": null,
+          "personAssigned": true,
           "__typename": "MatchDetailOfficial"
         }
       ],
@@ -33039,7 +33123,7 @@
     },
     {
       "id": "6901135",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Meisjes U11 reeks E",
       "series": { "id": "CHP_122584", "__typename": "MatchSeries" },
       "startTime": "2024-09-22T09:30:00",
@@ -33061,12 +33145,12 @@
       "province": "Voetbal Vlaanderen",
       "eventType": "championship",
       "outcome": {
-        "status": "planned",
+        "status": "forfeit",
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
         "awayTeamGoals": null,
         "awayTeamPenaltiesScored": null,
-        "subscript": null,
+        "subscript": "Forfait",
         "__typename": "MatchDetailOutcome"
       },
       "location": {

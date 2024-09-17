@@ -142,19 +142,20 @@
     "vvName": "U13 Meisjes A"
   },
   {
-    "calendarId": "e2a8e679ad089b2a7a6ab5e84261cfbb68b1afb7c38e13090af77716f9539eee@group.calendar.google.com",
-    "source": "vv",
-    "teamName": "U15 B",
-    "vvId": "326894",
-    "vvName": "U15 B"
-  },
-  {
     "calendarId": "3br97mn1uo8oo6t2p9ot7a9fdk@group.calendar.google.com",
     "category": "Jeugd Jongens",
     "source": "contentful",
     "teamName": "U15 Geel",
     "vvId": "326893",
     "vvName": "U15 A"
+  },
+  {
+    "calendarId": "e2a8e679ad089b2a7a6ab5e84261cfbb68b1afb7c38e13090af77716f9539eee@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U15 Groen",
+    "vvId": "326894",
+    "vvName": "U15 B"
   },
   {
     "calendarId": "6aff1a5fa850fb551138a65e4976e6836e1b8f67c4df1e1d300eebfee64009ab@group.calendar.google.com",
