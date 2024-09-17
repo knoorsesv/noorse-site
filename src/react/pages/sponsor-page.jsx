@@ -12,11 +12,16 @@ export const SponsorPage = ({ sponsors, description }) => {
         {sponsors.map((sponsor) => {
           return (
             <li
-              className="w-full flex flex-col items-center"
+              className="w-full flex flex-col items-center mb-8"
               key={sponsor.naam}
             >
               <h4>{sponsor.naam}</h4>
               <SponsorWithLogo sponsor={sponsor} logoWidth="w-full" />
+              {sponsor.omschrijving ? (
+                <MarkDown>{sponsor.omschrijving}</MarkDown>
+              ) : (
+                <></>
+              )}
             </li>
           )
         })}
