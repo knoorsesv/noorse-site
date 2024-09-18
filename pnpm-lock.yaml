@@ -13,7 +13,7 @@ dependencies:
     version: 3.6.2(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1)(react@18.3.1)(vite@5.1.4)
   '@astrojs/tailwind':
     specifier: 5.1.0
-    version: 5.1.0(astro@4.15.6)(tailwindcss@3.4.1)
+    version: 5.1.0(astro@4.15.7)(tailwindcss@3.4.1)
   '@fontsource/lato':
     specifier: 5.0.21
     version: 5.0.21
@@ -33,11 +33,11 @@ dependencies:
     specifier: 18.3.0
     version: 18.3.0
   astro:
-    specifier: 4.15.6
-    version: 4.15.6(@types/node@20.11.20)(typescript@5.4.5)
+    specifier: 4.15.7
+    version: 4.15.7(@types/node@20.11.20)(typescript@5.4.5)
   astro-imagetools:
     specifier: 0.9.0
-    version: 0.9.0(astro@4.15.6)
+    version: 0.9.0(astro@4.15.7)
   contentful:
     specifier: 10.9.2
     version: 10.9.2
@@ -315,13 +315,13 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.15.6)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.15.7)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.15.6(@types/node@20.11.20)(typescript@5.4.5)
+      astro: 4.15.7(@types/node@20.11.20)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -7100,14 +7100,14 @@ packages:
       - typescript
     dev: true
 
-  /astro-imagetools@0.9.0(astro@4.15.6):
+  /astro-imagetools@0.9.0(astro@4.15.7):
     resolution: {integrity: sha512-iZCSiUbFr0h8HSyX2Fl/hzc3RlmVjNstWwsZZSyQKW9vRmMny/bd3qL3p8wuC6ISsAvtHfVnJLmorhhRhwVOcw==}
     engines: {node: ^14.15.0 || >=16.0.0}
     peerDependencies:
       astro: '>=0.26 || >=1.0.0-beta'
     dependencies:
       '@astropub/codecs': 0.4.4
-      astro: 4.15.6(@types/node@20.11.20)(typescript@5.4.5)
+      astro: 4.15.7(@types/node@20.11.20)(typescript@5.4.5)
       file-type: 17.1.1
       find-cache-dir: 3.3.2
       find-up: 6.3.0
@@ -7117,8 +7117,8 @@ packages:
       imagetools-core: 3.0.2
     dev: false
 
-  /astro@4.15.6(@types/node@20.11.20)(typescript@5.4.5):
-    resolution: {integrity: sha512-SWcUNwm8CiVRaIbh4w5byh62BNihpsovlCd4ElvC7cL/53D24HcI7AaGFsPrromCamQklwQmIan/QS7x/3lLuQ==}
+  /astro@4.15.7(@types/node@20.11.20)(typescript@5.4.5):
+    resolution: {integrity: sha512-RGZjGpLcR3jcnXA1+g56i73O77krmqs7VjpoBOfk9UVP8Js5T2YSeUBAyComOUb6vj31wEw1vgRgOEN0MzYc8w==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -9844,23 +9844,6 @@ packages:
       zwitch: 2.0.4
     dev: false
 
-  /hast-util-to-html@9.0.0:
-    resolution: {integrity: sha512-IVGhNgg7vANuUA2XKrT6sOIIPgaYZnmLx3l/CCOAK0PtgfoHrZwX7jCSYyFxHTrGmC6S9q8aQQekjp4JPZF+cw==}
-    dependencies:
-      '@types/hast': 3.0.4
-      '@types/unist': 3.0.2
-      ccount: 2.0.1
-      comma-separated-tokens: 2.0.3
-      hast-util-raw: 9.0.2
-      hast-util-whitespace: 3.0.0
-      html-void-elements: 3.0.0
-      mdast-util-to-hast: 13.1.0
-      property-information: 6.4.1
-      space-separated-tokens: 2.0.2
-      stringify-entities: 4.0.3
-      zwitch: 2.0.4
-    dev: false
-
   /hast-util-to-html@9.0.3:
     resolution: {integrity: sha512-M17uBDzMJ9RPCqLMO92gNNUDuBSq10a25SDBI08iCCxmorf4Yy6sYHK57n9WAbRAAaU+DuR4W6GN9K4DFZesYg==}
     dependencies:
@@ -10988,7 +10971,7 @@ packages:
     dependencies:
       '@babel/parser': 7.25.6
       '@babel/types': 7.25.6
-      source-map-js: 1.2.0
+      source-map-js: 1.2.1
     dev: false
 
   /make-dir@2.1.0:
@@ -13003,7 +12986,7 @@ packages:
     dependencies:
       '@types/hast': 3.0.4
       hast-util-from-html: 2.0.1
-      unified: 11.0.4
+      unified: 11.0.5
     dev: false
 
   /rehype-raw@7.0.0:
@@ -13018,8 +13001,8 @@ packages:
     resolution: {integrity: sha512-1TX1i048LooI9QoecrXy7nGFFbFSufxVRAfc6Y9YMRAi56l+oB0zP51mLSV312uRuvVLPV1opSlJmslozR1XHQ==}
     dependencies:
       '@types/hast': 3.0.4
-      hast-util-to-html: 9.0.0
-      unified: 11.0.4
+      hast-util-to-html: 9.0.3
+      unified: 11.0.5
     dev: false
 
   /rehype@13.0.1:
@@ -13028,7 +13011,7 @@ packages:
       '@types/hast': 3.0.4
       rehype-parse: 9.0.0
       rehype-stringify: 10.0.0
-      unified: 11.0.4
+      unified: 11.0.5
     dev: false
 
   /remark-external-links@8.0.0:
@@ -14396,18 +14379,6 @@ packages:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
     engines: {node: '>=18'}
     dev: true
-
-  /unified@11.0.4:
-    resolution: {integrity: sha512-apMPnyLjAX+ty4OrNap7yumyVAMlKx5IWU2wlzzUdYJO9A8f1p9m/gywF/GM2ZDFcjQPrx59Mc90KwmxsoklxQ==}
-    dependencies:
-      '@types/unist': 3.0.2
-      bail: 2.0.2
-      devlop: 1.1.0
-      extend: 3.0.2
-      is-plain-obj: 4.1.0
-      trough: 2.2.0
-      vfile: 6.0.3
-    dev: false
 
   /unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
