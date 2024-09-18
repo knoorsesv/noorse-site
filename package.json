@@ -107,6 +107,11 @@
     "node": "20.12.2",
     "pnpm": "8.15.3"
   },
+  "pnpm": {
+    "overrides": {
+      "sharp": "0.33.5"
+    }
+  },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/knoorsesv/noorse-site#readme",
   "_id": "website-noorse@1.0.5"
