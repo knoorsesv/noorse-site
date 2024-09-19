@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 // playwright.config.js
 // @ts-check
 require('dotenv').config()
