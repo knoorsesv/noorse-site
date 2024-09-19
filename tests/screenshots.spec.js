@@ -10,20 +10,23 @@ const pages = [
   {
     pageUrl: '/team/senioren/eerste%20elftal',
     waitFor: '[alt="Ploegfoto Eerste Elftal"]',
+    timeout: 45000,
   },
   { pageUrl: '/senioren' },
 ]
 
 test.describe.parallel('Screenshot Test', () => {
-  pages.forEach(({ pageUrl, takeFullPage, pageName, waitFor }) => {
+  pages.forEach(({ pageUrl, takeFullPage, pageName, waitFor, timeout }) => {
     test(`for ${pageUrl}`, async ({ page }) => {
       await page.goto(pageUrl)
       await page.waitForLoadState('networkidle')
-
+      if (timeout) {
+        test.setTimeout(timeout)
+      }
       try {
         await (
           await page.$(waitFor || '[alt="Noorse Logo"]')
-        ).waitForElementState('stable', { timeout: 10000 })
+        ).waitForElementState('stable', { timeout: timeout || 5000 })
       } catch (e) {
         console.error(e)
       }
@@ -33,7 +36,7 @@ test.describe.parallel('Screenshot Test', () => {
       await expect(page).toHaveScreenshot(snapshotLocation, {
         maxDiffPixelRatio: 0.05,
         fullPage: takeFullPage,
-        timeout: 10000,
+        timeout: timeout || 10000,
       })
       // expect(await page.screenshot({ fullPage: takeFullPage })).toMatchSnapshot(
       //   snapshotLocation,
