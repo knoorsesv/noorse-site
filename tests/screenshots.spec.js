@@ -1,3 +1,4 @@
+// eslint-disable no-console
 const { test, expect } = require('@playwright/test')
 
 const pages = [
@@ -28,8 +29,10 @@ test.describe.parallel('Screenshot Test', () => {
         console.error(e)
       }
       // todo: maybe scroll on big pages? / open navbar on mobile?
+      const snapshotLocation = `page${pageUrl.replace('/', '-').replace('%20', '-')}.png`
+      console.log('comparing screenshot to', snapshotLocation)
       expect(await page.screenshot({ fullPage: takeFullPage })).toMatchSnapshot(
-        `page${pageUrl.replace('/', '-').replace('%20', '-')}.png`,
+        snapshotLocation,
         {
           maxDiffPixelRatio: 0.05,
         }
