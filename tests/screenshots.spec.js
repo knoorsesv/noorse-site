@@ -10,7 +10,7 @@ const pages = [
   {
     pageUrl: '/team/senioren/eerste%20elftal',
     waitFor: '[alt="Ploegfoto Eerste Elftal"]',
-    timeout: 45000,
+    timeout: 30000,
   },
   { pageUrl: '/senioren' },
 ]
