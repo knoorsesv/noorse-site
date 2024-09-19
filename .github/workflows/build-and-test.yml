@@ -156,7 +156,7 @@ jobs:
           docker build . -t $IMAGE && docker push $IMAGE
           docker tag $IMAGE $LATEST_IMAGE && docker push $LATEST_IMAGE
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml', 'tests/Dockerfile') }}
           LATEST_IMAGE: ghcr.io/knoorsesv/playwright-base:pnpm-1.0
 
   test:
