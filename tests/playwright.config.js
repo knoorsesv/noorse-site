@@ -54,7 +54,7 @@ const config = {
       name: 'Screenshot Medium',
       testMatch: 'screenshots.spec.js',
       use: {
-        browserName: 'firefox',
+        browserName: 'chromium', // todo: try to make this firefox in CI
         viewport: {
           width: 640,
           height: 360,
