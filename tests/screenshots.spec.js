@@ -18,14 +18,14 @@ test.describe.parallel('Screenshot Test', () => {
       await page.goto(pageUrl)
       await page.waitForLoadState('networkidle')
 
-      try {
-        await (
-          await page.$('[alt="Noorse Logo"]')
-        ).waitForElementState('stable', { timeout: 5000 })
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e)
-      }
+      // try {
+      //   await (
+      //     await page.$('[alt="Noorse Logo"]')
+      //   ).waitForElementState('stable', { timeout: 5000 })
+      // } catch (e) {
+      //   // eslint-disable-next-line no-console
+      //   console.error(e)
+      // }
       // todo: maybe scroll on big pages? / open navbar on mobile?
       expect(
         await page.screenshot({ fullPage: takeFullPage.includes(pageUrl) })
