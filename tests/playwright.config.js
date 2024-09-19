@@ -37,31 +37,27 @@ const config = {
       },
     },
     {
-      name: 'Screenshot Small', // todo: fix this typo and update relevant filenames
+      name: 'Screenshot Small',
       testMatch: 'screenshots.spec.js',
       use: {
+        browserName: 'webkit',
         viewport: {
           width: 390,
           height: 664,
         },
         deviceScaleFactor: 3,
-        isMobile: true,
-        hasTouch: true,
-        defaultBrowserType: 'webkit',
       },
     },
     {
       name: 'Screenshot Medium',
       testMatch: 'screenshots.spec.js',
       use: {
+        browserName: 'firefox',
         viewport: {
           width: 640,
           height: 360,
         },
         deviceScaleFactor: 3,
-        isMobile: true,
-        hasTouch: true,
-        defaultBrowserType: 'chromium',
       },
     },
   ],
