@@ -146,7 +146,7 @@ jobs:
       - name: Check if tag exists
         run: 'docker manifest inspect $IMAGE'
         env:
-          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml') }}
+          IMAGE: ghcr.io/knoorsesv/playwright-base:${{ hashFiles('tests/pnpm-lock.yaml', 'tests/Dockerfile') }}
       - name: Build image
         # run build if previous call returned error
         # todo: would be better with an output variable instead of relying on an error
