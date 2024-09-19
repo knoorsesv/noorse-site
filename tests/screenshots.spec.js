@@ -2,7 +2,12 @@
 const { test, expect } = require('@playwright/test')
 
 const pages = [
-  { pageUrl: '/', pageName: '-home', takeFullPage: true },
+  {
+    pageUrl: '/',
+    pageName: '-home',
+    waitFor: '[alt="Sport Vlaanderen Logo"]',
+    takeFullPage: true,
+  },
   { pageUrl: '/info/nieuws' },
   { pageUrl: '/info/kalender' },
   { pageUrl: '/info/bestuur' },
