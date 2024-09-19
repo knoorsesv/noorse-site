@@ -32,6 +32,8 @@ test.describe.parallel('Screenshot Test', () => {
       console.log('comparing screenshot to', snapshotLocation)
       await expect(page).toHaveScreenshot(snapshotLocation, {
         maxDiffPixelRatio: 0.05,
+        fullPage: takeFullPage,
+        timeout: 10000,
       })
       // expect(await page.screenshot({ fullPage: takeFullPage })).toMatchSnapshot(
       //   snapshotLocation,
