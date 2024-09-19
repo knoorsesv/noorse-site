@@ -37,7 +37,7 @@ const config = {
       },
     },
     {
-      name: 'Schreenshot Small', // todo: fix this typo and update relevant filenames
+      name: 'Shreenshot Small', // todo: fix this typo and update relevant filenames
       testMatch: 'screenshots.spec.js',
       use: {
         viewport: {
