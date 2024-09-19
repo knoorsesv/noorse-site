@@ -19,7 +19,7 @@ gh run download $lastRunId --name screenshot-test-test-results --dir ./test-resu
 setopt extended_glob
 
 for file in ./test-results/**/*-actual.png~*retry*(N); do 
-  echo $file; 
+  echo "found actual screenshot $file in test results"; 
   # echo $file | sed 's/test-results\/screenshots-Screenshot-Test-for/page/';
   # echo $file | sed 's/test-results\/screenshots-Screenshot-Test-for/page/' | sed 's/\.\///'
   newFileName=$(echo $file | sed 's/test-results\/screenshots-Screenshot-Test-for/page/' | sed 's/\.\///' | sed 's/\/.*-actual.png/-linux.png/')

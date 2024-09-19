@@ -29,9 +29,12 @@ test.describe.parallel('Screenshot Test', () => {
       // todo: maybe scroll on big pages? / open navbar on mobile?
       expect(
         await page.screenshot({ fullPage: takeFullPage.includes(pageUrl) })
-      ).toMatchSnapshot(`page${pageUrl.replace('/', '-')}.png`, {
-        maxDiffPixelRatio: 0.05,
-      })
+      ).toMatchSnapshot(
+        `page${pageUrl.replace('/', '-').replace('%20', '-')}.png`,
+        {
+          maxDiffPixelRatio: 0.05,
+        }
+      )
     })
   })
 })
