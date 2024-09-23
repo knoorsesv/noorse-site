@@ -48,8 +48,8 @@ dependencies:
     specifier: 3.6.0
     version: 3.6.0
   marked:
-    specifier: 12.0.2
-    version: 12.0.2
+    specifier: 13.0.3
+    version: 13.0.3
   prop-types:
     specifier: 15.8.1
     version: 15.8.1
@@ -10973,8 +10973,8 @@ packages:
       react: 18.3.1
     dev: true
 
-  /marked@12.0.2:
-    resolution: {integrity: sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==}
+  /marked@13.0.3:
+    resolution: {integrity: sha512-rqRix3/TWzE9rIoFGIn8JmsVfhiuC8VIQ8IdX5TfzmeBucdY05/0UlzKaw0eVtpcN/OdVFpBk7CjKGo9iHJ/zA==}
     engines: {node: '>= 18'}
     hasBin: true
     dev: false
