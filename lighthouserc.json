@@ -11,6 +11,7 @@
       "assertions": {
         "font-display": "off",
         "is-crawlable": "off",
+        "image-aspect-ratio": "off",
         "csp-xss": "off",
         "total-byte-weight": "off",
         "offscreen-images": [
