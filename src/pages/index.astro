@@ -59,11 +59,13 @@ const newsItems = (
     ...fields,
     createdAt: sys.createdAt,
     category: { naam: fields.category?.fields.naam },
-    image: {
-      responsiveURL:
-        fields.image?.fields.file?.url.replace('//', 'https://') +
-        '?w=300&h=200&fm=webp',
-    },
+    ...(fields.image && {
+      image: {
+        responsiveURL:
+          fields.image.fields.file?.url.replace('//', 'https://') +
+          '?w=300&h=200&fm=webp',
+      },
+    }),
   }))
   .slice(0, 3)
 
