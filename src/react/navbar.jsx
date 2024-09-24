@@ -6,7 +6,7 @@ import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
 // import aerial from '../images/noorse_aerial.png?w=600;800;1200&h=200;400;800&format=webp&q=50,100'
-import aerial from '../images/noorse_luchtfoto.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
+import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
@@ -47,7 +47,7 @@ const NavSection = ({
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
             loading={'eager'}
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-center aspect-[3/2]"
             src={aerial}
           />
         </div>
