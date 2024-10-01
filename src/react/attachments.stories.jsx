@@ -1,8 +1,5 @@
+import { expect, within } from '@storybook/test'
 import { Attachments } from './attachments.jsx'
-
-import { within } from '@storybook/testing-library'
-
-import { expect } from '@storybook/jest'
 
 const Template = (args) => <Attachments {...args} />
 
