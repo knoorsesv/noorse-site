@@ -1,4 +1,4 @@
-import contentful from 'contentful'
+import * as contentful from 'contentful'
 
 const environment =
   import.meta.env.CONTENTFUL_ENV ||
