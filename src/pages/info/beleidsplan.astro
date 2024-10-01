@@ -23,7 +23,11 @@ const page = (
 <Layout title="Info - Beleidsplan">
   {
     page ? (
-      <MarkDownPage title={page.title} content={page.body} />
+      <MarkDownPage
+        title={page.title}
+        content={page.body}
+        markdownClassNames="collapsible-ul-sections"
+      />
     ) : (
       <h1>No Beleidsplan</h1>
     )

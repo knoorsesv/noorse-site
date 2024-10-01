@@ -5,3 +5,11 @@
 button {
   @apply cursor-pointer bg-transparent;
 }
+
+.collapsible-ul-sections ul {
+  @apply cursor-pointer;
+}
+
+.collapsible-ul-sections li > ul > li {
+  @apply hidden;
+}
