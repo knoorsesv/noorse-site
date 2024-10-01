@@ -14,7 +14,7 @@ const pages = [
   { pageUrl: '/nieuws/Alle Mogelijke Opties', takeFullPage: true },
   {
     pageUrl: '/team/senioren/eerste%20elftal',
-    pageName: 'ploeg',
+    pageName: '-ploeg',
     waitFor: '[alt="Ploegfoto Eerste Elftal"]',
     timeout: 40000,
   },
