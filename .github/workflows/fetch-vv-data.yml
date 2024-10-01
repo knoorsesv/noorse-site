@@ -1,0 +1,41 @@
+name: Sync data from vv
+
+on:
+  schedule:
+    # Every day at 1am
+    - cron: '0 1 * * *'
+
+env:
+  VOLTA_FEATURE_PNPM: 1
+
+jobs:
+  deps:
+    runs-on: ubuntu-latest
+    name: 'Download and cache dependencies'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
+      - uses: actions/cache@v4
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm install --frozen-lockfile
+
+  run-sync:
+    needs: deps
+    runs-on: ubuntu-latest
+    name: Run Sync
+    steps:
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
+      - uses: actions/cache@v4
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm update-vv-data
+      - run: pnpm format
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: 'data/*.json'
+          message: 'chore: update vv data'
+          default_author: github_actions
