@@ -49,7 +49,7 @@
     "@fontsource/lato": "5.0.21",
     "@fontsource/mulish": "5.0.18",
     "@netlify/classnames-template-literals": "1.0.3",
-    "@tailwindcss/typography": "0.5.14",
+    "@tailwindcss/typography": "0.5.15",
     "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
     "astro": "4.15.7",
