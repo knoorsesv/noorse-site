@@ -9,8 +9,9 @@ export const MarkDownPage: FC<
     title: string
     content: string
     attachment?: (AssetFields | undefined)[]
+    markdownClassNames?: string
   }>
-> = ({ children, title, content, attachment }) => {
+> = ({ children, title, content, attachment, markdownClassNames }) => {
   return (
     <>
       {/* <Helmet>
@@ -25,12 +26,14 @@ export const MarkDownPage: FC<
       <Container>
         <Title>{title}</Title>
         {children || content ? (
-          <MarkDown>{children || content}</MarkDown>
+          <MarkDown sectionClassNames={markdownClassNames}>
+            {children || content}
+          </MarkDown>
         ) : (
           <section>No content</section>
         )}
         {attachment ? (
-          <section className={'prose'}>
+          <section className="prose">
             <Attachments attachments={attachment} />
           </section>
         ) : (
