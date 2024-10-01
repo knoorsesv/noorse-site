@@ -1,7 +1,6 @@
-import { EventList } from './event-list.jsx'
-import { expect } from '@storybook/jest'
-import { within } from '@storybook/testing-library'
+import { expect, within } from '@storybook/test'
 import { eventList } from './data/event-factory.js'
+import { EventList } from './event-list.jsx'
 
 const Template = (args) => <EventList {...args} />
 
