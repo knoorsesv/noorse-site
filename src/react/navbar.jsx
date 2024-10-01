@@ -63,20 +63,20 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   const ulClasses = ctl(`
   fixed top-0
   list-none z-50
-  flex flex-col large:flex-row large:justify-end large:items-center
-  space-y-3 large:space-y-0
-  pr-4 large:pr-6
+  flex flex-col extraLarge:flex-row extraLarge:justify-end extraLarge:items-center
+  space-y-3 extraLarge:space-y-0
+  pr-4 extraLarge:pr-6
   w-1/2 medium:w-2/5
   ${transition}
   ${
     sideBarMenuShown
       ? 'pt-20 h-full bg-green opacity-100 right-0'
-      : 'pt-16 opacity-0 -right-1/2 large:right-0'
+      : 'pt-16 opacity-0 -right-1/2 extraLarge:right-0'
   }
   ${
     topMenuBarShown
-      ? `h-full large:h-80p bg-green large:opacity-100 right-0 large:w-full large:py-10`
-      : 'large:right-0 large:w-auto large:h-16 large:top-6 large:pt-0 large:pl-5 large:opacity-90 large:bg-green'
+      ? `h-full extraLarge:h-80p bg-green extraLarge:opacity-100 right-0 extraLarge:w-full extraLarge:py-10`
+      : 'extraLarge:right-0 extraLarge:w-auto extraLarge:h-16 extraLarge:top-6 extraLarge:pt-0 extraLarge:pl-5 extraLarge:opacity-90 extraLarge:bg-green'
   }
   `)
   const navClasses = ctl(`
@@ -104,8 +104,8 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
       <ul id="menu-list" className={ulClasses}>
         {siteMap.items.map((item) => {
           const [opened, setOpened] = useState(false)
-          const liClasses = ctl(`text-right large:text-center
-    large:mx-2 large:px-3 large:py-3
+          const liClasses = ctl(`text-right extraLarge:text-center
+    extraLarge:mx-2 extraLarge:px-3 extraLarge:py-3
   ${transition}
   ${item.subItems && 'group'}`)
           return (
@@ -121,13 +121,13 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
                   opened ? (
                     <ChevronDown
                       className={`ml-1 text-white ${
-                        !item.subItems && 'large:hidden'
+                        !item.subItems && 'extraLarge:hidden'
                       } `}
                     />
                   ) : (
                     <ChevronRight
                       className={`ml-1 text-white ${
-                        !item.subItems && 'large:hidden'
+                        !item.subItems && 'extraLarge:hidden'
                       } `}
                     />
                   )
@@ -164,9 +164,9 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
 const SubMenuItemList = ({ item, InfoPageLink }) => {
   const ulClasses = ctl(`
   list-none
-  large:hidden large:group-hover:absolute large:group-hover:flex
-  flex flex-col space-y-3 large:items-start large:-ml-1
-  w-auto large:p-6 mr-4 large:bg-green large:opacity-90
+  extraLarge:hidden extraLarge:group-hover:absolute extraLarge:group-hover:flex
+  flex flex-col space-y-3 extraLarge:items-start extraLarge:-ml-1
+  w-auto extraLarge:p-6 mr-4 extraLarge:bg-green extraLarge:opacity-90
   ${transition}`)
 
   return (
@@ -244,7 +244,7 @@ const MenuLogo = ({ topMenuBarShown }) => {
 
 const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
   const toggleWrapperClasses = ctl(`fixed right-0 top-0
-    large:hidden
+    extraLarge:hidden
     mt-4 mr-3 medium:mt-6 medium:mr-4
     p-2 z-50 text-white
     ${sideBarMenuShown || topMenuBarShown ? '' : 'bg-green'} ${transition}`)

@@ -10,6 +10,7 @@ module.exports = {
     screens: {
       medium: '640px',
       large: '1024px',
+      extraLarge: '1324px',
     },
     fontSize: {
       xs: '0.75rem',
