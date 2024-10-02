@@ -39,3 +39,4 @@ jobs:
           add: 'data/*.json'
           message: 'chore: update vv data'
           default_author: github_actions
+          push: '--force'
