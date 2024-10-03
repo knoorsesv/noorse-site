@@ -2,13 +2,18 @@
 
 cd ~/code/noorse-site
 
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/github
+
 git pull
+
+whoami
+which pnpm
+
 pnpm i
 pnpm update-vv-data
 pnpm format
 
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/github
 
 git add data
 git commit -m "chore: update vv data"
