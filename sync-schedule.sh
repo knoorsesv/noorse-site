@@ -2,7 +2,7 @@
 
 cd ~/code/noorse-site
 
-source ~/.bashrc
+. ~/.bashrc
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github
