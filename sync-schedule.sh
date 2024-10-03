@@ -1,7 +1,9 @@
 #! /bin/bash
 set -e
 
-echo "running sync script $date"
+current_date_time=$(date)
+
+echo "running sync script at $current_date_time"
 
 cd ~/code/noorse-site
 
