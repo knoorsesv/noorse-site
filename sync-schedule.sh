@@ -1,5 +1,8 @@
 #! /bin/bash
 set -e
+
+echo "running sync script $date"
+
 cd ~/code/noorse-site
 
 . ~/.bashrc
