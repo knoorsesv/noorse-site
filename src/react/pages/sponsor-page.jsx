@@ -8,11 +8,11 @@ export const SponsorPage = ({ sponsors, description }) => {
 
       <SubTitle>Huidige sponsors</SubTitle>
 
-      <ul className="list-none w-full mt-10">
+      <ul className="mt-10 w-full list-none">
         {sponsors.map((sponsor) => {
           return (
             <li
-              className="w-full flex flex-col items-center mb-8"
+              className="mb-8 flex w-full flex-col items-center"
               key={sponsor.naam}
             >
               <h4>{sponsor.naam}</h4>

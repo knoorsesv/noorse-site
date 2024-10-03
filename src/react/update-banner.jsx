@@ -6,7 +6,7 @@ export const UpdateBanner = (props) => {
     <div
       className={ctl(
         `flex items-center rounded-lg bg-gray-300 p-8
-       ${props.fixed ? 'fixed top-12 mx-8 w-[90vw] z-[40]' : 'w-full'}`
+       ${props.fixed ? 'fixed top-12 z-[40] mx-8 w-[90vw]' : 'w-full'}`
       )}
     >
       <Exclamation className="color-black mr-5 h-10 w-10 shrink-0" />

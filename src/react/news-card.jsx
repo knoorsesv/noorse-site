@@ -15,7 +15,7 @@ export const NewsCard = ({ newsItem, image }) => {
           <ImageWrapper
             image={image}
             srcSet={srcSet}
-            className="h-full w-auto aspect-auto"
+            className="aspect-auto h-full w-auto"
             height="200"
             alt={'Card Header'} // todo: this is not meaningful alt text about what is in the image
           />

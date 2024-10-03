@@ -47,7 +47,7 @@ const NavSection = ({
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
             loading={'eager'}
-            className="h-full w-full object-cover object-center aspect-[3/2]"
+            className="aspect-[3/2] h-full w-full object-cover object-center"
             src={aerial}
           />
         </div>

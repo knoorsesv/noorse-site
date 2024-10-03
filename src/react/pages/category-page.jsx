@@ -10,7 +10,7 @@ export const CategoryPage = ({ category }) => {
           return (
             <section
               key={subCategory.props.categoryData.naam}
-              className="flex flex-col w-full items-center mb-10"
+              className="mb-10 flex w-full flex-col items-center"
             >
               <SubTitle>{subCategory.props.categoryData.naam}</SubTitle>
               <CategoryContent category={subCategory.props.categoryData} />

@@ -18,11 +18,11 @@ export const CategoryTeamNavigation = ({ category, header }) => {
   return (
     <nav
       aria-labelledby="team-navigation"
-      className={`bg-green-light bg-opacity-25 p-6 flex flex-col items-center gap-8`}
+      className={`flex flex-col items-center gap-8 bg-green-light bg-opacity-25 p-6`}
     >
       <h3
         id="team-navigation"
-        className={'w-full border-b-2 border-black pb-2 text-center mb-2'}
+        className={'mb-2 w-full border-b-2 border-black pb-2 text-center'}
       >
         {header || category.naam}
       </h3>
@@ -35,8 +35,8 @@ export const CategoryTeamNavigation = ({ category, header }) => {
         .map((bouw) => {
           return (
             <div className="flex flex-col items-center" key={bouw}>
-              <h4 className="capitalize font-bold mb-2">{bouw}</h4>
-              <div className={'w-full gap-2 flex-start flex flex-wrap'}>
+              <h4 className="mb-2 font-bold capitalize">{bouw}</h4>
+              <div className={'flex-start flex w-full flex-wrap gap-2'}>
                 {bouwen[bouw]
                   .sort((ploeg1, ploeg2) => {
                     const normalizedName1 = ploeg1.naam
@@ -70,7 +70,7 @@ export const CategoryTeamNavigation = ({ category, header }) => {
                       key={ploeg.naam}
                       href={`/team/${category.naam.toLowerCase()}/${ploeg.naam.toLowerCase()}`}
                       className={
-                        'text-center w-[80px] text-gray-dark underline'
+                        'w-[80px] text-center text-gray-dark underline'
                       }
                     >
                       {ploeg.naam}
