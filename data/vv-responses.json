@@ -387,53 +387,6 @@
         "__typename": "MatchDetail"
       },
       {
-        "id": "6802447",
-        "startTime": "2024-08-28T20:00:00",
-        "channel": "voetbalvlaanderen",
-        "homeTeam": {
-          "id": "310607",
-          "name": "SV NOORSE",
-          "clubId": "8179",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-          "__typename": "MatchDetailTeam"
-        },
-        "awayTeam": {
-          "id": "308922",
-          "name": "CANTINCRODE",
-          "clubId": "8163",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61002.jpg",
-          "__typename": "MatchDetailTeam"
-        },
-        "outcome": {
-          "status": "finished",
-          "homeTeamGoals": 2,
-          "homeTeamPenaltiesScored": null,
-          "awayTeamGoals": 6,
-          "awayTeamPenaltiesScored": null,
-          "subscript": null,
-          "__typename": "MatchDetailOutcome"
-        },
-        "series": {
-          "id": "FRN_918",
-          "name": "1e Ploegen 3-4 Prov",
-          "__typename": "MatchSeries"
-        },
-        "officials": [
-          {
-            "lastName": "Van Damme",
-            "firstName": "Janvier",
-            "status": null,
-            "personAssigned": true,
-            "__typename": "MatchDetailOfficial"
-          }
-        ],
-        "showScore": true,
-        "state": "finished",
-        "startDateTimeInThePassed": true,
-        "ageGroup": "Equipe Première",
-        "__typename": "MatchDetail"
-      },
-      {
         "id": "6788544",
         "startTime": "2024-08-28T20:00:00",
         "channel": "voetbalvlaanderen",
@@ -476,6 +429,53 @@
         ],
         "showScore": true,
         "state": "planned",
+        "startDateTimeInThePassed": true,
+        "ageGroup": "Equipe Première",
+        "__typename": "MatchDetail"
+      },
+      {
+        "id": "6802447",
+        "startTime": "2024-08-28T20:00:00",
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "id": "310607",
+          "name": "SV NOORSE",
+          "clubId": "8179",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "__typename": "MatchDetailTeam"
+        },
+        "awayTeam": {
+          "id": "308922",
+          "name": "CANTINCRODE",
+          "clubId": "8163",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61002.jpg",
+          "__typename": "MatchDetailTeam"
+        },
+        "outcome": {
+          "status": "finished",
+          "homeTeamGoals": 2,
+          "homeTeamPenaltiesScored": null,
+          "awayTeamGoals": 6,
+          "awayTeamPenaltiesScored": null,
+          "subscript": null,
+          "__typename": "MatchDetailOutcome"
+        },
+        "series": {
+          "id": "FRN_918",
+          "name": "1e Ploegen 3-4 Prov",
+          "__typename": "MatchSeries"
+        },
+        "officials": [
+          {
+            "lastName": "Van Damme",
+            "firstName": "Janvier",
+            "status": null,
+            "personAssigned": true,
+            "__typename": "MatchDetailOfficial"
+          }
+        ],
+        "showScore": true,
+        "state": "finished",
         "startDateTimeInThePassed": true,
         "ageGroup": "Equipe Première",
         "__typename": "MatchDetail"
