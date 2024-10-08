@@ -7,9 +7,10 @@ echo "running sync script at $current_date_time"
 
 cd ~/code/noorse-site
 
-. ~/.bashrc
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
-echo $PATH
+echo "path $PATH "
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github
