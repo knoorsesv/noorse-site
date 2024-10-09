@@ -35,7 +35,7 @@
     "test:update-local": "start-server-and-test serve 'pnpm --cwd tests test:update'",
     "test:visual-local": "start-server-and-test serve 'pnpm --cwd tests test:visual'",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "update-vv-data": "node fetch-vv.mjs"
+    "update-vv-data": "node fetch-vv.mjs && jsonsort data && pnpm format"
   },
   "lint-staged": {
     "*.js,*.jsx": "eslint --cache --fix",
@@ -91,6 +91,7 @@
     "eslint-plugin-react": "7.37.1",
     "globals": "15.9.0",
     "husky": "9.0.11",
+    "json-sort-cli": "4.0.4",
     "lint-staged": "15.2.2",
     "nodemon": "3.0.3",
     "postcss": "8.4.38",

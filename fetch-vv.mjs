@@ -58,7 +58,7 @@ for (const team of config) {
   const resp = await fetch(fetchUrl, { method: 'GET', headers })
   const data = await resp.json()
   console.log('resp', data)
-  vvResponse.teamCalendar[`${team.vvId}`] = data.data.teamCalendar
+  vvResponse.teamCalendar[`${team.vvId}`] = sortById(data.data.teamCalendar)
 }
 
 for (const team of config) {
@@ -113,6 +113,20 @@ console.log('fetchUrl', fetchUrl)
 const resp = await fetch(fetchUrl, { method: 'GET', headers })
 const data = await resp.json()
 console.log('resp', data)
-vvResponse.clubMatchesAssignations = data.data.clubMatchesAssignations
+
+vvResponse.clubMatchesAssignations = sortById(data.data.clubMatchesAssignations)
 
 fs.writeFileSync('./data/vv-responses.json', JSON.stringify(vvResponse))
+
+function sortById(jsonArray) {
+  // Sorting the array based on the 'id' property
+  return jsonArray.sort((a, b) => {
+    if (Number(a.id) < Number(b.id)) {
+      return -1
+    }
+    if (Number(a.id) > Number(b.id)) {
+      return 1
+    }
+    return 0 // equal ids
+  })
+}

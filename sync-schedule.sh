@@ -22,7 +22,7 @@ which pnpm
 
 pnpm i
 pnpm update-vv-data
-pnpm format
+
 
 
 git add data
