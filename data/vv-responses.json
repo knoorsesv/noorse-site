@@ -212,11 +212,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 6,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -225,9 +225,9 @@
         "id": "CHP_122008"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-09T20:15:00",
-      "state": "planned",
+      "state": "finished",
       "title": "RRC1 - Recrea Mannen ANT"
     },
     {
@@ -6597,11 +6597,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 3,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 6,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -6610,9 +6610,9 @@
           "name": "RRC1 - Recrea Mannen ANT"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-09T20:15:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -19272,10 +19272,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Céline Françoise",
+            "lastName": "Goffin",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -29805,6 +29805,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8177",
+                  "clubRegistrationNumber": "R61014",
+                  "fairplayPercentage": null,
+                  "goalDifference": 2,
+                  "goalsAgainst": 16,
+                  "goalsFor": 18,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 1,
+                  "matchesPlayed": 4,
+                  "matchesWon": 2,
+                  "name": "F.C. KONINGSHOF B",
+                  "points": 7,
+                  "position": 3,
+                  "teamId": "308754"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "6560",
                   "clubRegistrationNumber": "R61108",
                   "fairplayPercentage": null,
@@ -29818,7 +29836,7 @@
                   "matchesWon": 2,
                   "name": "F.C. SAC A",
                   "points": 6,
-                  "position": 4,
+                  "position": 5,
                   "teamId": "308192"
                 },
                 {
@@ -29836,7 +29854,7 @@
                   "matchesWon": 2,
                   "name": "V.K. SIMIKOS C",
                   "points": 6,
-                  "position": 4,
+                  "position": 5,
                   "teamId": "307440"
                 },
                 {
@@ -29854,7 +29872,7 @@
                   "matchesWon": 2,
                   "name": "ARAKORA",
                   "points": 6,
-                  "position": 4,
+                  "position": 5,
                   "teamId": "316469"
                 },
                 {
@@ -29872,7 +29890,7 @@
                   "matchesWon": 2,
                   "name": "V.C. O.L.S.E.",
                   "points": 6,
-                  "position": 4,
+                  "position": 5,
                   "teamId": "308707"
                 },
                 {
@@ -29890,7 +29908,7 @@
                   "matchesWon": 1,
                   "name": "S.K. NIEUW STABROEK B",
                   "points": 5,
-                  "position": 8,
+                  "position": 9,
                   "teamId": "308240"
                 },
                 {
@@ -29908,26 +29926,8 @@
                   "matchesWon": 1,
                   "name": "RIKO-HUBERTUS B",
                   "points": 4,
-                  "position": 9,
+                  "position": 10,
                   "teamId": "308576"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8177",
-                  "clubRegistrationNumber": "R61014",
-                  "fairplayPercentage": null,
-                  "goalDifference": -1,
-                  "goalsAgainst": 13,
-                  "goalsFor": 12,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 3,
-                  "matchesWon": 1,
-                  "name": "F.C. KONINGSHOF B",
-                  "points": 4,
-                  "position": 9,
-                  "teamId": "308754"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29944,7 +29944,7 @@
                   "matchesWon": 1,
                   "name": "K.S.K. 'S GRAVENWEZEL-SCHILDE",
                   "points": 4,
-                  "position": 9,
+                  "position": 10,
                   "teamId": "305239"
                 },
                 {
@@ -29970,13 +29970,13 @@
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": null,
-                  "goalDifference": -11,
-                  "goalsAgainst": 16,
-                  "goalsFor": 5,
+                  "goalDifference": -14,
+                  "goalsAgainst": 22,
+                  "goalsFor": 8,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 4,
+                  "matchesLost": 4,
+                  "matchesPlayed": 5,
                   "matchesWon": 1,
                   "name": "S.V. NOORSE A",
                   "points": 3,
