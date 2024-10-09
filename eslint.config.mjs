@@ -5,6 +5,8 @@ import reactPlugin from 'eslint-plugin-react'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
+// todo: add tailwind css plugin import tailwind from 'eslint-plugin-tailwindcss'
+
 export default [
   {
     ignores: [
