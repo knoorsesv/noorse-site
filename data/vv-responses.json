@@ -664,10 +664,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Lakbir",
+          "lastName": "Kafe",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1513,9 +1513,9 @@
         "__typename": "MatchLocation",
         "address": "Dorensweg 11",
         "city": "Loenhout",
-        "pitchCode": "2",
+        "pitchCode": "4",
         "postalCode": "2990",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -4926,10 +4926,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Firmin",
+            "lastName": "Oris",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -6453,10 +6453,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Patrick",
+            "lastName": "Verschueren",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -18896,10 +18896,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Lakbir",
+            "lastName": "Kafe",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -26669,11 +26669,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 13,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 1,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -26684,7 +26684,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-10-05T14:30:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -27259,6 +27259,53 @@
         "startDateTimeInThePassed": true,
         "startTime": "2024-10-02T19:00:00",
         "state": "finished"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "Women U16",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1598",
+          "id": "322526",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03541.jpg",
+          "name": "KVKS MELSELE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "327753",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "id": "6939567",
+        "officials": [
+          {
+            "__typename": "MatchDetailOfficial",
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
+          }
+        ],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_879",
+          "name": "Meisjes Jeugd U16"
+        },
+        "showScore": true,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-10-16T19:00:00",
+        "state": "planned"
       }
     ]
   },
@@ -34857,6 +34904,24 @@
               "teams": [
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1697",
+                  "clubRegistrationNumber": "04112",
+                  "fairplayPercentage": 96,
+                  "goalDifference": 26,
+                  "goalsAgainst": 5,
+                  "goalsFor": 31,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 1,
+                  "matchesPlayed": 6,
+                  "matchesWon": 4,
+                  "name": "LOENHOUT S.K. A",
+                  "points": 13,
+                  "position": 1,
+                  "teamId": "328373"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1190",
                   "clubRegistrationNumber": "00915",
                   "fairplayPercentage": 86,
@@ -34888,26 +34953,8 @@
                   "matchesWon": 4,
                   "name": "K. ANTONIA F.C.",
                   "points": 12,
-                  "position": 2,
-                  "teamId": "326040"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1697",
-                  "clubRegistrationNumber": "04112",
-                  "fairplayPercentage": 100,
-                  "goalDifference": 14,
-                  "goalsAgainst": 4,
-                  "goalsFor": 18,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 5,
-                  "matchesWon": 3,
-                  "name": "LOENHOUT S.K. A",
-                  "points": 10,
                   "position": 3,
-                  "teamId": "328373"
+                  "teamId": "326040"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -34924,7 +34971,7 @@
                   "matchesWon": 3,
                   "name": "K. S.K. SEFA HERENTALS",
                   "points": 10,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "315425"
                 },
                 {
@@ -34942,7 +34989,7 @@
                   "matchesWon": 3,
                   "name": "V.K. SIMIKOS A",
                   "points": 10,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "325337"
                 },
                 {
@@ -34967,14 +35014,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 84,
-                  "goalDifference": -11,
-                  "goalsAgainst": 32,
-                  "goalsFor": 21,
+                  "fairplayPercentage": 83,
+                  "goalDifference": -23,
+                  "goalsAgainst": 45,
+                  "goalsFor": 22,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 3,
-                  "matchesPlayed": 5,
+                  "matchesLost": 4,
+                  "matchesPlayed": 6,
                   "matchesWon": 1,
                   "name": "S.V. NOORSE A",
                   "points": 4,
@@ -35032,6 +35079,24 @@
               "teams": [
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1697",
+                  "clubRegistrationNumber": "04112",
+                  "fairplayPercentage": 96,
+                  "goalDifference": 26,
+                  "goalsAgainst": 5,
+                  "goalsFor": 31,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 1,
+                  "matchesPlayed": 6,
+                  "matchesWon": 4,
+                  "name": "LOENHOUT S.K. A",
+                  "points": 13,
+                  "position": 1,
+                  "teamId": "328373"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1190",
                   "clubRegistrationNumber": "00915",
                   "fairplayPercentage": 86,
@@ -35063,26 +35128,8 @@
                   "matchesWon": 4,
                   "name": "K. ANTONIA F.C.",
                   "points": 12,
-                  "position": 2,
-                  "teamId": "326040"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1697",
-                  "clubRegistrationNumber": "04112",
-                  "fairplayPercentage": 100,
-                  "goalDifference": 14,
-                  "goalsAgainst": 4,
-                  "goalsFor": 18,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 5,
-                  "matchesWon": 3,
-                  "name": "LOENHOUT S.K. A",
-                  "points": 10,
                   "position": 3,
-                  "teamId": "328373"
+                  "teamId": "326040"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -35099,7 +35146,7 @@
                   "matchesWon": 3,
                   "name": "K. S.K. SEFA HERENTALS",
                   "points": 10,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "315425"
                 },
                 {
@@ -35117,7 +35164,7 @@
                   "matchesWon": 3,
                   "name": "V.K. SIMIKOS A",
                   "points": 10,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "325337"
                 },
                 {
@@ -35142,14 +35189,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 84,
-                  "goalDifference": -11,
-                  "goalsAgainst": 32,
-                  "goalsFor": 21,
+                  "fairplayPercentage": 83,
+                  "goalDifference": -23,
+                  "goalsAgainst": 45,
+                  "goalsFor": 22,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 3,
-                  "matchesPlayed": 5,
+                  "matchesLost": 4,
+                  "matchesPlayed": 6,
                   "matchesWon": 1,
                   "name": "S.V. NOORSE A",
                   "points": 4,
