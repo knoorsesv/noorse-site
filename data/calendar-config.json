@@ -80,19 +80,20 @@
     "vvName": "U11 B"
   },
   {
-    "calendarId": "080047c3ceac569d829acdfb205ff19c763654ca4abe3a8a07a75dc11d6aaabf@group.calendar.google.com",
-    "source": "vv",
-    "teamName": "U11 meisjes B",
-    "vvId": "327748",
-    "vvName": "U11 meisjes B"
-  },
-  {
     "calendarId": "a3ebe8d4f2be6785441f85dcb8ae03e5633f681171f3b2e86be025f720e6a472@group.calendar.google.com",
     "category": "Jeugd Meisjes",
     "source": "contentful",
     "teamName": "U11M Geel",
     "vvId": "327749",
     "vvName": "U11 Meisjes A"
+  },
+  {
+    "calendarId": "fdbdd6c433e4d9982a7ba583e584978c6e7de484f7cc20ee71b4a01ed8d78d46@group.calendar.google.com",
+    "category": "Jeugd Meisjes",
+    "source": "contentful",
+    "teamName": "U11M Groen",
+    "vvId": "327748",
+    "vvName": "U11 Meisjes B"
   },
   {
     "calendarId": "4hr2la945c1uts45qrtp5oarg0@group.calendar.google.com",
@@ -127,11 +128,12 @@
     "vvName": "U13 A"
   },
   {
-    "calendarId": "2abc9e2855edd1787492b599642b7ebf8307046c63452cc34bdfc3fc49d32d5d@group.calendar.google.com",
-    "source": "vv",
-    "teamName": "U13 meisjes B",
+    "calendarId": "7c317deec8b2112d02973a7c6bffb9920a9a5cbcf628f35c7580ddca63235070@group.calendar.google.com",
+    "category": "Jeugd Meisjes",
+    "source": "contentful",
+    "teamName": "U13M Geel",
     "vvId": "327750",
-    "vvName": "U13 meisjes B"
+    "vvName": "U13 Meisjes B"
   },
   {
     "calendarId": "e30a53f9e8e4736496d641f69ab5584645571f105f25c86d43941965cce731aa@group.calendar.google.com",
@@ -165,23 +167,26 @@
     "vvName": "U16 meisjes A"
   },
   {
-    "calendarId": "c89f5a382c685036144e225914fe74f9ecec9cfe5fd29280de1a54be919bdace@group.calendar.google.com",
-    "source": "vv",
-    "teamName": "U16 meisjes B",
+    "calendarId": "b453db2b615f9217510564aea9cd7ced705cccdc50539754eb8c138367ddd0a0@group.calendar.google.com",
+    "category": "Jeugd Meisjes",
+    "source": "contentful",
+    "teamName": "U16M Groen",
     "vvId": "327752",
-    "vvName": "U16 meisjes B"
+    "vvName": "U16 Meisjes B"
   },
   {
     "calendarId": "o5iughnlovamcd1agubpe0snog@group.calendar.google.com",
-    "source": "vv",
-    "teamName": "U17 A",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U17 Geel",
     "vvId": "326895",
     "vvName": "U17 A"
   },
   {
     "calendarId": "tdk2tvrlnluiaggn0gej72vu0k@group.calendar.google.com",
-    "source": "vv",
-    "teamName": "U17 B",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U17 Groen",
     "vvId": "326896",
     "vvName": "U17 B"
   },
