@@ -18680,53 +18680,6 @@
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-30T13:15:00",
         "state": "planned"
-      },
-      {
-        "__typename": "MatchDetail",
-        "ageGroup": "U15",
-        "awayTeam": {
-          "__typename": "MatchDetailTeam",
-          "clubId": "8179",
-          "id": "326893",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-          "name": "SV NOORSE"
-        },
-        "channel": "voetbalvlaanderen",
-        "homeTeam": {
-          "__typename": "MatchDetailTeam",
-          "clubId": "8303",
-          "id": "326350",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61055.jpg",
-          "name": "KON OLVAC"
-        },
-        "id": "6939000",
-        "officials": [
-          {
-            "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Aanduiding door de club"
-          }
-        ],
-        "outcome": {
-          "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
-          "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
-          "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
-        },
-        "series": {
-          "__typename": "MatchSeries",
-          "id": "FRN_884",
-          "name": "U15"
-        },
-        "showScore": true,
-        "startDateTimeInThePassed": false,
-        "startTime": "2024-10-24T19:00:00",
-        "state": "planned"
       }
     ],
     "326894": [
@@ -19433,6 +19386,53 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2024-10-17T19:45:00",
+        "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "U15",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "326894",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8303",
+          "id": "326350",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61055.jpg",
+          "name": "KON OLVAC"
+        },
+        "id": "6940296",
+        "officials": [
+          {
+            "__typename": "MatchDetailOfficial",
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
+          }
+        ],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_884",
+          "name": "U15"
+        },
+        "showScore": true,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-10-24T19:00:00",
         "state": "planned"
       }
     ],
@@ -31813,6 +31813,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "6576",
+                  "clubRegistrationNumber": "R61163",
+                  "fairplayPercentage": 88,
+                  "goalDifference": 6,
+                  "goalsAgainst": 14,
+                  "goalsFor": 20,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 3,
+                  "matchesPlayed": 7,
+                  "matchesWon": 3,
+                  "name": "F.C. SEJA",
+                  "points": 10,
+                  "position": 3,
+                  "teamId": "322670"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8317",
                   "clubRegistrationNumber": "R61080",
                   "fairplayPercentage": 87,
@@ -31826,7 +31844,7 @@
                   "matchesWon": 3,
                   "name": "V.C. O.L.S.E.",
                   "points": 9,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "320782"
                 },
                 {
@@ -31834,17 +31852,17 @@
                   "clubId": "8313",
                   "clubRegistrationNumber": "R61075",
                   "fairplayPercentage": 99,
-                  "goalDifference": -2,
-                  "goalsAgainst": 19,
-                  "goalsFor": 17,
+                  "goalDifference": -5,
+                  "goalsAgainst": 23,
+                  "goalsFor": 18,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61075.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 6,
+                  "matchesLost": 4,
+                  "matchesPlayed": 7,
                   "matchesWon": 3,
                   "name": "S.K. NIEUW STABROEK B",
                   "points": 9,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "321088"
                 },
                 {
@@ -31862,26 +31880,8 @@
                   "matchesWon": 2,
                   "name": "S.V. NOORSE",
                   "points": 8,
-                  "position": 5,
-                  "teamId": "326875"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "6576",
-                  "clubRegistrationNumber": "R61163",
-                  "fairplayPercentage": 88,
-                  "goalDifference": 3,
-                  "goalsAgainst": 13,
-                  "goalsFor": 16,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 3,
-                  "matchesPlayed": 6,
-                  "matchesWon": 2,
-                  "name": "F.C. SEJA",
-                  "points": 7,
                   "position": 6,
-                  "teamId": "322670"
+                  "teamId": "326875"
                 },
                 {
                   "__typename": "RankingTeam",
