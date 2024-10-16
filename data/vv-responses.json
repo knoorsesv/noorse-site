@@ -1394,10 +1394,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Bert",
-          "lastName": "Bedeer",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1699,7 +1699,7 @@
         "id": "FRN_886"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-16T19:00:00",
       "state": "planned",
       "title": "U13"
@@ -1811,7 +1811,7 @@
         "id": "FRN_879"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-16T19:00:00",
       "state": "planned",
       "title": "Meisjes Jeugd U16"
@@ -13791,7 +13791,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-10-26T14:00:00",
+        "startTime": "2024-10-25T20:00:00",
         "state": "planned"
       },
       {
@@ -17392,7 +17392,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-10-30T18:00:00",
+        "startTime": "2024-11-20T18:00:00",
         "state": "planned"
       }
     ],
@@ -19874,10 +19874,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Bert",
-            "lastName": "Bedeer",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -20542,12 +20542,12 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": 1,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": 2,
+          "homeTeamGoals": 5,
           "homeTeamPenaltiesScored": null,
-          "status": "stopped",
-          "subscript": "Stopgezet"
+          "status": "finished",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -20557,7 +20557,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-10-05T15:00:00",
-        "state": "stopped"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -27347,7 +27347,7 @@
           "name": "U13"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-16T19:00:00",
         "state": "planned"
       },
@@ -27441,7 +27441,7 @@
           "name": "Meisjes Jeugd U16"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-16T19:00:00",
         "state": "planned"
       }
@@ -33475,13 +33475,13 @@
                   "clubId": "8298",
                   "clubRegistrationNumber": "R61040",
                   "fairplayPercentage": 95,
-                  "goalDifference": -11,
-                  "goalsAgainst": 22,
+                  "goalDifference": -15,
+                  "goalsAgainst": 26,
                   "goalsFor": 11,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 4,
-                  "matchesPlayed": 6,
+                  "matchesLost": 5,
+                  "matchesPlayed": 7,
                   "matchesWon": 1,
                   "name": "KON. SV VLUG VOORUIT",
                   "points": 4,
@@ -33493,17 +33493,17 @@
                   "clubId": "1215",
                   "clubRegistrationNumber": "01143",
                   "fairplayPercentage": 95,
-                  "goalDifference": -23,
+                  "goalDifference": -19,
                   "goalsAgainst": 33,
-                  "goalsFor": 10,
+                  "goalsFor": 14,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01143.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 5,
-                  "matchesPlayed": 6,
-                  "matchesWon": 0,
+                  "matchesPlayed": 7,
+                  "matchesWon": 1,
                   "name": "K. ANTONIA F.C. B",
-                  "points": 1,
-                  "position": 8,
+                  "points": 4,
+                  "position": 7,
                   "teamId": "326019"
                 }
               ],
@@ -33596,13 +33596,13 @@
                   "clubId": "8830",
                   "clubRegistrationNumber": "09710",
                   "fairplayPercentage": 66,
-                  "goalDifference": 9,
-                  "goalsAgainst": 18,
+                  "goalDifference": 4,
+                  "goalsAgainst": 23,
                   "goalsFor": 27,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 1,
-                  "matchesPlayed": 6,
+                  "matchesLost": 2,
+                  "matchesPlayed": 7,
                   "matchesWon": 3,
                   "name": "MAROC UNITED ANTWERP",
                   "points": 11,
@@ -33614,16 +33614,16 @@
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": 85,
-                  "goalDifference": 0,
+                  "goalDifference": 5,
                   "goalsAgainst": 12,
-                  "goalsFor": 12,
+                  "goalsFor": 17,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 3,
-                  "matchesPlayed": 6,
-                  "matchesWon": 2,
+                  "matchesPlayed": 7,
+                  "matchesWon": 3,
                   "name": "S.V. NOORSE B",
-                  "points": 7,
+                  "points": 10,
                   "position": 5,
                   "teamId": "326896"
                 },
