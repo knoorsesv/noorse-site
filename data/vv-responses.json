@@ -30,8 +30,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Glenn",
-          "lastName": "Callay",
+          "firstName": "Angelo",
+          "lastName": "De Bock",
           "personAssigned": true,
           "status": null
         }
@@ -650,10 +650,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Dirk",
+          "lastName": "Haest",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1103,7 +1103,7 @@
         "id": "CHP_120722"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-17T18:00:00",
       "state": "planned",
       "title": "Gewestelijk U9 BS"
@@ -1394,10 +1394,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Michael",
+          "lastName": "Kopczyn¿ski",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1742,11 +1742,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 13,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1755,9 +1755,9 @@
         "id": "FRN_884"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-17T19:45:00",
-      "state": "planned",
+      "state": "finished",
       "title": "U15"
     },
     {
@@ -2414,8 +2414,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Glenn",
-            "lastName": "Callay",
+            "firstName": "Angelo",
+            "lastName": "De Bock",
             "personAssigned": true,
             "status": null
           }
@@ -2508,10 +2508,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Tiësto",
+            "lastName": "'T Jolle",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -15357,7 +15357,7 @@
           "name": "Gewestelijk U9 BS"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-17T18:00:00",
         "state": "planned"
       },
@@ -18374,10 +18374,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Dirk",
+            "lastName": "Haest",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19371,11 +19371,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 13,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -19384,9 +19384,9 @@
           "name": "U15"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-17T19:45:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -19410,10 +19410,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Hamid",
+            "lastName": "Amraoui",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19874,10 +19874,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Michael",
+            "lastName": "Kopczyn¿ski",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
