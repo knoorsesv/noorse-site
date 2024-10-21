@@ -352,10 +352,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Geert",
+          "lastName": "Delmotte",
+          "personAssigned": true,
+          "status": null
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -740,7 +740,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2024-10-27T11:00:00",
+      "startTime": "2024-10-27T10:00:00",
       "state": "planned",
       "title": "Meisjes U11 reeks D"
     },
@@ -1110,10 +1110,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "André Leo",
+          "lastName": "Van Ginderen",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1492,10 +1492,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Edis",
-          "lastName": "Konjevic",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -4023,10 +4023,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Johan",
+            "lastName": "Marcelis",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -4932,10 +4932,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Geert",
+            "lastName": "Delmotte",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -10442,10 +10442,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Raphaël",
+            "lastName": "Kerremans",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -12037,10 +12037,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Eddy",
+            "lastName": "Verwimp",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -13637,10 +13637,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "André Leo",
+            "lastName": "Van Ginderen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -13684,10 +13684,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Martin",
+            "lastName": "Beniest",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -17260,7 +17260,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-11-20T18:00:00",
+        "startTime": "2024-11-06T17:30:00",
         "state": "planned"
       }
     ],
@@ -18336,10 +18336,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Steven",
+            "lastName": "Wijnants",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18910,11 +18910,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 1,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 4,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -18925,7 +18925,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-10-19T15:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -18996,10 +18996,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mohamed",
+            "lastName": "Bouzlaf",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19836,10 +19836,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mark",
+            "lastName": "Gysen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -23509,7 +23509,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-10-27T11:00:00",
+        "startTime": "2024-10-27T10:00:00",
         "state": "planned"
       },
       {
@@ -25980,10 +25980,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Edis",
-            "lastName": "Konjevic",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -26041,10 +26041,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Firmin",
+            "lastName": "Oris",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -26897,10 +26897,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Karel",
+            "lastName": "Boeckx",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -29807,16 +29807,16 @@
                   "clubId": "8298",
                   "clubRegistrationNumber": "R61040",
                   "fairplayPercentage": null,
-                  "goalDifference": 24,
-                  "goalsAgainst": 5,
-                  "goalsFor": 29,
+                  "goalDifference": 27,
+                  "goalsAgainst": 7,
+                  "goalsFor": 34,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
                   "matchesDrawn": 0,
                   "matchesLost": 0,
-                  "matchesPlayed": 6,
-                  "matchesWon": 6,
+                  "matchesPlayed": 7,
+                  "matchesWon": 7,
                   "name": "KON. SV VLUG VOORUIT A",
-                  "points": 18,
+                  "points": 21,
                   "position": 1,
                   "teamId": "308765"
                 },
@@ -29987,13 +29987,13 @@
                   "clubId": "8313",
                   "clubRegistrationNumber": "R61075",
                   "fairplayPercentage": null,
-                  "goalDifference": 1,
-                  "goalsAgainst": 20,
-                  "goalsFor": 21,
+                  "goalDifference": -2,
+                  "goalsAgainst": 25,
+                  "goalsFor": 23,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61075.jpg",
                   "matchesDrawn": 3,
-                  "matchesLost": 2,
-                  "matchesPlayed": 6,
+                  "matchesLost": 3,
+                  "matchesPlayed": 7,
                   "matchesWon": 1,
                   "name": "S.K. NIEUW STABROEK B",
                   "points": 6,
@@ -30930,6 +30930,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8175",
+                  "clubRegistrationNumber": "R61012",
+                  "fairplayPercentage": null,
+                  "goalDifference": 6,
+                  "goalsAgainst": 15,
+                  "goalsFor": 21,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 5,
+                  "matchesWon": 3,
+                  "name": "F.C. IK DIEN",
+                  "points": 9,
+                  "position": 6,
+                  "teamId": "306751"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1337",
                   "clubRegistrationNumber": "02223",
                   "fairplayPercentage": null,
@@ -30961,26 +30979,8 @@
                   "matchesWon": 2,
                   "name": "F.C. V.D.P. A",
                   "points": 7,
-                  "position": 7,
-                  "teamId": "307840"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8175",
-                  "clubRegistrationNumber": "R61012",
-                  "fairplayPercentage": null,
-                  "goalDifference": 1,
-                  "goalsAgainst": 15,
-                  "goalsFor": 16,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 4,
-                  "matchesWon": 2,
-                  "name": "F.C. IK DIEN",
-                  "points": 6,
                   "position": 8,
-                  "teamId": "306751"
+                  "teamId": "307840"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -31023,13 +31023,13 @@
                   "clubId": "1404",
                   "clubRegistrationNumber": "02618",
                   "fairplayPercentage": null,
-                  "goalDifference": -13,
-                  "goalsAgainst": 20,
+                  "goalDifference": -18,
+                  "goalsAgainst": 25,
                   "goalsFor": 7,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02618.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 2,
-                  "matchesPlayed": 4,
+                  "matchesLost": 3,
+                  "matchesPlayed": 5,
                   "matchesWon": 0,
                   "name": "KVC LILLE UNITED A",
                   "points": 2,
@@ -31188,6 +31188,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8175",
+                  "clubRegistrationNumber": "R61012",
+                  "fairplayPercentage": null,
+                  "goalDifference": 6,
+                  "goalsAgainst": 15,
+                  "goalsFor": 21,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 5,
+                  "matchesWon": 3,
+                  "name": "F.C. IK DIEN",
+                  "points": 9,
+                  "position": 6,
+                  "teamId": "306751"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1337",
                   "clubRegistrationNumber": "02223",
                   "fairplayPercentage": null,
@@ -31201,7 +31219,7 @@
                   "matchesWon": 3,
                   "name": "K. BLAUWVOET OEVEL",
                   "points": 9,
-                  "position": 6,
+                  "position": 7,
                   "teamId": "307523"
                 },
                 {
@@ -31219,26 +31237,8 @@
                   "matchesWon": 2,
                   "name": "F.C. V.D.P. A",
                   "points": 7,
-                  "position": 7,
-                  "teamId": "307840"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8175",
-                  "clubRegistrationNumber": "R61012",
-                  "fairplayPercentage": null,
-                  "goalDifference": 1,
-                  "goalsAgainst": 15,
-                  "goalsFor": 16,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 4,
-                  "matchesWon": 2,
-                  "name": "F.C. IK DIEN",
-                  "points": 6,
                   "position": 8,
-                  "teamId": "306751"
+                  "teamId": "307840"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -31281,13 +31281,13 @@
                   "clubId": "1404",
                   "clubRegistrationNumber": "02618",
                   "fairplayPercentage": null,
-                  "goalDifference": -13,
-                  "goalsAgainst": 20,
+                  "goalDifference": -18,
+                  "goalsAgainst": 25,
                   "goalsFor": 7,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02618.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 2,
-                  "matchesPlayed": 4,
+                  "matchesLost": 3,
+                  "matchesPlayed": 5,
                   "matchesWon": 0,
                   "name": "KVC LILLE UNITED A",
                   "points": 2,
@@ -32027,14 +32027,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8314",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 91,
+                  "fairplayPercentage": 92,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "FC Patro Hoevenen",
                   "points": null,
@@ -32124,7 +32124,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "V.C. O.L.S.E.",
                   "points": null,
@@ -32263,7 +32263,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03182.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 4,
+                  "matchesPlayed": 5,
                   "matchesWon": null,
                   "name": "KSOC Maria t. Heide",
                   "points": null,
@@ -32292,14 +32292,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8309",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 91,
+                  "fairplayPercentage": 93,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61066.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 5,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "SV Groenendaal",
                   "points": null,
@@ -33113,17 +33113,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 93,
-                  "goalDifference": -4,
-                  "goalsAgainst": 24,
-                  "goalsFor": 20,
+                  "fairplayPercentage": 94,
+                  "goalDifference": -1,
+                  "goalsAgainst": 25,
+                  "goalsFor": 24,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 2,
-                  "matchesPlayed": 6,
-                  "matchesWon": 3,
+                  "matchesPlayed": 7,
+                  "matchesWon": 4,
                   "name": "S.V. NOORSE B",
-                  "points": 10,
+                  "points": 13,
                   "position": 4,
                   "teamId": "326894"
                 },
@@ -33131,14 +33131,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1797",
                   "clubRegistrationNumber": "04446",
-                  "fairplayPercentage": 90,
-                  "goalDifference": -2,
-                  "goalsAgainst": 25,
-                  "goalsFor": 23,
+                  "fairplayPercentage": 92,
+                  "goalDifference": -5,
+                  "goalsAgainst": 29,
+                  "goalsFor": 24,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 6,
+                  "matchesLost": 4,
+                  "matchesPlayed": 7,
                   "matchesWon": 3,
                   "name": "K.F.C. BERENDRECHT SP. C",
                   "points": 9,
@@ -34484,7 +34484,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03175.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "KFC.Herent",
                   "points": null,
@@ -34520,7 +34520,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 5,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
