@@ -9057,12 +9057,12 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": 1,
+          "awayTeamGoals": 5,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": 2,
+          "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
-          "status": "finished",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait onvolledige/afwezige ploeg"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -9072,7 +9072,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-10-12T15:30:00",
-        "state": "finished"
+        "state": "forfeitNoPassportsByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -30466,6 +30466,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8179",
+                  "clubRegistrationNumber": "R61017",
+                  "fairplayPercentage": null,
+                  "goalDifference": 0,
+                  "goalsAgainst": 7,
+                  "goalsFor": 7,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 3,
+                  "matchesWon": 1,
+                  "name": "S.V. NOORSE C",
+                  "points": 3,
+                  "position": 6,
+                  "teamId": "310612"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1270",
                   "clubRegistrationNumber": "01775",
                   "fairplayPercentage": null,
@@ -30484,42 +30502,6 @@
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "1832",
-                  "clubRegistrationNumber": "04704",
-                  "fairplayPercentage": null,
-                  "goalDifference": -28,
-                  "goalsAgainst": 30,
-                  "goalsFor": 2,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04704.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 4,
-                  "matchesWon": 1,
-                  "name": "K.F.C. RANST",
-                  "points": 3,
-                  "position": 6,
-                  "teamId": "309178"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8179",
-                  "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": null,
-                  "goalDifference": -6,
-                  "goalsAgainst": 9,
-                  "goalsFor": 3,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 3,
-                  "matchesWon": 0,
-                  "name": "S.V. NOORSE C",
-                  "points": 0,
-                  "position": 9,
-                  "teamId": "310612"
-                },
-                {
-                  "__typename": "RankingTeam",
                   "clubId": "6094",
                   "clubRegistrationNumber": "09572",
                   "fairplayPercentage": null,
@@ -30535,6 +30517,24 @@
                   "points": 0,
                   "position": 9,
                   "teamId": "310240"
+                },
+                {
+                  "__typename": "RankingTeam",
+                  "clubId": "1832",
+                  "clubRegistrationNumber": "04704",
+                  "fairplayPercentage": null,
+                  "goalDifference": -34,
+                  "goalsAgainst": 34,
+                  "goalsFor": 0,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04704.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 4,
+                  "matchesPlayed": 4,
+                  "matchesWon": 0,
+                  "name": "K.F.C. RANST",
+                  "points": 0,
+                  "position": 9,
+                  "teamId": "309178"
                 }
               ],
               "type": "generalRanking"
