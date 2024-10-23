@@ -282,8 +282,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Patrick",
-          "lastName": "Verschueren",
+          "firstName": "Alfons",
+          "lastName": "Neujens",
           "personAssigned": true,
           "status": null
         },
@@ -345,9 +345,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -483,7 +483,7 @@
         "id": "CHP_116037"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-23T18:00:00",
       "state": "planned",
       "title": "Gewestelijk U12 BB"
@@ -1255,9 +1255,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "2",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1415,9 +1415,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1623,7 +1623,7 @@
         "id": "FRN_886"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-23T18:00:00",
       "state": "planned",
       "title": "U13"
@@ -6459,8 +6459,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Patrick",
-            "lastName": "Verschueren",
+            "firstName": "Alfons",
+            "lastName": "Neujens",
             "personAssigned": true,
             "status": null
           },
@@ -16869,7 +16869,7 @@
           "name": "Gewestelijk U12 BB"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-23T18:00:00",
         "state": "planned"
       },
@@ -23116,7 +23116,7 @@
           "name": "U13"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-23T18:00:00",
         "state": "planned"
       },
@@ -32745,14 +32745,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1195",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 95,
+                  "fairplayPercentage": 96,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00956.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 5,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "KFC Schoten SK",
                   "points": null,
@@ -32806,7 +32806,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61066.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "SV Groenendaal",
                   "points": null,
@@ -32824,7 +32824,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 4,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
