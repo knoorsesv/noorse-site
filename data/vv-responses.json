@@ -93,9 +93,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -566,8 +566,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Victor",
-          "lastName": "Fierens",
+          "firstName": "Dave",
+          "lastName": "Van Dingenen",
           "personAssigned": true,
           "status": null
         }
@@ -1679,7 +1679,7 @@
         "id": "FRN_884"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-24T19:00:00",
       "state": "planned",
       "title": "U15"
@@ -18949,8 +18949,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Victor",
-            "lastName": "Fierens",
+            "firstName": "Dave",
+            "lastName": "Van Dingenen",
             "personAssigned": true,
             "status": null
           }
@@ -19299,7 +19299,7 @@
           "name": "U15"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-24T19:00:00",
         "state": "planned"
       }
@@ -22484,6 +22484,45 @@
         "showScore": false,
         "startDateTimeInThePassed": true,
         "startTime": "2024-09-18T18:00:00",
+        "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "U13",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "327746",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8321",
+          "id": "327696",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
+          "name": "V.V. O.S.S.M.I."
+        },
+        "id": "6942011",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_886",
+          "name": "U13"
+        },
+        "showScore": false,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-11-05T18:30:00",
         "state": "planned"
       }
     ],
@@ -27311,6 +27350,53 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-10-16T19:00:00",
+        "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "Women U16",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "327753",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE A-TEAM              "
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1464",
+          "id": "327081",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02868.jpg",
+          "name": "VV-NEXT LAAKDAL A-TEAM"
+        },
+        "id": "6942114",
+        "officials": [
+          {
+            "__typename": "MatchDetailOfficial",
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
+          }
+        ],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_879",
+          "name": "Meisjes Jeugd U16"
+        },
+        "showScore": true,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-12-06T20:00:00",
         "state": "planned"
       }
     ]
