@@ -84,7 +84,7 @@
     "chromatic": "11.0.0",
     "concurrently": "9.0.1",
     "cross-env": "7.0.3",
-    "eslint": "9.11.0",
+    "eslint": "9.13.0",
     "eslint-config-gvdp": "1.0.5",
     "eslint-plugin-astro": "1.2.4",
     "eslint-plugin-jsx-a11y": "6.10.0",
