@@ -2283,10 +2283,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Robert",
+            "lastName": "Vlasie",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -3930,10 +3930,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Toon",
+            "lastName": "Hermans",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -9003,10 +9003,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jelle",
+            "lastName": "Swolfs",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -12005,10 +12005,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Erdal",
+            "lastName": "Güne¿",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18304,10 +18304,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Eelco",
+            "lastName": "Smet",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18964,10 +18964,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Johan",
+            "lastName": "Busschots",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19804,10 +19804,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jean",
+            "lastName": "Van Heghe",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -34801,14 +34801,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1653",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 93,
+                  "fairplayPercentage": 91,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "K. Gooreind VV",
                   "points": null,
@@ -34819,14 +34819,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1215",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 95,
+                  "fairplayPercentage": 92,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01143.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 4,
+                  "matchesPlayed": 5,
                   "matchesWon": null,
                   "name": "KFC Antonia",
                   "points": null,
