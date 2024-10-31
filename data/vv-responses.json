@@ -23,9 +23,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1075,7 +1075,7 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "1",
         "postalCode": "2950",
         "synthetic": false
       },
@@ -1539,7 +1539,7 @@
         "id": "FRN_887"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-10-30T18:00:00",
       "state": "planned",
       "title": "U12"
@@ -17806,7 +17806,7 @@
           "name": "U12"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-10-30T18:00:00",
         "state": "planned"
       }
@@ -20580,7 +20580,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-11-09T15:00:00",
+        "startTime": "2024-11-27T19:30:00",
         "state": "planned"
       },
       {
