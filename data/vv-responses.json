@@ -664,7 +664,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2024-11-02T14:00:00",
+      "startTime": "2024-11-02T11:00:00",
       "state": "planned",
       "title": "Meisjes U13 reeks G"
     },
@@ -1307,76 +1307,6 @@
       "startTime": "2024-11-02T12:30:00",
       "state": "planned",
       "title": "Gewestelijk U9 BB"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Women U16",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "327752",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1190",
-        "id": "322846",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00915.jpg",
-        "name": "K.F.C. Arendonk Sport 3"
-      },
-      "id": "6900994",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Heikant 32",
-        "city": "Arendonk",
-        "pitchCode": "1",
-        "postalCode": "2370",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Firmin",
-          "lastName": "Oris",
-          "personAssigned": true,
-          "status": null
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_122581"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2024-11-01T19:30:00",
-      "state": "planned",
-      "title": "Meisjes U16 reeks N"
     },
     {
       "__typename": "MatchDetail",
@@ -25269,7 +25199,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-11-02T14:00:00",
+        "startTime": "2024-11-02T11:00:00",
         "state": "planned"
       },
       {
@@ -26040,10 +25970,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Firmin",
-            "lastName": "Oris",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -26076,7 +26006,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-11-01T19:30:00",
+        "startTime": "2024-12-06T19:30:00",
         "state": "planned"
       },
       {
