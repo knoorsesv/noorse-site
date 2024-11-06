@@ -386,10 +386,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Erdal",
-          "lastName": "Güne¿",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1699,7 +1699,7 @@
         "id": "FRN_886"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-05T18:30:00",
       "state": "planned",
       "title": "U13"
@@ -1747,7 +1747,7 @@
         "id": "FRN_886"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-05T18:30:00",
       "state": "planned",
       "title": "U13"
@@ -4185,10 +4185,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mustafa",
+            "lastName": "Tepe",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -9258,10 +9258,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Walter",
+            "lastName": "Quick",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -12213,10 +12213,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Erdal",
-            "lastName": "Güne¿",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -12260,10 +12260,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "André Leo",
+            "lastName": "Van Ginderen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -13907,10 +13907,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Elias",
+            "lastName": "Colen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18559,10 +18559,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Youssef",
+            "lastName": "Messafi",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19219,10 +19219,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Franciscus",
+            "lastName": "Scheijvens",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -20059,10 +20059,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kevin",
+            "lastName": "Vogels",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -20719,10 +20719,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ludo",
+            "lastName": "Rollenberg",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -22650,7 +22650,7 @@
           "name": "U13"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-05T18:30:00",
         "state": "planned"
       }
@@ -23323,7 +23323,7 @@
           "name": "U13"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-05T18:30:00",
         "state": "planned"
       }
@@ -26370,10 +26370,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Johan",
+            "lastName": "De Crom",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -27226,10 +27226,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Johan",
+            "lastName": "De Crom",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -32009,17 +32009,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "8314",
                   "clubRegistrationNumber": "R61077",
-                  "fairplayPercentage": 93,
+                  "fairplayPercentage": 94,
                   "goalDifference": -26,
                   "goalsAgainst": 43,
                   "goalsFor": 17,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-                  "matchesDrawn": 0,
+                  "matchesDrawn": 1,
                   "matchesLost": 7,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": 2,
                   "name": "F.C. PATRO HOEVENEN",
-                  "points": 6,
+                  "points": 7,
                   "position": 7,
                   "teamId": "328386"
                 },
@@ -32027,17 +32027,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "1973",
                   "clubRegistrationNumber": "05628",
-                  "fairplayPercentage": 91,
+                  "fairplayPercentage": 92,
                   "goalDifference": -22,
                   "goalsAgainst": 35,
                   "goalsFor": 13,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
-                  "matchesDrawn": 1,
+                  "matchesDrawn": 2,
                   "matchesLost": 7,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": 1,
                   "name": "K. HEIBOS S.V.",
-                  "points": 4,
+                  "points": 5,
                   "position": 8,
                   "teamId": "325283"
                 }
@@ -32710,7 +32710,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
@@ -32728,7 +32728,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "V.C. O.L.S.E.",
                   "points": null,
@@ -34684,7 +34684,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61099.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "F.C. V.D.P.",
                   "points": null,
@@ -34756,7 +34756,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03175.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "KFC.Herent",
                   "points": null,
