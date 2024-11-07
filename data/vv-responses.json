@@ -1298,11 +1298,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1311,9 +1311,9 @@
         "id": "CHP_122316"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-06T19:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U17 BI"
     },
     {
@@ -1651,7 +1651,7 @@
         "id": "FRN_887"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-06T17:30:00",
       "state": "planned",
       "title": "U12"
@@ -17388,7 +17388,7 @@
           "name": "U12"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-06T17:30:00",
         "state": "planned"
       }
@@ -19785,11 +19785,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -19798,9 +19798,9 @@
           "name": "Gewestelijk U17 BI"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-06T19:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -33488,17 +33488,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 87,
+                  "fairplayPercentage": 88,
                   "goalDifference": 42,
                   "goalsAgainst": 13,
                   "goalsFor": 55,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-                  "matchesDrawn": 0,
+                  "matchesDrawn": 1,
                   "matchesLost": 0,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": 9,
                   "name": "S.V. NOORSE A",
-                  "points": 27,
+                  "points": 28,
                   "position": 1,
                   "teamId": "326895"
                 },
@@ -33511,12 +33511,12 @@
                   "goalsAgainst": 19,
                   "goalsFor": 34,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-                  "matchesDrawn": 1,
+                  "matchesDrawn": 2,
                   "matchesLost": 1,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": 6,
                   "name": "F.C. KONINGSHOF A",
-                  "points": 19,
+                  "points": 20,
                   "position": 2,
                   "teamId": "328302"
                 },
@@ -33535,7 +33535,7 @@
                   "matchesWon": 6,
                   "name": "V.V. O.S.S.M.I. C",
                   "points": 19,
-                  "position": 2,
+                  "position": 3,
                   "teamId": "327703"
                 },
                 {
