@@ -212,11 +212,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -225,9 +225,9 @@
         "id": "CHP_122008"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-07T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "RRC1 - Recrea Mannen ANT"
     },
     {
@@ -379,9 +379,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -2538,10 +2538,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Frederik",
+            "lastName": "De Boeck",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -6976,11 +6976,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 3,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -6989,9 +6989,9 @@
           "name": "RRC1 - Recrea Mannen ANT"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-07T20:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -30079,16 +30079,16 @@
                   "clubId": "6560",
                   "clubRegistrationNumber": "R61108",
                   "fairplayPercentage": null,
-                  "goalDifference": 14,
+                  "goalDifference": 17,
                   "goalsAgainst": 10,
-                  "goalsFor": 24,
+                  "goalsFor": 27,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61108.jpg",
                   "matchesDrawn": 0,
                   "matchesLost": 1,
-                  "matchesPlayed": 6,
-                  "matchesWon": 5,
+                  "matchesPlayed": 7,
+                  "matchesWon": 6,
                   "name": "F.C. SAC A",
-                  "points": 15,
+                  "points": 18,
                   "position": 2,
                   "teamId": "308192"
                 },
@@ -30107,7 +30107,7 @@
                   "matchesWon": 5,
                   "name": "F.C. V.D.P. C",
                   "points": 15,
-                  "position": 2,
+                  "position": 3,
                   "teamId": "307846"
                 },
                 {
@@ -30133,13 +30133,13 @@
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": null,
-                  "goalDifference": -4,
-                  "goalsAgainst": 26,
+                  "goalDifference": -7,
+                  "goalsAgainst": 29,
                   "goalsFor": 22,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 4,
-                  "matchesPlayed": 8,
+                  "matchesLost": 5,
+                  "matchesPlayed": 9,
                   "matchesWon": 4,
                   "name": "S.V. NOORSE A",
                   "points": 12,
@@ -34816,14 +34816,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1255",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 100,
+                  "fairplayPercentage": 95,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01640.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": null,
                   "name": "K. Bevel FC",
                   "points": null,
@@ -34888,14 +34888,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 80,
+                  "fairplayPercentage": 78,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
