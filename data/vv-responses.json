@@ -253,9 +253,9 @@
         "__typename": "MatchLocation",
         "address": "Meylweg 52",
         "city": "Kontich",
-        "pitchCode": "1",
+        "pitchCode": "2",
         "postalCode": "2550",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1450,10 +1450,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Arvid",
-          "lastName": "Dorekens",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -12196,10 +12196,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Walter",
-            "lastName": "Verelst",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -19995,10 +19995,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Vecyndel",
-            "lastName": "Adalla",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -26298,10 +26298,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Arvid",
-            "lastName": "Dorekens",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -26359,10 +26359,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Senne",
-            "lastName": "Maroy",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -27154,10 +27154,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Arvid",
-            "lastName": "Dorekens",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -32759,7 +32759,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "KFC Brasschaat",
                   "points": null,
@@ -32813,7 +32813,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "SC City Pirates Antwerpen",
                   "points": null,
