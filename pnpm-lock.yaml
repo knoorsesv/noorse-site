@@ -19,7 +19,7 @@ importers:
         version: 3.6.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.10(@types/node@22.7.4))
       '@astrojs/tailwind':
         specifier: 5.1.2
-        version: 5.1.2(astro@4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3))(tailwindcss@3.4.13)
+        version: 5.1.2(astro@4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3))(tailwindcss@3.4.13)
       '@fontsource/lato':
         specifier: 5.1.0
         version: 5.1.0
@@ -45,11 +45,11 @@ importers:
         specifier: 4.3.3
         version: 4.3.3(vite@5.4.10(@types/node@22.7.4))
       astro:
-        specifier: 4.16.10
-        version: 4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)
+        specifier: 4.16.12
+        version: 4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)
       astro-imagetools:
         specifier: 0.9.0
-        version: 0.9.0(astro@4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3))
+        version: 0.9.0(astro@4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3))
       contentful:
         specifier: 11.2.1
         version: 11.2.1
@@ -1819,8 +1819,8 @@ packages:
     peerDependencies:
       astro: '>=0.26 || >=1.0.0-beta'
 
-  astro@4.16.10:
-    resolution: {integrity: sha512-a+nB4bZE50NXHLzVXUHtx/lYct2Aa8kbqZnWNrWqkU97RuhBuWJ5H5/LQbKRnBWGvqChKfJBiMWJe53TY9ieYQ==}
+  astro@4.16.12:
+    resolution: {integrity: sha512-NnFeIKhGW6MdXCQT2hRariUwfxqJUIRs6qKqaovaQkTojzxh2r1L8C49qanKc+huH9wK2C94VZB2T/tosyRl1A==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -5482,9 +5482,9 @@ snapshots:
       - supports-color
       - vite
 
-  '@astrojs/tailwind@5.1.2(astro@4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3))(tailwindcss@3.4.13)':
+  '@astrojs/tailwind@5.1.2(astro@4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3))(tailwindcss@3.4.13)':
     dependencies:
-      astro: 4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)
+      astro: 4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -7338,10 +7338,10 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-imagetools@0.9.0(astro@4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)):
+  astro-imagetools@0.9.0(astro@4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)):
     dependencies:
       '@astropub/codecs': 0.4.4
-      astro: 4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)
+      astro: 4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3)
       file-type: 17.1.1
       find-cache-dir: 3.3.2
       find-up: 6.3.0
@@ -7350,7 +7350,7 @@ snapshots:
     optionalDependencies:
       imagetools-core: 3.0.2
 
-  astro@4.16.10(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3):
+  astro@4.16.12(@types/node@22.7.4)(rollup@4.21.3)(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
