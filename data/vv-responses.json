@@ -323,9 +323,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -379,9 +379,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -435,9 +435,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1506,10 +1506,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Frans",
+          "lastName": "Costers",
+          "personAssigned": true,
+          "status": null
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -2592,10 +2592,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ihssan",
+            "lastName": "El Ayyadi",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -10658,10 +10658,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Johan",
+            "lastName": "Berghmans",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -12361,10 +12361,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jozef",
+            "lastName": "Vantroy",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -14008,10 +14008,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Tom",
+            "lastName": "Anthonissen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -15217,7 +15217,7 @@
           "clubId": "6576",
           "id": "322663",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-          "name": "FC Seja 1"
+          "name": "FC Seja A 1"
         },
         "channel": "voetbalvlaanderen",
         "homeTeam": {
@@ -15498,7 +15498,7 @@
           "clubId": "6576",
           "id": "322663",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-          "name": "FC Seja 1"
+          "name": "FC Seja A 1"
         },
         "id": "6863304",
         "officials": [],
@@ -18660,10 +18660,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jack",
+            "lastName": "Goedgezelschap",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -20160,10 +20160,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kasper",
+            "lastName": "Penneman",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -20914,10 +20914,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Walter",
+            "lastName": "Quick",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -21622,7 +21622,7 @@
           "clubId": "6576",
           "id": "322665",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-          "name": "FC Seja 2"
+          "name": "FC Seja A 2"
         },
         "id": "6844541",
         "officials": [],
@@ -21887,7 +21887,7 @@
           "clubId": "6576",
           "id": "322665",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-          "name": "FC Seja 2"
+          "name": "FC Seja A 2"
         },
         "channel": "voetbalvlaanderen",
         "homeTeam": {
@@ -26416,10 +26416,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Victor",
+            "lastName": "Fierens",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -26477,10 +26477,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Frans",
+            "lastName": "Costers",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -27272,10 +27272,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Victor",
+            "lastName": "Fierens",
+            "personAssigned": true,
+            "status": null
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -30784,6 +30784,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "6094",
+                  "clubRegistrationNumber": "09572",
+                  "fairplayPercentage": null,
+                  "goalDifference": -5,
+                  "goalsAgainst": 13,
+                  "goalsFor": 8,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09572.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 4,
+                  "matchesPlayed": 5,
+                  "matchesWon": 1,
+                  "name": "KESSEL UNITED",
+                  "points": 3,
+                  "position": 7,
+                  "teamId": "310240"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": null,
@@ -30802,38 +30820,20 @@
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "6094",
-                  "clubRegistrationNumber": "09572",
-                  "fairplayPercentage": null,
-                  "goalDifference": -10,
-                  "goalsAgainst": 13,
-                  "goalsFor": 3,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09572.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 4,
-                  "matchesPlayed": 4,
-                  "matchesWon": 0,
-                  "name": "KESSEL UNITED",
-                  "points": 0,
-                  "position": 9,
-                  "teamId": "310240"
-                },
-                {
-                  "__typename": "RankingTeam",
                   "clubId": "1832",
                   "clubRegistrationNumber": "04704",
                   "fairplayPercentage": null,
-                  "goalDifference": -34,
-                  "goalsAgainst": 34,
+                  "goalDifference": -39,
+                  "goalsAgainst": 39,
                   "goalsFor": 0,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04704.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 4,
-                  "matchesPlayed": 4,
+                  "matchesLost": 5,
+                  "matchesPlayed": 5,
                   "matchesWon": 0,
                   "name": "K.F.C. RANST",
                   "points": 0,
-                  "position": 9,
+                  "position": 10,
                   "teamId": "309178"
                 }
               ],
@@ -32370,7 +32370,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00956.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "KFC Schoten SK",
                   "points": null,
@@ -32435,14 +32435,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "6562",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 85,
+                  "fairplayPercentage": 86,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "VK Simikos",
                   "points": null,
@@ -32841,7 +32841,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09306.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "Ekeren FC",
                   "points": null,
@@ -32852,14 +32852,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "2618",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 90,
+                  "fairplayPercentage": 91,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/08111.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "FC Merksem",
                   "points": null,
