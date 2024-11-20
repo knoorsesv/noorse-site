@@ -1506,8 +1506,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Frans",
-          "lastName": "Costers",
+          "firstName": "Dave",
+          "lastName": "Van Dingenen",
           "personAssigned": true,
           "status": null
         },
@@ -10041,53 +10041,6 @@
         "startDateTimeInThePassed": true,
         "startTime": "2024-09-20T20:00:00",
         "state": "finished"
-      },
-      {
-        "__typename": "MatchDetail",
-        "ageGroup": "Equipe Première (Dames)",
-        "awayTeam": {
-          "__typename": "MatchDetailTeam",
-          "clubId": "2029",
-          "id": "309471",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05815.jpg",
-          "name": "KFC ZAMMEL"
-        },
-        "channel": "voetbalvlaanderen",
-        "homeTeam": {
-          "__typename": "MatchDetailTeam",
-          "clubId": "8179",
-          "id": "310612",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-          "name": "SV NOORSE"
-        },
-        "id": "6934393",
-        "officials": [
-          {
-            "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
-          }
-        ],
-        "outcome": {
-          "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
-          "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
-          "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
-        },
-        "series": {
-          "__typename": "MatchSeries",
-          "id": "FRN_876",
-          "name": "Provinciale Vrouwen"
-        },
-        "showScore": true,
-        "startDateTimeInThePassed": false,
-        "startTime": "2024-11-29T20:00:00",
-        "state": "planned"
       }
     ],
     "310613": [
@@ -14755,7 +14708,7 @@
           "clubId": "8314",
           "id": "328400",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-          "name": "FC Patro Hoevenen 1"
+          "name": "FC Patro Hoevenen A 1"
         },
         "id": "6891420",
         "officials": [],
@@ -15020,7 +14973,7 @@
           "clubId": "8314",
           "id": "328400",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-          "name": "FC Patro Hoevenen 1"
+          "name": "FC Patro Hoevenen A 1"
         },
         "channel": "voetbalvlaanderen",
         "homeTeam": {
@@ -25378,7 +25331,7 @@
           "clubId": "1357",
           "id": "324326",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02366.jpg",
-          "name": "Hoogstraten VV 1"
+          "name": "Hoogstraten VV A 1"
         },
         "channel": "voetbalvlaanderen",
         "homeTeam": {
@@ -25659,7 +25612,7 @@
           "clubId": "1357",
           "id": "324326",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02366.jpg",
-          "name": "Hoogstraten VV 1"
+          "name": "Hoogstraten VV A 1"
         },
         "id": "6840205",
         "officials": [],
@@ -26477,8 +26430,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Frans",
-            "lastName": "Costers",
+            "firstName": "Dave",
+            "lastName": "Van Dingenen",
             "personAssigned": true,
             "status": null
           },
