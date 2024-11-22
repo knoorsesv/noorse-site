@@ -980,7 +980,7 @@
         "clubId": "8830",
         "id": "315501",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
-        "name": "Maroc United Antwerp 1"
+        "name": "Maroc United Antwerp A 1"
       },
       "id": "6859185",
       "location": {
@@ -1254,8 +1254,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1265,7 +1265,7 @@
       "showScore": true,
       "startDateTimeInThePassed": true,
       "startTime": "2024-11-20T20:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U17 AV"
     },
     {
@@ -1521,9 +1521,9 @@
         "__typename": "MatchLocation",
         "address": "Dorensweg 11",
         "city": "Loenhout",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2990",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -14143,7 +14143,7 @@
           "clubId": "8830",
           "id": "315501",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
-          "name": "Maroc United Antwerp 1"
+          "name": "Maroc United Antwerp A 1"
         },
         "channel": "voetbalvlaanderen",
         "homeTeam": {
@@ -14424,7 +14424,7 @@
           "clubId": "8830",
           "id": "315501",
           "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
-          "name": "Maroc United Antwerp 1"
+          "name": "Maroc United Antwerp A 1"
         },
         "id": "6859185",
         "officials": [],
@@ -20643,8 +20643,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -20654,7 +20654,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-11-20T20:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -25037,6 +25037,45 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2024-12-01T09:30:00",
+        "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "Wu13",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "327750",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1797",
+          "id": "330414",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
+          "name": "KFC BERENDRECHT SP."
+        },
+        "id": "6969401",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_898",
+          "name": "Meisjes Jeugd U13"
+        },
+        "showScore": false,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-11-30T10:00:00",
         "state": "planned"
       }
     ],
@@ -30099,6 +30138,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8177",
+                  "clubRegistrationNumber": "R61014",
+                  "fairplayPercentage": null,
+                  "goalDifference": 0,
+                  "goalsAgainst": 29,
+                  "goalsFor": 29,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
+                  "matchesDrawn": 2,
+                  "matchesLost": 2,
+                  "matchesPlayed": 8,
+                  "matchesWon": 4,
+                  "name": "F.C. KONINGSHOF B",
+                  "points": 14,
+                  "position": 6,
+                  "teamId": "308754"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "6562",
                   "clubRegistrationNumber": "R61119",
                   "fairplayPercentage": null,
@@ -30112,7 +30169,7 @@
                   "matchesWon": 4,
                   "name": "V.K. SIMIKOS C",
                   "points": 12,
-                  "position": 6,
+                  "position": 7,
                   "teamId": "307440"
                 },
                 {
@@ -30130,26 +30187,8 @@
                   "matchesWon": 3,
                   "name": "S.K. NIEUW STABROEK B",
                   "points": 12,
-                  "position": 7,
-                  "teamId": "308240"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8177",
-                  "clubRegistrationNumber": "R61014",
-                  "fairplayPercentage": null,
-                  "goalDifference": -1,
-                  "goalsAgainst": 27,
-                  "goalsFor": 26,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-                  "matchesDrawn": 2,
-                  "matchesLost": 2,
-                  "matchesPlayed": 7,
-                  "matchesWon": 3,
-                  "name": "F.C. KONINGSHOF B",
-                  "points": 11,
                   "position": 8,
-                  "teamId": "308754"
+                  "teamId": "308240"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -30166,7 +30205,7 @@
                   "matchesWon": 3,
                   "name": "K.S.K. 'S GRAVENWEZEL-SCHILDE",
                   "points": 11,
-                  "position": 8,
+                  "position": 9,
                   "teamId": "305239"
                 },
                 {
@@ -30228,13 +30267,13 @@
                   "clubId": "8970",
                   "clubRegistrationNumber": "R66961",
                   "fairplayPercentage": null,
-                  "goalDifference": -32,
-                  "goalsAgainst": 45,
-                  "goalsFor": 13,
+                  "goalDifference": -33,
+                  "goalsAgainst": 48,
+                  "goalsFor": 15,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/66961.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 8,
-                  "matchesPlayed": 10,
+                  "matchesLost": 9,
+                  "matchesPlayed": 11,
                   "matchesWon": 1,
                   "name": "ARAKORA",
                   "points": 4,
