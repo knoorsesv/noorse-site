@@ -86,10 +86,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Marcel",
-          "lastName": "Noiron",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -98,8 +98,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -107,9 +107,9 @@
         "id": "CHP_116613"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-22T19:30:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Regionale Res. Antw C"
     },
     {
@@ -294,8 +294,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -303,9 +303,9 @@
         "id": "CHP_120993"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-22T20:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Vrouwen 3 Prov Antw B"
     },
     {
@@ -338,10 +338,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Dirk",
+          "lastName": "Haest",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -454,8 +454,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -465,7 +465,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T12:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U12 AZ"
     },
     {
@@ -546,10 +546,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Waâd",
-          "lastName": "Salim Elewe",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -558,8 +558,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -569,7 +569,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T15:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U15 BJ"
     },
     {
@@ -998,8 +998,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1009,7 +1009,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T09:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Gewestelijk U7 BF"
     },
     {
@@ -1046,8 +1046,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1057,7 +1057,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T12:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U9 BS"
     },
     {
@@ -1090,10 +1090,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Stef",
-          "lastName": "Claessens",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1102,8 +1102,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1111,9 +1111,9 @@
         "id": "CHP_121643"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-22T20:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U21 W"
     },
     {
@@ -1198,8 +1198,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1209,7 +1209,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T11:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U8 BE"
     },
     {
@@ -1306,12 +1306,12 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 5,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1321,7 +1321,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T16:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Gewestelijk U17 AV"
     },
     {
@@ -1354,19 +1354,19 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Patrick",
-          "lastName": "Jones",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 5,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1375,9 +1375,9 @@
         "id": "CHP_122316"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-22T19:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U17 BI"
     },
     {
@@ -1458,10 +1458,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Dave",
-          "lastName": "Van Dingenen",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -1484,8 +1484,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1493,9 +1493,9 @@
         "id": "CHP_122581"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-11-22T20:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Meisjes U16 reeks N"
     },
     {
@@ -1554,8 +1554,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1565,7 +1565,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2024-11-23T11:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Meisjes U16 reeks N"
     },
     {
@@ -4144,10 +4144,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Marcel",
-            "lastName": "Noiron",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -4156,8 +4156,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -4165,9 +4165,9 @@
           "name": "Regionale Res. Antw C"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-22T19:30:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -9229,8 +9229,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -9238,9 +9238,9 @@
           "name": "Vrouwen 3 Prov Antw B"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-22T20:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -10563,10 +10563,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Johan",
-            "lastName": "Berghmans",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -12219,10 +12219,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Dirk",
+            "lastName": "Haest",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -13866,10 +13866,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Stef",
-            "lastName": "Claessens",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -13878,8 +13878,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -13887,9 +13887,9 @@
           "name": "Gewestelijk U21 W"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-22T20:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -14434,8 +14434,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -14445,7 +14445,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T09:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -14982,8 +14982,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -14993,7 +14993,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T11:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -15530,8 +15530,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -15541,7 +15541,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T12:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -17800,8 +17800,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -17811,7 +17811,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T12:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -19178,10 +19178,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Waâd",
-            "lastName": "Salim Elewe",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -19190,8 +19190,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -19201,7 +19201,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T15:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -20018,19 +20018,19 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Patrick",
-            "lastName": "Jones",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 3,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 5,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -20039,9 +20039,9 @@
           "name": "Gewestelijk U17 BI"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-22T19:30:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -20780,12 +20780,12 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 5,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -20795,7 +20795,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T16:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -26421,10 +26421,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Dave",
-            "lastName": "Van Dingenen",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -26447,8 +26447,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -26456,9 +26456,9 @@
           "name": "Meisjes U16 reeks N"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-11-22T20:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -27303,8 +27303,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -27314,7 +27314,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2024-11-23T11:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -30813,6 +30813,24 @@
               "teams": [
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1509",
+                  "clubRegistrationNumber": "03029",
+                  "fairplayPercentage": null,
+                  "goalDifference": 34,
+                  "goalsAgainst": 7,
+                  "goalsFor": 41,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03029.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 1,
+                  "matchesPlayed": 8,
+                  "matchesWon": 7,
+                  "name": "K. KONTICH F.C. B",
+                  "points": 21,
+                  "position": 1,
+                  "teamId": "303848"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1255",
                   "clubRegistrationNumber": "01640",
                   "fairplayPercentage": null,
@@ -30826,26 +30844,26 @@
                   "matchesWon": 6,
                   "name": "K. BEVEL F.C. A",
                   "points": 20,
-                  "position": 1,
+                  "position": 2,
                   "teamId": "309691"
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "1509",
-                  "clubRegistrationNumber": "03029",
+                  "clubId": "2325",
+                  "clubRegistrationNumber": "07027",
                   "fairplayPercentage": null,
-                  "goalDifference": 29,
-                  "goalsAgainst": 6,
-                  "goalsFor": 35,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03029.jpg",
+                  "goalDifference": 22,
+                  "goalsAgainst": 16,
+                  "goalsFor": 38,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07027.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 1,
-                  "matchesPlayed": 7,
+                  "matchesLost": 3,
+                  "matchesPlayed": 9,
                   "matchesWon": 6,
-                  "name": "K. KONTICH F.C. B",
+                  "name": "K.S.K. SINT-AMANDS",
                   "points": 18,
-                  "position": 2,
-                  "teamId": "303848"
+                  "position": 3,
+                  "teamId": "309942"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -30862,26 +30880,8 @@
                   "matchesWon": 4,
                   "name": "S.V. NOORSE B",
                   "points": 16,
-                  "position": 3,
-                  "teamId": "310613"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "2325",
-                  "clubRegistrationNumber": "07027",
-                  "fairplayPercentage": null,
-                  "goalDifference": 20,
-                  "goalsAgainst": 15,
-                  "goalsFor": 35,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07027.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 8,
-                  "matchesWon": 5,
-                  "name": "K.S.K. SINT-AMANDS",
-                  "points": 15,
                   "position": 4,
-                  "teamId": "309942"
+                  "teamId": "310613"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -30960,13 +30960,13 @@
                   "clubId": "5072",
                   "clubRegistrationNumber": "09397",
                   "fairplayPercentage": null,
-                  "goalDifference": 9,
-                  "goalsAgainst": 10,
-                  "goalsFor": 19,
+                  "goalDifference": 7,
+                  "goalsAgainst": 13,
+                  "goalsFor": 20,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09397.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 2,
-                  "matchesPlayed": 7,
+                  "matchesLost": 3,
+                  "matchesPlayed": 8,
                   "matchesWon": 3,
                   "name": "V.C. MORTSEL O.G.",
                   "points": 11,
@@ -30978,13 +30978,13 @@
                   "clubId": "1157",
                   "clubRegistrationNumber": "00544",
                   "fairplayPercentage": null,
-                  "goalDifference": -7,
-                  "goalsAgainst": 24,
-                  "goalsFor": 17,
+                  "goalDifference": -12,
+                  "goalsAgainst": 30,
+                  "goalsFor": 18,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 5,
-                  "matchesPlayed": 7,
+                  "matchesLost": 6,
+                  "matchesPlayed": 8,
                   "matchesWon": 2,
                   "name": "S.C. CITY PIRATES ANTWERPEN",
                   "points": 6,
@@ -30996,13 +30996,13 @@
                   "clubId": "2985",
                   "clubRegistrationNumber": "09271",
                   "fairplayPercentage": null,
-                  "goalDifference": -16,
-                  "goalsAgainst": 27,
-                  "goalsFor": 11,
+                  "goalDifference": -18,
+                  "goalsAgainst": 31,
+                  "goalsFor": 13,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09271.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 5,
-                  "matchesPlayed": 7,
+                  "matchesLost": 6,
+                  "matchesPlayed": 8,
                   "matchesWon": 1,
                   "name": "DAVO PUURS A",
                   "points": 4,
@@ -31014,16 +31014,16 @@
                   "clubId": "1807",
                   "clubRegistrationNumber": "04471",
                   "fairplayPercentage": null,
-                  "goalDifference": -27,
-                  "goalsAgainst": 34,
-                  "goalsFor": 7,
+                  "goalDifference": -25,
+                  "goalsAgainst": 36,
+                  "goalsFor": 11,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04471.jpg",
                   "matchesDrawn": 0,
                   "matchesLost": 7,
-                  "matchesPlayed": 7,
-                  "matchesWon": 0,
+                  "matchesPlayed": 8,
+                  "matchesWon": 1,
                   "name": "K.F.C. BROECHEM A",
-                  "points": 0,
+                  "points": 3,
                   "position": 12,
                   "teamId": "310399"
                 },
@@ -31042,7 +31042,7 @@
                   "matchesWon": 0,
                   "name": "K.S.K. 'S GRAVENWEZEL-SCHILDE",
                   "points": 0,
-                  "position": 12,
+                  "position": 13,
                   "teamId": "305234"
                 }
               ],
@@ -33478,14 +33478,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 86,
-                  "goalDifference": 39,
-                  "goalsAgainst": 21,
-                  "goalsFor": 60,
+                  "fairplayPercentage": 84,
+                  "goalDifference": 37,
+                  "goalsAgainst": 26,
+                  "goalsFor": 63,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 2,
-                  "matchesPlayed": 12,
+                  "matchesLost": 3,
+                  "matchesPlayed": 13,
                   "matchesWon": 9,
                   "name": "S.V. NOORSE A",
                   "points": 28,
@@ -33496,17 +33496,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "8177",
                   "clubRegistrationNumber": "R61014",
-                  "fairplayPercentage": 94,
-                  "goalDifference": 17,
-                  "goalsAgainst": 26,
-                  "goalsFor": 43,
+                  "fairplayPercentage": 90,
+                  "goalDifference": 19,
+                  "goalsAgainst": 29,
+                  "goalsFor": 48,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
                   "matchesDrawn": 2,
                   "matchesLost": 2,
-                  "matchesPlayed": 11,
-                  "matchesWon": 7,
+                  "matchesPlayed": 12,
+                  "matchesWon": 8,
                   "name": "F.C. KONINGSHOF A",
-                  "points": 23,
+                  "points": 26,
                   "position": 2,
                   "teamId": "328302"
                 },
