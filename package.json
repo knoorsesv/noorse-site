@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/react": "3.6.2",
+    "@astrojs/react": "3.6.3",
     "@astrojs/tailwind": "5.1.2",
     "@fontsource/lato": "5.1.0",
     "@fontsource/mulish": "5.1.0",
@@ -54,7 +54,7 @@
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@vitejs/plugin-react": "4.3.3",
-    "astro": "4.16.12",
+    "astro": "4.16.14",
     "astro-imagetools": "0.9.0",
     "contentful": "11.2.1",
     "date-fns": "4.1.0",
