@@ -323,9 +323,9 @@
         "__typename": "MatchLocation",
         "address": "Kathelijnestraat",
         "city": "Hoogstraten",
-        "pitchCode": "3",
+        "pitchCode": "2",
         "postalCode": "2320",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1346,10 +1346,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Hamid",
-          "lastName": "Amraoui",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -2631,10 +2631,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Rudy",
+            "lastName": "Janssens",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18654,8 +18654,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Jan",
-            "lastName": "Van De Wouwer",
+            "firstName": "Mehmet",
+            "lastName": "Çolak",
             "personAssigned": true,
             "status": null
           }
@@ -20105,10 +20105,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Hamid",
-            "lastName": "Amraoui",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -26317,8 +26317,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Wouter",
-            "lastName": "Anthonis",
+            "firstName": "Gerard",
+            "lastName": "Nijskens",
             "personAssigned": true,
             "status": null
           },
@@ -32440,14 +32440,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8317",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 92,
+                  "fairplayPercentage": 93,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 12,
+                  "matchesPlayed": 13,
                   "matchesWon": null,
                   "name": "V.C. O.L.S.E.",
                   "points": null,
@@ -32458,14 +32458,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "6562",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 86,
+                  "fairplayPercentage": 88,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "VK Simikos",
                   "points": null,
@@ -33209,15 +33209,15 @@
                   "clubRegistrationNumber": "05357",
                   "fairplayPercentage": 82,
                   "goalDifference": 67,
-                  "goalsAgainst": 29,
-                  "goalsFor": 96,
+                  "goalsAgainst": 32,
+                  "goalsFor": 99,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
-                  "matchesDrawn": 0,
+                  "matchesDrawn": 1,
                   "matchesLost": 1,
-                  "matchesPlayed": 12,
+                  "matchesPlayed": 13,
                   "matchesWon": 11,
                   "name": "EXCELSIOR MARIABURG A",
-                  "points": 33,
+                  "points": 34,
                   "position": 1,
                   "teamId": "320546"
                 },
@@ -33245,15 +33245,15 @@
                   "clubRegistrationNumber": "R61040",
                   "fairplayPercentage": 95,
                   "goalDifference": 30,
-                  "goalsAgainst": 18,
-                  "goalsFor": 48,
+                  "goalsAgainst": 21,
+                  "goalsFor": 51,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
-                  "matchesDrawn": 1,
+                  "matchesDrawn": 2,
                   "matchesLost": 2,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": 8,
                   "name": "KON. SV VLUG VOORUIT",
-                  "points": 25,
+                  "points": 26,
                   "position": 3,
                   "teamId": "328952"
                 },
@@ -35078,14 +35078,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1653",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 92,
+                  "fairplayPercentage": 91,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "K. Gooreind VV",
                   "points": null,
@@ -35186,14 +35186,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "6562",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 100,
+                  "fairplayPercentage": 99,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "VK Simikos",
                   "points": null,
