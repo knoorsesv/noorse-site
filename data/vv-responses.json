@@ -79,9 +79,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "1",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -718,54 +718,6 @@
     },
     {
       "__typename": "MatchDetail",
-      "ageGroup": "Wu13",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1178",
-        "id": "319275",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00683.jpg",
-        "name": "KFC Herenthout A 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "327750",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "6841728",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_119394"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2024-12-01T09:30:00",
-      "state": "planned",
-      "title": "Meisjes U13 reeks H"
-    },
-    {
-      "__typename": "MatchDetail",
       "ageGroup": "U11",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
@@ -1283,9 +1235,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -1346,8 +1298,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Ebuzer",
-          "lastName": "Gunes",
+          "firstName": "Jonas",
+          "lastName": "Pittoors",
           "personAssigned": true,
           "status": null
         }
@@ -1513,9 +1465,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "1",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -9257,10 +9209,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Robbe",
-            "lastName": "De Zitter",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -9269,8 +9221,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -9278,9 +9230,9 @@
           "name": "Vrouwen 3 Prov Antw B"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2024-11-22T20:00:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-12-20T20:00:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -19230,8 +19182,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -19239,9 +19191,9 @@
           "name": "Gewestelijk U15 BJ"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2024-11-23T15:00:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-12-14T17:00:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -20105,8 +20057,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Ebuzer",
-            "lastName": "Gunes",
+            "firstName": "Jonas",
+            "lastName": "Pittoors",
             "personAssigned": true,
             "status": null
           }
@@ -25115,7 +25067,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-12-01T09:30:00",
+        "startTime": "2024-12-07T12:00:00",
         "state": "planned"
       },
       {
@@ -26439,8 +26391,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Kasper",
-            "lastName": "Penneman",
+            "firstName": "Hamid",
+            "lastName": "Amraoui",
             "personAssigned": true,
             "status": null
           },
@@ -27295,8 +27247,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Kasper",
-            "lastName": "Penneman",
+            "firstName": "Hamid",
+            "lastName": "Amraoui",
             "personAssigned": true,
             "status": null
           },
@@ -34154,14 +34106,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8298",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 94,
+                  "fairplayPercentage": 95,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "Kon SV Vlug Vooruit",
                   "points": null,
@@ -34190,14 +34142,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 65,
+                  "fairplayPercentage": 72,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 4,
+                  "matchesPlayed": 5,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
