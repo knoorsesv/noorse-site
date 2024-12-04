@@ -442,10 +442,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Bert",
+          "lastName": "Bedeer",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -2030,10 +2030,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Abdul",
+            "lastName": "Kargbo",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -3066,20 +3066,20 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Harold",
-            "lastName": "Verwey",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": 2,
+          "awayTeamGoals": null,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": 2,
+          "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "finished",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Algemeen niet-opkomen"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -3089,7 +3089,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-09-06T20:00:00",
-        "state": "finished"
+        "state": "generalForfeit"
       },
       {
         "__typename": "MatchDetail",
@@ -3689,8 +3689,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Algemeen niet-opkomen"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -3700,7 +3700,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2025-01-11T14:30:00",
-        "state": "planned"
+        "state": "generalForfeit"
       },
       {
         "__typename": "MatchDetail",
@@ -10002,10 +10002,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Bert",
+            "lastName": "Bedeer",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -22669,6 +22669,45 @@
         "startDateTimeInThePassed": true,
         "startTime": "2024-11-20T18:00:00",
         "state": "postponed"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "U13",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1457",
+          "id": "322018",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02820.jpg",
+          "name": "KSK OOSTHOVEN"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "327747",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "id": "6971918",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_886",
+          "name": "U13"
+        },
+        "showScore": false,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-12-20T19:30:00",
+        "state": "planned"
       }
     ],
     "327748": [
@@ -34123,7 +34162,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01640.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "K. Bevel FC",
                   "points": null,
@@ -34177,7 +34216,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03175.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "KFC.Herent",
                   "points": null,
