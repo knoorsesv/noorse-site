@@ -442,10 +442,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Bert",
-          "lastName": "Bedeer",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -947,7 +947,7 @@
         "id": "CHP_122581"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2024-12-04T18:00:00",
       "state": "planned",
       "title": "Meisjes U16 reeks N"
@@ -10002,10 +10002,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Bert",
-            "lastName": "Bedeer",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -25865,7 +25865,7 @@
           "name": "Meisjes U16 reeks N"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-12-04T18:00:00",
         "state": "planned"
       },
@@ -26721,7 +26721,7 @@
           "name": "Meisjes U16 reeks N"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2024-12-04T18:00:00",
         "state": "planned"
       },
@@ -29873,6 +29873,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8800",
+                  "clubRegistrationNumber": "R66933",
+                  "fairplayPercentage": null,
+                  "goalDifference": -10,
+                  "goalsAgainst": 37,
+                  "goalsFor": 27,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/66933.jpg",
+                  "matchesDrawn": 2,
+                  "matchesLost": 5,
+                  "matchesPlayed": 12,
+                  "matchesWon": 5,
+                  "name": "F.C. DRAKENHOF D",
+                  "points": 17,
+                  "position": 6,
+                  "teamId": "306851"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8347",
                   "clubRegistrationNumber": "R66793",
                   "fairplayPercentage": null,
@@ -29886,7 +29904,7 @@
                   "matchesWon": 5,
                   "name": "EL CONDOR B",
                   "points": 16,
-                  "position": 6,
+                  "position": 7,
                   "teamId": "311664"
                 },
                 {
@@ -29904,7 +29922,7 @@
                   "matchesWon": 4,
                   "name": "K. TUBANTIA BORGERHOUT V.K.",
                   "points": 14,
-                  "position": 7,
+                  "position": 8,
                   "teamId": "306499"
                 },
                 {
@@ -29922,26 +29940,8 @@
                   "matchesWon": 4,
                   "name": "S.V. SINT-JOZEF B",
                   "points": 14,
-                  "position": 7,
+                  "position": 8,
                   "teamId": "303667"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8800",
-                  "clubRegistrationNumber": "R66933",
-                  "fairplayPercentage": null,
-                  "goalDifference": -12,
-                  "goalsAgainst": 36,
-                  "goalsFor": 24,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/66933.jpg",
-                  "matchesDrawn": 2,
-                  "matchesLost": 5,
-                  "matchesPlayed": 11,
-                  "matchesWon": 4,
-                  "name": "F.C. DRAKENHOF D",
-                  "points": 14,
-                  "position": 7,
-                  "teamId": "306851"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29984,13 +29984,13 @@
                   "clubId": "8175",
                   "clubRegistrationNumber": "R61012",
                   "fairplayPercentage": null,
-                  "goalDifference": -10,
-                  "goalsAgainst": 25,
-                  "goalsFor": 15,
+                  "goalDifference": -12,
+                  "goalsAgainst": 28,
+                  "goalsFor": 16,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
                   "matchesDrawn": 3,
-                  "matchesLost": 5,
-                  "matchesPlayed": 9,
+                  "matchesLost": 6,
+                  "matchesPlayed": 10,
                   "matchesWon": 1,
                   "name": "F.C. IK DIEN",
                   "points": 6,
