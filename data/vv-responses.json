@@ -750,8 +750,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -761,7 +761,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2024-12-07T12:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Meisjes U13 reeks H"
     },
     {
@@ -4217,6 +4217,45 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2025-04-04T20:00:00",
+        "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "Réserves",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "310608",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1212",
+          "id": "307190",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01092.jpg",
+          "name": "K. WIJNEGEM VC"
+        },
+        "id": "6972684",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_878",
+          "name": "Reserven Provincie"
+        },
+        "showScore": true,
+        "startDateTimeInThePassed": false,
+        "startTime": "2024-12-14T15:00:00",
         "state": "planned"
       }
     ],
@@ -24496,8 +24535,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -24507,7 +24546,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2024-12-07T12:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
