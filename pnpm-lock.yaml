@@ -57,8 +57,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       marked:
-        specifier: 14.1.4
-        version: 14.1.4
+        specifier: 15.0.3
+        version: 15.0.3
       prop-types:
         specifier: 15.8.1
         version: 15.8.1
@@ -3534,8 +3534,8 @@ packages:
     peerDependencies:
       react: '>= 0.14.0'
 
-  marked@14.1.4:
-    resolution: {integrity: sha512-vkVZ8ONmUdPnjCKc5uTRvmkRbx4EAi2OkTOXmfTDhZz3OFqMNBM1oTTWwTr4HY4uAEojhzPf+Fy8F1DWa3Sndg==}
+  marked@15.0.3:
+    resolution: {integrity: sha512-Ai0cepvl2NHnTcO9jYDtcOEtVBNVYR31XnEA3BndO7f5As1wzpcOceSUM8FDkNLJNIODcLpDTWay/qQhqbuMvg==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -9323,7 +9323,7 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  marked@14.1.4: {}
+  marked@15.0.3: {}
 
   mdast-util-definitions@6.0.0:
     dependencies:
