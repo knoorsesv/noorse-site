@@ -1,25 +1,47 @@
 import ctl from '@netlify/classnames-template-literals'
-import { useEffect, useRef, useState } from 'react'
-import { ImageWrapper } from '../wrappers/image-wrapper'
-import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
+import {
+  useEffect,
+  useRef,
+  useState,
+  type Dispatch,
+  type FC,
+  type PropsWithChildren,
+  type SetStateAction,
+} from 'react'
+import { ImageWrapper } from '../wrappers/image-wrapper.js'
+import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
-// import aerial from '../images/noorse_aerial.png?w=600;800;1200&h=200;400;800&format=webp&q=50,100'
+// @ts-expect-error todo: find a good way to add a type definition for this
 import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
 export const coverSectionHeight = 'h-32v medium:h-48v large:64v'
 
+interface SiteMapItem {
+  link: string
+  name: string
+  extLink?: string
+  subItems: SiteMapItem[]
+}
+
+interface SiteMap {
+  items: SiteMapItem[]
+}
+
+type InfoPageLinkFC = FC<{ item: SiteMapItem; className: string }>
+
 //  topMenuBarShown is a bad name, it means the fixed non transparent navbar should be shown
-const NavSection = ({
-  pageHasCoverPhoto,
-  children,
-  setTopMenuBarShown,
-  topMenuBarShown,
-}) => {
-  const ref = useRef(null)
+const NavSection: FC<
+  PropsWithChildren<{
+    pageHasCoverPhoto: boolean
+    setTopMenuBarShown: Dispatch<SetStateAction<boolean>>
+    topMenuBarShown: boolean
+  }>
+> = ({ pageHasCoverPhoto, children, setTopMenuBarShown, topMenuBarShown }) => {
+  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +70,7 @@ const NavSection = ({
             alt={'Luchtfoto Noorse velden'}
             loading={'eager'}
             className="aspect-[3/2] h-full w-full object-cover object-center"
-            src={aerial}
+            src={aerial as string}
           />
         </div>
       ) : (
@@ -59,7 +81,11 @@ const NavSection = ({
   )
 }
 
-const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
+const MenuItemList: FC<{
+  topMenuBarShown: boolean
+  siteMap: SiteMap
+  sideBarMenuShown: boolean
+}> = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   const ulClasses = ctl(`
   fixed top-0
   list-none z-50
@@ -86,7 +112,7 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
   `)
 
-  const InfoPageLink = ({ item, className }) => {
+  const InfoPageLink: InfoPageLinkFC = ({ item, className }) => {
     return (
       <LinkWrapper
         className={className}
@@ -147,11 +173,7 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
                 )}
               </span>
               {item.subItems && (!sideBarMenuShown || opened) && (
-                <SubMenuItemList
-                  fixedToTop={topMenuBarShown}
-                  item={item}
-                  InfoPageLink={InfoPageLink}
-                />
+                <SubMenuItemList item={item} InfoPageLink={InfoPageLink} />
               )}
             </li>
           )
@@ -161,7 +183,10 @@ const MenuItemList = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
   )
 }
 
-const SubMenuItemList = ({ item, InfoPageLink }) => {
+const SubMenuItemList: FC<{
+  item: SiteMapItem
+  InfoPageLink: InfoPageLinkFC
+}> = ({ item, InfoPageLink }) => {
   const ulClasses = ctl(`
   list-none
   extraLarge:hidden extraLarge:group-hover:absolute extraLarge:group-hover:flex
@@ -182,7 +207,11 @@ const SubMenuItemList = ({ item, InfoPageLink }) => {
   )
 }
 
-const NavLink = ({ item, InfoPageLink, onClick }) => {
+const NavLink: FC<{
+  item: SiteMapItem
+  InfoPageLink: InfoPageLinkFC
+  onClick?: () => void
+}> = ({ item, InfoPageLink, onClick }) => {
   const className = 'text-white text-lg capitalize'
   if (item.link) {
     return <InfoPageLink className={className} item={item} />
@@ -209,7 +238,7 @@ const NavLink = ({ item, InfoPageLink, onClick }) => {
   )
 }
 
-const MenuLogo = ({ topMenuBarShown }) => {
+const MenuLogo: FC<{ topMenuBarShown: boolean }> = ({ topMenuBarShown }) => {
   const logContainerClasses = ctl(`${transition}
        flex items-center z-20 
       ${
@@ -242,7 +271,11 @@ const MenuLogo = ({ topMenuBarShown }) => {
   )
 }
 
-const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
+const MenuToggle: FC<{
+  clickBurger: () => void
+  sideBarMenuShown: boolean
+  topMenuBarShown: boolean
+}> = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
   const toggleWrapperClasses = ctl(`fixed right-0 top-0
     extraLarge:hidden
     mt-4 mr-3 medium:mt-6 medium:mr-4
@@ -263,8 +296,12 @@ const MenuToggle = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
 }
 
 // todo: just make 2 separate components instead of having a boolean for the cover photo
-export const Navbar = ({ pageHasCoverPhoto = false, siteMap }) => {
-  const [topMenuBarShown, setTopMenuBarShown] = useState(!pageHasCoverPhoto)
+export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
+  pageHasCoverPhoto = false,
+  siteMap,
+}) => {
+  const [topMenuBarShown, setTopMenuBarShown] =
+    useState<boolean>(!pageHasCoverPhoto)
   const [sideBarMenuShown, setMenuShown] = useState(false)
 
   const toggleMenuShown = () => {

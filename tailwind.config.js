@@ -5,7 +5,7 @@ module.exports = {
     preflight: false,
   },
   important: true,
-  content: ['./src/**/*.js', './src/**/*.jsx'],
+  content: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.tsx'],
   theme: {
     screens: {
       medium: '640px',

@@ -1,4 +1,4 @@
-import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
+import { LinkWrapper } from '../../wrappers/link-wrapper.tsx'
 import { Footer, Navbar, Seo } from '../index.js'
 
 export const Layout = ({ children, version, sponsors, sitemap }) => {

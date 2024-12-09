@@ -1,5 +1,5 @@
 import { ImageWrapper } from '../../wrappers/image-wrapper'
-import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
+import { LinkWrapper } from '../../wrappers/link-wrapper.tsx'
 import {
   ArrowRight,
   Card,
