@@ -1,5 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import {
+  forwardRef,
   useEffect,
   useRef,
   useState,
@@ -18,7 +19,7 @@ import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
-export const coverSectionHeight = 'h-32v medium:h-48v large:64v'
+const coverSectionHeight = 'h-32v medium:h-48v large:64v'
 
 interface SiteMapItem {
   link: string
@@ -33,53 +34,96 @@ interface SiteMap {
 
 type InfoPageLinkFC = FC<{ item: SiteMapItem; className: string }>
 
-//  topMenuBarShown is a bad name, it means the fixed non transparent navbar should be shown
-const NavSection: FC<
-  PropsWithChildren<{
-    pageHasCoverPhoto: boolean
-    setTopMenuBarShown: Dispatch<SetStateAction<boolean>>
-    topMenuBarShown: boolean
-  }>
-> = ({ pageHasCoverPhoto, children, setTopMenuBarShown, topMenuBarShown }) => {
+export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
+  pageHasCoverPhoto = false,
+  siteMap,
+}) => {
+  const [topMenuBarShown, setTopMenuBarShown] =
+    useState<boolean>(!pageHasCoverPhoto)
+  const [sideBarMenuShown, setMenuShown] = useState(false)
+
+  const toggleMenuShown = () => {
+    setMenuShown(!sideBarMenuShown)
+  }
+
   const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
-        setTopMenuBarShown(
-          !pageHasCoverPhoto || ref.current.getBoundingClientRect().top < 0
-        )
+        setTopMenuBarShown(ref.current.getBoundingClientRect().top < 0)
       }
     }
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', () => handleScroll)
     }
-  }, [pageHasCoverPhoto, setTopMenuBarShown])
+  }, [setTopMenuBarShown])
 
-  const navContainerClasses = ctl(`
-  ${pageHasCoverPhoto ? coverSectionHeight : menuBarHeight}
-  ${topMenuBarShown ? 'bg-green' : ''}
-  w-full static`)
+  return pageHasCoverPhoto ? (
+    <NavSectionWithCoverPhoto ref={ref} topMenuBarShown={topMenuBarShown}>
+      <MenuItemList
+        topMenuBarShown={topMenuBarShown}
+        sideBarMenuShown={sideBarMenuShown}
+        siteMap={siteMap}
+      />
+      <MenuLogo topMenuBarShown={topMenuBarShown} />
+      <MenuToggle
+        clickBurger={toggleMenuShown}
+        sideBarMenuShown={sideBarMenuShown}
+        topMenuBarShown={topMenuBarShown}
+      />
+    </NavSectionWithCoverPhoto>
+  ) : (
+    <NavSection>
+      <MenuItemList
+        topMenuBarShown={true}
+        sideBarMenuShown={sideBarMenuShown}
+        siteMap={siteMap}
+      />
+      <MenuLogo topMenuBarShown={true} />
+      <MenuToggle
+        clickBurger={toggleMenuShown}
+        sideBarMenuShown={sideBarMenuShown}
+        topMenuBarShown={true}
+      />
+    </NavSection>
+  )
+}
+
+const NavSection: FC<PropsWithChildren> = ({ children }) => {
+  const navContainerClasses = ctl(`${menuBarHeight} bg-green w-full static`)
   return (
-    <header ref={ref} id="nav-container" className={navContainerClasses}>
-      {pageHasCoverPhoto ? (
-        <div className={ctl(`${coverSectionHeight} absolute w-full`)}>
-          <ImageWrapper
-            id={'background-image'}
-            alt={'Luchtfoto Noorse velden'}
-            loading={'eager'}
-            className="aspect-[3/2] h-full w-full object-cover object-center"
-            src={aerial as string}
-          />
-        </div>
-      ) : (
-        <></>
-      )}
+    <header id="nav-container" className={navContainerClasses}>
       {children}
     </header>
   )
 }
+
+const NavSectionWithCoverPhoto = forwardRef<
+  HTMLHeadElement,
+  PropsWithChildren<{
+    topMenuBarShown: boolean
+  }>
+>(({ children, topMenuBarShown }, ref) => {
+  const navContainerClasses = ctl(
+    `${coverSectionHeight} ${topMenuBarShown ? 'bg-green' : ''}  w-full static`
+  )
+  return (
+    <header ref={ref} id="nav-container" className={navContainerClasses}>
+      <div className={ctl(`${coverSectionHeight} absolute w-full`)}>
+        <ImageWrapper
+          id={'background-image'}
+          alt={'Luchtfoto Noorse velden'}
+          loading={'eager'}
+          className="aspect-[3/2] h-full w-full object-cover object-center"
+          src={aerial as string}
+        />
+      </div>
+      {children}
+    </header>
+  )
+})
 
 const MenuItemList: FC<{
   topMenuBarShown: boolean
@@ -292,39 +336,5 @@ const MenuToggle: FC<{
         {sideBarMenuShown ? <Close /> : <Menu />}
       </button>
     </div>
-  )
-}
-
-// todo: just make 2 separate components instead of having a boolean for the cover photo
-export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
-  pageHasCoverPhoto = false,
-  siteMap,
-}) => {
-  const [topMenuBarShown, setTopMenuBarShown] =
-    useState<boolean>(!pageHasCoverPhoto)
-  const [sideBarMenuShown, setMenuShown] = useState(false)
-
-  const toggleMenuShown = () => {
-    setMenuShown(!sideBarMenuShown)
-  }
-
-  return (
-    <NavSection
-      topMenuBarShown={topMenuBarShown}
-      pageHasCoverPhoto={pageHasCoverPhoto}
-      setTopMenuBarShown={setTopMenuBarShown}
-    >
-      <MenuItemList
-        topMenuBarShown={topMenuBarShown}
-        sideBarMenuShown={sideBarMenuShown}
-        siteMap={siteMap}
-      />
-      <MenuLogo topMenuBarShown={topMenuBarShown} />
-      <MenuToggle
-        clickBurger={toggleMenuShown}
-        sideBarMenuShown={sideBarMenuShown}
-        topMenuBarShown={topMenuBarShown}
-      />
-    </NavSection>
   )
 }
