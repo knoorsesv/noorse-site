@@ -1,4 +1,4 @@
-import { Navbar } from './navbar.jsx'
+import { Navbar } from './navbar.tsx'
 import { siteMapFactory } from './data/sitemap-factory.js'
 import { within, userEvent, expect } from '@storybook/test'
 

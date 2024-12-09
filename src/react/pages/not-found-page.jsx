@@ -1,5 +1,5 @@
 import { TextBlock, Title } from '../index'
-import { LinkWrapper } from '../../wrappers/link-wrapper.jsx'
+import { LinkWrapper } from '../../wrappers/link-wrapper.tsx'
 
 export const NotFoundPage = () => {
   return (

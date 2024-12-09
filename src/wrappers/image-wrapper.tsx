@@ -1,6 +1,10 @@
 import type { FC } from 'react'
 
 export const ImageWrapper: FC<{
+  id?: string
+  alt?: string // todo: these are just html <img props, should find them from somewhere else
+  loading?: 'eager' | 'lazy' // todo: these are just html <img props, should find them from somewhere else
+  className?: string // todo: these are just html <img props, should find them from somewhere else
   image?: {
     responsiveURL?: string
     fields?: { file: { url: string } }
