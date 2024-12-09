@@ -29,6 +29,7 @@
     "start:master": "CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false astro dev",
     "storybook": "storybook dev -p 6006",
     "test": "start-server-and-test serve 'pnpm --cwd tests test'",
+    "test:storybook": "test-storybook",
     "test:func": "start-server-and-test serve 'pnpm --cwd tests test:func'",
     "test:local": "pnpm --cwd tests test:local",
     "test:update-ci": "start-server-and-test serve 'pnpm --cwd tests test:ci-update'",

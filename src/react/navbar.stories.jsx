@@ -1,8 +1,9 @@
 import { Navbar } from './navbar.jsx'
 import { siteMapFactory } from './data/sitemap-factory.js'
+import { within, userEvent, expect } from '@storybook/test'
 
 const Template = (args) => (
-  <div className="m-2 h-[200vh] border border-solid border-red-100">
+  <div className="h-[150vh]">
     <Navbar {...args} />
   </div>
 )
@@ -10,6 +11,9 @@ const Template = (args) => (
 export default {
   title: 'Component/Navbar',
   component: Navbar,
+  parameters: {
+    layout: 'fullscreen',
+  },
   args: {
     pageHasCoverPhoto: false,
     siteMap: siteMapFactory(),
@@ -18,8 +22,28 @@ export default {
 
 export const NavBar = Template.bind({})
 NavBar.args = {}
+export const OpenedMenu = Template.bind({})
+// OpenedMenu.parameters = {
+//   autoplay: true
+// }
+OpenedMenu.globals = {
+  // 👇 Override default viewport for this story
+  viewport: { value: 'medium' },
+}
+OpenedMenu.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  await userEvent.click(canvas.getByLabelText('Open menu'))
+
+  await expect(canvas.getByText('Home')).toBeInTheDocument()
+}
 
 export const NavBarWithCover = Template.bind({})
 NavBarWithCover.args = {
   pageHasCoverPhoto: true,
 }
+
+//  todo: make a test which scrolls so that behaviour is also tested
+// export const ScrollDown = Template.bind({})
+// ScrollDown.args = {
+//   pageHasCoverPhoto: true,
+// }

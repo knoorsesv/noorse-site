@@ -218,9 +218,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Publish to Chromatic
         uses: chromaui/action@v11
-        # Chromatic GitHub Action options
         with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
   lighthouse-check:
