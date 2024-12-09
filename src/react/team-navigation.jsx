@@ -1,4 +1,4 @@
-import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
+import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 
 // todo: dees is echt lelijk
 export const CategoryTeamNavigation = ({ category, header }) => {

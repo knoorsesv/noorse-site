@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { LinkWrapper } from '../wrappers/link-wrapper.jsx'
+import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 
 export const EventList = ({ events }) => {
   const EventLink = ({ event }) => {
