@@ -70,6 +70,8 @@ export default [
       ...reactPlugin.configs.flat.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off', // will use typescript for this
+      // todo: see what this does and if it is needed
+      'react/display-name': 'off',
     },
   },
 ]

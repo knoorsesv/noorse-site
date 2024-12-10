@@ -5,7 +5,6 @@ export const newsletterLink = 'http://eepurl.com/hRibPn'
 // todo: these category names could be fetched from contentful
 export const siteMap = {
   items: [
-    { name: 'Home', link: '/' },
     {
       name: 'Club',
       subItems: [
