@@ -61,7 +61,7 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
   }, [setTopMenuBarShown])
 
   return pageHasCoverPhoto ? (
-    <NavSectionWithCoverPhoto ref={ref} topMenuBarShown={topMenuBarShown}>
+    <NavSectionWithCoverPhoto ref={ref}>
       <MenuItemList
         topMenuBarShown={topMenuBarShown}
         sideBarMenuShown={sideBarMenuShown}
@@ -92,38 +92,38 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
 }
 
 const NavSection: FC<PropsWithChildren> = ({ children }) => {
-  const navContainerClasses = ctl(`${menuBarHeight} bg-green w-full static`)
   return (
-    <header id="nav-container" className={navContainerClasses}>
+    <header
+      id="nav-container"
+      className={ctl(`${menuBarHeight} bg-green w-full static`)}
+    >
       {children}
     </header>
   )
 }
 
-const NavSectionWithCoverPhoto = forwardRef<
-  HTMLHeadElement,
-  PropsWithChildren<{
-    topMenuBarShown: boolean
-  }>
->(({ children, topMenuBarShown }, ref) => {
-  const navContainerClasses = ctl(
-    `${coverSectionHeight} ${topMenuBarShown ? 'bg-green' : ''}  w-full static`
-  )
-  return (
-    <header ref={ref} id="nav-container" className={navContainerClasses}>
-      <div className={ctl(`${coverSectionHeight} absolute w-full`)}>
-        <ImageWrapper
-          id={'background-image'}
-          alt={'Luchtfoto Noorse velden'}
-          loading={'eager'}
-          className="aspect-[3/2] h-full w-full object-cover object-center"
-          src={aerial as string}
-        />
-      </div>
-      {children}
-    </header>
-  )
-})
+const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
+  ({ children }, ref) => {
+    return (
+      <header
+        ref={ref}
+        id="nav-container"
+        className={ctl(`${coverSectionHeight} w-full static`)}
+      >
+        <div className={ctl(`${coverSectionHeight} absolute w-full`)}>
+          <ImageWrapper
+            id={'background-image'}
+            alt={'Luchtfoto Noorse velden'}
+            loading={'eager'}
+            className="aspect-[3/2] h-full w-full object-cover object-center"
+            src={aerial as string}
+          />
+        </div>
+        {children}
+      </header>
+    )
+  }
+)
 
 const MenuItemList: FC<{
   topMenuBarShown: boolean
