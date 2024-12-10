@@ -4,16 +4,15 @@ import {
   useEffect,
   useRef,
   useState,
-  type Dispatch,
   type FC,
   type PropsWithChildren,
-  type SetStateAction,
 } from 'react'
 import { ImageWrapper } from '../wrappers/image-wrapper.js'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
+import { useMediaQuery } from 'react-responsive'
 // @ts-expect-error todo: find a good way to add a type definition for this
 import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
 
@@ -34,6 +33,31 @@ interface SiteMap {
 
 type InfoPageLinkFC = FC<{ item: SiteMapItem; className: string }>
 
+// todo: fetch actual tailwind config
+// import resolveConfig from 'tailwindcss/resolveConfig'
+// import tailwindConfig from '../../tailwind.config.js'
+// const config = resolveConfig(tailwindConfig)
+
+const config = {
+  theme: {
+    screens: {
+      medium: '640px',
+      large: '1024px',
+      extraLarge: '1324px',
+    },
+  },
+}
+const breakpoints = config.theme.screens
+
+/**
+ * Returns `true` if screen size matches the
+ * `breakpoint`.
+ */
+const useBreakpoint = (breakpoint: keyof typeof breakpoints) => {
+  const breakpointQuery = breakpoints[breakpoint]
+  return useMediaQuery({ query: `(min-width: ${breakpointQuery})` })
+}
+
 export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
   pageHasCoverPhoto = false,
   siteMap,
@@ -45,6 +69,8 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
   const toggleMenuShown = () => {
     setMenuShown(!sideBarMenuShown)
   }
+
+  const isLarge = useBreakpoint('extraLarge')
 
   const ref = useRef<HTMLElement>(null)
 
@@ -62,11 +88,18 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
 
   return pageHasCoverPhoto ? (
     <NavSectionWithCoverPhoto ref={ref}>
-      <MenuItemList
-        topMenuBarShown={topMenuBarShown}
-        sideBarMenuShown={sideBarMenuShown}
-        siteMap={siteMap}
-      />
+      {isLarge ? (
+        <HorizontalMenuItemList
+          hasFullBackGround={topMenuBarShown}
+          siteMap={siteMap}
+        />
+      ) : (
+        <MenuItemList
+          topMenuBarShown={topMenuBarShown}
+          sideBarMenuShown={sideBarMenuShown}
+          siteMap={siteMap}
+        />
+      )}
       <MenuLogo topMenuBarShown={topMenuBarShown} />
       <MenuToggle
         clickBurger={toggleMenuShown}
@@ -125,6 +158,83 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
   }
 )
 
+const InfoPageLink: InfoPageLinkFC = ({ item, className }) => {
+  return (
+    <LinkWrapper
+      className={className}
+      // todo: reenable this when we've moved off gatsby
+      // activeClassName={'border-b-2 border-white'}
+      href={item.link}
+    >
+      {item.name}
+    </LinkWrapper>
+  )
+}
+
+const HorizontalMenuItemList: FC<{
+  hasFullBackGround: boolean
+  siteMap: SiteMap
+}> = ({ hasFullBackGround, siteMap }) => {
+  return (
+    <nav
+      className={ctl(`${transition}
+                      fixed w-full
+                      pr-4
+                      ${hasFullBackGround ? `z-20` : 'z-50 h-0 p-0'}
+      `)}
+    >
+      <ul
+        id="menu-list"
+        className={ctl(`
+                    fixed top-0 right-0
+                    list-none z-50
+                    flex flex-row justify-end items-center gap-1
+                    pr-6 w-full bg-green
+                    ${transition}
+                    ${
+                      hasFullBackGround
+                        ? `h-80p opacity-100 py-10`
+                        : 'h-16 top-6 pt-0 pl-5 opacity-80'
+                    }
+                  `)}
+      >
+        {siteMap.items.map((item) => {
+          const [opened, setOpened] = useState(false)
+          return (
+            <li
+              key={item.name}
+              className={ctl(
+                `text-center mb-0 px-3 py-3 ${transition} ${item.subItems && 'group'}`
+              )}
+            >
+              <NavLink
+                item={item}
+                InfoPageLink={InfoPageLink}
+                onClick={() => setOpened(!opened)}
+              />
+              {/* todo: icon should be inside button so all is clickable */}
+              <span className="inline-flex items-center">
+                <ChevronDown
+                  className={`ml-1 text-white ${
+                    !item.subItems ? 'hidden' : 'hidden group-hover:inline'
+                  } `}
+                />
+                <ChevronRight
+                  className={`ml-1 text-white ${
+                    !item.subItems ? 'hidden' : 'inline group-hover:hidden'
+                  } `}
+                />
+              </span>
+              {item.subItems && opened && (
+                <SubMenuItemList item={item} InfoPageLink={InfoPageLink} />
+              )}
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
+  )
+}
 const MenuItemList: FC<{
   topMenuBarShown: boolean
   siteMap: SiteMap
@@ -155,19 +265,6 @@ const MenuItemList: FC<{
   pr-4
   ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
   `)
-
-  const InfoPageLink: InfoPageLinkFC = ({ item, className }) => {
-    return (
-      <LinkWrapper
-        className={className}
-        // todo: reenable this when we've moved off gatsby
-        // activeClassName={'border-b-2 border-white'}
-        href={item.link}
-      >
-        {item.name}
-      </LinkWrapper>
-    )
-  }
 
   return (
     <nav className={navClasses}>
@@ -257,6 +354,7 @@ const NavLink: FC<{
   onClick?: () => void
 }> = ({ item, InfoPageLink, onClick }) => {
   const className = 'text-white text-lg capitalize'
+
   if (item.link) {
     return <InfoPageLink className={className} item={item} />
   }
