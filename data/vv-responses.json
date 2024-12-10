@@ -30,10 +30,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Kris",
+          "lastName": "Mettepenningen",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1310,10 +1310,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kris",
+            "lastName": "Mettepenningen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -9341,8 +9341,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -9352,7 +9352,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2024-12-07T17:30:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -29200,6 +29200,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8299",
+                  "clubRegistrationNumber": "R61043",
+                  "fairplayPercentage": null,
+                  "goalDifference": 0,
+                  "goalsAgainst": 26,
+                  "goalsFor": 26,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61043.jpg",
+                  "matchesDrawn": 2,
+                  "matchesLost": 5,
+                  "matchesPlayed": 12,
+                  "matchesWon": 5,
+                  "name": "S.V. SINT-JOZEF B",
+                  "points": 17,
+                  "position": 6,
+                  "teamId": "303667"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8800",
                   "clubRegistrationNumber": "R66933",
                   "fairplayPercentage": null,
@@ -29231,7 +29249,7 @@
                   "matchesWon": 5,
                   "name": "EL CONDOR B",
                   "points": 16,
-                  "position": 7,
+                  "position": 8,
                   "teamId": "311664"
                 },
                 {
@@ -29249,39 +29267,21 @@
                   "matchesWon": 4,
                   "name": "K. TUBANTIA BORGERHOUT V.K.",
                   "points": 14,
-                  "position": 8,
+                  "position": 9,
                   "teamId": "306499"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8299",
-                  "clubRegistrationNumber": "R61043",
-                  "fairplayPercentage": null,
-                  "goalDifference": -5,
-                  "goalsAgainst": 26,
-                  "goalsFor": 21,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61043.jpg",
-                  "matchesDrawn": 2,
-                  "matchesLost": 5,
-                  "matchesPlayed": 11,
-                  "matchesWon": 4,
-                  "name": "S.V. SINT-JOZEF B",
-                  "points": 14,
-                  "position": 8,
-                  "teamId": "303667"
                 },
                 {
                   "__typename": "RankingTeam",
                   "clubId": "8490",
                   "clubRegistrationNumber": "09696",
                   "fairplayPercentage": null,
-                  "goalDifference": -13,
-                  "goalsAgainst": 36,
+                  "goalDifference": -18,
+                  "goalsAgainst": 41,
                   "goalsFor": 23,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09696.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 6,
-                  "matchesPlayed": 10,
+                  "matchesLost": 7,
+                  "matchesPlayed": 11,
                   "matchesWon": 3,
                   "name": "FC LOS INCAS ANTWERPEN B",
                   "points": 10,
