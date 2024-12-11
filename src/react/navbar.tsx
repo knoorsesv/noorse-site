@@ -88,24 +88,26 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
 
   return pageHasCoverPhoto ? (
     <NavSectionWithCoverPhoto ref={ref}>
+      <MenuLogo inlineWithMenuBar={topMenuBarShown} />
       {isLarge ? (
         <HorizontalMenuItemList
           hasFullBackGround={topMenuBarShown}
           siteMap={siteMap}
         />
       ) : (
-        <MenuItemList
-          topMenuBarShown={topMenuBarShown}
-          sideBarMenuShown={sideBarMenuShown}
-          siteMap={siteMap}
-        />
+        <>
+          <MenuItemList
+            topMenuBarShown={topMenuBarShown}
+            sideBarMenuShown={sideBarMenuShown}
+            siteMap={siteMap}
+          />
+          <MenuToggle
+            clickBurger={toggleMenuShown}
+            sideBarMenuShown={sideBarMenuShown}
+            topMenuBarShown={topMenuBarShown}
+          />
+        </>
       )}
-      <MenuLogo topMenuBarShown={topMenuBarShown} />
-      <MenuToggle
-        clickBurger={toggleMenuShown}
-        sideBarMenuShown={sideBarMenuShown}
-        topMenuBarShown={topMenuBarShown}
-      />
     </NavSectionWithCoverPhoto>
   ) : (
     <NavSection>
@@ -114,7 +116,7 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
         sideBarMenuShown={sideBarMenuShown}
         siteMap={siteMap}
       />
-      <MenuLogo topMenuBarShown={true} />
+      <MenuLogo inlineWithMenuBar={true} />
       <MenuToggle
         clickBurger={toggleMenuShown}
         sideBarMenuShown={sideBarMenuShown}
@@ -380,35 +382,41 @@ const NavLink: FC<{
   )
 }
 
-const MenuLogo: FC<{ topMenuBarShown: boolean }> = ({ topMenuBarShown }) => {
-  const logContainerClasses = ctl(`${transition}
-       flex items-center z-20 
-      ${
-        topMenuBarShown
-          ? `justify-start fixed top-8 left-16p large:left-96p`
-          : `justify-center w-full h-full top-0 large:w-1/3 p-2 large:p-8 `
-      }     `)
+const ConditionalLinkWrapper: FC<
+  PropsWithChildren<{ href?: string; className?: string }>
+> = ({ children, href, className }) => {
+  return href ? (
+    <LinkWrapper className={className} href={href}>
+      {children}
+    </LinkWrapper>
+  ) : (
+    <span className={className}>{children}</span>
+  )
+}
+
+const MenuLogo: FC<{ inlineWithMenuBar: boolean }> = ({
+  inlineWithMenuBar,
+}) => {
+  const href = inlineWithMenuBar ? '/' : undefined
   return (
-    <div id="logo-container" className={logContainerClasses}>
-      {topMenuBarShown ? (
-        <a href="/">
-          <Logo
-            className={ctl(`${transition} z-30 aspect-square h-auto max-h-full w-full
-  ${topMenuBarShown ? `max-w-[64px] ` : `max-w-[200px] medium:max-w-[312px]`}
-  `)}
-          />
-        </a>
-      ) : (
+    <div
+      id="logo-container"
+      className={ctl(`${transition}
+                flex items-center z-[60] 
+                ${
+                  inlineWithMenuBar
+                    ? `justify-start fixed top-8 left-16p large:left-96p`
+                    : `justify-center w-full h-full top-0 large:w-1/3 p-2 large:p-8 `
+                }`)}
+    >
+      <ConditionalLinkWrapper href={href}>
         <Logo
-          className={ctl(`${transition} z-30 aspect-square h-auto max-h-full w-full
-        ${
-          topMenuBarShown
-            ? `max-w-[64px] `
-            : `max-w-[200px] medium:max-w-[312px]`
-        }
-        `)}
+          className={ctl(`${transition} 
+            aspect-square h-auto max-h-full w-full relative
+            ${inlineWithMenuBar ? `max-w-[64px]` : `max-w-[200px] medium:max-w-[312px]`}
+          `)}
         />
-      )}
+      </ConditionalLinkWrapper>
     </div>
   )
 }

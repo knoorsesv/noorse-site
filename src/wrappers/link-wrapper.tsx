@@ -4,7 +4,7 @@ import type { FC, PropsWithChildren } from 'react'
 export const LinkWrapper: FC<
   PropsWithChildren<{
     href: string
-    className: string
+    className?: string
     activeClassName?: string
   }>
 > = ({ href, children, className, activeClassName, ...props }) => {
