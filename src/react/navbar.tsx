@@ -101,27 +101,19 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
             sideBarMenuShown={sideBarMenuShown}
             siteMap={siteMap}
           />
-          <MenuToggle
-            clickBurger={toggleMenuShown}
-            sideBarMenuShown={sideBarMenuShown}
-            topMenuBarShown={topMenuBarShown}
-          />
+          <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
         </>
       )}
     </NavSectionWithCoverPhoto>
   ) : (
     <NavSection>
+      <MenuLogo inlineWithMenuBar={true} />
       <MenuItemList
         topMenuBarShown={true}
         sideBarMenuShown={sideBarMenuShown}
         siteMap={siteMap}
       />
-      <MenuLogo inlineWithMenuBar={true} />
-      <MenuToggle
-        clickBurger={toggleMenuShown}
-        sideBarMenuShown={sideBarMenuShown}
-        topMenuBarShown={true}
-      />
+      <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
     </NavSection>
   )
 }
@@ -422,24 +414,22 @@ const MenuLogo: FC<{ inlineWithMenuBar: boolean }> = ({
 }
 
 const MenuToggle: FC<{
-  clickBurger: () => void
-  sideBarMenuShown: boolean
-  topMenuBarShown: boolean
-}> = ({ clickBurger, sideBarMenuShown, topMenuBarShown }) => {
-  const toggleWrapperClasses = ctl(`fixed right-0 top-0
-    extraLarge:hidden
-    mt-4 mr-3 medium:mt-6 medium:mr-4
-    p-2 z-50 text-white
-    ${sideBarMenuShown || topMenuBarShown ? '' : 'bg-green'} ${transition}`)
+  onClick: () => void
+  open: boolean
+}> = ({ onClick, open }) => {
   return (
-    <div className={toggleWrapperClasses}>
+    <div
+      className={ctl(`fixed right-3 top-3 p-3
+      z-50 bg-green
+      ${transition}`)}
+    >
       <button
-        className="text-white"
-        onClick={clickBurger}
-        aria-label={sideBarMenuShown ? 'Sluit menu' : 'Open menu'}
+        className="text-white h-full p-0 flex items-center"
+        onClick={onClick}
+        aria-label={open ? 'Sluit menu' : 'Open menu'}
         id="menu-hamburger"
       >
-        {sideBarMenuShown ? <Close /> : <Menu />}
+        {open ? <Close /> : <Menu />}
       </button>
     </div>
   )
