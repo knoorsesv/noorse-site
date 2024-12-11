@@ -26,10 +26,10 @@ export const OpenedMenu = Template.bind({})
 // OpenedMenu.parameters = {
 //   autoplay: true
 // }
-OpenedMenu.globals = {
-  // 👇 Override default viewport for this story
-  viewport: { value: 'medium' },
-}
+// OpenedMenu.globals = {
+//   // 👇 Override default viewport for this story
+//   viewport: { value: 'medium' },
+// }
 OpenedMenu.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   await userEvent.click(canvas.getByLabelText('Open menu'))
