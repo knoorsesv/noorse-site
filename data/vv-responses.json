@@ -276,7 +276,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2024-12-14T17:00:00",
+      "startTime": "2024-12-14T14:30:00",
       "state": "planned",
       "title": "Provinciale Vrouwen"
     },
@@ -9329,10 +9329,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Serkan",
-            "lastName": "Palit",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -9341,8 +9341,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -9350,9 +9350,9 @@
           "name": "Vrouwen 2 Prov Antw A"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2024-12-07T17:30:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2025-01-04T17:30:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -10291,7 +10291,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2024-12-14T17:00:00",
+        "startTime": "2024-12-14T14:30:00",
         "state": "planned"
       }
     ],
@@ -31304,7 +31304,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03182.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "KSOC Maria t. Heide",
                   "points": null,
@@ -31333,14 +31333,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8309",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 88,
+                  "fairplayPercentage": 87,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61066.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "SV Groenendaal",
                   "points": null,
