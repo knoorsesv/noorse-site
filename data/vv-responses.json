@@ -7936,8 +7936,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Jelle",
-            "lastName": "Swolfs",
+            "firstName": "Ludo",
+            "lastName": "Rollenberg",
             "personAssigned": true,
             "status": null
           }
@@ -28899,6 +28899,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8177",
+                  "clubRegistrationNumber": "R61014",
+                  "fairplayPercentage": null,
+                  "goalDifference": 5,
+                  "goalsAgainst": 38,
+                  "goalsFor": 43,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
+                  "matchesDrawn": 2,
+                  "matchesLost": 2,
+                  "matchesPlayed": 11,
+                  "matchesWon": 7,
+                  "name": "F.C. KONINGSHOF B",
+                  "points": 23,
+                  "position": 3,
+                  "teamId": "308754"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "6554",
                   "clubRegistrationNumber": "R61099",
                   "fairplayPercentage": null,
@@ -28912,26 +28930,8 @@
                   "matchesWon": 7,
                   "name": "F.C. V.D.P. C",
                   "points": 22,
-                  "position": 4,
-                  "teamId": "307846"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8177",
-                  "clubRegistrationNumber": "R61014",
-                  "fairplayPercentage": null,
-                  "goalDifference": 3,
-                  "goalsAgainst": 36,
-                  "goalsFor": 39,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-                  "matchesDrawn": 2,
-                  "matchesLost": 2,
-                  "matchesPlayed": 10,
-                  "matchesWon": 6,
-                  "name": "F.C. KONINGSHOF B",
-                  "points": 20,
                   "position": 5,
-                  "teamId": "308754"
+                  "teamId": "307846"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29046,13 +29046,13 @@
                   "clubId": "8175",
                   "clubRegistrationNumber": "R61012",
                   "fairplayPercentage": null,
-                  "goalDifference": -12,
-                  "goalsAgainst": 30,
-                  "goalsFor": 18,
+                  "goalDifference": -14,
+                  "goalsAgainst": 34,
+                  "goalsFor": 20,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 7,
-                  "matchesPlayed": 10,
+                  "matchesLost": 8,
+                  "matchesPlayed": 11,
                   "matchesWon": 2,
                   "name": "F.C. IK DIEN C",
                   "points": 7,
