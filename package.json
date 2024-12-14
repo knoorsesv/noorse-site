@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/react": "3.6.3",
+    "@astrojs/react": "4.1.0",
     "@astrojs/tailwind": "5.1.2",
     "@fontsource/lato": "5.1.0",
     "@fontsource/mulish": "5.1.0",
