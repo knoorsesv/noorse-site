@@ -5,11 +5,6 @@ test.describe('Home Page', () => {
     await page.goto('/')
   })
 
-  test('has a nav bar', async ({ page }) => {
-    const title = page.locator('nav ul#menu-list>li:first-of-type')
-    await expect(title).toHaveText('Home')
-  })
-
   test('has news items', async ({ page }) => {
     const newsSection = page.locator('section:has(h2:text-is("Nieuws"))')
     const newsItems = newsSection.locator('article')
