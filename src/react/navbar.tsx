@@ -55,16 +55,24 @@ const useBreakpoint = (breakpoint: keyof typeof breakpoints) => {
   return useMediaQuery({ query: `(min-width: ${breakpointQuery})` })
 }
 
-export const Navbar: FC<{ siteMap: SiteMap }> = ({ siteMap }) => {
+export const Navbar: FC<{ siteMap: SiteMap; currentURL?: string }> = ({
+  siteMap,
+  currentURL,
+}) => {
   const isLarge = useBreakpoint('extraLarge')
+  console.log(currentURL)
 
   return (
     <NavSection>
       <MenuLogo inlineWithMenuBar={true} />
       {isLarge ? (
-        <HorizontalMenuItemList hasFullBackGround={true} siteMap={siteMap} />
+        <HorizontalMenuItemList
+          hasFullBackGround={true}
+          siteMap={siteMap}
+          currentURL={currentURL}
+        />
       ) : (
-        <VerticalMenuItemList siteMap={siteMap} />
+        <VerticalMenuItemList siteMap={siteMap} currentURL={currentURL} />
       )}
     </NavSection>
   )
@@ -140,7 +148,8 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
 const HorizontalMenuItemList: FC<{
   hasFullBackGround: boolean
   siteMap: SiteMap
-}> = ({ hasFullBackGround, siteMap }) => {
+  currentURL?: string
+}> = ({ hasFullBackGround, siteMap, currentURL }) => {
   return (
     <nav
       className={ctl(`${transition}
@@ -168,7 +177,11 @@ const HorizontalMenuItemList: FC<{
           const [opened, setOpened] = useState(false)
           return (
             <li key={item.name} className="text-center mb-0 p-3 group">
-              <NavLink item={item} onClick={() => setOpened(!opened)} />
+              <NavLink
+                item={item}
+                onClick={() => setOpened(!opened)}
+                currentURL={currentURL}
+              />
               {/* todo: icon should be inside button so all is clickable */}
               {item.subItems && (
                 <span className="inline-flex items-center ml-1 text-white">
@@ -189,7 +202,7 @@ const HorizontalMenuItemList: FC<{
                   {item.subItems.map((subItem) => {
                     return (
                       <li key={subItem.name}>
-                        <NavLink item={subItem} />
+                        <NavLink item={subItem} currentURL={currentURL} />
                       </li>
                     )
                   })}
@@ -204,7 +217,8 @@ const HorizontalMenuItemList: FC<{
 }
 const VerticalMenuItemList: FC<{
   siteMap: SiteMap
-}> = ({ siteMap }) => {
+  currentURL?: string
+}> = ({ siteMap, currentURL }) => {
   const [sideBarMenuShown, setMenuShown] = useState(false)
   const toggleMenuShown = () => {
     setMenuShown(!sideBarMenuShown)
@@ -220,7 +234,11 @@ const VerticalMenuItemList: FC<{
             className="list-none flex flex-col space-y-3 pr-4 pt-20 h-full bg-green"
           >
             {siteMap.items.map((item) => (
-              <VerticalMenuItem key={item.name} item={item} />
+              <VerticalMenuItem
+                key={item.name}
+                item={item}
+                currentURL={currentURL}
+              />
             ))}
           </ul>
         </nav>
@@ -231,11 +249,18 @@ const VerticalMenuItemList: FC<{
   )
 }
 
-const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
+const VerticalMenuItem: FC<{ item: SiteMapItem; currentURL?: string }> = ({
+  item,
+  currentURL,
+}) => {
   const [opened, setOpened] = useState(false)
   return (
     <li key={item.name} className="text-right">
-      <NavLink item={item} onClick={() => setOpened(!opened)} />
+      <NavLink
+        item={item}
+        onClick={() => setOpened(!opened)}
+        currentURL={currentURL}
+      />
       {/* todo: icon should be inside button so all is clickable */}
       {item.subItems && (
         <span className="inline-flex items-center text-white ml-1">
@@ -247,7 +272,7 @@ const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
           {item.subItems.map((subItem) => {
             return (
               <li key={subItem.name}>
-                <NavLink item={subItem} />
+                <NavLink item={subItem} currentURL={currentURL} />
               </li>
             )
           })}
@@ -260,15 +285,16 @@ const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
 const NavLink: FC<{
   item: SiteMapItem
   onClick?: () => void
-}> = ({ item, onClick }) => {
+  currentURL?: string
+}> = ({ item, onClick, currentURL }) => {
   const className = 'text-white text-lg capitalize'
 
   if (item.link) {
     return (
       <LinkWrapper
+        isActive={currentURL?.includes(item.link)}
         className={className}
-        // todo: reenable this when we've moved off gatsby
-        // activeClassName={'border-b-2 border-white'}
+        activeClassName={'border-b-2 border-white'}
         href={item.link}
       >
         {item.name}

@@ -38,6 +38,6 @@ const newsItems = (
 }))
 ---
 
-<Layout title="Info - Nieuws">
+<Layout title="Info - Nieuws" currentURL={Astro.url}>
   <NewsPage newsItems={newsItems} />
 </Layout>

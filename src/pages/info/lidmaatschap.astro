@@ -22,7 +22,7 @@ const page = (
 ).items[0]?.fields
 ---
 
-<Layout title="Info - Lidmaatschap">
+<Layout title="Info - Lidmaatschap" currentURL={Astro.url}>
   {
     page ? (
       <MarkDownPage

@@ -40,6 +40,6 @@ export async function getStaticPaths() {
 const { newsItem } = Astro.props
 ---
 
-<Layout title={`Nieuws - ${newsItem.title}`}>
+<Layout title={`Nieuws - ${newsItem.title}`} currentURL={Astro.url}>
   <NewsItemPage newsItem={newsItem} />
 </Layout>

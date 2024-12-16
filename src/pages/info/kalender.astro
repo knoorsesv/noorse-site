@@ -9,6 +9,6 @@ const clubMatchesAssignations = (
 ).clubMatchesAssignations
 ---
 
-<Layout title="Info - Kalender">
+<Layout title="Info - Kalender" currentURL={Astro.url}>
   <CalendarPage games={clubMatchesAssignations || []} />
 </Layout>

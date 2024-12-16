@@ -20,6 +20,6 @@ const leden = (
 ).items.map(({ fields }) => fields)
 ---
 
-<Layout title="Info - Bestuur">
+<Layout title="Info - Bestuur" currentURL={Astro.url}>
   <InfoBestuurPage leden={leden} />
 </Layout>
