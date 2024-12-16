@@ -17,20 +17,17 @@ import { useMediaQuery } from 'react-responsive'
 import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
 
 const transition = `transition-all duration-200 ease-in`
-const menuBarHeight = 'h-64p'
 
 interface SiteMapItem {
-  link: string
-  name: string
+  link?: string
   extLink?: string
+  name: string
   subItems: SiteMapItem[]
 }
 
 interface SiteMap {
   items: SiteMapItem[]
 }
-
-type InfoPageLinkFC = FC<{ item: SiteMapItem; className: string }>
 
 // todo: fetch actual tailwind config
 // import resolveConfig from 'tailwindcss/resolveConfig'
@@ -90,14 +87,7 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
           siteMap={siteMap}
         />
       ) : (
-        <>
-          <VerticalMenuItemList
-            // topMenuBarShown={topMenuBarShown}
-            // sideBarMenuShown={sideBarMenuShown}
-            siteMap={siteMap}
-          />
-          {/* <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} /> */}
-        </>
+        <VerticalMenuItemList siteMap={siteMap} />
       )}
     </NavSectionWithCoverPhoto>
   ) : (
@@ -106,13 +96,7 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
       {isLarge ? (
         <HorizontalMenuItemList hasFullBackGround={true} siteMap={siteMap} />
       ) : (
-        <>
-          <VerticalMenuItemList
-            // topMenuBarShown={true}
-            // sideBarMenuShown={sideBarMenuShown}
-            siteMap={siteMap}
-          />
-        </>
+        <VerticalMenuItemList siteMap={siteMap} />
       )}
     </NavSection>
   )
@@ -120,10 +104,7 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
 
 const NavSection: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <header
-      id="nav-container"
-      className={ctl(`${menuBarHeight} bg-green w-full static`)}
-    >
+    <header id="nav-container" className="h-64p bg-green w-full static">
       {children}
     </header>
   )
@@ -137,7 +118,7 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
         id="nav-container"
         className="h-32v medium:h-48v large:64v w-full static"
       >
-        <div className="h-32v medium:h-48v large:64v absolute w-full">
+        <div className="h-32v medium:h-48v large:64v w-full absolute">
           <ImageWrapper
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
@@ -151,19 +132,6 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
     )
   }
 )
-
-const InfoPageLink: InfoPageLinkFC = ({ item, className }) => {
-  return (
-    <LinkWrapper
-      className={className}
-      // todo: reenable this when we've moved off gatsby
-      // activeClassName={'border-b-2 border-white'}
-      href={item.link}
-    >
-      {item.name}
-    </LinkWrapper>
-  )
-}
 
 const HorizontalMenuItemList: FC<{
   hasFullBackGround: boolean
@@ -180,14 +148,14 @@ const HorizontalMenuItemList: FC<{
       <ul
         id="menu-list"
         className={ctl(`
-                    fixed top-0 right-0
+                    fixed right-0
                     list-none z-50
                     flex flex-row justify-end items-center gap-1
                     pr-6 w-full bg-green
                     ${transition}
                     ${
                       hasFullBackGround
-                        ? `h-80p opacity-100 py-10`
+                        ? `h-80p top-0 py-10 opacity-100`
                         : 'h-16 top-6 pt-0 pl-5 opacity-80'
                     }
                   `)}
@@ -195,40 +163,29 @@ const HorizontalMenuItemList: FC<{
         {siteMap.items.map((item) => {
           const [opened, setOpened] = useState(false)
           return (
-            <li
-              key={item.name}
-              className={ctl(`text-center mb-0 px-3 py-3 ${transition} group`)}
-            >
-              <NavLink
-                item={item}
-                InfoPageLink={InfoPageLink}
-                onClick={() => setOpened(!opened)}
-              />
+            <li key={item.name} className="text-center mb-0 p-3 group">
+              <NavLink item={item} onClick={() => setOpened(!opened)} />
               {/* todo: icon should be inside button so all is clickable */}
               {item.subItems && (
                 <span className="inline-flex items-center ml-1 text-white">
-                  <ChevronDown
-                    className={`ml-1 text-white ${'hidden group-hover:inline'} `}
-                  />
-                  <ChevronRight
-                    className={`ml-1 text-white ${'inline group-hover:hidden'} `}
-                  />
+                  <ChevronDown className="hidden group-hover:inline" />
+                  <ChevronRight className="inline group-hover:hidden" />
                 </span>
               )}
               {item.subItems && (
                 <ul
                   id="dropdown"
-                  className={ctl(`
-                  list-none
-                  ${opened ? 'flex absolute' : 'hidden group-hover:flex group-hover:absolute'}
-                  flex-col space-y-3 items-start -ml-1
-                  w-auto p-6 mr-4 bg-green opacity-90
-                  ${transition}`)}
+                  className={ctl(`${transition}
+                          list-none
+                          ${opened ? 'flex absolute' : 'hidden group-hover:flex group-hover:absolute'}
+                          flex-col space-y-3 items-start -ml-1
+                          w-auto p-6 mr-4 bg-green opacity-90
+                        `)}
                 >
                   {item.subItems.map((subItem) => {
                     return (
                       <li key={subItem.name}>
-                        <NavLink item={subItem} InfoPageLink={InfoPageLink} />
+                        <NavLink item={subItem} />
                       </li>
                     )
                   })}
@@ -242,33 +199,22 @@ const HorizontalMenuItemList: FC<{
   )
 }
 const VerticalMenuItemList: FC<{
-  // topMenuBarShown: boolean
   siteMap: SiteMap
 }> = ({ siteMap }) => {
   const [sideBarMenuShown, setMenuShown] = useState(false)
-
   const toggleMenuShown = () => {
     setMenuShown(!sideBarMenuShown)
   }
-
-  const ulClasses = ctl(`
-  list-none 
-  flex flex-col space-y-3 
-  pr-4 pt-20
-  h-full bg-green
-  ${transition}
-  `)
-
-  const navClasses = ctl(`
-  ${transition}
-  fixed h-full w-1/2 medium:w-2/5 top-0 right-0 z-50 `)
 
   return (
     <>
       <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
       {sideBarMenuShown ? (
-        <nav className={navClasses}>
-          <ul id="menu-list" className={ulClasses}>
+        <nav className="fixed h-full w-1/2 medium:w-2/5 top-0 right-0 z-50">
+          <ul
+            id="menu-list"
+            className="list-none flex flex-col space-y-3 pr-4 pt-20 h-full bg-green"
+          >
             {siteMap.items.map((item) => (
               <VerticalMenuItem key={item.name} item={item} />
             ))}
@@ -285,11 +231,7 @@ const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
   const [opened, setOpened] = useState(false)
   return (
     <li key={item.name} className="text-right">
-      <NavLink
-        item={item}
-        InfoPageLink={InfoPageLink}
-        onClick={() => setOpened(!opened)}
-      />
+      <NavLink item={item} onClick={() => setOpened(!opened)} />
       {/* todo: icon should be inside button so all is clickable */}
       {item.subItems && (
         <span className="inline-flex items-center text-white ml-1">
@@ -297,17 +239,11 @@ const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
         </span>
       )}
       {item.subItems && opened && (
-        <ul
-          className={ctl(`
-                    list-none
-                    flex flex-col space-y-3 
-                    w-auto  mr-4
-                    `)}
-        >
+        <ul className="list-none flex flex-col space-y-3 w-auto mr-4">
           {item.subItems.map((subItem) => {
             return (
               <li key={subItem.name}>
-                <NavLink item={subItem} InfoPageLink={InfoPageLink} />
+                <NavLink item={subItem} />
               </li>
             )
           })}
@@ -319,13 +255,21 @@ const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
 
 const NavLink: FC<{
   item: SiteMapItem
-  InfoPageLink: InfoPageLinkFC
   onClick?: () => void
-}> = ({ item, InfoPageLink, onClick }) => {
+}> = ({ item, onClick }) => {
   const className = 'text-white text-lg capitalize'
 
   if (item.link) {
-    return <InfoPageLink className={className} item={item} />
+    return (
+      <LinkWrapper
+        className={className}
+        // todo: reenable this when we've moved off gatsby
+        // activeClassName={'border-b-2 border-white'}
+        href={item.link}
+      >
+        {item.name}
+      </LinkWrapper>
+    )
   }
 
   if (item.extLink) {
@@ -335,7 +279,7 @@ const NavLink: FC<{
         styled={false}
         icon={false}
         className={className}
-        textColor={'text-white'}
+        textColor="text-white"
         key={item.name}
       >
         {item.name}
@@ -393,11 +337,7 @@ const MenuToggle: FC<{
   open: boolean
 }> = ({ onClick, open }) => {
   return (
-    <div
-      className={ctl(`fixed right-3 top-3 p-3
-      z-[100] bg-green
-      ${transition}`)}
-    >
+    <div className="fixed right-3 top-3 p-3 z-[100] bg-green">
       <button
         className="text-white h-full p-0 flex items-center"
         onClick={onClick}
