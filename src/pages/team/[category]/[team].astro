@@ -83,7 +83,7 @@ export async function getStaticPaths() {
 const { ploeg, rankings, series, teamCalendar, googleCalId } = Astro.props
 ---
 
-<Layout title={ploeg.naam}>
+<Layout title={ploeg.naam} currentURL={Astro.url}>
   <TeamPage
     ploeg={ploeg}
     rankings={rankings}

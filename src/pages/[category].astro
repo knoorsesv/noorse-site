@@ -70,6 +70,6 @@ export async function getStaticPaths() {
 const { categoryData } = Astro.props
 ---
 
-<Layout title={categoryData.naam}>
+<Layout title={categoryData.naam} currentURL={Astro.url}>
   <CategoryPage category={categoryData} />
 </Layout>

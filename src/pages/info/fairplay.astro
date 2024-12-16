@@ -20,7 +20,7 @@ const page = (
 ).items[0]?.fields
 ---
 
-<Layout title="Info - Fairplay">
+<Layout title="Info - Fairplay" currentURL={Astro.url}>
   {
     page ? (
       <MarkDownPage title={page.title} content={page.body} />

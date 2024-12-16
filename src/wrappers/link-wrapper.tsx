@@ -6,9 +6,10 @@ export const LinkWrapper: FC<
     href: string
     className?: string
     activeClassName?: string
+    isActive?: boolean
   }>
-> = ({ href, children, className, activeClassName, ...props }) => {
-  const isActive = false
+> = ({ href, children, className, activeClassName, isActive, ...props }) => {
+  // const isActive = false
   // if (typeof window === 'object') {
   // todo: doesnt work because then the ssr differs fromt the client side
   //   isActive = window && window.location.href.includes(href)

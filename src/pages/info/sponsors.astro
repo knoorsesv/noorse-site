@@ -42,6 +42,6 @@ const page = (
 ).items[0]?.fields
 ---
 
-<Layout title="Info - Bestuur">
+<Layout title="Info - Bestuur" currentURL={Astro.url}>
   <SponsorPage sponsors={sponsors} description={page.body} />
 </Layout>
