@@ -49,6 +49,7 @@ const config = {
 }
 const breakpoints = config.theme.screens
 
+// todo: extract this to a custom shared hook
 /**
  * Returns `true` if screen size matches the
  * `breakpoint`.
@@ -64,11 +65,6 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
 }) => {
   const [topMenuBarShown, setTopMenuBarShown] =
     useState<boolean>(!pageHasCoverPhoto)
-  const [sideBarMenuShown, setMenuShown] = useState(false)
-
-  const toggleMenuShown = () => {
-    setMenuShown(!sideBarMenuShown)
-  }
 
   const isLarge = useBreakpoint('extraLarge')
 
@@ -96,24 +92,29 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
         />
       ) : (
         <>
-          <MenuItemList
-            topMenuBarShown={topMenuBarShown}
-            sideBarMenuShown={sideBarMenuShown}
+          <VerticalMenuItemList
+            // topMenuBarShown={topMenuBarShown}
+            // sideBarMenuShown={sideBarMenuShown}
             siteMap={siteMap}
           />
-          <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
+          {/* <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} /> */}
         </>
       )}
     </NavSectionWithCoverPhoto>
   ) : (
     <NavSection>
       <MenuLogo inlineWithMenuBar={true} />
-      <MenuItemList
-        topMenuBarShown={true}
-        sideBarMenuShown={sideBarMenuShown}
-        siteMap={siteMap}
-      />
-      <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
+      {isLarge ? (
+        <HorizontalMenuItemList hasFullBackGround={true} siteMap={siteMap} />
+      ) : (
+        <>
+          <VerticalMenuItemList
+            // topMenuBarShown={true}
+            // sideBarMenuShown={sideBarMenuShown}
+            siteMap={siteMap}
+          />
+        </>
+      )}
     </NavSection>
   )
 }
@@ -229,92 +230,79 @@ const HorizontalMenuItemList: FC<{
     </nav>
   )
 }
-const MenuItemList: FC<{
-  topMenuBarShown: boolean
+const VerticalMenuItemList: FC<{
+  // topMenuBarShown: boolean
   siteMap: SiteMap
-  sideBarMenuShown: boolean
-}> = ({ topMenuBarShown, siteMap, sideBarMenuShown }) => {
+}> = ({ siteMap }) => {
+  const [sideBarMenuShown, setMenuShown] = useState(false)
+
+  const toggleMenuShown = () => {
+    setMenuShown(!sideBarMenuShown)
+  }
+
   const ulClasses = ctl(`
-  fixed top-0
-  list-none z-50
-  flex flex-col extraLarge:flex-row extraLarge:justify-end extraLarge:items-center
-  space-y-3 extraLarge:space-y-0
-  pr-4 extraLarge:pr-6
-  w-1/2 medium:w-2/5
+  list-none 
+  flex flex-col space-y-3 
+  pr-4 pt-20
+  h-full bg-green
   ${transition}
-  ${
-    sideBarMenuShown
-      ? 'pt-20 h-full bg-green opacity-100 right-0'
-      : 'pt-16 opacity-0 -right-1/2 extraLarge:right-0'
-  }
-  ${
-    topMenuBarShown
-      ? `h-full extraLarge:h-80p bg-green extraLarge:opacity-100 right-0 extraLarge:w-full extraLarge:py-10`
-      : 'extraLarge:right-0 extraLarge:w-auto extraLarge:h-16 extraLarge:top-6 extraLarge:pt-0 extraLarge:pl-5 extraLarge:opacity-90 extraLarge:bg-green'
-  }
-  `)
-  const navClasses = ctl(`
-  ${transition}
-  fixed w-full
-  pr-4
-  ${topMenuBarShown ? `z-20 bg-green ${menuBarHeight}` : 'z-50 h-0 p-0'}
   `)
 
-  return (
-    <nav className={navClasses}>
-      <ul id="menu-list" className={ulClasses}>
-        {siteMap.items.map((item) => {
-          const [opened, setOpened] = useState(false)
-          const liClasses = ctl(`text-right extraLarge:text-center
-    extraLarge:mx-2 extraLarge:px-3 extraLarge:py-3
+  const navClasses = ctl(`
   ${transition}
-  ${item.subItems && 'group'}`)
-          return (
-            <li key={item.name} className={liClasses}>
-              <NavLink
-                item={item}
-                InfoPageLink={InfoPageLink}
-                onClick={() => setOpened(!opened)}
-              />
-              {/* todo: icon should be inside button so all is clickable */}
-              <span className="inline-flex items-center">
-                {sideBarMenuShown ? (
-                  opened ? (
-                    <ChevronDown
-                      className={`ml-1 text-white ${
-                        !item.subItems && 'extraLarge:hidden'
-                      } `}
-                    />
-                  ) : (
-                    <ChevronRight
-                      className={`ml-1 text-white ${
-                        !item.subItems && 'extraLarge:hidden'
-                      } `}
-                    />
-                  )
-                ) : (
-                  <>
-                    <ChevronDown
-                      className={`ml-1 text-white ${
-                        !item.subItems ? 'hidden' : 'hidden group-hover:inline'
-                      } `}
-                    />
-                    <ChevronRight
-                      className={`ml-1 text-white ${
-                        !item.subItems ? 'hidden' : 'inline group-hover:hidden'
-                      } `}
-                    />
-                  </>
-                )}
-              </span>
-              {item.subItems && (!sideBarMenuShown || opened) && (
-                <SubMenuItemList item={item} InfoPageLink={InfoPageLink} />
-              )}
-            </li>
-          )
-        })}
-      </ul>
-    </nav>
+  fixed h-full w-1/2 medium:w-2/5 top-0 right-0 z-50 `)
+
+  return (
+    <>
+      <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
+      {sideBarMenuShown ? (
+        <nav className={navClasses}>
+          <ul id="menu-list" className={ulClasses}>
+            {siteMap.items.map((item) => (
+              <VerticalMenuItem key={item.name} item={item} />
+            ))}
+          </ul>
+        </nav>
+      ) : (
+        <></>
+      )}
+    </>
+  )
+}
+
+const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
+  const [opened, setOpened] = useState(false)
+  return (
+    <li key={item.name} className="text-right">
+      <NavLink
+        item={item}
+        InfoPageLink={InfoPageLink}
+        onClick={() => setOpened(!opened)}
+      />
+      {/* todo: icon should be inside button so all is clickable */}
+      {item.subItems && (
+        <span className="inline-flex items-center text-white ml-1">
+          {opened ? <ChevronDown /> : <ChevronRight />}
+        </span>
+      )}
+      {item.subItems && opened && (
+        <ul
+          className={ctl(`
+                    list-none
+                    flex flex-col space-y-3 
+                    w-auto  mr-4
+                    `)}
+        >
+          {item.subItems.map((subItem) => {
+            return (
+              <li key={subItem.name}>
+                <NavLink item={subItem} InfoPageLink={InfoPageLink} />
+              </li>
+            )
+          })}
+        </ul>
+      )}
+    </li>
   )
 }
 
@@ -420,7 +408,7 @@ const MenuToggle: FC<{
   return (
     <div
       className={ctl(`fixed right-3 top-3 p-3
-      z-50 bg-green
+      z-[100] bg-green
       ${transition}`)}
     >
       <button
