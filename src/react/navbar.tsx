@@ -18,7 +18,6 @@ import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400
 
 const transition = `transition-all duration-200 ease-in`
 const menuBarHeight = 'h-64p'
-const coverSectionHeight = 'h-32v medium:h-48v large:64v'
 
 interface SiteMapItem {
   link: string
@@ -136,9 +135,9 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
       <header
         ref={ref}
         id="nav-container"
-        className={ctl(`${coverSectionHeight} w-full static`)}
+        className="h-32v medium:h-48v large:64v w-full static"
       >
-        <div className={ctl(`${coverSectionHeight} absolute w-full`)}>
+        <div className="h-32v medium:h-48v large:64v absolute w-full">
           <ImageWrapper
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
@@ -198,9 +197,7 @@ const HorizontalMenuItemList: FC<{
           return (
             <li
               key={item.name}
-              className={ctl(
-                `text-center mb-0 px-3 py-3 ${transition} ${item.subItems && 'group'}`
-              )}
+              className={ctl(`text-center mb-0 px-3 py-3 ${transition} group`)}
             >
               <NavLink
                 item={item}
@@ -208,20 +205,34 @@ const HorizontalMenuItemList: FC<{
                 onClick={() => setOpened(!opened)}
               />
               {/* todo: icon should be inside button so all is clickable */}
-              <span className="inline-flex items-center">
-                <ChevronDown
-                  className={`ml-1 text-white ${
-                    !item.subItems ? 'hidden' : 'hidden group-hover:inline'
-                  } `}
-                />
-                <ChevronRight
-                  className={`ml-1 text-white ${
-                    !item.subItems ? 'hidden' : 'inline group-hover:hidden'
-                  } `}
-                />
-              </span>
-              {item.subItems && opened && (
-                <SubMenuItemList item={item} InfoPageLink={InfoPageLink} />
+              {item.subItems && (
+                <span className="inline-flex items-center ml-1 text-white">
+                  <ChevronDown
+                    className={`ml-1 text-white ${'hidden group-hover:inline'} `}
+                  />
+                  <ChevronRight
+                    className={`ml-1 text-white ${'inline group-hover:hidden'} `}
+                  />
+                </span>
+              )}
+              {item.subItems && (
+                <ul
+                  id="dropdown"
+                  className={ctl(`
+                  list-none
+                  ${opened ? 'flex absolute' : 'hidden group-hover:flex group-hover:absolute'}
+                  flex-col space-y-3 items-start -ml-1
+                  w-auto p-6 mr-4 bg-green opacity-90
+                  ${transition}`)}
+                >
+                  {item.subItems.map((subItem) => {
+                    return (
+                      <li key={subItem.name}>
+                        <NavLink item={subItem} InfoPageLink={InfoPageLink} />
+                      </li>
+                    )
+                  })}
+                </ul>
               )}
             </li>
           )
@@ -303,30 +314,6 @@ const VerticalMenuItem: FC<{ item: SiteMapItem }> = ({ item }) => {
         </ul>
       )}
     </li>
-  )
-}
-
-const SubMenuItemList: FC<{
-  item: SiteMapItem
-  InfoPageLink: InfoPageLinkFC
-}> = ({ item, InfoPageLink }) => {
-  const ulClasses = ctl(`
-  list-none
-  extraLarge:hidden extraLarge:group-hover:absolute extraLarge:group-hover:flex
-  flex flex-col space-y-3 extraLarge:items-start extraLarge:-ml-1
-  w-auto extraLarge:p-6 mr-4 extraLarge:bg-green extraLarge:opacity-90
-  ${transition}`)
-
-  return (
-    <ul id="dropdown" className={ulClasses}>
-      {item.subItems.map((subItem) => {
-        return (
-          <li key={subItem.name}>
-            <NavLink item={subItem} InfoPageLink={InfoPageLink} />
-          </li>
-        )
-      })}
-    </ul>
   )
 }
 
