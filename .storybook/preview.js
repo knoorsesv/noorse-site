@@ -5,7 +5,8 @@ import '../src/styles/typography.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  layout: 'centered',
+  // todo: make this the default layout, it will f up all the chromatich screenshots
+  // layout: 'centered',
   backgrounds: {
     default: 'none',
     values: [
