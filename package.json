@@ -39,7 +39,7 @@
     "update-vv-data": "node fetch-vv.mjs && jsonsort data && pnpm format"
   },
   "lint-staged": {
-    "*.js,*.jsx": "eslint --cache --fix",
+    "*.js,*.jsx,*.tsx": "eslint --cache --fix",
     "*.astro": "astro check",
     "*": "prettier --write"
   },
