@@ -60,7 +60,6 @@ export const Navbar: FC<{ siteMap: SiteMap; currentURL?: string }> = ({
   currentURL,
 }) => {
   const isLarge = useBreakpoint('extraLarge')
-  console.log(currentURL)
 
   return (
     <NavSection>
