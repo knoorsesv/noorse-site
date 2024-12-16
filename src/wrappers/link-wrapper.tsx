@@ -13,6 +13,8 @@ export const LinkWrapper: FC<
   // todo: doesnt work because then the ssr differs fromt the client side
   //   isActive = window && window.location.href.includes(href)
   // }
+  // const pathname = new URL(Astro.request.url).pathname;
+
   return (
     <a
       href={href}
