@@ -8,7 +8,7 @@ import {
   type PropsWithChildren,
 } from 'react'
 import { ImageWrapper } from '../wrappers/image-wrapper.js'
-import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
+import { LinkWrapper } from '../wrappers/link-wrapper'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
@@ -55,12 +55,25 @@ const useBreakpoint = (breakpoint: keyof typeof breakpoints) => {
   return useMediaQuery({ query: `(min-width: ${breakpointQuery})` })
 }
 
-export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
-  pageHasCoverPhoto = false,
-  siteMap,
-}) => {
-  const [topMenuBarShown, setTopMenuBarShown] =
-    useState<boolean>(!pageHasCoverPhoto)
+export const Navbar: FC<{ siteMap: SiteMap }> = ({ siteMap }) => {
+  const isLarge = useBreakpoint('extraLarge')
+
+  return (
+    <NavSection>
+      <MenuLogo inlineWithMenuBar={true} />
+      {isLarge ? (
+        <HorizontalMenuItemList hasFullBackGround={true} siteMap={siteMap} />
+      ) : (
+        <VerticalMenuItemList siteMap={siteMap} />
+      )}
+    </NavSection>
+  )
+}
+
+export const NavbarWithCoverPhoto: FC<{
+  siteMap: SiteMap
+}> = ({ siteMap }) => {
+  const [topMenuBarShown, setTopMenuBarShown] = useState<boolean>(false)
 
   const isLarge = useBreakpoint('extraLarge')
 
@@ -78,7 +91,7 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
     }
   }, [setTopMenuBarShown])
 
-  return pageHasCoverPhoto ? (
+  return (
     <NavSectionWithCoverPhoto ref={ref}>
       <MenuLogo inlineWithMenuBar={topMenuBarShown} />
       {isLarge ? (
@@ -90,15 +103,6 @@ export const Navbar: FC<{ pageHasCoverPhoto: boolean; siteMap: SiteMap }> = ({
         <VerticalMenuItemList siteMap={siteMap} />
       )}
     </NavSectionWithCoverPhoto>
-  ) : (
-    <NavSection>
-      <MenuLogo inlineWithMenuBar={true} />
-      {isLarge ? (
-        <HorizontalMenuItemList hasFullBackGround={true} siteMap={siteMap} />
-      ) : (
-        <VerticalMenuItemList siteMap={siteMap} />
-      )}
-    </NavSection>
   )
 }
 

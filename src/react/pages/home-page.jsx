@@ -5,7 +5,7 @@ import {
   Card,
   EventList,
   Footer,
-  Navbar,
+  NavbarWithCoverPhoto,
   NewsList,
   ResponsiveVideo,
   Section,
@@ -23,7 +23,7 @@ export const HomePage = ({
 }) => {
   return (
     <>
-      <Navbar pageHasCoverPhoto={true} siteMap={siteMap} />
+      <NavbarWithCoverPhoto siteMap={siteMap} />
       <main className={'flex w-full flex-col items-center medium:px-8'}>
         <Section.List>
           <Section>
