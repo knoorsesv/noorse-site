@@ -51,8 +51,8 @@ importers:
         specifier: 0.9.0
         version: 0.9.0(astro@5.1.0(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))
       contentful:
-        specifier: 11.2.3
-        version: 11.2.3
+        specifier: 11.3.3
+        version: 11.3.3
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
@@ -494,8 +494,8 @@ packages:
     resolution: {integrity: sha512-DSHae2obMSMkAtTBSOulg5X7/z+rGLxcXQIkg3OmWvY6wifojge5uVMydfhUvs7yQj+V7jNmRZ2Xzl8GJyqRgg==}
     engines: {node: '>=v18'}
 
-  '@contentful/content-source-maps@0.11.6':
-    resolution: {integrity: sha512-kiP0LcqAMj+Kvt+sLpI1KlqSh2isGkQXRulTEwKZGorXDTbSN3rWfFo/4ysHk2CvlWyF1NotNkB4Thz6LNiHTQ==}
+  '@contentful/content-source-maps@0.11.7':
+    resolution: {integrity: sha512-f+AVIM/Z+AmCagM+9hDUhhT63WVFJurbqHhzul8KVyPNIJLaUHAfMns+nxgEKCPRtef+rCk7ufaZ3HEUS1ssYQ==}
 
   '@contentful/rich-text-types@16.8.5':
     resolution: {integrity: sha512-q18RJuJCOuYveGiCIjE5xLCQc5lZ3L2Qgxrlg/H2YEobDFqdtmklazRi1XwEWaK3tMg6yVXBzKKkQfLB4qW14A==}
@@ -1392,11 +1392,6 @@ packages:
   '@rollup/rollup-linux-s390x-gnu@4.28.1':
     resolution: {integrity: sha512-/yqC2Y53oZjb0yz8PVuGOQQNOTwxcizudunl/tFs1aLvObTclTwZ0JhXF2XcPT/zuaymemCDSuuUPXJJyqeDOg==}
     cpu: [s390x]
-    os: [linux]
-
-  '@rollup/rollup-linux-x64-gnu@4.21.3':
-    resolution: {integrity: sha512-kZPbX/NOPh0vhS5sI+dR8L1bU2cSO9FgxwM8r7wHzGydzfSjLRCFAT87GR5U9scj2rhzN3JPYVC7NoBbl4FZ0g==}
-    cpu: [x64]
     os: [linux]
 
   '@rollup/rollup-linux-x64-gnu@4.28.1':
@@ -2403,8 +2398,8 @@ packages:
     resolution: {integrity: sha512-Ao/5Y74ERPn6kjzb/8okYPuQJnikMtR+dnv0plLw8IvPomwXonLq3qom0rLSyo5KuvQkBMa9AApy1izunxW4mw==}
     engines: {node: '>=18'}
 
-  contentful@11.2.3:
-    resolution: {integrity: sha512-g+smhHRbPg5swbbbumsgdA94yq+2MmREeoDpOtRDsdntIqHq6aFpn9e9sqWIPcuvg0vT8IB1It115fAxZdQ97Q==}
+  contentful@11.3.3:
+    resolution: {integrity: sha512-85AoXgkqnHy9id912lWMwwqUc1twofCmcwLJery9EWtBhcpBPm8qVmPKVjJeqLwr+4nIsOFVdUAUgtJYqSOo8w==}
     engines: {node: '>=18'}
 
   conventional-changelog-angular@7.0.0:
@@ -6287,7 +6282,7 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.3.0
 
-  '@contentful/content-source-maps@0.11.6':
+  '@contentful/content-source-maps@0.11.7':
     dependencies:
       '@vercel/stega': 0.1.2
       json-pointer: 0.6.2
@@ -7037,9 +7032,6 @@ snapshots:
     optional: true
 
   '@rollup/rollup-linux-s390x-gnu@4.28.1':
-    optional: true
-
-  '@rollup/rollup-linux-x64-gnu@4.21.3':
     optional: true
 
   '@rollup/rollup-linux-x64-gnu@4.28.1':
@@ -8385,11 +8377,11 @@ snapshots:
       process: 0.11.10
       qs: 6.13.0
     optionalDependencies:
-      '@rollup/rollup-linux-x64-gnu': 4.21.3
+      '@rollup/rollup-linux-x64-gnu': 4.28.1
 
-  contentful@11.2.3:
+  contentful@11.3.3:
     dependencies:
-      '@contentful/content-source-maps': 0.11.6
+      '@contentful/content-source-maps': 0.11.7
       '@contentful/rich-text-types': 16.8.5
       axios: 1.7.7(debug@4.3.7)
       contentful-resolve-response: 1.9.0
