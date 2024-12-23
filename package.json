@@ -71,7 +71,7 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.0",
+    "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@storybook/addon-a11y": "8.3.4",
     "@storybook/addon-essentials": "8.3.4",
