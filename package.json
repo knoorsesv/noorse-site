@@ -83,7 +83,7 @@
     "@types/react-responsive": "8.0.8",
     "@typescript-eslint/parser": "8.17.0",
     "autoprefixer": "10.4.20",
-    "chromatic": "11.18.1",
+    "chromatic": "11.20.2",
     "concurrently": "9.1.1",
     "cross-env": "7.0.3",
     "eslint": "9.15.0",
