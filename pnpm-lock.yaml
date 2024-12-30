@@ -51,8 +51,8 @@ importers:
         specifier: 0.9.0
         version: 0.9.0(astro@5.1.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       contentful:
-        specifier: 11.3.3
-        version: 11.3.3
+        specifier: 11.3.4
+        version: 11.3.4
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
@@ -2398,8 +2398,8 @@ packages:
     resolution: {integrity: sha512-Ao/5Y74ERPn6kjzb/8okYPuQJnikMtR+dnv0plLw8IvPomwXonLq3qom0rLSyo5KuvQkBMa9AApy1izunxW4mw==}
     engines: {node: '>=18'}
 
-  contentful@11.3.3:
-    resolution: {integrity: sha512-85AoXgkqnHy9id912lWMwwqUc1twofCmcwLJery9EWtBhcpBPm8qVmPKVjJeqLwr+4nIsOFVdUAUgtJYqSOo8w==}
+  contentful@11.3.4:
+    resolution: {integrity: sha512-FETjNPKjwml8o40vkcKEF7+cgeowjoINZdH8Js6LqmshCTByoZ99zmhW7bKhmzlvfkhWzi/11AFA2m8jQAT5mw==}
     engines: {node: '>=18'}
 
   conventional-changelog-angular@7.0.0:
@@ -8444,7 +8444,7 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.28.1
 
-  contentful@11.3.3:
+  contentful@11.3.4:
     dependencies:
       '@contentful/content-source-maps': 0.11.7
       '@contentful/rich-text-types': 16.8.5
