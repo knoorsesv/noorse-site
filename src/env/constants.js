@@ -9,11 +9,11 @@ export const siteMap = {
       name: 'Club',
       subItems: [
         {
-          name: 'Bestuur',
-          link: '/info/bestuur',
+          name: 'Aanspreekpunt Integriteit',
+          link: '/info/aanspreekpunt-integriteit',
         },
         {
-          name: 'Beleidsplan',
+          name: 'Beleidsplan 2024-2027',
           link: '/info/beleidsplan',
         },
         {
@@ -21,8 +21,12 @@ export const siteMap = {
           link: '/info/fairplay',
         },
         {
-          name: 'Structuur',
+          name: 'Structuur en clubwerking',
           link: '/info/structuur',
+        },
+        {
+          name: 'Sportieve werking',
+          link: '/info/sportieve-werking',
         },
         {
           name: 'Verzekering',
