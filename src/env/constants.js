@@ -24,6 +24,10 @@ export const siteMap = {
           name: 'Structuur',
           link: '/info/structuur',
         },
+        {
+          name: 'Verzekering',
+          link: '/info/verzekering',
+        },
       ],
     },
     {
@@ -42,10 +46,7 @@ export const siteMap = {
       name: 'Sponsors',
       link: '/info/sponsors',
     },
-    {
-      name: 'Verzekering',
-      link: '/info/verzekering',
-    },
+
     {
       name: 'Trooper',
       extLink: trooperLink,
