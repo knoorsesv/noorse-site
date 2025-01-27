@@ -12,7 +12,8 @@ import {
 } from '../index'
 import { ExternalLink } from '../links/external-link.jsx'
 import sportVlaanderen from '../../images/sport-vlaanderen.webp?w=600;800;1200&h=200;400;800&format=webp&q=50,100'
-
+import jako from '../../images/jako_logo.png?format=webp&q=50,100'
+// 2.69
 export const HomePage = ({
   version,
   sponsors,
@@ -45,13 +46,17 @@ export const HomePage = ({
           </Section>
           <Section>
             <Section.Title>Webshop</Section.Title>
-            <Card>
-              <Section.TextContent>
-                <ExternalLink href={links.webshopLink}>
-                  Ontdek hier onze officiële webshop!
-                </ExternalLink>
-              </Section.TextContent>
-            </Card>
+            <Section.TextContent>
+              <ExternalLink href={links.webshopLink} icon={false}>
+                <ImageWrapper
+                  src={jako}
+                  id="jako-logo"
+                  alt={'Jako Sportswear'}
+                  loading="lazy"
+                  className={`w-[600px] h-[220px] `}
+                />
+              </ExternalLink>
+            </Section.TextContent>
           </Section>
           <Section>
             <Section.Title>Nieuws</Section.Title>
