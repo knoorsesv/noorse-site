@@ -59,9 +59,15 @@ export const siteMap = {
       name: 'Webshop',
       extLink: webshopLink,
     },
-    { name: 'Heren', link: '/senioren' },
-    { name: 'Jeugd', link: '/jeugd' },
-    { name: 'Dames', link: '/dames' },
+    {
+      name: 'Ploegen',
+      subItems: [
+        { name: 'Dames', link: '/dames' },
+        { name: 'Heren', link: '/senioren' },
+        { name: 'Jeugd', link: '/jeugd' },
+        { name: 'Recrea', link: '/recrea' },
+      ],
+    },
     { name: 'Contact', link: '/contact' },
   ],
 }
