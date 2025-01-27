@@ -9,11 +9,11 @@ export const siteMap = {
       name: 'Club',
       subItems: [
         {
-          name: 'Bestuur',
-          link: '/info/bestuur',
+          name: 'Aanspreekpunt Integriteit',
+          link: '/info/aanspreekpunt-integriteit',
         },
         {
-          name: 'Beleidsplan',
+          name: 'Beleidsplan 2024-2027',
           link: '/info/beleidsplan',
         },
         {
@@ -21,8 +21,16 @@ export const siteMap = {
           link: '/info/fairplay',
         },
         {
-          name: 'Structuur',
+          name: 'Structuur en clubwerking',
           link: '/info/structuur',
+        },
+        {
+          name: 'Sportieve werking',
+          link: '/info/sportieve-werking',
+        },
+        {
+          name: 'Verzekering',
+          link: '/info/verzekering',
         },
       ],
     },
@@ -42,10 +50,7 @@ export const siteMap = {
       name: 'Sponsors',
       link: '/info/sponsors',
     },
-    {
-      name: 'Verzekering',
-      link: '/info/verzekering',
-    },
+
     {
       name: 'Trooper',
       extLink: trooperLink,
@@ -54,9 +59,15 @@ export const siteMap = {
       name: 'Webshop',
       extLink: webshopLink,
     },
-    { name: 'Heren', link: '/senioren' },
-    { name: 'Jeugd', link: '/jeugd' },
-    { name: 'Dames', link: '/dames' },
+    {
+      name: 'Ploegen',
+      subItems: [
+        { name: 'Dames', link: '/dames' },
+        { name: 'Heren', link: '/senioren' },
+        { name: 'Jeugd', link: '/jeugd' },
+        { name: 'Recrea', link: '/recrea' },
+      ],
+    },
     { name: 'Contact', link: '/contact' },
   ],
 }
