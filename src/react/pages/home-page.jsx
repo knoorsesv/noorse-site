@@ -11,7 +11,7 @@ import {
   Section,
 } from '../index'
 import { ExternalLink } from '../links/external-link.jsx'
-import sportVlaanderen from '../../images/sport-vlaanderen.webp?w=600;800;1200&h=200;400;800&format=webp&q=50,100'
+import sportVlaanderen from '../../images/sport-vlaanderen.webp?format=webp&q=50,100'
 
 export const HomePage = ({
   version,
@@ -79,15 +79,15 @@ export const HomePage = ({
           </Section>
 
           <Section>
-            <Card containerClass="flex flex-col items-center">
+            <Section.TextContent>
               <ImageWrapper
                 src={sportVlaanderen}
                 id="sport-vlaanderen-logo"
                 alt={'Sport Vlaanderen Logo'}
                 loading="lazy"
-                className={`h-full max-h-full w-full max-w-full object-contain large:max-w-[500px]`}
+                className={`w-[500px] object-contain`}
               />
-            </Card>
+            </Section.TextContent>
           </Section>
         </Section.List>
       </main>
