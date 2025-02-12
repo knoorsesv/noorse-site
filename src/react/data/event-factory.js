@@ -7,7 +7,7 @@ const eventFactory = (attrs) => ({
 const withEndDate = (attrs) =>
   eventFactory({ eindDatum: '2023-05-15', ...attrs })
 const withAnnouncement = (attrs) =>
-  eventFactory({ aankondiging: 'link naar event', ...attrs })
+  eventFactory({ fields: { aankondiging: 'link naar event' }, ...attrs })
 
 export const eventList = [
   eventFactory(),
