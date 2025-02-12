@@ -7,7 +7,7 @@ export const EventList = ({ events }) => {
       <LinkWrapper
         className={'text-black underline'}
         // todo: extract this logic of generating the url to a util, or just map it onto the input object
-        href={`/nieuws/${event.aankondiging.title
+        href={`/nieuws/${event.aankondiging.fields.title
           ?.replace('/', '-')
           .toLowerCase()}`}
       >
@@ -17,6 +17,7 @@ export const EventList = ({ events }) => {
   }
 
   const formatDate = (datum) => format(new Date(datum), 'dd/MM/yy')
+
   return events.length ? (
     <table>
       <tbody>
@@ -27,7 +28,9 @@ export const EventList = ({ events }) => {
               {event.eindDatum ? ` - ${formatDate(event.eindDatum)}` : ''}
             </td>
             <td className={'border-0'}>
-              {event.aankondiging ? (
+              {event.aankondiging &&
+              event.aankondiging.fields &&
+              event.aankondiging.fields.title ? (
                 <EventLink event={event} />
               ) : (
                 <span>{event.naam}</span>
