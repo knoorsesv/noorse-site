@@ -20,8 +20,7 @@ setopt extended_glob
 
 for file in ./test-results/**/*-actual.png~*retry*(N); do 
   echo "found actual screenshot $file in test results"; 
-  # echo $file | sed 's/test-results\/screenshots-Screenshot-Test-for/page/';
-  # echo $file | sed 's/test-results\/screenshots-Screenshot-Test-for/page/' | sed 's/\.\///'
+  # todo: explain what happens here / moving the shots for "home" does not seem to work correctly
   newFileName=$(echo $file | sed 's/test-results\/screenshots-Screenshot-Test-for/page/' | sed 's/\.\///' | sed 's/\/.*-actual.png/-linux.png/')
   echo $newFileName
   mv $file ./screenshots.spec.js-snapshots/$newFileName
