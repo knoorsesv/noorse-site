@@ -114,9 +114,6 @@ importers:
       '@types/react-helmet':
         specifier: 6.1.11
         version: 6.1.11
-      '@types/react-responsive':
-        specifier: 8.0.8
-        version: 8.0.8
       '@typescript-eslint/parser':
         specifier: 8.17.0
         version: 8.17.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.2)
@@ -178,8 +175,8 @@ importers:
         specifier: 0.5.13
         version: 0.5.13(prettier-plugin-astro@0.13.0)(prettier@3.2.5)
       react-responsive:
-        specifier: 10.0.0
-        version: 10.0.0(react@19.0.0)
+        specifier: 10.0.1
+        version: 10.0.1(react@19.0.0)
       start-server-and-test:
         specifier: 2.0.9
         version: 2.0.9
@@ -1779,9 +1776,6 @@ packages:
 
   '@types/react-helmet@6.1.11':
     resolution: {integrity: sha512-0QcdGLddTERotCXo3VFlUSWO3ztraw8nZ6e3zJSgG7apwV5xt+pJUS8ewPBqT4NYB1optGLprNQzFleIY84u/g==}
-
-  '@types/react-responsive@8.0.8':
-    resolution: {integrity: sha512-HDUZtoeFRHrShCGaND23HmXAB9evOOTjkghd2wAasLkuorYYitm5A1XLeKkhXKZppcMBxqB/8V4Snl6hRUTA8g==}
 
   '@types/react@18.3.12':
     resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
@@ -4815,8 +4809,8 @@ packages:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
 
-  react-responsive@10.0.0:
-    resolution: {integrity: sha512-N6/UiRLGQyGUqrarhBZmrSmHi2FXSD++N5VbSKsBBvWfG0ZV7asvUBluSv5lSzdMyEVjzZ6Y8DL4OHABiztDOg==}
+  react-responsive@10.0.1:
+    resolution: {integrity: sha512-OM5/cRvbtUWEX8le8RCT8scA8y2OPtb0Q/IViEyCEM5FBN8lRrkUOZnu87I88A6njxDldvxG+rLBxWiA7/UM9g==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8.0'
@@ -7790,10 +7784,6 @@ snapshots:
       '@types/react': 19.0.2
 
   '@types/react-helmet@6.1.11':
-    dependencies:
-      '@types/react': 19.0.2
-
-  '@types/react-responsive@8.0.8':
     dependencies:
       '@types/react': 19.0.2
 
@@ -11450,7 +11440,7 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react-responsive@10.0.0(react@19.0.0):
+  react-responsive@10.0.1(react@19.0.0):
     dependencies:
       hyphenate-style-name: 1.1.0
       matchmediaquery: 0.4.2

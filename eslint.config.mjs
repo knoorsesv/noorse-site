@@ -19,6 +19,7 @@ export default [
       '.storybook/main.js',
       'loadershim.js', // todo: is this file even needed?
       'src/env.d.ts',
+      '.astro',
     ],
   },
   js.configs.recommended,
