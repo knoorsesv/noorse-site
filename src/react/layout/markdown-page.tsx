@@ -8,7 +8,7 @@ export const MarkDownPage: FC<
   PropsWithChildren<{
     title: string
     content: string
-    attachment?: (AssetFields | undefined)[]
+    attachment?: AssetFields[]
     markdownClassNames?: string
   }>
 > = ({ children, title, content, attachment, markdownClassNames }) => {
