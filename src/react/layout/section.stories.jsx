@@ -1,4 +1,4 @@
-import { Card } from '../cards.jsx'
+import { Card } from '../cards.tsx'
 import { Section } from './section.tsx'
 
 export default {

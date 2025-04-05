@@ -1,7 +1,17 @@
 import ctl from '@netlify/classnames-template-literals'
+import type { FC, PropsWithChildren } from 'react'
 
 // todo: try to get rid of custom classNames, make all cards the same
-export const Card = ({
+export const Card: FC<
+  PropsWithChildren<
+    {
+      header: string
+      Image: FC
+      containerClass: string
+      headerHeight: string
+    } & React.HTMLProps<HTMLDivElement>
+  >
+> = ({
   header,
   Image,
   children,
@@ -37,7 +47,7 @@ export const Card = ({
   )
 }
 
-export const SubHeader = ({ children }) => {
+export const SubHeader: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       className={
