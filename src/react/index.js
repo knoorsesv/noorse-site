@@ -18,5 +18,5 @@ export * from './titles.jsx'
 export * from './version.jsx'
 export * from './video.jsx'
 
-export * from './layout/section.jsx'
+export * from './layout/section.tsx'
 export * from './icons/icons.jsx'
