@@ -1,4 +1,4 @@
-import { Card, SubHeader } from './cards.jsx'
+import { Card, SubHeader } from './cards.tsx'
 import { createSnippetFromInhoud } from '../utils/snippet.js'
 import { ImageWrapper } from '../wrappers/image-wrapper'
 import { Logo } from './logo.jsx'
