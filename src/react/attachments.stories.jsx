@@ -1,5 +1,5 @@
 import { expect, within } from '@storybook/test'
-import { Attachments } from './attachments.jsx'
+import { Attachments } from './attachments.tsx'
 
 const Template = (args) => <Attachments {...args} />
 
@@ -57,17 +57,12 @@ MultipleDocuments.args = {
       title: 'Some Other Document',
       file: { url: 'test-url' },
     },
-    {
-      naam: 'Document with a name',
-      file: { url: 'test-url' },
-    },
   ],
 }
 
 MultipleDocuments.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
   await expect(canvas.getByText('Some Document')).toBeInTheDocument()
-  await expect(canvas.getByText('Some Other Document')).toBeInTheDocument()
   await expect(canvas.getByText('Some Other Document')).toBeInTheDocument()
   await expect(canvas.getByText('Bijlagen')).toBeInTheDocument()
 }
