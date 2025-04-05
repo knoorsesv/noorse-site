@@ -1,6 +1,11 @@
 import ctl from '@netlify/classnames-template-literals'
+import type { FC, PropsWithChildren } from 'react'
 
-const Section = ({ children, className }) => {
+const Section: FC<PropsWithChildren<{ className: string }>> & {
+  Title: typeof SectionTitle
+  TextContent: typeof SectionTextContent
+  List: typeof SectionList
+} = ({ children, className }) => {
   return (
     <section
       className={ctl(`${className}
@@ -14,7 +19,7 @@ const Section = ({ children, className }) => {
   )
 }
 
-const SectionTitle = ({ children }) => {
+const SectionTitle: FC<PropsWithChildren> = ({ children }) => {
   const backgroundColorHeight = '16px'
   const secondBackgroundHeight = '3px'
   return (
@@ -56,11 +61,11 @@ const SectionTitle = ({ children }) => {
   )
 }
 
-const SectionTextContent = ({ children }) => (
+const SectionTextContent: FC<PropsWithChildren> = ({ children }) => (
   <div className="my-4 text-center medium:my-8">{children}</div>
 )
 
-const SectionList = ({ children }) => (
+const SectionList: FC<PropsWithChildren> = ({ children }) => (
   <div className="flex w-full flex-col items-center large:max-w-[1024px] large:px-8">
     {children}
   </div>
