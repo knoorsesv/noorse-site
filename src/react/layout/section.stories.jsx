@@ -1,5 +1,5 @@
 import { Card } from '../cards.jsx'
-import { Section } from './section.jsx'
+import { Section } from './section.tsx'
 
 export default {
   title: 'Layout/Section',
