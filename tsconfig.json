@@ -4,5 +4,6 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
+  "include": [".storybook/**/*", "src/**/*"],
   "exclude": ["dist", "storybook-static", "tests"]
 }
