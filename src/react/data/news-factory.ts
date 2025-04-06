@@ -1,6 +1,8 @@
+import type { NewsItem } from '../types/news'
+import type { Factory } from './factory'
 import { imageFactory } from './image-factory'
 
-export const newsFactory = (attrs) => ({
+export const newsFactory: Factory<NewsItem> = (attrs) => ({
   title: 'Good News Everyone',
   image: imageFactory(),
   blurb: 'Some headline content in the form of a blurb',
@@ -28,12 +30,14 @@ export const newsFactory = (attrs) => ({
   ...attrs,
 })
 
-export const withOutPublishDate = (attrs) =>
-  newsFactory({ publishDate: null, ...attrs })
-export const withOutBlurb = (attrs) => newsFactory({ blurb: null, ...attrs })
-export const withOutImage = (attrs) => newsFactory({ image: null, ...attrs })
-export const withOutAttachments = (attrs) =>
-  newsFactory({ attachment: null, ...attrs })
+export const withOutPublishDate: Factory<NewsItem> = (attrs) =>
+  newsFactory({ publishDate: undefined, ...attrs })
+export const withOutBlurb: Factory<NewsItem> = (attrs) =>
+  newsFactory({ blurb: undefined, ...attrs })
+export const withOutImage: Factory<NewsItem> = (attrs) =>
+  newsFactory({ image: undefined, ...attrs })
+export const withOutAttachments: Factory<NewsItem> = (attrs) =>
+  newsFactory({ attachment: undefined, ...attrs })
 
 export const allNewsItems = [
   newsFactory({ title: 'Some good news' }),

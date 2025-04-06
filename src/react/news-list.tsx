@@ -1,6 +1,10 @@
+import type { FC, PropsWithChildren } from 'react'
 import { NewsCard } from './news-card.jsx'
+import type { NewsItem } from './types/news'
 
-export const NewsList = ({ children, shownNewsItems }) => {
+export const NewsList: FC<
+  PropsWithChildren<{ shownNewsItems: NewsItem[] }>
+> = ({ children, shownNewsItems }) => {
   return (
     <section
       className={'flex flex-col flex-wrap justify-between medium:flex-row'}

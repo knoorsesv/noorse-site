@@ -8,7 +8,7 @@ export const Card: FC<
       header: string
       Image: FC
       containerClass: string
-      headerHeight: string
+      headerHeight?: string
     } & React.HTMLProps<HTMLDivElement>
   >
 > = ({
