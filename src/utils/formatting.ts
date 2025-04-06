@@ -1,4 +1,4 @@
-export function sanitizeTeamName(teamName) {
+export function sanitizeTeamName(teamName: string): string {
   return teamName.toLowerCase().includes('noorse')
     ? 'Noorse'
     : teamName
