@@ -1,4 +1,8 @@
-export const gamesFactory = (attrs) => ({
+import type { Game } from '../types/game'
+import type { Factory } from './factory'
+
+export const gamesFactory: Factory<Game> = (attrs) => ({
+  startDate: new Date('2023-09-23T17:00:00').toISOString(),
   startTime: new Date('2023-09-23T17:00:00').toISOString(),
   homeTeam: { name: 'Neurse' },
   awayTeam: { name: 'Losers' },
@@ -7,7 +11,7 @@ export const gamesFactory = (attrs) => ({
     startTime: new Date(attrs.startTime).toISOString(),
   }),
   outcome: { status: 'finished', homeTeamGoals: 3, awayTeamGoals: 4 },
-  id: Math.round(Math.random() * 1000),
+  id: `${Math.round(Math.random() * 1000)}`,
   ...attrs,
 })
 
