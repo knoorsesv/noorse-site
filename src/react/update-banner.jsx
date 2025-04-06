@@ -1,4 +1,4 @@
-import { Exclamation } from './icons/icons.jsx'
+import { Exclamation } from './icons/icons.tsx'
 import ctl from '@netlify/classnames-template-literals'
 
 export const UpdateBanner = (props) => {
