@@ -1,24 +1,25 @@
 import { format, parseISO } from 'date-fns'
 import { nlBE } from 'date-fns/locale'
-import React from 'react'
+import React, { type FC } from 'react'
 import { Helmet } from 'react-helmet'
 import { sanitizeTeamName } from '../../utils/formatting'
 import { SubTitle, Title } from '../index'
 import { Container } from '../layout'
+import type { Game } from '../types/game'
 
-export const CalendarPage = ({ games }) => {
-  const day = (date) => {
+export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
+  const day = (date: string) => {
     return format(parseISO(date), 'eeeeee', { locale: nlBE })
   }
-  const date = (date) => {
+  const date = (date: string) => {
     return format(parseISO(date), 'dd/MM', { locale: nlBE })
   }
 
-  const hour = (date) => {
+  const hour = (date: string) => {
     return format(parseISO(date), 'HH:mm', { locale: nlBE })
   }
 
-  function dateDiffersFromPreviousGame(index, game) {
+  function dateDiffersFromPreviousGame(index: number, game: Game) {
     return (
       index === 0 || date(game.startTime) !== date(games[index - 1].startTime)
     )
@@ -38,6 +39,7 @@ export const CalendarPage = ({ games }) => {
           }
         >
           <ul className={'list-none'}>
+            {/* todo: use game table component here */}
             {games.map((game, index) => {
               return (
                 <React.Fragment key={game.id}>
