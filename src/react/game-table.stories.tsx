@@ -1,13 +1,20 @@
-import { CalendarTable } from './game-table.jsx'
+import { GameTable } from './game-table.tsx'
 import { gamesFactory } from './data/games-factory.js'
 
-const Template = (args) => <CalendarTable {...args} />
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
+const meta: Meta<typeof GameTable> = {
   title: 'Component/GameTable',
-  component: CalendarTable,
+  component: GameTable,
+}
+
+export default meta
+
+type Story = StoryObj<typeof GameTable>
+
+export const Primary: Story = {
   args: {
-    calendar: [
+    games: [
       gamesFactory({
         outcome: { status: 'postponed' },
       }),
@@ -38,5 +45,3 @@ export default {
     ],
   },
 }
-
-export const Default = Template.bind({})

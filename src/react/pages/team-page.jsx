@@ -1,11 +1,6 @@
 import { Helmet } from 'react-helmet'
 import { Calendar } from '../icons/icons.jsx'
-import {
-  CalendarTable,
-  CategoryTeamNavigation,
-  SubTitle,
-  Title,
-} from '../index'
+import { GameTable, CategoryTeamNavigation, SubTitle, Title } from '../index'
 import { Container } from '../layout'
 import { ExternalLink } from '../links/external-link.jsx'
 
@@ -210,7 +205,7 @@ export const TeamPage = ({
             <div id="team-calendar" className="large:max-w-3/4 my-6">
               <section>
                 <SubTitle>Kalender</SubTitle>
-                <CalendarTable calendar={teamCalendar} />
+                <GameTable games={teamCalendar} />
               </section>
             </div>
           )}
