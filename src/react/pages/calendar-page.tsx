@@ -80,13 +80,15 @@ export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
                         }
                       >
                         <div className={'medium:w-2/5'}>
-                          {sanitizeTeamName(game.homeTeam.name)}
+                          {game.homeTeam.name &&
+                            sanitizeTeamName(game.homeTeam.name)}
                         </div>
                         <div className={'hidden px-2 medium:block'}>
                           <span>-</span>
                         </div>
                         <div className={'medium:w-2/5'}>
-                          {sanitizeTeamName(game.awayTeam.name)}
+                          {game.awayTeam.name &&
+                            sanitizeTeamName(game.awayTeam.name)}
                         </div>
                       </div>
                     </div>
