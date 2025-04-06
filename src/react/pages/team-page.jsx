@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet'
-import { Calendar } from '../icons/icons.jsx'
+import { Calendar } from '../icons/icons.tsx'
 import { GameTable, CategoryTeamNavigation, SubTitle, Title } from '../index'
 import { Container } from '../layout'
 import { ExternalLink } from '../links/external-link.jsx'

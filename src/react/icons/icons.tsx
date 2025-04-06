@@ -1,3 +1,5 @@
+import type { ComponentProps, FC } from 'react'
+
 export const Facebook = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +127,7 @@ export const Calendar = () => (
     />
   </svg>
 )
-export const ChevronRight = (props) => (
+export const ChevronRight: FC<ComponentProps<'svg'>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="12px"
@@ -139,7 +141,7 @@ export const ChevronRight = (props) => (
   </svg>
 )
 
-export const ChevronDown = (props) => (
+export const ChevronDown: FC<ComponentProps<'svg'>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
@@ -153,7 +155,7 @@ export const ChevronDown = (props) => (
   </svg>
 )
 
-export const ArrowRight = (props) => (
+export const ArrowRight: FC<ComponentProps<'svg'>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="12px"
@@ -167,7 +169,7 @@ export const ArrowRight = (props) => (
   </svg>
 )
 
-export const Exclamation = (props) => (
+export const Exclamation: FC<ComponentProps<'svg'>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="12px"

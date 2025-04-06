@@ -9,7 +9,7 @@ import {
 } from 'react'
 import { ImageWrapper } from '../wrappers/image-wrapper.js'
 import { LinkWrapper } from '../wrappers/link-wrapper'
-import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.jsx'
+import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.tsx'
 import { ExternalLink } from './links/external-link.jsx'
 import { Logo } from './logo.jsx'
 import { useMediaQuery } from 'react-responsive'

@@ -1,5 +1,5 @@
 import ctl from '@netlify/classnames-template-literals'
-import { External } from '../icons/icons.jsx'
+import { External } from '../icons/icons.tsx'
 
 export const ExternalLink = ({
   children,
