@@ -1,23 +1,8 @@
 import { format, parseISO } from 'date-fns'
-import { sanitizeTeamName } from '../utils/formatting'
 import type { FC } from 'react'
-
-interface Team {
-  name: string
-}
-
-interface Game {
-  startTime: string
-  startDate: string
-  id: string
-  homeTeam: Team
-  awayTeam: Team
-  outcome: {
-    homeTeamGoals: number
-    awayTeamGoals: number
-    status: string
-  }
-}
+import { sanitizeTeamName } from '../utils/formatting'
+import type { Game } from './types/game'
+import type { Team } from './types/team'
 
 export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
   function formatTeamName(team: Team) {
