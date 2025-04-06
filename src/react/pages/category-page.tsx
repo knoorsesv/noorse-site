@@ -1,19 +1,23 @@
+import type { FC } from 'react'
 import { LinkWrapper } from '../../wrappers/link-wrapper.tsx'
 import { CategoryTeamNavigation, MarkDown, Section, SubTitle } from '../index'
+import type { Category } from '../types/category.ts'
 import { Page } from './page.jsx'
 
-export const CategoryPage = ({ category }) => {
+export const CategoryPage: FC<{
+  category: Category
+}> = ({ category }) => {
   if (category.categories?.length) {
     return (
       <Page title={category.naam}>
         {category.categories.map((subCategory) => {
           return (
             <section
-              key={subCategory.props.categoryData.naam}
+              key={subCategory.props?.categoryData.naam}
               className="mb-10 flex w-full flex-col items-center"
             >
-              <SubTitle>{subCategory.props.categoryData.naam}</SubTitle>
-              <CategoryContent category={subCategory.props.categoryData} />
+              <SubTitle>{subCategory.props?.categoryData.naam}</SubTitle>
+              <CategoryContent category={subCategory.props?.categoryData} />
             </section>
           )
         })}
@@ -28,7 +32,7 @@ export const CategoryPage = ({ category }) => {
   )
 }
 
-const CategoryContent = ({ category }) => {
+const CategoryContent: FC<{ category?: Category }> = ({ category }) => {
   return (
     <>
       {category?.general_info && (
@@ -47,7 +51,7 @@ const CategoryContent = ({ category }) => {
                 <li key={news.title}>
                   <LinkWrapper
                     href={`/nieuws/${news.title
-                      .replace('/', '-')
+                      ?.replace('/', '-')
                       .toLowerCase()}`}
                     className={'underline'}
                   >
