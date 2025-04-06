@@ -1,13 +1,15 @@
 import { format } from 'date-fns'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
+import type { FC } from 'react'
+import type { Event } from './types/event'
 
-export const EventList = ({ events }) => {
-  const EventLink = ({ event }) => {
+export const EventList: FC<{ events: Event[] }> = ({ events }) => {
+  const EventLink: FC<{ event: Event }> = ({ event }) => {
     return (
       <LinkWrapper
         className={'text-black underline'}
         // todo: extract this logic of generating the url to a util, or just map it onto the input object
-        href={`/nieuws/${event.aankondiging.fields.title
+        href={`/nieuws/${event.aankondiging?.fields.title
           ?.replace('/', '-')
           .toLowerCase()}`}
       >
@@ -16,7 +18,7 @@ export const EventList = ({ events }) => {
     )
   }
 
-  const formatDate = (datum) => format(new Date(datum), 'dd/MM/yy')
+  const formatDate = (datum: string) => format(new Date(datum), 'dd/MM/yy')
 
   return events.length ? (
     <table>
