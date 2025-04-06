@@ -16,10 +16,10 @@ export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
   }
 
   function gameSort(a: Game, b: Game) {
-    if (a.startDate > b.startDate) {
+    if (a.startTime > b.startTime) {
       return 1
     }
-    if (a.startDate === b.startDate) {
+    if (a.startTime === b.startTime) {
       return 0
     }
     return -1
