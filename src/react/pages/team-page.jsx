@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet'
 import { Calendar } from '../icons/icons.tsx'
 import { GameTable, CategoryTeamNavigation, SubTitle, Title } from '../index'
 import { Container } from '../layout'
-import { ExternalLink } from '../links/external-link.jsx'
+import { ExternalLink } from '../links/external-link'
 
 export const TeamPage = ({
   ploeg,

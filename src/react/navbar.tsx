@@ -10,7 +10,7 @@ import {
 import { ImageWrapper } from '../wrappers/image-wrapper.js'
 import { LinkWrapper } from '../wrappers/link-wrapper'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.tsx'
-import { ExternalLink } from './links/external-link.jsx'
+import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
 import { useMediaQuery } from 'react-responsive'
 // @ts-expect-error todo: find a good way to add a type definition for this

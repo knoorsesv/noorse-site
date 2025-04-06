@@ -1,5 +1,5 @@
 import { Facebook, Github, Instagram } from './icons/icons.tsx'
-import { ExternalLink } from './links/external-link.jsx'
+import { ExternalLink } from './links/external-link'
 import { EmailLink } from './links/email-link.jsx'
 
 export const ContactInfo = () => {

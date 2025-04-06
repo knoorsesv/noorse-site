@@ -1,4 +1,4 @@
-import { ExternalLink } from './external-link.jsx'
+import { ExternalLink } from './external-link'
 
 const Template = (args) => (
   <ExternalLink {...args} href="http://www.noorse.be">

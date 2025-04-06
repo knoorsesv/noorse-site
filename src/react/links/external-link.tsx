@@ -1,7 +1,16 @@
 import ctl from '@netlify/classnames-template-literals'
 import { External } from '../icons/icons.tsx'
+import type { ComponentProps, FC } from 'react'
 
-export const ExternalLink = ({
+export const ExternalLink: FC<
+  ComponentProps<'a'> & {
+    icon?: boolean
+    styled?: boolean
+    altText?: string
+    textColor?: string
+    href: string
+  }
+> = ({
   children,
   href,
   icon = true,

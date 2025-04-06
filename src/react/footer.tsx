@@ -1,13 +1,18 @@
 import ctl from '@netlify/classnames-template-literals'
+import type { FC, ReactNode } from 'react'
+import { ImageWrapper } from '../wrappers/image-wrapper.js'
 import { ContactInfo } from './contact-info.jsx'
-import { ExternalLink } from './links/external-link.jsx'
 import { EmailLink } from './links/email-link.jsx'
-import { Title } from './titles.jsx'
-import { Version } from './version.jsx'
-import { ImageWrapper } from '../wrappers/image-wrapper'
+import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
+import { Title } from './titles.jsx'
+import type { Sponsor } from './types/sponsor'
+import { Version } from './version.jsx'
 
-export const SponsorWithLogo = ({ sponsor, logoWidth = 'w-1/2' }) => {
+export const SponsorWithLogo: FC<{ sponsor: Sponsor; logoWidth?: string }> = ({
+  sponsor,
+  logoWidth = 'w-1/2',
+}) => {
   return (
     <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsor.naam}>
       <ConditionalWrapper
@@ -29,10 +34,17 @@ export const SponsorWithLogo = ({ sponsor, logoWidth = 'w-1/2' }) => {
   )
 }
 
-const ConditionalWrapper = ({ condition, wrapper, children }) =>
+const ConditionalWrapper: FC<{
+  condition: boolean
+  wrapper: (children: ReactNode) => ReactNode
+  children: ReactNode
+}> = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children
 
-const SponsorList = ({ logoWidth, sponsors }) => {
+const SponsorList: FC<{ logoWidth?: string; sponsors: Sponsor[] }> = ({
+  logoWidth,
+  sponsors,
+}) => {
   return (
     <div
       className={
@@ -53,7 +65,7 @@ const SponsorList = ({ logoWidth, sponsors }) => {
   )
 }
 
-const ContactAndSponsorFooter = ({ sponsors }) => {
+const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
   const wrapperClasses = ctl(`
     flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
@@ -91,7 +103,7 @@ const ContactAndSponsorFooter = ({ sponsors }) => {
   )
 }
 
-const CopyRightFooter = ({ version }) => {
+const CopyRightFooter: FC<{ version: string }> = ({ version }) => {
   const copyRightWrapper = ctl(`
   flex flex-col justify-start items-center
   bg-green-dark bg-opacity-75
@@ -121,7 +133,10 @@ const CopyRightFooter = ({ version }) => {
   )
 }
 
-export const Footer = ({ version, sponsors }) => {
+export const Footer: FC<{ version: string; sponsors: Sponsor[] }> = ({
+  version,
+  sponsors,
+}) => {
   return (
     <footer id="footer">
       <ContactAndSponsorFooter sponsors={sponsors} />
