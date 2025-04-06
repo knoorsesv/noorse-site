@@ -1,14 +1,23 @@
 import { Card, SubHeader } from './cards.tsx'
 import { createSnippetFromInhoud } from '../utils/snippet.js'
-import { ImageWrapper } from '../wrappers/image-wrapper'
-import { Logo } from './logo.jsx'
+import { ImageWrapper } from '../wrappers/image-wrapper.tsx'
+import { Logo } from './logo.js'
 import { format } from 'date-fns'
+import type { FC } from 'react'
+import type { NewsItem } from './types/news'
+import type { Image } from './types/image'
 
-export const NewsCard = ({ newsItem, image }) => {
+export const NewsCard: FC<{ newsItem: NewsItem; image: Image }> = ({
+  newsItem,
+  image,
+}) => {
   const snippet = newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud)
   const dateToShow = newsItem.publishDate || newsItem.createdAt
 
-  const NewsCardImage = ({ image, srcSet }) => {
+  const NewsCardImage: FC<{ image: Image; srcSet?: string }> = ({
+    image,
+    srcSet,
+  }) => {
     return (
       <div className={'h-[200px] text-center'}>
         {image ? (
