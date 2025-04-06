@@ -1,5 +1,5 @@
 import { GameTable } from './game-table.tsx'
-import { gamesFactory } from './data/games-factory.js'
+import { gamesFactory } from './data/games-factory'
 
 import type { Meta, StoryObj } from '@storybook/react'
 

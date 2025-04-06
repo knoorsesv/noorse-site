@@ -4,7 +4,7 @@ import {
   serieFactory,
   teamFactory,
 } from '../data/team-factory.js'
-import { calendar } from '../data/games-factory.js'
+import { calendar } from '../data/games-factory'
 import { categoryFactory } from '../data/category-factory.js'
 
 const Template = (args) => <TeamPage {...args} />
