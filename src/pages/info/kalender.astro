@@ -3,10 +3,12 @@ import vvData from '../../../data/vv-responses.json'
 import vvTestData from '../../../data/test-vv-responses.json'
 import Layout from '../../layouts/Layout.astro'
 import { CalendarPage } from '../../react/pages'
+import type { Game } from '../../react/types/game'
 
+// todo: correctly type the data instead of relying on the json
 const clubMatchesAssignations = (
   import.meta.env.CONTENTFUL_ENV === 'master' ? vvData : vvTestData
-).clubMatchesAssignations
+).clubMatchesAssignations as Game[]
 ---
 
 <Layout title="Info - Kalender" currentURL={Astro.url}>

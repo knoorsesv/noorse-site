@@ -1,5 +1,5 @@
 import { expect, within } from '@storybook/test'
-import { Card, SubHeader } from './cards.jsx'
+import { Card, SubHeader } from './cards.tsx'
 
 const dummyImageUrl = 'https://dummyimage.com/200x100/87c425/1100ff'
 

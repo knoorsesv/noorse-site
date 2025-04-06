@@ -1,5 +1,5 @@
 import { ImageWrapper } from '../../wrappers/image-wrapper'
-import { LinkWrapper } from '../../wrappers/link-wrapper.tsx'
+import { LinkWrapper } from '../../wrappers/link-wrapper'
 import {
   ArrowRight,
   Card,
@@ -10,7 +10,7 @@ import {
   ResponsiveVideo,
   Section,
 } from '../index'
-import { ExternalLink } from '../links/external-link.jsx'
+import { ExternalLink } from '../links/external-link'
 import sportVlaanderen from '../../images/sport-vlaanderen.webp?format=webp&q=50,100'
 
 export const HomePage = ({

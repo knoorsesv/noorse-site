@@ -23,8 +23,6 @@ which pnpm
 pnpm i
 pnpm update-vv-data
 
-
-
 git add data
 git commit -m "chore: update vv data"
 git push

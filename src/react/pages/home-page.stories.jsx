@@ -1,7 +1,7 @@
 import { allNewsItems } from '../data/news-factory.js'
 import { sponsorList } from '../data/sponsor-factory.js'
 import { HomePage } from './home-page.jsx'
-import { eventList } from '../data/event-factory.js'
+import { eventList } from '../data/event-factory'
 import { siteMapFactory } from '../data/sitemap-factory.js'
 
 const Template = (args) => <HomePage {...args} />

@@ -1,5 +1,5 @@
-import { Envelope } from '../icons/icons.jsx'
-import { ExternalLink } from './external-link.jsx'
+import { Envelope } from '../icons/icons.tsx'
+import { ExternalLink } from './external-link'
 
 export const EmailLink = ({ address }) => {
   return (
