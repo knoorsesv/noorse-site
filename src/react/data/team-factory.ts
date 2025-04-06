@@ -1,4 +1,8 @@
-export const teamFactory = (attrs) => ({
+import type { Team } from '../types/team'
+import type { Factory } from './factory'
+
+export const teamFactory: Factory<Team> = (attrs) => ({
+  bouw: 'sterken bouw',
   naam: 'Ploegnaam',
   name: 'Ploegnaam', // todo: this should be unified so name is used everywhere
   coach: ['Deef', 'Duif', 'Fokkie'],
@@ -7,13 +11,19 @@ export const teamFactory = (attrs) => ({
   ...attrs,
 })
 
-export const serieFactory = (attrs) => ({
+export const serieFactory: Factory<{ name: string; serieId: string }> = (
+  attrs
+) => ({
   name: 'A-Reeks',
   serieId: '12',
   ...attrs,
 })
 
-export const rankingFactory = (attrs) => ({
+export const rankingFactory: Factory<{
+  name: string
+  serieId: string
+  rankings: { teams: Team[] }[]
+}> = (attrs) => ({
   name: 'A-Reeks',
   serieId: '12',
   rankings: [

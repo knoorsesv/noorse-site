@@ -6,9 +6,9 @@ import type { Team } from './types/team'
 
 export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
   function formatTeamName(team: Team) {
-    return team.name.toLowerCase().includes('noorse')
+    return team.name?.toLowerCase().includes('noorse')
       ? 'Noorse'
-      : sanitizeTeamName(team.name)
+      : team.name && sanitizeTeamName(team.name)
   }
 
   function notCancelled(game: Game) {

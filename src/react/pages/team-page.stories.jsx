@@ -1,11 +1,7 @@
 import { TeamPage } from './team-page.jsx'
-import {
-  rankingFactory,
-  serieFactory,
-  teamFactory,
-} from '../data/team-factory.js'
+import { rankingFactory, serieFactory, teamFactory } from '../data/team-factory'
 import { calendar } from '../data/games-factory'
-import { categoryFactory } from '../data/category-factory.js'
+import { categoryFactory } from '../data/category-factory'
 
 const Template = (args) => <TeamPage {...args} />
 
