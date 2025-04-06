@@ -8,7 +8,7 @@ export const ImageWrapper: FC<{
   image?: {
     responsiveURL?: string
     fields?: { file: { url: string } }
-    file: { url: string }
+    file?: { url: string }
   }
   src?: string
   srcSet?: string

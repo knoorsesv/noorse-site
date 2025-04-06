@@ -1,4 +1,6 @@
-export const Logo = ({ className, ...args }) => {
+import type { ComponentProps, FC } from 'react'
+
+export const Logo: FC<ComponentProps<'img'>> = ({ className, ...args }) => {
   return (
     <img
       alt="Noorse Logo"
