@@ -7,8 +7,8 @@ export interface Game {
   homeTeam: Team
   awayTeam: Team
   outcome: {
-    homeTeamGoals: number
-    awayTeamGoals: number
+    homeTeamGoals?: number
+    awayTeamGoals?: number
     status: string
   }
 }
