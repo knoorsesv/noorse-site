@@ -29,7 +29,7 @@ const page = (
         title={page.title}
         content={page.body}
         attachment={page.attachment
-          .filter((asset) => !!asset)
+          ?.filter((asset) => !!asset)
           .map((asset) => asset?.fields)}
       />
     ) : (
