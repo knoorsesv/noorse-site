@@ -1,4 +1,4 @@
-import { Logo } from './logo.jsx'
+import { Logo } from './logo.tsx'
 
 const Template = (args) => <Logo {...args} />
 
