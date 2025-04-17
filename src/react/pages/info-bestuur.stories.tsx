@@ -1,8 +1,9 @@
-import { InfoBestuurPage } from './info-bestuur.jsx'
+import { InfoBestuurPage } from './info-bestuur.tsx'
+import type { Meta, StoryObj } from '@storybook/react'
 
-const Template = (args) => <InfoBestuurPage {...args} />
+// const Template = (args) => <InfoBestuurPage {...args} />
 
-export default {
+const meta: Meta<typeof InfoBestuurPage> = {
   title: 'Pages/InfoBestuurPage',
   component: InfoBestuurPage,
   args: {
@@ -29,4 +30,8 @@ export default {
   },
 }
 
-export const Default = Template.bind({})
+export default meta
+
+type Story = StoryObj<typeof InfoBestuurPage>
+
+export const Default: Story = {}

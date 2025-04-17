@@ -1,7 +1,15 @@
+import type { FC } from 'react'
 import { BestuurList, SubTitle } from '../index'
 import { Page } from './page.jsx'
 
-export const InfoBestuurPage = ({ leden }) => {
+export const InfoBestuurPage: FC<{
+  leden: {
+    type: 'deelwerking' | 'bestuursorgaan'
+    title: string
+    naam?: string
+    email: string
+  }[]
+}> = ({ leden }) => {
   const bestuursLeden = leden
     .filter(({ type }) => type === 'bestuursorgaan')
     .sort((a, b) => {
