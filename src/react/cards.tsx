@@ -5,9 +5,9 @@ import type { FC, PropsWithChildren } from 'react'
 export const Card: FC<
   PropsWithChildren<
     {
-      header: string
-      Image: FC
-      containerClass: string
+      header?: string
+      Image?: FC
+      containerClass?: string
       headerHeight?: string
     } & React.HTMLProps<HTMLDivElement>
   >
