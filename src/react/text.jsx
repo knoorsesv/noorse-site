@@ -1,4 +1,4 @@
-import { EmailLink } from './links/email-link.jsx'
+import { EmailLink } from './links'
 
 export const TextBlock = ({ children }) => {
   // todo: not needed probably if everything is used with tailwind prose classes

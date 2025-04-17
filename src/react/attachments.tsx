@@ -1,11 +1,13 @@
 import type { FC } from 'react'
 import { imageFileTypes } from '../env/constants.js'
-import { DocumentLink } from './links/document-link.jsx'
+import { DocumentLink } from './links'
 
 interface Attachment {
   title?: string
   file?: {
     contentType: string
+    fileName: string
+    url: string
   }
 }
 
@@ -20,9 +22,16 @@ export const Attachments: FC<{ attachments: Attachment[] }> = ({
         {defaultAttachments.length > 1 ? 'Bijlagen' : 'Bijlage'}
       </h3>
       <ul>
-        {defaultAttachments.map((att) => (
-          <li key={att.title}>{DocumentLink(att)}</li>
-        ))}
+        {defaultAttachments
+          .filter(({ file }) => !!file)
+          .map((att) => (
+            <li key={att.title}>
+              <DocumentLink
+                url={att.file?.url as string}
+                fileName={att.title || (att.file?.fileName as string)}
+              />
+            </li>
+          ))}
       </ul>
     </>
   ) : (

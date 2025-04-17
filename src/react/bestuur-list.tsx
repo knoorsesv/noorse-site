@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { EmailLink } from './links/email-link.jsx'
+import { EmailLink } from './links'
 
 export const BestuurList: FC<{
   leden: { title: string; naam?: string; email: string }[]
