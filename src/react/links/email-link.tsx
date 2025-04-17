@@ -1,7 +1,8 @@
+import type { FC } from 'react'
 import { Envelope } from '../icons/icons.tsx'
-import { ExternalLink } from './external-link'
+import { ExternalLink } from './external-link.tsx'
 
-export const EmailLink = ({ address }) => {
+export const EmailLink: FC<{ address: string }> = ({ address }) => {
   return (
     <ExternalLink
       href={`mailto:${address}`}
