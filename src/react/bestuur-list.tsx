@@ -1,6 +1,9 @@
+import type { FC } from 'react'
 import { EmailLink } from './links/email-link.jsx'
 
-export const BestuurList = ({ leden }) => {
+export const BestuurList: FC<{
+  leden: { title: string; naam?: string; email: string }[]
+}> = ({ leden }) => {
   return (
     <ul className="my-10 flex list-none flex-col gap-8">
       {leden.map((lid) => {
