@@ -8,6 +8,9 @@ interface BestuursLid {
   contentTypeId: 'bestuurslid'
   fields: {
     title: EntryFieldTypes.Text
+    naam: EntryFieldTypes.Text
+    email: EntryFieldTypes.Text
+    type: EntryFieldTypes.Text<'deelwerking' | 'bestuursorgaan'>
     body: EntryFieldTypes.RichText
     attachment: EntryFieldTypes.AssetLink
   }
