@@ -1,6 +1,10 @@
 import ctl from '@netlify/classnames-template-literals'
+import type { FC, PropsWithChildren } from 'react'
 
-export const Container = ({ children, centered = true }) => {
+export const Container: FC<PropsWithChildren<{ centered?: boolean }>> = ({
+  children,
+  centered = true,
+}) => {
   const containerWrapperClasses = ctl(`
     flex flex-col ${centered ? 'items-center' : ''}
     pt-6 medium:mx-8 pb-20
