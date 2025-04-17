@@ -1,5 +1,5 @@
 export * from './attachments.tsx'
-export * from './bestuur-list.jsx'
+export * from './bestuur-list.tsx'
 export * from './cards.tsx'
 export * from './contact-info.tsx'
 export * from './event-list'
