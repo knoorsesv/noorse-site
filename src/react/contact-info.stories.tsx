@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ContactInfo } from './contact-info.jsx'
+import { ContactInfo } from './contact-info.tsx'
 
 const meta: Meta<typeof ContactInfo> = {
   title: 'Component/ContactInfo',
@@ -8,10 +8,7 @@ const meta: Meta<typeof ContactInfo> = {
 }
 
 export default meta
+
 type Story = StoryObj<typeof ContactInfo>
 
-export const Primary: Story = {
-  args: {
-    // primary: true,
-  },
-}
+export const Primary: Story = {}

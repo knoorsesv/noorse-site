@@ -1,8 +1,9 @@
 import { Facebook, Github, Instagram } from './icons/icons.tsx'
-import { ExternalLink } from './links/external-link'
+import { ExternalLink } from './links/external-link.tsx'
 import { EmailLink } from './links/email-link.jsx'
+import type { FC } from 'react'
 
-export const ContactInfo = () => {
+export const ContactInfo: FC = () => {
   return (
     <div className="flex flex-col items-center">
       <span>Frans de Peuterstraat 50</span>

@@ -1,7 +1,7 @@
 import ctl from '@netlify/classnames-template-literals'
 import type { FC, ReactNode } from 'react'
 import { ImageWrapper } from '../wrappers/image-wrapper.js'
-import { ContactInfo } from './contact-info.jsx'
+import { ContactInfo } from './index.js'
 import { EmailLink } from './links/email-link.jsx'
 import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
