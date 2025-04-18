@@ -1,7 +1,8 @@
+import type { FC } from 'react'
 import { Exclamation } from './icons/icons.tsx'
 import ctl from '@netlify/classnames-template-literals'
 
-export const UpdateBanner = (props) => {
+export const UpdateBanner: FC<{ fixed: boolean }> = (props) => {
   return (
     <div
       className={ctl(
