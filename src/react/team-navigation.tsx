@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
+import type { Category } from './types/category.ts'
 
 interface Ploeg {
   naam?: string
@@ -8,10 +9,7 @@ interface Ploeg {
 
 // todo: dees is echt lelijk
 export const CategoryTeamNavigation: FC<{
-  category?: {
-    naam: string
-    ploeg?: Ploeg[]
-  }
+  category?: Category
   header?: string
 }> = ({ category, header }) => {
   if (!category?.ploeg?.length) {
