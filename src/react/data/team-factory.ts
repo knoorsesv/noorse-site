@@ -1,3 +1,4 @@
+import type { Ranking } from '../types/rankings'
 import type { Team } from '../types/team'
 import type { Factory } from './factory'
 
@@ -19,11 +20,7 @@ export const serieFactory: Factory<{ name: string; serieId: string }> = (
   ...attrs,
 })
 
-export const rankingFactory: Factory<{
-  name: string
-  serieId: string
-  rankings: { teams: Team[] }[]
-}> = (attrs) => ({
+export const rankingFactory: Factory<Ranking> = (attrs) => ({
   name: 'A-Reeks',
   serieId: '12',
   rankings: [
