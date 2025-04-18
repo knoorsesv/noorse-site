@@ -7,7 +7,7 @@ import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
 import { Title } from './index'
 import type { Sponsor } from './types/sponsor'
-import { Version } from './version.jsx'
+import { Version } from './index'
 
 export const SponsorWithLogo: FC<{ sponsor: Sponsor; logoWidth?: string }> = ({
   sponsor,
