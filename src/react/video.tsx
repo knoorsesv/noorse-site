@@ -1,6 +1,7 @@
+import type { FC, HTMLProps } from 'react'
 import LazyLoad from 'react-lazy-load'
 
-const containerStyle = {
+const containerStyle: HTMLProps<HTMLDivElement>['style'] = {
   position: 'relative',
   paddingBottom: '56.25%',
   height: 0,
@@ -9,7 +10,7 @@ const containerStyle = {
   width: '100%',
 }
 
-const iframeStyle = {
+const iframeStyle: HTMLProps<HTMLIFrameElement>['style'] = {
   position: 'absolute',
   top: 0,
   left: 0,
@@ -17,13 +18,9 @@ const iframeStyle = {
   height: '100%',
 }
 
-export const ResponsiveVideo = ({ src }) => {
+export const ResponsiveVideo: FC<{ src: string }> = ({ src }) => {
   return (
-    <LazyLoad
-      once={true}
-      offset={100}
-      className={'h-full w-full large:max-w-[600px]'}
-    >
+    <LazyLoad offset={100} className={'h-full w-full large:max-w-[600px]'}>
       <div style={containerStyle}>
         <iframe
           src={src}
