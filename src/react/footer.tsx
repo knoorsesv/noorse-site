@@ -5,7 +5,7 @@ import { ContactInfo } from './index.js'
 import { EmailLink } from './links'
 import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
-import { Title } from './titles.jsx'
+import { Title } from './index'
 import type { Sponsor } from './types/sponsor'
 import { Version } from './version.jsx'
 
