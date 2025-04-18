@@ -1,19 +1,34 @@
+import type { FC } from 'react'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 
+interface Ploeg {
+  naam: string
+  bouw: string
+}
+
 // todo: dees is echt lelijk
-export const CategoryTeamNavigation = ({ category, header }) => {
+export const CategoryTeamNavigation: FC<{
+  category: {
+    naam: string
+    ploeg: Ploeg[]
+  }
+  header?: string
+}> = ({ category, header }) => {
   if (!category?.ploeg?.length) {
     return <></>
   }
 
-  const bouwen = category.ploeg.reduce((bouwlijst, ploeg) => {
-    return {
-      ...bouwlijst,
-      [`${ploeg.bouw}`]: bouwlijst[ploeg.bouw]
-        ? [...bouwlijst[ploeg.bouw], ploeg]
-        : [ploeg],
-    }
-  }, {})
+  const bouwen = category.ploeg.reduce(
+    (bouwlijst: Record<string, Ploeg[]>, ploeg: Ploeg) => {
+      return {
+        ...bouwlijst,
+        [`${ploeg.bouw}`]: bouwlijst[ploeg.bouw]
+          ? [...bouwlijst[ploeg.bouw], ploeg]
+          : [ploeg],
+      }
+    },
+    {}
+  )
 
   return (
     <nav
@@ -27,10 +42,11 @@ export const CategoryTeamNavigation = ({ category, header }) => {
         {header || category.naam}
       </h3>
       {Object.keys(bouwen)
-        .sort((bouw) => {
+        .sort((bouw: string) => {
           if (bouw === 'competitief') return -1
           if (bouw === 'onderbouw') return -1
           if (bouw === 'middenbouw') return -1
+          return 0
         })
         .map((bouw) => {
           return (
@@ -38,7 +54,7 @@ export const CategoryTeamNavigation = ({ category, header }) => {
               <h4 className="mb-2 font-bold capitalize">{bouw}</h4>
               <div className={'flex-start flex w-full flex-wrap gap-2'}>
                 {bouwen[bouw]
-                  .sort((ploeg1, ploeg2) => {
+                  .sort((ploeg1: Ploeg, ploeg2: Ploeg) => {
                     const normalizedName1 = ploeg1.naam
                       .replaceAll('Geel', '')
                       .replaceAll('Groen', '')
@@ -63,7 +79,7 @@ export const CategoryTeamNavigation = ({ category, header }) => {
                       )
                     }
 
-                    return ploeg1.naam > ploeg2.naam ? '1' : '-1'
+                    return ploeg1.naam > ploeg2.naam ? 1 : -1
                   })
                   .map((ploeg) => (
                     <LinkWrapper
