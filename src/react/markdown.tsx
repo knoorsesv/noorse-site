@@ -1,15 +1,19 @@
-import { marked } from 'marked'
+import { marked, Renderer } from 'marked'
+import type { Tokens } from 'marked'
 import ctl from '@netlify/classnames-template-literals'
+import type { FC, PropsWithChildren } from 'react'
 
-const renderer = {
-  list(token) {
+const renderer: Partial<Renderer> = {
+  // declare this: typeof Renderer
+
+  list(token: Tokens.List) {
     const ordered = token.ordered
     const start = token.start
 
     let body = ''
     for (let j = 0; j < token.items.length; j++) {
       const item = token.items[j]
-      body += this.listitem(item)
+      body += this.listitem?.(item)
     }
 
     const type = ordered ? 'ol' : 'ul'
@@ -25,10 +29,12 @@ const renderer = {
       '>\n'
     )
   },
-  listitem(item) {
+
+  listitem(item: Tokens.ListItem) {
     let itemBody = ''
+
     if (item.task) {
-      const checkbox = this.checkbox({ checked: !!item.checked })
+      const checkbox = this.checkbox?.({ checked: !!item.checked })
       if (item.loose) {
         if (item.tokens.length > 0 && item.tokens[0].type === 'paragraph') {
           item.tokens[0].text = checkbox + ' ' + item.tokens[0].text
@@ -52,20 +58,28 @@ const renderer = {
       }
     }
 
-    itemBody += this.parser.parse(item.tokens, !!item.loose)
+    itemBody += this.parser?.parse(item.tokens, !!item.loose)
 
+    // todo: add a caret icon so it's clear this is collapsible
     return `<li class="group-[.opened]:list-item">${itemBody}</li>\n`
   },
 }
 
 marked.use({ renderer })
 
-export const MarkDown = ({ children, ...props }) => {
+// todo: type check that these children can only be strings
+// todo: add a boolean instead of passing this className
+export const MarkDown: FC<
+  PropsWithChildren<{ sectionClassNames?: string }>
+> = ({ children, ...props }) => {
+  if (!children) {
+    return null
+  }
   return (
     <section
       className={ctl(`prose mb-4 ${props.sectionClassNames}`)}
       dangerouslySetInnerHTML={{
-        __html: marked.parse(children),
+        __html: marked.parse(children as string),
       }}
     ></section>
   )
