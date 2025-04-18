@@ -1,6 +1,6 @@
 const maxChars = 100
 
-export function createSnippetFromInhoud(inhoud) {
+export function createSnippetFromInhoud(inhoud: string) {
   if (!inhoud) {
     return ''
   }
