@@ -3,7 +3,7 @@ import {
   withOutBlurb,
   withOutImage,
   withOutPublishDate,
-} from '../data/news-factory.js'
+} from '../data/news-factory'
 import { NewsPage } from './news-page.jsx'
 
 const Template = (args) => <NewsPage {...args} />
