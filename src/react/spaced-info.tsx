@@ -1,15 +1,10 @@
+import type { FC } from 'react'
 import { EmailLink } from './links'
 
-export const TextBlock = ({ children }) => {
-  // todo: not needed probably if everything is used with tailwind prose classes
-  return (
-    <div className={'mb-4 mt-2 font-light medium:mb-8 medium:px-6'}>
-      {children}
-    </div>
-  )
-}
-
-export const SpacedInfo = ({ items }) => {
+// todo: should this be a definition list?
+export const SpacedInfo: FC<{
+  items: { label: string; email?: string; value: string }[]
+}> = ({ items }) => {
   return items.map((item) => {
     return (
       <div
