@@ -1,7 +1,10 @@
 #! /bin/zsh
 
-rg -i todo --vimgrep | sd '(^.*):(\d+):\d+:\s*(.*$)' ' - [ ] [$1](https://github.com/knoorsesv/noorse-site/blob/main/$1#L$2)' > .todos
-cat .todos
-gh issue edit 488 --body-file .todos
+rg -i todo --vimgrep | sd '(^.*):(\d+):\d+:\s*(.*$)' ' - [ ] Todo in: [$1](https://github.com/knoorsesv/noorse-site/blob/main/$1#L$2)' > .todos.md
 
-git add .todos
+fd -e js -e jsx | sd '(.*)' ' - [ ] Convert [$1](https://github.com/knoorsesv/noorse-site/blob/main/$1) to typescript' >> .todos.md
+
+cat .todos.md
+gh issue edit 488 --body-file .todos.md
+
+git add .todos.md
