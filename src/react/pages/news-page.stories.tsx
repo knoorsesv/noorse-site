@@ -3,10 +3,9 @@ import {
   withOutBlurb,
   withOutImage,
   withOutPublishDate,
-} from '../data/news-factory'
+} from '../data/news-factory.js'
 import { NewsPage } from './news-page.jsx'
-
-const Template = (args) => <NewsPage {...args} />
+import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
   title: 'Pages/NewsPage',
@@ -19,6 +18,8 @@ export default {
       withOutPublishDate(),
     ],
   },
-}
+} satisfies Meta<typeof NewsPage>
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof NewsPage>
+
+export const Default: Story = {}

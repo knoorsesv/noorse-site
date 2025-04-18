@@ -1,9 +1,12 @@
 import { TeamPage } from './team-page.jsx'
-import { rankingFactory, serieFactory, teamFactory } from '../data/team-factory'
-import { calendar } from '../data/games-factory'
-import { categoryFactory } from '../data/category-factory'
-
-const Template = (args) => <TeamPage {...args} />
+import {
+  rankingFactory,
+  serieFactory,
+  teamFactory,
+} from '../data/team-factory.js'
+import { calendar } from '../data/games-factory.js'
+import { categoryFactory } from '../data/category-factory.js'
+import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
   title: 'Pages/TeamPage',
@@ -18,6 +21,8 @@ export default {
     ],
     teamCalendar: calendar(),
   },
-}
+} satisfies Meta<typeof TeamPage>
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof TeamPage>
+
+export const Default: Story = {}
