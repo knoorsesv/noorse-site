@@ -1,52 +1,59 @@
 import { Helmet } from 'react-helmet'
 import { Calendar } from '../icons/icons.tsx'
 import { GameTable, CategoryTeamNavigation, SubTitle, Title } from '../index'
-import { Container } from '../layout'
-import { ExternalLink } from '../links/external-link'
+import { Container } from '../layout/index.ts'
+import { ExternalLink } from '../links/external-link.tsx'
+import type { FC } from 'react'
+import type { Game } from '../types/game'
+import type { Team } from '../types/team'
+import type { Series } from '../types/series'
+import type { Ranking } from '../types/rankings'
 
-export const TeamPage = ({
-  ploeg,
-  rankings,
-  series,
-  teamCalendar,
-  googleCalId,
-}) => {
-  const nonCupRankings = rankings
-    ?.filter((ranking) => !ranking.name.toLowerCase().includes('beker'))
-    .filter((ranking) => !ranking.name.toLowerCase().includes('bva'))
+export const TeamPage: FC<{
+  ploeg: Team
+  rankings?: Ranking[] | undefined | null
+  series?: Series[]
+  teamCalendar?: Game[]
+  googleCalId?: string
+}> = ({ ploeg, rankings, series, teamCalendar, googleCalId }) => {
+  const nonCupRankings =
+    rankings
+      ?.filter((ranking) => !ranking.name.toLowerCase().includes('beker'))
+      .filter((ranking) => !ranking.name.toLowerCase().includes('bva')) ?? []
 
   const generalRanking =
-    nonCupRankings && nonCupRankings.length === 1 && nonCupRankings[0].rankings
+    nonCupRankings.length === 1 && nonCupRankings[0].rankings
       ? nonCupRankings[0].rankings[0]
       : null
-  const teamsAroundNoorseInRanking =
-    generalRanking &&
-    generalRanking.teams.filter((team, index) => {
-      return (
-        team.name.toLowerCase().includes('noorse') ||
-        generalRanking.teams[
-          Math.min(index + 1, generalRanking.teams.length - 1)
-        ].name
-          .toLowerCase()
-          .includes('noorse') ||
-        generalRanking.teams[Math.max(index - 1, 0)].name
-          .toLowerCase()
-          .includes('noorse')
-      )
-    })
+
+  const teamsAroundNoorseInRanking = generalRanking
+    ? generalRanking.teams.filter((team, index) => {
+        return (
+          team.name?.toLowerCase().includes('noorse') ||
+          generalRanking.teams[
+            Math.min(index + 1, generalRanking.teams.length - 1)
+          ].name
+            ?.toLowerCase()
+            .includes('noorse') ||
+          generalRanking.teams[Math.max(index - 1, 0)].name
+            ?.toLowerCase()
+            .includes('noorse')
+        )
+      })
+    : []
 
   const firstTeamInRanking =
     teamsAroundNoorseInRanking &&
     teamsAroundNoorseInRanking.every((team) => team.position !== 1)
-      ? generalRanking.teams[0]
+      ? generalRanking?.teams[0]
       : null
   const noorseIsLastOrNextToLast =
     generalRanking &&
     (generalRanking.teams[generalRanking.teams.length - 1]?.name
-      .toLowerCase()
+      ?.toLowerCase()
       .includes('noorse') ||
       generalRanking.teams[generalRanking.teams.length - 2]?.name
-        .toLowerCase()
+        ?.toLowerCase()
         .includes('noorse'))
 
   return (
@@ -158,7 +165,7 @@ export const TeamPage = ({
                             <td className="font-bold">{team.position}</td>
                             <td
                               className={
-                                team.name.toLowerCase().includes('noorse')
+                                team.name?.toLowerCase().includes('noorse')
                                   ? 'font-bold'
                                   : ''
                               }
