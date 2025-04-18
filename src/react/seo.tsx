@@ -1,7 +1,11 @@
 import { Helmet } from 'react-helmet'
 import config from '../env/config'
+import type { FC, PropsWithChildren } from 'react'
 
-export const Seo = ({ title, children }) => {
+export const Seo: FC<PropsWithChildren<{ title: string }>> = ({
+  title,
+  children,
+}) => {
   const metaDescription =
     'Al het laatste nieuws over voetbalvereniging Noorse uit Kapellen.'
 
@@ -26,7 +30,7 @@ export const Seo = ({ title, children }) => {
       <link
         rel="preconnect"
         href="https://images.ctfassets.net"
-        crossOrigin="true"
+        // crossOrigin="true"
       />
       {children}
     </Helmet>
