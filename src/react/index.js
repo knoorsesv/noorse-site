@@ -17,7 +17,7 @@ export * from './spaced-info.tsx'
 export * from './title.tsx'
 export * from './sub-title.tsx'
 export * from './version.tsx'
-export * from './video.jsx'
+export * from './video.tsx'
 
 export * from './layout/section.tsx'
 export * from './icons/icons.tsx'
