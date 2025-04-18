@@ -1,7 +1,7 @@
 import { imageFileTypes } from '../../env/constants'
 
 import { Helmet } from 'react-helmet'
-import { createSnippetFromInhoud } from '../../utils/snippet.js'
+import { createSnippetFromInhoud } from '../../utils/snippet.ts'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from '../layout'
 import { ImageWrapper } from '../../wrappers/image-wrapper'
