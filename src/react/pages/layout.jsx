@@ -1,4 +1,4 @@
-import { Footer, Navbar, Seo } from '../index.js'
+import { Footer, Navbar, Seo } from '../index.ts'
 
 export const Layout = ({
   children,

@@ -11,4 +11,5 @@ export interface NewsItem {
   srcSet?: string
   category: Category
   attachment?: Attachment[]
+  showImageOnPage?: boolean
 }
