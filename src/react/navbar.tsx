@@ -115,7 +115,7 @@ export const NavbarWithCoverPhoto: FC<{
 
 const NavSection: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <header id="nav-container" className="h-64p bg-green w-full static">
+    <header id="nav-container" className="static h-64p w-full bg-green">
       {children}
     </header>
   )
@@ -127,9 +127,9 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
       <header
         ref={ref}
         id="nav-container"
-        className="h-32v medium:h-48v large:64v w-full static"
+        className="large:64v static h-32v w-full medium:h-48v"
       >
-        <div className="h-32v medium:h-48v large:64v w-full absolute">
+        <div className="large:64v absolute h-32v w-full medium:h-48v">
           <ImageWrapper
             id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
@@ -161,21 +161,21 @@ const HorizontalMenuItemList: FC<{
         id="menu-list"
         className={ctl(`
                     fixed right-0
-                    list-none z-50
-                    flex flex-row justify-end items-center gap-1
-                    pr-6 w-full bg-green
+                    z-50 flex
+                    w-full list-none flex-row items-center justify-end
+                    gap-1 bg-green pr-6
                     ${transition}
                     ${
                       hasFullBackGround
-                        ? `h-80p top-0 py-10 opacity-100`
-                        : 'h-16 top-6 pt-0 pl-5 opacity-80'
+                        ? `top-0 h-80p py-10 opacity-100`
+                        : 'top-6 h-16 pl-5 pt-0 opacity-80'
                     }
                   `)}
       >
         {siteMap.items.map((item) => {
           const [opened, setOpened] = useState(false)
           return (
-            <li key={item.name} className="text-center mb-0 p-3 group">
+            <li key={item.name} className="group mb-0 p-3 text-center">
               <NavLink
                 item={item}
                 onClick={() => setOpened(!opened)}
@@ -183,7 +183,7 @@ const HorizontalMenuItemList: FC<{
               />
               {/* todo: icon should be inside button so all is clickable */}
               {item.subItems && (
-                <span className="inline-flex items-center ml-1 text-white">
+                <span className="ml-1 inline-flex items-center text-white">
                   <ChevronDown className="hidden group-hover:inline" />
                   <ChevronRight className="inline group-hover:hidden" />
                 </span>
@@ -193,9 +193,9 @@ const HorizontalMenuItemList: FC<{
                   id="dropdown"
                   className={ctl(`${transition}
                           list-none
-                          ${opened ? 'flex absolute' : 'hidden group-hover:flex group-hover:absolute'}
-                          flex-col space-y-3 items-start -ml-1
-                          w-auto p-6 mr-4 bg-green opacity-90
+                          ${opened ? 'absolute flex' : 'hidden group-hover:absolute group-hover:flex'}
+                          -ml-1 mr-4 w-auto flex-col
+                          items-start space-y-3 bg-green p-6 opacity-90
                         `)}
                 >
                   {item.subItems.map((subItem) => {
@@ -227,10 +227,10 @@ const VerticalMenuItemList: FC<{
     <>
       <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
       {sideBarMenuShown ? (
-        <nav className="fixed h-full w-1/2 medium:w-2/5 top-0 right-0 z-50">
+        <nav className="fixed right-0 top-0 z-50 h-full w-1/2 medium:w-2/5">
           <ul
             id="menu-list"
-            className="list-none flex flex-col space-y-3 pr-4 pt-20 h-full bg-green"
+            className="flex h-full list-none flex-col space-y-3 bg-green pr-4 pt-20"
           >
             {siteMap.items.map((item) => (
               <VerticalMenuItem
@@ -262,12 +262,12 @@ const VerticalMenuItem: FC<{ item: SiteMapItem; currentURL?: string }> = ({
       />
       {/* todo: icon should be inside button so all is clickable */}
       {item.subItems && (
-        <span className="inline-flex items-center text-white ml-1">
+        <span className="ml-1 inline-flex items-center text-white">
           {opened ? <ChevronDown /> : <ChevronRight />}
         </span>
       )}
       {item.subItems && opened && (
-        <ul className="list-none flex flex-col space-y-3 w-auto mr-4">
+        <ul className="mr-4 flex w-auto list-none flex-col space-y-3">
           {item.subItems.map((subItem) => {
             return (
               <li key={subItem.name}>
@@ -342,17 +342,17 @@ const MenuLogo: FC<{ inlineWithMenuBar: boolean }> = ({
     <div
       id="logo-container"
       className={ctl(`${transition}
-                flex items-center z-[60] 
+                z-[60] flex items-center 
                 ${
                   inlineWithMenuBar
-                    ? `justify-start fixed top-8 left-16p large:left-96p`
-                    : `justify-center w-full h-full top-0 large:w-1/3 p-2 large:p-8 `
+                    ? `fixed left-16p top-8 justify-start large:left-96p`
+                    : `top-0 h-full w-full justify-center p-2 large:w-1/3 large:p-8 `
                 }`)}
     >
       <ConditionalLinkWrapper href={href}>
         <Logo
           className={ctl(`${transition} 
-            aspect-square h-auto max-h-full w-full relative
+            relative aspect-square h-auto max-h-full w-full
             ${inlineWithMenuBar ? `max-w-[64px]` : `max-w-[200px] medium:max-w-[312px]`}
           `)}
         />
@@ -366,9 +366,9 @@ const MenuToggle: FC<{
   open: boolean
 }> = ({ onClick, open }) => {
   return (
-    <div className="fixed right-3 top-3 p-3 z-[100] bg-green">
+    <div className="fixed right-3 top-3 z-[100] bg-green p-3">
       <button
-        className="text-white h-full p-0 flex items-center"
+        className="flex h-full items-center p-0 text-white"
         onClick={onClick}
         aria-label={open ? 'Sluit menu' : 'Open menu'}
         id="menu-hamburger"
