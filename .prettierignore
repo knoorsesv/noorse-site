@@ -19,8 +19,6 @@ tests/Dockerfile
 *.gitignore
 *.png
 
-.todos
-
 *.webp
 *.sdl
 *.jpg
