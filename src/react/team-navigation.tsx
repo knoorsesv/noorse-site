@@ -2,15 +2,15 @@ import type { FC } from 'react'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 
 interface Ploeg {
-  naam: string
-  bouw: string
+  naam?: string
+  bouw?: string
 }
 
 // todo: dees is echt lelijk
 export const CategoryTeamNavigation: FC<{
-  category: {
+  category?: {
     naam: string
-    ploeg: Ploeg[]
+    ploeg?: Ploeg[]
   }
   header?: string
 }> = ({ category, header }) => {
@@ -22,9 +22,10 @@ export const CategoryTeamNavigation: FC<{
     (bouwlijst: Record<string, Ploeg[]>, ploeg: Ploeg) => {
       return {
         ...bouwlijst,
-        [`${ploeg.bouw}`]: bouwlijst[ploeg.bouw]
-          ? [...bouwlijst[ploeg.bouw], ploeg]
-          : [ploeg],
+        [`${ploeg.bouw}`]:
+          ploeg.bouw && bouwlijst[ploeg.bouw]
+            ? [...bouwlijst[ploeg.bouw], ploeg]
+            : [ploeg],
       }
     },
     {}
@@ -55,14 +56,16 @@ export const CategoryTeamNavigation: FC<{
               <div className={'flex-start flex w-full flex-wrap gap-2'}>
                 {bouwen[bouw]
                   .sort((ploeg1: Ploeg, ploeg2: Ploeg) => {
-                    const normalizedName1 = ploeg1.naam
-                      .replaceAll('Geel', '')
-                      .replaceAll('Groen', '')
-                      .replace(/^U/, '')
-                    const normalizedName2 = ploeg2.naam
-                      .replaceAll('Geel', '')
-                      .replaceAll('Groen', '')
-                      .replace(/^U/, '')
+                    const normalizedName1 =
+                      ploeg1.naam
+                        ?.replaceAll('Geel', '')
+                        .replaceAll('Groen', '')
+                        .replace(/^U/, '') || ''
+                    const normalizedName2 =
+                      ploeg2.naam
+                        ?.replaceAll('Geel', '')
+                        .replaceAll('Groen', '')
+                        .replace(/^U/, '') || ''
                     if (
                       !isNaN(parseInt(normalizedName1)) &&
                       !isNaN(parseInt(normalizedName2))
@@ -70,7 +73,7 @@ export const CategoryTeamNavigation: FC<{
                       if (
                         parseInt(normalizedName1) === parseInt(normalizedName2)
                       ) {
-                        if (ploeg1.naam.includes('Geel')) {
+                        if (ploeg1.naam?.includes('Geel')) {
                           return -1
                         }
                       }
@@ -79,12 +82,12 @@ export const CategoryTeamNavigation: FC<{
                       )
                     }
 
-                    return ploeg1.naam > ploeg2.naam ? 1 : -1
+                    return (ploeg1?.naam || '') > (ploeg2?.naam || '') ? 1 : -1
                   })
                   .map((ploeg) => (
                     <LinkWrapper
                       key={ploeg.naam}
-                      href={`/team/${category.naam.toLowerCase()}/${ploeg.naam.toLowerCase()}`}
+                      href={`/team/${category.naam.toLowerCase()}/${ploeg.naam?.toLowerCase()}`}
                       className={
                         'w-[80px] text-center text-gray-dark underline'
                       }
