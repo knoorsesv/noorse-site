@@ -1,10 +1,9 @@
-import { allNewsItems } from '../data/news-factory'
+import { allNewsItems } from '../data/news-factory.js'
 import { sponsorList } from '../data/sponsor-factory.js'
 import { HomePage } from './home-page.jsx'
-import { eventList } from '../data/event-factory'
+import { eventList } from '../data/event-factory.js'
 import { siteMapFactory } from '../data/sitemap-factory.js'
-
-const Template = (args) => <HomePage {...args} />
+import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
   title: 'Pages/HomePage',
@@ -17,6 +16,8 @@ export default {
     events: eventList,
     links: { newsletterLink: '/test-newsletter', webshopLink: '/test-webshop' },
   },
-}
+} satisfies Meta<typeof HomePage>
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof HomePage>
+
+export const Default: Story = {}

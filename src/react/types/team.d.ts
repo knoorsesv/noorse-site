@@ -7,4 +7,5 @@ export interface Team {
   coach?: string[]
   afgevaardigde?: string[]
   training?: string[]
+  categorie?: Category
 }
