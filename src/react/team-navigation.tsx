@@ -20,12 +20,10 @@ export const CategoryTeamNavigation: FC<{
 
   const bouwen = category.ploeg.reduce(
     (bouwlijst: Record<string, Ploeg[]>, ploeg: Ploeg) => {
+      const key = ploeg.bouw || 'Andere'
       return {
         ...bouwlijst,
-        [`${ploeg.bouw}`]:
-          ploeg.bouw && bouwlijst[ploeg.bouw]
-            ? [...bouwlijst[ploeg.bouw], ploeg]
-            : [ploeg],
+        [`${key}`]: bouwlijst[key] ? [...bouwlijst[key], ploeg] : [ploeg],
       }
     },
     {}
