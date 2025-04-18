@@ -1,5 +1,6 @@
 import Typography from 'typography'
 
+// todo: replact this with tailwind, this is not maintained
 const typography = new Typography({
   title: 'Neurse',
   scaleRatio: 1.8,
