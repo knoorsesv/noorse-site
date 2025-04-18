@@ -1,4 +1,4 @@
-import { allNewsItems } from '../data/news-factory.js'
+import { allNewsItems } from '../data/news-factory'
 import { sponsorList } from '../data/sponsor-factory.js'
 import { HomePage } from './home-page.jsx'
 import { eventList } from '../data/event-factory'

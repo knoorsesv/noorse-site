@@ -1,5 +1,5 @@
 import { NewsItemPage } from './news-item-page.jsx'
-import { newsFactory, withOutAttachments } from '../data/news-factory.js'
+import { newsFactory, withOutAttachments } from '../data/news-factory'
 
 const Template = (args) => <NewsItemPage {...args} />
 

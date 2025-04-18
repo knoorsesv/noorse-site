@@ -1,4 +1,4 @@
-import { allNewsItems } from './data/news-factory.js'
+import { allNewsItems } from './data/news-factory'
 import { NewsList } from './news-list'
 
 import type { Meta, StoryObj } from '@storybook/react'
