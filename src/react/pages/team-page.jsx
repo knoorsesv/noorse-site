@@ -48,6 +48,7 @@ export const TeamPage = ({
       generalRanking.teams[generalRanking.teams.length - 2]?.name
         .toLowerCase()
         .includes('noorse'))
+
   return (
     <>
       <Helmet>
