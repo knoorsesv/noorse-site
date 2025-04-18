@@ -1,5 +1,5 @@
 import { Card, SubHeader } from './cards.tsx'
-import { createSnippetFromInhoud } from '../utils/snippet.js'
+import { createSnippetFromInhoud } from '../utils/snippet.ts'
 import { ImageWrapper } from '../wrappers/image-wrapper.tsx'
 import { Logo } from './logo.js'
 import { format } from 'date-fns'
