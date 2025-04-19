@@ -29,12 +29,11 @@ interface ContentfulNewsItem {
   }
 }
 
-export async function getStaticPaths(): Promise<
-  {
-    params: { title: string }
-    props: { newsItem: NewsItem }
-  }[]
-> {
+type StaticPaths = {
+  params: { title: string }
+  props: { newsItem: NewsItem }
+}
+export async function getStaticPaths(): Promise<StaticPaths[]> {
   const newsItems = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
       {
