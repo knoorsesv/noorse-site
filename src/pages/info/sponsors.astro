@@ -1,30 +1,18 @@
 ---
+import type {
+  ContentfulPage,
+  ContentfulSponsor,
+} from '../../data/contentful/types'
 import Layout from '../../layouts/Layout.astro'
-import type { EntryFieldTypes } from 'contentful'
-import { SponsorPage } from '../../react/pages'
 import { contentfulClient } from '../../lib/contentful'
-
-interface Sponsor {
-  contentTypeId: 'sponsor'
-  fields: {
-    naam: EntryFieldTypes.Text
-    websiteUrl: EntryFieldTypes.Text
-    logo: EntryFieldTypes.AssetLink
-  }
-}
-
-interface Page {
-  contentTypeId: 'page'
-  fields: {
-    title: EntryFieldTypes.Text
-    body: EntryFieldTypes.Text
-  }
-}
+import { SponsorPage } from '../../react/pages'
 
 const sponsors = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<Sponsor>({
-    content_type: 'sponsor',
-  })
+  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulSponsor>(
+    {
+      content_type: 'sponsor',
+    }
+  )
 ).items.map(({ fields }) => ({
   naam: fields.naam,
   websiteUrl: fields.websiteUrl,
@@ -36,7 +24,7 @@ const sponsors = (
 }))
 
 const page = (
-  await contentfulClient.getEntries<Page>({
+  await contentfulClient.getEntries<ContentfulPage>({
     'fields.title': 'Sponsors',
     content_type: 'page',
   })

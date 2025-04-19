@@ -1,19 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import type { EntryFieldTypes } from 'contentful'
 import { CategoryPage } from '../react/pages'
 import { contentfulClient } from '../lib/contentful'
-
-interface Category {
-  contentTypeId: 'categorie'
-  fields: {
-    naam: EntryFieldTypes.Text
-  }
-}
+import type { ContentfulCategory } from '../data/contentful/types'
 
 export async function getStaticPaths() {
   const categories = (
-    await contentfulClient.getEntries<Category>({
+    await contentfulClient.getEntries<ContentfulCategory>({
       content_type: 'categorie',
     })
   ).items

@@ -3,26 +3,9 @@ import Layout from '../../../layouts/Layout.astro'
 import { TeamPage } from '../../../react/pages'
 import { contentfulClient } from '../../../lib/contentful'
 
-import type { EntryFieldTypes } from 'contentful'
 import { getVvData, getCalendarConfig } from '../../../utils/get-vv-data'
 import type { Team } from '../../../react/types/team'
-
-interface Category {
-  contentTypeId: 'categorie'
-  fields: {
-    naam: EntryFieldTypes.Text
-  }
-}
-
-interface TeamEntry {
-  contentTypeId: 'ploeg'
-  fields: {
-    naam: EntryFieldTypes.Text
-    naamOpVoetbalVlaanderen: EntryFieldTypes.Text
-    categorie: EntryFieldTypes.EntryResourceLink<Category>
-    logo: EntryFieldTypes.AssetLink
-  }
-}
+import type { ContentfulTeam } from '../../../data/contentful/types'
 
 export async function getStaticPaths() {
   const typedData = getVvData(
@@ -33,7 +16,7 @@ export async function getStaticPaths() {
   )
 
   const teams = (
-    await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
+    await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulTeam>({
       content_type: 'ploeg',
     })
   ).items
