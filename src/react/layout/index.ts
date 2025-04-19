@@ -1,3 +1,3 @@
-export * from './container.tsx'
-export * from './markdown-page.tsx'
-export * from './section.tsx'
+export * from './container'
+export * from './markdown-page'
+export * from './section'
