@@ -1,7 +1,8 @@
 import { TextBlock, Title } from '../index'
 import { LinkWrapper } from '../../wrappers/link-wrapper.tsx'
+import type { FC } from 'react'
 
-export const NotFoundPage = () => {
+export const NotFoundPage: FC = () => {
   return (
     <>
       {/* <Seo title="404: Not found" /> */}
