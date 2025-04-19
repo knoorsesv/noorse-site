@@ -3,8 +3,8 @@ import {
   withOutBlurb,
   withOutImage,
   withOutPublishDate,
-} from '../data/news-factory.js'
-import { NewsPage } from './news-page.jsx'
+} from '../data/news-factory'
+import { NewsPage } from './news-page'
 import type { Meta, StoryObj } from '@storybook/react'
 
 export default {

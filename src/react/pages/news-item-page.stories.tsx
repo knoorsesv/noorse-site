@@ -1,5 +1,5 @@
-import { NewsItemPage } from './news-item-page.jsx'
-import { newsFactory, withOutAttachments } from '../data/news-factory.js'
+import { NewsItemPage } from './news-item-page'
+import { newsFactory, withOutAttachments } from '../data/news-factory'
 
 export default {
   title: 'Pages/NewsItemPage',

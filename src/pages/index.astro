@@ -68,6 +68,7 @@ const newsItems: NewsItem[] = (
     blurb: fields.blurb,
     categoryName: fields.category?.fields.naam || '',
     createdAt: sys.createdAt,
+    attachment: [],
     category: { naam: fields.category?.fields.naam },
     ...(fields.image && {
       image: {

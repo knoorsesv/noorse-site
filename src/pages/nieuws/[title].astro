@@ -4,35 +4,81 @@ import Layout from '../../layouts/Layout.astro'
 import type { EntryFieldTypes } from 'contentful'
 import { NewsItemPage } from '../../react/pages'
 import { contentfulClient } from '../../lib/contentful'
+import type { NewsItem } from '../../react/types/news'
+import type { Attachment } from '../../react/types/attachment'
 
-interface NewsItem {
+interface Category {
+  contentTypeId: 'categorie'
+  fields: {
+    naam: EntryFieldTypes.Text
+  }
+}
+
+interface ContentfulNewsItem {
   contentTypeId: 'news'
   fields: {
     title: EntryFieldTypes.Text
     image: EntryFieldTypes.AssetLink
     attachment: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
+
+    inhoud: EntryFieldTypes.Text
+    blurb: EntryFieldTypes.Text
+    // attachment: EntryFieldTypes.AssetLink
+    // image: EntryFieldTypes.AssetLink
+    category: EntryFieldTypes.EntryResourceLink<Category>
   }
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<
+  {
+    params: { title: string }
+    props: { newsItem: NewsItem }
+  }[]
+> {
   const newsItems = (
-    await contentfulClient.withoutUnresolvableLinks.getEntries<NewsItem>({
-      content_type: 'news',
-    })
+    await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
+      {
+        content_type: 'news',
+      }
+    )
   ).items
 
   return newsItems
-    .map(({ fields, sys }) => ({ ...fields, createdAt: sys.createdAt }))
-    .map((newsItem) => ({
+    .map(
+      ({ fields, sys }) =>
+        ({
+          title: fields.title,
+          inhoud: fields.inhoud,
+          blurb: fields.blurb,
+          createdAt: sys.createdAt,
+          categoryName: fields.category?.fields.naam || '',
+          image: {
+            responsiveURL:
+              fields.image?.fields.file?.url &&
+              `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
+          },
+          // image: newsItem.image?.fields,
+          attachment: fields.attachment
+            ?.filter((asset) => !!asset)
+            .map(
+              (asset) =>
+                ({
+                  title: asset.fields.title,
+                  file: asset.fields.file && {
+                    contentType: asset.fields.file.contentType,
+                    fileName: asset.fields.file.fileName,
+                    url: asset.fields.file.url,
+                  },
+                }) satisfies Attachment
+            ),
+        }) satisfies NewsItem
+    )
+    .map((newsItem: NewsItem) => ({
       params: {
         title: newsItem.title.replaceAll('/', '-').toLowerCase(),
       },
       props: {
-        newsItem: {
-          ...newsItem,
-          image: newsItem.image?.fields,
-          attachment: newsItem.attachment?.map((asset) => asset?.fields),
-        },
+        newsItem,
       },
     }))
 }

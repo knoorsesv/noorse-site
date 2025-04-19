@@ -1,14 +1,17 @@
-import { imageFileTypes } from '../../env/constants'
+import { imageFileTypes } from '../../env/constants.js'
 
-import { Helmet } from 'react-helmet'
-import { createSnippetFromInhoud } from '../../utils/snippet.ts'
-import { Attachments, MarkDown, Title } from '../index'
-import { Container } from '../layout'
-import { ImageWrapper } from '../../wrappers/image-wrapper'
 import { format } from 'date-fns'
 import { nlBE } from 'date-fns/locale'
+import type { FC } from 'react'
+import { Helmet } from 'react-helmet'
+import { createSnippetFromInhoud } from '../../utils/snippet.ts'
+import { ImageWrapper } from '../../wrappers/image-wrapper.tsx'
+import { Attachments, MarkDown, Title } from '../index'
+import { Container } from '../layout/index.ts'
+import type { Attachment } from '../types/attachment'
+import type { NewsItem } from '../types/news'
 
-export const NewsItemPage = ({ newsItem }) => {
+export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
 
   const formattedDate = format(
@@ -24,13 +27,13 @@ export const NewsItemPage = ({ newsItem }) => {
         <meta
           property="og:description"
           content={`${
-            newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud?.inhoud)
+            newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud)
           }`}
         />
-        {newsItem.image?.images?.length > 0 && (
+        {newsItem.image && (
           <meta
             property="og:image"
-            content={`${newsItem.image?.images?.fallback.src}`}
+            content={`${newsItem.image?.responsiveURL}`}
           />
         )}
       </Helmet>
@@ -54,9 +57,7 @@ export const NewsItemPage = ({ newsItem }) => {
           {!!images.length && (
             <Images
               images={images}
-              className={
-                newsItem.inhoud?.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'
-              }
+              className={newsItem.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'}
             />
           )}
         </div>
@@ -65,17 +66,22 @@ export const NewsItemPage = ({ newsItem }) => {
   )
 }
 
-const getImageAttachments = (attachments) => {
+const getImageAttachments = (attachments: Attachment[]) => {
   return (
     !!attachments &&
-    attachments.filter((attachment) =>
-      imageFileTypes.includes(attachment.file.contentType)
+    attachments.filter(
+      (attachment) =>
+        attachment.file?.contentType &&
+        imageFileTypes.includes(attachment.file?.contentType)
     )
   )
 }
 
-const Images = ({ images, className }) => {
-  const NewsImage = (image) => {
+const Images: FC<{ images: Attachment[]; className: string }> = ({
+  images,
+  className,
+}) => {
+  const NewsImage = (image: Attachment) => {
     return (
       <ImageWrapper
         image={image}

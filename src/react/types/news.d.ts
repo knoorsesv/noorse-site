@@ -1,5 +1,7 @@
 // import type { Image } from './image'
 
+import type { Attachment } from './attachment'
+
 export interface NewsItem {
   title: string
   // image: Image
@@ -12,6 +14,6 @@ export interface NewsItem {
   createdAt: string
   srcSet?: string
   categoryName: string
-  attachment?: Attachment[]
+  attachment: Attachment[]
   showImageOnPage?: boolean
 }

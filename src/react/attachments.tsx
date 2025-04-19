@@ -1,15 +1,7 @@
 import type { FC } from 'react'
 import { imageFileTypes } from '../env/constants.js'
 import { DocumentLink } from './links'
-
-interface Attachment {
-  title?: string
-  file?: {
-    contentType: string
-    fileName: string
-    url: string
-  }
-}
+import type { Attachment } from './types/attachment'
 
 export const Attachments: FC<{ attachments: Attachment[] }> = ({
   attachments,
