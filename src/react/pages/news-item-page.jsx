@@ -47,7 +47,7 @@ export const NewsItemPage = ({ newsItem }) => {
             </div>
           )}
           <h3 className={'mb-6 mt-6 capitalize italic'}>{formattedDate}</h3>
-          {newsItem.inhoud && <MarkDown>{newsItem.inhoud}</MarkDown>}
+          {newsItem.inhoud && <MarkDown content={newsItem.inhoud} />}
           <section className={newsItem.inhoud ? 'prose ' : ''}>
             <Attachments attachments={newsItem.attachment} />
           </section>

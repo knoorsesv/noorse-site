@@ -4,9 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 const meta: Meta<typeof MarkDown> = {
   title: 'Component/MarkDown',
   component: MarkDown,
-  render: (args) => (
-    <MarkDown {...args}>
-      {`Markdown test _met bold_ en *italics* 
+  args: {
+    content: `Markdown test _met bold_ en *italics* 
   
          > enzo
 
@@ -21,9 +20,8 @@ const meta: Meta<typeof MarkDown> = {
 - [ ] test
 - [x] test
 
-    `}
-    </MarkDown>
-  ),
+    `,
+  },
 }
 export default meta
 type Story = StoryObj<typeof MarkDown>

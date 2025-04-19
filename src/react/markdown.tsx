@@ -1,7 +1,7 @@
-import { marked, Renderer } from 'marked'
-import type { Tokens } from 'marked'
 import ctl from '@netlify/classnames-template-literals'
-import type { FC, PropsWithChildren } from 'react'
+import type { Tokens } from 'marked'
+import { marked, Renderer } from 'marked'
+import type { FC } from 'react'
 
 const renderer: Partial<Renderer> = {
   // declare this: typeof Renderer
@@ -67,19 +67,16 @@ const renderer: Partial<Renderer> = {
 
 marked.use({ renderer })
 
-// todo: type check that these children can only be strings
 // todo: add a boolean instead of passing this className
-export const MarkDown: FC<
-  PropsWithChildren<{ sectionClassNames?: string }>
-> = ({ children, ...props }) => {
-  if (!children) {
-    return null
-  }
+export const MarkDown: FC<{ sectionClassNames?: string; content: string }> = ({
+  content,
+  ...props
+}) => {
   return (
     <section
       className={ctl(`prose mb-4 ${props.sectionClassNames}`)}
       dangerouslySetInnerHTML={{
-        __html: marked.parse(children as string),
+        __html: marked.parse(content),
       }}
     ></section>
   )
