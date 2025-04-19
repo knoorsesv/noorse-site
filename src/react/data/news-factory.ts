@@ -1,12 +1,12 @@
 import type { NewsItem } from '../types/news'
 import type { Factory } from './factory'
-import { imageFactory } from './image-factory'
+import { imageFactory, simpleImageFactory } from './image-factory'
 
 export const newsFactory: Factory<NewsItem> = (attrs) => ({
   title: 'Good News Everyone',
-  image: imageFactory(),
+  image: simpleImageFactory(),
   blurb: 'Some headline content in the form of a blurb',
-  category: { naam: 'Senioren' },
+  categoryName: 'Senioren',
   publishDate: new Date('2023-09-01').toDateString(),
   createdAt: new Date('2022-08-07').toDateString(),
   inhoud: 'Some very interesting content \n next line',

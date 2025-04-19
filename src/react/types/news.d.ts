@@ -1,15 +1,17 @@
-import type { Category } from './category'
-import type { Image } from './image'
+// import type { Image } from './image'
 
 export interface NewsItem {
   title: string
-  image: Image
+  // image: Image
+  image: {
+    responsiveURL?: string
+  }
   blurb?: string
   inhoud: string
   publishDate?: string
   createdAt: string
   srcSet?: string
-  category: Category
+  categoryName: string
   attachment?: Attachment[]
   showImageOnPage?: boolean
 }

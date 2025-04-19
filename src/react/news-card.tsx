@@ -1,28 +1,21 @@
-import { Card, SubHeader } from './cards.tsx'
-import { createSnippetFromInhoud } from '../utils/snippet.ts'
-import { ImageWrapper } from '../wrappers/image-wrapper.tsx'
-import { Logo } from './logo.js'
 import { format } from 'date-fns'
 import type { FC } from 'react'
+import { createSnippetFromInhoud } from '../utils/snippet.ts'
+import { ImageWrapper } from '../wrappers/image-wrapper.tsx'
+import { Card, SubHeader } from './cards.tsx'
+import { Logo } from './logo.js'
 import type { NewsItem } from './types/news'
-import type { Image } from './types/image'
 
-export const NewsCard: FC<{ newsItem: NewsItem; image: Image }> = ({
-  newsItem,
-  image,
-}) => {
+export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
   const snippet = newsItem.blurb || createSnippetFromInhoud(newsItem.inhoud)
   const dateToShow = newsItem.publishDate || newsItem.createdAt
 
-  const NewsCardImage: FC<{ image: Image; srcSet?: string }> = ({
-    image,
-    srcSet,
-  }) => {
+  const NewsCardImage: FC<{ srcSet?: string }> = ({ srcSet }) => {
     return (
       <div className={'h-[200px] text-center'}>
-        {image ? (
+        {newsItem.image.responsiveURL ? (
           <ImageWrapper
-            image={image}
+            image={newsItem.image}
             srcSet={srcSet}
             className="aspect-auto h-full w-auto"
             height="200"
@@ -39,11 +32,11 @@ export const NewsCard: FC<{ newsItem: NewsItem; image: Image }> = ({
     <a href={`/nieuws/${newsItem.title.replace('/', '-').toLowerCase()}`}>
       <Card
         header={newsItem.title}
-        Image={() => <NewsCardImage image={image} srcSet={newsItem.srcSet} />}
+        Image={() => <NewsCardImage srcSet={newsItem.srcSet} />}
         containerClass={'h-[148px]'}
       >
         <SubHeader>
-          <div className={'text-left uppercase'}>{newsItem.category.naam}</div>
+          <div className={'text-left uppercase'}>{newsItem.categoryName}</div>
           <div className={'text-center'}>
             {dateToShow && format(new Date(dateToShow), 'dd/MM/yy')}
           </div>
