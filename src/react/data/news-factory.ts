@@ -14,17 +14,29 @@ export const newsFactory: Factory<NewsItem> = (attrs) => ({
     {
       ...imageFactory(),
       title: 'some picture',
-      file: { contentType: 'image/jpeg' },
+      file: {
+        contentType: 'image/jpeg',
+        fileName: 'some picture',
+        url: 'https://picsum.photos/520/320',
+      },
     },
     {
       ...imageFactory(),
       title: 'some other picture',
-      file: { contentType: 'image/jpeg' },
+      file: {
+        contentType: 'image/jpeg',
+        fileName: 'some picture',
+        url: 'https://picsum.photos/520/320',
+      },
     },
     {
       ...imageFactory(),
       title: 'some more picture',
-      file: { contentType: 'image/jpeg' },
+      file: {
+        contentType: 'image/jpeg',
+        fileName: 'some picture',
+        url: 'https://picsum.photos/520/320',
+      },
     },
   ],
   ...attrs,

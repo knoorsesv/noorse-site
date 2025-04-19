@@ -43,6 +43,7 @@ const newsItems = (
           fields.image?.fields.file?.url &&
           `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
       },
+      attachment: [],
     }) satisfies NewsItem
 )
 ---
