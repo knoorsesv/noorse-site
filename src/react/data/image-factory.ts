@@ -7,3 +7,10 @@ export const imageFactory: Factory<Image> = (attrs) => ({
   images: { fallback: { src: 'https://loremflickr.com/320/240' } },
   ...attrs,
 })
+
+export const simpleImageFactory: Factory<{
+  responsiveURL: string
+}> = (attrs) => ({
+  responsiveURL: 'https://picsum.photos/320/320',
+  ...attrs,
+})
