@@ -17,6 +17,7 @@ interface ContentfulNewsItem {
   fields: {
     title: EntryFieldTypes.Text
     inhoud: EntryFieldTypes.Text
+    publishDate: EntryFieldTypes.Text
     blurb: EntryFieldTypes.Text
     attachment: EntryFieldTypes.AssetLink
     image: EntryFieldTypes.AssetLink
@@ -36,6 +37,7 @@ const newsItems = (
       title: fields.title,
       inhoud: fields.inhoud,
       blurb: fields.blurb,
+      publishDate: fields.publishDate,
       createdAt: sys.createdAt,
       categoryName: fields.category?.fields.naam || '',
       image: {

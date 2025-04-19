@@ -18,6 +18,7 @@ interface ContentfulNewsItem {
   contentTypeId: 'news'
   fields: {
     title: EntryFieldTypes.Text
+    publishDate: EntryFieldTypes.Text
     image: EntryFieldTypes.AssetLink
     attachment: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
 
@@ -49,6 +50,7 @@ export async function getStaticPaths(): Promise<StaticPaths[]> {
           title: fields.title,
           inhoud: fields.inhoud,
           blurb: fields.blurb,
+          publishDate: fields.publishDate,
           createdAt: sys.createdAt,
           categoryName: fields.category?.fields.naam || '',
           image: {
