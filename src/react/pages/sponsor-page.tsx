@@ -1,7 +1,12 @@
+import type { FC } from 'react'
 import { MarkDown, SponsorWithLogo, SubTitle } from '../index'
 import { Page } from './page.jsx'
+import type { Sponsor } from '../types/sponsor.js'
 
-export const SponsorPage = ({ sponsors, description }) => {
+export const SponsorPage: FC<{ sponsors: Sponsor[]; description: string }> = ({
+  sponsors,
+  description,
+}) => {
   return (
     <Page title="Sponsors" centered={true}>
       <MarkDown>{description}</MarkDown>
