@@ -19,6 +19,8 @@ export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
     'PPPP',
     { locale: nlBE }
   )
+  console.log(newsItem.showImageOnPage)
+
   return (
     <>
       <Helmet>
