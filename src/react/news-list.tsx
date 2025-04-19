@@ -14,7 +14,7 @@ export const NewsList: FC<
           key={newsItem.title}
           className={'mb-[10px] medium:basis-1/2 medium:px-2 large:basis-1/3 '}
         >
-          <NewsCard newsItem={newsItem} image={newsItem.image} />
+          <NewsCard newsItem={newsItem} />
         </div>
       ))}
       <div

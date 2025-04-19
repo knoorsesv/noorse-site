@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { imageFactory } from './data/image-factory'
 import {
   newsFactory,
   withOutBlurb,
@@ -13,7 +12,7 @@ const meta: Meta<typeof NewsCard> = {
   component: NewsCard,
   args: {
     newsItem: newsFactory(),
-    image: imageFactory(),
+    // image: simpleImageFactory(),
   },
 }
 
@@ -29,7 +28,7 @@ export const NoBlurb: Story = {
 }
 export const NoImage: Story = {
   args: {
-    newsItem: withOutImage({ title: 'Should have fallback logo' }),
-    image: undefined,
+    newsItem: withOutImage({ title: 'Should have fallback logo', image: {} }),
+    // image: undefined,
   },
 }
