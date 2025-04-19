@@ -1,7 +1,7 @@
 import ctl from '@netlify/classnames-template-literals'
 import type { FC, PropsWithChildren } from 'react'
 
-const Section: FC<PropsWithChildren<{ className: string }>> & {
+const Section: FC<PropsWithChildren<{ className?: string }>> & {
   Title: typeof SectionTitle
   TextContent: typeof SectionTextContent
   List: typeof SectionList

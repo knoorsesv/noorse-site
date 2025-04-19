@@ -6,6 +6,8 @@ import type { EntryFieldTypes } from 'contentful'
 import { isFuture, parse } from 'date-fns'
 import { newsletterLink, siteMap, webshopLink } from '../env/constants'
 import { siteMetadata } from '../data/siteMetadata'
+import type { Event } from '../react/types/event'
+import type { NewsItem } from '../react/types/news'
 
 interface Sponsor {
   contentTypeId: 'sponsor'
@@ -28,20 +30,23 @@ const sponsors = (
     content_type: 'sponsor',
   })
 ).items.map(({ fields }) => ({
-  ...fields,
-  image: {
+  naam: fields.naam,
+  websiteUrl: fields.websiteUrl,
+  logo: {
     responsiveURL:
+      // todo: extract this mapping for all assetlink types
       fields.logo?.fields.file?.url.replace('//', 'https://') +
       '?w=300&h=200&fm=jpg&fl=progressive',
   },
 }))
 
 // todo: same as in niuws.astro, could be extracted
-interface NewsItem {
+interface ContentfulNewsItem {
   contentTypeId: 'news'
   fields: {
     title: EntryFieldTypes.Text
-    body: EntryFieldTypes.RichText
+    inhoud: EntryFieldTypes.Text
+    blurb: EntryFieldTypes.Text
     attachment: EntryFieldTypes.AssetLink
     image: EntryFieldTypes.AssetLink
     category: EntryFieldTypes.EntryResourceLink<Category>
@@ -49,13 +54,19 @@ interface NewsItem {
 }
 
 // todo: could be limited by a query instead of fetching everything and then limiting
-const newsItems = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<NewsItem>({
-    content_type: 'news',
-  })
+const newsItems: NewsItem[] = (
+  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
+    {
+      content_type: 'news',
+    }
+  )
 ).items
   .map(({ fields, sys }) => ({
-    ...fields,
+    // ...fields,
+    title: fields.title,
+    inhoud: fields.inhoud,
+    blurb: fields.blurb,
+    categoryName: fields.category?.fields.naam || '',
     createdAt: sys.createdAt,
     category: { naam: fields.category?.fields.naam },
     ...(fields.image && {
@@ -68,13 +79,12 @@ const newsItems = (
   }))
   .slice(0, 3)
 
-interface Event {
-  title: EntryFieldTypes.Text
-  datum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
-}
 interface EventEntryType {
   contentTypeId: 'evenement'
-  fields: Event
+  fields: {
+    naam: EntryFieldTypes.Text
+    datum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
+  }
 }
 
 // todo: two conditions because contentful API returns different formats for different environments, should be fixed there
@@ -82,12 +92,15 @@ const eventIsInfuture = (datum: string): boolean =>
   isFuture(parse(datum, 'dd/MM/yy', new Date())) ||
   isFuture(parse(datum, 'yyyy-MM-dd', new Date()))
 
-const events = (
+const events: Event[] = (
   await contentfulClient.getEntries<EventEntryType>({
     content_type: 'evenement',
   })
 ).items
-  .map((item) => item?.fields)
+  .map((item) => ({
+    datum: item.fields.datum,
+    naam: item.fields.naam,
+  }))
   .filter((item) => {
     return eventIsInfuture(item.datum)
   })

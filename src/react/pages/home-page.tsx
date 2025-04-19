@@ -9,18 +9,27 @@ import {
   NewsList,
   ResponsiveVideo,
   Section,
-} from '../index'
+} from '../index.ts'
 import { ExternalLink } from '../links/external-link'
+// @ts-expect-error todo: find a good way to add a type definition for this
 import sportVlaanderen from '../../images/sport-vlaanderen.webp?format=webp&q=50,100'
+import type { FC } from 'react'
+import type { Sponsor } from '../types/sponsor'
+import type { NewsItem } from '../types/news'
+import type { SiteMap } from '../types/sitemap'
+import type { Event } from '../types/event'
 
-export const HomePage = ({
-  version,
-  sponsors,
-  newsItems,
-  siteMap,
-  events,
-  links,
-}) => {
+export const HomePage: FC<{
+  version: string
+  sponsors: Sponsor[]
+  newsItems: NewsItem[]
+  siteMap: SiteMap
+  events: Event[]
+  links: {
+    newsletterLink: string
+    webshopLink: string
+  }
+}> = ({ version, sponsors, newsItems, siteMap, events, links }) => {
   return (
     <>
       <NavbarWithCoverPhoto siteMap={siteMap} />
@@ -81,7 +90,7 @@ export const HomePage = ({
           <Section>
             <Section.TextContent>
               <ImageWrapper
-                src={sportVlaanderen}
+                src={sportVlaanderen as string}
                 id="sport-vlaanderen-logo"
                 alt={'Sport Vlaanderen Logo'}
                 loading="lazy"
