@@ -1,45 +1,12 @@
 import ctl from '@netlify/classnames-template-literals'
-import type { FC, ReactNode } from 'react'
-import { ImageWrapper } from '../wrappers/image-wrapper.js'
+import type { FC } from 'react'
+import { Title, Version } from './index'
 import { ContactInfo } from './index.js'
 import { EmailLink } from './links'
 import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
-import { Title } from './index'
+import { SponsorWithLogo } from './sponsor-with-logo.tsx'
 import type { Sponsor } from './types/sponsor'
-import { Version } from './index'
-
-export const SponsorWithLogo: FC<{ sponsor: Sponsor; logoWidth?: string }> = ({
-  sponsor,
-  logoWidth = 'w-1/2',
-}) => {
-  return (
-    <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsor.naam}>
-      <ConditionalWrapper
-        condition={!!sponsor.websiteUrl}
-        wrapper={(children) => (
-          <ExternalLink href={sponsor.websiteUrl} styled={false} icon={false}>
-            {children}
-          </ExternalLink>
-        )}
-      >
-        <ImageWrapper
-          image={sponsor.image}
-          alt={`Logo ${sponsor.naam}`}
-          loading="lazy"
-          className="object-scale-down"
-        />
-      </ConditionalWrapper>
-    </div>
-  )
-}
-
-const ConditionalWrapper: FC<{
-  condition: boolean
-  wrapper: (children: ReactNode) => ReactNode
-  children: ReactNode
-}> = ({ condition, wrapper, children }) =>
-  condition ? wrapper(children) : children
 
 const SponsorList: FC<{ logoWidth?: string; sponsors: Sponsor[] }> = ({
   logoWidth,

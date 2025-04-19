@@ -3,7 +3,7 @@ import { SponsorPage } from './sponsor-page.jsx'
 import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
-  title: 'Pages/Sponsor',
+  title: 'Pages/SponsorPage',
   component: SponsorPage,
   args: {
     sponsors: [sponsorFactory(), sponsorFactory(), sponsorFactory()],

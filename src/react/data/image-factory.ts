@@ -4,6 +4,6 @@ import type { Factory } from './factory'
 export const imageFactory: Factory<Image> = (attrs) => ({
   height: 100 + Math.round(Math.random() * 100),
   width: 100 + Math.round(Math.random() * 100),
-  images: { fallback: { src: '' } },
+  images: { fallback: { src: 'https://loremflickr.com/320/240' } },
   ...attrs,
 })
