@@ -1,15 +1,9 @@
 ---
-import type { ContentfulPage } from '../../data/contentful/types'
+import { getPage } from '../../data/contentful/get-entries'
 import Layout from '../../layouts/Layout.astro'
-import { contentfulClient } from '../../lib/contentful'
 import { MarkDownPage } from '../../react/layout'
 
-const page = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulPage>({
-    'fields.title': 'Lidmaatschap',
-    content_type: 'page',
-  })
-).items[0]?.fields
+const page = await getPage('Lidmaatschap')
 ---
 
 <Layout title="Info - Lidmaatschap" currentURL={Astro.url}>
@@ -18,9 +12,7 @@ const page = (
       <MarkDownPage
         title={'Lid Worden'}
         description={`Wil je lid worden van één van onze jeugd- of meisjesploegen? Hier vindt je alle info.`}
-        attachment={page.attachment
-          ?.filter((asset) => !!asset)
-          .map((asset) => asset?.fields)}
+        attachment={page.attachment}
         content={page.body}
       />
     ) : (

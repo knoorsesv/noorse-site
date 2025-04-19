@@ -1,14 +1,13 @@
 import type { FC } from 'react'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from './index'
-// todo: contentful type shouldnt be defined in pure React component here
-import type { AssetFields } from 'contentful'
 import { Helmet } from 'react-helmet'
+import type { Attachment } from '../types/attachment'
 
 export const MarkDownPage: FC<{
   title: string
   description?: string
-  attachment?: AssetFields[]
+  attachment?: Attachment[]
   markdownClassNames?: string
   content: string
 }> = ({ description, title, attachment, markdownClassNames, content }) => {

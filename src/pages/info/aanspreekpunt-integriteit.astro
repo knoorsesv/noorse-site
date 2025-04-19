@@ -1,15 +1,9 @@
 ---
-import type { ContentfulPage } from '../../data/contentful/types'
+import { getPage } from '../../data/contentful/get-entries'
 import Layout from '../../layouts/Layout.astro'
-import { contentfulClient } from '../../lib/contentful'
 import { MarkDownPage } from '../../react/layout'
 
-const page = (
-  await contentfulClient.getEntries<ContentfulPage>({
-    'fields.title': 'Aanspreekpunt Integriteit',
-    content_type: 'page',
-  })
-).items[0]?.fields
+const page = await getPage('Aanspreekpunt Integriteit')
 ---
 
 <Layout title="Info - Aanspreekpunt Integriteit" currentURL={Astro.url}>

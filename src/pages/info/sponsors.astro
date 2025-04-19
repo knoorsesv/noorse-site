@@ -1,8 +1,6 @@
 ---
-import type {
-  ContentfulPage,
-  ContentfulSponsor,
-} from '../../data/contentful/types'
+import { getPage } from '../../data/contentful/get-entries'
+import type { ContentfulSponsor } from '../../data/contentful/types'
 import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
 import { SponsorPage } from '../../react/pages'
@@ -23,12 +21,7 @@ const sponsors = (
   },
 }))
 
-const page = (
-  await contentfulClient.getEntries<ContentfulPage>({
-    'fields.title': 'Sponsors',
-    content_type: 'page',
-  })
-).items[0]?.fields
+const page = await getPage('Sponsors')
 ---
 
 <Layout title="Info - Bestuur" currentURL={Astro.url}>
