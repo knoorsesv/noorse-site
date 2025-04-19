@@ -85,6 +85,7 @@ interface EventEntryType {
   fields: {
     naam: EntryFieldTypes.Text
     datum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
+    eindDatum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
   }
 }
 
@@ -100,6 +101,7 @@ const events: Event[] = (
 ).items
   .map((item) => ({
     datum: item.fields.datum,
+    eindDatum: item.fields.eindDatum,
     naam: item.fields.naam,
   }))
   .filter((item) => {
