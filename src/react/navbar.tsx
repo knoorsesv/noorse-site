@@ -15,19 +15,9 @@ import { Logo } from './logo.jsx'
 import { useMediaQuery } from 'react-responsive'
 // @ts-expect-error todo: find a good way to add a type definition for this
 import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
+import type { SiteMap, SiteMapItem } from './types/sitemap'
 
 const transition = `transition-all duration-200 ease-in`
-
-interface SiteMapItem {
-  link?: string
-  extLink?: string
-  name: string
-  subItems: SiteMapItem[]
-}
-
-interface SiteMap {
-  items: SiteMapItem[]
-}
 
 // todo: fetch actual tailwind config
 // import resolveConfig from 'tailwindcss/resolveConfig'
@@ -182,13 +172,15 @@ const HorizontalMenuItemList: FC<{
                 currentURL={currentURL}
               />
               {/* todo: icon should be inside button so all is clickable */}
-              {item.subItems && (
+              {item.subItems?.length ? (
                 <span className="ml-1 inline-flex items-center text-white">
                   <ChevronDown className="hidden group-hover:inline" />
                   <ChevronRight className="inline group-hover:hidden" />
                 </span>
+              ) : (
+                <></>
               )}
-              {item.subItems && (
+              {item.subItems?.length ? (
                 <ul
                   id="dropdown"
                   className={ctl(`${transition}
@@ -206,6 +198,8 @@ const HorizontalMenuItemList: FC<{
                     )
                   })}
                 </ul>
+              ) : (
+                <></>
               )}
             </li>
           )
