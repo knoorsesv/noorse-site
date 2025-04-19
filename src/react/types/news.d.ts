@@ -3,7 +3,7 @@
 export interface NewsItem {
   title: string
   // image: Image
-  image: {
+  image?: {
     responsiveURL?: string
   }
   blurb?: string
