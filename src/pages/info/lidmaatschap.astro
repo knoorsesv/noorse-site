@@ -1,21 +1,11 @@
 ---
-import type { EntryFieldTypes } from 'contentful'
+import type { ContentfulPage } from '../../data/contentful/types'
 import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
 import { MarkDownPage } from '../../react/layout'
 
-interface Page {
-  contentTypeId: 'page'
-  fields: {
-    title: EntryFieldTypes.Text
-    body: EntryFieldTypes.Text
-    // todo: this should be plural since its an array
-    attachment: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
-  }
-}
-
 const page = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<Page>({
+  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulPage>({
     'fields.title': 'Lidmaatschap',
     content_type: 'page',
   })

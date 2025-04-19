@@ -1,19 +1,11 @@
 ---
+import type { ContentfulPage } from '../../data/contentful/types'
 import Layout from '../../layouts/Layout.astro'
-import type { EntryFieldTypes } from 'contentful'
-import { MarkDownPage } from '../../react/layout'
 import { contentfulClient } from '../../lib/contentful'
-
-interface Page {
-  contentTypeId: 'page'
-  fields: {
-    title: EntryFieldTypes.Text
-    body: EntryFieldTypes.Text
-  }
-}
+import { MarkDownPage } from '../../react/layout'
 
 const page = (
-  await contentfulClient.getEntries<Page>({
+  await contentfulClient.getEntries<ContentfulPage>({
     'fields.title': 'Fairplay',
     content_type: 'page',
   })

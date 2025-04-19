@@ -1,40 +1,17 @@
 ---
 // todo: make import aliases so the relative .../.././. are not necessary
 import Layout from '../../layouts/Layout.astro'
-import type { EntryFieldTypes } from 'contentful'
 import { NewsItemPage } from '../../react/pages'
 import { contentfulClient } from '../../lib/contentful'
 import type { NewsItem } from '../../react/types/news'
 import type { Attachment } from '../../react/types/attachment'
-
-interface Category {
-  contentTypeId: 'categorie'
-  fields: {
-    naam: EntryFieldTypes.Text
-  }
-}
-
-interface ContentfulNewsItem {
-  contentTypeId: 'news'
-  fields: {
-    title: EntryFieldTypes.Text
-    showImageOnPage: EntryFieldTypes.Boolean
-    publishDate: EntryFieldTypes.Text
-    image: EntryFieldTypes.AssetLink
-    attachment: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
-
-    inhoud: EntryFieldTypes.Text
-    blurb: EntryFieldTypes.Text
-    // attachment: EntryFieldTypes.AssetLink
-    // image: EntryFieldTypes.AssetLink
-    category: EntryFieldTypes.EntryResourceLink<Category>
-  }
-}
+import type { ContentfulNewsItem } from '../../data/contentful/types'
 
 type StaticPaths = {
   params: { title: string }
   props: { newsItem: NewsItem }
 }
+
 export async function getStaticPaths(): Promise<StaticPaths[]> {
   const newsItems = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(

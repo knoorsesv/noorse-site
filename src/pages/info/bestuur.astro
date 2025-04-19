@@ -1,23 +1,11 @@
 ---
+import type { ContentfulBestuursLid } from '../../data/contentful/types'
 import Layout from '../../layouts/Layout.astro'
-import type { EntryFieldTypes } from 'contentful'
-import { InfoBestuurPage } from '../../react/pages'
 import { contentfulClient } from '../../lib/contentful'
-
-interface BestuursLid {
-  contentTypeId: 'bestuurslid'
-  fields: {
-    title: EntryFieldTypes.Text
-    naam: EntryFieldTypes.Text
-    email: EntryFieldTypes.Text
-    type: EntryFieldTypes.Text<'deelwerking' | 'bestuursorgaan'>
-    body: EntryFieldTypes.RichText
-    attachment: EntryFieldTypes.AssetLink
-  }
-}
+import { InfoBestuurPage } from '../../react/pages'
 
 const leden = (
-  await contentfulClient.getEntries<BestuursLid>({
+  await contentfulClient.getEntries<ContentfulBestuursLid>({
     content_type: 'bestuurslid',
   })
 ).items.map(({ fields }) => fields)

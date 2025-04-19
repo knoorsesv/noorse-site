@@ -1,29 +1,9 @@
 ---
-import type { EntryFieldTypes } from 'contentful'
+import type { ContentfulNewsItem } from '../../data/contentful/types'
 import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
 import { NewsPage } from '../../react/pages'
 import type { NewsItem } from '../../react/types/news'
-
-interface Category {
-  contentTypeId: 'categorie'
-  fields: {
-    naam: EntryFieldTypes.Text
-  }
-}
-
-interface ContentfulNewsItem {
-  contentTypeId: 'news'
-  fields: {
-    title: EntryFieldTypes.Text
-    inhoud: EntryFieldTypes.Text
-    publishDate: EntryFieldTypes.Text
-    blurb: EntryFieldTypes.Text
-    attachment: EntryFieldTypes.AssetLink
-    image: EntryFieldTypes.AssetLink
-    category: EntryFieldTypes.EntryResourceLink<Category>
-  }
-}
 
 const newsItems = (
   await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
