@@ -1,5 +1,5 @@
-import { siteMapFactory } from '../data/sitemap-factory.js'
-import { Layout } from './layout.jsx'
+import { siteMapFactory } from '../data/sitemap-factory.ts'
+import { Layout } from './layout'
 
 export default {
   title: 'Pages/Layout',

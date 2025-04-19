@@ -21,9 +21,11 @@ const sponsors = (
     content_type: 'sponsor',
   })
 ).items.map(({ fields }) => ({
-  ...fields,
-  image: {
+  naam: fields.naam,
+  websiteUrl: fields.websiteUrl,
+  logo: {
     responsiveURL:
+      // todo: extract this mapping for all assetlink types
       fields.logo?.fields.file?.url.replace('//', 'https://') +
       '?w=300&h=200&fm=jpg&fl=progressive',
   },
