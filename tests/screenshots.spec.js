@@ -18,6 +18,7 @@ const pages = [
     waitFor: '[alt="Ploegfoto Eerste Elftal"]',
     timeout: 40000,
   },
+  // todo: add sponsors page
   { pageUrl: '/senioren' },
 ]
 
