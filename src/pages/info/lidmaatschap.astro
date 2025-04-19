@@ -31,9 +31,8 @@ const page = (
         attachment={page.attachment
           ?.filter((asset) => !!asset)
           .map((asset) => asset?.fields)}
-      >
-        {page.body}
-      </MarkDownPage>
+        content={page.body}
+      />
     ) : (
       <h1>No Lidmaatschap</h1>
     )

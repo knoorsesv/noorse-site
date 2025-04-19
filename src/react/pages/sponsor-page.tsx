@@ -9,7 +9,7 @@ export const SponsorPage: FC<{ sponsors: Sponsor[]; description: string }> = ({
 }) => {
   return (
     <Page title="Sponsors" centered={true}>
-      <MarkDown>{description}</MarkDown>
+      <MarkDown content={description} />
 
       <SubTitle>Huidige sponsors</SubTitle>
 
@@ -23,7 +23,7 @@ export const SponsorPage: FC<{ sponsors: Sponsor[]; description: string }> = ({
               <h4>{sponsor.naam}</h4>
               <SponsorWithLogo sponsor={sponsor} logoWidth="w-full" />
               {sponsor.omschrijving ? (
-                <MarkDown>{sponsor.omschrijving}</MarkDown>
+                <MarkDown content={sponsor.omschrijving} />
               ) : (
                 <></>
               )}

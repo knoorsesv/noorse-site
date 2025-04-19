@@ -37,7 +37,7 @@ const CategoryContent: FC<{ category?: Category }> = ({ category }) => {
     <>
       {category?.general_info && (
         <>
-          <MarkDown>{category.general_info}</MarkDown>
+          <MarkDown content={category.general_info} />
         </>
       )}
 
