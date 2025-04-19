@@ -25,9 +25,10 @@ const page = (
     page ? (
       <MarkDownPage
         title={page.title}
-        content={page.body}
         markdownClassNames="collapsible-ul-sections"
-      />
+      >
+        {page.body}
+      </MarkDownPage>
     ) : (
       <h1>No Beleidsplan</h1>
     )

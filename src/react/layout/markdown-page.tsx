@@ -3,18 +3,19 @@ import { Attachments, MarkDown, Title } from '../index'
 import { Container } from './index'
 // todo: contentful type shouldnt be defined in pure React component here
 import type { AssetFields } from 'contentful'
+import { Helmet } from 'react-helmet'
 
 export const MarkDownPage: FC<
   PropsWithChildren<{
     title: string
-    content: string
+    description?: string
     attachment?: AssetFields[]
     markdownClassNames?: string
   }>
-> = ({ children, title, content, attachment, markdownClassNames }) => {
+> = ({ children, description, title, attachment, markdownClassNames }) => {
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>{title}</title>
         <meta property="og:title" content={title} />
         {description ? (
@@ -22,13 +23,11 @@ export const MarkDownPage: FC<
         ) : (
           <></>
         )}
-      </Helmet> */}
+      </Helmet>
       <Container>
         <Title>{title}</Title>
-        {children || content ? (
-          <MarkDown sectionClassNames={markdownClassNames}>
-            {children || content}
-          </MarkDown>
+        {children ? (
+          <MarkDown sectionClassNames={markdownClassNames}>{children}</MarkDown>
         ) : (
           <section>No content</section>
         )}
