@@ -26,12 +26,14 @@ const page = (
   {
     page ? (
       <MarkDownPage
-        title={page.title}
-        content={page.body}
+        title={'Lid Worden'}
+        description={`Wil je lid worden van één van onze jeugd- of meisjesploegen? Hier vindt je alle info.`}
         attachment={page.attachment
           ?.filter((asset) => !!asset)
           .map((asset) => asset?.fields)}
-      />
+      >
+        {page.body}
+      </MarkDownPage>
     ) : (
       <h1>No Lidmaatschap</h1>
     )
