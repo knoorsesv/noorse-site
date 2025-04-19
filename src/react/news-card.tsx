@@ -28,13 +28,6 @@ export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
     )
   }
 
-  console.log(
-    'dateToShow',
-    dateToShow,
-    newsItem.publishDate,
-    newsItem.createdAt
-  )
-
   return (
     <a href={`/nieuws/${newsItem.title.replace('/', '-').toLowerCase()}`}>
       <Card
