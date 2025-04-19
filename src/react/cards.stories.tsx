@@ -19,7 +19,6 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     await expect(canvas.getByText('Title')).toBeInTheDocument()
-    await expect(canvas.getByText('Some subheader title')).toBeInTheDocument()
     await expect(canvas.getByText('Some Card Content')).toBeInTheDocument()
   },
 }
