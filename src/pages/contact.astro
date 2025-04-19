@@ -23,7 +23,7 @@ const page = (
 <Layout title="Info - Contact" currentURL={Astro.url}>
   {
     page ? (
-      <MarkDownPage title={page.title} content={page.body} />
+      <MarkDownPage title={page.title}>{page.body}</MarkDownPage>
     ) : (
       <h1>No Contact</h1>
     )

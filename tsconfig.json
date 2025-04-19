@@ -4,5 +4,6 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
+  "include": [".storybook/**/*", "src/**/*", "env.d.ts", "vite.config.ts"],
   "exclude": ["dist", "storybook-static", "tests"]
 }

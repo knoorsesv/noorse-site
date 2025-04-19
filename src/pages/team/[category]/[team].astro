@@ -2,11 +2,10 @@
 import Layout from '../../../layouts/Layout.astro'
 import { TeamPage } from '../../../react/pages'
 import { contentfulClient } from '../../../lib/contentful'
-import calendarConfig from '../../../../data/calendar-config.json'
-import testCalendarConfig from '../../../../data/test-calendar-config.json'
-import vvData from '../../../../data/vv-responses.json'
-import testVvData from '../../../../data/test-vv-responses.json'
+
 import type { EntryFieldTypes } from 'contentful'
+import { getVvData, getCalendarConfig } from '../../../utils/get-vv-data'
+import type { Team } from '../../../react/types/team'
 
 interface Category {
   contentTypeId: 'categorie'
@@ -26,17 +25,13 @@ interface TeamEntry {
 }
 
 export async function getStaticPaths() {
-  const typedData: {
-    teamSeriesAndRankings: Record<
-      string,
-      { series?: object[]; rankings: null | object[]; __typename: string }
-    >
-    teamCalendar: Record<string, object>
-  } = import.meta.env.CONTENTFUL_ENV === 'master' ? vvData : testVvData
-  const actualCalendarConfig =
-    import.meta.env.CONTENTFUL_ENV === 'master'
-      ? calendarConfig
-      : testCalendarConfig
+  const typedData = getVvData(
+    import.meta.env.CONTENTFUL_ENV === 'master' ? 'master' : 'test'
+  )
+  const actualCalendarConfig = getCalendarConfig(
+    import.meta.env.CONTENTFUL_ENV === 'master' ? 'master' : 'test'
+  )
+
   const teams = (
     await contentfulClient.withoutUnresolvableLinks.getEntries<TeamEntry>({
       content_type: 'ploeg',
@@ -61,7 +56,7 @@ export async function getStaticPaths() {
           ploeg: {
             ...team,
             categorie: {
-              naam: team.categorie?.fields.naam,
+              naam: team.categorie?.fields.naam || '',
               ploeg: teams
                 .map(({ fields }) => fields)
                 .filter(
@@ -70,10 +65,10 @@ export async function getStaticPaths() {
                     team.categorie?.fields.naam
                 ),
             },
-          },
-          rankings: vvId && typedData.teamSeriesAndRankings[vvId]?.rankings,
-          series: vvId && typedData.teamSeriesAndRankings[vvId]?.series,
-          teamCalendar: vvId && typedData.teamCalendar[vvId],
+          } as Team, // todo: make this perfeclty satisfy Team
+          rankings: vvId ? typedData.teamSeriesAndRankings[vvId]?.rankings : [],
+          series: vvId ? typedData.teamSeriesAndRankings[vvId]?.series : [],
+          teamCalendar: vvId ? typedData.teamCalendar[vvId] : [],
           googleCalId: config?.calendarId,
         },
       }

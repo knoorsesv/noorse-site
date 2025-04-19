@@ -3,6 +3,7 @@ import type { EntryFieldTypes } from 'contentful'
 import Layout from '../../layouts/Layout.astro'
 import { contentfulClient } from '../../lib/contentful'
 import { NewsPage } from '../../react/pages'
+import type { NewsItem } from '../../react/types/news'
 
 interface Category {
   contentTypeId: 'categorie'
@@ -11,11 +12,12 @@ interface Category {
   }
 }
 
-interface NewsItem {
+interface ContentfulNewsItem {
   contentTypeId: 'news'
   fields: {
     title: EntryFieldTypes.Text
-    body: EntryFieldTypes.RichText
+    inhoud: EntryFieldTypes.Text
+    blurb: EntryFieldTypes.Text
     attachment: EntryFieldTypes.AssetLink
     image: EntryFieldTypes.AssetLink
     category: EntryFieldTypes.EntryResourceLink<Category>
@@ -23,19 +25,26 @@ interface NewsItem {
 }
 
 const newsItems = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<NewsItem>({
-    content_type: 'news',
-  })
-).items.map(({ fields, sys }) => ({
-  ...fields,
-  createdAt: sys.createdAt,
-  category: { naam: fields.category?.fields.naam },
-  image: {
-    responsiveURL:
-      fields.image?.fields.file?.url.replace('//', 'https://') +
-      '?w=300&h=200&fm=jpg&fl=progressive',
-  },
-}))
+  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
+    {
+      content_type: 'news',
+    }
+  )
+).items.map(
+  ({ fields, sys }) =>
+    ({
+      title: fields.title,
+      inhoud: fields.inhoud,
+      blurb: fields.blurb,
+      createdAt: sys.createdAt,
+      categoryName: fields.category?.fields.naam || '',
+      image: {
+        responsiveURL:
+          fields.image?.fields.file?.url &&
+          `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
+      },
+    }) satisfies NewsItem
+)
 ---
 
 <Layout title="Info - Nieuws" currentURL={Astro.url}>
