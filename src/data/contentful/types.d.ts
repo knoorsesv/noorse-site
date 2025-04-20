@@ -13,6 +13,7 @@ export interface ContentfulCategory {
   contentTypeId: 'categorie'
   fields: {
     naam: EntryFieldTypes.Text
+    general_info: EntryFieldTypes.Text
   }
 }
 
@@ -55,9 +56,13 @@ export interface ContentfulTeam {
   contentTypeId: 'ploeg'
   fields: {
     naam: EntryFieldTypes.Text
+    bouw: EntryFieldTypes.Text
+    coach: EntryFieldTypes.Array<EntryFieldTypes.Text>
+    afgevaardigde: EntryFieldTypes.Array<EntryFieldTypes.Text>
+    training: EntryFieldTypes.Array<EntryFieldTypes.Text>
     naamOpVoetbalVlaanderen: EntryFieldTypes.Text
     categorie: EntryFieldTypes.EntryResourceLink<ContentfulCategory>
-    logo: EntryFieldTypes.AssetLink
+    ploegfoto: EntryFieldTypes.AssetLink
   }
 }
 

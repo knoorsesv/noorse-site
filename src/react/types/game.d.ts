@@ -1,10 +1,8 @@
-import type { Team } from './team'
-
 export interface Game {
   startTime: string
   id: string
-  homeTeam: Team
-  awayTeam: Team
+  homeTeam: { name: string }
+  awayTeam: { name: string }
   title?: string
   outcome: {
     homeTeamGoals?: number | null

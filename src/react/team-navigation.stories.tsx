@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { CategoryTeamNavigation } from './team-navigation.tsx'
+import { teamFactory } from './data/team-factory.ts'
 
 export default {
   title: 'Component/CategoryTeamNavigation',
   component: CategoryTeamNavigation,
   args: {
-    category: {
-      naam: 'Category',
-      ploeg: [
-        { naam: 'Ploeg 1', bouw: 'onder' },
-        { naam: 'Ploeg 2', bouw: 'onder' },
-        { naam: 'Ploeg', bouw: 'boven' },
-      ],
-    },
+    categoryName: 'Category',
+    teams: [
+      teamFactory({ name: 'Ploeg 1', bouw: 'onder' }),
+      teamFactory({ name: 'Ploeg 2', bouw: 'onder' }),
+      teamFactory({ name: 'Ploeg', bouw: 'boven' }),
+    ],
   },
 } satisfies Meta<typeof CategoryTeamNavigation>
 

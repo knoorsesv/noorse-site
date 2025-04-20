@@ -1,69 +1,75 @@
 ---
+import { getEntries } from '../data/contentful/get-entries'
+import { mapCategory, mapNewsItem, mapTeam } from '../data/contentful/mapping'
+import type { ContentfulCategory } from '../data/contentful/types'
 import Layout from '../layouts/Layout.astro'
 import { CategoryPage } from '../react/pages'
-import { contentfulClient } from '../lib/contentful'
-import type { ContentfulCategory } from '../data/contentful/types'
+import type { Category } from '../react/types/category'
+import type { NewsItem } from '../react/types/news'
+import type { Team } from '../react/types/team'
 
-export async function getStaticPaths() {
-  const categories = (
-    await contentfulClient.getEntries<ContentfulCategory>({
-      content_type: 'categorie',
-    })
-  ).items
+type StaticPaths = {
+  params: { category: string }
+  props: { category: Category; newsItems: NewsItem[]; teams: Team[] }
+}
+
+export async function getStaticPaths(): Promise<StaticPaths[]> {
+  const categories = await getEntries<ContentfulCategory, Category>(
+    'categorie',
+    mapCategory
+  )
 
   const newsItems = await Promise.all(
-    categories.map((categorie) => {
-      return contentfulClient.getEntries({
-        content_type: 'news',
-        'fields.category.sys.id': categorie.sys.id,
+    categories.map((categorie) =>
+      getEntries('news', mapNewsItem, {
+        // @ts-expect-error this does work but seems not correctly typed by the contentful library
+        'fields.category.sys.id': categorie.id,
       })
-    })
+    )
   )
 
-  const ploegen = await Promise.all(
-    categories.map((categorie) => {
-      return contentfulClient.getEntries({
-        content_type: 'ploeg',
-        // todo: inconsistent that this is categorie in Dutch
-        'fields.categorie.sys.id': categorie.sys.id,
+  const teams = await Promise.all(
+    categories.map((categorie) =>
+      getEntries('ploeg', mapTeam, {
+        // @ts-expect-error this does work but seems not correctly typed by the contentful library
+        'fields.categorie.sys.id': categorie.id,
       })
-    })
+    )
   )
 
-  const allSeparateCategories = categories
-    .map(({ fields }) => fields)
-    .map((categorie, index) => ({
-      params: { category: categorie.naam.toLowerCase() },
-      props: {
-        categoryData: {
-          ...categorie,
-          news: newsItems[index].items.map(({ fields }) => fields),
-          //  todo: this should be called teams plural,
-          ploeg: ploegen[index].items.map(({ fields }) => fields),
-        },
-      },
-    }))
+  const allSeparateCategories = categories.map((categorie, index) => ({
+    params: { category: categorie.name.toLowerCase() },
+    props: {
+      category: categorie,
+      newsItems: newsItems[index],
+      teams: teams[index],
+    },
+  }))
+
+  // console.log('categories', categories)
 
   return [
     ...allSeparateCategories,
-    {
-      params: { category: 'jeugd' },
-      props: {
-        categoryData: {
-          naam: 'Jeugd',
-          categories: allSeparateCategories.filter(({ params }) =>
-            params.category.includes('jeugd')
-          ),
-        },
-      },
-    },
+    // {
+    //   params: { title: 'jeugd' },
+    //   props: {
+    //     category: { name: 'Jeugd', id: 'jeugd' },
+    //     newsItems:
+    //       allSeparateCategories.find(({ params }) =>
+    //         params.title.includes('jeugd')
+    //       )?.props.newsItems || [],
+    //     teams:
+    //       allSeparateCategories.find(({ params }) =>
+    //         params.title.includes('jeugd')
+    //       )?.props.teams || [],
+    //   },
+    // },
   ]
 }
 
-const { categoryData } = Astro.props
+const { category, teams, newsItems } = Astro.props
 ---
 
-<!-- todo: properly map this to the category type so not everything is optional -->
-<Layout title={categoryData.naam} currentURL={Astro.url}>
-  <CategoryPage category={categoryData} />
+<Layout title={category.name} currentURL={Astro.url}>
+  <CategoryPage category={category} teams={teams} newsItems={newsItems} />
 </Layout>

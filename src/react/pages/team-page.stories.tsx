@@ -1,18 +1,22 @@
-import { TeamPage } from './team-page.jsx'
+import type { Meta, StoryObj } from '@storybook/react'
+import { calendar } from '../data/games-factory.js'
 import {
   rankingFactory,
   serieFactory,
   teamFactory,
 } from '../data/team-factory.js'
-import { calendar } from '../data/games-factory.js'
-import { categoryFactory } from '../data/category-factory.js'
-import type { Meta, StoryObj } from '@storybook/react'
+import { TeamPage } from './team-page.jsx'
 
 export default {
   title: 'Pages/TeamPage',
   component: TeamPage,
   args: {
-    ploeg: teamFactory({ categorie: categoryFactory() }),
+    ploeg: teamFactory({ categoryName: 'Categorie' }),
+    otherCategoryTeams: [
+      teamFactory({ categoryName: 'Categorie', bouw: 'boven', name: 'Team 1' }),
+      teamFactory({ categoryName: 'Categorie', bouw: 'onder', name: 'Team 2' }),
+      teamFactory({ categoryName: 'Categorie', bouw: 'onder', name: 'Team 3' }),
+    ],
     series: [serieFactory(), serieFactory({ name: 'Beker' })],
     rankings: [
       rankingFactory(),

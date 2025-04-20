@@ -1,4 +1,4 @@
-import type { EntrySkeletonType } from 'contentful'
+import type { EntriesQueries, EntrySkeletonType } from 'contentful'
 import { contentfulClient } from '../../lib/contentful'
 import type { Attachment } from '../../react/types/attachment'
 import type { ContentfulPage } from './types'
@@ -9,11 +9,13 @@ export const getEntries = async <
   ReturnType,
 >(
   contentType: string,
-  mapToModel: Mapper<ContentfulType, ReturnType>
+  mapToModel: Mapper<ContentfulType, ReturnType>,
+  args?: EntriesQueries<ContentfulType, undefined>
 ) => {
   return (
     await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulType>({
       content_type: contentType,
+      ...args,
     })
   ).items.map(({ fields, sys }) => mapToModel(fields, sys))
 }

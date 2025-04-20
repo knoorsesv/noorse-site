@@ -2,13 +2,17 @@ import type { EntrySkeletonType, EntrySys, ResolvedField } from 'contentful'
 import type { BestuursLid } from '../../react/types/bestuur'
 import type {
   ContentfulBestuursLid,
+  ContentfulCategory,
   ContentfulEvent,
   ContentfulNewsItem,
   ContentfulSponsor,
+  ContentfulTeam,
 } from './types'
 import type { NewsItem } from '../../react/types/news'
 import type { Sponsor } from '../../react/types/sponsor'
 import type { Event } from '../../react/types/event'
+import type { Team } from '../../react/types/team'
+import type { Category } from '../../react/types/category'
 
 export type Mapper<ContentfulType extends EntrySkeletonType, ReturnType> = (
   fields: {
@@ -74,4 +78,27 @@ export const mapNewsItem: Mapper<ContentfulNewsItem, NewsItem> = (
         url: asset.fields.file.url,
       },
     })),
+})
+export const mapTeam: Mapper<ContentfulTeam, Team> = (fields) => ({
+  name: fields.naam,
+  bouw: fields.bouw,
+  naam: fields.naam,
+  coach: fields.coach,
+  afgevaardigde: fields.afgevaardigde,
+  training: fields.training,
+  categoryName: fields.categorie?.fields.naam || '',
+  ploegfoto: {
+    responsiveURL:
+      fields.ploegfoto?.fields.file?.url &&
+      `${fields.ploegfoto?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
+  },
+})
+
+export const mapCategory: Mapper<ContentfulCategory, Category> = (
+  fields,
+  sys
+) => ({
+  name: fields.naam,
+  general_info: fields.general_info,
+  id: sys.id,
 })

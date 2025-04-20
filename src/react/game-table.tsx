@@ -2,13 +2,12 @@ import { format, parseISO } from 'date-fns'
 import type { FC } from 'react'
 import { sanitizeTeamName } from '../utils/formatting'
 import type { Game } from './types/game'
-import type { Team } from './types/team'
 
 export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
-  function formatTeamName(team: Team) {
-    return team.name?.toLowerCase().includes('noorse')
+  function formatTeamName(team: string) {
+    return team.toLowerCase().includes('noorse')
       ? 'Noorse'
-      : team.name && sanitizeTeamName(team.name)
+      : team && sanitizeTeamName(team)
   }
 
   function notCancelled(game: Game) {
@@ -47,10 +46,10 @@ export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
               <td className={'w-7/12 px-0'}>
                 <div className={'flex flex-col'}>
                   <span className={'truncate'}>
-                    {formatTeamName(game.homeTeam)}
+                    {formatTeamName(game.homeTeam.name)}
                   </span>
                   <span className={'truncate'}>
-                    {formatTeamName(game.awayTeam)}
+                    {formatTeamName(game.awayTeam.name)}
                   </span>
                 </div>
               </td>
