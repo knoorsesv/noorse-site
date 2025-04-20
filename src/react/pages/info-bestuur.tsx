@@ -1,14 +1,10 @@
 import type { FC } from 'react'
 import { BestuurList, SubTitle } from '../index'
 import { Page } from './page.jsx'
+import type { BestuursLid } from '../types/bestuur.js'
 
 export const InfoBestuurPage: FC<{
-  leden: {
-    type: 'deelwerking' | 'bestuursorgaan'
-    title: string
-    naam?: string
-    email: string
-  }[]
+  leden: BestuursLid[]
 }> = ({ leden }) => {
   const bestuursLeden = leden
     .filter(({ type }) => type === 'bestuursorgaan')
