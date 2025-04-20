@@ -6,6 +6,7 @@ import type { NewsItem } from '../types/news'
 
 export const NewsPage: FC<{ newsItems: NewsItem[] }> = ({ newsItems }) => {
   // todo: should this not use Page
+
   return (
     <>
       <Helmet>

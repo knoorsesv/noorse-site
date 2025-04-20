@@ -1,17 +1,17 @@
 ---
-import { HomePage } from '../react/pages'
-import Page from '../layouts/Page.astro'
-import { contentfulClient } from '../lib/contentful'
 import { isFuture, parse } from 'date-fns'
-import { newsletterLink, siteMap, webshopLink } from '../env/constants'
-import { siteMetadata } from '../data/siteMetadata'
-import type { Event } from '../react/types/event'
-import type { NewsItem } from '../react/types/news'
+import { getEntries } from '../data/contentful/get-entries'
+import { mapNewsItem } from '../data/contentful/mapping'
 import type {
-  ContentfulNewsItem,
   ContentfulEvent,
   ContentfulSponsor,
 } from '../data/contentful/types'
+import { siteMetadata } from '../data/siteMetadata'
+import { newsletterLink, siteMap, webshopLink } from '../env/constants'
+import Page from '../layouts/Page.astro'
+import { contentfulClient } from '../lib/contentful'
+import { HomePage } from '../react/pages'
+import type { Event } from '../react/types/event'
 
 const sponsors = (
   await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulSponsor>(
@@ -31,31 +31,7 @@ const sponsors = (
 }))
 
 // todo: could be limited by a query instead of fetching everything and then limiting
-const newsItems: NewsItem[] = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
-    {
-      content_type: 'news',
-    }
-  )
-).items
-  .map(({ fields, sys }) => ({
-    // ...fields,
-    title: fields.title,
-    inhoud: fields.inhoud,
-    blurb: fields.blurb,
-    categoryName: fields.category?.fields.naam || '',
-    createdAt: sys.createdAt,
-    attachment: [],
-    category: { naam: fields.category?.fields.naam },
-    ...(fields.image && {
-      image: {
-        responsiveURL:
-          fields.image.fields.file?.url.replace('//', 'https://') +
-          '?w=300&h=200&fm=webp',
-      },
-    }),
-  }))
-  .slice(0, 3)
+const newsItems = (await getEntries('news', mapNewsItem)).slice(0, 3)
 
 // todo: two conditions because contentful API returns different formats for different environments, should be fixed there
 const eventIsInfuture = (datum: string): boolean =>

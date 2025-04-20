@@ -1,11 +1,10 @@
 ---
 // todo: make import aliases so the relative .../.././. are not necessary
+import { getEntries } from '../../data/contentful/get-entries'
+import { mapNewsItem } from '../../data/contentful/mapping'
 import Layout from '../../layouts/Layout.astro'
 import { NewsItemPage } from '../../react/pages'
-import { contentfulClient } from '../../lib/contentful'
 import type { NewsItem } from '../../react/types/news'
-import type { Attachment } from '../../react/types/attachment'
-import type { ContentfulNewsItem } from '../../data/contentful/types'
 
 type StaticPaths = {
   params: { title: string }
@@ -13,51 +12,15 @@ type StaticPaths = {
 }
 
 export async function getStaticPaths(): Promise<StaticPaths[]> {
-  const newsItems = (
-    await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
-      {
-        content_type: 'news',
-      }
-    )
-  ).items
-
-  return newsItems
-    .map(({ fields, sys }) => ({
-      title: fields.title,
-      inhoud: fields.inhoud,
-      blurb: fields.blurb,
-      publishDate: fields.publishDate,
-      showImageOnPage: fields.showImageOnPage,
-      createdAt: sys.createdAt,
-      categoryName: fields.category?.fields.naam || '',
-      image: {
-        responsiveURL:
-          fields.image?.fields.file?.url &&
-          `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
-      },
-      // image: newsItem.image?.fields,
-      attachment: fields.attachment
-        ?.filter((asset) => !!asset)
-        .map(
-          (asset) =>
-            ({
-              title: asset.fields.title,
-              file: asset.fields.file && {
-                contentType: asset.fields.file.contentType,
-                fileName: asset.fields.file.fileName,
-                url: asset.fields.file.url,
-              },
-            }) satisfies Attachment
-        ),
-    }))
-    .map((newsItem: NewsItem) => ({
-      params: {
-        title: newsItem.title.replaceAll('/', '-').toLowerCase(),
-      },
-      props: {
-        newsItem,
-      },
-    }))
+  const newsItems = await getEntries('news', mapNewsItem)
+  return newsItems.map((newsItem: NewsItem) => ({
+    params: {
+      title: newsItem.title.replaceAll('/', '-').toLowerCase(),
+    },
+    props: {
+      newsItem,
+    },
+  }))
 }
 
 const { newsItem } = Astro.props

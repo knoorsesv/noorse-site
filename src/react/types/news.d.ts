@@ -10,8 +10,8 @@ export interface NewsItem {
   }
   blurb?: string
   inhoud: string
-  publishDate?: string
-  createdAt: string
+  publishDate?: Date
+  createdAt: Date
   srcSet?: string
   categoryName: string
   attachment: Attachment[]

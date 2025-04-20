@@ -15,7 +15,7 @@ export const getEntries = async <
     await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulType>({
       content_type: contentType,
     })
-  ).items.map(({ fields }) => mapToModel(fields))
+  ).items.map(({ fields, sys }) => mapToModel(fields, sys))
 }
 
 export const getPage = async (title: string) => {
