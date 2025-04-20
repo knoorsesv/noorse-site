@@ -1,11 +1,8 @@
 ---
 import { isFuture, parse } from 'date-fns'
 import { getEntries } from '../data/contentful/get-entries'
-import { mapNewsItem } from '../data/contentful/mapping'
-import type {
-  ContentfulEvent,
-  ContentfulSponsor,
-} from '../data/contentful/types'
+import { mapNewsItem, mapSponsor } from '../data/contentful/mapping'
+import type { ContentfulEvent } from '../data/contentful/types'
 import { siteMetadata } from '../data/siteMetadata'
 import { newsletterLink, siteMap, webshopLink } from '../env/constants'
 import Page from '../layouts/Page.astro'
@@ -13,23 +10,7 @@ import { contentfulClient } from '../lib/contentful'
 import { HomePage } from '../react/pages'
 import type { Event } from '../react/types/event'
 
-const sponsors = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulSponsor>(
-    {
-      content_type: 'sponsor',
-    }
-  )
-).items.map(({ fields }) => ({
-  naam: fields.naam,
-  websiteUrl: fields.websiteUrl,
-  logo: {
-    responsiveURL:
-      // todo: extract this mapping for all assetlink types
-      fields.logo?.fields.file?.url.replace('//', 'https://') +
-      '?w=300&h=200&fm=jpg&fl=progressive',
-  },
-}))
-
+const sponsors = await getEntries('sponsor', mapSponsor)
 // todo: could be limited by a query instead of fetching everything and then limiting
 const newsItems = (await getEntries('news', mapNewsItem)).slice(0, 3)
 
