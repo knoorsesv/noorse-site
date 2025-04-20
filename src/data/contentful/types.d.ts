@@ -36,8 +36,8 @@ export interface ContentfulEvent {
   contentTypeId: 'evenement'
   fields: {
     naam: EntryFieldTypes.Text
-    datum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
-    eindDatum: string // actually dd/MM/yy - doesnt match EntryFieldTypes.Date
+    datum: string // todo: actually dd/MM/yy - doesnt match EntryFieldTypes.Date
+    eindDatum: string // todo: actually dd/MM/yy - doesnt match EntryFieldTypes.Date
   }
 }
 
