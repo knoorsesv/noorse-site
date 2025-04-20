@@ -7,17 +7,18 @@ import { teamFactory } from '../data/team-factory.js'
 const meta: Meta<typeof CategoryPage> = {
   title: 'Pages/CategoryPage',
   component: CategoryPage,
+  args: {
+    newsItems: [],
+    teams: [teamFactory()],
+    category: categoryFactory(),
+  },
 }
 
 export default meta
 
 type Story = StoryObj<typeof CategoryPage>
 
-export const Primary: Story = {
-  args: {
-    category: categoryFactory(),
-  },
-}
+export const Primary: Story = {}
 
 export const WithInfo: Story = {
   args: {
