@@ -1,11 +1,9 @@
 ---
+import { getEntries } from '../../../data/contentful/get-entries'
+import { mapTeam } from '../../../data/contentful/mapping'
 import Layout from '../../../layouts/Layout.astro'
 import { TeamPage } from '../../../react/pages'
-import { contentfulClient } from '../../../lib/contentful'
-
-import { getVvData, getCalendarConfig } from '../../../utils/get-vv-data'
-import type { Team } from '../../../react/types/team'
-import type { ContentfulTeam } from '../../../data/contentful/types'
+import { getCalendarConfig, getVvData } from '../../../utils/get-vv-data'
 
 export async function getStaticPaths() {
   const typedData = getVvData(
@@ -15,55 +13,48 @@ export async function getStaticPaths() {
     import.meta.env.CONTENTFUL_ENV === 'master' ? 'master' : 'test'
   )
 
-  const teams = (
-    await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulTeam>({
-      content_type: 'ploeg',
-    })
-  ).items
+  const teams = await getEntries('ploeg', mapTeam)
 
-  return teams
-    .map(({ fields }) => fields)
-    .map((team) => {
-      const config = actualCalendarConfig.find(
-        ({ vvName }) =>
-          vvName === team.naamOpVoetbalVlaanderen || vvName === team.naam
-      )
-      const vvId = config?.vvId
+  return teams.map((team) => {
+    const config = actualCalendarConfig.find(
+      ({ vvName }) =>
+        vvName === team.naamOpVoetbalVlaanderen || vvName === team.name
+    )
+    const vvId = config?.vvId
 
-      return {
-        params: {
-          category: team.categorie?.fields.naam?.toLowerCase(),
-          team: team.naam?.toLowerCase(),
-        },
-        props: {
-          ploeg: {
-            ...team,
-            categorie: {
-              naam: team.categorie?.fields.naam || '',
-              ploeg: teams
-                .map(({ fields }) => fields)
-                .filter(
-                  (teamToFilter) =>
-                    teamToFilter.categorie?.fields.naam ===
-                    team.categorie?.fields.naam
-                ),
-            },
-          } as Team, // todo: make this perfeclty satisfy Team
-          rankings: vvId ? typedData.teamSeriesAndRankings[vvId]?.rankings : [],
-          series: vvId ? typedData.teamSeriesAndRankings[vvId]?.series : [],
-          teamCalendar: vvId ? typedData.teamCalendar[vvId] : [],
-          googleCalId: config?.calendarId,
-        },
-      }
-    })
+    return {
+      params: {
+        category: team.categoryName.toLowerCase(),
+        team: team.name.toLowerCase(),
+      },
+      props: {
+        ploeg: team,
+        otherCategoryTeams: teams.filter(
+          (teamToFilter) => teamToFilter.categoryName === team.categoryName
+        ),
+        rankings: vvId ? typedData.teamSeriesAndRankings[vvId]?.rankings : [],
+        series: vvId ? typedData.teamSeriesAndRankings[vvId]?.series : [],
+        teamCalendar: vvId ? typedData.teamCalendar[vvId] : [],
+        googleCalId: config?.calendarId,
+      },
+    }
+  })
 }
 
-const { ploeg, rankings, series, teamCalendar, googleCalId } = Astro.props
+const {
+  ploeg,
+  rankings,
+  series,
+  teamCalendar,
+  googleCalId,
+  otherCategoryTeams,
+} = Astro.props
 ---
 
-<Layout title={ploeg.naam} currentURL={Astro.url}>
+<Layout title={ploeg.name} currentURL={Astro.url}>
   <TeamPage
     ploeg={ploeg}
+    otherCategoryTeams={otherCategoryTeams}
     rankings={rankings}
     series={series}
     teamCalendar={teamCalendar}

@@ -22,7 +22,7 @@ export const Primary: Story = {
 export const WithInfo: Story = {
   args: {
     category: categoryFactory({
-      naam: 'Senioren',
+      name: 'Senioren',
       general_info: `# Some info
     *In markdown*
     `,
@@ -33,33 +33,21 @@ export const WithInfo: Story = {
 export const WithNews: Story = {
   args: {
     category: categoryFactory({
-      naam: 'Met nieuws',
-      news: [
-        newsFactory({ title: 'Een bericht' }),
-        newsFactory({ title: 'nog Een bericht' }),
-      ],
+      name: 'Met nieuws',
     }),
+    newsItems: [
+      newsFactory({ title: 'Een bericht' }),
+      newsFactory({ title: 'nog Een bericht' }),
+    ],
   },
 }
 
 export const WithMultipleBouws: Story = {
   args: {
-    category: categoryFactory({
-      ploeg: [
-        teamFactory({ naam: 'Ploeg 1', bouw: 'bouw boven' }),
-        teamFactory({ naam: 'Ploeg 2', bouw: 'bouw onder' }),
-      ],
-    }),
-  },
-}
-
-export const WithSubcategories: Story = {
-  args: {
-    category: categoryFactory({
-      categories: [
-        { props: { categoryData: categoryFactory({ naam: 'Subcategory 1' }) } },
-        { props: { categoryData: categoryFactory({ naam: 'Subcategory 2' }) } },
-      ],
-    }),
+    category: categoryFactory({}),
+    teams: [
+      teamFactory({ name: 'Ploeg 1', bouw: 'bouw boven' }),
+      teamFactory({ name: 'Ploeg 2', bouw: 'bouw onder' }),
+    ],
   },
 }

@@ -8,14 +8,23 @@ import type { Game } from '../types/game'
 import type { Team } from '../types/team'
 import type { Series } from '../types/series'
 import type { Ranking } from '../types/rankings'
+import { ImageWrapper } from '../../wrappers/image-wrapper.tsx'
 
 export const TeamPage: FC<{
   ploeg: Team
+  otherCategoryTeams: Team[]
   rankings?: Ranking[] | undefined | null
   series?: Series[]
   teamCalendar?: Game[]
   googleCalId?: string
-}> = ({ ploeg, rankings, series, teamCalendar, googleCalId }) => {
+}> = ({
+  ploeg,
+  rankings,
+  series,
+  teamCalendar,
+  googleCalId,
+  otherCategoryTeams,
+}) => {
   const nonCupRankings =
     rankings
       ?.filter((ranking) => !ranking.name.toLowerCase().includes('beker'))
@@ -59,10 +68,10 @@ export const TeamPage: FC<{
   return (
     <>
       <Helmet>
-        <title>{ploeg.naam}</title>
+        <title>{ploeg.name}</title>
       </Helmet>
       <Container>
-        <Title>{ploeg.naam}</Title>
+        <Title>{ploeg.name}</Title>
         <div className={'flex flex-col large:flex-row large:justify-between'}>
           <div
             id="team-info"
@@ -73,9 +82,9 @@ export const TeamPage: FC<{
               {ploeg.ploegfoto && (
                 <>
                   <section className={'flex flex-col items-center'}>
-                    <img
-                      alt={`Ploegfoto ${ploeg.naam}`}
-                      src={ploeg.ploegfoto.fields.file.url}
+                    <ImageWrapper
+                      image={ploeg.ploegfoto}
+                      alt={`Ploegfoto ${ploeg.name}`}
                       className="m-8 max-w-[360px]"
                     />
                   </section>
@@ -219,7 +228,10 @@ export const TeamPage: FC<{
           )}
         </div>
 
-        <CategoryTeamNavigation category={ploeg.categorie} />
+        <CategoryTeamNavigation
+          categoryName={ploeg.categoryName}
+          teams={otherCategoryTeams}
+        />
       </Container>
     </>
   )

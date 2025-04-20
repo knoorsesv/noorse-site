@@ -4,11 +4,11 @@ import type { Factory } from './factory'
 
 export const teamFactory: Factory<Team> = (attrs) => ({
   bouw: 'sterken bouw',
-  naam: 'Ploegnaam',
-  name: 'Ploegnaam', // todo: this should be unified so name is used everywhere
+  name: 'Ploegnaam',
   coach: ['Deef', 'Duif', 'Fokkie'],
   afgevaardigde: ['Deef', 'Duif', 'Fokkie'],
   training: ['Dinsdag', 'Donderdag'],
+  categoryName: 'Categorie',
   ...attrs,
 })
 

@@ -1,22 +1,15 @@
-import type { Category } from './category'
-
 // todo: fix all these undefined and null types
 export interface Team {
-  name?: string
-  bouw?: string
-  naam?: string
+  name: string
+  bouw: string
   position?: number
   points?: number | undefined
   coach?: string[]
-  afgevaardigde?: string[]
-  training?: string[]
-  categorie?: Category
+  afgevaardigde: string[]
+  training: string[]
+  categoryName: string
   naamOpVoetbalVlaanderen?: string
   ploegfoto?: {
-    fields: {
-      file: {
-        url: string
-      }
-    }
+    responsiveURL?: string
   }
 }

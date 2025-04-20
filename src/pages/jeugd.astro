@@ -1,0 +1,64 @@
+---
+import { getEntries } from '../data/contentful/get-entries'
+import { mapCategory, mapNewsItem, mapTeam } from '../data/contentful/mapping'
+import type { ContentfulCategory } from '../data/contentful/types'
+import Layout from '../layouts/Layout.astro'
+import { SubTitle } from '../react'
+import { CategoryContent } from '../react/pages'
+import { Page } from '../react/pages/page'
+import type { Category } from '../react/types/category'
+
+const categories = await getEntries<ContentfulCategory, Category>(
+  'categorie',
+  mapCategory
+)
+
+const newsItems = await Promise.all(
+  categories.map((categorie) =>
+    getEntries('news', mapNewsItem, {
+      // @ts-expect-error this does work but seems not correctly typed by the contentful library
+      'fields.category.sys.id': categorie.id,
+    })
+  )
+)
+
+const teams = await Promise.all(
+  categories.map((categorie) =>
+    getEntries('ploeg', mapTeam, {
+      // @ts-expect-error this does work but seems not correctly typed by the contentful library
+      'fields.categorie.sys.id': categorie.id,
+    })
+  )
+)
+
+const jeugdCategories = categories
+  .map((categorie, index) => ({
+    category: categorie,
+    newsItems: newsItems[index],
+    teams: teams[index],
+  }))
+  .filter(
+    ({ category }) =>
+      category.name.toLocaleLowerCase().includes('jeugd') ||
+      category.name.toLocaleLowerCase().includes('meisjes')
+  )
+---
+
+<Layout title="Jeugd" currentURL={Astro.url}>
+  <Page title="Jeugd">
+    {
+      jeugdCategories.map((subCategory) => {
+        return (
+          <section class="mb-10 flex w-full flex-col items-center">
+            <SubTitle>{subCategory.category.name}</SubTitle>
+            <CategoryContent
+              category={subCategory.category}
+              teams={subCategory.teams}
+              newsItems={subCategory.newsItems}
+            />
+          </section>
+        )
+      })
+    }
+  </Page>
+</Layout>

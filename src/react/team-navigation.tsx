@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
-import type { Category } from './types/category.ts'
+import type { Team } from './types/team'
 
 interface Ploeg {
   naam?: string
@@ -9,14 +9,11 @@ interface Ploeg {
 
 // todo: dees is echt lelijk
 export const CategoryTeamNavigation: FC<{
-  category?: Category
+  categoryName: string
+  teams: Team[]
   header?: string
-}> = ({ category, header }) => {
-  if (!category?.ploeg?.length) {
-    return <></>
-  }
-
-  const bouwen = category.ploeg.reduce(
+}> = ({ categoryName, teams, header }) => {
+  const bouwen = teams.reduce(
     (bouwlijst: Record<string, Ploeg[]>, ploeg: Ploeg) => {
       const key = ploeg.bouw || 'Andere'
       return {
@@ -36,7 +33,7 @@ export const CategoryTeamNavigation: FC<{
         id="team-navigation"
         className={'mb-2 w-full border-b-2 border-black pb-2 text-center'}
       >
-        {header || category.naam}
+        {header || categoryName}
       </h3>
       {Object.keys(bouwen)
         .sort((bouw: string) => {
@@ -83,7 +80,7 @@ export const CategoryTeamNavigation: FC<{
                   .map((ploeg) => (
                     <LinkWrapper
                       key={ploeg.naam}
-                      href={`/team/${category.naam.toLowerCase()}/${ploeg.naam?.toLowerCase()}`}
+                      href={`/team/${categoryName.toLowerCase()}/${ploeg.naam?.toLowerCase()}`}
                       className={
                         'w-[80px] text-center text-gray-dark underline'
                       }

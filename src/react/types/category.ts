@@ -1,11 +1,5 @@
-import type { Team } from './team'
-
 export interface Category {
-  ploeg?: Team[]
-  naam: string
-  categories?: { props: { categoryData: Category } }[]
+  id: string
+  name: string
   general_info?: string
-  news?: {
-    title?: string
-  }[]
 }
