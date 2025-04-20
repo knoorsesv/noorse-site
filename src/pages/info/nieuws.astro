@@ -1,33 +1,11 @@
 ---
-import type { ContentfulNewsItem } from '../../data/contentful/types'
+import { getEntries } from '../../data/contentful/get-entries'
+import { mapNewsItem } from '../../data/contentful/mapping'
 import Layout from '../../layouts/Layout.astro'
-import { contentfulClient } from '../../lib/contentful'
 import { NewsPage } from '../../react/pages'
-import type { NewsItem } from '../../react/types/news'
 
-const newsItems = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulNewsItem>(
-    {
-      content_type: 'news',
-    }
-  )
-).items.map(
-  ({ fields, sys }) =>
-    ({
-      title: fields.title,
-      inhoud: fields.inhoud,
-      blurb: fields.blurb,
-      publishDate: fields.publishDate,
-      createdAt: sys.createdAt,
-      categoryName: fields.category?.fields.naam || '',
-      image: {
-        responsiveURL:
-          fields.image?.fields.file?.url &&
-          `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
-      },
-      attachment: [],
-    }) satisfies NewsItem
-)
+s
+const newsItems = await getEntries('news', mapNewsItem)
 ---
 
 <Layout title="Info - Nieuws" currentURL={Astro.url}>

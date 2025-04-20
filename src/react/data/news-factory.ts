@@ -7,8 +7,8 @@ export const newsFactory: Factory<NewsItem> = (attrs) => ({
   image: simpleImageFactory(),
   blurb: 'Some headline content in the form of a blurb',
   categoryName: 'Senioren',
-  publishDate: new Date('2023-09-01').toDateString(),
-  createdAt: new Date('2022-08-07').toDateString(),
+  publishDate: new Date('2023-09-01'),
+  createdAt: new Date('2022-08-07'),
   inhoud: 'Some very interesting content \n next line',
   attachment: [
     {

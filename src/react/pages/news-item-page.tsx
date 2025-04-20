@@ -15,9 +15,11 @@ export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
   const images = getImageAttachments(newsItem.attachment)
 
   const formattedDate = format(
-    new Date(newsItem.publishDate || newsItem.createdAt),
+    newsItem.publishDate || newsItem.createdAt,
     'PPPP',
-    { locale: nlBE }
+    {
+      locale: nlBE,
+    }
   )
 
   return (

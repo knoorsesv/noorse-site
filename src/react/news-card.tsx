@@ -38,7 +38,7 @@ export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
         <SubHeader>
           <div className={'text-left uppercase'}>{newsItem.categoryName}</div>
           <div className={'text-center'}>
-            {dateToShow && format(new Date(dateToShow), 'dd/MM/yy')}
+            {dateToShow && format(dateToShow, 'dd/MM/yy')}
           </div>
         </SubHeader>
         <div className={'min-h-64p text-center text-gray-dark'}>{snippet}</div>
