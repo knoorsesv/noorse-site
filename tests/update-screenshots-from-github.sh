@@ -28,7 +28,7 @@ done
 
 unsetopt extended_glob
 
-git commit -am "chore: update ci screenshots" && git push
+git commit -am "chore: update ci screenshots" --no-verify && git push
 
 npx playwright show-report
 
