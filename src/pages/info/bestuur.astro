@@ -1,14 +1,10 @@
 ---
-import type { ContentfulBestuursLid } from '../../data/contentful/types'
+import { getEntries } from '../../data/contentful/get-entries'
+import { mapBestuursLid } from '../../data/contentful/mapping'
 import Layout from '../../layouts/Layout.astro'
-import { contentfulClient } from '../../lib/contentful'
 import { InfoBestuurPage } from '../../react/pages'
 
-const leden = (
-  await contentfulClient.getEntries<ContentfulBestuursLid>({
-    content_type: 'bestuurslid',
-  })
-).items.map(({ fields }) => fields)
+const leden = await getEntries('bestuurslid', mapBestuursLid)
 ---
 
 <Layout title="Info - Bestuur" currentURL={Astro.url}>

@@ -1,6 +1,22 @@
+import type { EntrySkeletonType } from 'contentful'
 import { contentfulClient } from '../../lib/contentful'
 import type { Attachment } from '../../react/types/attachment'
 import type { ContentfulPage } from './types'
+import type { Mapper } from './mapping'
+
+export const getEntries = async <
+  ContentfulType extends EntrySkeletonType,
+  ReturnType,
+>(
+  contentType: string,
+  mapToModel: Mapper<ContentfulType, ReturnType>
+) => {
+  return (
+    await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulType>({
+      content_type: contentType,
+    })
+  ).items.map(({ fields }) => mapToModel(fields))
+}
 
 export const getPage = async (title: string) => {
   const page = (

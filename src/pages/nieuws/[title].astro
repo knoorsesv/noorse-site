@@ -22,37 +22,34 @@ export async function getStaticPaths(): Promise<StaticPaths[]> {
   ).items
 
   return newsItems
-    .map(
-      ({ fields, sys }) =>
-        ({
-          title: fields.title,
-          inhoud: fields.inhoud,
-          blurb: fields.blurb,
-          publishDate: fields.publishDate,
-          showImageOnPage: fields.showImageOnPage,
-          createdAt: sys.createdAt,
-          categoryName: fields.category?.fields.naam || '',
-          image: {
-            responsiveURL:
-              fields.image?.fields.file?.url &&
-              `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
-          },
-          // image: newsItem.image?.fields,
-          attachment: fields.attachment
-            ?.filter((asset) => !!asset)
-            .map(
-              (asset) =>
-                ({
-                  title: asset.fields.title,
-                  file: asset.fields.file && {
-                    contentType: asset.fields.file.contentType,
-                    fileName: asset.fields.file.fileName,
-                    url: asset.fields.file.url,
-                  },
-                }) satisfies Attachment
-            ),
-        }) satisfies NewsItem
-    )
+    .map(({ fields, sys }) => ({
+      title: fields.title,
+      inhoud: fields.inhoud,
+      blurb: fields.blurb,
+      publishDate: fields.publishDate,
+      showImageOnPage: fields.showImageOnPage,
+      createdAt: sys.createdAt,
+      categoryName: fields.category?.fields.naam || '',
+      image: {
+        responsiveURL:
+          fields.image?.fields.file?.url &&
+          `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=jpg&fl=progressive`,
+      },
+      // image: newsItem.image?.fields,
+      attachment: fields.attachment
+        ?.filter((asset) => !!asset)
+        .map(
+          (asset) =>
+            ({
+              title: asset.fields.title,
+              file: asset.fields.file && {
+                contentType: asset.fields.file.contentType,
+                fileName: asset.fields.file.fileName,
+                url: asset.fields.file.url,
+              },
+            }) satisfies Attachment
+        ),
+    }))
     .map((newsItem: NewsItem) => ({
       params: {
         title: newsItem.title.replaceAll('/', '-').toLowerCase(),
