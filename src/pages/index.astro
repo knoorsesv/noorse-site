@@ -1,14 +1,11 @@
 ---
 import { isFuture, parse } from 'date-fns'
 import { getEntries } from '../data/contentful/get-entries'
-import { mapNewsItem, mapSponsor } from '../data/contentful/mapping'
-import type { ContentfulEvent } from '../data/contentful/types'
+import { mapEvent, mapNewsItem, mapSponsor } from '../data/contentful/mapping'
 import { siteMetadata } from '../data/siteMetadata'
 import { newsletterLink, siteMap, webshopLink } from '../env/constants'
 import Page from '../layouts/Page.astro'
-import { contentfulClient } from '../lib/contentful'
 import { HomePage } from '../react/pages'
-import type { Event } from '../react/types/event'
 
 const sponsors = await getEntries('sponsor', mapSponsor)
 // todo: could be limited by a query instead of fetching everything and then limiting
@@ -19,16 +16,7 @@ const eventIsInfuture = (datum: string): boolean =>
   isFuture(parse(datum, 'dd/MM/yy', new Date())) ||
   isFuture(parse(datum, 'yyyy-MM-dd', new Date()))
 
-const events: Event[] = (
-  await contentfulClient.getEntries<ContentfulEvent>({
-    content_type: 'evenement',
-  })
-).items
-  .map((item) => ({
-    datum: item.fields.datum,
-    eindDatum: item.fields.eindDatum,
-    naam: item.fields.naam,
-  }))
+const events = (await getEntries('evenement', mapEvent))
   .filter((item) => {
     return eventIsInfuture(item.datum)
   })
