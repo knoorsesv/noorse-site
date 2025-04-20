@@ -2,11 +2,6 @@ import type { FC } from 'react'
 import { LinkWrapper } from '../wrappers/link-wrapper.tsx'
 import type { Team } from './types/team'
 
-interface Ploeg {
-  naam?: string
-  bouw?: string
-}
-
 // todo: dees is echt lelijk
 export const CategoryTeamNavigation: FC<{
   categoryName: string
@@ -14,7 +9,7 @@ export const CategoryTeamNavigation: FC<{
   header?: string
 }> = ({ categoryName, teams, header }) => {
   const bouwen = teams.reduce(
-    (bouwlijst: Record<string, Ploeg[]>, ploeg: Ploeg) => {
+    (bouwlijst: Record<string, Team[]>, ploeg: Team) => {
       const key = ploeg.bouw || 'Andere'
       return {
         ...bouwlijst,
@@ -48,14 +43,14 @@ export const CategoryTeamNavigation: FC<{
               <h4 className="mb-2 font-bold capitalize">{bouw}</h4>
               <div className={'flex-start flex w-full flex-wrap gap-2'}>
                 {bouwen[bouw]
-                  .sort((ploeg1: Ploeg, ploeg2: Ploeg) => {
+                  .sort((ploeg1: Team, ploeg2: Team) => {
                     const normalizedName1 =
-                      ploeg1.naam
+                      ploeg1.name
                         ?.replaceAll('Geel', '')
                         .replaceAll('Groen', '')
                         .replace(/^U/, '') || ''
                     const normalizedName2 =
-                      ploeg2.naam
+                      ploeg2.name
                         ?.replaceAll('Geel', '')
                         .replaceAll('Groen', '')
                         .replace(/^U/, '') || ''
@@ -66,7 +61,7 @@ export const CategoryTeamNavigation: FC<{
                       if (
                         parseInt(normalizedName1) === parseInt(normalizedName2)
                       ) {
-                        if (ploeg1.naam?.includes('Geel')) {
+                        if (ploeg1.name?.includes('Geel')) {
                           return -1
                         }
                       }
@@ -75,17 +70,17 @@ export const CategoryTeamNavigation: FC<{
                       )
                     }
 
-                    return (ploeg1?.naam || '') > (ploeg2?.naam || '') ? 1 : -1
+                    return (ploeg1?.name || '') > (ploeg2?.name || '') ? 1 : -1
                   })
                   .map((ploeg) => (
                     <LinkWrapper
-                      key={ploeg.naam}
-                      href={`/team/${categoryName.toLowerCase()}/${ploeg.naam?.toLowerCase()}`}
+                      key={ploeg.name}
+                      href={`/team/${categoryName.toLowerCase()}/${ploeg.name?.toLowerCase()}`}
                       className={
                         'w-[80px] text-center text-gray-dark underline'
                       }
                     >
-                      {ploeg.naam}
+                      {ploeg.name}
                     </LinkWrapper>
                   ))}
               </div>
