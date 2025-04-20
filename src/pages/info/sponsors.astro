@@ -25,5 +25,5 @@ const page = await getPage('Sponsors')
 ---
 
 <Layout title="Info - Bestuur" currentURL={Astro.url}>
-  <SponsorPage sponsors={sponsors} description={page.body} />
+  <SponsorPage sponsors={sponsors} description={page?.body} />
 </Layout>

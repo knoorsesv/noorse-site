@@ -10,24 +10,26 @@ export const getPage = async (title: string) => {
     })
   ).items[0]
 
-  return {
-    title: page.fields.title,
-    body: page.fields.body,
-    attachment: page.fields.attachment
-      .map((asset) => {
-        const fields = asset?.fields
-        if (!fields) return null
-        if (!fields.file) return null
+  return (
+    page && {
+      title: page.fields.title,
+      body: page.fields.body,
+      attachment: page.fields.attachment
+        ?.map((asset) => {
+          const fields = asset?.fields
+          if (!fields) return null
+          if (!fields.file) return null
 
-        return {
-          title: fields?.title,
-          file: {
-            url: fields.file.url,
-            fileName: fields.file.fileName,
-            contentType: fields.file.contentType,
-          },
-        } satisfies Attachment
-      })
-      .filter((asset) => !!asset),
-  }
+          return {
+            title: fields?.title,
+            file: {
+              url: fields.file.url,
+              fileName: fields.file.fileName,
+              contentType: fields.file.contentType,
+            },
+          } satisfies Attachment
+        })
+        .filter((asset) => !!asset),
+    }
+  )
 }
