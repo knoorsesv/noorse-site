@@ -1,7 +1,12 @@
 import type { EntrySkeletonType, EntrySys, ResolvedField } from 'contentful'
 import type { BestuursLid } from '../../react/types/bestuur'
-import type { ContentfulBestuursLid, ContentfulNewsItem } from './types'
+import type {
+  ContentfulBestuursLid,
+  ContentfulNewsItem,
+  ContentfulSponsor,
+} from './types'
 import type { NewsItem } from '../../react/types/news'
+import type { Sponsor } from '../../react/types/sponsor'
 
 export type Mapper<ContentfulType extends EntrySkeletonType, ReturnType> = (
   fields: {
@@ -24,6 +29,16 @@ export const mapBestuursLid: Mapper<ContentfulBestuursLid, BestuursLid> = (
     email: fields.email,
   }
 }
+
+export const mapSponsor: Mapper<ContentfulSponsor, Sponsor> = (fields) => ({
+  naam: fields.naam,
+  websiteUrl: fields.websiteUrl,
+  logo: {
+    responsiveURL:
+      fields.logo?.fields.file?.url.replace('//', 'https://') +
+      '?w=300&h=200&fm=jpg&fl=progressive',
+  },
+})
 
 export const mapNewsItem: Mapper<ContentfulNewsItem, NewsItem> = (
   fields,

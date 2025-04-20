@@ -1,26 +1,10 @@
 ---
-import { getPage } from '../../data/contentful/get-entries'
-import type { ContentfulSponsor } from '../../data/contentful/types'
+import { getEntries, getPage } from '../../data/contentful/get-entries'
+import { mapSponsor } from '../../data/contentful/mapping'
 import Layout from '../../layouts/Layout.astro'
-import { contentfulClient } from '../../lib/contentful'
 import { SponsorPage } from '../../react/pages'
 
-const sponsors = (
-  await contentfulClient.withoutUnresolvableLinks.getEntries<ContentfulSponsor>(
-    {
-      content_type: 'sponsor',
-    }
-  )
-).items.map(({ fields }) => ({
-  naam: fields.naam,
-  websiteUrl: fields.websiteUrl,
-  logo: {
-    responsiveURL:
-      fields.logo?.fields.file?.url.replace('//', 'https://') +
-      '?w=300&h=200&fm=jpg&fl=progressive',
-  },
-}))
-
+const sponsors = await getEntries('sponsor', mapSponsor)
 const page = await getPage('Sponsors')
 ---
 
