@@ -11,6 +11,6 @@ export const imageFactory: Factory<Image> = (attrs) => ({
 export const simpleImageFactory: Factory<{
   responsiveURL: string
 }> = (attrs) => ({
-  responsiveURL: 'https://picsum.photos/320/320',
+  responsiveURL: 'https://picsum.photos/seed/neurse/320/320',
   ...attrs,
 })

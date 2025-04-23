@@ -17,7 +17,7 @@ export const newsFactory: Factory<NewsItem> = (attrs) => ({
       file: {
         contentType: 'image/jpeg',
         fileName: 'some picture',
-        url: 'https://picsum.photos/520/320',
+        url: 'https://picsum.photos/seed/neurse/520/320',
       },
     },
     {
@@ -26,7 +26,7 @@ export const newsFactory: Factory<NewsItem> = (attrs) => ({
       file: {
         contentType: 'image/jpeg',
         fileName: 'some picture',
-        url: 'https://picsum.photos/520/320',
+        url: 'https://picsum.photos/seed/neurse/520/320',
       },
     },
     {
@@ -35,7 +35,7 @@ export const newsFactory: Factory<NewsItem> = (attrs) => ({
       file: {
         contentType: 'image/jpeg',
         fileName: 'some picture',
-        url: 'https://picsum.photos/520/320',
+        url: 'https://picsum.photos/seed/neurse/520/320',
       },
     },
   ],

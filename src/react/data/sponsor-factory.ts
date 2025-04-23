@@ -7,7 +7,7 @@ export const sponsorFactory: Factory<Sponsor> = (attrs) => ({
   naam: 'Sponsor',
   websiteUrl: 'www.google.be',
   logo: simpleImageFactory({
-    responsiveURL: 'https://picsum.photos/320/320',
+    responsiveURL: 'https://picsum.photos/seed/neurse/320/320',
   }),
   ...attrs,
 })
