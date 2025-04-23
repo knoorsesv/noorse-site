@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test')
 const pages = [
   {
     pageUrl: '/',
-    pageName: '-home',
+    pageName: 'home',
     waitFor: '[alt="Sport Vlaanderen Logo"]',
     takeFullPage: true,
   },
@@ -14,7 +14,7 @@ const pages = [
   { pageUrl: '/nieuws/Alle Mogelijke Opties', takeFullPage: true },
   {
     pageUrl: '/team/senioren/eerste%20elftal',
-    pageName: '-ploeg',
+    pageName: 'ploeg',
     waitFor: '[alt="Ploegfoto Eerste Elftal"]',
     timeout: 40000,
   },
@@ -38,7 +38,7 @@ test.describe.parallel('Screenshot Test', () => {
         console.error(e)
       }
       // todo: maybe scroll on big pages? / open navbar on mobile?
-      const snapshotLocation = `page${pageName || pageUrl.replace('/', '-')}.png`
+      const snapshotLocation = `page-${pageName || pageUrl.replace('/', '-')}.png`
       console.log('comparing screenshot to', snapshotLocation)
       await expect(page).toHaveScreenshot(snapshotLocation, {
         maxDiffPixelRatio: 0.05,
