@@ -38,7 +38,7 @@ test.describe.parallel('Screenshot Test', () => {
         console.error(e)
       }
       // todo: maybe scroll on big pages? / open navbar on mobile?
-      const snapshotLocation = `page-${pageName || pageUrl.replace('/', '-')}.png`
+      const snapshotLocation = `page${pageName ? `-${pageName}` : pageUrl.replace('/', '-')}.png`
       console.log('comparing screenshot to', snapshotLocation)
       await expect(page).toHaveScreenshot(snapshotLocation, {
         maxDiffPixelRatio: 0.05,
