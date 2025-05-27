@@ -21,11 +21,11 @@ importers:
         specifier: 6.0.2
         version: 6.0.2(astro@5.7.13(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))(tailwindcss@3.4.17)
       '@fontsource/lato':
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 5.2.5
+        version: 5.2.5
       '@fontsource/mulish':
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 5.2.5
+        version: 5.2.5
       '@netlify/classnames-template-literals':
         specifier: 1.0.3
         version: 1.0.3
@@ -866,11 +866,11 @@ packages:
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/lato@5.1.0':
-    resolution: {integrity: sha512-wYa/DeUS/WuaJoR/vY+v74W6gtOm98DgoRdSj4FuMXe0E0XYGAEVOgh+DxusJR3EglRZU6ZZDF7vZ881vV1KGA==}
+  '@fontsource/lato@5.2.5':
+    resolution: {integrity: sha512-d8aogKOul7a3eYG3UzTG8PB6A0D+6tlkFQCACmKQ7qTwB3XS6QmkSW1L0vYbVE9CfCRq/Zpb5sG3gNA6yJea/A==}
 
-  '@fontsource/mulish@5.1.0':
-    resolution: {integrity: sha512-dETFYrY9aGE1aD8g3xSkpyAir2YDjrnYsujZrZj1C/3gv3iKlr2MUQYUFRTCdcnoFLMXpq2izDW/644OGgYsPQ==}
+  '@fontsource/mulish@5.2.5':
+    resolution: {integrity: sha512-nNef+iqPvhG6q2XF1ztLCfussXE36oqhw1mX8hcl0PKASu1gO12irJHHkkxdcvf+WGtaONOIYywtv5Ah+OtSPg==}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -6862,9 +6862,9 @@ snapshots:
       '@eslint/core': 0.10.0
       levn: 0.4.1
 
-  '@fontsource/lato@5.1.0': {}
+  '@fontsource/lato@5.2.5': {}
 
-  '@fontsource/mulish@5.1.0': {}
+  '@fontsource/mulish@5.2.5': {}
 
   '@hapi/hoek@9.3.0': {}
 
