@@ -16,16 +16,16 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.8.3)
       '@astrojs/react':
         specifier: 4.3.0
-        version: 4.3.0(@types/node@22.7.4)(@types/react-dom@19.1.6(@types/react@19.1.6))(@types/react@19.1.6)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.6.1)
+        version: 4.3.0(@types/node@22.7.4)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.6.1)
       '@astrojs/tailwind':
         specifier: 6.0.2
-        version: 6.0.2(astro@5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))(tailwindcss@3.4.17)
+        version: 6.0.2(astro@5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))(tailwindcss@3.4.17)
       '@fontsource/lato':
-        specifier: 5.2.5
-        version: 5.2.5
+        specifier: 5.2.6
+        version: 5.2.6
       '@fontsource/mulish':
-        specifier: 5.2.5
-        version: 5.2.5
+        specifier: 5.2.6
+        version: 5.2.6
       '@netlify/classnames-template-literals':
         specifier: 1.0.3
         version: 1.0.3
@@ -36,20 +36,20 @@ importers:
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
       '@types/react':
-        specifier: 19.1.6
-        version: 19.1.6
+        specifier: 19.1.8
+        version: 19.1.8
       '@types/react-dom':
         specifier: 19.1.6
-        version: 19.1.6(@types/react@19.1.6)
+        version: 19.1.6(@types/react@19.1.8)
       '@vitejs/plugin-react':
         specifier: 4.5.2
         version: 4.5.2(vite@6.3.5(@types/node@22.7.4)(jiti@2.4.2)(yaml@2.6.1))
       astro:
-        specifier: 5.9.1
-        version: 5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)
+        specifier: 5.9.3
+        version: 5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)
       astro-imagetools:
         specifier: 0.9.0
-        version: 0.9.0(astro@5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))
+        version: 0.9.0(astro@5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))
       contentful:
         specifier: 11.5.23
         version: 11.5.23
@@ -887,11 +887,11 @@ packages:
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/lato@5.2.5':
-    resolution: {integrity: sha512-d8aogKOul7a3eYG3UzTG8PB6A0D+6tlkFQCACmKQ7qTwB3XS6QmkSW1L0vYbVE9CfCRq/Zpb5sG3gNA6yJea/A==}
+  '@fontsource/lato@5.2.6':
+    resolution: {integrity: sha512-ykbyuHKHdFsV8QNWPgo2kkCV0veY8/w1HzPlTd7f08LRGGYijPoN7QHkVKPq5QLpgeNauPPe+0a6oRhd8b6MpQ==}
 
-  '@fontsource/mulish@5.2.5':
-    resolution: {integrity: sha512-nNef+iqPvhG6q2XF1ztLCfussXE36oqhw1mX8hcl0PKASu1gO12irJHHkkxdcvf+WGtaONOIYywtv5Ah+OtSPg==}
+  '@fontsource/mulish@5.2.6':
+    resolution: {integrity: sha512-5fGU/WT3vvpdYEqmAf0ufmoacpFTkXmvaIQ/rKvXTW9p39+Y5HlZAcHQOm/mVVb+xUUV+d9Djzlhr+pJtSDJhg==}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -1760,8 +1760,8 @@ packages:
   '@types/react@18.3.12':
     resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
 
-  '@types/react@19.1.6':
-    resolution: {integrity: sha512-JeG0rEWak0N6Itr6QUx+X60uQmN+5t3j9r/OVDtWzFXKaj6kD1BwJzOksD0FF6iWxZlbE1kB0q9vtnU2ekqa1Q==}
+  '@types/react@19.1.8':
+    resolution: {integrity: sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==}
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -2094,8 +2094,8 @@ packages:
     peerDependencies:
       astro: '>=0.26 || >=1.0.0-beta'
 
-  astro@5.9.1:
-    resolution: {integrity: sha512-wxoJcTbuDZNFSv6EaL0PAlrp0Wx6VnOAULCXvy0scsV70oWMeUkdxuBxfO54JxO5Qgyvwj9h99y6E0elqOpGtA==}
+  astro@5.9.3:
+    resolution: {integrity: sha512-VReZrpUa/3rfeiVvsQ1A2M3ujDPI+pDGIYOMtXPEZwut8tZoEyealXXLjitgCsJ+3dunKGZbg4Eak6i+r0vniw==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -6270,10 +6270,10 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/react@4.3.0(@types/node@22.7.4)(@types/react-dom@19.1.6(@types/react@19.1.6))(@types/react@19.1.6)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.6.1)':
+  '@astrojs/react@4.3.0(@types/node@22.7.4)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.6.1)':
     dependencies:
-      '@types/react': 19.1.6
-      '@types/react-dom': 19.1.6(@types/react@19.1.6)
+      '@types/react': 19.1.8
+      '@types/react-dom': 19.1.6(@types/react@19.1.8)
       '@vitejs/plugin-react': 4.5.2(vite@6.3.5(@types/node@22.7.4)(jiti@2.4.2)(yaml@2.6.1))
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -6293,9 +6293,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@astrojs/tailwind@6.0.2(astro@5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.2(astro@5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -6378,15 +6378,15 @@ snapshots:
 
   '@babel/generator@7.25.6':
     dependencies:
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
 
   '@babel/generator@7.27.1':
     dependencies:
-      '@babel/parser': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 3.0.2
@@ -6418,7 +6418,7 @@ snapshots:
   '@babel/helper-module-imports@7.25.9':
     dependencies:
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
     transitivePeerDependencies:
       - supports-color
 
@@ -6453,7 +6453,7 @@ snapshots:
   '@babel/helper-simple-access@7.24.7':
     dependencies:
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
     transitivePeerDependencies:
       - supports-color
 
@@ -6476,7 +6476,7 @@ snapshots:
   '@babel/helpers@7.25.6':
     dependencies:
       '@babel/template': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
 
   '@babel/helpers@7.27.6':
     dependencies:
@@ -6492,11 +6492,11 @@ snapshots:
 
   '@babel/parser@7.25.6':
     dependencies:
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
 
   '@babel/parser@7.27.1':
     dependencies:
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
 
   '@babel/parser@7.27.5':
     dependencies:
@@ -6519,14 +6519,14 @@ snapshots:
   '@babel/template@7.25.0':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
 
   '@babel/template@7.27.1':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
 
   '@babel/template@7.27.2':
     dependencies:
@@ -6550,9 +6550,9 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/generator': 7.27.1
-      '@babel/parser': 7.27.1
+      '@babel/parser': 7.27.5
       '@babel/template': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
       debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
@@ -6932,9 +6932,9 @@ snapshots:
       '@eslint/core': 0.10.0
       levn: 0.4.1
 
-  '@fontsource/lato@5.2.5': {}
+  '@fontsource/lato@5.2.6': {}
 
-  '@fontsource/mulish@5.2.5': {}
+  '@fontsource/mulish@5.2.6': {}
 
   '@hapi/hoek@9.3.0': {}
 
@@ -7807,12 +7807,12 @@ snapshots:
 
   '@types/babel__generator@7.6.8':
     dependencies:
-      '@babel/types': 7.27.1
+      '@babel/types': 7.27.6
 
   '@types/babel__template@7.4.4':
     dependencies:
-      '@babel/parser': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
 
   '@types/babel__traverse@7.20.5':
     dependencies:
@@ -7912,20 +7912,20 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.1.6(@types/react@19.1.6)':
+  '@types/react-dom@19.1.6(@types/react@19.1.8)':
     dependencies:
-      '@types/react': 19.1.6
+      '@types/react': 19.1.8
 
   '@types/react-helmet@6.1.11':
     dependencies:
-      '@types/react': 19.1.6
+      '@types/react': 19.1.8
 
   '@types/react@18.3.12':
     dependencies:
       '@types/prop-types': 15.7.11
       csstype: 3.1.3
 
-  '@types/react@19.1.6':
+  '@types/react@19.1.8':
     dependencies:
       csstype: 3.1.3
 
@@ -8359,10 +8359,10 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-imagetools@0.9.0(astro@5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)):
+  astro-imagetools@0.9.0(astro@5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)):
     dependencies:
       '@astropub/codecs': 0.4.4
-      astro: 5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1)
       file-type: 17.1.1
       find-cache-dir: 3.3.2
       find-up: 6.3.0
@@ -8371,7 +8371,7 @@ snapshots:
     optionalDependencies:
       imagetools-core: 3.0.2
 
-  astro@5.9.1(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1):
+  astro@5.9.3(@types/node@22.7.4)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -10702,8 +10702,8 @@ snapshots:
 
   magicast@0.3.5:
     dependencies:
-      '@babel/parser': 7.27.1
-      '@babel/types': 7.27.1
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
       source-map-js: 1.2.1
 
   make-dir@3.1.0:
