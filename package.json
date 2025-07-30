@@ -94,7 +94,7 @@
     "globals": "16.2.0",
     "husky": "9.1.7",
     "json-sort-cli": "4.0.10",
-    "lint-staged": "15.2.11",
+    "lint-staged": "16.1.2",
     "nodemon": "3.1.10",
     "postcss": "8.4.49",
     "prettier": "3.2.5",
