@@ -58,7 +58,7 @@
     "@vitejs/plugin-react": "4.5.2",
     "astro": "5.9.3",
     "astro-imagetools": "0.9.0",
-    "contentful": "11.7.1",
+    "contentful": "11.7.13",
     "date-fns": "4.1.0",
     "marked": "15.0.12",
     "prop-types": "15.8.1",
@@ -93,7 +93,7 @@
     "eslint-plugin-react": "7.37.5",
     "globals": "16.2.0",
     "husky": "9.1.7",
-    "json-sort-cli": "4.0.9",
+    "json-sort-cli": "4.0.10",
     "lint-staged": "15.2.11",
     "nodemon": "3.1.10",
     "postcss": "8.4.49",
@@ -115,7 +115,7 @@
   },
   "pnpm": {
     "overrides": {
-      "sharp": "0.34.2"
+      "sharp": "0.34.3"
     }
   },
   "readme": "ERROR: No README data found!",
