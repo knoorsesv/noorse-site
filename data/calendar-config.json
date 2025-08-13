@@ -1,252 +1,252 @@
 [
   {
-    "vvName": "Eerste Elftal (Vrouwen) A",
-    "teamName": "Dames 1",
-    "category": "Dames",
-    "source": "contentful",
     "calendarId": "mgdhoaltss9jgonrd1ki8fv16o@group.calendar.google.com",
-    "vvId": "337399"
-  },
-  {
-    "vvName": "Eerste Elftal (Vrouwen) B",
-    "teamName": "Dames 2",
     "category": "Dames",
     "source": "contentful",
+    "teamName": "Dames 1",
+    "vvId": "337399",
+    "vvName": "Eerste Elftal (Vrouwen) A"
+  },
+  {
     "calendarId": "1urtobtqabnp9vbjahjv62itp8@group.calendar.google.com",
-    "vvId": "337398"
-  },
-  {
-    "vvName": "Recrea Vrouwen",
-    "teamName": "Dames 3",
     "category": "Dames",
     "source": "contentful",
+    "teamName": "Dames 2",
+    "vvId": "337398",
+    "vvName": "Eerste Elftal (Vrouwen) B"
+  },
+  {
     "calendarId": "7j25qpo5ic0acvnida6iripu90@group.calendar.google.com",
-    "vvId": "348554"
+    "category": "Dames",
+    "source": "contentful",
+    "teamName": "Dames 3",
+    "vvId": "348554",
+    "vvName": "Recrea Vrouwen"
   },
   {
-    "vvName": "Eerste Elftal",
-    "teamName": "Eerste Elftal",
-    "category": "Senioren",
-    "source": "contentful",
     "calendarId": "4cklu63vhlfe3353mckt69vmmo@group.calendar.google.com",
-    "vvId": "337396"
-  },
-  {
-    "vvName": "Recrea Mannen A",
-    "teamName": "Recrea A",
     "category": "Senioren",
     "source": "contentful",
+    "teamName": "Eerste Elftal",
+    "vvId": "337396",
+    "vvName": "Eerste Elftal"
+  },
+  {
     "calendarId": "1rk5f44etng16fa6mv3rsod29s@group.calendar.google.com",
-    "vvId": "337403"
-  },
-  {
-    "vvName": "Recrea Mannen B",
-    "teamName": "Recrea B",
     "category": "Senioren",
     "source": "contentful",
+    "teamName": "Recrea A",
+    "vvId": "337403",
+    "vvName": "Recrea Mannen A"
+  },
+  {
     "calendarId": "5fq2ftvgpq1vnijcm2l96v38n8@group.calendar.google.com",
-    "vvId": "337401"
-  },
-  {
-    "vvName": "Reserven",
-    "teamName": "Reserven",
     "category": "Senioren",
     "source": "contentful",
+    "teamName": "Recrea B",
+    "vvId": "337401",
+    "vvName": "Recrea Mannen B"
+  },
+  {
     "calendarId": "9e9sdqp0ivfeuppv1fgsl7gvfg@group.calendar.google.com",
-    "vvId": "337400"
-  },
-  {
-    "vvName": "U10 A",
-    "teamName": "U10 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "bsdl28sgevh3b9h236puj22rsc@group.calendar.google.com",
-    "vvId": "357833"
-  },
-  {
-    "vvName": "U10 B",
-    "teamName": "U10 Groen",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "evega9lhs49q8ud774qfmlbulc@group.calendar.google.com",
-    "vvId": "357834"
-  },
-  {
-    "vvName": "U11",
-    "teamName": "U11 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "u501g5akj6m2eao6amop36hqlg@group.calendar.google.com",
-    "vvId": "357835"
-  },
-  {
-    "vvName": "U11 Meisjes",
-    "teamName": "U11M Geel",
-    "category": "Jeugd Meisjes",
-    "source": "contentful",
-    "calendarId": "a3ebe8d4f2be6785441f85dcb8ae03e5633f681171f3b2e86be025f720e6a472@group.calendar.google.com",
-    "vvId": "357823"
-  },
-  {
-    "vvName": "U12 A",
-    "teamName": "U12 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "4hr2la945c1uts45qrtp5oarg0@group.calendar.google.com",
-    "vvId": "357837"
-  },
-  {
-    "vvName": "U12 B",
-    "teamName": "U12 Groen",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "59rbt97td6kmqo9privnuqoqqk@group.calendar.google.com",
-    "vvId": "357836"
-  },
-  {
-    "vvName": "U13 B",
-    "teamName": "U13 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "ccfs2bgfsrbei2gq33psot5jqc@group.calendar.google.com",
-    "vvId": "357838"
-  },
-  {
-    "vvName": "U13 A",
-    "teamName": "U13 Groen",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "246u0ubtjqpficuhgj1em8jeik@group.calendar.google.com",
-    "vvId": "357839"
-  },
-  {
-    "vvName": "U13 Meisjes B",
-    "teamName": "U13M Geel",
-    "category": "Jeugd Meisjes",
-    "source": "contentful",
-    "calendarId": "7c317deec8b2112d02973a7c6bffb9920a9a5cbcf628f35c7580ddca63235070@group.calendar.google.com",
-    "vvId": "357824"
-  },
-  {
-    "vvName": "U13 Meisjes A",
-    "teamName": "U13M Groen",
-    "category": "Jeugd Meisjes",
-    "source": "contentful",
-    "calendarId": "e30a53f9e8e4736496d641f69ab5584645571f105f25c86d43941965cce731aa@group.calendar.google.com",
-    "vvId": "357825"
-  },
-  {
-    "vvName": "U15 A",
-    "teamName": "U15 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "3br97mn1uo8oo6t2p9ot7a9fdk@group.calendar.google.com",
-    "vvId": "357841"
-  },
-  {
-    "vvName": "U15 B",
-    "teamName": "U15 Groen",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "e2a8e679ad089b2a7a6ab5e84261cfbb68b1afb7c38e13090af77716f9539eee@group.calendar.google.com",
-    "vvId": "357840"
-  },
-  {
-    "teamName": "U16 meisjes",
-    "vvName": "U16 meisjes",
-    "source": "vv",
-    "calendarId": "fefaa36651fbf1c00fad44e317ae74bfbf5db4510cc4073c4fdc6dcb7873051e@group.calendar.google.com",
-    "vvId": "357826"
-  },
-  {
-    "teamName": "U17",
-    "vvName": "U17",
-    "source": "vv",
-    "calendarId": "117c4a2d2347e33301e5ec00aec5041fc81ba221b1a4d4ae942e986ac7b11ebe@group.calendar.google.com",
-    "vvId": "357842"
-  },
-  {
-    "vvName": "U19 A",
-    "teamName": "U19 A",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "c64994976a660ab67e16edcb0cdca3dcccee19bb2584a57ad603f67084463ee7@group.calendar.google.com",
-    "vvId": "357843"
-  },
-  {
-    "vvName": "U19 B",
-    "teamName": "U19 B",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "c24c7d6de519c1c0277b8f2e8320c47b0b9264dcf27d8ddf7f64a8b6773d8ce9@group.calendar.google.com",
-    "vvId": "357847"
-  },
-  {
-    "teamName": "U6",
-    "vvName": "U6",
-    "source": "vv",
-    "calendarId": "fe6b6a11fd2f39c209fb46d6d9d84f09e1d30b35246644aae86ae9b126b6ff96@group.calendar.google.com",
-    "vvId": "357827"
-  },
-  {
-    "teamName": "U7",
-    "vvName": "U7",
-    "source": "vv",
-    "calendarId": "raak8nuksmc82n5b44fhvemut0@group.calendar.google.com",
-    "vvId": "357828"
-  },
-  {
-    "vvName": "U8 A",
-    "teamName": "U8 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "i1ddh78ljoopm6ca1a98kli08k@group.calendar.google.com",
-    "vvId": "357830"
-  },
-  {
-    "vvName": "U8 B",
-    "teamName": "U8 Groen",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "ijoeu2c77719kdk2njue0iil04@group.calendar.google.com",
-    "vvId": "357829"
-  },
-  {
-    "vvName": "U9 A",
-    "teamName": "U9 Geel",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "4c1vo2jh3varpbnc0s2ac2klvo@group.calendar.google.com",
-    "vvId": "357832"
-  },
-  {
-    "vvName": "U9 B",
-    "teamName": "U9 Groen",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "kr85nd39df511fpbjllo2c9cmo@group.calendar.google.com",
-    "vvId": "357831"
-  },
-  {
-    "teamName": "U9 meisjes A",
-    "vvName": "U9 meisjes A",
-    "source": "vv",
-    "calendarId": "aa21adafdf1b034bb2cee037444d26915d8dcb18079fbb60ddbb1d1fd2045469@group.calendar.google.com",
-    "vvId": "357822"
-  },
-  {
-    "teamName": "U9 meisjes B",
-    "vvName": "U9 meisjes B",
-    "source": "vv",
-    "calendarId": "924dbe75577cd29a2581f767b10142b0ee0cacef1259f07c975068735e63aabb@group.calendar.google.com",
-    "vvId": "357821"
-  },
-  {
-    "vvName": "Recrea Veteranen",
-    "teamName": "Veteranen",
     "category": "Senioren",
     "source": "contentful",
+    "teamName": "Reserven",
+    "vvId": "337400",
+    "vvName": "Reserven"
+  },
+  {
+    "calendarId": "bsdl28sgevh3b9h236puj22rsc@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U10 Geel",
+    "vvId": "357833",
+    "vvName": "U10 A"
+  },
+  {
+    "calendarId": "evega9lhs49q8ud774qfmlbulc@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U10 Groen",
+    "vvId": "357834",
+    "vvName": "U10 B"
+  },
+  {
+    "calendarId": "u501g5akj6m2eao6amop36hqlg@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U11 Geel",
+    "vvId": "357835",
+    "vvName": "U11"
+  },
+  {
+    "calendarId": "a3ebe8d4f2be6785441f85dcb8ae03e5633f681171f3b2e86be025f720e6a472@group.calendar.google.com",
+    "category": "Jeugd Meisjes",
+    "source": "contentful",
+    "teamName": "U11M Geel",
+    "vvId": "357823",
+    "vvName": "U11 Meisjes"
+  },
+  {
+    "calendarId": "4hr2la945c1uts45qrtp5oarg0@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U12 Geel",
+    "vvId": "357837",
+    "vvName": "U12 A"
+  },
+  {
+    "calendarId": "59rbt97td6kmqo9privnuqoqqk@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U12 Groen",
+    "vvId": "357836",
+    "vvName": "U12 B"
+  },
+  {
+    "calendarId": "ccfs2bgfsrbei2gq33psot5jqc@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U13 Geel",
+    "vvId": "357838",
+    "vvName": "U13 B"
+  },
+  {
+    "calendarId": "246u0ubtjqpficuhgj1em8jeik@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U13 Groen",
+    "vvId": "357839",
+    "vvName": "U13 A"
+  },
+  {
+    "calendarId": "7c317deec8b2112d02973a7c6bffb9920a9a5cbcf628f35c7580ddca63235070@group.calendar.google.com",
+    "category": "Jeugd Meisjes",
+    "source": "contentful",
+    "teamName": "U13M Geel",
+    "vvId": "357824",
+    "vvName": "U13 Meisjes B"
+  },
+  {
+    "calendarId": "e30a53f9e8e4736496d641f69ab5584645571f105f25c86d43941965cce731aa@group.calendar.google.com",
+    "category": "Jeugd Meisjes",
+    "source": "contentful",
+    "teamName": "U13M Groen",
+    "vvId": "357825",
+    "vvName": "U13 Meisjes A"
+  },
+  {
+    "calendarId": "3br97mn1uo8oo6t2p9ot7a9fdk@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U15 Geel",
+    "vvId": "357841",
+    "vvName": "U15 A"
+  },
+  {
+    "calendarId": "e2a8e679ad089b2a7a6ab5e84261cfbb68b1afb7c38e13090af77716f9539eee@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U15 Groen",
+    "vvId": "357840",
+    "vvName": "U15 B"
+  },
+  {
+    "calendarId": "fefaa36651fbf1c00fad44e317ae74bfbf5db4510cc4073c4fdc6dcb7873051e@group.calendar.google.com",
+    "source": "vv",
+    "teamName": "U16 meisjes",
+    "vvId": "357826",
+    "vvName": "U16 meisjes"
+  },
+  {
+    "calendarId": "117c4a2d2347e33301e5ec00aec5041fc81ba221b1a4d4ae942e986ac7b11ebe@group.calendar.google.com",
+    "source": "vv",
+    "teamName": "U17",
+    "vvId": "357842",
+    "vvName": "U17"
+  },
+  {
+    "calendarId": "c64994976a660ab67e16edcb0cdca3dcccee19bb2584a57ad603f67084463ee7@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U19 A",
+    "vvId": "357843",
+    "vvName": "U19 A"
+  },
+  {
+    "calendarId": "c24c7d6de519c1c0277b8f2e8320c47b0b9264dcf27d8ddf7f64a8b6773d8ce9@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U19 B",
+    "vvId": "357847",
+    "vvName": "U19 B"
+  },
+  {
+    "calendarId": "fe6b6a11fd2f39c209fb46d6d9d84f09e1d30b35246644aae86ae9b126b6ff96@group.calendar.google.com",
+    "source": "vv",
+    "teamName": "U6",
+    "vvId": "357827",
+    "vvName": "U6"
+  },
+  {
+    "calendarId": "raak8nuksmc82n5b44fhvemut0@group.calendar.google.com",
+    "source": "vv",
+    "teamName": "U7",
+    "vvId": "357828",
+    "vvName": "U7"
+  },
+  {
+    "calendarId": "i1ddh78ljoopm6ca1a98kli08k@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U8 Geel",
+    "vvId": "357830",
+    "vvName": "U8 A"
+  },
+  {
+    "calendarId": "ijoeu2c77719kdk2njue0iil04@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U8 Groen",
+    "vvId": "357829",
+    "vvName": "U8 B"
+  },
+  {
+    "calendarId": "4c1vo2jh3varpbnc0s2ac2klvo@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U9 Geel",
+    "vvId": "357832",
+    "vvName": "U9 A"
+  },
+  {
+    "calendarId": "kr85nd39df511fpbjllo2c9cmo@group.calendar.google.com",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "teamName": "U9 Groen",
+    "vvId": "357831",
+    "vvName": "U9 B"
+  },
+  {
+    "calendarId": "aa21adafdf1b034bb2cee037444d26915d8dcb18079fbb60ddbb1d1fd2045469@group.calendar.google.com",
+    "source": "vv",
+    "teamName": "U9 meisjes A",
+    "vvId": "357822",
+    "vvName": "U9 meisjes A"
+  },
+  {
+    "calendarId": "924dbe75577cd29a2581f767b10142b0ee0cacef1259f07c975068735e63aabb@group.calendar.google.com",
+    "source": "vv",
+    "teamName": "U9 meisjes B",
+    "vvId": "357821",
+    "vvName": "U9 meisjes B"
+  },
+  {
     "calendarId": "i4v80hramd2gk473aaf0fbbkgg@group.calendar.google.com",
-    "vvId": "337402"
+    "category": "Senioren",
+    "source": "contentful",
+    "teamName": "Veteranen",
+    "vvId": "337402",
+    "vvName": "Recrea Veteranen"
   }
 ]

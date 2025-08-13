@@ -48,13 +48,13 @@ export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
               <ImageWrapper
                 image={newsItem.image}
                 alt={'News'} // todo: make alt tag specific
-                className="max-h-[300px] object-contain "
+                className="max-h-[300px] object-contain"
               />
             </div>
           )}
           <h3 className={'mb-6 mt-6 capitalize italic'}>{formattedDate}</h3>
           {newsItem.inhoud && <MarkDown content={newsItem.inhoud} />}
-          <section className={newsItem.inhoud ? 'prose ' : ''}>
+          <section className={newsItem.inhoud ? 'prose' : ''}>
             <Attachments attachments={newsItem.attachment} />
           </section>
           {!!images.length && (
@@ -89,7 +89,7 @@ const Images: FC<{ images: Attachment[]; className: string }> = ({
       <ImageWrapper
         image={image}
         className={
-          'aspect-square max-w-[75%] object-contain p-2 medium:max-w-[45%] '
+          'aspect-square max-w-[75%] object-contain p-2 medium:max-w-[45%]'
         }
         loading="lazy"
         key={image.title}
