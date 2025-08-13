@@ -68,7 +68,7 @@
     "react-lazy-load": "4.0.1",
     "react-typography": "0.16.23",
     "tailwindcss-elevation": "2.0.0",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "typography": "0.16.24"
   },
   "devDependencies": {
