@@ -73,18 +73,18 @@
   },
   {
     "vvName": "U11",
-    "teamName": "U11",
+    "teamName": "U11 Geel",
     "category": "Jeugd Jongens",
     "source": "contentful",
-    "calendarId": "f9934e4aaf682015296798fcf7bb046a65461c18390e40aa58cf62a75cdbe1cb@group.calendar.google.com",
+    "calendarId": "u501g5akj6m2eao6amop36hqlg@group.calendar.google.com",
     "vvId": "357835"
   },
   {
     "vvName": "U11 Meisjes",
-    "teamName": "U11M",
+    "teamName": "U11M Geel",
     "category": "Jeugd Meisjes",
     "source": "contentful",
-    "calendarId": "af7c9ebf2e9f1abaaf75fa90d739724f4f1f84834f1edbafd2b9b61c9fbe24dc@group.calendar.google.com",
+    "calendarId": "a3ebe8d4f2be6785441f85dcb8ae03e5633f681171f3b2e86be025f720e6a472@group.calendar.google.com",
     "vvId": "357823"
   },
   {
@@ -159,24 +159,25 @@
     "vvId": "357826"
   },
   {
-    "vvName": "U17 A",
     "teamName": "U17",
-    "category": "Jeugd Jongens",
-    "source": "contentful",
-    "calendarId": "o5iughnlovamcd1agubpe0snog@group.calendar.google.com",
+    "vvName": "U17",
+    "source": "vv",
+    "calendarId": "117c4a2d2347e33301e5ec00aec5041fc81ba221b1a4d4ae942e986ac7b11ebe@group.calendar.google.com",
     "vvId": "357842"
   },
   {
-    "teamName": "U19 A",
     "vvName": "U19 A",
-    "source": "vv",
+    "teamName": "U19 A",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
     "calendarId": "c64994976a660ab67e16edcb0cdca3dcccee19bb2584a57ad603f67084463ee7@group.calendar.google.com",
     "vvId": "357843"
   },
   {
-    "teamName": "U19 B",
     "vvName": "U19 B",
-    "source": "vv",
+    "teamName": "U19 B",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
     "calendarId": "c24c7d6de519c1c0277b8f2e8320c47b0b9264dcf27d8ddf7f64a8b6773d8ce9@group.calendar.google.com",
     "vvId": "357847"
   },
@@ -195,19 +196,20 @@
     "vvId": "357828"
   },
   {
-    "teamName": "U8 B",
-    "vvName": "U8 B",
-    "source": "vv",
-    "calendarId": "f55e63fc04ae3f8f4eb05003c5ef492855c141d9528fbf655102b1cb9a9d49a9@group.calendar.google.com",
-    "vvId": "357829"
-  },
-  {
     "vvName": "U8 A",
     "teamName": "U8 Geel",
     "category": "Jeugd Jongens",
     "source": "contentful",
     "calendarId": "i1ddh78ljoopm6ca1a98kli08k@group.calendar.google.com",
     "vvId": "357830"
+  },
+  {
+    "vvName": "U8 B",
+    "teamName": "U8 Groen",
+    "category": "Jeugd Jongens",
+    "source": "contentful",
+    "calendarId": "ijoeu2c77719kdk2njue0iil04@group.calendar.google.com",
+    "vvId": "357829"
   },
   {
     "vvName": "U9 A",
