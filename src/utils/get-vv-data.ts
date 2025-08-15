@@ -13,7 +13,7 @@ interface VvData {
       series?: Series[]
       rankings: Ranking[] | undefined | null
       __typename: string
-    }
+    } | null
   >
   teamCalendar: Record<string, Game[]>
 }
