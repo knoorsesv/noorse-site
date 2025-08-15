@@ -22,7 +22,7 @@ export const CategoryTeamNavigation: FC<{
   return (
     <nav
       aria-labelledby="team-navigation"
-      className={`flex flex-col items-center gap-8 bg-green-light bg-opacity-25 p-6`}
+      className={`flex flex-col items-center gap-8 bg-green-light/25  p-6`}
     >
       <h3
         id="team-navigation"

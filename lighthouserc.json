@@ -12,6 +12,9 @@
         "font-display": "off",
         "is-crawlable": "off",
         "image-aspect-ratio": "off",
+        "network-dependency-tree-insight": "off",
+        "lcp-discovery-insight": "off",
+        "image-delivery-insight": "off",
         "csp-xss": "off",
         "total-byte-weight": "off",
         "offscreen-images": [

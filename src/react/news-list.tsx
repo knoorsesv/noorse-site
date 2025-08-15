@@ -12,7 +12,7 @@ export const NewsList: FC<
       {shownNewsItems.map((newsItem) => (
         <div
           key={newsItem.title}
-          className={'mb-[10px] medium:basis-1/2 medium:px-2 large:basis-1/3 '}
+          className={'mb-[10px] medium:basis-1/2 medium:px-2 large:basis-1/3'}
         >
           <NewsCard newsItem={newsItem} />
         </div>
