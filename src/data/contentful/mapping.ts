@@ -42,7 +42,7 @@ export const mapSponsor: Mapper<ContentfulSponsor, Sponsor> = (fields) => ({
   logo: {
     responsiveURL:
       fields.logo?.fields.file?.url.replace('//', 'https://') +
-      '?w=300&h=200&fm=webp',
+      '?w=300&h=200&fm=webp&q=80',
   },
 })
 export const mapEvent: Mapper<ContentfulEvent, Event> = (fields) => ({
@@ -66,7 +66,7 @@ export const mapNewsItem: Mapper<ContentfulNewsItem, NewsItem> = (
   image: {
     responsiveURL:
       fields.image?.fields.file?.url &&
-      `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=webp`,
+      `${fields.image?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=webp&q=80`,
   },
   attachment: fields.attachment
     ?.filter((asset) => !!asset)
@@ -90,7 +90,7 @@ export const mapTeam: Mapper<ContentfulTeam, Team> = (fields) => ({
   ploegfoto: {
     responsiveURL:
       fields.ploegfoto?.fields.file?.url &&
-      `${fields.ploegfoto?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=webp`,
+      `${fields.ploegfoto?.fields.file?.url.replace('//', 'https://')}?w=300&h=200&fm=webp&q=80`,
   },
 })
 
