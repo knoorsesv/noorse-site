@@ -37,7 +37,7 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
     flex flex-col items-center
     medium:flex medium:flex-row medium:align-center medium:justify-between
     pt-12 pb-6 medium:px-6 large:px-32
-    bg-green bg-opacity-75`)
+    bg-green/75`)
 
   const sponsorListContainer = ctl(`flex flex-col items-center medium:hidden
       py-4
@@ -73,7 +73,7 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
 const CopyRightFooter: FC<{ version: string }> = ({ version }) => {
   const copyRightWrapper = ctl(`
   flex flex-col justify-start items-center
-  bg-green-dark bg-opacity-75
+  bg-green-dark/75
   text-black
   py-3`)
 

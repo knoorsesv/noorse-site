@@ -125,7 +125,7 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
             id={'background-image'}
             fetchpriority="high"
             loading={'eager'}
-            className="aspect-[3/2] h-full w-full object-cover object-center"
+            className="aspect-3/2 h-full w-full object-cover object-center"
             src={aerial as string}
           />
         </div>
@@ -327,7 +327,7 @@ const MenuLogo: FC<{ inlineWithMenuBar: boolean }> = ({
     <div
       id="logo-container"
       className={ctl(
-        `${transition} z-[60] flex items-center ${
+        `${transition} z-60 flex items-center ${
           inlineWithMenuBar
             ? `fixed left-16p top-8 justify-start large:left-96p`
             : `top-0 h-full w-full justify-center p-2 large:w-1/3 large:p-8`
@@ -350,7 +350,7 @@ const MenuToggle: FC<{
   open: boolean
 }> = ({ onClick, open }) => {
   return (
-    <div className="fixed right-3 top-3 z-[100] bg-green p-3">
+    <div className="fixed right-3 top-3 z-100 bg-green p-3">
       <button
         className="flex h-full items-center p-0 text-white"
         onClick={onClick}
