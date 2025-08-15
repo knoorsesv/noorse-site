@@ -14,7 +14,7 @@ import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
 import { useMediaQuery } from 'react-responsive'
 // @ts-expect-error todo: find a good way to add a type definition for this
-import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=600;800;1200&h=400;530;800&format=webp&q=50,100'
+import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=500;600;800;1200&h=260;400;530;800&format=webp&q=50,100'
 import type { SiteMap, SiteMapItem } from './types/sitemap'
 
 const transition = `transition-all duration-200 ease-in`
