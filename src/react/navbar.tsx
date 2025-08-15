@@ -141,26 +141,19 @@ const HorizontalMenuItemList: FC<{
 }> = ({ hasFullBackGround, siteMap, currentURL }) => {
   return (
     <nav
-      className={ctl(`${transition}
-                      fixed w-full
-                      pr-4
-                      ${hasFullBackGround ? `z-20` : 'z-50 h-0 p-0'}
-      `)}
+      className={ctl(
+        `${transition} fixed w-full pr-4 ${hasFullBackGround ? `z-20` : 'z-50 h-0 p-0'} `
+      )}
     >
       <ul
         id="menu-list"
-        className={ctl(`
-                    fixed right-0
-                    z-50 flex
-                    w-full list-none flex-row items-center justify-end
-                    gap-1 bg-green pr-6
-                    ${transition}
-                    ${
-                      hasFullBackGround
-                        ? `top-0 h-80p py-10 opacity-100`
-                        : 'top-6 h-16 pl-5 pt-0 opacity-80'
-                    }
-                  `)}
+        className={ctl(
+          `fixed right-0 z-50 flex w-full list-none flex-row items-center justify-end gap-1 bg-green pr-6 ${transition} ${
+            hasFullBackGround
+              ? `top-0 h-80p py-10 opacity-100`
+              : 'top-6 h-16 pl-5 pt-0 opacity-80'
+          } `
+        )}
       >
         {siteMap.items.map((item) => {
           const [opened, setOpened] = useState(false)
@@ -183,12 +176,9 @@ const HorizontalMenuItemList: FC<{
               {item.subItems?.length ? (
                 <ul
                   id="dropdown"
-                  className={ctl(`${transition}
-                          list-none
-                          ${opened ? 'absolute flex' : 'hidden group-hover:absolute group-hover:flex'}
-                          -ml-1 mr-4 w-auto flex-col
-                          items-start space-y-3 bg-green p-6 opacity-90
-                        `)}
+                  className={ctl(
+                    `${transition} list-none ${opened ? 'absolute flex' : 'hidden group-hover:absolute group-hover:flex'} -ml-1 mr-4 w-auto flex-col items-start space-y-3 bg-green p-6 opacity-90`
+                  )}
                 >
                   {item.subItems.map((subItem) => {
                     return (
@@ -335,20 +325,19 @@ const MenuLogo: FC<{ inlineWithMenuBar: boolean }> = ({
   return (
     <div
       id="logo-container"
-      className={ctl(`${transition}
-                z-[60] flex items-center 
-                ${
-                  inlineWithMenuBar
-                    ? `fixed left-16p top-8 justify-start large:left-96p`
-                    : `top-0 h-full w-full justify-center p-2 large:w-1/3 large:p-8 `
-                }`)}
+      className={ctl(
+        `${transition} z-[60] flex items-center ${
+          inlineWithMenuBar
+            ? `fixed left-16p top-8 justify-start large:left-96p`
+            : `top-0 h-full w-full justify-center p-2 large:w-1/3 large:p-8`
+        }`
+      )}
     >
       <ConditionalLinkWrapper href={href}>
         <Logo
-          className={ctl(`${transition} 
-            relative aspect-square h-auto max-h-full w-full
-            ${inlineWithMenuBar ? `max-w-[64px]` : `max-w-[200px] medium:max-w-[312px]`}
-          `)}
+          className={ctl(
+            `${transition} relative aspect-square h-auto max-h-full w-full ${inlineWithMenuBar ? `max-w-[64px]` : `max-w-[200px] medium:max-w-[312px]`} `
+          )}
         />
       </ConditionalLinkWrapper>
     </div>

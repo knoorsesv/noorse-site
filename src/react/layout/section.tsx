@@ -8,11 +8,9 @@ const Section: FC<PropsWithChildren<{ className?: string }>> & {
 } = ({ children, className }) => {
   return (
     <section
-      className={ctl(`${className}
-  group mb-4
-  w-full px-6 pb-6 pt-4 medium:mb-2
-  medium:pb-2
-  `)}
+      className={ctl(
+        `${className} group mb-4 w-full px-6 pb-6 pt-4 medium:mb-2 medium:pb-2`
+      )}
     >
       {children}
     </section>
@@ -28,7 +26,7 @@ const SectionTitle: FC<PropsWithChildren> = ({ children }) => {
         'mb-2 flex flex-col group-odd:items-start group-even:items-end'
       }
     >
-      <h2 className={`relative mb-4 text-3xl uppercase  `}>
+      <h2 className={`relative mb-4 text-3xl uppercase`}>
         {children}
         <div
           style={{
