@@ -121,8 +121,9 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
       >
         <div className="large:64v absolute h-32v w-full medium:h-48v">
           <ImageWrapper
-            id={'background-image'}
             alt={'Luchtfoto Noorse velden'}
+            id={'background-image'}
+            fetchpriority="high"
             loading={'eager'}
             className="aspect-[3/2] h-full w-full object-cover object-center"
             src={aerial as string}
