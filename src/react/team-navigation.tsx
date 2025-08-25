@@ -22,7 +22,7 @@ export const CategoryTeamNavigation: FC<{
   return (
     <nav
       aria-labelledby="team-navigation"
-      className={`flex flex-col items-center gap-8 bg-green-light/25  p-6`}
+      className={`bg-green-light/25 flex flex-col items-center gap-8 p-6`}
     >
       <h3
         id="team-navigation"
@@ -77,7 +77,7 @@ export const CategoryTeamNavigation: FC<{
                       key={ploeg.name}
                       href={`/team/${categoryName.toLowerCase()}/${ploeg.name?.toLowerCase()}`}
                       className={
-                        'w-[80px] text-center text-gray-dark underline'
+                        'text-gray-dark w-[80px] text-center underline'
                       }
                     >
                       {ploeg.name}

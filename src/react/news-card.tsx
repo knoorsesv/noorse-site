@@ -17,7 +17,7 @@ export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
           <ImageWrapper
             image={newsItem.image}
             srcSet={srcSet}
-            className="aspect-auto h-full w-auto inline-block"
+            className="inline-block aspect-auto h-full w-auto"
             height="200"
             alt={'Card Header'} // todo: this is not meaningful alt text about what is in the image
           />
@@ -41,7 +41,7 @@ export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
             {dateToShow && format(dateToShow, 'dd/MM/yy')}
           </div>
         </SubHeader>
-        <div className={'min-h-64p text-center text-gray-dark'}>{snippet}</div>
+        <div className={'min-h-64p text-gray-dark text-center'}>{snippet}</div>
       </Card>
     </a>
   )

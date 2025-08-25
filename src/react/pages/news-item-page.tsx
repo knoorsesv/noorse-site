@@ -52,7 +52,7 @@ export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
               />
             </div>
           )}
-          <h3 className={'mb-6 mt-6 capitalize italic'}>{formattedDate}</h3>
+          <h3 className={'mt-6 mb-6 capitalize italic'}>{formattedDate}</h3>
           {newsItem.inhoud && <MarkDown content={newsItem.inhoud} />}
           <section className={newsItem.inhoud ? 'prose' : ''}>
             <Attachments attachments={newsItem.attachment} />
@@ -60,7 +60,7 @@ export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
           {!!images.length && (
             <Images
               images={images}
-              className={newsItem.inhoud ? 'lg:px-4 prose' : 'max-w-[90%]'}
+              className={newsItem.inhoud ? 'prose lg:px-4' : 'max-w-[90%]'}
             />
           )}
         </div>
@@ -89,7 +89,7 @@ const Images: FC<{ images: Attachment[]; className: string }> = ({
       <ImageWrapper
         image={image}
         className={
-          'aspect-square max-w-[75%] object-contain p-2 medium:max-w-[45%]'
+          'medium:max-w-[45%] aspect-square max-w-[75%] object-contain p-2'
         }
         loading="lazy"
         key={image.title}

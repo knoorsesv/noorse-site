@@ -29,7 +29,7 @@ export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
   return (
     <table
       className={
-        'large:max-w-4/5 w-full table-fixed border-separate px-2 text-sm medium:px-16'
+        'large:max-w-4/5 medium:px-16 w-full table-fixed border-separate px-2 text-sm'
       }
     >
       <tbody>

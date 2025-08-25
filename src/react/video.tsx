@@ -20,7 +20,7 @@ const iframeStyle: HTMLProps<HTMLIFrameElement>['style'] = {
 
 export const ResponsiveVideo: FC<{ src: string }> = ({ src }) => {
   return (
-    <LazyLoad offset={100} className={'h-full w-full large:max-w-[600px]'}>
+    <LazyLoad offset={100} className={'large:max-w-[600px] h-full w-full'}>
       <div style={containerStyle}>
         <iframe
           src={src}

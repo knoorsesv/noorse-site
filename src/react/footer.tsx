@@ -53,7 +53,7 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
       <div className={wrapperClasses}>
         {/* todo: this shouldnt be an h1 */}
         <Title>K. Noorse S.V.</Title>
-        <div className={`w-1/4 pb-12 large:w-48 large:p-6`}>
+        <div className={`large:w-48 large:p-6 w-1/4 pb-12`}>
           <Logo width="100%" height="100%" />
         </div>
         <div className={sponsorListContainer}>
@@ -63,7 +63,7 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
           <ContactInfo />
         </div>
       </div>
-      <div className={'hidden w-full bg-gray-light medium:block'}>
+      <div className={'bg-gray-light medium:block hidden w-full'}>
         <SponsorList logoWidth={'medium:w-32 large:w-40'} sponsors={sponsors} />
       </div>
     </>

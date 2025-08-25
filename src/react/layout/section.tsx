@@ -9,7 +9,7 @@ const Section: FC<PropsWithChildren<{ className?: string }>> & {
   return (
     <section
       className={ctl(
-        `${className} group mb-4 w-full px-6 pb-6 pt-4 medium:mb-2 medium:pb-2`
+        `${className} group medium:mb-2 medium:pb-2 mb-4 w-full px-6 pt-4 pb-6`
       )}
     >
       {children}
@@ -60,11 +60,11 @@ const SectionTitle: FC<PropsWithChildren> = ({ children }) => {
 }
 
 const SectionTextContent: FC<PropsWithChildren> = ({ children }) => (
-  <div className="my-4 text-center medium:my-8">{children}</div>
+  <div className="medium:my-8 my-4 text-center">{children}</div>
 )
 
 const SectionList: FC<PropsWithChildren> = ({ children }) => (
-  <div className="flex w-full flex-col items-center large:max-w-[1024px] large:px-8">
+  <div className="large:max-w-[1024px] large:px-8 flex w-full flex-col items-center">
     {children}
   </div>
 )

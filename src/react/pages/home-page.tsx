@@ -33,7 +33,7 @@ export const HomePage: FC<{
   return (
     <>
       <NavbarWithCoverPhoto siteMap={siteMap} />
-      <main className={'flex w-full flex-col items-center medium:px-8'}>
+      <main className={'medium:px-8 flex w-full flex-col items-center'}>
         <Section.List>
           <Section>
             <Section.Title>Evenementen</Section.Title>

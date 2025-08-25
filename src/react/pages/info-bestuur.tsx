@@ -19,7 +19,7 @@ export const InfoBestuurPage: FC<{
     <Page title="Bestuur" centered={false}>
       <SubTitle>Organigram</SubTitle>
       <img
-        className="max-w-(--breakpoint-md) m-8 medium:w-[800px] medium:max-w-full"
+        className="medium:w-[800px] medium:max-w-full m-8 max-w-(--breakpoint-md)"
         alt="Bestuursorganigram"
         src={
           'https://www.mermaidchart.com/raw/8ba49245-d4d8-455f-ad19-50cccfa42034?version=v0.1&theme=light&format=svg'

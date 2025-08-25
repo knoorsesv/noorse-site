@@ -105,7 +105,7 @@ export const NavbarWithCoverPhoto: FC<{
 
 const NavSection: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <header id="nav-container" className="static h-64p w-full bg-green">
+    <header id="nav-container" className="h-64p bg-green static w-full">
       {children}
     </header>
   )
@@ -117,9 +117,9 @@ const NavSectionWithCoverPhoto = forwardRef<HTMLHeadElement, PropsWithChildren>(
       <header
         ref={ref}
         id="nav-container"
-        className="large:64v static h-32v w-full medium:h-48v"
+        className="large:64v h-32v medium:h-48v static w-full"
       >
-        <div className="large:64v absolute h-32v w-full medium:h-48v">
+        <div className="large:64v h-32v medium:h-48v absolute w-full">
           <ImageWrapper
             alt={'Luchtfoto Noorse velden'}
             id={'background-image'}
@@ -149,10 +149,10 @@ const HorizontalMenuItemList: FC<{
       <ul
         id="menu-list"
         className={ctl(
-          `fixed right-0 z-50 flex w-full list-none flex-row items-center justify-end gap-1 bg-green pr-6 ${transition} ${
+          `bg-green fixed right-0 z-50 flex w-full list-none flex-row items-center justify-end gap-1 pr-6 ${transition} ${
             hasFullBackGround
-              ? `top-0 h-80p py-10 opacity-100`
-              : 'top-6 h-16 pl-5 pt-0 opacity-80'
+              ? `h-80p top-0 py-10 opacity-100`
+              : 'top-6 h-16 pt-0 pl-5 opacity-80'
           } `
         )}
       >
@@ -178,7 +178,7 @@ const HorizontalMenuItemList: FC<{
                 <ul
                   id="dropdown"
                   className={ctl(
-                    `${transition} list-none ${opened ? 'absolute flex' : 'hidden group-hover:absolute group-hover:flex'} -ml-1 mr-4 w-auto flex-col items-start space-y-3 bg-green p-6 opacity-90`
+                    `${transition} list-none ${opened ? 'absolute flex' : 'hidden group-hover:absolute group-hover:flex'} bg-green mr-4 -ml-1 w-auto flex-col items-start space-y-3 p-6 opacity-90`
                   )}
                 >
                   {item.subItems.map((subItem) => {
@@ -212,10 +212,10 @@ const VerticalMenuItemList: FC<{
     <>
       <MenuToggle onClick={toggleMenuShown} open={sideBarMenuShown} />
       {sideBarMenuShown ? (
-        <nav className="fixed right-0 top-0 z-50 h-full w-1/2 medium:w-2/5">
+        <nav className="medium:w-2/5 fixed top-0 right-0 z-50 h-full w-1/2">
           <ul
             id="menu-list"
-            className="flex h-full list-none flex-col space-y-3 bg-green pr-4 pt-20"
+            className="bg-green flex h-full list-none flex-col space-y-3 pt-20 pr-4"
           >
             {siteMap.items.map((item) => (
               <VerticalMenuItem
@@ -329,15 +329,15 @@ const MenuLogo: FC<{ inlineWithMenuBar: boolean }> = ({
       className={ctl(
         `${transition} z-60 flex items-center ${
           inlineWithMenuBar
-            ? `fixed left-16p top-8 justify-start large:left-96p`
-            : `top-0 h-full w-full justify-center p-2 large:w-1/3 large:p-8`
+            ? `left-16p large:left-96p fixed top-8 justify-start`
+            : `large:w-1/3 large:p-8 top-0 h-full w-full justify-center p-2`
         }`
       )}
     >
       <ConditionalLinkWrapper href={href}>
         <Logo
           className={ctl(
-            `${transition} relative aspect-square h-auto max-h-full w-full ${inlineWithMenuBar ? `max-w-[64px]` : `max-w-[200px] medium:max-w-[312px]`} `
+            `${transition} relative aspect-square h-auto max-h-full w-full ${inlineWithMenuBar ? `max-w-[64px]` : `medium:max-w-[312px] max-w-[200px]`} `
           )}
         />
       </ConditionalLinkWrapper>
@@ -350,7 +350,7 @@ const MenuToggle: FC<{
   open: boolean
 }> = ({ onClick, open }) => {
   return (
-    <div className="fixed right-3 top-3 z-100 bg-green p-3">
+    <div className="bg-green fixed top-3 right-3 z-100 p-3">
       <button
         className="flex h-full items-center p-0 text-white"
         onClick={onClick}

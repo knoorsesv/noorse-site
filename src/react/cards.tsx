@@ -51,7 +51,7 @@ export const SubHeader: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       className={
-        'mb-3 flex justify-between text-sm italic text-gray-darker-readable'
+        'text-gray-darker-readable mb-3 flex justify-between text-sm italic'
       }
     >
       {children}

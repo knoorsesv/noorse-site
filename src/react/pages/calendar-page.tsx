@@ -35,7 +35,7 @@ export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
         <SubTitle>Wedstrijden deze week</SubTitle>
         <section
           className={
-            'min-w-[75vw] large:w-[75vw] large:min-w-0 large:max-w-full'
+            'large:w-[75vw] large:min-w-0 large:max-w-full min-w-[75vw]'
           }
         >
           <ul className={'list-none'}>
@@ -56,7 +56,7 @@ export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
                   <li
                     key={game.id}
                     className={
-                      'align-start flex w-full justify-between border-b border-gray py-1'
+                      'align-start border-gray flex w-full justify-between border-b py-1'
                     }
                   >
                     <div className={'medium:my-1 large:w-1/12'}>
@@ -64,26 +64,26 @@ export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
                     </div>
                     <div
                       className={
-                        'flex w-3/4 flex-col large:w-11/12 large:flex-row'
+                        'large:w-11/12 large:flex-row flex w-3/4 flex-col'
                       }
                     >
                       <div
                         className={
-                          'underline medium:my-1 large:my-0 large:w-1/4'
+                          'medium:my-1 large:my-0 large:w-1/4 underline'
                         }
                       >
                         {game.title}
                       </div>
                       <div
                         className={
-                          'flex flex-col medium:flex-row medium:justify-between large:w-3/4'
+                          'medium:flex-row medium:justify-between large:w-3/4 flex flex-col'
                         }
                       >
                         <div className={'medium:w-2/5'}>
                           {game.homeTeam.name &&
                             sanitizeTeamName(game.homeTeam.name)}
                         </div>
-                        <div className={'hidden px-2 medium:block'}>
+                        <div className={'medium:block hidden px-2'}>
                           <span>-</span>
                         </div>
                         <div className={'medium:w-2/5'}>

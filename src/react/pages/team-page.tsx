@@ -72,10 +72,10 @@ export const TeamPage: FC<{
       </Helmet>
       <Container>
         <Title>{ploeg.name}</Title>
-        <div className={'flex flex-col large:flex-row large:justify-between'}>
+        <div className={'large:flex-row large:justify-between flex flex-col'}>
           <div
             id="team-info"
-            className={'mt-6 flex flex-col px-4 large:min-w-[40%]'}
+            className={'large:min-w-[40%] mt-6 flex flex-col px-4'}
           >
             {/* todo: these could maybe already go side by side on medium screen size */}
             <div className={'flex flex-col items-center'}>
