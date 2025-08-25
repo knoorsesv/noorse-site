@@ -20,7 +20,7 @@
     "build:dev": "cross-env CONTENTFUL_ENV=staging astro build",
     "build:prod": "cross-env CONTENTFUL_ENV=master CONTENTFUL_PREVIEW=false astro build",
     "deploy": "netlify deploy --dir public",
-    "format": "prettier . --write --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss",
+    "format": "prettier . --write --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss && jsonsort data",
     "lint": "concurrently --group --prefix-colors auto \"pnpm:lint:*\"",
     "lint:astro": "astro check",
     "lint:js": "eslint --cache .",
@@ -37,7 +37,7 @@
     "test:update-local": "start-server-and-test serve 'pnpm --cwd tests test:update'",
     "test:visual-local": "start-server-and-test serve 'pnpm --cwd tests test:visual'",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "update-vv-data": "node fetch-vv.mjs && jsonsort data && pnpm format"
+    "update-vv-data": "node fetch-vv.mjs && pnpm format"
   },
   "lint-staged": {
     "*.js,*.jsx,*.tsx": "eslint --cache --fix",
