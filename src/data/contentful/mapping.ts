@@ -85,6 +85,7 @@ export const mapTeam: Mapper<ContentfulTeam, Team> = (fields) => ({
   naam: fields.naam,
   coach: fields.coach,
   afgevaardigde: fields.afgevaardigde,
+  naamOpVoetbalVlaanderen: fields.naamOpVoetbalVlaanderen,
   training: fields.training,
   categoryName: fields.categorie?.fields.naam || '',
   ploegfoto: {
