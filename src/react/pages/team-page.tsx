@@ -79,7 +79,7 @@ export const TeamPage: FC<{
           >
             {/* todo: these could maybe already go side by side on medium screen size */}
             <div className={'flex flex-col items-center'}>
-              {ploeg.ploegfoto && (
+              {ploeg.ploegfoto?.responsiveURL && (
                 <>
                   <section className={'flex flex-col items-center'}>
                     <ImageWrapper
