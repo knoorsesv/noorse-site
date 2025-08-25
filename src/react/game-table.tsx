@@ -39,7 +39,7 @@ export const GameTable: FC<{ games: Game[] }> = ({ games }) => {
           const time = format(parsedDate, 'HH:mm')
           return (
             <tr key={game.id} className={'pb-1'}>
-              <td className={'w-2/12 text-sm'}>
+              <td className={'text-sm'}>
                 <div>{formattedDate}</div>
                 <div>{time}</div>
               </td>
