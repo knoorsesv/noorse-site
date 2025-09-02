@@ -12,49 +12,23 @@ import { LinkWrapper } from '../wrappers/link-wrapper'
 import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.tsx'
 import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
-import { useMediaQuery } from 'react-responsive'
 // @ts-expect-error todo: find a good way to add a type definition for this
 import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=500;600;800;1200&h=260;400;530;800&format=webp&q=50,100'
 import type { SiteMap, SiteMapItem } from './types/sitemap'
+import { useBreakpoint } from './hooks/use-breakpoint.tsx'
 
 const transition = `transition-all duration-200 ease-in`
-
-// todo: fetch actual tailwind config
-// import resolveConfig from 'tailwindcss/resolveConfig'
-// import tailwindConfig from '../../tailwind.config.js'
-// const config = resolveConfig(tailwindConfig)
-
-const config = {
-  theme: {
-    screens: {
-      medium: '640px',
-      large: '1024px',
-      extraLarge: '1324px',
-    },
-  },
-}
-const breakpoints = config.theme.screens
-
-// todo: extract this to a custom shared hook
-/**
- * Returns `true` if screen size matches the
- * `breakpoint`.
- */
-const useBreakpoint = (breakpoint: keyof typeof breakpoints) => {
-  const breakpointQuery = breakpoints[breakpoint]
-  return useMediaQuery({ query: `(min-width: ${breakpointQuery})` })
-}
 
 export const Navbar: FC<{ siteMap: SiteMap; currentURL?: string }> = ({
   siteMap,
   currentURL,
 }) => {
-  const isLarge = useBreakpoint('extraLarge')
+  const isExtraLarge = useBreakpoint('extraLarge')
 
   return (
     <NavSection>
       <MenuLogo inlineWithMenuBar={true} />
-      {isLarge ? (
+      {isExtraLarge ? (
         <HorizontalMenuItemList
           hasFullBackGround={true}
           siteMap={siteMap}
@@ -72,7 +46,7 @@ export const NavbarWithCoverPhoto: FC<{
 }> = ({ siteMap }) => {
   const [topMenuBarShown, setTopMenuBarShown] = useState<boolean>(false)
 
-  const isLarge = useBreakpoint('extraLarge')
+  const isExtraLarge = useBreakpoint('extraLarge')
 
   const ref = useRef<HTMLElement>(null)
 
@@ -91,7 +65,7 @@ export const NavbarWithCoverPhoto: FC<{
   return (
     <NavSectionWithCoverPhoto ref={ref}>
       <MenuLogo inlineWithMenuBar={topMenuBarShown} />
-      {isLarge ? (
+      {isExtraLarge ? (
         <HorizontalMenuItemList
           hasFullBackGround={topMenuBarShown}
           siteMap={siteMap}

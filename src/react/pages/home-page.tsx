@@ -2,6 +2,7 @@ import { LinkWrapper } from '../../wrappers/link-wrapper'
 import {
   ArrowRight,
   Card,
+  CompactNewsList,
   EventList,
   Footer,
   NavbarWithCoverPhoto,
@@ -17,6 +18,7 @@ import type { Event } from '../types/event'
 import type { NewsItem } from '../types/news'
 import type { SiteMap } from '../types/sitemap'
 import type { Sponsor } from '../types/sponsor'
+import { useBreakpoint } from '../hooks/use-breakpoint.tsx'
 
 export const HomePage: FC<{
   version: string
@@ -29,27 +31,33 @@ export const HomePage: FC<{
     webshopLink: string
   }
 }> = ({ version, sponsors, newsItems, siteMap, events, links }) => {
+  const isLarge = useBreakpoint('large')
+
   return (
     <>
       <NavbarWithCoverPhoto siteMap={siteMap} />
       <main className={'medium:px-8 flex w-full flex-col items-center py-12'}>
         <Section.List>
-          <Section>
+          <Section className="large:flex large:flex-col">
             <Section.Title>Evenementen</Section.Title>
-            <Card>
+            <Card className="large:grow">
               <EventList events={events} />
             </Card>
           </Section>
-          <Section>
+          <Section className="large:flex large:flex-col">
             <Section.Title>Nieuws</Section.Title>
-            <NewsList shownNewsItems={newsItems}>
-              <LinkWrapper
-                className={'font-bold text-black underline'}
-                href={'info/nieuws'}
-              >
-                Meer Nieuws <ArrowRight />
-              </LinkWrapper>
-            </NewsList>
+            {isLarge ? (
+              <CompactNewsList shownNewsItems={newsItems} />
+            ) : (
+              <NewsList shownNewsItems={newsItems}>
+                <LinkWrapper
+                  className={'font-bold text-black underline'}
+                  href={'info/nieuws'}
+                >
+                  Meer Nieuws <ArrowRight />
+                </LinkWrapper>
+              </NewsList>
+            )}
           </Section>
           <Section>
             <Section.Title>Webshop</Section.Title>

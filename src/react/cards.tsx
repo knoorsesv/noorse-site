@@ -8,6 +8,7 @@ export const Card: FC<
       header?: string
       Image?: FC
       containerClass?: string
+      padding?: string
       headerHeight?: string
     } & React.HTMLProps<HTMLDivElement>
   >
@@ -18,6 +19,7 @@ export const Card: FC<
   className,
   containerClass,
   headerHeight,
+  padding = 'p-4',
   ...props
 }) => {
   const articleClasses = ctl(`${className}
@@ -41,7 +43,15 @@ export const Card: FC<
         </div>
       )}
       {children && (
-        <div className={ctl(`${containerClass} w-full p-4`)}>{children}</div>
+        <div
+          className={ctl(`
+          w-full
+          ${padding}
+          ${containerClass}
+          `)}
+        >
+          {children}
+        </div>
       )}
     </article>
   )
