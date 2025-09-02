@@ -32,13 +32,24 @@ export const HomePage: FC<{
   return (
     <>
       <NavbarWithCoverPhoto siteMap={siteMap} />
-      <main className={'medium:px-8 flex w-full flex-col items-center'}>
+      <main className={'medium:px-8 flex w-full flex-col items-center py-12'}>
         <Section.List>
           <Section>
             <Section.Title>Evenementen</Section.Title>
             <Card>
               <EventList events={events} />
             </Card>
+          </Section>
+          <Section>
+            <Section.Title>Nieuws</Section.Title>
+            <NewsList shownNewsItems={newsItems}>
+              <LinkWrapper
+                className={'font-bold text-black underline'}
+                href={'info/nieuws'}
+              >
+                Meer Nieuws <ArrowRight />
+              </LinkWrapper>
+            </NewsList>
           </Section>
           <Section>
             <Section.Title>Webshop</Section.Title>
@@ -59,17 +70,6 @@ export const HomePage: FC<{
                 />
               </a>
             </Card>
-          </Section>
-          <Section>
-            <Section.Title>Nieuws</Section.Title>
-            <NewsList shownNewsItems={newsItems}>
-              <LinkWrapper
-                className={'font-bold text-black underline'}
-                href={'info/nieuws'}
-              >
-                Meer Nieuws <ArrowRight />
-              </LinkWrapper>
-            </NewsList>
           </Section>
         </Section.List>
       </main>
