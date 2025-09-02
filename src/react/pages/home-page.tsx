@@ -42,17 +42,6 @@ export const HomePage: FC<{
             </Card>
           </Section>
           <Section>
-            <Section.Title>Nieuwsbrief</Section.Title>
-            <Card>
-              <Section.TextContent>
-                <p>Noorse heeft een nieuwsbrief!</p>
-                <ExternalLink href={links.newsletterLink}>
-                  Schrijf je hier in.
-                </ExternalLink>
-              </Section.TextContent>
-            </Card>
-          </Section>
-          <Section>
             <Section.Title>Webshop</Section.Title>
             <Card>
               <Section.TextContent>
