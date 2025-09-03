@@ -1,5 +1,3 @@
-// import type { Image } from './image'
-
 export interface Sponsor {
   naam: string
   websiteUrl: string
@@ -7,5 +5,8 @@ export interface Sponsor {
   logo: {
     responsiveURL?: string
   }
-  omschrijving?: string
+  description?: string
+  type?: SponsorType
 }
+
+export type SponsorType = 'goud' | 'zilver' | 'brons' | 'shirt'

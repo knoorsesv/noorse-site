@@ -47,8 +47,8 @@ export const siteMap = {
       link: '/info/nieuws',
     },
     {
-      name: 'Sponsors',
-      link: '/info/sponsors',
+      name: 'Sponsoring',
+      link: '/info/sponsoring',
     },
 
     {

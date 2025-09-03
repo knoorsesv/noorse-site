@@ -9,7 +9,7 @@ import type {
   ContentfulTeam,
 } from './types'
 import type { NewsItem } from '../../react/types/news'
-import type { Sponsor } from '../../react/types/sponsor'
+import type { Sponsor, SponsorType } from '../../react/types/sponsor'
 import type { Event } from '../../react/types/event'
 import type { Team } from '../../react/types/team'
 import type { Category } from '../../react/types/category'
@@ -39,6 +39,8 @@ export const mapBestuursLid: Mapper<ContentfulBestuursLid, BestuursLid> = (
 export const mapSponsor: Mapper<ContentfulSponsor, Sponsor> = (fields) => ({
   naam: fields.naam,
   websiteUrl: fields.websiteUrl,
+  description: fields.omschrijving,
+  type: fields.type as SponsorType,
   logo: {
     responsiveURL:
       fields.logo?.fields.file?.url.replace('//', 'https://') +
