@@ -5,9 +5,13 @@ import Layout from '../../layouts/Layout.astro'
 import { SponsorPage } from '../../react/pages'
 
 const sponsors = await getEntries('sponsor', mapSponsor)
-const page = await getPage('Sponsors')
+const page = await getPage('Sponsoring')
 ---
 
 <Layout title="Info - Bestuur" currentURL={Astro.url}>
-  <SponsorPage sponsors={sponsors} description={page?.body} />
+  <SponsorPage
+    sponsors={sponsors}
+    description={page?.body}
+    brochure={page?.attachment[0]}
+  />
 </Layout>
