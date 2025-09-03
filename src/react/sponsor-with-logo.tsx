@@ -2,13 +2,15 @@ import type { FC, ReactNode } from 'react'
 import { ImageWrapper } from '../wrappers/image-wrapper.js'
 import { ExternalLink } from './links/external-link.js'
 import type { Sponsor } from './types/sponsor.js'
+import ctl from '@netlify/classnames-template-literals'
 
-export const SponsorWithLogo: FC<{ sponsor: Sponsor; logoWidth?: string }> = ({
-  sponsor,
-  logoWidth = 'w-1/2',
-}) => {
+export const SponsorWithLogo: FC<{
+  sponsor: Sponsor
+  logoWidth?: string
+  maxWidth?: string
+}> = ({ sponsor, logoWidth = 'w-1/2', maxWidth = 'max-w-[30%]' }) => {
   return (
-    <div className={`max-w-[30%] p-2 ${logoWidth}`} key={sponsor.naam}>
+    <div className={ctl(` p-2 ${logoWidth} ${maxWidth}`)} key={sponsor.naam}>
       <ConditionalWrapper
         condition={!!sponsor.websiteUrl}
         wrapper={(children) => (
@@ -21,7 +23,7 @@ export const SponsorWithLogo: FC<{ sponsor: Sponsor; logoWidth?: string }> = ({
           image={sponsor.logo}
           alt={`Logo ${sponsor.naam}`}
           loading="lazy"
-          className="object-scale-down"
+          className="object-scale-down h-[100px]"
         />
       </ConditionalWrapper>
     </div>

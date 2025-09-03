@@ -5,6 +5,8 @@ export interface ContentfulSponsor {
   fields: {
     naam: EntryFieldTypes.Text
     websiteUrl: EntryFieldTypes.Text
+    type: EntryFieldTypes.Text
+    omschrijving: EntryFieldTypes.Text
     logo: EntryFieldTypes.AssetLink
   }
 }
