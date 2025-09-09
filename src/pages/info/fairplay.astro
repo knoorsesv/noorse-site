@@ -9,7 +9,33 @@ const page = await getPage('Fairplay')
 <Layout title="Info - Fairplay" currentURL={Astro.url}>
   {
     page ? (
-      <MarkDownPage title={page.title} content={page.body} />
+      <MarkDownPage title={page.title} content={page.body}>
+        <ul class="list-disc list-inside mb-4">
+          <li>
+            <a href="#ouders" class="underline hover:text-gray-dark">
+              Ouders
+            </a>
+          </li>
+          <li>
+            <a
+              href="#spelers-speelsters"
+              class="underline hover:text-gray-dark"
+            >
+              Spelers/Speelsters
+            </a>
+          </li>
+          <li>
+            <a href="#trainers" class="underline hover:text-gray-dark">
+              Trainers
+            </a>
+          </li>
+          <li>
+            <a href="#afgevaardigden" class="underline hover:text-gray-dark">
+              Afgevaardigden
+            </a>
+          </li>
+        </ul>
+      </MarkDownPage>
     ) : (
       <h1>No Fairplay</h1>
     )

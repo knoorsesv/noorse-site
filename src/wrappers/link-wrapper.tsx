@@ -16,6 +16,7 @@ export const LinkWrapper: FC<
   // }
   // const pathname = new URL(Astro.request.url).pathname;
 
+  // todo: give this a default styling or create a basic Link component so all links are the same
   return (
     <a
       href={href}
