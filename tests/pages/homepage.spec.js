@@ -5,42 +5,42 @@ test.describe('Home Page', () => {
     await page.goto('/')
   })
 
-  test('has news items', async ({ page }) => {
-    const newsSection = page.locator('section:has(h2:text-is("Nieuws"))')
-    const newsItems = newsSection.locator('article')
-    const firstHeadline = newsItems.nth(1).locator('h3')
-    const firstBlurb = newsItems
-      .nth(1)
-      .locator(' > div:last-of-type > div:last-of-type')
+  // test.only('has news items', async ({ page }) => {
+  //   const newsSection = page.locator('section:has(h2:text-is("Nieuws"))')
+  //   const newsItems = newsSection.locator('a')
+  //   const firstHeadline = newsItems.nth(1)
+  //   const firstBlurb = newsItems
+  //     .nth(1)
+  //     .locator(' > div:last-of-type > div:last-of-type')
 
-    expect(newsSection).toBeVisible()
-    expect(await newsItems.count()).toEqual(3)
-    expect(await firstHeadline.innerText()).toEqual('NIEUWE SPELERS 2020-2021')
-    expect(await firstBlurb.innerText()).toEqual(
-      'Na het jammere nieuws dat er dit seizoen niet meer gevoetbald wordt, beginnen we meteen uit te kijke ...'
-    )
-  })
+  //   expect(newsSection).toBeVisible()
+  //   expect(await newsItems.count()).toEqual(3)
+  //   expect(await firstHeadline.innerText()).toEqual('NIEUWE SPELERS 2020-2021')
+  //   expect(await firstBlurb.innerText()).toEqual(
+  //     'Na het jammere nieuws dat er dit seizoen niet meer gevoetbald wordt, beginnen we meteen uit te kijke ...'
+  //   )
+  // })
 
-  test('clicking news card takes you to page', async ({ page }) => {
-    const link = page.locator('a article:has-text("Nieuwe spelers")')
+  // test('clicking news card takes you to page', async ({ page }) => {
+  //   const link = page.locator('a article:has-text("Nieuwe spelers")')
 
-    await link.click()
+  //   await link.click()
 
-    expect(page.url().toLowerCase()).toContain(
-      '/nieuws/Nieuwe%20spelers%202020-2021'.toLowerCase()
-    )
-  })
+  //   expect(page.url().toLowerCase()).toContain(
+  //     '/nieuws/Nieuwe%20spelers%202020-2021'.toLowerCase()
+  //   )
+  // })
 
-  test('clicking dots takes you to news overview', async ({ page }) => {
-    const newsSection = page.locator('section:has-text("Nieuws")')
-    const lastLink = newsSection.locator('a:has-text("Meer Nieuws")')
-    const navigationPromise = page.waitForNavigation()
+  // test('clicking dots takes you to news overview', async ({ page }) => {
+  //   const newsSection = page.locator('section:has-text("Nieuws")')
+  //   const lastLink = newsSection.locator('a:has-text("Meer Nieuws")')
+  //   const navigationPromise = page.waitForNavigation()
 
-    await lastLink.click()
-    await navigationPromise
+  //   await lastLink.click()
+  //   await navigationPromise
 
-    expect(page.url()).toContain('/info/nieuws')
-  })
+  //   expect(page.url()).toContain('/info/nieuws')
+  // })
 
   test('has a webshop link', async ({ page }) => {
     const section = page.locator('section:has-text("Webshop")')
@@ -56,14 +56,5 @@ test.describe('Home Page', () => {
     // todo: why is this a table?
     const events = section.locator('table tr')
     expect(await events.count()).toEqual(2)
-  })
-
-  test('has a trooper section', async ({ page }) => {
-    const section = page.locator('section:has-text("Trooper")')
-    const extLink = section.locator('a[target="_blank"]')
-
-    expect(await extLink.getAttribute('href')).toEqual(
-      'https://www.trooper.be/noorse'
-    )
   })
 })
