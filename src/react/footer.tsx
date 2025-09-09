@@ -40,9 +40,9 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
     bg-green/75`)
 
   const sponsorListContainer = ctl(`flex flex-col items-center medium:hidden
-      py-4
+      py-8
      bg-gray-light
-     w-screen  medium:w-2/3 large:w-1/2`)
+     w-screen`)
 
   const contactInfoWrapper = ctl(`
       flex flex-col items-center text-center
@@ -63,8 +63,8 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
           <ContactInfo />
         </div>
       </div>
-      <div className={'bg-gray-light medium:block hidden w-full'}>
-        <SponsorList logoWidth={'medium:w-32 large:w-40'} sponsors={sponsors} />
+      <div className={'bg-gray-light py-8 medium:block hidden w-full'}>
+        <SponsorList logoWidth={'w-40'} sponsors={sponsors} />
       </div>
     </>
   )
@@ -73,29 +73,13 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
 const CopyRightFooter: FC<{ version: string }> = ({ version }) => {
   const copyRightWrapper = ctl(`
   flex flex-col justify-start items-center
-  bg-green-dark/75
+  bg-green/75
   text-black
   py-3`)
 
   return (
     <div className={copyRightWrapper}>
-      <div className={'px-4 text-center'}>
-        Suggesties, verbeteringen? Laat het ons gerust weten op{' '}
-        <EmailLink address={'website@noorse.be'} />
-      </div>
-      <div>
-        <Version version={version} />
-      </div>
-      <div>
-        Powered by
-        <ExternalLink textColor={'text-black'} href="https://www.astro.build">
-          Astro
-        </ExternalLink>
-        and
-        <ExternalLink textColor={'text-black'} href="https://tailwindcss.com/">
-          Tailwind
-        </ExternalLink>
-      </div>
+      <Version version={version} />
     </div>
   )
 }
