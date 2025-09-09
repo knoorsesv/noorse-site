@@ -1,16 +1,25 @@
-import type { FC } from 'react'
+import type { FC, PropsWithChildren } from 'react'
 import { Attachments, MarkDown, Title } from '../index'
 import { Container } from './index'
 import { Helmet } from 'react-helmet'
 import type { Attachment } from '../types/attachment'
 
-export const MarkDownPage: FC<{
-  title: string
-  description?: string
-  attachment?: Attachment[]
-  markdownClassNames?: string
-  content: string
-}> = ({ description, title, attachment, markdownClassNames, content }) => {
+export const MarkDownPage: FC<
+  PropsWithChildren<{
+    title: string
+    description?: string
+    attachment?: Attachment[]
+    markdownClassNames?: string
+    content: string
+  }>
+> = ({
+  description,
+  title,
+  attachment,
+  markdownClassNames,
+  content,
+  children,
+}) => {
   return (
     <>
       <Helmet>
@@ -20,7 +29,11 @@ export const MarkDownPage: FC<{
       </Helmet>
       <Container>
         <Title>{title}</Title>
-        <MarkDown sectionClassNames={markdownClassNames} content={content} />
+        {children}
+        <MarkDown
+          sectionClassNames={`${markdownClassNames} my-8`}
+          content={content}
+        />
         {attachment ? (
           <section className="prose">
             <Attachments attachments={attachment} />

@@ -5,7 +5,15 @@ import type { FC } from 'react'
 
 const renderer: Partial<Renderer> = {
   // declare this: typeof Renderer
+  heading({ tokens, depth }) {
+    const text = this.parser?.parseInline(tokens)
+    const escapedText = text?.toLowerCase().replace(/[^\w]+/g, '-')
 
+    return `
+            <h${depth} id="${escapedText}">
+              ${text}
+            </h${depth}>`
+  },
   list(token: Tokens.List) {
     const ordered = token.ordered
     const start = token.start
@@ -74,7 +82,7 @@ export const MarkDown: FC<{ sectionClassNames?: string; content: string }> = ({
 }) => {
   return (
     <section
-      className={ctl(`prose mb-4 ${props.sectionClassNames}`)}
+      className={ctl(`prose prose-h2:text-2xl mb-4 ${props.sectionClassNames}`)}
       dangerouslySetInnerHTML={{
         __html: marked.parse(content),
       }}
