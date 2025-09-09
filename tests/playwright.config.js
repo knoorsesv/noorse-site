@@ -8,7 +8,6 @@ const runOnCI = process.env.CI === 'true'
 
 let baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:4321'
 
-console.log('running on CI?', runOnCI)
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   reporter: runOnCI
@@ -17,6 +16,7 @@ const config = {
   forbidOnly: !!runOnCI,
   retries: runOnCI ? 1 : 0,
   workers: runOnCI ? 4 : 1,
+  maxFailures: runOnCI ? 1 : 0,
   use: {
     baseURL,
     trace: 'off',
