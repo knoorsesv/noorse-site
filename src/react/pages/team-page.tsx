@@ -72,6 +72,17 @@ export const TeamPage: FC<{
       </Helmet>
       <Container>
         <Title>{ploeg.name}</Title>
+        {ploeg.ploegfoto?.responsiveURL && (
+          <>
+            <section className={'flex flex-col items-center'}>
+              <ImageWrapper
+                image={ploeg.ploegfoto}
+                alt={`Ploegfoto ${ploeg.name}`}
+                className="m-8 max-w-[360px] large:max-w-[520px]"
+              />
+            </section>
+          </>
+        )}
         <div className={'large:flex-row large:justify-between flex flex-col'}>
           <div
             id="team-info"
@@ -79,17 +90,6 @@ export const TeamPage: FC<{
           >
             {/* todo: these could maybe already go side by side on medium screen size */}
             <div className={'flex flex-col items-center'}>
-              {ploeg.ploegfoto?.responsiveURL && (
-                <>
-                  <section className={'flex flex-col items-center'}>
-                    <ImageWrapper
-                      image={ploeg.ploegfoto}
-                      alt={`Ploegfoto ${ploeg.name}`}
-                      className="m-8 max-w-[360px]"
-                    />
-                  </section>
-                </>
-              )}
               {ploeg.coach && (
                 <>
                   <section className={'flex flex-col items-center'}>
