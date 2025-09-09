@@ -52,13 +52,13 @@ export const CompactNewsList: FC<
           <a
             key={newsItem.title}
             href={`/nieuws/${newsItem.title.replace('/', '-').toLowerCase()}`}
-            className={'p-6 flex flex-col items-start gap-2 hover:bg-gray-100'}
+            className={'flex flex-col items-start gap-2 p-6 hover:bg-gray-100'}
           >
-            <div className="flex justify-between items-center w-full">
-              <div className="font-bold text-lg underline">
+            <div className="flex w-full items-center justify-between">
+              <div className="text-lg font-bold underline">
                 {newsItem.title}
               </div>
-              <div className="text-sm italic mx-2">
+              <div className="mx-2 text-sm italic">
                 {dateToShow && format(dateToShow, 'dd/MM/yy')}
               </div>
             </div>
@@ -68,7 +68,7 @@ export const CompactNewsList: FC<
       })}
       <LinkWrapper
         className={
-          ' text-black underline flex items-center gap-2 p-6 w-full hover:bg-gray-100'
+          'flex w-full items-center gap-2 p-6 text-black underline hover:bg-gray-100'
         }
         href={'info/nieuws'}
       >

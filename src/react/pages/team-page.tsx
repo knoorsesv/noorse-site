@@ -78,7 +78,7 @@ export const TeamPage: FC<{
               <ImageWrapper
                 image={ploeg.ploegfoto}
                 alt={`Ploegfoto ${ploeg.name}`}
-                className="m-8 max-w-[360px] large:max-w-[520px]"
+                className="large:max-w-[520px] m-8 max-w-[360px]"
               />
             </section>
           </>

@@ -43,13 +43,7 @@ export const Card: FC<
         </div>
       )}
       {children && (
-        <div
-          className={ctl(`
-          w-full
-          ${padding}
-          ${containerClass}
-          `)}
-        >
+        <div className={ctl(`w-full ${padding} ${containerClass} `)}>
           {children}
         </div>
       )}

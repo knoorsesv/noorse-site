@@ -12,7 +12,7 @@ export const SponsorPage: FC<{
   const types = ['goud', 'zilver', 'brons', 'shirt', undefined] as SponsorType[]
   return (
     <Page title="Sponsoring" centered={true}>
-      <div className="flex flex-col w-full justify-start divide divide-y-2 divide-gray-200">
+      <div className="divide flex w-full flex-col justify-start divide-y-2 divide-gray-200">
         <section className="py-10">
           <MarkDown content={description} />
 
@@ -32,17 +32,17 @@ export const SponsorPage: FC<{
               (sponsor) => sponsor.type === type
             )
             return filteredSponsors.length ? (
-              <div key={type} className="w-full flex flex-col items-center">
+              <div key={type} className="flex w-full flex-col items-center">
                 <h3 className="mb-6 text-2xl capitalize">{`${type || 'Overig'}`}</h3>
-                <ul className="mb-10 flex w-full flex-wrap items-center justify-center gap-6 list-none">
+                <ul className="mb-10 flex w-full list-none flex-wrap items-center justify-center gap-6">
                   {filteredSponsors.map((sponsor) => {
                     return (
                       <li
-                        className="flex flex-col items-center bg-gray-100 drop-shadow-lg  rounded-lg p-4 size-[250px]"
+                        className="flex size-[250px] flex-col items-center rounded-lg bg-gray-100 p-4 drop-shadow-lg"
                         key={sponsor.naam}
                       >
                         <h4 className="text-2xl underline">{sponsor.naam}</h4>
-                        <div className="flex flex-col w-full items-start gap-8 justify-center">
+                        <div className="flex w-full flex-col items-start justify-center gap-8">
                           <SponsorWithLogo
                             sponsor={sponsor}
                             logoWidth="w-full h-[100px] text-center"

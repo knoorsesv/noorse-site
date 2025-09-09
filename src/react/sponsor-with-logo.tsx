@@ -10,7 +10,7 @@ export const SponsorWithLogo: FC<{
   maxWidth?: string
 }> = ({ sponsor, logoWidth = 'w-1/2', maxWidth = 'max-w-[30%]' }) => {
   return (
-    <div className={ctl(` p-2 ${logoWidth} ${maxWidth}`)} key={sponsor.naam}>
+    <div className={ctl(`p-2 ${logoWidth} ${maxWidth}`)} key={sponsor.naam}>
       <ConditionalWrapper
         condition={!!sponsor.websiteUrl}
         wrapper={(children) => (
@@ -23,7 +23,7 @@ export const SponsorWithLogo: FC<{
           image={sponsor.logo}
           alt={`Logo ${sponsor.naam}`}
           loading="lazy"
-          className="object-scale-down h-[100px]"
+          className="h-[100px] object-scale-down"
         />
       </ConditionalWrapper>
     </div>

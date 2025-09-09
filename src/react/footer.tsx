@@ -61,7 +61,7 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
           <ContactInfo />
         </div>
       </div>
-      <div className={'bg-gray-light py-8 medium:block hidden w-full'}>
+      <div className={'bg-gray-light medium:block hidden w-full py-8'}>
         <SponsorList logoWidth={'w-40'} sponsors={sponsors} />
       </div>
     </>
