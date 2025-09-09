@@ -44,7 +44,9 @@ test.describe('Home Page', () => {
 
   test('has a webshop link', async ({ page }) => {
     const section = page.locator('section:has-text("Webshop")')
-    const link = section.locator('a')
+    const link = section.getByRole('link', {
+      name: 'Ontdek hier onze officiële webshop!',
+    })
 
     expect(await link.getAttribute('href')).toEqual(
       'https://noorsesv.shop4clubs.eu/'
