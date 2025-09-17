@@ -21,8 +21,8 @@ importers:
         specifier: 5.2.6
         version: 5.2.6
       '@fontsource/mulish':
-        specifier: 5.2.6
-        version: 5.2.6
+        specifier: 5.2.7
+        version: 5.2.7
       '@netlify/classnames-template-literals':
         specifier: 1.0.3
         version: 1.0.3
@@ -686,8 +686,8 @@ packages:
   '@fontsource/lato@5.2.6':
     resolution: {integrity: sha512-ykbyuHKHdFsV8QNWPgo2kkCV0veY8/w1HzPlTd7f08LRGGYijPoN7QHkVKPq5QLpgeNauPPe+0a6oRhd8b6MpQ==}
 
-  '@fontsource/mulish@5.2.6':
-    resolution: {integrity: sha512-5fGU/WT3vvpdYEqmAf0ufmoacpFTkXmvaIQ/rKvXTW9p39+Y5HlZAcHQOm/mVVb+xUUV+d9Djzlhr+pJtSDJhg==}
+  '@fontsource/mulish@5.2.7':
+    resolution: {integrity: sha512-DtajvBcJoNxQrPAC/kSSEA/YB1O0ZD4613zPKojdOVJlqkA3I9nPgVL6mXgpzAfSRGXx2FjvcYslUSONCxRYGw==}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -6272,7 +6272,7 @@ snapshots:
 
   '@fontsource/lato@5.2.6': {}
 
-  '@fontsource/mulish@5.2.6': {}
+  '@fontsource/mulish@5.2.7': {}
 
   '@hapi/hoek@9.3.0': {}
 
