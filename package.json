@@ -71,8 +71,8 @@
     "typography": "0.16.24"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/cli": "20.0.0",
+    "@commitlint/config-conventional": "20.0.0",
     "@storybook/addon-a11y": "9.1.9",
     "@storybook/addon-links": "9.1.9",
     "@storybook/react-vite": "9.1.9",
