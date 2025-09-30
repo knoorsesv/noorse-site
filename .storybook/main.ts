@@ -4,9 +4,8 @@ const confg: StorybookConfig = {
   stories: ['../src/react/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
     '@storybook/addon-a11y',
+    '@storybook/addon-docs',
   ],
   framework: '@storybook/react-vite',
   staticDirs: ['../public/images'],

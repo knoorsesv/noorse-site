@@ -1,7 +1,7 @@
-import { expect, within } from '@storybook/test'
+import { expect, within } from 'storybook/test'
 import { Attachments } from './attachments.tsx'
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 export default {
   title: 'Component/Attachments',

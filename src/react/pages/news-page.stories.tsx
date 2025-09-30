@@ -5,7 +5,7 @@ import {
   withOutPublishDate,
 } from '../data/news-factory'
 import { NewsPage } from './news-page'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 export default {
   title: 'Pages/NewsPage',

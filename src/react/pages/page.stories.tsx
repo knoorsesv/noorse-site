@@ -1,5 +1,5 @@
 import { Page } from './page.jsx'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 export default {
   title: 'Pages/Page',

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { sponsorList } from './data/sponsor-factory'
 import { Footer } from './footer'
 

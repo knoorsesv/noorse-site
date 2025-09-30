@@ -1,7 +1,7 @@
 import { GameTable } from './game-table.tsx'
 import { gamesFactory } from './data/games-factory'
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { teamFactory } from './data/team-factory.ts'
 
 const meta: Meta<typeof GameTable> = {

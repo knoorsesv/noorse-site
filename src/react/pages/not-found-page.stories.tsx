@@ -1,5 +1,5 @@
 import { NotFoundPage } from './not-found-page.jsx'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 export default {
   title: 'Pages/NotFound',

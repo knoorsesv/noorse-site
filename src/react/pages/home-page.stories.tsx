@@ -3,7 +3,7 @@ import { sponsorList } from '../data/sponsor-factory.js'
 import { HomePage } from './home-page.jsx'
 import { eventList } from '../data/event-factory.js'
 import { siteMapFactory } from '../data/sitemap-factory.js'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 export default {
   title: 'Pages/HomePage',
