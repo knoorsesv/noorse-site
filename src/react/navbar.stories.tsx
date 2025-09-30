@@ -1,6 +1,6 @@
 import { Navbar } from './navbar.tsx'
 import { siteMapFactory } from './data/sitemap-factory.js'
-import { within, userEvent, expect } from '@storybook/test'
+import { within, userEvent, expect } from 'storybook/test'
 
 export default {
   title: 'Component/Navbar',
@@ -18,7 +18,7 @@ export default {
   ),
 } satisfies Meta<typeof Navbar>
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 type Story = StoryObj<typeof Navbar>
 
 export const Default: Story = {}

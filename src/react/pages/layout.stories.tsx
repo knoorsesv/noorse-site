@@ -13,7 +13,7 @@ export default {
   },
 } satisfies Meta<typeof Layout>
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 type Story = StoryObj<typeof Layout>
 

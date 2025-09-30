@@ -1,5 +1,5 @@
 import { MarkDown } from './markdown'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 const meta: Meta<typeof MarkDown> = {
   title: 'Component/MarkDown',

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { CategoryTeamNavigation } from './team-navigation.tsx'
 import { teamFactory } from './data/team-factory.ts'
 

@@ -1,7 +1,7 @@
 import { allNewsItems } from './data/news-factory'
 import { NewsList } from './news-list'
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 const meta: Meta<typeof NewsList> = {
   title: 'Component/NewsList',

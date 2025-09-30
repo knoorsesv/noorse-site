@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { expect, within } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within } from 'storybook/test'
 import { eventList } from './data/event-factory'
 import { EventList } from './event-list'
 

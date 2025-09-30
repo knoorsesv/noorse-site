@@ -1,6 +1,6 @@
 import { Card } from '../cards.tsx'
 import { Section } from './section.tsx'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 type Story = StoryObj<typeof Section>
 

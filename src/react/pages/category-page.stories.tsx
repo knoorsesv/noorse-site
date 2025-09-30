@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { categoryFactory } from '../data/category-factory'
 import { newsFactory } from '../data/news-factory'
 import { CategoryPage } from './category-page'
