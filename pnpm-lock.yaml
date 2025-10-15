@@ -145,8 +145,8 @@ importers:
         specifier: 9.1.7
         version: 9.1.7
       json-sort-cli:
-        specifier: 4.0.20
-        version: 4.0.20
+        specifier: 4.0.21
+        version: 4.0.21
       lint-staged:
         specifier: 16.2.4
         version: 16.2.4
@@ -3297,8 +3297,8 @@ packages:
   json-schema-traverse@1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
 
-  json-sort-cli@4.0.20:
-    resolution: {integrity: sha512-D0ihsB2jJU3NkokFEDw3YNrI1PHRLd2JzoBEl/BrTZhScMjj5ofUz6Z5F09XvZ9upDdhTpxRTuVOxgDbbn5G2Q==}
+  json-sort-cli@4.0.21:
+    resolution: {integrity: sha512-LBtUB33vVNdrqA0CiVT15sHrCM95t9MXetubjE/txRq3BqCFO7O0jXPu5Zat5qcOm7AyO1xukcGkA99tyeMcJA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -9168,7 +9168,7 @@ snapshots:
 
   json-schema-traverse@1.0.0: {}
 
-  json-sort-cli@4.0.20:
+  json-sort-cli@4.0.21:
     dependencies:
       ast-monkey-traverse: 4.0.31
       chalk: 5.6.2
