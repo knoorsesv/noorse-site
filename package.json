@@ -89,7 +89,7 @@
     "eslint-plugin-react": "7.37.5",
     "globals": "16.4.0",
     "husky": "9.1.7",
-    "json-sort-cli": "4.0.21",
+    "json-sort-cli": "4.1.0",
     "lint-staged": "16.2.4",
     "nodemon": "3.1.10",
     "postcss": "8.5.6",
