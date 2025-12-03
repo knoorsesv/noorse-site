@@ -48,8 +48,8 @@ importers:
         specifier: 0.9.0
         version: 0.9.0(astro@5.16.3(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1))
       contentful:
-        specifier: 11.8.13
-        version: 11.8.13
+        specifier: 11.9.0
+        version: 11.9.0
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
@@ -1853,9 +1853,6 @@ packages:
     resolution: {integrity: sha512-Mr2ZakwQ7XUAjp7pAwQWRhhK8mQQ6JAaNWSjmjxil0R8BPioMtQsTLOolGYkji1rcL++3dCqZA3zWqpT+9Ew6g==}
     engines: {node: '>=4'}
 
-  axios@1.12.2:
-    resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
-
   axios@1.13.2:
     resolution: {integrity: sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==}
 
@@ -2115,8 +2112,8 @@ packages:
     resolution: {integrity: sha512-Ao/5Y74ERPn6kjzb/8okYPuQJnikMtR+dnv0plLw8IvPomwXonLq3qom0rLSyo5KuvQkBMa9AApy1izunxW4mw==}
     engines: {node: '>=18'}
 
-  contentful@11.8.13:
-    resolution: {integrity: sha512-rNTcjphgHY7buppIkXUHdwUpPg9Sz41IBYJgT7QjqRvSgDMn0+hZRpLXSIaw0zGCgtMXcWWAFOPVYGjLhA2uvg==}
+  contentful@11.9.0:
+    resolution: {integrity: sha512-nQAiYWyDWec+LaXSiclYnmK0QZ65dGqBnMKzffrqW0Q1B2SQ9LW0b07UshN56aPXDfX7sf5MRvlUVTW9v5+iLw==}
     engines: {node: '>=18'}
 
   conventional-changelog-angular@7.0.0:
@@ -7511,14 +7508,6 @@ snapshots:
 
   axe-core@4.10.0: {}
 
-  axios@1.12.2:
-    dependencies:
-      follow-redirects: 1.15.9(debug@4.4.3)
-      form-data: 4.0.4
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-
   axios@1.13.2(debug@4.4.3):
     dependencies:
       follow-redirects: 1.15.9(debug@4.4.3)
@@ -7788,11 +7777,11 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.48.1
 
-  contentful@11.8.13:
+  contentful@11.9.0:
     dependencies:
       '@contentful/content-source-maps': 0.11.35
       '@contentful/rich-text-types': 16.8.5
-      axios: 1.12.2
+      axios: 1.13.2(debug@4.4.3)
       contentful-resolve-response: 1.9.4
       contentful-sdk-core: 9.0.1
       json-stringify-safe: 5.0.1
