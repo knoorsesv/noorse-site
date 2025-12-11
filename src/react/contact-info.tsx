@@ -8,7 +8,6 @@ export const ContactInfo: FC = () => {
     <div className="flex flex-col items-center">
       <span>Frans de Peuterstraat 50</span>
       <span>2950 Kapellen</span>
-      <span>03/664.44.11</span>
       <span>
         <EmailLink address="secretariaatnoorse@gmail.com" />
       </span>
