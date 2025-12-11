@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Download and cache dependencies'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: volta-cli/action@v4
       - uses: actions/cache@v4
         with:
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build PROD
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: volta-cli/action@v4
       - uses: actions/cache@v4
         with:
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build DEV
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: volta-cli/action@v4
       - uses: actions/cache@v4
         with:
@@ -91,7 +91,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: volta-cli/action@v4
@@ -136,7 +136,7 @@ jobs:
     name: Build Base Docker container for tests
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
@@ -166,7 +166,7 @@ jobs:
     container:
       image: ghcr.io/knoorsesv/playwright-base:pnpm-1.0
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: pnpm install --frozen-lockfile
         working-directory: ./tests
       - name: Run your tests
@@ -187,7 +187,7 @@ jobs:
     container:
       image: ghcr.io/knoorsesv/playwright-base:pnpm-1.0
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: pnpm install --frozen-lockfile
         working-directory: ./tests
       - name: Run your tests
@@ -211,7 +211,7 @@ jobs:
     name: Chromatic Storybook Test
     needs: [build-dev, build-prod, lint]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - uses: volta-cli/action@v4
@@ -227,7 +227,7 @@ jobs:
     name: Lighthouse Check
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Audit URLs using Lighthouse
