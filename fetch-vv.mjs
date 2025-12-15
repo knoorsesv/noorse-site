@@ -47,7 +47,7 @@ for (const team of config) {
       persistedQuery: {
         version: 1,
         sha256Hash:
-          '63e80713dbe3f057aafb53348ebb61a2c52d3d6cda437d8b7e7bd78191990487',
+          '3f0441e6723b9852b4f0cff2c872f4aa674c5de2d23589efc70c7a4ffb7f6383',
       },
     }),
   }
@@ -57,6 +57,10 @@ for (const team of config) {
 
   const resp = await fetch(fetchUrl, { method: 'GET', headers })
   const data = await resp.json()
+  if (data.errors) {
+    console.error('VV Error response', data.errors)
+    throw new Error('VV Error response')
+  }
   console.log('resp', data)
   vvResponse.teamCalendar[`${team.vvId}`] = sortById(data.data.teamCalendar)
 }
@@ -75,7 +79,7 @@ for (const team of config) {
       persistedQuery: {
         version: 1,
         sha256Hash:
-          '4ced37c1f12101a450402b274c6a3e49e1722751ba5468f5a70411ffbabdbd7f',
+          'ace90f0250b37a504282e27289c62ea6a3f444ef8821f663bd1faa8e3689e358',
       },
     }),
   }
@@ -85,6 +89,10 @@ for (const team of config) {
   const resp = await fetch(fetchUrl, { method: 'GET', headers })
   const data = await resp.json()
   // console.log('resp', data)
+  if (data.errors) {
+    console.error('VV Error response for ', fetchUrl, data.errors)
+    throw new Error('VV Error response')
+  }
   vvResponse.teamSeriesAndRankings[`${team.vvId}`] =
     data.data.teamSeriesAndRankings
 }
@@ -102,17 +110,20 @@ const params = {
     persistedQuery: {
       version: 1,
       sha256Hash:
-        'ae7ac199b18b57747ba6e3a8c26a19e022ac3f201508e28836bbeb9f8bd831be',
+        'eeeb92967d0b593c29f321f717ab2d81179bad5e1efce80a963a7d1ef4fabb41',
     },
   }),
 }
-// {"persistedQuery":{"version":1,"sha256Hash":"ae7ac199b18b57747ba6e3a8c26a19e022ac3f201508e28836bbeb9f8bd831be"}}
 const queryParams = querystring.stringify(params)
 const fetchUrl = `${url}?${queryParams}`
 console.log('fetchUrl', fetchUrl)
 const resp = await fetch(fetchUrl, { method: 'GET', headers })
 const data = await resp.json()
 console.log('resp', data)
+if (data.errors) {
+  console.error('VV Error response for ', fetchUrl, data.errors)
+  throw new Error('VV Error response')
+}
 
 vvResponse.clubMatchesAssignations = sortById(data.data.clubMatchesAssignations)
 
