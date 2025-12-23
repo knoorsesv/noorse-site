@@ -38,39 +38,39 @@ const renderer: Partial<Renderer> = {
     )
   },
 
-  listitem(item: Tokens.ListItem) {
-    let itemBody = ''
+  // listitem(item: Tokens.ListItem) {
+  //   let itemBody = ''
 
-    if (item.task) {
-      const checkbox = this.checkbox?.({ checked: !!item.checked })
-      if (item.loose) {
-        if (item.tokens.length > 0 && item.tokens[0].type === 'paragraph') {
-          item.tokens[0].text = checkbox + ' ' + item.tokens[0].text
-          if (
-            item.tokens[0].tokens &&
-            item.tokens[0].tokens.length > 0 &&
-            item.tokens[0].tokens[0].type === 'text'
-          ) {
-            item.tokens[0].tokens[0].text =
-              checkbox + ' ' + item.tokens[0].tokens[0].text
-          }
-        } else {
-          item.tokens.unshift({
-            type: 'text',
-            raw: checkbox + ' ',
-            text: checkbox + ' ',
-          })
-        }
-      } else {
-        itemBody += checkbox + ' '
-      }
-    }
+  //   if (item.task) {
+  //     const checkbox = this.checkbox?.({ checked: !!item.checked, type: 'checkbox', raw: '' })
+  //     if (item.loose) {
+  //       if (item.tokens.length > 0 && item.tokens[0].type === 'paragraph') {
+  //         item.tokens[0].text = checkbox + ' ' + item.tokens[0].text
+  //         if (
+  //           item.tokens[0].tokens &&
+  //           item.tokens[0].tokens.length > 0 &&
+  //           item.tokens[0].tokens[0].type === 'text'
+  //         ) {
+  //           item.tokens[0].tokens[0].text =
+  //             checkbox + ' ' + item.tokens[0].tokens[0].text
+  //         }
+  //       } else {
+  //         item.tokens.unshift({
+  //           type: 'text',
+  //           raw: checkbox + ' ',
+  //           text: checkbox + ' ',
+  //         })
+  //       }
+  //     } else {
+  //       itemBody += checkbox + ' '
+  //     }
+  //   }
 
-    itemBody += this.parser?.parse(item.tokens, !!item.loose)
+  //   itemBody += this.parser?.parse(item.tokens)
 
-    // todo: add a caret icon so it's clear this is collapsible
-    return `<li class="group-[.opened]:list-item">${itemBody}</li>\n`
-  },
+  //   // todo: add a caret icon so it's clear this is collapsible
+  //   return `<li class="group-[.opened]:list-item">${itemBody}</li>\n`
+  // },
 }
 
 marked.use({ renderer })

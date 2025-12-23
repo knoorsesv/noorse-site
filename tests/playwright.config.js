@@ -65,6 +65,6 @@ const config = {
   ],
 }
 
-// console.log('running test with config ', config)
+console.log('running test with config ', config)
 
 module.exports = config
