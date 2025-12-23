@@ -26,7 +26,7 @@ test.describe.parallel('Screenshot Test', () => {
   pages.forEach(({ pageUrl, takeFullPage, pageName, waitFor, timeout }) => {
     test(`for ${pageName || pageUrl}`, async ({ page }) => {
       await page.goto(pageUrl)
-      await page.waitForLoadState('networkidle')
+      // await page.waitForLoadState('networkidle')
       if (timeout) {
         test.setTimeout(timeout)
       }
