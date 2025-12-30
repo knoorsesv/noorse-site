@@ -174,7 +174,7 @@ jobs:
         run: pnpm test:func
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: ${{ failure() }}
         with:
           name: functional-test-playwright-report
@@ -195,12 +195,12 @@ jobs:
         run: pnpm test:visual
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{needs.build-dev.outputs.dev-url}}
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: ${{ failure() }}
         with:
           name: screenshot-test-playwright-report
           path: tests/playwright-report
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: ${{ failure() }}
         with:
           name: screenshot-test-test-results
