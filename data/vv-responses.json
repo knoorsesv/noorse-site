@@ -18474,8 +18474,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Jens",
-            "lastName": "Schaek",
+            "firstName": "Youssef",
+            "lastName": "Chikhi",
             "personAssigned": true,
             "status": null
           }
@@ -36529,10 +36529,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Hamza",
+            "lastName": "Azar Khachabi",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -38035,10 +38035,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Resül",
+            "lastName": "Yilmaz",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
