@@ -107,7 +107,7 @@
         "id": "CHP_129364"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T16:30:00",
       "state": "postponed",
       "title": "Reserven Voetb Vl AD"
@@ -303,7 +303,7 @@
         "id": "CHP_123767"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T20:00:00",
       "state": "postponed",
       "title": "Vrouwen 1 Prov Antw"
@@ -359,7 +359,7 @@
         "id": "CHP_123772"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T18:00:00",
       "state": "postponed",
       "title": "Vrouwen 2 Prov Antw A"
@@ -463,7 +463,7 @@
         "id": "CHP_124257"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T10:30:00",
       "state": "postponed",
       "title": "2-Gewestelijk U17 AW"
@@ -511,7 +511,7 @@
         "id": "CHP_124559"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T09:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U9 BQ"
@@ -559,7 +559,7 @@
         "id": "CHP_125273"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T09:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U7 BJ"
@@ -615,7 +615,7 @@
         "id": "CHP_125374"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T10:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U15 BM"
@@ -663,7 +663,7 @@
         "id": "CHP_125506"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T09:30:00",
       "state": "postponed",
       "title": "2-Gewestelijk U12 AZ"
@@ -759,7 +759,7 @@
         "id": "CHP_125810"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T10:00:00",
       "state": "postponed",
       "title": "2-Meisjes U11 reeks A"
@@ -807,7 +807,7 @@
         "id": "CHP_125815"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T17:00:00",
       "state": "postponed",
       "title": "2-Meisjes U9 reeks B"
@@ -903,7 +903,7 @@
         "id": "CHP_125824"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T14:15:00",
       "state": "postponed",
       "title": "2-Gewestelijk U10 AT"
@@ -951,7 +951,7 @@
         "id": "CHP_125830"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T09:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U10 AZ"
@@ -1007,7 +1007,7 @@
         "id": "CHP_126031"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T15:15:00",
       "state": "postponed",
       "title": "2-Gewestelijk U15 BC"
@@ -1055,7 +1055,7 @@
         "id": "CHP_126045"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T15:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U13 BA"
@@ -1103,7 +1103,7 @@
         "id": "CHP_126047"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T15:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U13 BC"
@@ -1151,7 +1151,7 @@
         "id": "CHP_126239"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T14:45:00",
       "state": "postponed",
       "title": "2-Gewestelijk U12 BH"
@@ -1199,7 +1199,7 @@
         "id": "CHP_126498"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T09:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U6 AE"
@@ -1247,7 +1247,7 @@
         "id": "CHP_126639"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T12:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U11 BJ"
@@ -1295,7 +1295,7 @@
         "id": "CHP_126825"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T12:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U8 BQ"
@@ -1343,7 +1343,7 @@
         "id": "CHP_126834"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T12:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U8 BZ"
@@ -1391,7 +1391,7 @@
         "id": "CHP_127250"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T09:00:00",
       "state": "postponed",
       "title": "2-Gewestelijk U9 BD"
@@ -1447,7 +1447,7 @@
         "id": "CHP_123884"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-01-10T15:00:00",
       "state": "postponed",
       "title": "2-Meisjes U16 reeks H"
@@ -4024,7 +4024,7 @@
           "name": "Vrouwen 2 Prov Antw A"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T18:00:00",
         "state": "postponed"
       },
@@ -5464,7 +5464,7 @@
           "name": "Vrouwen 1 Prov Antw"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T20:00:00",
         "state": "postponed"
       },
@@ -7064,7 +7064,7 @@
           "name": "Reserven Voetb Vl AD"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T16:30:00",
         "state": "postponed"
       },
@@ -13737,7 +13737,7 @@
           "name": "2-Meisjes U9 reeks B"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T17:00:00",
         "state": "postponed"
       },
@@ -18448,7 +18448,7 @@
           "name": "2-Meisjes U16 reeks H"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T15:00:00",
         "state": "postponed"
       },
@@ -19693,7 +19693,7 @@
           "name": "2-Gewestelijk U6 AE"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T09:00:00",
         "state": "postponed"
       },
@@ -20787,7 +20787,7 @@
           "name": "2-Gewestelijk U7 BJ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T09:00:00",
         "state": "postponed"
       },
@@ -21881,7 +21881,7 @@
           "name": "2-Gewestelijk U8 BQ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T12:00:00",
         "state": "postponed"
       },
@@ -22975,7 +22975,7 @@
           "name": "2-Gewestelijk U8 BZ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T12:00:00",
         "state": "postponed"
       },
@@ -24069,7 +24069,7 @@
           "name": "2-Gewestelijk U9 BD"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T09:00:00",
         "state": "postponed"
       },
@@ -25202,7 +25202,7 @@
           "name": "2-Gewestelijk U9 BQ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T09:00:00",
         "state": "postponed"
       },
@@ -26296,7 +26296,7 @@
           "name": "2-Gewestelijk U10 AZ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T09:00:00",
         "state": "postponed"
       },
@@ -27390,7 +27390,7 @@
           "name": "2-Gewestelijk U10 AT"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T14:15:00",
         "state": "postponed"
       },
@@ -28601,7 +28601,7 @@
           "name": "2-Gewestelijk U11 BJ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T12:00:00",
         "state": "postponed"
       },
@@ -29695,7 +29695,7 @@
           "name": "2-Gewestelijk U12 BH"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T14:45:00",
         "state": "postponed"
       },
@@ -30789,7 +30789,7 @@
           "name": "2-Gewestelijk U12 AZ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T09:30:00",
         "state": "postponed"
       },
@@ -32000,7 +32000,7 @@
           "name": "2-Gewestelijk U13 BA"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T15:00:00",
         "state": "postponed"
       },
@@ -33172,7 +33172,7 @@
           "name": "2-Gewestelijk U13 BC"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T15:00:00",
         "state": "postponed"
       },
@@ -34480,7 +34480,7 @@
           "name": "2-Gewestelijk U15 BC"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T15:15:00",
         "state": "postponed"
       },
@@ -35892,7 +35892,7 @@
           "name": "2-Gewestelijk U15 BM"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T10:00:00",
         "state": "postponed"
       },
@@ -37398,7 +37398,7 @@
           "name": "2-Gewestelijk U17 AW"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T10:30:00",
         "state": "postponed"
       },
@@ -40169,7 +40169,7 @@
           "name": "2-Meisjes U11 reeks A"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-10T10:00:00",
         "state": "postponed"
       },
