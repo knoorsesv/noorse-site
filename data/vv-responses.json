@@ -13,27 +13,27 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "9585",
-        "id": "333698",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09802.jpg",
-        "name": "FC Bucovina Loenhout"
+        "clubId": "1889",
+        "id": "334737",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
+        "name": "KSV Wildert"
       },
-      "id": "7136809",
+      "id": "7136815",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Bredabaan, 280",
-        "city": "Wuustwezel",
-        "pitchCode": "2",
-        "postalCode": "2990",
-        "synthetic": true
+        "address": "Steenovenstraat",
+        "city": "Essen",
+        "pitchCode": "1",
+        "postalCode": "2910",
+        "synthetic": false
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Mark",
+          "lastName": "Janssens",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -42,8 +42,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -52,8 +52,8 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T14:30:00",
-      "state": "postponed",
+      "startTime": "2026-01-18T14:30:00",
+      "state": "planned",
       "title": "4 Provinciaal Antw B"
     },
     {
@@ -69,27 +69,27 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8320",
-        "id": "353498",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61086.jpg",
-        "name": "Bacwalde 1"
+        "clubId": "1139",
+        "id": "337385",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00442.jpg",
+        "name": "K. Zandhoven SK B 1"
       },
-      "id": "7154325",
+      "id": "7154331",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Provinciesteenweg 654 A",
-        "city": "Boechout",
-        "pitchCode": "1",
-        "postalCode": "2530",
+        "address": "Voetbalstraat z/n",
+        "city": "Zandhoven",
+        "pitchCode": "2",
+        "postalCode": "2240",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Constant",
+          "lastName": "Bruynen",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -98,8 +98,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -107,9 +107,9 @@
         "id": "CHP_129364"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T16:30:00",
-      "state": "postponed",
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-16T20:00:00",
+      "state": "planned",
       "title": "Reserven Voetb Vl AD"
     },
     {
@@ -117,35 +117,35 @@
       "ageGroup": "Recrea Herren",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
+        "clubId": "8321",
+        "id": "341206",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
+        "name": "V.V. O.S.S.M.I. C"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "337403",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A"
       },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8314",
-        "id": "337441",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-        "name": "FC Patro Hoevenen A"
-      },
-      "id": "7168404",
+      "id": "7168411",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Kerkstraat 89",
-        "city": "Hoevenen",
-        "pitchCode": "1",
-        "postalCode": "2940",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Henri",
+          "lastName": "Renders",
+          "personAssigned": true,
+          "status": null
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -168,8 +168,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -178,8 +178,8 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T11:00:00",
-      "state": "postponed",
+      "startTime": "2026-01-18T11:00:00",
+      "state": "planned",
       "title": "RRC1 - Recrea Mannen ANT"
     },
     {
@@ -187,26 +187,26 @@
       "ageGroup": "Recrea Herren",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
+        "clubId": "6561",
+        "id": "331907",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61116.jpg",
+        "name": "Ostan B"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "337401",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B"
       },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8175",
-        "id": "337295",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
-        "name": "FC Ik Dien D"
-      },
-      "id": "7168769",
+      "id": "7168776",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Kattenbroek 15",
-        "city": "Edegem",
-        "pitchCode": "2",
-        "postalCode": "2650",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
         "synthetic": true
       },
       "officials": [
@@ -238,8 +238,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -248,8 +248,8 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T11:00:00",
-      "state": "postponed",
+      "startTime": "2026-01-18T13:00:00",
+      "state": "planned",
       "title": "RRD1 - Recrea Mannen ANT"
     },
     {
@@ -257,10 +257,10 @@
       "ageGroup": "Equipe Première (Dames)",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1357",
-        "id": "332551",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02366.jpg",
-        "name": "Hoogstraten VV A"
+        "clubId": "8175",
+        "id": "332814",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61012.jpg",
+        "name": "FC Ik Dien"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -270,7 +270,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A"
       },
-      "id": "7169235",
+      "id": "7169242",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -294,8 +294,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -303,9 +303,9 @@
         "id": "CHP_123767"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T20:00:00",
-      "state": "postponed",
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T20:00:00",
+      "state": "planned",
       "title": "Vrouwen 1 Prov Antw"
     },
     {
@@ -313,10 +313,10 @@
       "ageGroup": "Equipe Première (Dames)",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1772",
-        "id": "335211",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04336.jpg",
-        "name": "RB Elzestraat"
+        "clubId": "8176",
+        "id": "333805",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
+        "name": "SVB Driehoek"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -326,7 +326,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B"
       },
-      "id": "7169994",
+      "id": "7170001",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -350,8 +350,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -359,9 +359,9 @@
         "id": "CHP_123772"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T18:00:00",
-      "state": "postponed",
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T18:00:00",
+      "state": "planned",
       "title": "Vrouwen 2 Prov Antw A"
     },
     {
@@ -369,25 +369,913 @@
       "ageGroup": "Recrea Veteran",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
+        "clubId": "8830",
+        "id": "337946",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
+        "name": "Sporting Merksem"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "337402",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse"
+      },
+      "id": "7173911",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "forfeit",
+        "subscript": "Algemeen niet-opkomen"
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125235"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-18T11:00:00",
+      "state": "generalForfeit",
+      "title": "RVD -Recrea Veteranen ANT"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U17",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1972",
+        "id": "354849",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05627.jpg",
+        "name": "K. Nieuwmoer FC 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357842",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 1"
+      },
+      "id": "7385830",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Patrick",
+          "lastName": "Verschueren",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_124257"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T15:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U17 AW"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U9",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357832",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1919",
+        "id": "347346",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
+        "name": "Excelsior Mariaburg A 2"
+      },
+      "id": "7393072",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Rustoordlei",
+        "city": "Brasschaat",
+        "pitchCode": "1",
+        "postalCode": "2930",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_124559"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T12:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U9 BQ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U7",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357828",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8314",
+        "id": "358016",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
+        "name": "FC Patro Hoevenen 1"
+      },
+      "id": "7407467",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Kerkstraat 89",
+        "city": "Hoevenen",
+        "pitchCode": "1",
+        "postalCode": "2940",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125273"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-18T09:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U7 BJ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U15",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "6562",
+        "id": "355970",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
+        "name": "VK Simikos A 3-2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357841",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 3"
+      },
+      "id": "7411161",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Johan",
+          "lastName": "Busschots",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125374"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T12:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U15 BM"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U12",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1889",
+        "id": "347615",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
+        "name": "KSV Wildert 2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357837",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 2"
+      },
+      "id": "7416313",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125506"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T12:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U12 AZ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu13",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357824",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1797",
+        "id": "359175",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
+        "name": "KFC Berendrecht Sp. 1"
+      },
+      "id": "7421637",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Monnikenhofstraat 61A",
+        "city": "Berendrecht",
+        "pitchCode": "1",
+        "postalCode": "2040",
+        "synthetic": false
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125809"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T12:00:00",
+      "state": "planned",
+      "title": "2-Meisjes U13 reeks G"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu11",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "6562",
+        "id": "355967",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
+        "name": "VK Simikos 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "359636",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "id": "7421694",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "2",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125810"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-18T10:00:00",
+      "state": "planned",
+      "title": "2-Meisjes U11 reeks A"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu9",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357821",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357822",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 1"
+      },
+      "id": "7421916",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125815"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T09:00:00",
+      "state": "planned",
+      "title": "2-Meisjes U9 reeks B"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U10",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1076",
+        "id": "355492",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
+        "name": "KFC Brasschaat B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357834",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "id": "7422333",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125824"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T09:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U10 AT"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U10",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "4375",
+        "id": "351710",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09306.jpg",
+        "name": "Ekeren FC 2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357833",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 2"
+      },
+      "id": "7422669",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_125830"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T09:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U10 AZ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U15",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8317",
+        "id": "349050",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
+        "name": "V.C. O.L.S.E. A 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357840",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "id": "7428103",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "2",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126031"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T15:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U15 BC"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U13",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357838",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1591",
+        "id": "351357",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03514.jpg",
+        "name": "K. Sint Job FC B 1"
+      },
+      "id": "7428886",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Sportveldlaan z/n",
+        "city": "St-Job-In-'T-Goor",
+        "pitchCode": "2",
+        "postalCode": "2960",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126045"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T11:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U13 BA"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U13",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357839",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 3"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8298",
+        "id": "356044",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
+        "name": "Kon SV Vlug Vooruit 3-2"
+      },
+      "id": "7428997",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Fortsteenweg 1",
+        "city": "Merksem",
+        "pitchCode": "2",
+        "postalCode": "2170",
+        "synthetic": false
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126047"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T09:30:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U13 BC"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U12",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1919",
+        "id": "347339",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
+        "name": "Excelsior Mariaburg B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357836",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "id": "7433930",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126239"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T12:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U12 BH"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U6",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357827",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse"
       },
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "6562",
-        "id": "337009",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
-        "name": "VK Simikos A"
+        "clubId": "1919",
+        "id": "347351",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
+        "name": "Excelsior Mariaburg A"
       },
-      "id": "7173900",
+      "id": "7439310",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Eksterdreef 8",
-        "city": "Schoten",
+        "address": "Rustoordlei",
+        "city": "Brasschaat",
         "pitchCode": "1",
+        "postalCode": "2930",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126498"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T10:45:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U6 AE"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U11",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357835",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1899",
+        "id": "347968",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05176.jpg",
+        "name": "K. Achterbroek VV 2"
+      },
+      "id": "7441652",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Goossensstraatje",
+        "city": "Kalmthout",
+        "pitchCode": "1",
+        "postalCode": "2920",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126639"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T09:30:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U11 BJ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U8",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357829",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1157",
+        "id": "347872",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
+        "name": "SC City Pirates Antwerpen D 1"
+      },
+      "id": "7445130",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Generaal Simondslaan",
+        "city": "Antwerpen 3",
+        "pitchCode": "1",
+        "postalCode": "2030",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126825"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T11:45:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U8 BQ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U8",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357830",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 3-2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9847",
+        "id": "355562",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09839.jpg",
+        "name": "SPORTING CLUB SCHOTEN A 3"
+      },
+      "id": "7445633",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Gemeentepark, Braamstraat",
+        "city": "Schoten",
+        "pitchCode": "2",
         "postalCode": "2900",
         "synthetic": false
       },
@@ -398,19 +1286,331 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
         "__typename": "MatchSeries",
-        "id": "CHP_125235"
+        "id": "CHP_126834"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T09:30:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U8 BZ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu13",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1697",
+        "id": "356985",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
+        "name": "Loenhout SK 3"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357825",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 3"
+      },
+      "id": "7448710",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "2",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_127025"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-18T10:00:00",
+      "state": "planned",
+      "title": "2-Meisjes U13 reeks K"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U9",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357831",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1973",
+        "id": "352297",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
+        "name": "K. Heibos SV B 1"
+      },
+      "id": "7452911",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Vredelaan 19",
+        "city": "Kalmthout",
+        "pitchCode": "1",
+        "postalCode": "2920",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_127250"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T12:30:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U9 BD"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Women U16",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357826",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8176",
+        "id": "348454",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
+        "name": "SVB Driehoek 1"
+      },
+      "id": "7454633",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Turfaard 5",
+        "city": "Brasschaat",
+        "pitchCode": "1",
+        "postalCode": "2930",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Youssef",
+          "lastName": "Chikhi",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_123884"
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T10:30:00",
-      "state": "postponed",
-      "title": "RVD -Recrea Veteranen ANT"
+      "startTime": "2026-01-16T19:30:00",
+      "state": "planned",
+      "title": "2-Meisjes U16 reeks H"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U19",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1591",
+        "id": "359380",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03514.jpg",
+        "name": "K. Sint Job FC 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357847",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B 2-1"
+      },
+      "id": "7455373",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Paul",
+          "lastName": "Adriaensen",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_129624"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-16T20:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U19 C"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu11",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357823",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1420",
+        "id": "351190",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02673.jpg",
+        "name": "K.B.S.K. Retie (5/5) 1"
+      },
+      "id": "7456483",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Geenend 11",
+        "city": "Retie",
+        "pitchCode": "3",
+        "postalCode": "2470",
+        "synthetic": false
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_129761"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-17T13:00:00",
+      "state": "planned",
+      "title": "2-Meisjes U11 reeks E"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U15",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "2559",
+        "id": "352580",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07813.jpg",
+        "name": "FC PUNT-LARUM"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357841",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7460455",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "1",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Hamza",
+          "lastName": "Azar Khachabi",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_884"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-01-14T19:45:00",
+      "state": "planned",
+      "title": "U15"
     },
     {
       "__typename": "MatchDetail",
@@ -420,32 +1620,32 @@
         "clubId": "8179",
         "id": "357842",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse 1"
+        "name": "SV NOORSE"
       },
-      "eventType": "championship",
+      "eventType": "friendly",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1919",
-        "id": "335489",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
-        "name": "Excelsior Mariaburg B 1"
+        "clubId": "2005",
+        "id": "347503",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05719.jpg",
+        "name": "FCS MARIEKERKE-BRANST"
       },
-      "id": "7385824",
+      "id": "7461954",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Zwemdoklei, 1A",
-        "city": "Brasschaat",
-        "pitchCode": "1",
-        "postalCode": "2930",
+        "address": "Droogveldstraat z.n.",
+        "city": "Mariekerke",
+        "pitchCode": "2",
+        "postalCode": "2880",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Jürgen",
+          "lastName": "De Bondt",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -454,1107 +1654,19 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
         "__typename": "MatchSeries",
-        "id": "CHP_124257"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T10:30:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U17 AW"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U9",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1653",
-        "id": "353922",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
-        "name": "K. Gooreind VV B 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357832",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 2"
-      },
-      "id": "7393067",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_124559"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T09:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U9 BQ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U7",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6562",
-        "id": "355957",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
-        "name": "VK Simikos B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357828",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse 1"
-      },
-      "id": "7407460",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125273"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T09:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U7 BJ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U15",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357841",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 3"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8308",
-        "id": "355742",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61065.jpg",
-        "name": "Vremde A 3"
-      },
-      "id": "7411156",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Vremdesesteenweg 224",
-        "city": "Boechout",
-        "pitchCode": "1",
-        "postalCode": "2530",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125374"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T10:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U15 BM"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U12",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357837",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1602",
-        "id": "351106",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03554.jpg",
-        "name": "Exc. FC Essen 2"
-      },
-      "id": "7416311",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Oude Baan 112",
-        "city": "Essen",
-        "pitchCode": "2",
-        "postalCode": "2910",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125506"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T09:30:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U12 AZ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu13",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1182",
-        "id": "352010",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00727.jpg",
-        "name": "St. Jozef 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357824",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "7421634",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "2",
-        "postalCode": "2950",
-        "synthetic": false
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125809"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T10:00:00",
-      "state": "postponed",
-      "title": "2-Meisjes U13 reeks G"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu11",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "359636",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "2202",
-        "id": "357036",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06461.jpg",
-        "name": "K.VV Duffel B (5/5) 1"
-      },
-      "id": "7421689",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Heidestraat 7 B",
-        "city": "Duffel",
-        "pitchCode": "2",
-        "postalCode": "2570",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125810"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T10:00:00",
-      "state": "postponed",
-      "title": "2-Meisjes U11 reeks A"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu9",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357822",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8173",
-        "id": "351508",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61010.jpg",
-        "name": "Groenenhoek 1"
-      },
-      "id": "7421913",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Ruimtevaartlaan 20",
-        "city": "Deurne",
-        "pitchCode": "1",
-        "postalCode": "2100",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125815"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T17:00:00",
-      "state": "postponed",
-      "title": "2-Meisjes U9 reeks B"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu9",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "2438",
-        "id": "352864",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07436.jpg",
-        "name": "Minderhout VV 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357821",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "7421914",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125815"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T11:30:00",
-      "state": "postponed",
-      "title": "2-Meisjes U9 reeks B"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U10",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357834",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6562",
-        "id": "355965",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
-        "name": "VK Simikos B 2-1"
-      },
-      "id": "7422332",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Eksterdreef 8",
-        "city": "Schoten",
-        "pitchCode": "2",
-        "postalCode": "2900",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125824"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T14:15:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U10 AT"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U10",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357833",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8176",
-        "id": "348443",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
-        "name": "SVB Driehoek B 2"
-      },
-      "id": "7422665",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Turfaard 5",
-        "city": "Brasschaat",
-        "pitchCode": "1",
-        "postalCode": "2930",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125830"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T09:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U10 AZ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U15",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357840",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1076",
-        "id": "355491",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
-        "name": "KFC Brasschaat C 1"
-      },
-      "id": "7428099",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Gemeentepark 16",
-        "city": "Brasschaat",
-        "pitchCode": "1",
-        "postalCode": "2930",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126031"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T15:15:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U15 BC"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U13",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1157",
-        "id": "347833",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
-        "name": "SC City Pirates Antwerpen D 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357838",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "7428882",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "2",
-        "postalCode": "2950",
-        "synthetic": false
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126045"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T15:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U13 BA"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U13",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8177",
-        "id": "354111",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-        "name": "FC Koningshof 3-2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357839",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 3"
-      },
-      "id": "7428996",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126047"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T15:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U13 BC"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U12",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357836",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1857",
-        "id": "357475",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04864.jpg",
-        "name": "Horendonk FC 1"
-      },
-      "id": "7433928",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Postbaan 5",
-        "city": "Essen",
-        "pitchCode": "2",
-        "postalCode": "2910",
-        "synthetic": false
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126239"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T14:45:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U12 BH"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U6",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1157",
-        "id": "347879",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
-        "name": "SC City Pirates Antwerpen"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357827",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse"
-      },
-      "id": "7439304",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126498"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T09:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U6 AE"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U11",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1889",
-        "id": "347617",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
-        "name": "KSV Wildert A 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357835",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse 2"
-      },
-      "id": "7441649",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126639"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T12:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U11 BJ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U8",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8317",
-        "id": "349052",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
-        "name": "V.C. O.L.S.E. 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357829",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "7445126",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126825"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T12:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U8 BQ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U8",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8321",
-        "id": "346483",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
-        "name": "V.V. O.S.S.M.I. A 3"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357830",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 3-2"
-      },
-      "id": "7445630",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126834"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T12:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U8 BZ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U9",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8314",
-        "id": "358018",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-        "name": "FC Patro Hoevenen A 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357831",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "7452904",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_127250"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T09:00:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U9 BD"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Women U16",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8173",
-        "id": "351511",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61010.jpg",
-        "name": "Groenenhoek 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357826",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse 1"
-      },
-      "id": "7454631",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_123884"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-01-10T15:00:00",
-      "state": "postponed",
-      "title": "2-Meisjes U16 reeks H"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U19",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357847",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 2-1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1290",
-        "id": "347320",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01943.jpg",
-        "name": "KFC.Meise 1"
-      },
-      "id": "7455372",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "St.-Annastraat 29",
-        "city": "Meise",
-        "pitchCode": "2",
-        "postalCode": "1860",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_129624"
+        "id": "FRN_882"
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T11:30:00",
-      "state": "postponed",
-      "title": "2-Gewestelijk U19 C"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu11",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1697",
-        "id": "356986",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
-        "name": "Loenhout SK 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357823",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 2"
-      },
-      "id": "7456481",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "postponed",
-        "subscript": "Uitgesteld"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_129761"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-01-11T10:00:00",
-      "state": "postponed",
-      "title": "2-Meisjes U11 reeks E"
+      "startTime": "2026-01-14T19:45:00",
+      "state": "planned",
+      "title": "U17"
     }
   ],
   "teamCalendar": {
@@ -2598,7 +2710,7 @@
           "name": "4 Provinciaal Antw B"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T14:30:00",
         "state": "postponed"
       },
@@ -8733,7 +8845,7 @@
           "name": "RRD1 - Recrea Mannen ANT"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T11:00:00",
         "state": "postponed"
       },
@@ -10038,7 +10150,7 @@
           "name": "RVD -Recrea Veteranen ANT"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T10:30:00",
         "state": "postponed"
       },
@@ -11345,7 +11457,7 @@
           "name": "RRC1 - Recrea Mannen ANT"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T11:00:00",
         "state": "postponed"
       },
@@ -12682,7 +12794,7 @@
           "name": "2-Meisjes U9 reeks B"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T11:30:00",
         "state": "postponed"
       },
@@ -14870,7 +14982,7 @@
           "name": "2-Meisjes U11 reeks E"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T10:00:00",
         "state": "postponed"
       },
@@ -16003,7 +16115,7 @@
           "name": "2-Meisjes U13 reeks G"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T10:00:00",
         "state": "postponed"
       },
@@ -38035,8 +38147,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Resül",
-            "lastName": "Yilmaz",
+            "firstName": "Jürgen",
+            "lastName": "De Bondt",
             "personAssigned": true,
             "status": null
           }
@@ -39517,7 +39629,7 @@
           "name": "2-Gewestelijk U19 C"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-01-11T11:30:00",
         "state": "postponed"
       },
