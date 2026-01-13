@@ -9,6 +9,7 @@ interface ImportMetaEnv {
   readonly CONTENTFUL_TOKEN_PREVIEW: string
   readonly CONTENTFUL_ENV: string
   readonly PROD: string
+  readonly npm_package_version: string
 }
 
 declare module 'astro-imagetools/api'
