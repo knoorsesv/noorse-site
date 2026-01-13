@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet'
-import config from '../env/config'
 import type { FC, PropsWithChildren } from 'react'
 
 export const Seo: FC<PropsWithChildren<{ title: string }>> = ({
