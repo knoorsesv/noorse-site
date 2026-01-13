@@ -19,13 +19,11 @@ export const Seo: FC<PropsWithChildren<{ title: string }>> = ({
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      {config.enableAnalytics && (
-        <script
-          defer
-          data-domain="noorse.be"
-          src="https://plausible.io/js/script.js"
-        ></script>
-      )}
+      <script
+        defer
+        data-domain="noorse.be"
+        src="https://plausible.io/js/script.js"
+      ></script>
 
       <link
         rel="preconnect"
