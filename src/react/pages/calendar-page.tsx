@@ -21,9 +21,14 @@ export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
 
   function dateDiffersFromPreviousGame(index: number, game: Game) {
     return (
-      index === 0 || date(game.startTime) !== date(games[index - 1].startTime)
+      index === 0 ||
+      date(game.startTime) !== date(sortedGames[index - 1].startTime)
     )
   }
+
+  const sortedGames = games.sort(
+    (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
+  )
 
   return (
     <>
@@ -40,7 +45,7 @@ export const CalendarPage: FC<{ games: Game[] }> = ({ games }) => {
         >
           <ul className={'list-none'}>
             {/* todo: use game table component here */}
-            {games.map((game, index) => {
+            {sortedGames.map((game, index) => {
               return (
                 <React.Fragment key={game.id}>
                   {dateDiffersFromPreviousGame(index, game) ? (
