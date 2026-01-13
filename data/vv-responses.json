@@ -331,7 +331,7 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "1",
         "postalCode": "2950",
         "synthetic": false
       },
@@ -2701,8 +2701,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -2710,9 +2710,9 @@
           "name": "4 Provinciaal Antw B"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2026-01-11T14:30:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-02-15T15:00:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -4127,8 +4127,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -4136,9 +4136,9 @@
           "name": "Vrouwen 2 Prov Antw A"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2026-01-10T18:00:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-02-14T18:00:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -5567,8 +5567,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -5576,9 +5576,9 @@
           "name": "Vrouwen 1 Prov Antw"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2026-01-10T20:00:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-02-14T20:00:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
