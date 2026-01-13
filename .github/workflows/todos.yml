@@ -28,6 +28,6 @@ jobs:
           caseSensitive: false
           autoAssign: false
           excludePattern: '^(node_modules/)'
-          # keywords: 'todo,TODO'
+          keywords: 'todo,TODO'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
