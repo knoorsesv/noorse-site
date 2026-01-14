@@ -23,7 +23,20 @@ whoami
 which pnpm
 
 pnpm i
-pnpm update-vv-data
+
+(
+  set +e
+  pnpm update-vv-data
+  status=$?
+  set -e
+
+  if [ $status -eq 0 ]; then
+    curl -X POST -F "tags=all" -F "body=Synced new vv data" http://debokomaru.alpaca-bortle.ts.net:8000/notify/apprise
+  else
+    curl -X POST -F "tags=all" -F "body=Error updating vv data" http://debokomaru.alpaca-bortle.ts.net:8000/notify/apprise
+  fi
+) &> /dev/null
+
 
 git add data
 git commit -m "chore: update vv data"
