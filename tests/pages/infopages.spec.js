@@ -36,7 +36,7 @@ test.describe('All Info Pages', () => {
   test('There is a kalender page', async ({ page }) => {
     await page.goto('/info/kalender')
     const title = page.locator('#content h1')
-    const subtitle = page.locator('#content h2')
+    const subtitle = page.locator('#content h3')
     const lines = page.locator('#content ul li')
 
     expect(title).toHaveText('Kalender')

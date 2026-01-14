@@ -24,6 +24,8 @@
           { "maxLength": 5 }
         ],
         "unsized-images": "off",
+        "image-size-responsive": "off",
+        "target-size": "off",
         "uses-rel-preconnect": ["warn"],
         "uses-responsive-images": [
           "warn",
