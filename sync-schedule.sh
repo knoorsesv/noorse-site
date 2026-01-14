@@ -35,7 +35,7 @@ pnpm i
   else
     curl -X POST -F "tags=all" -F "body=Error updating vv data" http://debokomaru.alpaca-bortle.ts.net:8000/notify/apprise
   fi
-) &> /dev/null
+)
 
 
 git add data
