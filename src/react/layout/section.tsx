@@ -26,7 +26,7 @@ const SectionTitle: FC<PropsWithChildren> = ({ children }) => {
         'mb-2 flex flex-col group-odd:items-start group-even:items-end'
       }
     >
-      <h2 className={`relative mb-4 text-3xl uppercase`}>
+      <h2 className={`relative uppercase`}>
         {children}
         <div
           style={{

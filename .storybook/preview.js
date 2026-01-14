@@ -1,7 +1,6 @@
 // todo: dont import this background image for the body
 import '../src/styles/global.css'
 import '../src/styles/tailwind.css'
-// todo: maybe the storybook shouldn't rely on this? there are "reset" classes on ul tags for example without which the components dont look good isolated
 import '../src/styles/typography.css'
 
 export const parameters = {

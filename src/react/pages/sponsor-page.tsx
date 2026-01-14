@@ -41,7 +41,7 @@ export const SponsorPage: FC<{
                         className="flex size-[250px] flex-col items-center rounded-lg bg-gray-100 p-4 drop-shadow-lg"
                         key={sponsor.naam}
                       >
-                        <h4 className="text-2xl underline">{sponsor.naam}</h4>
+                        <h4 className="underline">{sponsor.naam}</h4>
                         <div className="flex w-full flex-col items-start justify-center gap-8">
                           <SponsorWithLogo
                             sponsor={sponsor}
