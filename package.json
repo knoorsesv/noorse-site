@@ -65,10 +65,8 @@
     "react-dom": "19.2.3",
     "react-helmet": "6.1.0",
     "react-lazy-load": "4.0.1",
-    "react-typography": "0.16.23",
     "tailwindcss-elevation": "2.0.0",
-    "typescript": "5.9.3",
-    "typography": "0.16.24"
+    "typescript": "5.9.3"
   },
   "devDependencies": {
     "@commitlint/cli": "20.3.1",
