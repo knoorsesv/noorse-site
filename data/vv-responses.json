@@ -1586,10 +1586,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Hamza",
-          "lastName": "Azar Khachabi",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1598,8 +1598,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1609,7 +1609,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-01-14T19:45:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "U15"
     },
     {
@@ -1642,8 +1642,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Jürgen",
-          "lastName": "De Bondt",
+          "firstName": "Sven",
+          "lastName": "Van Acker",
           "personAssigned": true,
           "status": null
         }
@@ -7167,8 +7167,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -7176,9 +7176,9 @@
           "name": "Reserven Voetb Vl AD"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2026-01-10T16:30:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-03-31T20:30:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -36641,10 +36641,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Hamza",
-            "lastName": "Azar Khachabi",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -36653,8 +36653,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -36664,7 +36664,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-01-14T19:45:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -38147,8 +38147,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Jürgen",
-            "lastName": "De Bondt",
+            "firstName": "Sven",
+            "lastName": "Van Acker",
             "personAssigned": true,
             "status": null
           }
