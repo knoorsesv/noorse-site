@@ -95,8 +95,8 @@ export const TeamPage: FC<{
                   <section className={'flex flex-col items-center'}>
                     <SubTitle>
                       {ploeg.bouw === 'recreatief'
-                        ? `Verantwoordelijke${ploeg.coach.length > 1 ? 'n' : ''}`
-                        : `Coach${ploeg.coach.length > 1 ? 'es' : ''}`}
+                        ? `${ploeg.coach.length > 1 ? 'Verantwoordelijken' : 'Verantwoordelijke'}`
+                        : `${ploeg.coach.length > 1 ? 'Coaches' : 'Coach'}`}
                     </SubTitle>
                     {ploeg.coach.map((coach) => (
                       <span key={coach}>{coach}</span>

@@ -40,7 +40,7 @@ export const CategoryTeamNavigation: FC<{
         .map((bouw) => {
           return (
             <div className="flex flex-col items-center" key={bouw}>
-              <h4 className="mb-2 font-bold capitalize">{bouw}</h4>
+              <h4 className="font-bold capitalize">{bouw}</h4>
               <div className={'flex-start flex w-full flex-wrap gap-2'}>
                 {bouwen[bouw]
                   .sort((ploeg1: Team, ploeg2: Team) => {

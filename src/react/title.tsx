@@ -1,10 +1,12 @@
-import type { FC, PropsWithChildren } from 'react'
+import type { ElementType, FC, PropsWithChildren } from 'react'
 
-export const Title: FC<PropsWithChildren> = ({ children }) => {
+export const Title: FC<
+  PropsWithChildren<{ as?: string; className?: string }>
+> = ({ children, as = 'h1', className }) => {
+  const Tag = as as ElementType
   return (
     <div className={'mb-4 flex flex-col items-center'}>
-      {/* todo: this should not be an h1, but now it has implicit typography styling so just changing to h2 breaks the styling */}
-      <h1 className={'mb-4 text-center'}>{children}</h1>
+      <Tag className={className}>{children}</Tag>
       <div className={'m-2 w-[60%] border-b-2 border-black text-center'} />
     </div>
   )

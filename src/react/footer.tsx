@@ -49,8 +49,9 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
   return (
     <>
       <div className={wrapperClasses}>
-        {/* todo: this shouldnt be an h1 */}
-        <Title>K. Noorse S.V.</Title>
+        <Title as="h3" className={`text-3xl font-bold`}>
+          K. Noorse S.V.
+        </Title>
         <div className={`large:w-48 large:p-6 w-1/4 pb-12`}>
           <Logo width="100%" height="100%" />
         </div>

@@ -8,27 +8,27 @@ test.describe('Team Pages', () => {
   test('has a team page with all data', async ({ page }) => {
     const title = page.locator('#content h1')
 
-    const coachesSection = page.locator('section:has(h2:has-text("Coaches"))')
+    const coachesSection = page.locator('section:has(h3:has-text("Coaches"))')
     const coaches = coachesSection.locator('span')
 
-    const trainingSection = page.locator('section:has(h2:has-text("Training"))')
+    const trainingSection = page.locator('section:has(h3:has-text("Training"))')
     const trainingen = trainingSection.locator('span')
 
     const klassementSection = page.locator(
-      'section:has(h2:has-text("Klassement"))'
+      'section:has(h3:has-text("Klassement"))'
     )
     const klassementEntries = klassementSection.locator('tbody tr')
 
-    const kalenderSection = page.locator('section:has(h2:has-text("Kalender"))')
+    const kalenderSection = page.locator('section:has(h3:has-text("Kalender"))')
     const kalenderEntries = kalenderSection.locator('tbody tr')
 
-    const reeksSection = page.locator('section:has(h2:has-text("Reeksen"))')
+    const reeksSection = page.locator('section:has(h3:has-text("Reeksen"))')
     const reeksen = reeksSection.locator('a')
 
     const calendarLink = page.locator('a:has-text("Google Calendar")')
 
     const afgevaardigedeSection = page.locator(
-      'section:has(h2:has-text("Afgevaardigde"))'
+      'section:has(h3:has-text("Afgevaardigde"))'
     )
     const afgevaardigden = afgevaardigedeSection.locator('span')
 
