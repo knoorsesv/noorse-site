@@ -1426,8 +1426,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Youssef",
-          "lastName": "Chikhi",
+          "firstName": "Nouraddine",
+          "lastName": "Bezzanine",
           "personAssigned": true,
           "status": null
         }
@@ -18586,8 +18586,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Youssef",
-            "lastName": "Chikhi",
+            "firstName": "Nouraddine",
+            "lastName": "Bezzanine",
             "personAssigned": true,
             "status": null
           }
