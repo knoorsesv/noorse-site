@@ -17,14 +17,11 @@ echo "path $PATH "
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github
 
-git pull
-
-whoami
-which pnpm
-
-pnpm i
-
 (
+  git pull
+
+  pnpm i
+
   set +e
   pnpm update-vv-data
   status=$?
@@ -38,6 +35,4 @@ pnpm i
 )
 
 
-git add data
-git commit -m "chore: update vv data"
-git push
+
