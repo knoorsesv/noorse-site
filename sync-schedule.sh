@@ -23,7 +23,7 @@ ssh-add ~/.ssh/github
   pnpm i
 
   set +e
-  pnpm update-vv-data && git add . && git commit -m "update schedule data" && git push
+  pnpm update-vv-data && git add . && git commit -m "chore: update schedule data" && git push
   status=$?
   set -e
 
