@@ -42,11 +42,11 @@ importers:
         specifier: 5.1.3
         version: 5.1.3(vite@7.3.1(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))
       astro:
-        specifier: 5.16.12
-        version: 5.16.12(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1)
+        specifier: 5.17.1
+        version: 5.17.1(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1)
       astro-imagetools:
         specifier: 0.9.0
-        version: 0.9.0(astro@5.16.12(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1))
+        version: 0.9.0(astro@5.17.1(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1))
       contentful:
         specifier: 11.10.3
         version: 11.10.3
@@ -1999,8 +1999,8 @@ packages:
     peerDependencies:
       astro: '>=0.26 || >=1.0.0-beta'
 
-  astro@5.16.12:
-    resolution: {integrity: sha512-R2LH1GW4JexpSMWffbpzkeZDAwbdZwI5BclXEwi+vIUPxQI+7Y9ZogJ5u4ukdYFGrcrie/0z+Od4i3MlR0nELQ==}
+  astro@5.17.1:
+    resolution: {integrity: sha512-oD3tlxTaVWGq/Wfbqk6gxzVRz98xa/rYlpe+gU2jXJMSD01k6sEDL01ZlT8mVSYB/rMgnvIOfiQQ3BbLdN237A==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -5051,9 +5051,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ufo@1.6.1:
-    resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
-
   ufo@1.6.3:
     resolution: {integrity: sha512-yDJTmhydvl5lJzBmy/hyOAA0d+aqCBuwl818haVdYCRrWV84o7YyeVm4QlVHStqNrrJSTb6jKuFAVqAFsr+K3Q==}
 
@@ -5778,16 +5775,16 @@ snapshots:
 
   '@babel/generator@7.28.3':
     dependencies:
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/types': 7.29.0
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
       jsesc: 3.0.2
 
   '@babel/generator@7.28.5':
     dependencies:
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/types': 7.29.0
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
       jsesc: 3.0.2
@@ -5821,7 +5818,7 @@ snapshots:
   '@babel/helper-module-imports@7.27.1':
     dependencies:
       '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5870,7 +5867,7 @@ snapshots:
   '@babel/helpers@7.28.4':
     dependencies:
       '@babel/template': 7.27.2
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/helpers@7.28.6':
     dependencies:
@@ -5879,7 +5876,7 @@ snapshots:
 
   '@babel/parser@7.28.4':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/parser@7.28.5':
     dependencies:
@@ -5916,8 +5913,8 @@ snapshots:
   '@babel/template@7.27.2':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/types': 7.29.0
 
   '@babel/template@7.28.6':
     dependencies:
@@ -7570,10 +7567,10 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-imagetools@0.9.0(astro@5.16.12(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1)):
+  astro-imagetools@0.9.0(astro@5.17.1(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1)):
     dependencies:
       '@astropub/codecs': 0.4.4
-      astro: 5.16.12(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.17.1(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1)
       file-type: 17.1.1
       find-cache-dir: 3.3.2
       find-up: 6.3.0
@@ -7582,7 +7579,7 @@ snapshots:
     optionalDependencies:
       imagetools-core: 3.0.2
 
-  astro@5.16.12(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.17.1(@types/node@22.7.4)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.48.1)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -9634,8 +9631,8 @@ snapshots:
 
   magicast@0.5.1:
     dependencies:
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/types': 7.29.0
       source-map-js: 1.2.1
 
   make-dir@3.1.0:
@@ -10134,7 +10131,7 @@ snapshots:
     dependencies:
       destr: 2.0.5
       node-fetch-native: 1.6.7
-      ufo: 1.6.1
+      ufo: 1.6.3
 
   ohash@2.0.11: {}
 
@@ -11289,8 +11286,6 @@ snapshots:
       - supports-color
 
   typescript@5.9.3: {}
-
-  ufo@1.6.1: {}
 
   ufo@1.6.3: {}
 
