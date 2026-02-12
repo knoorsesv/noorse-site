@@ -1576,10 +1576,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Axl",
+            "lastName": "Adriaensen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -4442,10 +4442,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Patrick",
+            "lastName": "Weyers",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -9974,12 +9974,12 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": 1,
+          "awayTeamGoals": null,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": 2,
+          "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "finished",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Algemeen niet-opkomen"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -9989,7 +9989,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2025-11-30T15:00:00",
-        "state": "finished"
+        "state": "generalForfeit"
       },
       {
         "__typename": "MatchDetail",
@@ -10771,8 +10771,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Algemeen niet-opkomen"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -10782,7 +10782,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-04-19T11:00:00",
-        "state": "planned"
+        "state": "generalForfeit"
       },
       {
         "__typename": "MatchDetail",
@@ -24523,6 +24523,45 @@
         "startDateTimeInThePassed": false,
         "startTime": "2026-04-25T09:00:00",
         "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "U9",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1588",
+          "id": "355372",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03497.jpg",
+          "name": "K. KALMTHOUT SK"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "357832",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "id": "7476558",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_890",
+          "name": "U9"
+        },
+        "showScore": false,
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-03-25T17:00:00",
+        "state": "planned"
       }
     ],
     "357833": [
@@ -33544,10 +33583,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Henricus",
+            "lastName": "Delbon",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -38675,10 +38714,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jelle",
+            "lastName": "Swolfs",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -41438,16 +41477,16 @@
                   "clubId": "1807",
                   "clubRegistrationNumber": "04471",
                   "fairplayPercentage": null,
-                  "goalDifference": 42,
+                  "goalDifference": 53,
                   "goalsAgainst": 11,
-                  "goalsFor": 53,
+                  "goalsFor": 64,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04471.jpg",
                   "matchesDrawn": 2,
                   "matchesLost": 1,
-                  "matchesPlayed": 14,
-                  "matchesWon": 11,
+                  "matchesPlayed": 15,
+                  "matchesWon": 12,
                   "name": "K.F.C. BROECHEM A",
-                  "points": 35,
+                  "points": 38,
                   "position": 1,
                   "teamId": "335913"
                 },
@@ -41466,7 +41505,7 @@
                   "matchesWon": 11,
                   "name": "DAVO PUURS",
                   "points": 35,
-                  "position": 1,
+                  "position": 2,
                   "teamId": "336901"
                 },
                 {
@@ -41636,13 +41675,13 @@
                   "clubId": "8308",
                   "clubRegistrationNumber": "R61065",
                   "fairplayPercentage": null,
-                  "goalDifference": -29,
-                  "goalsAgainst": 44,
+                  "goalDifference": -40,
+                  "goalsAgainst": 55,
                   "goalsFor": 15,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61065.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 11,
-                  "matchesPlayed": 14,
+                  "matchesLost": 12,
+                  "matchesPlayed": 15,
                   "matchesWon": 1,
                   "name": "VREMDE",
                   "points": 5,
