@@ -2785,10 +2785,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mohcine",
+            "lastName": "Ikniouen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -3600,10 +3600,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Filip",
+            "lastName": "Darcon",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -5651,10 +5651,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Theo",
+            "lastName": "Vanmeert",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -10029,9 +10029,9 @@
         "officials": [],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": 3,
+          "awayTeamGoals": 5,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": 5,
+          "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
           "status": "finished",
           "subscript": null
@@ -34792,10 +34792,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Youssef",
+            "lastName": "Chikhi",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -36251,10 +36251,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jan",
+            "lastName": "Van De Wouwer",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -39970,10 +39970,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Paul",
+            "lastName": "Adriaensen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -44382,16 +44382,16 @@
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": null,
-                  "goalDifference": 26,
-                  "goalsAgainst": 23,
-                  "goalsFor": 49,
+                  "goalDifference": 33,
+                  "goalsAgainst": 18,
+                  "goalsFor": 51,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 2,
+                  "matchesLost": 1,
                   "matchesPlayed": 14,
-                  "matchesWon": 11,
+                  "matchesWon": 12,
                   "name": "S.V. NOORSE",
-                  "points": 34,
+                  "points": 37,
                   "position": 1,
                   "teamId": "337402"
                 },
@@ -44410,7 +44410,7 @@
                   "matchesWon": 11,
                   "name": "V.K. ATLANTA",
                   "points": 34,
-                  "position": 1,
+                  "position": 2,
                   "teamId": "334183"
                 },
                 {
@@ -44541,24 +44541,6 @@
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "8490",
-                  "clubRegistrationNumber": "09696",
-                  "fairplayPercentage": null,
-                  "goalDifference": -28,
-                  "goalsAgainst": 54,
-                  "goalsFor": 26,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09696.jpg",
-                  "matchesDrawn": 2,
-                  "matchesLost": 11,
-                  "matchesPlayed": 16,
-                  "matchesWon": 3,
-                  "name": "FC LOS INCAS ANTWERPEN A",
-                  "points": 11,
-                  "position": 10,
-                  "teamId": "332191"
-                },
-                {
-                  "__typename": "RankingTeam",
                   "clubId": "6555",
                   "clubRegistrationNumber": "R61100",
                   "fairplayPercentage": null,
@@ -44572,8 +44554,26 @@
                   "matchesWon": 2,
                   "name": "ESVO",
                   "points": 8,
-                  "position": 11,
+                  "position": 10,
                   "teamId": "336503"
+                },
+                {
+                  "__typename": "RankingTeam",
+                  "clubId": "8490",
+                  "clubRegistrationNumber": "09696",
+                  "fairplayPercentage": null,
+                  "goalDifference": -35,
+                  "goalsAgainst": 56,
+                  "goalsFor": 21,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09696.jpg",
+                  "matchesDrawn": 2,
+                  "matchesLost": 12,
+                  "matchesPlayed": 16,
+                  "matchesWon": 2,
+                  "name": "FC LOS INCAS ANTWERPEN A",
+                  "points": 8,
+                  "position": 10,
+                  "teamId": "332191"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -49931,7 +49931,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 3,
+                  "matchesPlayed": 4,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
@@ -49942,14 +49942,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8321",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 92,
+                  "fairplayPercentage": 94,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 3,
+                  "matchesPlayed": 4,
                   "matchesWon": null,
                   "name": "V.V. O.S.S.M.I.",
                   "points": null,
@@ -50527,7 +50527,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/08111.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 2,
+                  "matchesPlayed": 3,
                   "matchesWon": null,
                   "name": "FC Merksem",
                   "points": null,
@@ -50581,7 +50581,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 3,
+                  "matchesPlayed": 4,
                   "matchesWon": null,
                   "name": "SC City Pirates Antwerpen",
                   "points": null,
