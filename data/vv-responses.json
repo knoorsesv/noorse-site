@@ -399,19 +399,19 @@
       "id": "7169933",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Generaal Simondslaan",
-        "city": "Antwerpen 3",
+        "address": "Oude Bareellei",
+        "city": "Merksem",
         "pitchCode": "1",
-        "postalCode": "2030",
+        "postalCode": "2170",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Sebastiaan",
+          "lastName": "Claerhout",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -774,7 +774,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-02-21T12:00:00",
+      "startTime": "2026-02-21T09:30:00",
       "state": "planned",
       "title": "2-Gewestelijk U10 AT"
     },
@@ -1079,54 +1079,6 @@
       "ageGroup": "U8",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "6576",
-        "id": "351635",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-        "name": "FC Seja 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357829",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "id": "7445146",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126825"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-02-21T12:00:00",
-      "state": "planned",
-      "title": "2-Gewestelijk U8 BQ"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U8",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
         "clubId": "1973",
         "id": "352299",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
@@ -1377,62 +1329,6 @@
       "startTime": "2026-02-21T15:00:00",
       "state": "planned",
       "title": "2-Meisjes U16 reeks H"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U19",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357847",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 2-1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6556",
-        "id": "347905",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61101.jpg",
-        "name": "S.C. O.L.V.E. 2-1"
-      },
-      "id": "7455392",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Kattenbroek 4",
-        "city": "Edegem",
-        "pitchCode": "2",
-        "postalCode": "2650",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Jelle",
-          "lastName": "Swolfs",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_129624"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-02-21T14:45:00",
-      "state": "planned",
-      "title": "2-Gewestelijk U19 C"
     },
     {
       "__typename": "MatchDetail",
@@ -3553,10 +3449,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Sebastiaan",
+            "lastName": "Claerhout",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -3600,10 +3496,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Filip",
-            "lastName": "Darcon",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -22050,7 +21946,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-02-21T12:00:00",
+        "startTime": "2026-03-18T16:00:00",
         "state": "planned"
       },
       {
@@ -27598,7 +27494,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-02-21T12:00:00",
+        "startTime": "2026-02-21T09:30:00",
         "state": "planned"
       },
       {
@@ -39923,10 +39819,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Jelle",
-            "lastName": "Swolfs",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -39945,7 +39841,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-02-21T14:45:00",
+        "startTime": "2026-05-02T14:00:00",
         "state": "planned"
       },
       {
