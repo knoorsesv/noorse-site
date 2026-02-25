@@ -3058,10 +3058,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Dirk",
+            "lastName": "Van Bladel",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -4484,10 +4484,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mohammed",
+            "lastName": "Hichour",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -5924,10 +5924,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Gunther",
+            "lastName": "Leysen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7524,10 +7524,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ammar",
+            "lastName": "Üstboga",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18908,10 +18908,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Harry",
+            "lastName": "Van Der Zande",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -35065,10 +35065,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Roman Roubenovitch",
+            "lastName": "Dadaian",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -36571,10 +36571,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Steven",
+            "lastName": "Wijnants",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -40290,10 +40290,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Victor",
+            "lastName": "Nicolaes",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
