@@ -435,9 +435,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -643,9 +643,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -1083,9 +1083,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "2",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -1475,9 +1475,9 @@
         "__typename": "MatchLocation",
         "address": "Meylweg 52",
         "city": "Kontich",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2550",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [],
       "outcome": {
@@ -41245,6 +41245,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1113",
+                  "clubRegistrationNumber": "00358",
+                  "fairplayPercentage": null,
+                  "goalDifference": -11,
+                  "goalsAgainst": 68,
+                  "goalsFor": 57,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 14,
+                  "matchesPlayed": 22,
+                  "matchesWon": 7,
+                  "name": "K. WUUSTWEZEL F.C. B",
+                  "points": 22,
+                  "position": 10,
+                  "teamId": "337145"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1919",
                   "clubRegistrationNumber": "05357",
                   "fairplayPercentage": null,
@@ -41258,43 +41276,25 @@
                   "matchesWon": 6,
                   "name": "EXCELSIOR MARIABURG B",
                   "points": 21,
-                  "position": 10,
-                  "teamId": "335484"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1113",
-                  "clubRegistrationNumber": "00358",
-                  "fairplayPercentage": null,
-                  "goalDifference": -16,
-                  "goalsAgainst": 66,
-                  "goalsFor": 50,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 14,
-                  "matchesPlayed": 21,
-                  "matchesWon": 6,
-                  "name": "K. WUUSTWEZEL F.C. B",
-                  "points": 19,
                   "position": 11,
-                  "teamId": "337145"
+                  "teamId": "335484"
                 },
                 {
                   "__typename": "RankingTeam",
                   "clubId": "2015",
                   "clubRegistrationNumber": "05757",
                   "fairplayPercentage": null,
-                  "goalDifference": -43,
-                  "goalsAgainst": 69,
-                  "goalsFor": 26,
+                  "goalDifference": -48,
+                  "goalsAgainst": 76,
+                  "goalsFor": 28,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05757.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 14,
-                  "matchesPlayed": 21,
+                  "matchesLost": 15,
+                  "matchesPlayed": 22,
                   "matchesWon": 6,
                   "name": "ZANDVLIET SPORT B",
                   "points": 19,
-                  "position": 11,
+                  "position": 12,
                   "teamId": "332826"
                 },
                 {
@@ -42055,6 +42055,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1113",
+                  "clubRegistrationNumber": "00358",
+                  "fairplayPercentage": null,
+                  "goalDifference": -6,
+                  "goalsAgainst": 16,
+                  "goalsFor": 10,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 3,
+                  "matchesWon": 1,
+                  "name": "K. WUUSTWEZEL F.C. B",
+                  "points": 3,
+                  "position": 9,
+                  "teamId": "337145"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1857",
                   "clubRegistrationNumber": "04864",
                   "fairplayPercentage": null,
@@ -42068,7 +42086,7 @@
                   "matchesWon": 0,
                   "name": "HORENDONK F.C.",
                   "points": 2,
-                  "position": 9,
+                  "position": 10,
                   "teamId": "333906"
                 },
                 {
@@ -42086,7 +42104,7 @@
                   "matchesWon": 0,
                   "name": "SPORTING MERKSEM B",
                   "points": 0,
-                  "position": 10,
+                  "position": 11,
                   "teamId": "337943"
                 },
                 {
@@ -42104,7 +42122,7 @@
                   "matchesWon": 0,
                   "name": "K. KALMTHOUT S.K. B",
                   "points": 0,
-                  "position": 11,
+                  "position": 12,
                   "teamId": "336614"
                 },
                 {
@@ -42122,7 +42140,7 @@
                   "matchesWon": 0,
                   "name": "S.V. NOORSE",
                   "points": 0,
-                  "position": 12,
+                  "position": 13,
                   "teamId": "337396"
                 },
                 {
@@ -42140,39 +42158,21 @@
                   "matchesWon": 0,
                   "name": "PUTTE S.K.",
                   "points": 0,
-                  "position": 13,
-                  "teamId": "334044"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1113",
-                  "clubRegistrationNumber": "00358",
-                  "fairplayPercentage": null,
-                  "goalDifference": -11,
-                  "goalsAgainst": 14,
-                  "goalsFor": 3,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 2,
-                  "matchesWon": 0,
-                  "name": "K. WUUSTWEZEL F.C. B",
-                  "points": 0,
                   "position": 14,
-                  "teamId": "337145"
+                  "teamId": "334044"
                 },
                 {
                   "__typename": "RankingTeam",
                   "clubId": "2015",
                   "clubRegistrationNumber": "05757",
                   "fairplayPercentage": null,
-                  "goalDifference": -15,
-                  "goalsAgainst": 15,
-                  "goalsFor": 0,
+                  "goalDifference": -20,
+                  "goalsAgainst": 22,
+                  "goalsFor": 2,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05757.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 2,
+                  "matchesLost": 3,
+                  "matchesPlayed": 3,
                   "matchesWon": 0,
                   "name": "ZANDVLIET SPORT B",
                   "points": 0,
@@ -47767,7 +47767,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09839.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 3,
+                  "matchesPlayed": 4,
                   "matchesWon": null,
                   "name": "SPORTING CLUB SCHOTEN",
                   "points": null,
@@ -47796,14 +47796,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8176",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 85,
+                  "fairplayPercentage": 88,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 4,
+                  "matchesPlayed": 5,
                   "matchesWon": null,
                   "name": "SVB Driehoek",
                   "points": null,
