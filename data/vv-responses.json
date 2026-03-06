@@ -79,7 +79,7 @@
         "__typename": "MatchLocation",
         "address": "Kapelstraat",
         "city": "Schelle",
-        "pitchCode": "2",
+        "pitchCode": "1",
         "postalCode": "2627",
         "synthetic": true
       },
@@ -108,7 +108,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-03-07T15:30:00",
+      "startTime": "2026-03-07T14:30:00",
       "state": "planned",
       "title": "Reserven Voetb Vl AD"
     },
@@ -1607,7 +1607,7 @@
         "id": "FRN_884"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-03-05T19:30:00",
       "state": "planned",
       "title": "U15"
@@ -7450,7 +7450,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-03-07T15:30:00",
+        "startTime": "2026-03-07T14:30:00",
         "state": "planned"
       },
       {
@@ -36919,7 +36919,7 @@
           "name": "U15"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-03-05T19:30:00",
         "state": "planned"
       }
