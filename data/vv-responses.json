@@ -331,7 +331,7 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "1",
         "postalCode": "2950",
         "synthetic": false
       },
@@ -3143,10 +3143,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jamal",
+            "lastName": "El Fadili",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -4569,10 +4569,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Bart",
+            "lastName": "De Muynck",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -6009,10 +6009,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Noah",
+            "lastName": "Neveu",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7139,10 +7139,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Benachir",
+            "lastName": "Ghassab",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7609,10 +7609,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ammar",
+            "lastName": "Üstboga",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18993,10 +18993,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Bertrand",
+            "lastName": "Poppe",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -35150,10 +35150,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ferhat",
+            "lastName": "Yilmaz",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -36656,10 +36656,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mattijs",
+            "lastName": "Weyn",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -38209,10 +38209,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Lakbir",
+            "lastName": "Kafe",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -40375,10 +40375,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Koen",
+            "lastName": "Lauryssen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -47296,7 +47296,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "Excelsior Mariaburg",
                   "points": null,
@@ -47314,7 +47314,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "FC Patro Hoevenen",
                   "points": null,
@@ -47332,7 +47332,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "FC Seja",
                   "points": null,
@@ -47386,7 +47386,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "V.C. O.L.S.E.",
                   "points": null,
@@ -48697,14 +48697,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "6576",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 97,
+                  "fairplayPercentage": 95,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "FC Seja",
                   "points": null,
@@ -48769,14 +48769,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8176",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 94,
+                  "fairplayPercentage": 92,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "SVB Driehoek",
                   "points": null,
