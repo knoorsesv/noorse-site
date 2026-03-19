@@ -986,10 +986,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Hamza",
-          "lastName": "Chaaban",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1295,7 +1295,7 @@
         "id": "CHP_126825"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-03-18T16:00:00",
       "state": "planned",
       "title": "2-Gewestelijk U8 BQ"
@@ -1439,7 +1439,7 @@
         "id": "CHP_127025"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-03-18T18:00:00",
       "state": "planned",
       "title": "2-Meisjes U13 reeks K"
@@ -17466,7 +17466,7 @@
           "name": "2-Meisjes U13 reeks K"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-03-18T18:00:00",
         "state": "planned"
       },
@@ -18993,10 +18993,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Bertrand",
-            "lastName": "Poppe",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -22219,7 +22219,7 @@
           "name": "2-Gewestelijk U8 BQ"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-03-18T16:00:00",
         "state": "planned"
       },
@@ -34680,10 +34680,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Herman",
+            "lastName": "Van Den Bogaert",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -34692,8 +34692,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "postponed",
-          "subscript": "Uitgesteld"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -34701,9 +34701,9 @@
           "name": "2-Gewestelijk U15 BC"
         },
         "showScore": true,
-        "startDateTimeInThePassed": true,
-        "startTime": "2026-01-10T15:15:00",
-        "state": "postponed"
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-04-01T19:45:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -35103,10 +35103,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Hamza",
-            "lastName": "Chaaban",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -41189,6 +41189,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1919",
+                  "clubRegistrationNumber": "05357",
+                  "fairplayPercentage": null,
+                  "goalDifference": -16,
+                  "goalsAgainst": 67,
+                  "goalsFor": 51,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
+                  "matchesDrawn": 3,
+                  "matchesLost": 13,
+                  "matchesPlayed": 23,
+                  "matchesWon": 7,
+                  "name": "EXCELSIOR MARIABURG B",
+                  "points": 24,
+                  "position": 10,
+                  "teamId": "335484"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1113",
                   "clubRegistrationNumber": "00358",
                   "fairplayPercentage": null,
@@ -41202,7 +41220,7 @@
                   "matchesWon": 7,
                   "name": "K. WUUSTWEZEL F.C. B",
                   "points": 22,
-                  "position": 10,
+                  "position": 11,
                   "teamId": "337145"
                 },
                 {
@@ -41220,26 +41238,8 @@
                   "matchesWon": 7,
                   "name": "ZANDVLIET SPORT B",
                   "points": 22,
-                  "position": 10,
+                  "position": 11,
                   "teamId": "332826"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1919",
-                  "clubRegistrationNumber": "05357",
-                  "fairplayPercentage": null,
-                  "goalDifference": -22,
-                  "goalsAgainst": 67,
-                  "goalsFor": 45,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
-                  "matchesDrawn": 3,
-                  "matchesLost": 13,
-                  "matchesPlayed": 22,
-                  "matchesWon": 6,
-                  "name": "EXCELSIOR MARIABURG B",
-                  "points": 21,
-                  "position": 12,
-                  "teamId": "335484"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -41256,7 +41256,7 @@
                   "matchesWon": 6,
                   "name": "S.V. NOORSE",
                   "points": 21,
-                  "position": 12,
+                  "position": 13,
                   "teamId": "337396"
                 },
                 {
@@ -41282,13 +41282,13 @@
                   "clubId": "8830",
                   "clubRegistrationNumber": "09710",
                   "fairplayPercentage": null,
-                  "goalDifference": -97,
-                  "goalsAgainst": 111,
+                  "goalDifference": -103,
+                  "goalsAgainst": 117,
                   "goalsFor": 14,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 22,
-                  "matchesPlayed": 22,
+                  "matchesLost": 23,
+                  "matchesPlayed": 23,
                   "matchesWon": 0,
                   "name": "SPORTING MERKSEM B",
                   "points": 0,
@@ -42020,16 +42020,16 @@
                   "clubId": "1919",
                   "clubRegistrationNumber": "05357",
                   "fairplayPercentage": null,
-                  "goalDifference": -4,
+                  "goalDifference": 2,
                   "goalsAgainst": 9,
-                  "goalsFor": 5,
+                  "goalsFor": 11,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
                   "matchesDrawn": 0,
                   "matchesLost": 2,
-                  "matchesPlayed": 3,
-                  "matchesWon": 1,
+                  "matchesPlayed": 4,
+                  "matchesWon": 2,
                   "name": "EXCELSIOR MARIABURG B",
-                  "points": 3,
+                  "points": 6,
                   "position": 10,
                   "teamId": "335484"
                 },
@@ -42110,13 +42110,13 @@
                   "clubId": "8830",
                   "clubRegistrationNumber": "09710",
                   "fairplayPercentage": null,
-                  "goalDifference": -19,
-                  "goalsAgainst": 24,
+                  "goalDifference": -25,
+                  "goalsAgainst": 30,
                   "goalsFor": 5,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09710.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 4,
-                  "matchesPlayed": 4,
+                  "matchesLost": 5,
+                  "matchesPlayed": 5,
                   "matchesWon": 0,
                   "name": "SPORTING MERKSEM B",
                   "points": 0,
@@ -44120,6 +44120,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8320",
+                  "clubRegistrationNumber": "R61086",
+                  "fairplayPercentage": null,
+                  "goalDifference": -8,
+                  "goalsAgainst": 82,
+                  "goalsFor": 74,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61086.jpg",
+                  "matchesDrawn": 2,
+                  "matchesLost": 11,
+                  "matchesPlayed": 21,
+                  "matchesWon": 8,
+                  "name": "BACWALDE",
+                  "points": 26,
+                  "position": 8,
+                  "teamId": "353498"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1243",
                   "clubRegistrationNumber": "01557",
                   "fairplayPercentage": null,
@@ -44133,26 +44151,8 @@
                   "matchesWon": 7,
                   "name": "K.S.K. OELEGEM B",
                   "points": 25,
-                  "position": 8,
-                  "teamId": "338946"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8320",
-                  "clubRegistrationNumber": "R61086",
-                  "fairplayPercentage": null,
-                  "goalDifference": -21,
-                  "goalsAgainst": 82,
-                  "goalsFor": 61,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61086.jpg",
-                  "matchesDrawn": 2,
-                  "matchesLost": 11,
-                  "matchesPlayed": 20,
-                  "matchesWon": 7,
-                  "name": "BACWALDE",
-                  "points": 23,
                   "position": 9,
-                  "teamId": "353498"
+                  "teamId": "338946"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -44231,13 +44231,13 @@
                   "clubId": "8318",
                   "clubRegistrationNumber": "R61082",
                   "fairplayPercentage": null,
-                  "goalDifference": -165,
-                  "goalsAgainst": 184,
+                  "goalDifference": -178,
+                  "goalsAgainst": 197,
                   "goalsFor": 19,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61082.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 18,
-                  "matchesPlayed": 18,
+                  "matchesLost": 19,
+                  "matchesPlayed": 19,
                   "matchesWon": 0,
                   "name": "S.K. BERKENRODE",
                   "points": 0,
@@ -46007,14 +46007,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1420",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 74,
+                  "fairplayPercentage": 72,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02673.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": null,
                   "name": "K.B.S.K. Retie",
                   "points": null,
@@ -46025,14 +46025,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1697",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 93,
+                  "fairplayPercentage": 89,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "Loenhout SK",
                   "points": null,
@@ -51259,39 +51259,39 @@
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "1832",
-                  "clubRegistrationNumber": "04704",
-                  "fairplayPercentage": 83,
-                  "goalDifference": 30,
-                  "goalsAgainst": 8,
-                  "goalsFor": 38,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04704.jpg",
+                  "clubId": "1076",
+                  "clubRegistrationNumber": "00228",
+                  "fairplayPercentage": 92,
+                  "goalDifference": 33,
+                  "goalsAgainst": 15,
+                  "goalsFor": 48,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 1,
                   "matchesPlayed": 9,
+                  "matchesWon": 7,
+                  "name": "K.F.C. BRASSCHAAT A",
+                  "points": 22,
+                  "position": 2,
+                  "teamId": "355494"
+                },
+                {
+                  "__typename": "RankingTeam",
+                  "clubId": "1832",
+                  "clubRegistrationNumber": "04704",
+                  "fairplayPercentage": 85,
+                  "goalDifference": 29,
+                  "goalsAgainst": 11,
+                  "goalsFor": 40,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04704.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 2,
+                  "matchesPlayed": 10,
                   "matchesWon": 7,
                   "name": "K.F.C. RANST A",
                   "points": 22,
                   "position": 2,
                   "teamId": "351568"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1076",
-                  "clubRegistrationNumber": "00228",
-                  "fairplayPercentage": 91,
-                  "goalDifference": 32,
-                  "goalsAgainst": 13,
-                  "goalsFor": 45,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 8,
-                  "matchesWon": 6,
-                  "name": "K.F.C. BRASSCHAAT A",
-                  "points": 19,
-                  "position": 3,
-                  "teamId": "355494"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -51784,14 +51784,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1919",
                   "clubRegistrationNumber": "05357",
-                  "fairplayPercentage": 89,
-                  "goalDifference": 23,
-                  "goalsAgainst": 11,
-                  "goalsFor": 34,
+                  "fairplayPercentage": 91,
+                  "goalDifference": 21,
+                  "goalsAgainst": 15,
+                  "goalsFor": 36,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 7,
+                  "matchesLost": 3,
+                  "matchesPlayed": 8,
                   "matchesWon": 5,
                   "name": "EXCELSIOR MARIABURG B",
                   "points": 15,
@@ -51874,17 +51874,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "1889",
                   "clubRegistrationNumber": "05142",
-                  "fairplayPercentage": 92,
-                  "goalDifference": -16,
-                  "goalsAgainst": 24,
-                  "goalsFor": 8,
+                  "fairplayPercentage": 93,
+                  "goalDifference": -14,
+                  "goalsAgainst": 26,
+                  "goalsFor": 12,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 6,
-                  "matchesPlayed": 7,
-                  "matchesWon": 0,
+                  "matchesPlayed": 8,
+                  "matchesWon": 1,
                   "name": "K.S.V. WILDERT B",
-                  "points": 1,
+                  "points": 4,
                   "position": 8,
                   "teamId": "347609"
                 }
