@@ -594,10 +594,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Mattijs",
-          "lastName": "Weyn",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1249,6 +1249,54 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2026-03-28T12:00:00",
+      "state": "planned",
+      "title": "2-Gewestelijk U11 BJ"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U11",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "357835",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 2"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8176",
+        "id": "348444",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
+        "name": "SVB Driehoek A 2"
+      },
+      "id": "7441691",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Turfaard 5",
+        "city": "Brasschaat",
+        "pitchCode": "1",
+        "postalCode": "2930",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_126639"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-03-25T18:30:00",
       "state": "planned",
       "title": "2-Gewestelijk U11 BJ"
     },
@@ -29252,7 +29300,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-04-11T09:00:00",
+        "startTime": "2026-03-25T18:30:00",
         "state": "planned"
       },
       {
@@ -36695,10 +36743,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Mattijs",
-            "lastName": "Weyn",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -49260,14 +49308,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1899",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 99,
+                  "fairplayPercentage": 100,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05176.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "K. Achterbroek VV",
                   "points": null,
@@ -49314,14 +49362,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1654",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 89,
+                  "fairplayPercentage": 90,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03874.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "Putte SK",
                   "points": null,
