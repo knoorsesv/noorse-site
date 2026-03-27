@@ -30,8 +30,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Jamal",
-          "lastName": "El Fadili",
+          "firstName": "Kris",
+          "lastName": "Mettepenningen",
           "personAssigned": true,
           "status": null
         }
@@ -1522,10 +1522,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Ludo",
+          "lastName": "Mols",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -3191,8 +3191,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Jamal",
-            "lastName": "El Fadili",
+            "firstName": "Kris",
+            "lastName": "Mettepenningen",
             "personAssigned": true,
             "status": null
           }
@@ -19041,10 +19041,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ludo",
+            "lastName": "Mols",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
