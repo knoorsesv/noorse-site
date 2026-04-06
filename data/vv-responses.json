@@ -23,9 +23,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2950",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [
         {
@@ -135,9 +135,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "1",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -399,9 +399,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -1087,7 +1087,7 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "1",
+        "pitchCode": "2",
         "postalCode": "2950",
         "synthetic": false
       },
@@ -22009,7 +22009,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-04-18T10:00:00",
+        "startTime": "2026-04-22T17:00:00",
         "state": "planned"
       },
       {
@@ -44458,16 +44458,16 @@
                   "clubId": "6554",
                   "clubRegistrationNumber": "R61099",
                   "fairplayPercentage": null,
-                  "goalDifference": 60,
-                  "goalsAgainst": 41,
-                  "goalsFor": 101,
+                  "goalDifference": 61,
+                  "goalsAgainst": 44,
+                  "goalsFor": 105,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61099.jpg",
                   "matchesDrawn": 2,
                   "matchesLost": 3,
-                  "matchesPlayed": 21,
-                  "matchesWon": 16,
+                  "matchesPlayed": 22,
+                  "matchesWon": 17,
                   "name": "F.C. V.D.P. C",
-                  "points": 50,
+                  "points": 53,
                   "position": 1,
                   "teamId": "337001"
                 },
@@ -44486,7 +44486,7 @@
                   "matchesWon": 16,
                   "name": "S.V. NOORSE A",
                   "points": 50,
-                  "position": 1,
+                  "position": 2,
                   "teamId": "337403"
                 },
                 {
@@ -44566,13 +44566,13 @@
                   "clubId": "8303",
                   "clubRegistrationNumber": "R61055",
                   "fairplayPercentage": null,
-                  "goalDifference": 14,
-                  "goalsAgainst": 66,
-                  "goalsFor": 80,
+                  "goalDifference": 13,
+                  "goalsAgainst": 70,
+                  "goalsFor": 83,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61055.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 9,
-                  "matchesPlayed": 19,
+                  "matchesLost": 10,
+                  "matchesPlayed": 20,
                   "matchesWon": 9,
                   "name": "KON. OLVAC C",
                   "points": 28,
