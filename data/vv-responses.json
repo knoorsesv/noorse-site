@@ -534,54 +534,6 @@
       "awayTeam": {
         "__typename": "MatchDetailTeam",
         "clubId": "8179",
-        "id": "357834",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8314",
-        "id": "358019",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-        "name": "FC Patro Hoevenen B 2-1"
-      },
-      "id": "7422376",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Kerkstraat 89",
-        "city": "Hoevenen",
-        "pitchCode": "1",
-        "postalCode": "2940",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_125824"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-04-11T15:15:00",
-      "state": "planned",
-      "title": "2-Gewestelijk U10 AT"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U10",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
         "id": "357833",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 2"
@@ -27596,7 +27548,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-04-11T15:15:00",
+        "startTime": "2026-04-23T17:45:00",
         "state": "planned"
       },
       {
