@@ -69,8 +69,8 @@
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.4.3",
-    "@commitlint/config-conventional": "20.4.3",
+    "@commitlint/cli": "20.5.0",
+    "@commitlint/config-conventional": "20.5.0",
     "@storybook/addon-a11y": "10.3.3",
     "@storybook/addon-links": "10.3.3",
     "@storybook/react-vite": "10.3.3",
