@@ -2623,8 +2623,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
-          "status": "stopped",
-          "subscript": "Stopgezet"
+          "status": "finished",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -2634,7 +2634,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2026-03-28T19:00:00",
-        "state": "stopped"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -4131,10 +4131,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Yusuf",
+            "lastName": "Kepenekli",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -5571,10 +5571,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Victor",
+            "lastName": "Fierens",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7171,10 +7171,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Yusuf",
+            "lastName": "Kepenekli",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7240,7 +7240,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-04-24T20:00:00",
+        "startTime": "2026-04-23T20:00:00",
         "state": "planned"
       },
       {
@@ -18555,10 +18555,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Bjorn",
+            "lastName": "Feremans",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -34602,10 +34602,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ludo",
+            "lastName": "Rollenberg",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -34790,10 +34790,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jan",
+            "lastName": "Renier",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -36296,10 +36296,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Daan",
+            "lastName": "Goedons",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
