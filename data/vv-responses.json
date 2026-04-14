@@ -4398,10 +4398,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Geert",
+            "lastName": "Cambré",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -5838,10 +5838,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Timo",
+            "lastName": "Van Litsenborg",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -11094,8 +11094,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Wouter",
-            "lastName": "Heyndrickx",
+            "firstName": "Constant",
+            "lastName": "De Maere",
             "personAssigned": true,
             "status": null
           },
@@ -36516,10 +36516,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Daan",
-            "lastName": "Goedons",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -38116,10 +38116,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Marcel",
+            "lastName": "Noiron",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -40282,10 +40282,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Tino",
+            "lastName": "Schuerewegen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -47398,14 +47398,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1653",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 87,
+                  "fairplayPercentage": 89,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "K. Gooreind VV",
                   "points": null,
@@ -47506,14 +47506,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8176",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 89,
+                  "fairplayPercentage": 90,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "SVB Driehoek",
                   "points": null,
