@@ -30,20 +30,20 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Yusuf",
-          "lastName": "Kepenekli",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 5,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -53,7 +53,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-04-18T13:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Reserven Voetb Vl AD"
     },
     {
@@ -226,10 +226,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Patrick",
+          "lastName": "Heydens",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1335,7 +1335,7 @@
         "id": "FRN_890"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-04-15T17:00:00",
       "state": "planned",
       "title": "U9"
@@ -5791,10 +5791,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Patrick",
+            "lastName": "Heydens",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7391,20 +7391,20 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Yusuf",
-            "lastName": "Kepenekli",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 5,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 0,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -7414,7 +7414,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-04-18T13:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -24446,7 +24446,7 @@
           "name": "U9"
         },
         "showScore": false,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-04-15T17:00:00",
         "state": "planned"
       },
@@ -48470,7 +48470,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "FC Seja",
                   "points": null,
@@ -48517,14 +48517,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 90,
+                  "fairplayPercentage": 91,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
