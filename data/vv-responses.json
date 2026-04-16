@@ -226,8 +226,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Patrick",
-          "lastName": "Heydens",
+          "firstName": "Ismail",
+          "lastName": "Kafe",
           "personAssigned": true,
           "status": null
         }
@@ -282,20 +282,20 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Yusuf",
-          "lastName": "Kepenekli",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 5,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -305,7 +305,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-04-18T18:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Vrouwen 2 Prov Antw A"
     },
     {
@@ -4351,20 +4351,20 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Yusuf",
-            "lastName": "Kepenekli",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 5,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -4374,7 +4374,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-04-18T18:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -5791,8 +5791,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Patrick",
-            "lastName": "Heydens",
+            "firstName": "Ismail",
+            "lastName": "Kafe",
             "personAssigned": true,
             "status": null
           }
@@ -36516,10 +36516,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ludovicus",
+            "lastName": "Emmerechts",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -36563,10 +36563,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Reda",
+            "lastName": "Abou Allal",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -46441,14 +46441,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "996",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 98,
+                  "fairplayPercentage": 99,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00043.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": null,
                   "name": "R. Cappellen FC",
                   "points": null,
@@ -46466,7 +46466,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
