@@ -30,10 +30,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Rudy",
+          "lastName": "Janssens",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -86,20 +86,20 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Toon",
-          "lastName": "Hermans",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 5,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -109,7 +109,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-04-23T20:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Reserven Voetb Vl AD"
     },
     {
@@ -372,10 +372,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Tayfun",
+          "lastName": "Anil",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -580,10 +580,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Reda",
-          "lastName": "Abou Allal",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1028,11 +1028,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 2,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1041,9 +1041,9 @@
         "id": "CHP_126031"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-04-21T19:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "2-Gewestelijk U15 BC"
     },
     {
@@ -3375,10 +3375,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Rudy",
+            "lastName": "Janssens",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -7888,20 +7888,20 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Toon",
-            "lastName": "Hermans",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 5,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -7911,7 +7911,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-04-23T20:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -34896,10 +34896,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Mark",
+            "lastName": "Mulbah",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -35280,11 +35280,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 2,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 2,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -35293,9 +35293,9 @@
           "name": "2-Gewestelijk U15 BC"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-04-21T19:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -37013,10 +37013,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Reda",
-            "lastName": "Abou Allal",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -38566,10 +38566,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Tayfun",
+            "lastName": "Anil",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -40685,10 +40685,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Robin",
+            "lastName": "De Smet",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -46259,14 +46259,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "2438",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 92,
+                  "fairplayPercentage": 93,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07436.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "Minderhout VV",
                   "points": null,
@@ -46277,14 +46277,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 76,
+                  "fairplayPercentage": 78,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
@@ -47873,7 +47873,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 9,
+                  "matchesPlayed": 10,
                   "matchesWon": null,
                   "name": "K. Heibos SV",
                   "points": null,
@@ -47938,14 +47938,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 82,
+                  "fairplayPercentage": 85,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 8,
+                  "matchesPlayed": 9,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
@@ -48234,7 +48234,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "K. Heibos SV",
                   "points": null,
@@ -48270,7 +48270,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61075.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "KSK Nieuw Stabroek",
                   "points": null,
@@ -49913,7 +49913,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09306.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 10,
+                  "matchesPlayed": 11,
                   "matchesWon": null,
                   "name": "Ekeren FC",
                   "points": null,
@@ -49924,14 +49924,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1919",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 95,
+                  "fairplayPercentage": 96,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "Excelsior Mariaburg",
                   "points": null,
@@ -51136,16 +51136,16 @@
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": 87,
                   "goalDifference": 35,
-                  "goalsAgainst": 12,
-                  "goalsFor": 47,
+                  "goalsAgainst": 14,
+                  "goalsFor": 49,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-                  "matchesDrawn": 0,
+                  "matchesDrawn": 1,
                   "matchesLost": 2,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": 9,
                   "name": "S.V. NOORSE B",
-                  "points": 27,
-                  "position": 2,
+                  "points": 28,
+                  "position": 1,
                   "teamId": "357840"
                 },
                 {
@@ -51188,17 +51188,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "8317",
                   "clubRegistrationNumber": "R61080",
-                  "fairplayPercentage": 85,
+                  "fairplayPercentage": 86,
                   "goalDifference": 19,
-                  "goalsAgainst": 25,
-                  "goalsFor": 44,
+                  "goalsAgainst": 27,
+                  "goalsFor": 46,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
-                  "matchesDrawn": 1,
+                  "matchesDrawn": 2,
                   "matchesLost": 5,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": 5,
                   "name": "V.C. O.L.S.E. A",
-                  "points": 16,
+                  "points": 17,
                   "position": 5,
                   "teamId": "349050"
                 },
