@@ -142,20 +142,20 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Noah",
-          "lastName": "Neveu",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 5,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -165,7 +165,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-05-02T14:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "2-Gewestelijk U19 C"
     },
     {
@@ -38790,20 +38790,20 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Noah",
-            "lastName": "Neveu",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 5,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -38813,7 +38813,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-05-02T14:00:00",
-        "state": "planned"
+        "state": "forfeitByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -45414,6 +45414,24 @@
               "teams": [
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "8298",
+                  "clubRegistrationNumber": "R61040",
+                  "fairplayPercentage": 86,
+                  "goalDifference": 22,
+                  "goalsAgainst": 13,
+                  "goalsFor": 35,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 13,
+                  "matchesWon": 11,
+                  "name": "KON. SV VLUG VOORUIT A",
+                  "points": 33,
+                  "position": 1,
+                  "teamId": "356052"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8173",
                   "clubRegistrationNumber": "R61010",
                   "fairplayPercentage": 94,
@@ -45427,26 +45445,8 @@
                   "matchesWon": 10,
                   "name": "GROENENHOEK",
                   "points": 30,
-                  "position": 1,
+                  "position": 2,
                   "teamId": "351511"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "8298",
-                  "clubRegistrationNumber": "R61040",
-                  "fairplayPercentage": 89,
-                  "goalDifference": 19,
-                  "goalsAgainst": 13,
-                  "goalsFor": 32,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61040.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 12,
-                  "matchesWon": 10,
-                  "name": "KON. SV VLUG VOORUIT A",
-                  "points": 30,
-                  "position": 1,
-                  "teamId": "356052"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -45542,14 +45542,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8176",
                   "clubRegistrationNumber": "R61013",
-                  "fairplayPercentage": 89,
-                  "goalDifference": -27,
-                  "goalsAgainst": 35,
+                  "fairplayPercentage": 87,
+                  "goalDifference": -30,
+                  "goalsAgainst": 38,
                   "goalsFor": 8,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 9,
-                  "matchesPlayed": 12,
+                  "matchesLost": 10,
+                  "matchesPlayed": 13,
                   "matchesWon": 1,
                   "name": "K.S.V.B. DRIEHOEK",
                   "points": 5,
