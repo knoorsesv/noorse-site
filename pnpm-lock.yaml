@@ -54,8 +54,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       marked:
-        specifier: 17.0.6
-        version: 17.0.6
+        specifier: 18.0.2
+        version: 18.0.2
       prop-types:
         specifier: 15.8.1
         version: 15.8.1
@@ -3672,8 +3672,8 @@ packages:
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
-  marked@17.0.6:
-    resolution: {integrity: sha512-gB0gkNafnonOw0obSTEGZTT86IuhILt2Wfx0mWH/1Au83kybTayroZ/V6nS25mN7u8ASy+5fMhgB3XPNrOZdmA==}
+  marked@18.0.2:
+    resolution: {integrity: sha512-NsmlUYBS/Zg57rgDWMYdnre6OTj4e+qq/JS2ot3KrYLSoHLw+sDu0Nm1ZGpRgYAq6c+b1ekaY5NzVchMCQnzcg==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -9496,7 +9496,7 @@ snapshots:
 
   markdown-table@3.0.3: {}
 
-  marked@17.0.6: {}
+  marked@18.0.2: {}
 
   matchmediaquery@0.4.2:
     dependencies:
