@@ -2,181 +2,13 @@
   "clubMatchesAssignations": [
     {
       "__typename": "MatchDetail",
-      "ageGroup": "U17",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357842",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1919",
-        "id": "335489",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
-        "name": "Excelsior Mariaburg B 1"
-      },
-      "id": "7385824",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Zwemdoklei, 1A",
-        "city": "Brasschaat",
-        "pitchCode": "1",
-        "postalCode": "2930",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Yusuf",
-          "lastName": "Kepenekli",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 5,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 3,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_124257"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-04-30T19:00:00",
-      "state": "finished",
-      "title": "2-Gewestelijk U17 AW"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U15",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357840",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1076",
-        "id": "355491",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
-        "name": "KFC Brasschaat C 1"
-      },
-      "id": "7428099",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Gemeentepark 16",
-        "city": "Brasschaat",
-        "pitchCode": "1",
-        "postalCode": "2930",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Mark",
-          "lastName": "Mulbah",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 3,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 3,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_126031"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-04-29T19:45:00",
-      "state": "finished",
-      "title": "2-Gewestelijk U15 BC"
-    },
-    {
-      "__typename": "MatchDetail",
       "ageGroup": "U19",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "357847",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B 2-1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6556",
-        "id": "347905",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61101.jpg",
-        "name": "S.C. O.L.V.E. 2-1"
-      },
-      "id": "7455392",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Kattenbroek 4",
-        "city": "Edegem",
-        "pitchCode": "2",
-        "postalCode": "2650",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 0,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 5,
-        "homeTeamPenaltiesScored": null,
-        "status": "forfeit",
-        "subscript": "Forfait"
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_129624"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-05-02T14:00:00",
-      "state": "forfeitByOneTeam",
-      "title": "2-Gewestelijk U19 C"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U19",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6556",
-        "id": "347905",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61101.jpg",
-        "name": "S.C. O.L.V.E. 2-1"
+        "clubId": "6562",
+        "id": "355942",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
+        "name": "VK Simikos 1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -186,7 +18,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 2-1"
       },
-      "id": "7455418",
+      "id": "7455410",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -198,19 +30,19 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Robin",
-          "lastName": "De Smet",
+          "firstName": "Bert",
+          "lastName": "Bedeer",
           "personAssigned": true,
           "status": null
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 4,
+        "awayTeamGoals": null,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 0,
+        "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "finished",
+        "status": "planned",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -219,9 +51,9 @@
         "id": "CHP_129624"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-04-29T20:00:00",
-      "state": "finished",
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-05-07T20:00:00",
+      "state": "planned",
       "title": "2-Gewestelijk U19 C"
     }
   ],
@@ -43303,13 +43135,13 @@
                   "clubId": "1146",
                   "clubRegistrationNumber": "00500",
                   "fairplayPercentage": null,
-                  "goalDifference": 21,
-                  "goalsAgainst": 43,
-                  "goalsFor": 64,
+                  "goalDifference": 19,
+                  "goalsAgainst": 50,
+                  "goalsFor": 69,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00500.jpg",
                   "matchesDrawn": 3,
-                  "matchesLost": 6,
-                  "matchesPlayed": 21,
+                  "matchesLost": 7,
+                  "matchesPlayed": 22,
                   "matchesWon": 12,
                   "name": "TOR DEURNE PIRATES B",
                   "points": 39,
@@ -43357,16 +43189,16 @@
                   "clubId": "8162",
                   "clubRegistrationNumber": "R61001",
                   "fairplayPercentage": null,
-                  "goalDifference": -9,
-                  "goalsAgainst": 60,
-                  "goalsFor": 51,
+                  "goalDifference": -7,
+                  "goalsAgainst": 65,
+                  "goalsFor": 58,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61001.jpg",
                   "matchesDrawn": 2,
                   "matchesLost": 10,
-                  "matchesPlayed": 21,
-                  "matchesWon": 9,
+                  "matchesPlayed": 22,
+                  "matchesWon": 10,
                   "name": "F.C. BELGICA",
-                  "points": 29,
+                  "points": 32,
                   "position": 7,
                   "teamId": "332756"
                 },
