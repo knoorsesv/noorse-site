@@ -30,8 +30,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Bert",
-          "lastName": "Bedeer",
+          "firstName": "Mark",
+          "lastName": "Janssens",
           "personAssigned": true,
           "status": null
         }
@@ -38857,8 +38857,8 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Bert",
-            "lastName": "Bedeer",
+            "firstName": "Mark",
+            "lastName": "Janssens",
             "personAssigned": true,
             "status": null
           }
@@ -48569,14 +48569,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1653",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 95,
+                  "fairplayPercentage": 96,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 12,
+                  "matchesPlayed": 13,
                   "matchesWon": null,
                   "name": "K. Gooreind VV",
                   "points": null,
@@ -48612,7 +48612,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 11,
+                  "matchesPlayed": 12,
                   "matchesWon": null,
                   "name": "KSV Wildert",
                   "points": null,
