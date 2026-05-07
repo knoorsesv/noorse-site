@@ -38,11 +38,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 3,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -51,9 +51,9 @@
         "id": "CHP_129624"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-05-07T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "2-Gewestelijk U19 C"
     }
   ],
@@ -38865,11 +38865,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 3,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -38878,9 +38878,9 @@
           "name": "2-Gewestelijk U19 C"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-05-07T20:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -50602,6 +50602,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "6556",
+                  "clubRegistrationNumber": "R61101",
+                  "fairplayPercentage": 84,
+                  "goalDifference": 25,
+                  "goalsAgainst": 25,
+                  "goalsFor": 50,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61101.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 3,
+                  "matchesPlayed": 11,
+                  "matchesWon": 8,
+                  "name": "K.S.C. O.L.V.E.",
+                  "points": 24,
+                  "position": 2,
+                  "teamId": "347905"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8314",
                   "clubRegistrationNumber": "R61077",
                   "fairplayPercentage": 91,
@@ -50615,26 +50633,8 @@
                   "matchesWon": 7,
                   "name": "F.C. PATRO HOEVENEN",
                   "points": 23,
-                  "position": 2,
-                  "teamId": "358029"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "6556",
-                  "clubRegistrationNumber": "R61101",
-                  "fairplayPercentage": 84,
-                  "goalDifference": 20,
-                  "goalsAgainst": 25,
-                  "goalsFor": 45,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61101.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 3,
-                  "matchesPlayed": 10,
-                  "matchesWon": 7,
-                  "name": "K.S.C. O.L.V.E.",
-                  "points": 21,
                   "position": 3,
-                  "teamId": "347905"
+                  "teamId": "358029"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -50676,14 +50676,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "6562",
                   "clubRegistrationNumber": "R61119",
-                  "fairplayPercentage": 88,
-                  "goalDifference": -13,
-                  "goalsAgainst": 37,
+                  "fairplayPercentage": 89,
+                  "goalDifference": -16,
+                  "goalsAgainst": 40,
                   "goalsFor": 24,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 7,
-                  "matchesPlayed": 11,
+                  "matchesLost": 8,
+                  "matchesPlayed": 12,
                   "matchesWon": 3,
                   "name": "V.K. SIMIKOS",
                   "points": 10,
@@ -50694,17 +50694,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 91,
-                  "goalDifference": -30,
-                  "goalsAgainst": 37,
-                  "goalsFor": 7,
+                  "fairplayPercentage": 92,
+                  "goalDifference": -32,
+                  "goalsAgainst": 42,
+                  "goalsFor": 10,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 9,
-                  "matchesPlayed": 9,
-                  "matchesWon": 0,
+                  "matchesLost": 10,
+                  "matchesPlayed": 11,
+                  "matchesWon": 1,
                   "name": "S.V. NOORSE B",
-                  "points": 0,
+                  "points": 3,
                   "position": 7,
                   "teamId": "357847"
                 },
@@ -50723,7 +50723,7 @@
                   "matchesWon": 0,
                   "name": "E.R.C. HOEILAART",
                   "points": 0,
-                  "position": 7,
+                  "position": 8,
                   "teamId": "353142"
                 }
               ],
