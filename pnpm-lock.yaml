@@ -106,8 +106,8 @@ importers:
         specifier: 10.4.27
         version: 10.4.27(postcss@8.5.15)
       chromatic:
-        specifier: 16.3.0
-        version: 16.3.0
+        specifier: 16.10.1
+        version: 16.10.1
       concurrently:
         specifier: 9.2.1
         version: 9.2.1
@@ -2191,8 +2191,8 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chromatic@16.3.0:
-    resolution: {integrity: sha512-PvXUpXP3l8p2NxLEYhMgo4kGNNBQgCgbslMu+O4Bb37ujiiDWk8QExX/Jk7JeHUewNgK2wg98rtw3gdfz3U+Kg==}
+  chromatic@16.10.1:
+    resolution: {integrity: sha512-u3RusLCCJxN8IZV3qLh6RTpo6Mu5A77bpOTAGJL5A+v2to9fsVKcK3j0GvGjPQeJJPNSI8rAI5c4U9ukbGiZJQ==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -7791,7 +7791,9 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chromatic@16.3.0: {}
+  chromatic@16.10.1:
+    dependencies:
+      semver: 7.7.4
 
   ci-info@4.4.0: {}
 
