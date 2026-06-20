@@ -78,7 +78,7 @@
     "@typescript-eslint/parser": "8.59.1",
     "autoprefixer": "10.4.27",
     "chromatic": "16.10.1",
-    "concurrently": "9.2.1",
+    "concurrently": "10.0.3",
     "cross-env": "10.1.0",
     "eslint": "10.2.1",
     "eslint-config-gvdp": "1.0.8",
