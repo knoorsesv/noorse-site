@@ -2,7 +2,6 @@
 import { isFuture, parse } from 'date-fns'
 import { getEntries } from '../data/contentful/get-entries'
 import { mapEvent, mapNewsItem, mapSponsor } from '../data/contentful/mapping'
-import { siteMetadata } from '../data/siteMetadata'
 import { newsletterLink, siteMap, webshopLink } from '../env/constants'
 import Page from '../layouts/Page.astro'
 import { HomePage } from '../react/pages'
@@ -23,7 +22,6 @@ const events = (await getEntries('evenement', mapEvent))
   .sort((a, b) => new Date(a.datum).getTime() - new Date(b.datum).getTime())
 
 const links = { newsletterLink, webshopLink }
-const version = siteMetadata.version
 ---
 
 <Page title="Home">
@@ -32,7 +30,6 @@ const version = siteMetadata.version
     events={events}
     links={links}
     newsItems={newsItems}
-    version={version}
     sponsors={sponsors}
     client:visible
   />

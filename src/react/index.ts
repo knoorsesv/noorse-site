@@ -17,7 +17,6 @@ export * from './text-block'
 export * from './spaced-info'
 export * from './title'
 export * from './sub-title'
-export * from './version'
 export * from './video'
 
 export * from './layout/section'

@@ -21,7 +21,6 @@ import type { Sponsor } from '../types/sponsor'
 import { useBreakpoint } from '../hooks/use-breakpoint.tsx'
 
 export const HomePage: FC<{
-  version: string
   sponsors: Sponsor[]
   newsItems: NewsItem[]
   siteMap: SiteMap
@@ -30,7 +29,7 @@ export const HomePage: FC<{
     newsletterLink: string
     webshopLink: string
   }
-}> = ({ version, sponsors, newsItems, siteMap, events, links }) => {
+}> = ({ sponsors, newsItems, siteMap, events, links }) => {
   const isLarge = useBreakpoint('large')
 
   return (
@@ -81,7 +80,7 @@ export const HomePage: FC<{
           </Section>
         </Section.List>
       </main>
-      <Footer version={version} sponsors={sponsors} />
+      <Footer sponsors={sponsors} />
     </>
   )
 }

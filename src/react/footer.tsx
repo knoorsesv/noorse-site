@@ -1,6 +1,6 @@
 import ctl from '@netlify/classnames-template-literals'
 import type { FC } from 'react'
-import { Title, Version } from './index'
+import { Title } from './index'
 import { ContactInfo } from './index.js'
 import { Logo } from './logo.jsx'
 import { SponsorWithLogo } from './sponsor-with-logo.tsx'
@@ -69,28 +69,10 @@ const ContactAndSponsorFooter: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
   )
 }
 
-const CopyRightFooter: FC<{ version: string }> = ({ version }) => {
-  const copyRightWrapper = ctl(`
-  flex flex-col justify-start items-center
-  bg-green/75
-  text-black
-  py-3`)
-
-  return (
-    <div className={copyRightWrapper}>
-      <Version version={version} />
-    </div>
-  )
-}
-
-export const Footer: FC<{ version: string; sponsors: Sponsor[] }> = ({
-  version,
-  sponsors,
-}) => {
+export const Footer: FC<{ sponsors: Sponsor[] }> = ({ sponsors }) => {
   return (
     <footer id="footer">
       <ContactAndSponsorFooter sponsors={sponsors} />
-      <CopyRightFooter version={version} />
     </footer>
   )
 }

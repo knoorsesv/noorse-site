@@ -13,14 +13,12 @@ type Story = StoryObj<typeof Footer>
 
 export const Primary: Story = {
   args: {
-    version: '1.0.0',
     sponsors: [],
   },
 }
 
 export const WithSponsors: Story = {
   args: {
-    version: '1.0.0',
     sponsors: sponsorList,
   },
 }

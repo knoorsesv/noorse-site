@@ -1,6 +1,5 @@
 ---
 import type { ContentfulSponsor } from '../data/contentful/types'
-import { siteMetadata } from '../data/siteMetadata'
 import { siteMap } from '../env/constants'
 import { contentfulClient } from '../lib/contentful'
 import { Layout as LayoutPage } from '../react/pages/layout'
@@ -24,7 +23,6 @@ const sponsors = (
 }))
 
 const sitemap = siteMap
-const version = siteMetadata.version
 
 const { title, currentURL } = Astro.props
 ---
@@ -33,7 +31,6 @@ const { title, currentURL } = Astro.props
   <LayoutPage
     sitemap={sitemap}
     sponsors={sponsors}
-    version={version}
     currentURL={currentURL?.pathname}
     client:visible
   >

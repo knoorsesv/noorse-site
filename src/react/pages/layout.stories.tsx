@@ -6,7 +6,6 @@ export default {
   component: Layout,
   args: {
     children: 'Hello world',
-    version: '2.0',
     sponsors: [],
     sitemap: siteMapFactory(),
     currentURL: '/',

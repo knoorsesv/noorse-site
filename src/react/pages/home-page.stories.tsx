@@ -9,7 +9,6 @@ export default {
   title: 'Pages/HomePage',
   component: HomePage,
   args: {
-    version: '1.0.0',
     sponsors: sponsorList,
     newsItems: allNewsItems,
     siteMap: siteMapFactory(),
