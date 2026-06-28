@@ -106,8 +106,8 @@ importers:
         specifier: 10.4.27
         version: 10.4.27(postcss@8.5.15)
       chromatic:
-        specifier: 16.10.1
-        version: 16.10.1
+        specifier: 17.7.1
+        version: 17.7.1
       concurrently:
         specifier: 10.0.3
         version: 10.0.3
@@ -2527,8 +2527,9 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chromatic@16.10.1:
-    resolution: {integrity: sha512-u3RusLCCJxN8IZV3qLh6RTpo6Mu5A77bpOTAGJL5A+v2to9fsVKcK3j0GvGjPQeJJPNSI8rAI5c4U9ukbGiZJQ==}
+  chromatic@17.7.1:
+    resolution: {integrity: sha512-iDgauml4FOo6a7Pp8mnzSr0/LyMWB47hlsBR3azCtsTbpKM/tzD4+Z0vGsS2mvi6HI/qcirMDGVZNQoA5SRuUA==}
+    engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -3313,6 +3314,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-slugger@2.0.0:
@@ -8081,7 +8083,7 @@ snapshots:
       espree: 10.4.0
       fast-glob: 3.3.3
       is-glob: 4.0.3
-      semver: 7.7.3
+      semver: 7.7.4
     transitivePeerDependencies:
       - supports-color
 
@@ -8376,7 +8378,7 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chromatic@16.10.1:
+  chromatic@17.7.1:
     dependencies:
       semver: 7.7.4
 
@@ -8984,7 +8986,7 @@ snapshots:
   eslint-compat-utils@0.6.4(eslint@10.2.1(jiti@2.7.0)):
     dependencies:
       eslint: 10.2.1(jiti@2.7.0)
-      semver: 7.7.3
+      semver: 7.7.4
 
   eslint-config-gvdp@1.0.8(@eslint/js@9.39.4)(eslint@10.2.1(jiti@2.7.0))(typescript-eslint@8.59.1(eslint@10.2.1(jiti@2.7.0))(typescript@5.9.3)):
     dependencies:
@@ -11417,7 +11419,7 @@ snapshots:
 
   simple-update-notifier@2.0.0:
     dependencies:
-      semver: 7.7.3
+      semver: 7.7.4
 
   sisteransi@1.0.5: {}
 
@@ -11443,7 +11445,7 @@ snapshots:
       detect-newline: 4.0.1
       git-hooks-list: 4.1.1
       is-plain-obj: 4.1.0
-      semver: 7.7.3
+      semver: 7.7.4
       sort-object-keys: 2.0.1
       tinyglobby: 0.2.15
 
@@ -11945,7 +11947,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.7.3
+      semver: 7.7.4
       xdg-basedir: 5.1.0
 
   uri-js@4.4.1:
