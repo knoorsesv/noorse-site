@@ -216,7 +216,7 @@ jobs:
       - uses: volta-cli/action@v5.0.0
       - run: pnpm install --frozen-lockfile
       - name: Publish to Chromatic
-        uses: chromaui/action@v16.10.1
+        uses: chromaui/action@v17.8.0
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
