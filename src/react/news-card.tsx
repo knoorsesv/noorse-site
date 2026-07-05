@@ -12,7 +12,7 @@ export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
 
   const NewsCardImage: FC<{ srcSet?: string }> = ({ srcSet }) => {
     return (
-      <div className={'h-[200px] text-center'}>
+      <div className={'h-200p text-center'}>
         {newsItem.image?.responsiveURL ? (
           <ImageWrapper
             image={newsItem.image}
@@ -33,7 +33,7 @@ export const NewsCard: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
       <Card
         header={newsItem.title}
         Image={() => <NewsCardImage srcSet={newsItem.srcSet} />}
-        containerClass={'h-[148px]'}
+        containerClass={'h-148p'}
       >
         <SubHeader>
           <div className={'text-left uppercase'}>{newsItem.categoryName}</div>

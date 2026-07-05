@@ -23,7 +23,7 @@ export const SponsorWithLogo: FC<{
           image={sponsor.logo}
           alt={`Logo ${sponsor.naam}`}
           loading="lazy"
-          className="h-[100px] object-scale-down"
+          className="h-100p object-scale-down"
         />
       </ConditionalWrapper>
     </div>
