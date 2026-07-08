@@ -48,7 +48,7 @@ export const NewsItemPage: FC<{ newsItem: NewsItem }> = ({ newsItem }) => {
               <ImageWrapper
                 image={newsItem.image}
                 alt={'News'} // todo: make alt tag specific
-                className="max-h-[300px] object-contain"
+                className="max-h-300p object-contain"
               />
             </div>
           )}
