@@ -52,11 +52,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "awayTeamGoals": 1,
+        "awayTeamPenaltiesScored": 4,
+        "homeTeamGoals": 2,
+        "homeTeamPenaltiesScored": 3,
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -65,9 +65,9 @@
         "id": "CHP_134690"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-01T18:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "BvA Heren Groep 3 P3/P4"
     },
     {
@@ -220,11 +220,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 1,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -233,9 +233,9 @@
         "id": "FRN_876"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-01T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Provinciale Vrouwen"
     }
   ],
