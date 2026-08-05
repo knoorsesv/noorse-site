@@ -100,19 +100,19 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Koen",
-          "lastName": "Lauryssen",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 4,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -121,9 +121,9 @@
         "id": "FRN_918"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-05T20:15:00",
-      "state": "planned",
+      "state": "finished",
       "title": "1e Ploegen 3-4 Prov"
     },
     {
@@ -156,10 +156,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Marc",
+          "lastName": "Van Genechten",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
