@@ -125,62 +125,6 @@
       "startTime": "2026-08-05T20:15:00",
       "state": "finished",
       "title": "1e Ploegen 3-4 Prov"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première (Dames)",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365404",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "2029",
-        "id": "361114",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05815.jpg",
-        "name": "K.F.C. ZAMMEL"
-      },
-      "id": "7577787",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Veestraat 1",
-        "city": "Geel",
-        "pitchCode": "1",
-        "postalCode": "2440",
-        "synthetic": false
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Marc",
-          "lastName": "Van Genechten",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_876"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-08-08T11:00:00",
-      "state": "planned",
-      "title": "Provinciale Vrouwen"
     }
   ],
   "teamCalendar": {
