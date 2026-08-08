@@ -65,7 +65,7 @@
         "id": "CHP_134690"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-08T18:30:00",
       "state": "planned",
       "title": "BvA Heren Groep 3 P3/P4"
