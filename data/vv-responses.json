@@ -2,36 +2,92 @@
   "clubMatchesAssignations": [
     {
       "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première",
+      "ageGroup": "Réserves",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1654",
-        "id": "360968",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03874.jpg",
-        "name": "Putte SK"
+        "clubId": "8179",
+        "id": "365405",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
       },
-      "eventType": "cup_as_championship",
+      "eventType": "friendly",
       "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1780",
+        "id": "377034",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04383.jpg",
+        "name": "KSK EKEREN DONK"
+      },
+      "id": "7498349",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "De Oude Landen",
+        "city": "Ekeren",
+        "pitchCode": "1",
+        "postalCode": "2180",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Tom",
+          "lastName": "Anthonissen",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_878"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-16T13:00:00",
+      "state": "planned",
+      "title": "Reserven Provincie"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Equipe Première",
+      "awayTeam": {
         "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "365402",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse"
       },
-      "id": "7498641",
+      "eventType": "cup_as_championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "4375",
+        "id": "362050",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09306.jpg",
+        "name": "Ekeren FC B"
+      },
+      "id": "7498668",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
+        "address": "Bist 95",
+        "city": "Ekeren",
+        "pitchCode": "2",
+        "postalCode": "2180",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Mustapha",
-          "lastName": "Hajou",
+          "firstName": "Stefan",
+          "lastName": "Vanstraelen",
           "personAssigned": true,
           "status": null
         },
@@ -65,66 +121,58 @@
         "id": "CHP_134690"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-08T18:30:00",
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-15T18:30:00",
       "state": "planned",
       "title": "BvA Heren Groep 3 P3/P4"
     },
     {
       "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première",
+      "ageGroup": "Equipe Première (Dames)",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365402",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
+        "clubId": "1165",
+        "id": "361409",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00595.jpg",
+        "name": "K. BOCHOLTER V.V. A"
       },
-      "eventType": "friendly",
+      "eventType": "cup",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8321",
-        "id": "371029",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
-        "name": "V.V. O.S.S.M.I."
+        "clubId": "8179",
+        "id": "365404",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "S.V. NOORSE A"
       },
-      "id": "7502849",
+      "id": "7538035",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Kapelsesteenweg 74b",
-        "city": "Brasschaat",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
         "pitchCode": "1",
-        "postalCode": "2930",
-        "synthetic": true
+        "postalCode": "2950",
+        "synthetic": false
       },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
+      "officials": [],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 0,
+        "awayTeamGoals": null,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 4,
+        "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "finished",
+        "status": "planned",
         "subscript": null
       },
-      "province": "Voetbal Vlaanderen",
+      "province": "Nationale",
       "series": {
         "__typename": "MatchSeries",
-        "id": "FRN_918"
+        "id": "CUP_3724"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-05T20:15:00",
-      "state": "finished",
-      "title": "1e Ploegen 3-4 Prov"
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-15T16:00:00",
+      "state": "planned",
+      "title": "Beker van België Vrouwen"
     }
   ],
   "teamCalendar": {
