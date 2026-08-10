@@ -173,6 +173,62 @@
       "startTime": "2026-08-15T16:00:00",
       "state": "planned",
       "title": "Beker van België Vrouwen"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Equipe Première (Dames)",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "966",
+        "id": "363670",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00007.jpg",
+        "name": "KAA GENT"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "365404",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7643894",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Aanduiding door de club"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": 4,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": 1,
+        "homeTeamPenaltiesScored": null,
+        "status": "finished",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_876"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": true,
+      "startTime": "2026-08-10T20:30:00",
+      "state": "finished",
+      "title": "Provinciale Vrouwen"
     }
   ],
   "teamCalendar": {
