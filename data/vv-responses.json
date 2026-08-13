@@ -86,8 +86,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Stefan",
-          "lastName": "Vanstraelen",
+          "firstName": "Jean",
+          "lastName": "Van Heghe",
           "personAssigned": true,
           "status": null
         },
