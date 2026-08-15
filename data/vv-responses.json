@@ -108,11 +108,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "awayTeamGoals": 3,
+        "awayTeamPenaltiesScored": 5,
+        "homeTeamGoals": 1,
+        "homeTeamPenaltiesScored": 5,
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -121,9 +121,9 @@
         "id": "CHP_134690"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-15T18:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "BvA Heren Groep 3 P3/P4"
     },
     {
@@ -156,11 +156,11 @@
       "officials": [],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 1,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Nationale",
@@ -169,9 +169,9 @@
         "id": "CUP_3724"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-15T16:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Beker van België Vrouwen"
     },
     {
