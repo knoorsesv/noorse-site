@@ -332,11 +332,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 10,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -345,9 +345,9 @@
         "id": "FRN_876"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-18T20:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Provinciale Vrouwen"
     }
   ],
