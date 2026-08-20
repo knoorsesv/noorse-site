@@ -157,18 +157,18 @@
         {
           "__typename": "MatchDetailOfficial",
           "firstName": "Stef",
-          "lastName": "Claessens",
+          "lastName": "Claessens (brasschaat)",
           "personAssigned": true,
           "status": null
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 1,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -177,9 +177,9 @@
         "id": "FRN_918"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-20T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "1e Ploegen 3-4 Prov"
     },
     {
