@@ -220,11 +220,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 3,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -233,9 +233,9 @@
         "id": "FRN_878"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-21T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Reserven Provincie"
     },
     {
@@ -377,7 +377,15 @@
         "postalCode": "2950",
         "synthetic": true
       },
-      "officials": [],
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Frank",
+          "lastName": "Pypaert",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
         "awayTeamGoals": null,
