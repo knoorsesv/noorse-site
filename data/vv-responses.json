@@ -5,12 +5,12 @@
       "ageGroup": "Equipe Première",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1889",
-        "id": "360673",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
-        "name": "KSV Wildert"
+        "clubId": "1653",
+        "id": "365440",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
+        "name": "K. Gooreind VV B"
       },
-      "eventType": "cup_as_championship",
+      "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
         "clubId": "8179",
@@ -18,7 +18,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse"
       },
-      "id": "7498603",
+      "id": "7511247",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -30,18 +30,116 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Resul",
-          "lastName": "Haran",
+          "firstName": "Steven",
+          "lastName": "Verhaegen",
           "personAssigned": true,
           "status": null
-        },
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_134506"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-29T20:00:00",
+      "state": "planned",
+      "title": "4 Provinciaal Antw C"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Réserves",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1255",
+        "id": "374469",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01640.jpg",
+        "name": "K. Bevel FC A 3"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "365405",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 3"
+      },
+      "id": "7529994",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        },
+          "firstName": "Marc",
+          "lastName": "Swolfs",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_131133"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-28T20:00:00",
+      "state": "planned",
+      "title": "Reserven Voetb Vl AD"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Equipe Première (Dames)",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "962",
+        "id": "379218",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00003.jpg",
+        "name": "CLUB BRUGGE KV"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "365404",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7629623",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "1",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [
         {
           "__typename": "MatchDetailOfficial",
           "firstName": null,
@@ -62,201 +160,33 @@
       "province": "Voetbal Vlaanderen",
       "series": {
         "__typename": "MatchSeries",
-        "id": "CHP_134690"
+        "id": "FRN_876"
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-08-23T15:00:00",
+      "startTime": "2026-08-28T20:00:00",
       "state": "planned",
-      "title": "BvA Heren Groep 3 P3/P4"
+      "title": "Provinciale Vrouwen"
     },
     {
       "__typename": "MatchDetail",
       "ageGroup": "Equipe Première (Dames)",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365403",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
         "clubId": "1182",
         "id": "360375",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00727.jpg",
         "name": "ST. JOZEF"
       },
-      "id": "7608277",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Zuiderdijk 10",
-        "city": "Rijkevorsel",
-        "pitchCode": "2",
-        "postalCode": "2310",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Chafik",
-          "lastName": "Elinabi",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 7,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 1,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_876"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-22T18:00:00",
-      "state": "finished",
-      "title": "Provinciale Vrouwen"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8174",
-        "id": "362133",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61011.jpg",
-        "name": "OH FORTUNA"
-      },
       "eventType": "friendly",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
         "clubId": "8179",
-        "id": "365402",
+        "id": "365403",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV NOORSE"
       },
-      "id": "7621301",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Stef",
-          "lastName": "Claessens (brasschaat)",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 3,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 1,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_918"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-20T20:00:00",
-      "state": "finished",
-      "title": "1e Ploegen 3-4 Prov"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Réserves",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6398",
-        "id": "361981",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09659.jpg",
-        "name": "ALBERTA FC SCHILDE"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365405",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "id": "7621302",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Martin",
-          "lastName": "Beniest",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 3,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 3,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_878"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-21T20:00:00",
-      "state": "finished",
-      "title": "Reserven Provincie"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Women U16",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1653",
-        "id": "385083",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03865.jpg",
-        "name": "K. GOOREIND VV"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "385340",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "id": "7639468",
+      "id": "7629625",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -268,8 +198,64 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Roman Roubenovitch",
-          "lastName": "Dadaian",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_876"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-28T20:00:00",
+      "state": "planned",
+      "title": "Provinciale Vrouwen"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Women U16",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1209",
+        "id": "385871",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01085.jpg",
+        "name": "K TERNESSE VV"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385340",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7633420",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "2",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Lakbir",
+          "lastName": "Kafe",
           "personAssigned": true,
           "status": null
         }
@@ -289,103 +275,39 @@
         "id": "FRN_879"
       },
       "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-19T19:00:00",
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-26T18:15:00",
       "state": "planned",
       "title": "Meisjes Jeugd U16"
     },
     {
       "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première (Dames)",
+      "ageGroup": "U13",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
         "clubId": "8179",
-        "id": "365403",
+        "id": "385328",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV NOORSE"
       },
       "eventType": "friendly",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "6562",
-        "id": "370010",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
-        "name": "VK SIMIKOS"
+        "clubId": "2015",
+        "id": "378819",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05757.jpg",
+        "name": "ZANDVLIET SPORT"
       },
-      "id": "7644509",
+      "id": "7668965",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Eksterdreef 8",
-        "city": "Schoten",
+        "address": "Armenstraatje",
+        "city": "Zandvliet",
         "pitchCode": "1",
-        "postalCode": "2900",
-        "synthetic": false
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Aanduiding door de club"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 10,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 0,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_876"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-18T20:30:00",
-      "state": "finished",
-      "title": "Provinciale Vrouwen"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première (Dames)",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "5072",
-        "id": "364940",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09397.jpg",
-        "name": "VC MORTSEL OG"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365404",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "id": "7729559",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
+        "postalCode": "2040",
         "synthetic": true
       },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Frank",
-          "lastName": "Pypaert",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
+      "officials": [],
       "outcome": {
         "__typename": "MatchDetailOutcome",
         "awayTeamGoals": null,
@@ -398,13 +320,13 @@
       "province": "Voetbal Vlaanderen",
       "series": {
         "__typename": "MatchSeries",
-        "id": "FRN_876"
+        "id": "FRN_886"
       },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-08-22T14:00:00",
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-26T18:30:00",
       "state": "planned",
-      "title": "Provinciale Vrouwen"
+      "title": "U13"
     }
   ],
   "teamCalendar": {
