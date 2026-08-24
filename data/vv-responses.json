@@ -198,10 +198,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Rian",
+          "lastName": "Adriaensen",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -327,6 +327,398 @@
       "startTime": "2026-08-26T18:30:00",
       "state": "planned",
       "title": "U13"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Women U16",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385340",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9406",
+        "id": "385276",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09777.jpg",
+        "name": "ANTWERP DIAMONDS FC"
+      },
+      "id": "7733071",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "1",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Raf",
+          "lastName": "Van Linden",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_879"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T11:30:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U16"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu20",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9406",
+        "id": "377057",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09777.jpg",
+        "name": "ANTWERP DIAMONDS FC"
+      },
+      "eventType": "tournament",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385340",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7733072",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "1",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "TRN_899"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T10:00:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U20"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu20",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9406",
+        "id": "377054",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09777.jpg",
+        "name": "ANTWERP DIAMONDS FC"
+      },
+      "eventType": "tournament",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385339",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7733073",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "2",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "TRN_899"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T10:00:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U20"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu20",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385340",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "eventType": "tournament",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385339",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7733074",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "1",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "TRN_899"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T10:35:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U20"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu20",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9406",
+        "id": "377054",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09777.jpg",
+        "name": "ANTWERP DIAMONDS FC"
+      },
+      "eventType": "tournament",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385340",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7733075",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "2",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "TRN_899"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T11:10:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U20"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu20",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9406",
+        "id": "377057",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09777.jpg",
+        "name": "ANTWERP DIAMONDS FC"
+      },
+      "eventType": "tournament",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385339",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7733076",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "2",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "TRN_899"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T12:15:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U20"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu20",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "9406",
+        "id": "377055",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09777.jpg",
+        "name": "ANTWERP DIAMONDS FC"
+      },
+      "eventType": "tournament",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385340",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7733077",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Floralienlaan 111",
+        "city": "Antwerpen 2",
+        "pitchCode": "1",
+        "postalCode": "2020",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "TRN_899"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-08-30T13:10:00",
+      "state": "planned",
+      "title": "Meisjes Jeugd U20"
     }
   ],
   "teamCalendar": {
