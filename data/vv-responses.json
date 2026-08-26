@@ -198,8 +198,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Rian",
-          "lastName": "Adriaensen",
+          "firstName": "Frank",
+          "lastName": "Pypaert",
           "personAssigned": true,
           "status": null
         }
@@ -275,7 +275,7 @@
         "id": "FRN_879"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-26T18:15:00",
       "state": "planned",
       "title": "Meisjes Jeugd U16"
@@ -323,7 +323,7 @@
         "id": "FRN_886"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-08-26T18:30:00",
       "state": "planned",
       "title": "U13"
@@ -358,10 +358,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Raf",
-          "lastName": "Van Linden",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
