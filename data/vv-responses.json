@@ -198,8 +198,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Frank",
-          "lastName": "Pypaert",
+          "firstName": "Aale",
+          "lastName": "Koudad",
           "personAssigned": true,
           "status": null
         }
@@ -358,10 +358,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Herman",
+          "lastName": "Van Den Bogaert",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
