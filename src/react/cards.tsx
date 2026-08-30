@@ -27,7 +27,7 @@ export const Card: FC<
   m-auto w-full
   `)
 
-  const headerClass = headerHeight === 'small' ? 'h-[32px]' : 'h-[88px]'
+  const headerClass = headerHeight === 'small' ? 'h-32p' : 'h-88p'
   const titleHeaderClasses = ctl(
     `text-center p-3 m-0
     uppercase break-normal

@@ -45,7 +45,7 @@ export const SponsorPage: FC<{
                         <div className="flex w-full flex-col items-start justify-center gap-8">
                           <SponsorWithLogo
                             sponsor={sponsor}
-                            logoWidth="w-full h-[100px] text-center"
+                            logoWidth="w-full h-100p text-center"
                             maxWidth=""
                           />
                           {sponsor.description ? (
