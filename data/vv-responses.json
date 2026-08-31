@@ -79,9 +79,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "1",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -919,7 +919,7 @@
         "__typename": "MatchLocation",
         "address": "Katelijnestraat",
         "city": "Hoogstraten",
-        "pitchCode": "2",
+        "pitchCode": "4",
         "postalCode": "2320",
         "synthetic": false
       },
