@@ -38,11 +38,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 1,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -51,9 +51,9 @@
         "id": "FRN_876"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-01T20:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Provinciale Vrouwen"
     },
     {
@@ -212,10 +212,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Eric",
+          "lastName": "Kaerts",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -774,7 +774,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T11:30:00",
+      "startTime": "2026-09-06T09:00:00",
       "state": "planned",
       "title": "Meisjes U11 reeks C"
     },
