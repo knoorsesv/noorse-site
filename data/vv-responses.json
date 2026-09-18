@@ -2,132 +2,6 @@
   "clubMatchesAssignations": [
     {
       "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première (Dames)",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365403",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6562",
-        "id": "370010",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
-        "name": "VK SIMIKOS"
-      },
-      "id": "7498033",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Eksterdreef 8",
-        "city": "Schoten",
-        "pitchCode": "2",
-        "postalCode": "2900",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Martin",
-          "lastName": "Beniest",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": 3,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": 1,
-        "homeTeamPenaltiesScored": null,
-        "status": "finished",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_876"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "startTime": "2026-09-01T20:30:00",
-      "state": "finished",
-      "title": "Provinciale Vrouwen"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Equipe Première (Dames)",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1234",
-        "id": "361947",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01453.jpg",
-        "name": "K.F.C. LINT"
-      },
-      "eventType": "cup",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365403",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "S.V. NOORSE B"
-      },
-      "id": "7498552",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Ludo",
-          "lastName": "Lauryssen",
-          "personAssigned": true,
-          "status": null
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CUP_3888"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-04T20:00:00",
-      "state": "planned",
-      "title": "Beker van ANTW Vrouwen"
-    },
-    {
-      "__typename": "MatchDetail",
       "ageGroup": "Equipe Première",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
@@ -139,25 +13,25 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1919",
-        "id": "365388",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
-        "name": "Excelsior Mariaburg B"
+        "clubId": "4375",
+        "id": "362050",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09306.jpg",
+        "name": "Ekeren FC B"
       },
-      "id": "7511257",
+      "id": "7511270",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Rustoordlei",
-        "city": "Brasschaat",
+        "address": "Bist 95",
+        "city": "Ekeren",
         "pitchCode": "1",
-        "postalCode": "2930",
+        "postalCode": "2180",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Abdeslem",
-          "lastName": "Hajou",
+          "firstName": "Abdul Taylor",
+          "lastName": "Kargbo",
           "personAssigned": true,
           "status": null
         }
@@ -178,7 +52,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T15:00:00",
+      "startTime": "2026-09-19T18:00:00",
       "state": "planned",
       "title": "4 Provinciaal Antw C"
     },
@@ -195,36 +69,36 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1836",
-        "id": "361033",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04721.jpg",
-        "name": "K. Hove Sp. 3"
+        "clubId": "1420",
+        "id": "360381",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02673.jpg",
+        "name": "K.B.S.K. Retie A 3"
       },
-      "id": "7530001",
+      "id": "7530017",
       "location": {
         "__typename": "MatchLocation",
-        "address": "L Dumortierstraat",
-        "city": "Hove",
-        "pitchCode": "1",
-        "postalCode": "2540",
-        "synthetic": true
+        "address": "Geenend 11",
+        "city": "Retie",
+        "pitchCode": "3",
+        "postalCode": "2470",
+        "synthetic": false
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Eric",
-          "lastName": "Kaerts",
+          "firstName": "Jean",
+          "lastName": "Straetmans",
           "personAssigned": true,
           "status": null
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 3,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -233,9 +107,9 @@
         "id": "CHP_131133"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-04T20:00:00",
-      "state": "planned",
+      "startDateTimeInThePassed": true,
+      "startTime": "2026-09-18T20:00:00",
+      "state": "finished",
       "title": "Reserven Voetb Vl AD"
     },
     {
@@ -251,18 +125,18 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "6577",
-        "id": "367270",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61168.jpg",
-        "name": "SFC Vitesse Boom"
+        "clubId": "8184",
+        "id": "362055",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61028.jpg",
+        "name": "VK Kontich Scaldis"
       },
-      "id": "7537153",
+      "id": "7537171",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Beukenlaan 1",
-        "city": "Boom",
+        "address": "Duffelshoek 122",
+        "city": "Kontich",
         "pitchCode": "1",
-        "postalCode": "2850",
+        "postalCode": "2550",
         "synthetic": false
       },
       "officials": [],
@@ -282,7 +156,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T10:30:00",
+      "startTime": "2026-09-20T14:30:00",
       "state": "planned",
       "title": "RVC -Recrea Veteranen ANT"
     },
@@ -299,19 +173,19 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8177",
-        "id": "371914",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61014.jpg",
-        "name": "FC Koningshof C"
+        "clubId": "8317",
+        "id": "367037",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
+        "name": "V.C. O.L.S.E. A"
       },
-      "id": "7538687",
+      "id": "7538698",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Zilverstraat 43",
-        "city": "Schoten",
+        "address": "Laaglandlaan 669",
+        "city": "Merksem",
         "pitchCode": "1",
-        "postalCode": "2900",
-        "synthetic": true
+        "postalCode": "2170",
+        "synthetic": false
       },
       "officials": [
         {
@@ -342,8 +216,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Algemeen niet-opkomen"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -352,8 +226,8 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T15:00:00",
-      "state": "planned",
+      "startTime": "2026-09-20T10:30:00",
+      "state": "generalForfeit",
       "title": "RRD1 - Recrea Mannen ANT"
     },
     {
@@ -369,27 +243,27 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8182",
-        "id": "367321",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61025.jpg",
-        "name": "Kon Rapid AC"
+        "clubId": "6562",
+        "id": "370005",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
+        "name": "VK Simikos C"
       },
-      "id": "7539957",
+      "id": "7539969",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Ruggeveldlaan 371",
-        "city": "Deurne",
-        "pitchCode": "1",
-        "postalCode": "2100",
+        "address": "Eksterdreef 8",
+        "city": "Schoten",
+        "pitchCode": "2",
+        "postalCode": "2900",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Henri",
+          "lastName": "Renders",
+          "personAssigned": true,
+          "status": null
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -422,7 +296,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T12:30:00",
+      "startTime": "2026-09-20T10:30:00",
       "state": "planned",
       "title": "RRC1 - Recrea Mannen ANT"
     },
@@ -431,10 +305,10 @@
       "ageGroup": "Equipe Première (Dames)",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1553",
-        "id": "362661",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00037.jpg",
-        "name": "Sporting Hasselt"
+        "clubId": "1919",
+        "id": "376311",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
+        "name": "Excelsior Mariaburg"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -444,7 +318,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A"
       },
-      "id": "7540622",
+      "id": "7540634",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -456,8 +330,8 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Yves",
-          "lastName": "Valgaeren",
+          "firstName": "Harold",
+          "lastName": "Verwey",
           "personAssigned": true,
           "status": null
         }
@@ -478,9 +352,121 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T20:00:00",
+      "startTime": "2026-09-19T20:00:00",
       "state": "planned",
       "title": "Vrouwen Interprov. B"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Equipe Première (Dames)",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "365403",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse B"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "5451",
+        "id": "362109",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09456.jpg",
+        "name": "VC Leest"
+      },
+      "id": "7542579",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Wagenmakersstraat tussen 1-3",
+        "city": "Leest",
+        "pitchCode": "1",
+        "postalCode": "2800",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Luc",
+          "lastName": "Goossens",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": 2,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": 2,
+        "homeTeamPenaltiesScored": null,
+        "status": "finished",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_135375"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": true,
+      "startTime": "2026-09-18T20:00:00",
+      "state": "finished",
+      "title": "Vrouwen 2 Prov Antw A"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U15",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385331",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 2-1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1780",
+        "id": "360309",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04383.jpg",
+        "name": "KSK Ekeren Donk B 2-1"
+      },
+      "id": "7649418",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "De Oude Landen",
+        "city": "Ekeren",
+        "pitchCode": "2",
+        "postalCode": "2180",
+        "synthetic": true
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_130073"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-09-19T15:00:00",
+      "state": "planned",
+      "title": "Gewestelijk U15 BH"
     },
     {
       "__typename": "MatchDetail",
@@ -495,18 +481,18 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1780",
-        "id": "369363",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04383.jpg",
-        "name": "KSK Ekeren Donk"
+        "clubId": "1157",
+        "id": "376878",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
+        "name": "SC City Pirates Antwerpen"
       },
-      "id": "7651705",
+      "id": "7651714",
       "location": {
         "__typename": "MatchLocation",
-        "address": "De Oude Landen",
-        "city": "Ekeren",
-        "pitchCode": "1",
-        "postalCode": "2180",
+        "address": "Terlindenhofstraat 211",
+        "city": "Merksem",
+        "pitchCode": "2",
+        "postalCode": "2170",
         "synthetic": true
       },
       "officials": [],
@@ -526,7 +512,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T13:00:00",
+      "startTime": "2026-09-19T14:00:00",
       "state": "planned",
       "title": "Gewestelijk U6 AA"
     },
@@ -543,36 +529,36 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1591",
-        "id": "383587",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03514.jpg",
-        "name": "K. Sint Job FC 1"
+        "clubId": "8314",
+        "id": "385865",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
+        "name": "FC Patro Hoevenen 2-1"
       },
-      "id": "7655373",
+      "id": "7655381",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Sportveldlaan z/n",
-        "city": "St-Job-In-'T-Goor",
-        "pitchCode": "2",
-        "postalCode": "2960",
+        "address": "Kerkstraat 89",
+        "city": "Hoevenen",
+        "pitchCode": "1",
+        "postalCode": "2940",
         "synthetic": true
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Steven",
-          "lastName": "Eykens",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 4,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 2,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -581,9 +567,9 @@
         "id": "CHP_130550"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T11:15:00",
-      "state": "planned",
+      "startDateTimeInThePassed": true,
+      "startTime": "2026-09-18T20:30:00",
+      "state": "finished",
       "title": "Gewestelijk U19 D"
     },
     {
@@ -591,10 +577,10 @@
       "ageGroup": "U13",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1602",
-        "id": "377844",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03554.jpg",
-        "name": "Exc. FC Essen 2"
+        "clubId": "1797",
+        "id": "382926",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
+        "name": "KFC Berendrecht Sp. B 2"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -604,7 +590,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 2"
       },
-      "id": "7656805",
+      "id": "7656813",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -630,7 +616,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T15:30:00",
+      "startTime": "2026-09-19T15:30:00",
       "state": "planned",
       "title": "Gewestelijk U13 BD"
     },
@@ -639,10 +625,10 @@
       "ageGroup": "U13",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "4375",
-        "id": "381208",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09306.jpg",
-        "name": "Ekeren FC B 1"
+        "clubId": "2015",
+        "id": "378819",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05757.jpg",
+        "name": "Zandvliet Sport A 1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -652,7 +638,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 1"
       },
-      "id": "7656860",
+      "id": "7656868",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -678,7 +664,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T12:00:00",
+      "startTime": "2026-09-19T12:00:00",
       "state": "planned",
       "title": "Gewestelijk U13 BE"
     },
@@ -687,10 +673,10 @@
       "ageGroup": "Wu11",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1157",
-        "id": "377237",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
-        "name": "SC City Pirates Antwerpen (5/5) 1"
+        "clubId": "1807",
+        "id": "384876",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04471.jpg",
+        "name": "KFC Broechem 2-1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -700,7 +686,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 1"
       },
-      "id": "7658134",
+      "id": "7658147",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -726,7 +712,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T09:00:00",
+      "startTime": "2026-09-20T09:00:00",
       "state": "planned",
       "title": "Meisjes U11 reeks B"
     },
@@ -735,27 +721,27 @@
       "ageGroup": "Wu11",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1182",
-        "id": "384227",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00727.jpg",
-        "name": "St. Jozef A 3"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "385336",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 2"
       },
-      "id": "7658186",
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8173",
+        "id": "383179",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61010.jpg",
+        "name": "Groenenhoek 2"
+      },
+      "id": "7658192",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
+        "address": "Ruimtevaartlaan 20",
+        "city": "Deurne",
+        "pitchCode": "2",
+        "postalCode": "2100",
+        "synthetic": false
       },
       "officials": [],
       "outcome": {
@@ -774,7 +760,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T09:00:00",
+      "startTime": "2026-09-19T14:45:00",
       "state": "planned",
       "title": "Meisjes U11 reeks C"
     },
@@ -783,10 +769,10 @@
       "ageGroup": "Women U16",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1157",
-        "id": "377235",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
-        "name": "SC City Pirates Antwerpen 2"
+        "clubId": "8308",
+        "id": "384853",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61065.jpg",
+        "name": "Vremde A 3"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -796,7 +782,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 3"
       },
-      "id": "7659595",
+      "id": "7659603",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -808,10 +794,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Hamza",
-          "lastName": "El Hamami",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -844,7 +830,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T15:30:00",
+      "startTime": "2026-09-19T15:30:00",
       "state": "planned",
       "title": "Meisjes U16 reeks L"
     },
@@ -853,116 +839,20 @@
       "ageGroup": "Wu13",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
+        "clubId": "6562",
+        "id": "380329",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
+        "name": "VK Simikos 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "385337",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 2"
       },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8173",
-        "id": "383178",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61010.jpg",
-        "name": "Groenenhoek 2-1"
-      },
-      "id": "7659703",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Ruimtevaartlaan 20",
-        "city": "Deurne",
-        "pitchCode": "1",
-        "postalCode": "2100",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_132297"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T17:30:00",
-      "state": "planned",
-      "title": "Meisjes U13 reeks I"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu13",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "385338",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A 2"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1357",
-        "id": "382288",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02366.jpg",
-        "name": "Hoogstraten VV 3"
-      },
-      "id": "7659756",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Katelijnestraat",
-        "city": "Hoogstraten",
-        "pitchCode": "4",
-        "postalCode": "2320",
-        "synthetic": false
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_132298"
-      },
-      "showScore": false,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T10:45:00",
-      "state": "planned",
-      "title": "Meisjes U13 reeks J"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Wu9",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "1255",
-        "id": "383667",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01640.jpg",
-        "name": "K. Bevel FC 1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "385334",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse 1"
-      },
-      "id": "7660868",
+      "id": "7659711",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -984,11 +874,107 @@
       "province": "Voetbal Vlaanderen",
       "series": {
         "__typename": "MatchSeries",
+        "id": "CHP_132297"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-09-20T09:00:00",
+      "state": "planned",
+      "title": "Meisjes U13 reeks I"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu13",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1697",
+        "id": "384656",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04112.jpg",
+        "name": "Loenhout SK A 2-1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385338",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse A 2"
+      },
+      "id": "7659764",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "CHP_132298"
+      },
+      "showScore": false,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-09-20T09:00:00",
+      "state": "planned",
+      "title": "Meisjes U13 reeks J"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "Wu9",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385334",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV Noorse 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "2202",
+        "id": "383688",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06461.jpg",
+        "name": "K.VV Duffel 1"
+      },
+      "id": "7660874",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Heidestraat 7 B",
+        "city": "Duffel",
+        "pitchCode": "2",
+        "postalCode": "2570",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
         "id": "CHP_132726"
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-06T09:00:00",
+      "startTime": "2026-09-19T09:30:00",
       "state": "planned",
       "title": "Meisjes U9 reeks A"
     },
@@ -997,10 +983,10 @@
       "ageGroup": "U12",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "996",
-        "id": "385091",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00043.jpg",
-        "name": "R. Cappellen FC M 1"
+        "clubId": "1973",
+        "id": "384828",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
+        "name": "K. Heibos SV B 1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -1010,7 +996,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 1"
       },
-      "id": "7671063",
+      "id": "7671071",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -1036,7 +1022,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T15:30:00",
+      "startTime": "2026-09-19T15:30:00",
       "state": "planned",
       "title": "Gewestelijk U12 AY"
     },
@@ -1045,26 +1031,26 @@
       "ageGroup": "U12",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1973",
-        "id": "384831",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05628.jpg",
-        "name": "K. Heibos SV A 2-1"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "385326",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 2-1"
       },
-      "id": "7675182",
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1919",
+        "id": "369720",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
+        "name": "Excelsior Mariaburg B 2-1"
+      },
+      "id": "7675189",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
+        "address": "Rustoordlei",
+        "city": "Brasschaat",
+        "pitchCode": "1",
+        "postalCode": "2930",
         "synthetic": true
       },
       "officials": [],
@@ -1084,7 +1070,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T12:00:00",
+      "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U12 BH"
     },
@@ -1093,10 +1079,10 @@
       "ageGroup": "U11",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1889",
-        "id": "375114",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
-        "name": "KSV Wildert A 1"
+        "clubId": "8314",
+        "id": "385855",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
+        "name": "FC Patro Hoevenen B 2-1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -1106,7 +1092,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 1"
       },
-      "id": "7678622",
+      "id": "7678630",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -1132,7 +1118,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T09:00:00",
+      "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U11 AU"
     },
@@ -1141,27 +1127,27 @@
       "ageGroup": "U11",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "8321",
-        "id": "384755",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
-        "name": "V.V. O.S.S.M.I. A 3"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "385325",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 2"
       },
-      "id": "7680101",
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1076",
+        "id": "380406",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00228.jpg",
+        "name": "KFC Brasschaat B 2"
+      },
+      "id": "7680112",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "3",
-        "postalCode": "2950",
-        "synthetic": true
+        "address": "Hemeldreef",
+        "city": "Brasschaat",
+        "pitchCode": "1",
+        "postalCode": "2930",
+        "synthetic": false
       },
       "officials": [],
       "outcome": {
@@ -1180,7 +1166,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T09:00:00",
+      "startTime": "2026-09-19T15:00:00",
       "state": "planned",
       "title": "Gewestelijk U11 BC"
     },
@@ -1189,10 +1175,10 @@
       "ageGroup": "U10",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1797",
-        "id": "382923",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
-        "name": "KFC Berendrecht Sp. 2"
+        "clubId": "8321",
+        "id": "384752",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
+        "name": "V.V. O.S.S.M.I. B 2-1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -1202,7 +1188,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse 2"
       },
-      "id": "7687583",
+      "id": "7687591",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -1228,7 +1214,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T09:00:00",
+      "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U10 AV"
     },
@@ -1237,10 +1223,10 @@
       "ageGroup": "Women U16",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1209",
-        "id": "385871",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01085.jpg",
-        "name": "K Ternesse VV 2-1"
+        "clubId": "1797",
+        "id": "382932",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
+        "name": "KFC Berendrecht Sp. 1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -1250,7 +1236,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 1"
       },
-      "id": "7688170",
+      "id": "7688178",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -1284,7 +1270,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T12:00:00",
+      "startTime": "2026-09-19T12:00:00",
       "state": "planned",
       "title": "Meisjes U16 reeks I"
     },
@@ -1301,25 +1287,25 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "6562",
-        "id": "383631",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
-        "name": "VK Simikos B 1"
+        "clubId": "8309",
+        "id": "378892",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61066.jpg",
+        "name": "SV Groenendaal A 1"
       },
-      "id": "7688785",
+      "id": "7688793",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Eksterdreef 8",
-        "city": "Schoten",
+        "address": "Laarsebaan 400",
+        "city": "Merksem",
         "pitchCode": "1",
-        "postalCode": "2900",
+        "postalCode": "2170",
         "synthetic": false
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Mohammed",
-          "lastName": "Hichour",
+          "firstName": "Ignace",
+          "lastName": "Buytaert",
           "personAssigned": true,
           "status": null
         }
@@ -1340,7 +1326,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T13:30:00",
+      "startTime": "2026-09-19T13:00:00",
       "state": "planned",
       "title": "Gewestelijk U15 BC"
     },
@@ -1349,27 +1335,27 @@
       "ageGroup": "U8",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
+        "clubId": "8321",
+        "id": "384746",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
+        "name": "V.V. O.S.S.M.I. C 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "385319",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse B 1"
       },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8309",
-        "id": "378898",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61066.jpg",
-        "name": "SV Groenendaal 1"
-      },
-      "id": "7700815",
+      "id": "7700825",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Laarsebaan 400",
-        "city": "Merksem",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
         "pitchCode": "3",
-        "postalCode": "2170",
-        "synthetic": false
+        "postalCode": "2950",
+        "synthetic": true
       },
       "officials": [],
       "outcome": {
@@ -1388,7 +1374,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T09:30:00",
+      "startTime": "2026-09-19T12:00:00",
       "state": "planned",
       "title": "Gewestelijk U8 BE"
     },
@@ -1405,19 +1391,19 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1797",
-        "id": "382921",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04446.jpg",
-        "name": "KFC Berendrecht Sp. 2-1"
+        "clubId": "8176",
+        "id": "360840",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61013.jpg",
+        "name": "SVB Driehoek A 1"
       },
-      "id": "7700874",
+      "id": "7700879",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Monnikenhofstraat 61A",
-        "city": "Berendrecht",
+        "address": "Turfaard 5",
+        "city": "Brasschaat",
         "pitchCode": "1",
-        "postalCode": "2040",
-        "synthetic": false
+        "postalCode": "2930",
+        "synthetic": true
       },
       "officials": [],
       "outcome": {
@@ -1436,7 +1422,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T12:00:00",
+      "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U8 BF"
     },
@@ -1445,10 +1431,10 @@
       "ageGroup": "U7",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1588",
-        "id": "372616",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03497.jpg",
-        "name": "K. Kalmthout SK A 2"
+        "clubId": "1209",
+        "id": "385873",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01085.jpg",
+        "name": "K Ternesse VV B 2"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -1458,7 +1444,7 @@
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse 2"
       },
-      "id": "7701997",
+      "id": "7702006",
       "location": {
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
@@ -1484,7 +1470,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T09:00:00",
+      "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U7 BM"
     },
@@ -1493,27 +1479,27 @@
       "ageGroup": "U9",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
+        "clubId": "8317",
+        "id": "379734",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61080.jpg",
+        "name": "V.C. O.L.S.E. 1"
+      },
+      "eventType": "championship",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
         "clubId": "8179",
         "id": "385322",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
         "name": "SV Noorse A 2-1"
       },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "6576",
-        "id": "365335",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
-        "name": "FC Seja 1"
-      },
-      "id": "7705360",
+      "id": "7705367",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Laaglandlaan 385",
-        "city": "Merksem",
-        "pitchCode": "1",
-        "postalCode": "2170",
-        "synthetic": false
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "3",
+        "postalCode": "2950",
+        "synthetic": true
       },
       "officials": [],
       "outcome": {
@@ -1532,7 +1518,7 @@
       },
       "showScore": false,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T09:45:00",
+      "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U9 BL"
     },
@@ -1549,27 +1535,27 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "10038",
-        "id": "375160",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09873.jpg",
-        "name": "Grinta FC Antwerpen 1"
+        "clubId": "6576",
+        "id": "365342",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
+        "name": "FC Seja 1"
       },
-      "id": "7707831",
+      "id": "7707838",
       "location": {
         "__typename": "MatchLocation",
-        "address": "Ruggeveldlaan 488",
-        "city": "Deurne",
+        "address": "Laaglandlaan 385",
+        "city": "Merksem",
         "pitchCode": "2",
-        "postalCode": "2100",
-        "synthetic": true
+        "postalCode": "2170",
+        "synthetic": false
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "André Leo",
-          "lastName": "Van Ginderen",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -1588,7 +1574,7 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T17:00:00",
+      "startTime": "2026-09-19T15:00:00",
       "state": "planned",
       "title": "Gewestelijk U17 AT"
     },
@@ -1605,18 +1591,18 @@
       "eventType": "championship",
       "homeTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "996",
-        "id": "385090",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00043.jpg",
-        "name": "R. Cappellen FC M 1"
+        "clubId": "1889",
+        "id": "375118",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
+        "name": "KSV Wildert 1"
       },
-      "id": "7724709",
+      "id": "7724718",
       "location": {
         "__typename": "MatchLocation",
-        "address": "René de Pauwstraat,69",
-        "city": "Kapellen",
-        "pitchCode": "1",
-        "postalCode": "2950",
+        "address": "Steenovenstraat",
+        "city": "Essen",
+        "pitchCode": "2",
+        "postalCode": "2910",
         "synthetic": true
       },
       "officials": [
@@ -1644,9 +1630,65 @@
       },
       "showScore": true,
       "startDateTimeInThePassed": false,
-      "startTime": "2026-09-05T15:00:00",
+      "startTime": "2026-09-20T10:30:00",
       "state": "planned",
       "title": "Gewestelijk U14 J"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U15",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "1113",
+        "id": "378873",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00358.jpg",
+        "name": "K. WUUSTWEZEL FC"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385330",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "id": "7740077",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Frans De Peuterstraat 50",
+        "city": "Kapellen",
+        "pitchCode": "1",
+        "postalCode": "2950",
+        "synthetic": false
+      },
+      "officials": [
+        {
+          "__typename": "MatchDetailOfficial",
+          "firstName": "Mohamed",
+          "lastName": "Kalla",
+          "personAssigned": true,
+          "status": null
+        }
+      ],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": 2,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": 4,
+        "homeTeamPenaltiesScored": null,
+        "status": "finished",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_884"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": true,
+      "startTime": "2026-09-16T19:45:00",
+      "state": "finished",
+      "title": "U15"
     }
   ],
   "teamCalendar": {
