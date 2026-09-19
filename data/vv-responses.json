@@ -38,11 +38,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 2,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -51,9 +51,9 @@
         "id": "CHP_134506"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T18:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "4 Provinciaal Antw C"
     },
     {
@@ -338,11 +338,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 3,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -351,9 +351,9 @@
         "id": "CHP_131744"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Vrouwen Interprov. B"
     },
     {
@@ -450,11 +450,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 9,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -463,9 +463,9 @@
         "id": "CHP_130073"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T15:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U15 BH"
     },
     {
@@ -511,7 +511,7 @@
         "id": "CHP_130215"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T14:00:00",
       "state": "planned",
       "title": "Gewestelijk U6 AA"
@@ -615,7 +615,7 @@
         "id": "CHP_131291"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T15:30:00",
       "state": "planned",
       "title": "Gewestelijk U13 BD"
@@ -663,7 +663,7 @@
         "id": "CHP_131292"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T12:00:00",
       "state": "planned",
       "title": "Gewestelijk U13 BE"
@@ -759,7 +759,7 @@
         "id": "CHP_131894"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T14:45:00",
       "state": "planned",
       "title": "Meisjes U11 reeks C"
@@ -816,11 +816,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 4,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 4,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -829,9 +829,9 @@
         "id": "CHP_132295"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T15:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Meisjes U16 reeks L"
     },
     {
@@ -973,7 +973,7 @@
         "id": "CHP_132726"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:30:00",
       "state": "planned",
       "title": "Meisjes U9 reeks A"
@@ -1021,7 +1021,7 @@
         "id": "CHP_133883"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T15:30:00",
       "state": "planned",
       "title": "Gewestelijk U12 AY"
@@ -1069,7 +1069,7 @@
         "id": "CHP_134070"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U12 BH"
@@ -1117,7 +1117,7 @@
         "id": "CHP_134205"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U11 AU"
@@ -1165,7 +1165,7 @@
         "id": "CHP_134337"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T15:00:00",
       "state": "planned",
       "title": "Gewestelijk U11 BC"
@@ -1213,7 +1213,7 @@
         "id": "CHP_134596"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U10 AV"
@@ -1256,11 +1256,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 1,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 12,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1269,9 +1269,9 @@
         "id": "CHP_134627"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T12:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Meisjes U16 reeks I"
     },
     {
@@ -1312,11 +1312,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 3,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 7,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1325,9 +1325,9 @@
         "id": "CHP_134663"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T13:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U15 BC"
     },
     {
@@ -1373,7 +1373,7 @@
         "id": "CHP_135284"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T12:00:00",
       "state": "planned",
       "title": "Gewestelijk U8 BE"
@@ -1421,7 +1421,7 @@
         "id": "CHP_135285"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U8 BF"
@@ -1469,7 +1469,7 @@
         "id": "CHP_135327"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U7 BM"
@@ -1517,7 +1517,7 @@
         "id": "CHP_135435"
       },
       "showScore": false,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T09:00:00",
       "state": "planned",
       "title": "Gewestelijk U9 BL"
@@ -1560,11 +1560,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 8,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1573,9 +1573,9 @@
         "id": "CHP_135567"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-19T15:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U17 AT"
     },
     {
