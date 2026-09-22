@@ -330,10 +330,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Marc",
+          "lastName": "Swolfs",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -587,9 +587,9 @@
         "__typename": "MatchLocation",
         "address": "Eksterdreef 8",
         "city": "Schoten",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2900",
-        "synthetic": true
+        "synthetic": false
       },
       "officials": [],
       "outcome": {
@@ -1185,7 +1185,7 @@
         "__typename": "MatchLocation",
         "address": "Eksterdreef 8",
         "city": "Schoten",
-        "pitchCode": "1",
+        "pitchCode": "3",
         "postalCode": "2900",
         "synthetic": false
       },
@@ -1633,62 +1633,6 @@
       "startTime": "2026-09-23T19:45:00",
       "state": "planned",
       "title": "U21"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "U17",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8314",
-        "id": "385863",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61077.jpg",
-        "name": "FC PATRO HOEVENEN"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "385332",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "id": "7740078",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "1",
-        "postalCode": "2950",
-        "synthetic": false
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Robin",
-          "lastName": "De Smet",
-          "personAssigned": true,
-          "status": null
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_882"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-23T19:45:00",
-      "state": "planned",
-      "title": "U17"
     }
   ],
   "teamCalendar": {
