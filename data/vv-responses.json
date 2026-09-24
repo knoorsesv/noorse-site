@@ -30,10 +30,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Christiaan",
+          "lastName": "Van Den Eynde",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -142,12 +142,12 @@
       "officials": [],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 5,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -157,78 +157,8 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-09-27T11:00:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "RVC -Recrea Veteranen ANT"
-    },
-    {
-      "__typename": "MatchDetail",
-      "ageGroup": "Recrea Herren",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "9824",
-        "id": "360390",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/67112.jpg",
-        "name": "Football Club Wilmo"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365407",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse B"
-      },
-      "id": "7538704",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Frans De Peuterstraat 50",
-        "city": "Kapellen",
-        "pitchCode": "2",
-        "postalCode": "2950",
-        "synthetic": false
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_135485"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-09-27T13:00:00",
-      "state": "planned",
-      "title": "RRD1 - Recrea Mannen ANT"
     },
     {
       "__typename": "MatchDetail",
@@ -253,9 +183,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "1",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -598,8 +528,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "forfeit",
+        "subscript": "Forfait"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -609,7 +539,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2026-09-26T10:30:00",
-      "state": "planned",
+      "state": "forfeitByOneTeam",
       "title": "Gewestelijk U13 BE"
     },
     {
@@ -1185,17 +1115,17 @@
         "__typename": "MatchLocation",
         "address": "Eksterdreef 8",
         "city": "Schoten",
-        "pitchCode": "3",
+        "pitchCode": "1",
         "postalCode": "2900",
         "synthetic": false
       },
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Leo",
-          "lastName": "De Muyer",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
