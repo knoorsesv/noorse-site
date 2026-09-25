@@ -94,11 +94,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 7,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -107,9 +107,9 @@
         "id": "CHP_131133"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-25T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Reserven Voetb Vl AD"
     },
     {
@@ -428,11 +428,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 4,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -441,9 +441,9 @@
         "id": "CHP_130550"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-25T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U19 D"
     },
     {
@@ -668,10 +668,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Warre",
+          "lastName": "Wegge",
+          "personAssigned": true,
+          "status": null
         },
         {
           "__typename": "MatchDetailOfficial",
@@ -1122,19 +1122,19 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Filip",
+          "lastName": "Vandeputte",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 3,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1143,9 +1143,9 @@
         "id": "CHP_134627"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-09-25T20:00:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Meisjes U16 reeks I"
     },
     {
