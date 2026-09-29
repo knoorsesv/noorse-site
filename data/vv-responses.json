@@ -1335,10 +1335,10 @@
       "ageGroup": "U8",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
-        "clubId": "1654",
-        "id": "383821",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03874.jpg",
-        "name": "Putte SK 1"
+        "clubId": "1243",
+        "id": "386748",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01557.jpg",
+        "name": "KSK Oelegem B 1"
       },
       "eventType": "championship",
       "homeTeam": {
@@ -1364,8 +1364,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "forfeit",
-        "subscript": "Algemeen niet-opkomen"
+        "status": "planned",
+        "subscript": null
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -1375,7 +1375,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2026-10-03T12:00:00",
-      "state": "generalForfeit",
+      "state": "planned",
       "title": "Gewestelijk U8 BE"
     },
     {
@@ -1552,10 +1552,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Frank",
-          "lastName": "Vleeschouwer",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -2185,10 +2185,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Xerxes",
+            "lastName": "Monsieur",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -6535,10 +6535,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kasper",
+            "lastName": "Penneman",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -12986,10 +12986,10 @@
         "ageGroup": "U8",
         "awayTeam": {
           "__typename": "MatchDetailTeam",
-          "clubId": "1654",
-          "id": "383821",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03874.jpg",
-          "name": "Putte SK 1"
+          "clubId": "1243",
+          "id": "386748",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01557.jpg",
+          "name": "KSK Oelegem B 1"
         },
         "channel": "voetbalvlaanderen",
         "homeTeam": {
@@ -13007,8 +13007,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "forfeit",
-          "subscript": "Algemeen niet-opkomen"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -13018,7 +13018,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2026-10-03T12:00:00",
-        "state": "generalForfeit"
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -13267,10 +13267,10 @@
         "channel": "voetbalvlaanderen",
         "homeTeam": {
           "__typename": "MatchDetailTeam",
-          "clubId": "1654",
-          "id": "383821",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03874.jpg",
-          "name": "Putte SK 1"
+          "clubId": "1243",
+          "id": "386748",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01557.jpg",
+          "name": "KSK Oelegem B 1"
         },
         "id": "7700860",
         "officials": [],
@@ -13280,8 +13280,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "forfeit",
-          "subscript": "Algemeen niet-opkomen"
+          "status": "planned",
+          "subscript": null
         },
         "series": {
           "__typename": "MatchSeries",
@@ -13290,8 +13290,8 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-11-21T10:00:00",
-        "state": "generalForfeit"
+        "startTime": "2026-11-21T11:00:00",
+        "state": "planned"
       },
       {
         "__typename": "MatchDetail",
@@ -20120,10 +20120,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Frank",
-            "lastName": "Vleeschouwer",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -32623,7 +32623,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61055.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 3,
+                  "matchesPlayed": 4,
                   "matchesWon": null,
                   "name": "Kon. Olvac",
                   "points": null,
@@ -32641,7 +32641,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 3,
+                  "matchesPlayed": 4,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
