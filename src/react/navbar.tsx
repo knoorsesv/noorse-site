@@ -13,7 +13,7 @@ import { ChevronDown, ChevronRight, Close, Menu } from './icons/icons.tsx'
 import { ExternalLink } from './links/external-link'
 import { Logo } from './logo.jsx'
 // @ts-expect-error todo: find a good way to add a type definition for this
-import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=500;600;800;1200&h=260;400;530;800&format=webp&q=50,100'
+import aerial from '../images/noorse_luchtfoto_cropped.jpeg?w=500;600;800;1200&h=260&format=webp&quality=50&as=srcset'
 import type { SiteMap, SiteMapItem } from './types/sitemap'
 import { useBreakpoint } from './hooks/use-breakpoint.tsx'
 
