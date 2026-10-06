@@ -78,7 +78,7 @@
     "@types/react-helmet": "6.1.11",
     "@typescript-eslint/parser": "8.59.1",
     "autoprefixer": "10.6.1",
-    "chromatic": "17.7.2",
+    "chromatic": "17.8.0",
     "concurrently": "10.0.5",
     "cross-env": "10.1.0",
     "eslint": "10.12.0",

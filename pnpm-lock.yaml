@@ -106,8 +106,8 @@ importers:
         specifier: 10.6.1
         version: 10.6.1(postcss@8.5.28)
       chromatic:
-        specifier: 17.7.2
-        version: 17.7.2
+        specifier: 17.8.0
+        version: 17.8.0
       concurrently:
         specifier: 10.0.5
         version: 10.0.5
@@ -2541,8 +2541,8 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chromatic@17.7.2:
-    resolution: {integrity: sha512-/y6LcCiOXG3ecWNLGhXgir29wKhkrmK1RIVAB/5gdDsakWNG/u7mPZFuUlMFkxvA8bMJ0cDHgt1J7K1MWTg3+A==}
+  chromatic@17.8.0:
+    resolution: {integrity: sha512-xcn2TGdbrKHQbGAo3wZc5qoKaPe+CEvhAEcky9OCpofGd3DJucLFEYpk8wYgHKgR5XAI9X8Op1C6fWlvdjxE/g==}
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -7281,7 +7281,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.59.1
       debug: 4.4.3(supports-color@5.5.0)
       minimatch: 10.2.4
-      semver: 7.7.4
+      semver: 7.8.5
       tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -7577,7 +7577,7 @@ snapshots:
       espree: 10.4.0
       fast-glob: 3.3.3
       is-glob: 4.0.3
-      semver: 7.7.4
+      semver: 7.8.5
     transitivePeerDependencies:
       - supports-color
 
@@ -7867,9 +7867,9 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chromatic@17.7.2:
+  chromatic@17.8.0:
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.5
 
   ci-info@4.4.0: {}
 
@@ -8459,7 +8459,7 @@ snapshots:
   eslint-compat-utils@0.6.4(eslint@10.12.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.12.0(jiti@2.7.0)
-      semver: 7.7.4
+      semver: 7.8.5
 
   eslint-config-gvdp@1.0.8(@eslint/js@9.39.4)(eslint@10.12.0(jiti@2.7.0))(typescript-eslint@8.59.1(eslint@10.12.0(jiti@2.7.0))(typescript@5.9.3)):
     dependencies:
@@ -10391,7 +10391,7 @@ snapshots:
 
   simple-update-notifier@2.0.0:
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.5
 
   sisteransi@1.0.5: {}
 
@@ -10419,7 +10419,7 @@ snapshots:
       detect-newline: 4.0.1
       git-hooks-list: 4.1.1
       is-plain-obj: 4.1.0
-      semver: 7.7.4
+      semver: 7.8.5
       sort-object-keys: 2.0.1
       tinyglobby: 0.2.15
 
@@ -10879,7 +10879,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.7.4
+      semver: 7.8.5
       xdg-basedir: 5.1.0
 
   uri-js@4.4.1:
