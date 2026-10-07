@@ -28,7 +28,7 @@ importers:
         version: 1.0.3
       '@tailwindcss/typography':
         specifier: 0.5.20
-        version: 0.5.20(tailwindcss@4.2.4)
+        version: 0.5.20(tailwindcss@4.3.3)
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@22.7.4)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -70,7 +70,7 @@ importers:
         version: 4.0.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       tailwindcss-elevation:
         specifier: 2.0.0
-        version: 2.0.0(tailwindcss@4.2.4)
+        version: 2.0.0(tailwindcss@4.3.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -172,8 +172,8 @@ importers:
         specifier: 10.4.6
         version: 10.4.6(@testing-library/dom@10.4.0)(@types/react@19.3.0)(prettier@3.9.9)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       tailwindcss:
-        specifier: 4.2.4
-        version: 4.2.4
+        specifier: 4.3.3
+        version: 4.3.3
       typescript-eslint:
         specifier: 8.59.1
         version: 8.59.1(eslint@10.12.0(jiti@2.7.0))(typescript@5.9.3)
@@ -4752,9 +4752,6 @@ packages:
     peerDependencies:
       tailwindcss: ^3.0.1
 
-  tailwindcss@4.2.4:
-    resolution: {integrity: sha512-HhKppgO81FQof5m6TEnuBWCZGgfRAWbaeOaGT00KOy/Pf/j6oUihdvBpA7ltCeAvZpFhW3j0PTclkxsd4IXYDA==}
-
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
 
@@ -6834,10 +6831,10 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/typography@0.5.20(tailwindcss@4.2.4)':
+  '@tailwindcss/typography@0.5.20(tailwindcss@4.3.3)':
     dependencies:
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.2.4
+      tailwindcss: 4.3.3
 
   '@tailwindcss/vite@4.3.3(vite@8.2.2(@types/node@22.7.4)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
@@ -10151,12 +10148,10 @@ snapshots:
       '@pkgr/core': 0.1.1
       tslib: 2.8.1
 
-  tailwindcss-elevation@2.0.0(tailwindcss@4.2.4):
+  tailwindcss-elevation@2.0.0(tailwindcss@4.3.3):
     dependencies:
       hex-rgb: 4.3.0
-      tailwindcss: 4.2.4
-
-  tailwindcss@4.2.4: {}
+      tailwindcss: 4.3.3
 
   tailwindcss@4.3.3: {}
 
