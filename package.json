@@ -90,7 +90,7 @@
     "globals": "17.13.0",
     "husky": "9.1.7",
     "json-sort-cli": "4.3.1",
-    "lint-staged": "17.0.8",
+    "lint-staged": "17.6.0",
     "nodemon": "3.1.14",
     "postcss": "8.5.28",
     "prettier": "3.8.4",
