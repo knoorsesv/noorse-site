@@ -9,6 +9,7 @@ const url = 'https://datalake-prod2018.rbfa.be/graphql'
 const headers = new Headers()
 
 headers.append('Content-Type', 'application/json')
+headers.append('Origin', 'https://www.voetbalvlaanderen.be')
 
 const vvResponse = {
   teamCalendar: {},
