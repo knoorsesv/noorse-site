@@ -2438,10 +2438,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Marc",
+            "lastName": "De Pooter",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -6788,10 +6788,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Joren",
+            "lastName": "Beckers",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19721,10 +19721,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Berat",
+            "lastName": "Balkan",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -21127,10 +21127,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jessie",
+            "lastName": "Nantongo",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -24288,7 +24288,7 @@
         },
         "showScore": false,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-12-13T11:30:00",
+        "startTime": "2026-11-25T18:30:00",
         "state": "planned"
       }
     ],
@@ -24691,10 +24691,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Ludo",
+            "lastName": "Mols",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -32589,7 +32589,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61099.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 5,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "F.C. V.D.P.",
                   "points": null,
@@ -32654,14 +32654,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 96,
+                  "fairplayPercentage": 97,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
@@ -32878,14 +32878,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1491",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 95,
+                  "fairplayPercentage": 96,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02948.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 5,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "KSK Heist",
                   "points": null,
@@ -32939,7 +32939,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 5,
+                  "matchesPlayed": 6,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
