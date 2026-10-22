@@ -330,10 +330,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Glenn",
+          "lastName": "Callay",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1312,11 +1312,11 @@
       ],
       "outcome": {
         "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
+        "awayTeamGoals": 2,
         "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
+        "homeTeamGoals": 1,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
+        "status": "finished",
         "subscript": null
       },
       "province": "Voetbal Vlaanderen",
@@ -1325,9 +1325,9 @@
         "id": "CHP_134663"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-10-22T19:30:00",
-      "state": "planned",
+      "state": "finished",
       "title": "Gewestelijk U15 BC"
     },
     {
@@ -5376,10 +5376,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Glenn",
+            "lastName": "Callay",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18881,11 +18881,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 2,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 1,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -18894,9 +18894,9 @@
           "name": "Gewestelijk U15 BC"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-10-22T19:30:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -30698,7 +30698,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "FC Seja",
                   "points": null,
@@ -30709,14 +30709,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "10038",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 78,
+                  "fairplayPercentage": 69,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09873.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 4,
+                  "matchesPlayed": 5,
                   "matchesWon": null,
                   "name": "Grinta FC Antwerpen",
                   "points": null,
@@ -31797,14 +31797,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
-                  "fairplayPercentage": 80,
-                  "goalDifference": 0,
-                  "goalsAgainst": 21,
-                  "goalsFor": 21,
+                  "fairplayPercentage": 83,
+                  "goalDifference": -1,
+                  "goalsAgainst": 23,
+                  "goalsFor": 22,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 2,
-                  "matchesLost": 2,
-                  "matchesPlayed": 6,
+                  "matchesLost": 3,
+                  "matchesPlayed": 7,
                   "matchesWon": 2,
                   "name": "S.V. NOORSE B",
                   "points": 8,
@@ -31833,17 +31833,17 @@
                   "__typename": "RankingTeam",
                   "clubId": "1919",
                   "clubRegistrationNumber": "05357",
-                  "fairplayPercentage": 82,
-                  "goalDifference": -3,
-                  "goalsAgainst": 18,
-                  "goalsFor": 15,
+                  "fairplayPercentage": 85,
+                  "goalDifference": -2,
+                  "goalsAgainst": 19,
+                  "goalsFor": 17,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05357.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 4,
-                  "matchesPlayed": 6,
-                  "matchesWon": 1,
+                  "matchesPlayed": 7,
+                  "matchesWon": 2,
                   "name": "EXCELSIOR MARIABURG B",
-                  "points": 4,
+                  "points": 7,
                   "position": 7,
                   "teamId": "369716"
                 },
