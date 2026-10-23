@@ -86,10 +86,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Hans",
-          "lastName": "Weegenaar",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -98,8 +98,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -107,9 +107,9 @@
         "id": "CHP_131133"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-10-23T20:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Reserven Voetb Vl AD"
     },
     {
@@ -442,10 +442,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Glenn",
+          "lastName": "Callay",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -546,10 +546,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": "Kevin",
-          "lastName": "Vogels",
-          "personAssigned": true,
-          "status": null
+          "firstName": null,
+          "lastName": null,
+          "personAssigned": false,
+          "status": "Nog aan te duiden"
         }
       ],
       "outcome": {
@@ -558,8 +558,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -567,9 +567,9 @@
         "id": "CHP_130550"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-10-23T20:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U19 D"
     },
     {
@@ -654,8 +654,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -665,7 +665,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2026-10-24T11:00:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Gewestelijk U13 BE"
     },
     {
@@ -820,8 +820,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -831,7 +831,7 @@
       "showScore": true,
       "startDateTimeInThePassed": false,
       "startTime": "2026-10-24T13:45:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Meisjes U16 reeks L"
     },
     {
@@ -916,8 +916,8 @@
         "awayTeamPenaltiesScored": null,
         "homeTeamGoals": null,
         "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
+        "status": "postponed",
+        "subscript": "Uitgesteld"
       },
       "province": "Voetbal Vlaanderen",
       "series": {
@@ -927,7 +927,7 @@
       "showScore": false,
       "startDateTimeInThePassed": false,
       "startTime": "2026-10-24T13:30:00",
-      "state": "planned",
+      "state": "postponed",
       "title": "Meisjes U13 reeks J"
     },
     {
@@ -6293,6 +6293,45 @@
         "startDateTimeInThePassed": true,
         "startTime": "2026-08-22T14:00:00",
         "state": "planned"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "Equipe Première (Dames)",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "1359",
+          "id": "364974",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02373.jpg",
+          "name": "VK NINOVE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "365404",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "id": "7747607",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_876",
+          "name": "Provinciale Vrouwen"
+        },
+        "showScore": true,
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-11-06T20:00:00",
+        "state": "planned"
       }
     ],
     "365405": [
@@ -6741,10 +6780,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Hans",
-            "lastName": "Weegenaar",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -6753,8 +6792,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -6762,9 +6801,9 @@
           "name": "Reserven Voetb Vl AD"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-10-23T20:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -17073,8 +17112,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -17084,7 +17123,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2026-10-24T11:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -19367,7 +19406,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-12-12T10:00:00",
+        "startTime": "2026-12-02T19:00:00",
         "state": "planned"
       },
       {
@@ -19674,10 +19713,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Glenn",
+            "lastName": "Callay",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -20334,12 +20373,12 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": 1,
+          "awayTeamGoals": 0,
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": 7,
           "homeTeamPenaltiesScored": null,
-          "status": "finished",
-          "subscript": null
+          "status": "forfeit",
+          "subscript": "Forfait onvolledige/afwezige ploeg"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -20349,7 +20388,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2026-10-17T15:30:00",
-        "state": "finished"
+        "state": "forfeitNoPassportsByOneTeam"
       },
       {
         "__typename": "MatchDetail",
@@ -21080,10 +21119,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Kevin",
-            "lastName": "Vogels",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -21092,8 +21131,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -21101,9 +21140,9 @@
           "name": "Gewestelijk U19 D"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-10-23T20:00:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -24005,8 +24044,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -24016,7 +24055,7 @@
         "showScore": false,
         "startDateTimeInThePassed": false,
         "startTime": "2026-10-24T13:30:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -25663,8 +25702,8 @@
           "awayTeamPenaltiesScored": null,
           "homeTeamGoals": null,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
+          "status": "postponed",
+          "subscript": "Uitgesteld"
         },
         "series": {
           "__typename": "MatchSeries",
@@ -25674,7 +25713,7 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-10-24T13:45:00",
-        "state": "planned"
+        "state": "postponed"
       },
       {
         "__typename": "MatchDetail",
@@ -28822,16 +28861,16 @@
                   "clubId": "2985",
                   "clubRegistrationNumber": "09271",
                   "fairplayPercentage": null,
-                  "goalDifference": 24,
+                  "goalDifference": 30,
                   "goalsAgainst": 5,
-                  "goalsFor": 29,
+                  "goalsFor": 35,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09271.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 0,
-                  "matchesPlayed": 5,
-                  "matchesWon": 4,
+                  "matchesPlayed": 6,
+                  "matchesWon": 5,
                   "name": "DAVO PUURS",
-                  "points": 13,
+                  "points": 16,
                   "position": 1,
                   "teamId": "360297"
                 },
@@ -28840,18 +28879,36 @@
                   "clubId": "6554",
                   "clubRegistrationNumber": "R61099",
                   "fairplayPercentage": null,
-                  "goalDifference": 11,
-                  "goalsAgainst": 5,
-                  "goalsFor": 16,
+                  "goalDifference": 10,
+                  "goalsAgainst": 8,
+                  "goalsFor": 18,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61099.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 1,
-                  "matchesPlayed": 5,
+                  "matchesLost": 2,
+                  "matchesPlayed": 6,
                   "matchesWon": 4,
                   "name": "F.C. V.D.P.",
                   "points": 12,
                   "position": 2,
                   "teamId": "364125"
+                },
+                {
+                  "__typename": "RankingTeam",
+                  "clubId": "2053",
+                  "clubRegistrationNumber": "05906",
+                  "fairplayPercentage": null,
+                  "goalDifference": 6,
+                  "goalsAgainst": 9,
+                  "goalsFor": 15,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05906.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 6,
+                  "matchesWon": 4,
+                  "name": "V.K. HEINDONK",
+                  "points": 12,
+                  "position": 2,
+                  "teamId": "365564"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -28868,7 +28925,7 @@
                   "matchesWon": 3,
                   "name": "VC LEEST",
                   "points": 11,
-                  "position": 3,
+                  "position": 4,
                   "teamId": "362109"
                 },
                 {
@@ -28886,7 +28943,7 @@
                   "matchesWon": 3,
                   "name": "S.V. NOORSE B",
                   "points": 10,
-                  "position": 4,
+                  "position": 5,
                   "teamId": "365403"
                 },
                 {
@@ -28894,17 +28951,17 @@
                   "clubId": "2550",
                   "clubRegistrationNumber": "00052",
                   "fairplayPercentage": null,
-                  "goalDifference": 11,
-                  "goalsAgainst": 6,
+                  "goalDifference": 5,
+                  "goalsAgainst": 12,
                   "goalsFor": 17,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00052.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 5,
+                  "matchesLost": 2,
+                  "matchesPlayed": 6,
                   "matchesWon": 3,
                   "name": "K. LYRA-LIERSE B",
                   "points": 10,
-                  "position": 4,
+                  "position": 5,
                   "teamId": "365066"
                 },
                 {
@@ -28922,7 +28979,7 @@
                   "matchesWon": 3,
                   "name": "JONG BRASSCHAAT A",
                   "points": 9,
-                  "position": 6,
+                  "position": 7,
                   "teamId": "361503"
                 },
                 {
@@ -28940,26 +28997,8 @@
                   "matchesWon": 3,
                   "name": "K.S.V.B. DRIEHOEK",
                   "points": 9,
-                  "position": 6,
+                  "position": 7,
                   "teamId": "360834"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "2053",
-                  "clubRegistrationNumber": "05906",
-                  "fairplayPercentage": null,
-                  "goalDifference": 5,
-                  "goalsAgainst": 7,
-                  "goalsFor": 12,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05906.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 5,
-                  "matchesWon": 3,
-                  "name": "V.K. HEINDONK",
-                  "points": 9,
-                  "position": 6,
-                  "teamId": "365564"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29111,16 +29150,16 @@
                   "clubId": "1553",
                   "clubRegistrationNumber": "00037",
                   "fairplayPercentage": null,
-                  "goalDifference": 23,
-                  "goalsAgainst": 6,
-                  "goalsFor": 29,
+                  "goalDifference": 24,
+                  "goalsAgainst": 7,
+                  "goalsFor": 31,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00037.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 0,
-                  "matchesPlayed": 6,
-                  "matchesWon": 5,
+                  "matchesPlayed": 7,
+                  "matchesWon": 6,
                   "name": "SPORTING HASSELT",
-                  "points": 16,
+                  "points": 19,
                   "position": 1,
                   "teamId": "362661"
                 },
@@ -29144,24 +29183,6 @@
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "1434",
-                  "clubRegistrationNumber": "02727",
-                  "fairplayPercentage": null,
-                  "goalDifference": 10,
-                  "goalsAgainst": 6,
-                  "goalsFor": 16,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02727.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 6,
-                  "matchesWon": 4,
-                  "name": "WS SCHOONBEEK-BILZEN B",
-                  "points": 13,
-                  "position": 2,
-                  "teamId": "375361"
-                },
-                {
-                  "__typename": "RankingTeam",
                   "clubId": "5217",
                   "clubRegistrationNumber": "09423",
                   "fairplayPercentage": null,
@@ -29177,6 +29198,24 @@
                   "points": 13,
                   "position": 2,
                   "teamId": "360388"
+                },
+                {
+                  "__typename": "RankingTeam",
+                  "clubId": "1434",
+                  "clubRegistrationNumber": "02727",
+                  "fairplayPercentage": null,
+                  "goalDifference": 9,
+                  "goalsAgainst": 8,
+                  "goalsFor": 17,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02727.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 2,
+                  "matchesPlayed": 7,
+                  "matchesWon": 4,
+                  "name": "WS SCHOONBEEK-BILZEN B",
+                  "points": 13,
+                  "position": 2,
+                  "teamId": "375361"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29333,16 +29372,16 @@
                   "clubId": "1553",
                   "clubRegistrationNumber": "00037",
                   "fairplayPercentage": null,
-                  "goalDifference": 23,
-                  "goalsAgainst": 6,
-                  "goalsFor": 29,
+                  "goalDifference": 24,
+                  "goalsAgainst": 7,
+                  "goalsFor": 31,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00037.jpg",
                   "matchesDrawn": 1,
                   "matchesLost": 0,
-                  "matchesPlayed": 6,
-                  "matchesWon": 5,
+                  "matchesPlayed": 7,
+                  "matchesWon": 6,
                   "name": "SPORTING HASSELT",
-                  "points": 16,
+                  "points": 19,
                   "position": 1,
                   "teamId": "362661"
                 },
@@ -29366,24 +29405,6 @@
                 },
                 {
                   "__typename": "RankingTeam",
-                  "clubId": "1434",
-                  "clubRegistrationNumber": "02727",
-                  "fairplayPercentage": null,
-                  "goalDifference": 10,
-                  "goalsAgainst": 6,
-                  "goalsFor": 16,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02727.jpg",
-                  "matchesDrawn": 1,
-                  "matchesLost": 1,
-                  "matchesPlayed": 6,
-                  "matchesWon": 4,
-                  "name": "WS SCHOONBEEK-BILZEN B",
-                  "points": 13,
-                  "position": 3,
-                  "teamId": "375361"
-                },
-                {
-                  "__typename": "RankingTeam",
                   "clubId": "5217",
                   "clubRegistrationNumber": "09423",
                   "fairplayPercentage": null,
@@ -29397,8 +29418,26 @@
                   "matchesWon": 4,
                   "name": "VOETBALCLUB MOLDAVO A",
                   "points": 13,
-                  "position": 4,
+                  "position": 3,
                   "teamId": "360388"
+                },
+                {
+                  "__typename": "RankingTeam",
+                  "clubId": "1434",
+                  "clubRegistrationNumber": "02727",
+                  "fairplayPercentage": null,
+                  "goalDifference": 9,
+                  "goalsAgainst": 8,
+                  "goalsFor": 17,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02727.jpg",
+                  "matchesDrawn": 1,
+                  "matchesLost": 2,
+                  "matchesPlayed": 7,
+                  "matchesWon": 4,
+                  "name": "WS SCHOONBEEK-BILZEN B",
+                  "points": 13,
+                  "position": 4,
+                  "teamId": "375361"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29823,6 +29862,24 @@
                 },
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "2559",
+                  "clubRegistrationNumber": "07813",
+                  "fairplayPercentage": null,
+                  "goalDifference": 16,
+                  "goalsAgainst": 18,
+                  "goalsFor": 34,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07813.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 2,
+                  "matchesPlayed": 9,
+                  "matchesWon": 7,
+                  "name": "F.C. PUNT-LARUM",
+                  "points": 21,
+                  "position": 1,
+                  "teamId": "365580"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "1362",
                   "clubRegistrationNumber": "02391",
                   "fairplayPercentage": null,
@@ -29836,26 +29893,8 @@
                   "matchesWon": 6,
                   "name": "K.V.V. VOSSELAAR A",
                   "points": 19,
-                  "position": 2,
-                  "teamId": "360402"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "2559",
-                  "clubRegistrationNumber": "07813",
-                  "fairplayPercentage": null,
-                  "goalDifference": 15,
-                  "goalsAgainst": 16,
-                  "goalsFor": 31,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07813.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 2,
-                  "matchesPlayed": 8,
-                  "matchesWon": 6,
-                  "name": "F.C. PUNT-LARUM",
-                  "points": 18,
                   "position": 3,
-                  "teamId": "365580"
+                  "teamId": "360402"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -29880,13 +29919,13 @@
                   "clubId": "1190",
                   "clubRegistrationNumber": "00915",
                   "fairplayPercentage": null,
-                  "goalDifference": 9,
-                  "goalsAgainst": 20,
-                  "goalsFor": 29,
+                  "goalDifference": 8,
+                  "goalsAgainst": 23,
+                  "goalsFor": 31,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00915.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 2,
-                  "matchesPlayed": 7,
+                  "matchesLost": 3,
+                  "matchesPlayed": 8,
                   "matchesWon": 4,
                   "name": "K.F.C. ARENDONK SPORT A",
                   "points": 13,
@@ -32094,8 +32133,8 @@
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": 93,
-                  "goalDifference": 20,
-                  "goalsAgainst": 12,
+                  "goalDifference": 21,
+                  "goalsAgainst": 11,
                   "goalsFor": 32,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 1,
@@ -32202,9 +32241,9 @@
                   "clubId": "8309",
                   "clubRegistrationNumber": "R61066",
                   "fairplayPercentage": 97,
-                  "goalDifference": -57,
+                  "goalDifference": -58,
                   "goalsAgainst": 77,
-                  "goalsFor": 20,
+                  "goalsFor": 19,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61066.jpg",
                   "matchesDrawn": 0,
                   "matchesLost": 7,
@@ -32468,7 +32507,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01640.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "K. Bevel FC",
                   "points": null,
@@ -32504,7 +32543,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06461.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "K.VV Duffel",
                   "points": null,
@@ -32600,14 +32639,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "1807",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 96,
+                  "fairplayPercentage": 97,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04471.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "KFC Broechem",
                   "points": null,
@@ -32643,7 +32682,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00544.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "SC City Pirates Antwerpen",
                   "points": null,
