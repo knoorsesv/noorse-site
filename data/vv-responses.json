@@ -1476,54 +1476,6 @@
     },
     {
       "__typename": "MatchDetail",
-      "ageGroup": "U15",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "385331",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV NOORSE"
-      },
-      "eventType": "friendly",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8321",
-        "id": "384761",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
-        "name": "V.V. O.S.S.M.I."
-      },
-      "id": "7742528",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Kapelsesteenweg 74b",
-        "city": "Brasschaat",
-        "pitchCode": "1",
-        "postalCode": "2930",
-        "synthetic": true
-      },
-      "officials": [],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "FRN_884"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-10-29T18:00:00",
-      "state": "planned",
-      "title": "U15"
-    },
-    {
-      "__typename": "MatchDetail",
       "ageGroup": "Women U16",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
@@ -1577,6 +1529,54 @@
       "startTime": "2026-10-28T19:00:00",
       "state": "planned",
       "title": "Meisjes Jeugd U16"
+    },
+    {
+      "__typename": "MatchDetail",
+      "ageGroup": "U15",
+      "awayTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8179",
+        "id": "385330",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+        "name": "SV NOORSE"
+      },
+      "eventType": "friendly",
+      "homeTeam": {
+        "__typename": "MatchDetailTeam",
+        "clubId": "8321",
+        "id": "384761",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
+        "name": "V.V. O.S.S.M.I."
+      },
+      "id": "7748106",
+      "location": {
+        "__typename": "MatchLocation",
+        "address": "Kapelsesteenweg 74b",
+        "city": "Brasschaat",
+        "pitchCode": "1",
+        "postalCode": "2930",
+        "synthetic": true
+      },
+      "officials": [],
+      "outcome": {
+        "__typename": "MatchDetailOutcome",
+        "awayTeamGoals": null,
+        "awayTeamPenaltiesScored": null,
+        "homeTeamGoals": null,
+        "homeTeamPenaltiesScored": null,
+        "status": "planned",
+        "subscript": null
+      },
+      "province": "Voetbal Vlaanderen",
+      "series": {
+        "__typename": "MatchSeries",
+        "id": "FRN_884"
+      },
+      "showScore": true,
+      "startDateTimeInThePassed": false,
+      "startTime": "2026-10-29T18:00:00",
+      "state": "planned",
+      "title": "U15"
     }
   ],
   "teamCalendar": {
@@ -19191,6 +19191,45 @@
         "startDateTimeInThePassed": true,
         "startTime": "2026-10-08T19:45:00",
         "state": "finished"
+      },
+      {
+        "__typename": "MatchDetail",
+        "ageGroup": "U15",
+        "awayTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8179",
+          "id": "385330",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
+          "name": "SV NOORSE"
+        },
+        "channel": "voetbalvlaanderen",
+        "homeTeam": {
+          "__typename": "MatchDetailTeam",
+          "clubId": "8321",
+          "id": "384761",
+          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
+          "name": "V.V. O.S.S.M.I."
+        },
+        "id": "7748106",
+        "officials": [],
+        "outcome": {
+          "__typename": "MatchDetailOutcome",
+          "awayTeamGoals": null,
+          "awayTeamPenaltiesScored": null,
+          "homeTeamGoals": null,
+          "homeTeamPenaltiesScored": null,
+          "status": "planned",
+          "subscript": null
+        },
+        "series": {
+          "__typename": "MatchSeries",
+          "id": "FRN_884",
+          "name": "U15"
+        },
+        "showScore": true,
+        "startDateTimeInThePassed": false,
+        "startTime": "2026-10-29T18:00:00",
+        "state": "planned"
       }
     ],
     "385331": [
@@ -19850,45 +19889,6 @@
         "showScore": true,
         "startDateTimeInThePassed": false,
         "startTime": "2026-12-06T09:30:00",
-        "state": "planned"
-      },
-      {
-        "__typename": "MatchDetail",
-        "ageGroup": "U15",
-        "awayTeam": {
-          "__typename": "MatchDetailTeam",
-          "clubId": "8179",
-          "id": "385331",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-          "name": "SV NOORSE"
-        },
-        "channel": "voetbalvlaanderen",
-        "homeTeam": {
-          "__typename": "MatchDetailTeam",
-          "clubId": "8321",
-          "id": "384761",
-          "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61087.jpg",
-          "name": "V.V. O.S.S.M.I."
-        },
-        "id": "7742528",
-        "officials": [],
-        "outcome": {
-          "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
-          "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
-          "homeTeamPenaltiesScored": null,
-          "status": "planned",
-          "subscript": null
-        },
-        "series": {
-          "__typename": "MatchSeries",
-          "id": "FRN_884",
-          "name": "U15"
-        },
-        "showScore": true,
-        "startDateTimeInThePassed": false,
-        "startTime": "2026-10-29T18:00:00",
         "state": "planned"
       }
     ],
