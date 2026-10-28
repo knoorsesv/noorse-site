@@ -627,9 +627,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -1081,9 +1081,9 @@
         "__typename": "MatchLocation",
         "address": "Frans De Peuterstraat 50",
         "city": "Kapellen",
-        "pitchCode": "2",
+        "pitchCode": "3",
         "postalCode": "2950",
-        "synthetic": false
+        "synthetic": true
       },
       "officials": [
         {
@@ -2317,10 +2317,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Koen",
+            "lastName": "Decat",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -2574,7 +2574,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-12-12T17:30:00",
+        "startTime": "2026-12-12T17:00:00",
         "state": "planned"
       },
       {
@@ -6145,7 +6145,15 @@
           "name": "SV NOORSE"
         },
         "id": "7747607",
-        "officials": [],
+        "officials": [
+          {
+            "__typename": "MatchDetailOfficial",
+            "firstName": "Frank",
+            "lastName": "Pypaert",
+            "personAssigned": true,
+            "status": null
+          }
+        ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
           "awayTeamGoals": null,
@@ -6565,10 +6573,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jelle",
+            "lastName": "Van Dijck",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -6706,10 +6714,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kristof",
+            "lastName": "Cuyvers",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -9535,11 +9543,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 1,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 2,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -9550,7 +9558,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2026-10-11T11:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -9657,11 +9665,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 4,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 4,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -9672,7 +9680,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2026-10-25T11:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -21045,10 +21053,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kevin",
+            "lastName": "Vogels",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -32738,7 +32746,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61010.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "Groenenhoek",
                   "points": null,
@@ -32810,7 +32818,7 @@
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 6,
+                  "matchesPlayed": 7,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
