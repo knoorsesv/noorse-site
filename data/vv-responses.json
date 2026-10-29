@@ -1525,7 +1525,7 @@
         "id": "FRN_879"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-10-28T19:00:00",
       "state": "planned",
       "title": "Meisjes Jeugd U16"
@@ -6148,10 +6148,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Frank",
-            "lastName": "Pypaert",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -6714,10 +6714,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Kristof",
-            "lastName": "Cuyvers",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           }
         ],
         "outcome": {
@@ -6736,7 +6736,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-11-06T20:30:00",
+        "startTime": "2027-02-18T20:30:00",
         "state": "planned"
       },
       {
@@ -8152,11 +8152,11 @@
         ],
         "outcome": {
           "__typename": "MatchDetailOutcome",
-          "awayTeamGoals": null,
+          "awayTeamGoals": 3,
           "awayTeamPenaltiesScored": null,
-          "homeTeamGoals": null,
+          "homeTeamGoals": 2,
           "homeTeamPenaltiesScored": null,
-          "status": "planned",
+          "status": "finished",
           "subscript": null
         },
         "series": {
@@ -8167,7 +8167,7 @@
         "showScore": true,
         "startDateTimeInThePassed": true,
         "startTime": "2026-10-25T13:00:00",
-        "state": "planned"
+        "state": "finished"
       },
       {
         "__typename": "MatchDetail",
@@ -19755,7 +19755,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-11-14T11:00:00",
+        "startTime": "2026-11-14T16:00:00",
         "state": "planned"
       },
       {
@@ -26293,7 +26293,7 @@
           "name": "Meisjes Jeugd U16"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-10-28T19:00:00",
         "state": "planned"
       }
@@ -30024,17 +30024,17 @@
                   "clubId": "6562",
                   "clubRegistrationNumber": "R61119",
                   "fairplayPercentage": null,
-                  "goalDifference": 18,
-                  "goalsAgainst": 5,
-                  "goalsFor": 23,
+                  "goalDifference": 19,
+                  "goalsAgainst": 7,
+                  "goalsFor": 26,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61119.jpg",
                   "matchesDrawn": 0,
                   "matchesLost": 1,
-                  "matchesPlayed": 6,
-                  "matchesWon": 5,
+                  "matchesPlayed": 7,
+                  "matchesWon": 6,
                   "name": "V.K. SIMIKOS D",
-                  "points": 15,
-                  "position": 2,
+                  "points": 18,
+                  "position": 1,
                   "teamId": "370004"
                 },
                 {
@@ -30096,13 +30096,13 @@
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": null,
-                  "goalDifference": 14,
-                  "goalsAgainst": 7,
-                  "goalsFor": 21,
+                  "goalDifference": 13,
+                  "goalsAgainst": 10,
+                  "goalsFor": 23,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": 0,
-                  "matchesLost": 1,
-                  "matchesPlayed": 4,
+                  "matchesLost": 2,
+                  "matchesPlayed": 5,
                   "matchesWon": 3,
                   "name": "S.V. NOORSE B",
                   "points": 9,
