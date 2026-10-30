@@ -184,76 +184,6 @@
     },
     {
       "__typename": "MatchDetail",
-      "ageGroup": "Recrea Herren",
-      "awayTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8179",
-        "id": "365408",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
-        "name": "SV Noorse A"
-      },
-      "eventType": "championship",
-      "homeTeam": {
-        "__typename": "MatchDetailTeam",
-        "clubId": "8307",
-        "id": "372960",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61063.jpg",
-        "name": "FC Harrows A"
-      },
-      "id": "7540011",
-      "location": {
-        "__typename": "MatchLocation",
-        "address": "Ruggeveldlaan 488",
-        "city": "Deurne",
-        "pitchCode": "3",
-        "postalCode": "2100",
-        "synthetic": true
-      },
-      "officials": [
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": "Ludovicus",
-          "lastName": "Emmerechts",
-          "personAssigned": true,
-          "status": null
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        },
-        {
-          "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
-        }
-      ],
-      "outcome": {
-        "__typename": "MatchDetailOutcome",
-        "awayTeamGoals": null,
-        "awayTeamPenaltiesScored": null,
-        "homeTeamGoals": null,
-        "homeTeamPenaltiesScored": null,
-        "status": "planned",
-        "subscript": null
-      },
-      "province": "Voetbal Vlaanderen",
-      "series": {
-        "__typename": "MatchSeries",
-        "id": "CHP_135483"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": false,
-      "startTime": "2026-11-01T09:30:00",
-      "state": "planned",
-      "title": "RRC1 - Recrea Mannen ANT"
-    },
-    {
-      "__typename": "MatchDetail",
       "ageGroup": "U15",
       "awayTeam": {
         "__typename": "MatchDetailTeam",
@@ -1144,10 +1074,10 @@
       "officials": [
         {
           "__typename": "MatchDetailOfficial",
-          "firstName": null,
-          "lastName": null,
-          "personAssigned": false,
-          "status": "Nog aan te duiden"
+          "firstName": "Steven",
+          "lastName": "Wijnants",
+          "personAssigned": true,
+          "status": null
         }
       ],
       "outcome": {
@@ -1573,7 +1503,7 @@
         "id": "FRN_884"
       },
       "showScore": true,
-      "startDateTimeInThePassed": false,
+      "startDateTimeInThePassed": true,
       "startTime": "2026-10-29T18:00:00",
       "state": "planned",
       "title": "U15"
@@ -9704,10 +9634,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": "Ludovicus",
-            "lastName": "Emmerechts",
-            "personAssigned": true,
-            "status": null
+            "firstName": null,
+            "lastName": null,
+            "personAssigned": false,
+            "status": "Nog aan te duiden"
           },
           {
             "__typename": "MatchDetailOfficial",
@@ -9740,7 +9670,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-11-01T09:30:00",
+        "startTime": "2026-12-13T11:00:00",
         "state": "planned"
       },
       {
@@ -18846,10 +18776,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Steven",
+            "lastName": "Wijnants",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19235,7 +19165,7 @@
           "name": "U15"
         },
         "showScore": true,
-        "startDateTimeInThePassed": false,
+        "startDateTimeInThePassed": true,
         "startTime": "2026-10-29T18:00:00",
         "state": "planned"
       }
@@ -19755,7 +19685,7 @@
         },
         "showScore": true,
         "startDateTimeInThePassed": false,
-        "startTime": "2026-11-14T16:00:00",
+        "startTime": "2026-11-14T11:00:00",
         "state": "planned"
       },
       {
@@ -30570,14 +30500,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "6576",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 100,
+                  "fairplayPercentage": 95,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61163.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "FC Seja",
                   "points": null,
@@ -30660,14 +30590,14 @@
                   "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": null,
-                  "fairplayPercentage": 80,
+                  "fairplayPercentage": 77,
                   "goalDifference": null,
                   "goalsAgainst": null,
                   "goalsFor": null,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/61017.jpg",
                   "matchesDrawn": null,
                   "matchesLost": null,
-                  "matchesPlayed": 7,
+                  "matchesPlayed": 8,
                   "matchesWon": null,
                   "name": "SV Noorse",
                   "points": null,
@@ -31427,6 +31357,24 @@
               "teams": [
                 {
                   "__typename": "RankingTeam",
+                  "clubId": "1889",
+                  "clubRegistrationNumber": "05142",
+                  "fairplayPercentage": 95,
+                  "goalDifference": 42,
+                  "goalsAgainst": 7,
+                  "goalsFor": 49,
+                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
+                  "matchesDrawn": 0,
+                  "matchesLost": 1,
+                  "matchesPlayed": 8,
+                  "matchesWon": 7,
+                  "name": "K.S.V. WILDERT",
+                  "points": 21,
+                  "position": 1,
+                  "teamId": "375118"
+                },
+                {
+                  "__typename": "RankingTeam",
                   "clubId": "8179",
                   "clubRegistrationNumber": "R61017",
                   "fairplayPercentage": 91,
@@ -31440,26 +31388,8 @@
                   "matchesWon": 6,
                   "name": "S.V. NOORSE",
                   "points": 20,
-                  "position": 1,
-                  "teamId": "385329"
-                },
-                {
-                  "__typename": "RankingTeam",
-                  "clubId": "1889",
-                  "clubRegistrationNumber": "05142",
-                  "fairplayPercentage": 94,
-                  "goalDifference": 37,
-                  "goalsAgainst": 7,
-                  "goalsFor": 44,
-                  "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05142.jpg",
-                  "matchesDrawn": 0,
-                  "matchesLost": 1,
-                  "matchesPlayed": 7,
-                  "matchesWon": 6,
-                  "name": "K.S.V. WILDERT",
-                  "points": 18,
                   "position": 2,
-                  "teamId": "375118"
+                  "teamId": "385329"
                 },
                 {
                   "__typename": "RankingTeam",
@@ -31520,13 +31450,13 @@
                   "clubId": "996",
                   "clubRegistrationNumber": "00043",
                   "fairplayPercentage": 99,
-                  "goalDifference": -13,
-                  "goalsAgainst": 25,
+                  "goalDifference": -18,
+                  "goalsAgainst": 30,
                   "goalsFor": 12,
                   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00043.jpg",
                   "matchesDrawn": 1,
-                  "matchesLost": 4,
-                  "matchesPlayed": 7,
+                  "matchesLost": 5,
+                  "matchesPlayed": 8,
                   "matchesWon": 2,
                   "name": "R. CAPPELLEN F.C. M",
                   "points": 7,
