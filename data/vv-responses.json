@@ -2196,10 +2196,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Kevin",
+            "lastName": "Coomans",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -6593,10 +6593,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Jelle",
+            "lastName": "Swolfs",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -18772,10 +18772,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Roman Roubenovitch",
+            "lastName": "Dadaian",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -19565,10 +19565,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Frank",
+            "lastName": "Swillen",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -20932,10 +20932,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Aale",
+            "lastName": "Koudad",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
@@ -24449,10 +24449,10 @@
         "officials": [
           {
             "__typename": "MatchDetailOfficial",
-            "firstName": null,
-            "lastName": null,
-            "personAssigned": false,
-            "status": "Nog aan te duiden"
+            "firstName": "Bart",
+            "lastName": "Claessens",
+            "personAssigned": true,
+            "status": null
           }
         ],
         "outcome": {
