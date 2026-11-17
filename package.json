@@ -54,7 +54,7 @@
     "@tailwindcss/vite": "4.3.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@vitejs/plugin-react": "6.2.1",
+    "@vitejs/plugin-react": "6.3.0",
     "astro": "7.4.12",
     "contentful": "11.12.10",
     "date-fns": "4.4.0",
